@@ -4,7 +4,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Shield, Home, Search, AlertCircle, BookOpen, Scale, FileText } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Shield, Home, Search, AlertCircle, BookOpen, Scale, FileText, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
 
@@ -36,9 +43,23 @@ const categoryColors: Record<string, string> = {
   otro: "bg-gray-100 text-gray-800",
 };
 
+type SpecialCase = {
+  id: number;
+  title: string;
+  description: string;
+  category: string;
+  legalBasis: string | null;
+  procedure: string | null;
+  examples: string | null;
+  createdAt: Date;
+  updatedAt: Date;
+};
+
 export default function CasosEspeciales() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCase, setSelectedCase] = useState<SpecialCase | null>(null);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   const { data: allCases } = trpc.specialCases.list.useQuery();
   const { data: searchResults } = trpc.specialCases.search.useQuery(
@@ -53,6 +74,11 @@ export default function CasosEspeciales() {
     : allCases;
 
   const categories = Array.from(new Set(allCases?.map((c) => c.category) || []));
+
+  const handleCaseClick = (caso: SpecialCase) => {
+    setSelectedCase(caso);
+    setDialogOpen(true);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
@@ -117,45 +143,24 @@ export default function CasosEspeciales() {
         {/* Cases Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayedCases?.map((caso) => (
-            <Card key={caso.id} className="hover:shadow-lg transition-shadow">
+            <Card
+              key={caso.id}
+              className="hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => handleCaseClick(caso)}
+            >
               <CardHeader>
                 <div className="flex items-start justify-between mb-2">
                   <Badge className={categoryColors[caso.category]}>
                     {categoryLabels[caso.category] || caso.category}
                   </Badge>
+                  <ChevronRight className="h-5 w-5 text-gray-400" />
                 </div>
                 <CardTitle className="text-lg">{caso.title}</CardTitle>
                 <CardDescription className="line-clamp-3">{caso.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3">
-                  {caso.legalBasis && (
-                    <div>
-                      <div className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-1">
-                        <Scale className="h-4 w-4" />
-                        Base legal
-                      </div>
-                      <p className="text-sm text-gray-600 line-clamp-2">{caso.legalBasis}</p>
-                    </div>
-                  )}
-                  {caso.procedure && (
-                    <div>
-                      <div className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-1">
-                        <FileText className="h-4 w-4" />
-                        Procediment
-                      </div>
-                      <p className="text-sm text-gray-600 line-clamp-3">{caso.procedure}</p>
-                    </div>
-                  )}
-                  {caso.examples && (
-                    <div>
-                      <div className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-1">
-                        <BookOpen className="h-4 w-4" />
-                        Exemples
-                      </div>
-                      <p className="text-sm text-gray-600 line-clamp-2">{caso.examples}</p>
-                    </div>
-                  )}
+                <div className="text-sm text-gray-600">
+                  Fes clic per veure els detalls complets
                 </div>
               </CardContent>
             </Card>
@@ -170,6 +175,65 @@ export default function CasosEspeciales() {
           </div>
         )}
       </div>
+
+      {/* Dialog for Case Details */}
+      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+          {selectedCase && (
+            <>
+              <DialogHeader>
+                <div className="flex items-center gap-2 mb-3">
+                  <Badge className={categoryColors[selectedCase.category]}>
+                    {categoryLabels[selectedCase.category] || selectedCase.category}
+                  </Badge>
+                </div>
+                <DialogTitle className="text-2xl">{selectedCase.title}</DialogTitle>
+                <DialogDescription className="text-base mt-2">
+                  {selectedCase.description}
+                </DialogDescription>
+              </DialogHeader>
+
+              <div className="space-y-6 mt-4">
+                {selectedCase.legalBasis && (
+                  <div>
+                    <div className="flex items-center gap-2 text-base font-semibold text-gray-900 mb-2">
+                      <Scale className="h-5 w-5 text-orange-600" />
+                      Base legal
+                    </div>
+                    <p className="text-sm text-gray-700 whitespace-pre-wrap">
+                      {selectedCase.legalBasis}
+                    </p>
+                  </div>
+                )}
+
+                {selectedCase.procedure && (
+                  <div>
+                    <div className="flex items-center gap-2 text-base font-semibold text-gray-900 mb-2">
+                      <FileText className="h-5 w-5 text-orange-600" />
+                      Procediment
+                    </div>
+                    <p className="text-sm text-gray-700 whitespace-pre-wrap">
+                      {selectedCase.procedure}
+                    </p>
+                  </div>
+                )}
+
+                {selectedCase.examples && (
+                  <div>
+                    <div className="flex items-center gap-2 text-base font-semibold text-gray-900 mb-2">
+                      <BookOpen className="h-5 w-5 text-orange-600" />
+                      Exemples
+                    </div>
+                    <p className="text-sm text-gray-700 whitespace-pre-wrap">
+                      {selectedCase.examples}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

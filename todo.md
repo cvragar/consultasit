@@ -60,4 +60,7 @@
 - [x] Validar calculadora con diferentes escenarios
 - [x] Verificar búsqueda y filtros
 - [ ] Realizar pruebas de usabilidad
-- [ ] Crear checkpoint final
+- [x] Crear checkpoint final
+
+## Correcciones
+- [x] Corregir visualización de casos especiales (no se amplían al hacer clic)
