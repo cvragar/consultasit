@@ -4,9 +4,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Shield, Home, Search, FileText, BookOpen, Building2 } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Shield, Home, Search, FileText, BookOpen, Building2, ExternalLink, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
+import { Streamdown } from "streamdown";
 
 const typeLabels: Record<string, string> = {
   ley: "Llei",
@@ -32,8 +40,24 @@ const jurisdictionLabels: Record<string, string> = {
   ambas: "Estatal i Autonòmica",
 };
 
+type Document = {
+  id: number;
+  title: string;
+  type: string;
+  jurisdiction: string;
+  source: string | null;
+  content: string;
+  summary: string | null;
+  tags: string[] | null;
+  url: string | null;
+  createdAt: Date;
+  updatedAt: Date;
+};
+
 export default function Documentos() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedDocument, setSelectedDocument] = useState<Document | null>(null);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   const { data: allDocuments } = trpc.documents.list.useQuery();
   const { data: searchResults } = trpc.documents.search.useQuery(
@@ -42,6 +66,11 @@ export default function Documentos() {
   );
 
   const displayedDocuments = searchQuery.length > 2 ? searchResults : allDocuments;
+
+  const handleDocumentClick = (doc: Document) => {
+    setSelectedDocument(doc);
+    setDialogOpen(true);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
@@ -89,7 +118,11 @@ export default function Documentos() {
         {/* Documents List */}
         <div className="max-w-4xl mx-auto space-y-4">
           {displayedDocuments?.map((doc) => (
-            <Card key={doc.id} className="hover:shadow-lg transition-shadow">
+            <Card
+              key={doc.id}
+              className="hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => handleDocumentClick(doc)}
+            >
               <CardHeader>
                 <div className="flex items-start justify-between gap-4 mb-2">
                   <div className="flex-1">
@@ -103,6 +136,7 @@ export default function Documentos() {
                     </div>
                     <CardTitle className="text-lg">{doc.title}</CardTitle>
                   </div>
+                  <ChevronRight className="h-5 w-5 text-gray-400 flex-shrink-0" />
                 </div>
                 {doc.source && (
                   <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -113,21 +147,23 @@ export default function Documentos() {
               </CardHeader>
               <CardContent>
                 {doc.summary && (
-                  <p className="text-sm text-gray-700 mb-3">{doc.summary}</p>
+                  <p className="text-sm text-gray-700 mb-3 line-clamp-2">{doc.summary}</p>
                 )}
-                <div className="flex items-center gap-2 text-sm text-gray-600">
-                  <BookOpen className="h-4 w-4" />
-                  <span className="line-clamp-2">
-                    {doc.content.substring(0, 200)}...
-                  </span>
+                <div className="text-sm text-gray-600">
+                  Fes clic per veure el contingut complet
                 </div>
                 {doc.tags && Array.isArray(doc.tags) && doc.tags.length > 0 && (
                   <div className="flex flex-wrap gap-1 mt-3">
-                    {doc.tags.map((tag: string, idx: number) => (
+                    {doc.tags.slice(0, 5).map((tag: string, idx: number) => (
                       <Badge key={idx} variant="secondary" className="text-xs">
                         {tag}
                       </Badge>
                     ))}
+                    {doc.tags.length > 5 && (
+                      <Badge variant="secondary" className="text-xs">
+                        +{doc.tags.length - 5} més
+                      </Badge>
+                    )}
                   </div>
                 )}
               </CardContent>
@@ -143,6 +179,82 @@ export default function Documentos() {
           </div>
         )}
       </div>
+
+      {/* Dialog for Document Details */}
+      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+        <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto">
+          {selectedDocument && (
+            <>
+              <DialogHeader>
+                <div className="flex items-center gap-2 mb-3 flex-wrap">
+                  <Badge className={typeColors[selectedDocument.type]}>
+                    {typeLabels[selectedDocument.type] || selectedDocument.type}
+                  </Badge>
+                  <Badge variant="outline">
+                    {jurisdictionLabels[selectedDocument.jurisdiction]}
+                  </Badge>
+                </div>
+                <DialogTitle className="text-2xl">{selectedDocument.title}</DialogTitle>
+                {selectedDocument.source && (
+                  <DialogDescription className="text-base flex items-center gap-2 mt-2">
+                    <Building2 className="h-4 w-4" />
+                    {selectedDocument.source}
+                  </DialogDescription>
+                )}
+              </DialogHeader>
+
+              <div className="space-y-6 mt-4">
+                {selectedDocument.summary && (
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <h3 className="font-semibold text-green-900 mb-2">Resum</h3>
+                    <p className="text-sm text-green-800">{selectedDocument.summary}</p>
+                  </div>
+                )}
+
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                    <BookOpen className="h-5 w-5 text-green-600" />
+                    Contingut del document
+                  </h3>
+                  <div className="prose prose-sm max-w-none text-gray-700">
+                    <Streamdown>{selectedDocument.content}</Streamdown>
+                  </div>
+                </div>
+
+                {selectedDocument.url && (
+                  <div className="border-t pt-4">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(selectedDocument.url!, "_blank", "noopener,noreferrer");
+                      }}
+                      className="gap-2"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Veure document original
+                    </Button>
+                  </div>
+                )}
+
+                {selectedDocument.tags && Array.isArray(selectedDocument.tags) && selectedDocument.tags.length > 0 && (
+                  <div className="border-t pt-4">
+                    <h3 className="font-semibold text-gray-900 mb-2 text-sm">Etiquetes</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedDocument.tags.map((tag: string, idx: number) => (
+                        <Badge key={idx} variant="secondary" className="text-xs">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

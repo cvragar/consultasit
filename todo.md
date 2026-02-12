@@ -64,3 +64,4 @@
 
 ## Correcciones
 - [x] Corregir visualización de casos especiales (no se amplían al hacer clic)
+- [x] Corregir enlaces de la página de Documentación
