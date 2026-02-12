@@ -1,33 +1,56 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Shield, Send, Loader2, Home, FileText, BookOpen } from "lucide-react";
-import { Link, useParams } from "wouter";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
+import { Shield, Send, Loader2, Home, MessageSquare, Trash2, Plus, Menu, X } from "lucide-react";
+import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { Streamdown } from "streamdown";
 import { getLoginUrl } from "@/const";
 
+type Conversation = {
+  id: number;
+  userId: number;
+  title: string | null;
+  createdAt: Date;
+  updatedAt: Date;
+};
+
 export default function Chat() {
-  const { conversationId } = useParams<{ conversationId?: string }>();
   const { user, isAuthenticated } = useAuth();
   const [message, setMessage] = useState("");
-  const [currentConversationId, setCurrentConversationId] = useState<number | null>(
-    conversationId ? parseInt(conversationId) : null
-  );
+  const [currentConversationId, setCurrentConversationId] = useState<number | null>(null);
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [conversationToDelete, setConversationToDelete] = useState<number | null>(null);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const createConversation = trpc.chat.createConversation.useMutation();
   const sendMessage = trpc.chat.sendMessage.useMutation();
+  const deleteConversation = trpc.chat.deleteConversation.useMutation();
+  
   const { data: messages, refetch: refetchMessages } = trpc.chat.getMessages.useQuery(
     { conversationId: currentConversationId! },
     { enabled: !!currentConversationId }
   );
-  const { data: conversations } = trpc.chat.getUserConversations.useQuery(undefined, {
-    enabled: isAuthenticated,
-  });
+  
+  const { data: conversations, refetch: refetchConversations } = trpc.chat.getUserConversations.useQuery(
+    undefined,
+    { enabled: isAuthenticated }
+  );
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -36,6 +59,38 @@ export default function Chat() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  const handleNewConversation = async () => {
+    try {
+      const result = await createConversation.mutateAsync({});
+      setCurrentConversationId(result.conversationId);
+      refetchConversations();
+    } catch (error) {
+      console.error("Error creating conversation:", error);
+    }
+  };
+
+  const handleSelectConversation = (id: number) => {
+    setCurrentConversationId(id);
+  };
+
+  const handleDeleteConversation = async () => {
+    if (!conversationToDelete) return;
+
+    try {
+      await deleteConversation.mutateAsync({ conversationId: conversationToDelete });
+      
+      if (currentConversationId === conversationToDelete) {
+        setCurrentConversationId(null);
+      }
+      
+      refetchConversations();
+      setDeleteDialogOpen(false);
+      setConversationToDelete(null);
+    } catch (error) {
+      console.error("Error deleting conversation:", error);
+    }
+  };
 
   const handleSendMessage = async () => {
     if (!message.trim() || !isAuthenticated) return;
@@ -56,12 +111,14 @@ export default function Chat() {
         });
         
         refetchMessages();
+        refetchConversations();
       } else {
         await sendMessage.mutateAsync({
           conversationId: currentConversationId,
           message: messageText,
         });
         refetchMessages();
+        refetchConversations();
       }
     } catch (error) {
       console.error("Error sending message:", error);
@@ -92,172 +149,268 @@ export default function Chat() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex flex-col">
-      {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <Link href="/">
-                <Button variant="ghost" size="sm">
-                  <Home className="h-4 w-4 mr-2" />
-                  Inici
-                </Button>
-              </Link>
-              <Separator orientation="vertical" className="h-6" />
-              <div className="flex items-center gap-2">
-                <Shield className="h-6 w-6 text-blue-600" />
-                <h1 className="text-xl font-bold text-gray-900">Consulta amb IA</h1>
-              </div>
-            </div>
-            <span className="text-sm text-gray-600">Hola, {user?.name}</span>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <div className="flex-1 container py-6 flex gap-6">
-        {/* Sidebar - Conversations */}
-        <aside className="w-64 flex-shrink-0 hidden md:block">
-          <Card className="p-4">
-            <h3 className="font-semibold mb-3">Converses</h3>
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex">
+      {/* Sidebar - Historial de conversaciones */}
+      <div
+        className={`${
+          sidebarOpen ? "w-80" : "w-0"
+        } transition-all duration-300 border-r bg-white flex flex-col overflow-hidden`}
+      >
+        <div className="p-4 border-b">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="font-semibold text-lg">Historial</h2>
             <Button
-              variant="outline"
-              className="w-full mb-3"
-              onClick={() => {
-                setCurrentConversationId(null);
-                setMessage("");
-              }}
+              variant="ghost"
+              size="sm"
+              onClick={() => setSidebarOpen(false)}
+              className="lg:hidden"
             >
-              Nova conversa
+              <X className="h-4 w-4" />
             </Button>
-            <div className="space-y-2">
-              {conversations?.map((conv) => (
-                <Link key={conv.id} href={`/chat/${conv.id}`}>
-                  <Button
-                    variant={currentConversationId === conv.id ? "secondary" : "ghost"}
-                    className="w-full justify-start text-left truncate"
-                    size="sm"
+          </div>
+          <Button onClick={handleNewConversation} className="w-full gap-2">
+            <Plus className="h-4 w-4" />
+            Nova consulta
+          </Button>
+        </div>
+
+        <ScrollArea className="flex-1">
+          <div className="p-2 space-y-1">
+            {conversations && conversations.length > 0 ? (
+              conversations.map((conv: Conversation) => (
+                <div
+                  key={conv.id}
+                  className={`group flex items-center gap-2 p-3 rounded-lg cursor-pointer transition-colors ${
+                    currentConversationId === conv.id
+                      ? "bg-blue-100 text-blue-900"
+                      : "hover:bg-gray-100"
+                  }`}
+                >
+                  <div
+                    className="flex-1 min-w-0"
+                    onClick={() => handleSelectConversation(conv.id)}
                   >
-                    {conv.title || "Nova consulta"}
+                    <div className="flex items-center gap-2">
+                      <MessageSquare className="h-4 w-4 flex-shrink-0" />
+                      <span className="text-sm font-medium truncate">
+                        {conv.title || `Consulta ${conv.id}`}
+                      </span>
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1">
+                      {new Date(conv.updatedAt).toLocaleDateString("ca-ES", {
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric",
+                      })}
+                    </p>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="opacity-0 group-hover:opacity-100 transition-opacity"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setConversationToDelete(conv.id);
+                      setDeleteDialogOpen(true);
+                    }}
+                  >
+                    <Trash2 className="h-4 w-4 text-red-600" />
+                  </Button>
+                </div>
+              ))
+            ) : (
+              <div className="text-center py-8 text-gray-500 text-sm">
+                <MessageSquare className="h-12 w-12 mx-auto mb-2 opacity-50" />
+                <p>Encara no tens converses</p>
+                <p className="text-xs mt-1">Comença una nova consulta</p>
+              </div>
+            )}
+          </div>
+        </ScrollArea>
+      </div>
+
+      {/* Main Chat Area */}
+      <div className="flex-1 flex flex-col">
+        {/* Header */}
+        <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
+          <div className="container py-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                {!sidebarOpen && (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setSidebarOpen(true)}
+                  >
+                    <Menu className="h-4 w-4" />
+                  </Button>
+                )}
+                <Link href="/">
+                  <Button variant="ghost" size="sm">
+                    <Home className="h-4 w-4 mr-2" />
+                    Inici
                   </Button>
                 </Link>
-              ))}
-            </div>
-          </Card>
-        </aside>
-
-        {/* Chat Area */}
-        <div className="flex-1 flex flex-col">
-          <Card className="flex-1 flex flex-col">
-            {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-6 space-y-4">
-              {!messages || messages.length === 0 ? (
-                <div className="text-center py-12">
-                  <Shield className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    Benvingut al xat especialitzat en IT
-                  </h2>
-                  <p className="text-gray-600 mb-6 max-w-md mx-auto">
-                    Pots fer qualsevol pregunta sobre normativa d'Incapacitat Temporal, casos especials,
-                    procediments administratius o durada de processos
-                  </p>
-                  <div className="flex gap-2 justify-center flex-wrap">
-                    <Button variant="outline" size="sm" onClick={() => setMessage("Quina és la durada màxima d'una IT?")}>
-                      Durada màxima IT
-                    </Button>
-                    <Button variant="outline" size="sm" onClick={() => setMessage("Com funciona la menstruació incapacitant?")}>
-                      Menstruació incapacitant
-                    </Button>
-                    <Button variant="outline" size="sm" onClick={() => setMessage("Què passa als 365 dies d'IT?")}>
-                      Pròrroga als 365 dies
-                    </Button>
-                  </div>
+                <Separator orientation="vertical" className="h-6" />
+                <div className="flex items-center gap-2">
+                  <MessageSquare className="h-6 w-6 text-blue-600" />
+                  <h1 className="text-xl font-bold text-gray-900">Consulta amb IA</h1>
                 </div>
-              ) : (
-                messages.map((msg) => (
+              </div>
+              <div className="text-sm text-gray-600">
+                {user?.name || user?.email}
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {/* Messages Area */}
+        <div className="flex-1 overflow-y-auto">
+          <div className="container py-6 max-w-4xl">
+            {!currentConversationId && messages?.length === 0 ? (
+              <div className="text-center py-12">
+                <MessageSquare className="h-16 w-16 text-blue-400 mx-auto mb-4" />
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  Xat especialitzat en IT
+                </h2>
+                <p className="text-gray-600 mb-6">
+                  Fes qualsevol consulta sobre normativa d'Incapacitat Temporal
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
+                  <Card className="p-4">
+                    <h3 className="font-semibold mb-2">Exemples de consultes:</h3>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Durada màxima d'una IT?</li>
+                      <li>• Com gestionar una baixa retroactiva?</li>
+                      <li>• Procediment per a menstruació incapacitant</li>
+                    </ul>
+                  </Card>
+                  <Card className="p-4">
+                    <h3 className="font-semibold mb-2">Fonts d'informació:</h3>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Normativa estatal i autonòmica</li>
+                      <li>• Casos especials documentats</li>
+                      <li>• Guies pràctiques del Departament de Salut</li>
+                    </ul>
+                  </Card>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                {messages?.map((msg) => (
                   <div
                     key={msg.id}
-                    className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+                    className={`flex ${
+                      msg.role === "user" ? "justify-end" : "justify-start"
+                    }`}
                   >
-                    <div
-                      className={`max-w-[80%] rounded-lg p-4 ${
+                    <Card
+                      className={`max-w-[80%] p-4 ${
                         msg.role === "user"
                           ? "bg-blue-600 text-white"
-                          : "bg-gray-100 text-gray-900"
+                          : "bg-white border-gray-200"
                       }`}
                     >
-                      {msg.role === "assistant" ? (
-                        <div className="prose prose-sm max-w-none">
+                      <div className="prose prose-sm max-w-none">
+                        {msg.role === "assistant" ? (
                           <Streamdown>{msg.content}</Streamdown>
-                          {msg.sources && Array.isArray(msg.sources) && msg.sources.length > 0 && (
-                            <div className="mt-4 pt-4 border-t border-gray-300">
-                              <p className="text-xs font-semibold text-gray-600 mb-2">
-                                <FileText className="h-3 w-3 inline mr-1" />
-                                Fonts consultades:
-                              </p>
-                              <ul className="text-xs space-y-1">
-                                {msg.sources.map((source: any, idx: number) => (
-                                  <li key={idx} className="text-gray-700">
-                                    <BookOpen className="h-3 w-3 inline mr-1" />
-                                    {source.title}
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
+                        ) : (
+                          <p className="whitespace-pre-wrap">{msg.content}</p>
+                        )}
+                      </div>
+                      {msg.sources && msg.sources.length > 0 && (
+                        <div className="mt-3 pt-3 border-t border-gray-200">
+                          <p className="text-xs font-semibold text-gray-600 mb-1">
+                            Fonts consultades:
+                          </p>
+                          <div className="flex flex-wrap gap-1">
+                            {msg.sources.map((source: any, idx: number) => (
+                              <span
+                                key={idx}
+                                className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
+                              >
+                                {source.title}
+                              </span>
+                            ))}
+                          </div>
                         </div>
-                      ) : (
-                        <p className="whitespace-pre-wrap">{msg.content}</p>
                       )}
-                    </div>
+                    </Card>
                   </div>
-                ))
-              )}
-              {sendMessage.isPending && (
-                <div className="flex justify-start">
-                  <div className="bg-gray-100 rounded-lg p-4">
-                    <Loader2 className="h-5 w-5 animate-spin text-gray-600" />
+                ))}
+                {sendMessage.isPending && (
+                  <div className="flex justify-start">
+                    <Card className="max-w-[80%] p-4 bg-white border-gray-200">
+                      <div className="flex items-center gap-2">
+                        <Loader2 className="h-4 w-4 animate-spin text-blue-600" />
+                        <span className="text-sm text-gray-600">
+                          Consultant documentació...
+                        </span>
+                      </div>
+                    </Card>
                   </div>
-                </div>
-              )}
-              <div ref={messagesEndRef} />
-            </div>
-
-            {/* Input */}
-            <div className="border-t p-4">
-              <div className="flex gap-2">
-                <Input
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" && !e.shiftKey) {
-                      e.preventDefault();
-                      handleSendMessage();
-                    }
-                  }}
-                  placeholder="Escriu la teva pregunta sobre IT..."
-                  disabled={sendMessage.isPending}
-                  className="flex-1"
-                />
-                <Button
-                  onClick={handleSendMessage}
-                  disabled={!message.trim() || sendMessage.isPending}
-                >
-                  {sendMessage.isPending ? (
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                  ) : (
-                    <Send className="h-4 w-4" />
-                  )}
-                </Button>
+                )}
+                <div ref={messagesEndRef} />
               </div>
-              <p className="text-xs text-gray-500 mt-2">
-                Les respostes es basen en normativa oficial. Consulta sempre amb professionals qualificats.
-              </p>
+            )}
+          </div>
+        </div>
+
+        {/* Input Area */}
+        <div className="border-t bg-white p-4">
+          <div className="container max-w-4xl">
+            <div className="flex gap-2">
+              <Input
+                placeholder="Escriu la teva consulta sobre IT..."
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && !e.shiftKey) {
+                    e.preventDefault();
+                    handleSendMessage();
+                  }
+                }}
+                disabled={sendMessage.isPending}
+                className="flex-1"
+              />
+              <Button
+                onClick={handleSendMessage}
+                disabled={!message.trim() || sendMessage.isPending}
+                className="gap-2"
+              >
+                {sendMessage.isPending ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  <Send className="h-4 w-4" />
+                )}
+                Enviar
+              </Button>
             </div>
-          </Card>
+          </div>
         </div>
       </div>
+
+      {/* Delete Confirmation Dialog */}
+      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Eliminar conversa?</AlertDialogTitle>
+            <AlertDialogDescription>
+              Aquesta acció no es pot desfer. La conversa i tots els seus missatges
+              s'eliminaran permanentment.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel·lar</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={handleDeleteConversation}
+              className="bg-red-600 hover:bg-red-700"
+            >
+              Eliminar
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }

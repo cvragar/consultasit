@@ -18,6 +18,7 @@ import {
   getConversationMessages,
   addMessage,
   updateConversationTitle,
+  deleteConversation,
   getRelevantContext,
 } from "./db";
 import { invokeLLM } from "./_core/llm";
@@ -211,6 +212,14 @@ IMPORTANTE:
       .input(z.object({ conversationId: z.number(), title: z.string() }))
       .mutation(async ({ input }) => {
         await updateConversationTitle(input.conversationId, input.title);
+        return { success: true };
+      }),
+
+    // Eliminar conversación
+    deleteConversation: protectedProcedure
+      .input(z.object({ conversationId: z.number() }))
+      .mutation(async ({ input }) => {
+        await deleteConversation(input.conversationId);
         return { success: true };
       }),
   }),

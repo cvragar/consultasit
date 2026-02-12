@@ -284,6 +284,17 @@ export async function updateConversationTitle(id: number, title: string) {
   await db.update(conversations).set({ title }).where(eq(conversations.id, id));
 }
 
+export async function deleteConversation(conversationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  // Primero eliminar todos los mensajes de la conversación
+  await db.delete(messages).where(eq(messages.conversationId, conversationId));
+  
+  // Luego eliminar la conversación
+  await db.delete(conversations).where(eq(conversations.id, conversationId));
+}
+
 // ===== SEARCH CONTEXT FOR RAG =====
 
 export async function getRelevantContext(query: string, limit: number = 5) {

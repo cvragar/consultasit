@@ -65,3 +65,6 @@
 ## Correcciones
 - [x] Corregir visualización de casos especiales (no se amplían al hacer clic)
 - [x] Corregir enlaces de la página de Documentación
+- [x] Implementar historial de conversaciones del chat con panel lateral
+- [x] Añadir funcionalidad para recuperar y continuar conversaciones anteriores
+- [x] Añadir opción para eliminar conversaciones del historial
