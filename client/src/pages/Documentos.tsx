@@ -11,7 +11,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Shield, Home, Search, FileText, BookOpen, Building2, ExternalLink, ChevronRight } from "lucide-react";
+import { Shield, Home, Search, FileText, BookOpen, Building2, ExternalLink, ChevronRight, Download, Loader2 } from "lucide-react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { Streamdown } from "streamdown";
@@ -58,6 +58,35 @@ export default function Documentos() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDocument, setSelectedDocument] = useState<Document | null>(null);
   const [dialogOpen, setDialogOpen] = useState(false);
+  
+  const exportPDF = trpc.documents.exportPDF.useMutation();
+
+  const handleExportPDF = async (docId: number, event: React.MouseEvent) => {
+    event.stopPropagation();
+    try {
+      const result = await exportPDF.mutateAsync({ id: docId });
+      
+      // Convertir base64 a blob y descargar
+      const byteCharacters = atob(result.pdf);
+      const byteNumbers = new Array(byteCharacters.length);
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteNumbers[i] = byteCharacters.charCodeAt(i);
+      }
+      const byteArray = new Uint8Array(byteNumbers);
+      const blob = new Blob([byteArray], { type: "application/pdf" });
+      
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = result.filename;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } catch (error) {
+      console.error("Error exporting PDF:", error);
+    }
+  };
 
   const { data: allDocuments } = trpc.documents.list.useQuery();
   const { data: searchResults } = trpc.documents.search.useQuery(
@@ -186,13 +215,29 @@ export default function Documentos() {
           {selectedDocument && (
             <>
               <DialogHeader>
-                <div className="flex items-center gap-2 mb-3 flex-wrap">
-                  <Badge className={typeColors[selectedDocument.type]}>
-                    {typeLabels[selectedDocument.type] || selectedDocument.type}
-                  </Badge>
-                  <Badge variant="outline">
-                    {jurisdictionLabels[selectedDocument.jurisdiction]}
-                  </Badge>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <Badge className={typeColors[selectedDocument.type]}>
+                      {typeLabels[selectedDocument.type] || selectedDocument.type}
+                    </Badge>
+                    <Badge variant="outline">
+                      {jurisdictionLabels[selectedDocument.jurisdiction]}
+                    </Badge>
+                  </div>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={(e) => handleExportPDF(selectedDocument.id, e)}
+                    disabled={exportPDF.isPending}
+                    className="gap-2"
+                  >
+                    {exportPDF.isPending ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <Download className="h-4 w-4" />
+                    )}
+                    Exportar PDF
+                  </Button>
                 </div>
                 <DialogTitle className="text-2xl">{selectedDocument.title}</DialogTitle>
                 {selectedDocument.source && (

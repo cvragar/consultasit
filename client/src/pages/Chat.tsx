@@ -15,7 +15,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { Shield, Send, Loader2, Home, MessageSquare, Trash2, Plus, Menu, X } from "lucide-react";
+import { Shield, Send, Loader2, Home, MessageSquare, Trash2, Plus, Menu, X, Download } from "lucide-react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { Streamdown } from "streamdown";
@@ -41,6 +41,7 @@ export default function Chat() {
   const createConversation = trpc.chat.createConversation.useMutation();
   const sendMessage = trpc.chat.sendMessage.useMutation();
   const deleteConversation = trpc.chat.deleteConversation.useMutation();
+  const exportPDF = trpc.chat.exportPDF.useMutation();
   
   const { data: messages, refetch: refetchMessages } = trpc.chat.getMessages.useQuery(
     { conversationId: currentConversationId! },
@@ -89,6 +90,34 @@ export default function Chat() {
       setConversationToDelete(null);
     } catch (error) {
       console.error("Error deleting conversation:", error);
+    }
+  };
+
+  const handleExportPDF = async () => {
+    if (!currentConversationId) return;
+
+    try {
+      const result = await exportPDF.mutateAsync({ conversationId: currentConversationId });
+      
+      // Convertir base64 a blob y descargar
+      const byteCharacters = atob(result.pdf);
+      const byteNumbers = new Array(byteCharacters.length);
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteNumbers[i] = byteCharacters.charCodeAt(i);
+      }
+      const byteArray = new Uint8Array(byteNumbers);
+      const blob = new Blob([byteArray], { type: "application/pdf" });
+      
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = result.filename;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } catch (error) {
+      console.error("Error exporting PDF:", error);
     }
   };
 
@@ -257,8 +286,26 @@ export default function Chat() {
                   <h1 className="text-xl font-bold text-gray-900">Consulta amb IA</h1>
                 </div>
               </div>
-              <div className="text-sm text-gray-600">
-                {user?.name || user?.email}
+              <div className="flex items-center gap-2">
+                {currentConversationId && messages && messages.length > 0 && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleExportPDF}
+                    disabled={exportPDF.isPending}
+                    className="gap-2"
+                  >
+                    {exportPDF.isPending ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <Download className="h-4 w-4" />
+                    )}
+                    Exportar PDF
+                  </Button>
+                )}
+                <div className="text-sm text-gray-600">
+                  {user?.name || user?.email}
+                </div>
               </div>
             </div>
           </div>

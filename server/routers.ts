@@ -22,6 +22,11 @@ import {
   getRelevantContext,
 } from "./db";
 import { invokeLLM } from "./_core/llm";
+import {
+  generateConversationPDF,
+  generateSpecialCasePDF,
+  generateDocumentPDF,
+} from "./pdfGenerator";
 
 export const appRouter = router({
   system: systemRouter,
@@ -51,6 +56,17 @@ export const appRouter = router({
       .query(async ({ input }) => {
         return await getDocumentById(input.id);
       }),
+    exportPDF: publicProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input, ctx }) => {
+        const document = await getDocumentById(input.id);
+        if (!document) {
+          throw new Error("Document not found");
+        }
+        const pdfBuffer = await generateDocumentPDF(document);
+        const base64 = pdfBuffer.toString("base64");
+        return { pdf: base64, filename: `${document.title.replace(/[^a-z0-9]/gi, "_")}.pdf` };
+      }),
   }),
 
   // ===== SPECIAL CASES =====
@@ -72,6 +88,17 @@ export const appRouter = router({
       .input(z.object({ query: z.string() }))
       .query(async ({ input }) => {
         return await searchSpecialCases(input.query);
+      }),
+    exportPDF: publicProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        const specialCase = await getSpecialCaseById(input.id);
+        if (!specialCase) {
+          throw new Error("Special case not found");
+        }
+        const pdfBuffer = await generateSpecialCasePDF(specialCase);
+        const base64 = pdfBuffer.toString("base64");
+        return { pdf: base64, filename: `${specialCase.title.replace(/[^a-z0-9]/gi, "_")}.pdf` };
       }),
   }),
 
@@ -221,6 +248,20 @@ IMPORTANTE:
       .mutation(async ({ input }) => {
         await deleteConversation(input.conversationId);
         return { success: true };
+      }),
+
+    // Exportar conversación a PDF
+    exportPDF: protectedProcedure
+      .input(z.object({ conversationId: z.number() }))
+      .mutation(async ({ input }) => {
+        const messages = await getConversationMessages(input.conversationId);
+        const conversations = await getUserConversations(messages[0]?.conversationId || 0);
+        const conversation = conversations.find(c => c.id === input.conversationId);
+        const title = conversation?.title || "Conversa sense títol";
+        
+        const pdfBuffer = await generateConversationPDF(title, messages as any);
+        const base64 = pdfBuffer.toString("base64");
+        return { pdf: base64, filename: `conversa_${input.conversationId}.pdf` };
       }),
   }),
 });

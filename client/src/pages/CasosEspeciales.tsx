@@ -11,7 +11,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Shield, Home, Search, AlertCircle, BookOpen, Scale, FileText, ChevronRight } from "lucide-react";
+import { Shield, Home, Search, AlertCircle, BookOpen, Scale, FileText, ChevronRight, Download, Loader2 } from "lucide-react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
 
@@ -54,12 +54,40 @@ type SpecialCase = {
   createdAt: Date;
   updatedAt: Date;
 };
-
 export default function CasosEspeciales() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedCase, setSelectedCase] = useState<SpecialCase | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [dialogOpen, setDialogOpen] = useState(false);
+  
+  const exportPDF = trpc.specialCases.exportPDF.useMutation();
+
+  const handleExportPDF = async (caseId: number, event: React.MouseEvent) => {
+    event.stopPropagation();
+    try {
+      const result = await exportPDF.mutateAsync({ id: caseId });
+      
+      // Convertir base64 a blob y descargar
+      const byteCharacters = atob(result.pdf);
+      const byteNumbers = new Array(byteCharacters.length);
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteNumbers[i] = byteCharacters.charCodeAt(i);
+      }
+      const byteArray = new Uint8Array(byteNumbers);
+      const blob = new Blob([byteArray], { type: "application/pdf" });
+      
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = result.filename;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } catch (error) {
+      console.error("Error exporting PDF:", error);
+    }
+  };
 
   const { data: allCases } = trpc.specialCases.list.useQuery();
   const { data: searchResults } = trpc.specialCases.search.useQuery(
@@ -182,10 +210,24 @@ export default function CasosEspeciales() {
           {selectedCase && (
             <>
               <DialogHeader>
-                <div className="flex items-center gap-2 mb-3">
+                <div className="flex items-center justify-between mb-3">
                   <Badge className={categoryColors[selectedCase.category]}>
                     {categoryLabels[selectedCase.category] || selectedCase.category}
                   </Badge>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={(e) => handleExportPDF(selectedCase.id, e)}
+                    disabled={exportPDF.isPending}
+                    className="gap-2"
+                  >
+                    {exportPDF.isPending ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <Download className="h-4 w-4" />
+                    )}
+                    Exportar PDF
+                  </Button>
                 </div>
                 <DialogTitle className="text-2xl">{selectedCase.title}</DialogTitle>
                 <DialogDescription className="text-base mt-2">

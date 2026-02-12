@@ -68,3 +68,10 @@
 - [x] Implementar historial de conversaciones del chat con panel lateral
 - [x] Añadir funcionalidad para recuperar y continuar conversaciones anteriores
 - [x] Añadir opción para eliminar conversaciones del historial
+- [x] Implementar generación de PDF en el backend
+- [x] Añadir endpoint tRPC para exportar conversaciones a PDF
+- [x] Añadir endpoint tRPC para exportar casos especiales a PDF
+- [x] Añadir endpoint tRPC para exportar documentos a PDF
+- [x] Añadir botón de exportación en la página de chat
+- [x] Añadir botón de exportación en la página de casos especiales
+- [x] Añadir botón de exportación en la página de documentos
