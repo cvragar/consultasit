@@ -28,21 +28,19 @@ export default function Calculadora() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
       {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <Link href="/">
-                <Button variant="ghost" size="sm">
-                  <Home className="h-4 w-4 mr-2" />
-                  Inici
-                </Button>
-              </Link>
-              <Separator orientation="vertical" className="h-6" />
-              <div className="flex items-center gap-2">
-                <Calculator className="h-6 w-6 text-purple-600" />
-                <h1 className="text-xl font-bold text-gray-900">Calculadora d'IT</h1>
-              </div>
+      <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-10">
+        <div className="container py-3">
+          <div className="flex items-center gap-2">
+            <Link href="/">
+              <Button variant="ghost" size="sm" className="gap-1.5 px-2 shrink-0">
+                <Home className="h-4 w-4" />
+                <span className="hidden sm:inline">Inici</span>
+              </Button>
+            </Link>
+            <Separator orientation="vertical" className="h-5 hidden sm:block" />
+            <div className="flex items-center gap-1.5">
+              <Calculator className="h-5 w-5 text-purple-600 shrink-0" />
+              <h1 className="text-base sm:text-xl font-bold text-gray-900">Calculadora d'IT</h1>
             </div>
           </div>
         </div>

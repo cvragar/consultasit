@@ -35,7 +35,7 @@ export default function Chat() {
   const [currentConversationId, setCurrentConversationId] = useState<number | null>(null);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [conversationToDelete, setConversationToDelete] = useState<number | null>(null);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const createConversation = trpc.chat.createConversation.useMutation();
@@ -178,11 +178,20 @@ export default function Chat() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex relative">
+      {/* Overlay per a mòbil */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/30 z-20 md:hidden"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
       {/* Sidebar - Historial de conversaciones */}
       <div
         className={`${
-          sidebarOpen ? "w-80" : "w-0"
+          sidebarOpen
+            ? "fixed md:relative inset-y-0 left-0 w-72 md:w-80 z-30 md:z-auto"
+            : "w-0"
         } transition-all duration-300 border-r bg-white flex flex-col overflow-hidden`}
       >
         <div className="p-4 border-b">
@@ -192,7 +201,6 @@ export default function Chat() {
               variant="ghost"
               size="sm"
               onClick={() => setSidebarOpen(false)}
-              className="lg:hidden"
             >
               <X className="h-4 w-4" />
             </Button>
@@ -261,50 +269,49 @@ export default function Chat() {
       {/* Main Chat Area */}
       <div className="flex-1 flex flex-col">
         {/* Header */}
-        <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
-          <div className="container py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                {!sidebarOpen && (
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setSidebarOpen(true)}
-                  >
-                    <Menu className="h-4 w-4" />
-                  </Button>
-                )}
+        <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-10">
+          <div className="px-3 sm:px-4 py-3">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setSidebarOpen(!sidebarOpen)}
+                  className="h-8 w-8 shrink-0"
+                >
+                  <Menu className="h-4 w-4" />
+                </Button>
                 <Link href="/">
-                  <Button variant="ghost" size="sm">
-                    <Home className="h-4 w-4 mr-2" />
-                    Inici
+                  <Button variant="ghost" size="sm" className="gap-1.5 px-2">
+                    <Home className="h-4 w-4" />
+                    <span className="hidden sm:inline">Inici</span>
                   </Button>
                 </Link>
-                <Separator orientation="vertical" className="h-6" />
-                <div className="flex items-center gap-2">
-                  <MessageSquare className="h-6 w-6 text-blue-600" />
-                  <h1 className="text-xl font-bold text-gray-900">Consulta amb IA</h1>
+                <Separator orientation="vertical" className="h-5 hidden sm:block" />
+                <div className="flex items-center gap-1.5">
+                  <MessageSquare className="h-5 w-5 text-blue-600 shrink-0" />
+                  <h1 className="text-base sm:text-lg font-bold text-gray-900 truncate">Consulta amb IA</h1>
                 </div>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5 shrink-0">
                 {currentConversationId && messages && messages.length > 0 && (
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={handleExportPDF}
                     disabled={exportPDF.isPending}
-                    className="gap-2"
+                    className="gap-1.5 px-2 sm:px-3"
                   >
                     {exportPDF.isPending ? (
                       <Loader2 className="h-4 w-4 animate-spin" />
                     ) : (
                       <Download className="h-4 w-4" />
                     )}
-                    Exportar PDF
+                    <span className="hidden sm:inline">PDF</span>
                   </Button>
                 )}
-                <div className="text-sm text-gray-600">
-                  {user?.name || user?.email}
+                <div className="text-xs sm:text-sm text-gray-600 truncate max-w-[80px] sm:max-w-none hidden sm:block">
+                  {user?.name?.split(" ")[0] || user?.email}
                 </div>
               </div>
             </div>

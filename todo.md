@@ -85,3 +85,9 @@
 - [x] Afegir cerca dins del contingut dels documents
 - [x] Actualitzar pàgina de Documentació amb filtres avançats
 - [x] Actualitzar pàgina de Casos Especials amb filtres avançats
+
+## Correccions responsive (mòbil)
+- [x] Corregir header de Home (botons surten de pantalla en mòbil)
+- [x] Reduir mida de text del hero en mòbil
+- [x] Corregir botons CTA (apilats verticalment en mòbil)
+- [x] Revisar responsive de totes les pàgines principals

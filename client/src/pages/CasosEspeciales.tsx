@@ -164,20 +164,20 @@ export default function CasosEspeciales() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+      <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-10">
+        <div className="container py-3">
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2 min-w-0">
               <Link href="/">
-                <Button variant="ghost" size="sm" className="gap-2">
+                <Button variant="ghost" size="sm" className="gap-1.5 px-2 shrink-0">
                   <Home className="h-4 w-4" />
-                  Inici
+                  <span className="hidden sm:inline">Inici</span>
                 </Button>
               </Link>
-              <span className="text-muted-foreground">/</span>
-              <div className="flex items-center gap-2">
-                <AlertCircle className="h-5 w-5 text-orange-600" />
-                <h1 className="text-xl font-bold">Casos Especials</h1>
+              <span className="text-muted-foreground hidden sm:inline">/</span>
+              <div className="flex items-center gap-1.5 min-w-0">
+                <AlertCircle className="h-5 w-5 text-orange-600 shrink-0" />
+                <h1 className="text-base sm:text-xl font-bold truncate">Casos Especials</h1>
               </div>
             </div>
             <div className="flex items-center gap-2">
