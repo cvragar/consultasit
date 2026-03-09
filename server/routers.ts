@@ -20,6 +20,12 @@ import {
   updateConversationTitle,
   deleteConversation,
   getRelevantContext,
+  addFavorite,
+  removeFavorite,
+  getUserFavorites,
+  getUserFavoriteIds,
+  advancedSearchDocuments,
+  advancedSearchSpecialCases,
 } from "./db";
 import { invokeLLM } from "./_core/llm";
 import {
@@ -113,6 +119,79 @@ export const appRouter = router({
       .input(z.object({ id: z.number() }))
       .query(async ({ input }) => {
         return await getItDurationById(input.id);
+      }),
+  }),
+
+  // ===== FAVORITES =====
+  favorites: router({
+    // Obtenir tots els favorits de l'usuari
+    getAll: protectedProcedure.query(async ({ ctx }) => {
+      return await getUserFavorites(ctx.user.id);
+    }),
+
+    // Obtenir IDs de favorits de l'usuari
+    getIds: protectedProcedure.query(async ({ ctx }) => {
+      const favs = await getUserFavoriteIds(ctx.user.id);
+      return favs.map(f => ({ entityType: f.entityType, entityId: f.entityId }));
+    }),
+
+    // Afegir favorit
+    add: protectedProcedure
+      .input(z.object({
+        entityType: z.enum(["document", "special_case"]),
+        entityId: z.number(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        await addFavorite(ctx.user.id, input.entityType, input.entityId);
+        return { success: true };
+      }),
+
+    // Eliminar favorit
+    remove: protectedProcedure
+      .input(z.object({
+        entityType: z.enum(["document", "special_case"]),
+        entityId: z.number(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        await removeFavorite(ctx.user.id, input.entityType, input.entityId);
+        return { success: true };
+      }),
+  }),
+
+  // ===== ADVANCED SEARCH =====
+  search: router({
+    documents: publicProcedure
+      .input(z.object({
+        query: z.string().optional(),
+        type: z.string().optional(),
+        jurisdiction: z.string().optional(),
+        dateFrom: z.date().optional(),
+        dateTo: z.date().optional(),
+        limit: z.number().optional(),
+      }))
+      .query(async ({ input }) => {
+        return await advancedSearchDocuments(input);
+      }),
+
+    specialCases: publicProcedure
+      .input(z.object({
+        query: z.string().optional(),
+        category: z.string().optional(),
+        limit: z.number().optional(),
+      }))
+      .query(async ({ input }) => {
+        return await advancedSearchSpecialCases(input);
+      }),
+
+    // Cerca global (documents + casos)
+    global: publicProcedure
+      .input(z.object({ query: z.string(), limit: z.number().optional() }))
+      .query(async ({ input }) => {
+        const [docs, cases] = await Promise.all([
+          advancedSearchDocuments({ query: input.query, limit: input.limit ?? 5 }),
+          advancedSearchSpecialCases({ query: input.query, limit: input.limit ?? 5 }),
+        ]);
+        return { documents: docs, cases };
       }),
   }),
 
@@ -265,5 +344,7 @@ IMPORTANTE:
       }),
   }),
 });
+
+// ===== FAVORITES =====
 
 export type AppRouter = typeof appRouter;

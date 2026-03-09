@@ -1,8 +1,9 @@
-import { eq, desc, like, or, and, sql } from "drizzle-orm";
+import { eq, desc, like, or, and, sql, inArray } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { 
   InsertUser, users, documents, specialCases, itDurations, 
-  conversations, messages, InsertConversation, InsertMessage 
+  conversations, messages, InsertConversation, InsertMessage,
+  favorites, InsertFavorite
 } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
@@ -293,6 +294,155 @@ export async function deleteConversation(conversationId: number) {
   
   // Luego eliminar la conversación
   await db.delete(conversations).where(eq(conversations.id, conversationId));
+}
+
+// ===== FAVORITES =====
+
+export async function addFavorite(userId: number, entityType: "document" | "special_case", entityId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  // Comprovar si ja existeix
+  const existing = await db
+    .select()
+    .from(favorites)
+    .where(and(
+      eq(favorites.userId, userId),
+      eq(favorites.entityType, entityType),
+      eq(favorites.entityId, entityId)
+    ))
+    .limit(1);
+
+  if (existing.length > 0) {
+    return existing[0];
+  }
+
+  const newFav: InsertFavorite = { userId, entityType, entityId };
+  const result = await db.insert(favorites).values(newFav);
+  return { id: result[0].insertId, userId, entityType, entityId };
+}
+
+export async function removeFavorite(userId: number, entityType: "document" | "special_case", entityId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  await db.delete(favorites).where(and(
+    eq(favorites.userId, userId),
+    eq(favorites.entityType, entityType),
+    eq(favorites.entityId, entityId)
+  ));
+}
+
+export async function getUserFavorites(userId: number) {
+  const db = await getDb();
+  if (!db) return { documents: [], cases: [] };
+
+  const userFavs = await db
+    .select()
+    .from(favorites)
+    .where(eq(favorites.userId, userId))
+    .orderBy(desc(favorites.createdAt));
+
+  const docIds = userFavs.filter(f => f.entityType === "document").map(f => f.entityId);
+  const caseIds = userFavs.filter(f => f.entityType === "special_case").map(f => f.entityId);
+
+  const favDocs = docIds.length > 0
+    ? await db.select().from(documents).where(inArray(documents.id, docIds))
+    : [];
+
+  const favCases = caseIds.length > 0
+    ? await db.select().from(specialCases).where(inArray(specialCases.id, caseIds))
+    : [];
+
+  return { documents: favDocs, cases: favCases, raw: userFavs };
+}
+
+export async function getUserFavoriteIds(userId: number) {
+  const db = await getDb();
+  if (!db) return [];
+
+  return db.select().from(favorites).where(eq(favorites.userId, userId));
+}
+
+// ===== ADVANCED SEARCH =====
+
+export async function advancedSearchDocuments(params: {
+  query?: string;
+  type?: string;
+  jurisdiction?: string;
+  dateFrom?: Date;
+  dateTo?: Date;
+  limit?: number;
+}) {
+  const db = await getDb();
+  if (!db) return [];
+
+  const conditions = [];
+
+  if (params.query) {
+    const searchPattern = `%${params.query}%`;
+    conditions.push(or(
+      like(documents.title, searchPattern),
+      like(documents.content, searchPattern),
+      like(documents.summary, searchPattern)
+    ));
+  }
+
+  if (params.type) {
+    conditions.push(eq(documents.type, params.type as any));
+  }
+
+  if (params.jurisdiction) {
+    conditions.push(eq(documents.jurisdiction, params.jurisdiction as any));
+  }
+
+  if (params.dateFrom) {
+    conditions.push(sql`${documents.createdAt} >= ${params.dateFrom}`);
+  }
+
+  if (params.dateTo) {
+    conditions.push(sql`${documents.createdAt} <= ${params.dateTo}`);
+  }
+
+  const query = db.select().from(documents);
+  if (conditions.length > 0) {
+    query.where(conditions.length === 1 ? conditions[0]! : and(...conditions as any));
+  }
+
+  return query.orderBy(desc(documents.createdAt)).limit(params.limit ?? 20);
+}
+
+export async function advancedSearchSpecialCases(params: {
+  query?: string;
+  category?: string;
+  limit?: number;
+}) {
+  const db = await getDb();
+  if (!db) return [];
+
+  const conditions = [];
+
+  if (params.query) {
+    const searchPattern = `%${params.query}%`;
+    conditions.push(or(
+      like(specialCases.title, searchPattern),
+      like(specialCases.description, searchPattern),
+      like(specialCases.legalBasis, searchPattern),
+      like(specialCases.procedure, searchPattern),
+      like(specialCases.examples, searchPattern)
+    ));
+  }
+
+  if (params.category) {
+    conditions.push(eq(specialCases.category, params.category as any));
+  }
+
+  const query = db.select().from(specialCases);
+  if (conditions.length > 0) {
+    query.where(conditions.length === 1 ? conditions[0]! : and(...conditions as any));
+  }
+
+  return query.orderBy(specialCases.category).limit(params.limit ?? 20);
 }
 
 // ===== SEARCH CONTEXT FOR RAG =====

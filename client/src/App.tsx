@@ -10,6 +10,7 @@ import CasosEspeciales from "./pages/CasosEspeciales";
 import Documentos from "./pages/Documentos";
 import Calculadora from "./pages/Calculadora";
 import Admin from "./pages/Admin";
+import Favorits from "./pages/Favorits";
 
 function Router() {
   return (
@@ -21,6 +22,7 @@ function Router() {
       <Route path={"/documentos"} component={Documentos} />
       <Route path={"/calculadora"} component={Calculadora} />
       <Route path={"/admin"} component={Admin} />
+      <Route path={"/favorits"} component={Favorits} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

@@ -1,7 +1,7 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { MessageSquare, FileText, AlertCircle, Calculator, Shield, LogIn } from "lucide-react";
+import { MessageSquare, FileText, AlertCircle, Calculator, Shield, LogIn, Star } from "lucide-react";
 import { Link } from "wouter";
 import { getLoginUrl } from "@/const";
 
@@ -60,6 +60,12 @@ export default function Home() {
               {isAuthenticated ? (
                 <div className="flex items-center gap-3">
                   <span className="text-sm text-gray-600">Hola, {user?.name || "Usuari"}</span>
+                  <Link href="/favorits">
+                    <Button variant="ghost" size="sm" className="gap-2">
+                      <Star className="h-4 w-4 text-yellow-500" />
+                      Favorits
+                    </Button>
+                  </Link>
                   {user?.role === "admin" && (
                     <Link href="/admin">
                       <Button variant="outline" size="sm">

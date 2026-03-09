@@ -151,3 +151,19 @@ export const embeddings = mysqlTable("embeddings", {
 
 export type Embedding = typeof embeddings.$inferSelect;
 export type InsertEmbedding = typeof embeddings.$inferInsert;
+
+/**
+ * Favorits de l'usuari (documents i casos especials)
+ */
+export const favorites = mysqlTable("favorites", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").references(() => users.id).notNull(),
+  entityType: mysqlEnum("entityType", ["document", "special_case"]).notNull(),
+  entityId: int("entityId").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+}, (table) => ({
+  userEntityIdx: index("user_entity_idx").on(table.userId, table.entityType, table.entityId),
+}));
+
+export type Favorite = typeof favorites.$inferSelect;
+export type InsertFavorite = typeof favorites.$inferInsert;

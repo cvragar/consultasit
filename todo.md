@@ -75,3 +75,13 @@
 - [x] Añadir botón de exportación en la página de chat
 - [x] Añadir botón de exportación en la página de casos especiales
 - [x] Añadir botón de exportación en la página de documentos
+
+## Noves funcionalitats (sprint 2)
+- [x] Afegir taula de favorits al esquema de BD
+- [x] Crear endpoints tRPC per gestionar favorits (afegir, eliminar, llistar)
+- [x] Implementar botó de favorit a documents i casos especials
+- [x] Crear pàgina de favorits accessible des del menú
+- [x] Implementar cerca avançada amb filtres combinats (tipus + jurisdicció + query)
+- [x] Afegir cerca dins del contingut dels documents
+- [x] Actualitzar pàgina de Documentació amb filtres avançats
+- [x] Actualitzar pàgina de Casos Especials amb filtres avançats
