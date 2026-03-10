@@ -60,6 +60,7 @@ export const specialCases = mysqlTable("special_cases", {
     "extranjeros",
     "vacaciones",
     "recaida",
+    "accident_treball",
     "otro"
   ]).notNull(),
   description: text("description").notNull(),

@@ -1,0 +1,75 @@
+{
+  "query": "SELECT id, title, category FROM special_cases ORDER BY id DESC LIMIT 20;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, category FROM special_cases ORDER BY id DESC LIMIT 20;",
+  "rows": [
+    {
+      "id": "30003",
+      "title": "TRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball",
+      "category": "accident_treball"
+    },
+    {
+      "id": "30002",
+      "title": "Accident de treball en treballador en situació de pluriocupació",
+      "category": "accident_treball"
+    },
+    {
+      "id": "30001",
+      "title": "Accident de treball en treballador autònom (RETA)",
+      "category": "accident_treball"
+    },
+    {
+      "id": "10",
+      "title": "Recaída en IT",
+      "category": "recaida"
+    },
+    {
+      "id": "9",
+      "title": "Vacaciones durante IT",
+      "category": "vacaciones"
+    },
+    {
+      "id": "8",
+      "title": "IT en extranjeros",
+      "category": "extranjeros"
+    },
+    {
+      "id": "7",
+      "title": "IT y prisión",
+      "category": "prision"
+    },
+    {
+      "id": "6",
+      "title": "Pluriempleo",
+      "category": "pluriempleo"
+    },
+    {
+      "id": "5",
+      "title": "Bajas retroactivas",
+      "category": "baja_retroactiva"
+    },
+    {
+      "id": "4",
+      "title": "Donación de órganos",
+      "category": "donacion_organos"
+    },
+    {
+      "id": "3",
+      "title": "Gestación a partir de la semana 39",
+      "category": "embarazo"
+    },
+    {
+      "id": "2",
+      "title": "Interrupción voluntaria del embarazo (IVE)",
+      "category": "embarazo"
+    },
+    {
+      "id": "1",
+      "title": "Menstruación incapacitante",
+      "category": "menstruacion"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tcategory\n30003\tTRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball\taccident_treball\n30002\tAccident de treball en treballador en situació de pluriocupació\taccident_treball\n30001\tAccident de treball en treballador autònom (RETA)\taccident_treball\n10\tRecaída en IT\trecaida\n9\tVacaciones durante IT\tvacaciones\n8\tIT en extranjeros\textranjeros\n7\tIT y prisión\tprision\n6\tPluriempleo\tpluriempleo\n5\tBajas retroactivas\tbaja_retroactiva\n4\tDonación de órganos\tdonacion_organos\n3\tGestación a partir de la semana 39\tembarazo\n2\tInterrupción voluntaria del embarazo (IVE)\tembarazo\n1\tMenstruación incapacitante\tmenstruacion\n",
+  "stderr": "",
+  "execution_time_ms": 357
+}

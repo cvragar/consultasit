@@ -15,6 +15,13 @@
       "when": 1773085959764,
       "tag": "0001_woozy_the_hunter",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1773132356183,
+      "tag": "0002_mean_lady_bullseye",
+      "breakpoints": true
     }
   ]
 }

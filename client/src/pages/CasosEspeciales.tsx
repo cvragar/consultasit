@@ -40,6 +40,7 @@ const categoryLabels: Record<string, string> = {
   extranjeros: "Estrangers",
   vacaciones: "Vacances i IT",
   recaida: "Recaiguda",
+  accident_treball: "Accident de Treball",
   otro: "Altres",
 };
 
@@ -54,6 +55,7 @@ const categoryColors: Record<string, string> = {
   extranjeros: "bg-indigo-100 text-indigo-800",
   vacaciones: "bg-teal-100 text-teal-800",
   recaida: "bg-amber-100 text-amber-800",
+  accident_treball: "bg-red-200 text-red-900",
   otro: "bg-gray-100 text-gray-800",
 };
 

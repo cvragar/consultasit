@@ -108,3 +108,10 @@
 - [x] Investigar jurisprudència rellevant sobre TRADE i IT/AT
 - [x] Investigar el contracte TRADE i la seva relació amb la cobertura de contingències
 - [x] Inserir el nou cas especial a la base de dades
+
+## Millores categories i nous casos AT
+- [x] Afegir "accident_treball" a l'enum de categories de special_cases
+- [x] Migrar casos AT existents (autònom pur, pluriocupació, TRADE) a la nova categoria
+- [x] Actualitzar el frontend per mostrar la nova categoria amb filtre específic
+- [x] Investigar i afegir cas in itinere per a autònoms amb múltiples llocs de treball
+- [x] Inserir el nou cas in itinere a la base de dades

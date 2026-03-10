@@ -1,0 +1,1 @@
+ALTER TABLE `special_cases` MODIFY COLUMN `category` enum('menstruacion','embarazo','lactancia','donacion_organos','baja_retroactiva','pluriempleo','prision','extranjeros','vacaciones','recaida','accident_treball','otro') NOT NULL;
