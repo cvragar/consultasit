@@ -1,0 +1,17 @@
+{
+  "query": "SELECT id, title, category, LEFT(description, 100) as desc_preview, LEFT(legalBasis, 80) as legal_preview FROM special_cases WHERE title LIKE '%TRADE%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, category, LEFT(description, 100) as desc_preview, LEFT(legalBasis, 80) as legal_preview FROM special_cases WHERE title LIKE '%TRADE%';",
+  "rows": [
+    {
+      "id": "30003",
+      "title": "TRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball",
+      "category": "pluriempleo",
+      "desc_preview": "El TRADE és l'autònom que percep ≥75% dels seus ingressos d'un sol client. Té un règim especial d'AT",
+      "legal_preview": "Art. 317 TRLGSS (RDL 8/2015): Definició d'AT per al TRADE | Art. 316 TRLGSS: Def"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tcategory\tdesc_preview\tlegal_preview\n30003\tTRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball\tpluriempleo\tEl TRADE és l'autònom que percep ≥75% dels seus ingressos d'un sol client. Té un règim especial d'AT\tArt. 317 TRLGSS (RDL 8/2015): Definició d'AT per al TRADE | Art. 316 TRLGSS: Def\n",
+  "stderr": "",
+  "execution_time_ms": 389
+}

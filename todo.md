@@ -99,3 +99,12 @@
 - [x] Afegir normativa específica: LGSS, LETA, RD 1273/2003
 - [x] Afegir jurisprudència rellevant sobre AT en autònoms i pluriocupació
 - [x] Inserir nous casos a la base de dades
+
+## Nou cas especial - TRADE (Treballador Autònom Econòmicament Dependent)
+- [x] Investigar definició i requisits del TRADE (LETA art. 11-18)
+- [x] Investigar cobertura IT i AT específica del TRADE
+- [x] Investigar qui emet el part de baixa per al TRADE (eCap vs mútua)
+- [x] Investigar drets específics del TRADE en IT: durada, prestació, base reguladora
+- [x] Investigar jurisprudència rellevant sobre TRADE i IT/AT
+- [x] Investigar el contracte TRADE i la seva relació amb la cobertura de contingències
+- [x] Inserir el nou cas especial a la base de dades
