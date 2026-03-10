@@ -91,3 +91,11 @@
 - [x] Reduir mida de text del hero en mòbil
 - [x] Corregir botons CTA (apilats verticalment en mòbil)
 - [x] Revisar responsive de totes les pàgines principals
+
+## Nous casos especials - Accidents de treball (AT)
+- [x] Investigar AT en treballadors autònoms (TRADE i autònom pur)
+- [x] Investigar AT en situació de pluriocupació (treballador d'una empresa que pateix AT en una altra)
+- [x] Afegir procediment des de l'eCap per a parts de baixa per AT
+- [x] Afegir normativa específica: LGSS, LETA, RD 1273/2003
+- [x] Afegir jurisprudència rellevant sobre AT en autònoms i pluriocupació
+- [x] Inserir nous casos a la base de dades

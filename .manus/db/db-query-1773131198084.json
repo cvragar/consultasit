@@ -1,0 +1,25 @@
+{
+  "query": "SHOW TABLES LIKE '%case%'; SHOW TABLES LIKE '%Case%'; SHOW TABLES LIKE '%special%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SHOW TABLES LIKE '%case%'; SHOW TABLES LIKE '%Case%'; SHOW TABLES LIKE '%special%';",
+  "rows": [
+    {
+      "Tables_in_DirVLPm6UeFJi3utFGbgZe (%case%)": "special_cases"
+    },
+    {
+      "Tables_in_DirVLPm6UeFJi3utFGbgZe (%case%)": "Tables_in_DirVLPm6UeFJi3utFGbgZe (%Case%)"
+    },
+    {
+      "Tables_in_DirVLPm6UeFJi3utFGbgZe (%case%)": "special_cases"
+    },
+    {
+      "Tables_in_DirVLPm6UeFJi3utFGbgZe (%case%)": "Tables_in_DirVLPm6UeFJi3utFGbgZe (%special%)"
+    },
+    {
+      "Tables_in_DirVLPm6UeFJi3utFGbgZe (%case%)": "special_cases"
+    }
+  ],
+  "messages": [],
+  "stdout": "Tables_in_DirVLPm6UeFJi3utFGbgZe (%case%)\nspecial_cases\nTables_in_DirVLPm6UeFJi3utFGbgZe (%Case%)\nspecial_cases\nTables_in_DirVLPm6UeFJi3utFGbgZe (%special%)\nspecial_cases\n",
+  "stderr": "",
+  "execution_time_ms": 524
+}

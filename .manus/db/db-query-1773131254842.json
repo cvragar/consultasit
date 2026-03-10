@@ -1,0 +1,40 @@
+{
+  "query": "SELECT id, title, category, LEFT(description, 100) as desc_preview FROM special_cases ORDER BY id DESC LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, category, LEFT(description, 100) as desc_preview FROM special_cases ORDER BY id DESC LIMIT 5;",
+  "rows": [
+    {
+      "id": "30002",
+      "title": "Accident de treball en treballador en situació de pluriocupació",
+      "category": "pluriempleo",
+      "desc_preview": "Procediment quan un treballador que presta serveis simultàniament per a dues o més empreses (plurioc"
+    },
+    {
+      "id": "30001",
+      "title": "Accident de treball en treballador autònom (RETA)",
+      "category": "otro",
+      "desc_preview": "Procediment i qualificació de la contingència quan un treballador autònom pateix un accident durant "
+    },
+    {
+      "id": "10",
+      "title": "Recaída en IT",
+      "category": "recaida",
+      "desc_preview": "Se considera recaída cuando el trabajador vuelve a causar baja por la misma patología o relacionada "
+    },
+    {
+      "id": "9",
+      "title": "Vacaciones durante IT",
+      "category": "vacaciones",
+      "desc_preview": "El trabajador en IT no puede disfrutar de vacaciones. Si estaba de vacaciones y cae enfermo, puede s"
+    },
+    {
+      "id": "8",
+      "title": "IT en extranjeros",
+      "category": "extranjeros",
+      "desc_preview": "Los extranjeros con permiso de trabajo tienen los mismos derechos a IT que los españoles. Los extran"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tcategory\tdesc_preview\n30002\tAccident de treball en treballador en situació de pluriocupació\tpluriempleo\tProcediment quan un treballador que presta serveis simultàniament per a dues o més empreses (plurioc\n30001\tAccident de treball en treballador autònom (RETA)\totro\tProcediment i qualificació de la contingència quan un treballador autònom pateix un accident durant \n10\tRecaída en IT\trecaida\tSe considera recaída cuando el trabajador vuelve a causar baja por la misma patología o relacionada \n9\tVacaciones durante IT\tvacaciones\tEl trabajador en IT no puede disfrutar de vacaciones. Si estaba de vacaciones y cae enfermo, puede s\n8\tIT en extranjeros\textranjeros\tLos extranjeros con permiso de trabajo tienen los mismos derechos a IT que los españoles. Los extran\n",
+  "stderr": "",
+  "execution_time_ms": 397
+}
