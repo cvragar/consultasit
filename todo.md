@@ -139,3 +139,13 @@
 - [x] Mostrar cursor animat mentre la IA escriu
 - [x] Gestionar errors i cancel·lació del stream
 - [x] Escriure tests per al nou endpoint
+
+## Nou cas especial - Pluriactivitat (autònom + assalariat)
+- [x] Investigar normativa sobre pluriactivitat: LGSS art. 313, RD 84/1996, Llei 6/2017
+- [x] Investigar com es calcula la base reguladora en pluriactivitat (BR separades per règim)
+- [x] Investigar qui paga la prestació d'IT en cada règim (INSS/mútua per RGSS, mútua autònoms per RETA)
+- [x] Investigar si el part de baixa de l'eCap cobreix totes dues contingències (cal emetre parts separats)
+- [x] Investigar casos especials: AT en una activitat, CC en l'altra
+- [x] Investigar jurisprudència rellevant: STS 19/02/2002, STS 07/04/2004, STSJ Castella i Lleó 18/10/2022
+- [x] Inserir el nou cas especial a la base de dades (ID: 70001, categoria: pluriempleo)
+- [x] Escriure tests per al nou cas especial (10 tests, tots passen)

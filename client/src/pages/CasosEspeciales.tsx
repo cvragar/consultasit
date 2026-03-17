@@ -35,7 +35,7 @@ const categoryLabels: Record<string, string> = {
   lactancia: "Lactància",
   donacion_organos: "Donació d'òrgans",
   baja_retroactiva: "Baixa retroactiva",
-  pluriempleo: "Pluriocupació",
+  pluriempleo: "Pluriocupació / Pluriactivitat",
   prision: "Presó",
   extranjeros: "Estrangers",
   vacaciones: "Vacances i IT",
