@@ -54,7 +54,7 @@ const categoryLabels: Record<string, string> = {
   lactancia: "Lactància",
   donacion_organos: "Donació d'òrgans",
   baja_retroactiva: "Baixa retroactiva",
-  pluriempleo: "Pluriocupació",
+  pluriempleo: "Pluriocupació / Pluriactivitat",
   prision: "Presó",
   extranjeros: "Estrangers",
   vacaciones: "Vacances i IT",
@@ -236,13 +236,13 @@ export default function Favorits() {
             </p>
             <div className="flex gap-4 justify-center">
               <Button asChild variant="outline">
-                <Link href="/documentos">
+                <Link href="/documents">
                   <FileText className="h-4 w-4 mr-2" />
                   Explorar documents
                 </Link>
               </Button>
               <Button asChild variant="outline">
-                <Link href="/casos-especiales">
+                <Link href="/casos-especials">
                   <AlertCircle className="h-4 w-4 mr-2" />
                   Explorar casos especials
                 </Link>
@@ -613,7 +613,7 @@ function EmptyState({ type }: { type: "documents" | "cases" }) {
           : "No tens cap cas especial als favorits"}
       </p>
       <Button asChild variant="outline" className="mt-4">
-        <Link href={type === "documents" ? "/documentos" : "/casos-especiales"}>
+        <Link href={type === "documents" ? "/documents" : "/casos-especials"}>
           {type === "documents" ? "Explorar documents" : "Explorar casos especials"}
         </Link>
       </Button>

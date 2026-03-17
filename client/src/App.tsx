@@ -19,7 +19,9 @@ function Router() {
       <Route path={"/chat"} component={Chat} />
       <Route path={"/chat/:conversationId"} component={Chat} />
       <Route path={"/casos-especiales"} component={CasosEspeciales} />
+      <Route path={"/casos-especials"} component={CasosEspeciales} />
       <Route path={"/documentos"} component={Documentos} />
+      <Route path={"/documents"} component={Documentos} />
       <Route path={"/calculadora"} component={Calculadora} />
       <Route path={"/admin"} component={Admin} />
       <Route path={"/favorits"} component={Favorits} />

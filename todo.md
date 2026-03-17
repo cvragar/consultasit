@@ -159,3 +159,11 @@
 ## Bug: quadre d'entrada de text no apareix a la pàgina de xat
 - [x] Diagnosticar per què no es mostra el camp d'entrada de text al xat (causa: min-h-screen sense overflow-hidden feia que el quadre quedés fora del viewport)
 - [x] Corregir el bug: canviat a h-screen + overflow-hidden + min-h-0 al contenidor de missatges
+
+## Millores del xat i traducció completa
+- [x] Afegir suggeriments ràpids clicables a la pantalla inicial del xat (8 consultes freqüents)
+- [x] Traduir tots els textos en castellà de la interfície al català (Home, Chat, CasosEspeciales, Documentos, Favorits, Admin, NotFound)
+- [x] Canviar el títol de la pestanya del navegador a "Consultes IT - Bot de consultes sobre la incapacitat temporal"
+- [x] Obrir automàticament el sidebar quan l'usuari té converses anteriors (useEffect amb sidebarInitialized)
+- [x] Corregir tots els links interns per usar rutes en català (/casos-especials, /documents)
+- [x] Afegir 10 tests per a les millores del xat (72 tests en total, tots passen)

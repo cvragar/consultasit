@@ -24,7 +24,7 @@ export default function Home() {
       icon: AlertCircle,
       title: "Casos Especials",
       description: "Menstruació incapacitant, embaràs, donació d'òrgans, pluriocupació i més",
-      href: "/casos-especiales",
+      href: "/casos-especials",
       color: "text-orange-600",
       bgColor: "bg-orange-50",
       borderColor: "border-l-orange-500",
@@ -33,7 +33,7 @@ export default function Home() {
       icon: FileText,
       title: "Documentació",
       description: "Normativa estatal i autonòmica, guies pràctiques i manuals de gestió d'IT",
-      href: "/documentos",
+      href: "/documents",
       color: "text-green-600",
       bgColor: "bg-green-50",
       borderColor: "border-l-green-500",
@@ -137,13 +137,13 @@ export default function Home() {
                   Consulta amb IA
                 </Button>
               </Link>
-              <Link href="/casos-especiales" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/casos-especials" onClick={() => setMobileMenuOpen(false)}>
                 <Button variant="ghost" size="sm" className="w-full justify-start gap-2">
                   <AlertCircle className="h-4 w-4 text-orange-500" />
                   Casos Especials
                 </Button>
               </Link>
-              <Link href="/documentos" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/documents" onClick={() => setMobileMenuOpen(false)}>
                 <Button variant="ghost" size="sm" className="w-full justify-start gap-2">
                   <FileText className="h-4 w-4 text-green-500" />
                   Documentació
@@ -184,7 +184,7 @@ export default function Home() {
                 Començar consulta
               </Button>
             </Link>
-            <Link href="/casos-especiales" className="w-full sm:w-auto">
+            <Link href="/casos-especials" className="w-full sm:w-auto">
               <Button size="lg" variant="outline" className="w-full sm:w-auto text-base">
                 <AlertCircle className="h-5 w-5 mr-2" />
                 Casos especials
@@ -224,7 +224,7 @@ export default function Home() {
             {[
               {
                 title: "Normativa actualitzada",
-                items: ["Real Decret 625/2014 i modificacions", "Documentació del Departament de Salut", "Guies de l'ICS i materials formatius", "Temps estàndard de l'INSS"],
+                items: ["Reial Decret 625/2014 i modificacions", "Documentació del Departament de Salut", "Guies de l'ICS i materials formatius", "Temps estàndard de l'INSS"],
               },
               {
                 title: "Casos especials",

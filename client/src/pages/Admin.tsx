@@ -667,7 +667,7 @@ export default function Admin() {
                 <p className="text-sm text-gray-600 mb-4">
                   Per afegir nous casos especials, utilitza els scripts de càrrega o contacta amb l'administrador del sistema.
                 </p>
-                <Link href="/casos-especiales">
+                <Link href="/casos-especials">
                   <Button variant="outline" className="w-full">
                     Veure tots els casos
                   </Button>

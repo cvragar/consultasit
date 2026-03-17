@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -46,6 +46,18 @@ type StreamingMessage = {
   sources?: Array<{ title: string; documentId?: number; caseId?: number }>;
 };
 
+// Suggeriments ràpids per a la pantalla inicial
+const QUICK_SUGGESTIONS = [
+  "Quina és la durada màxima d'una IT per contingència comuna?",
+  "Com es gestiona una baixa mèdica retroactiva?",
+  "Procediment per a la menstruació incapacitant",
+  "AT en treballador autònom del RETA: com es gestiona?",
+  "Pròrroga de la IT més enllà dels 365 dies",
+  "Pluriactivitat: IT cobrant per dos règims alhora",
+  "Recaiguda en IT: quan es considera nova baixa?",
+  "Baixa mèdica durant les vacances: quins drets té el treballador?",
+];
+
 export default function Chat() {
   const { user, isAuthenticated } = useAuth();
   const [message, setMessage] = useState("");
@@ -53,6 +65,7 @@ export default function Chat() {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [conversationToDelete, setConversationToDelete] = useState<number | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarInitialized, setSidebarInitialized] = useState(false);
   const [isStreaming, setIsStreaming] = useState(false);
   const [streamingMessage, setStreamingMessage] = useState<StreamingMessage | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -70,6 +83,16 @@ export default function Chat() {
     undefined,
     { enabled: isAuthenticated }
   );
+
+  // Obrir el sidebar automàticament quan l'usuari té converses anteriors (només la primera vegada)
+  useEffect(() => {
+    if (!sidebarInitialized && conversations && conversations.length > 0) {
+      setSidebarOpen(true);
+      setSidebarInitialized(true);
+    } else if (!sidebarInitialized && conversations && conversations.length === 0) {
+      setSidebarInitialized(true);
+    }
+  }, [conversations, sidebarInitialized]);
 
   const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -103,7 +126,7 @@ export default function Chat() {
       setDeleteDialogOpen(false);
       setConversationToDelete(null);
     } catch (error) {
-      console.error("Error deleting conversation:", error);
+      console.error("Error eliminant la conversa:", error);
     }
   };
 
@@ -127,14 +150,14 @@ export default function Chat() {
       window.URL.revokeObjectURL(url);
       document.body.removeChild(a);
     } catch (error) {
-      console.error("Error exporting PDF:", error);
+      console.error("Error exportant el PDF:", error);
     }
   };
 
-  const handleSendMessage = async () => {
-    if (!message.trim() || !isAuthenticated || isStreaming) return;
+  const handleSendMessage = async (textOverride?: string) => {
+    const textToSend = (textOverride ?? message).trim();
+    if (!textToSend || !isAuthenticated || isStreaming) return;
 
-    const messageText = message.trim();
     setMessage("");
     setIsStreaming(true);
     setStreamingMessage({ id: "streaming", role: "assistant", content: "" });
@@ -150,18 +173,18 @@ export default function Chat() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          message: messageText,
+          message: textToSend,
           conversationId: currentConversationId ?? undefined,
         }),
         signal: abortControllerRef.current.signal,
       });
 
       if (!response.ok) {
-        throw new Error(`Error del servidor: ${response.status}`);
+        throw new Error(`Error del servidor: ${response.status} — torna-ho a intentar`);
       }
 
       const reader = response.body?.getReader();
-      if (!reader) throw new Error("No s'ha pogut llegir el stream");
+      if (!reader) throw new Error("No s'ha pogut llegir el flux de dades");
 
       const decoder = new TextDecoder();
       let buffer = "";
@@ -203,9 +226,9 @@ export default function Chat() {
                 prev ? { ...prev, content: prev.content + event.content } : null
               );
             } else if (event.type === "done") {
-              // Stream completat
+              // Flux completat
             } else if (event.type === "error") {
-              throw new Error(event.error || "Error del servidor");
+              throw new Error(event.error || "Error intern del servidor");
             }
           } catch (parseError) {
             // Ignorar línies no JSON
@@ -213,14 +236,14 @@ export default function Chat() {
         }
       }
 
-      // Refrescar dades un cop el stream ha acabat
+      // Refrescar dades un cop el flux ha acabat
       await refetchMessages();
       await refetchConversations();
       setStreamingMessage(null);
 
     } catch (error: any) {
       if (error.name !== "AbortError") {
-        console.error("Error en streaming:", error);
+        console.error("Error en el flux de dades:", error);
         setStreamingMessage({
           id: "streaming",
           role: "assistant",
@@ -272,7 +295,7 @@ export default function Chat() {
         />
       )}
 
-      {/* Sidebar - Historial de conversaciones */}
+      {/* Sidebar - Historial de converses */}
       <div
         className={`${
           sidebarOpen
@@ -348,9 +371,9 @@ export default function Chat() {
         </ScrollArea>
       </div>
 
-      {/* Main Chat Area */}
+      {/* Àrea principal del xat */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
-        {/* Header */}
+        {/* Capçalera */}
         <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-10">
           <div className="px-3 sm:px-4 py-3">
             <div className="flex items-center justify-between gap-2">
@@ -360,6 +383,7 @@ export default function Chat() {
                   size="icon"
                   onClick={() => setSidebarOpen(!sidebarOpen)}
                   className="h-8 w-8 shrink-0"
+                  title="Obrir historial"
                 >
                   <Menu className="h-4 w-4" />
                 </Button>
@@ -389,6 +413,7 @@ export default function Chat() {
                     onClick={handleExportPDF}
                     disabled={exportPDF.isPending || isStreaming}
                     className="gap-1.5 px-2 sm:px-3"
+                    title="Exportar conversa a PDF"
                   >
                     {exportPDF.isPending ? (
                       <Loader2 className="h-4 w-4 animate-spin" />
@@ -406,11 +431,11 @@ export default function Chat() {
           </div>
         </header>
 
-        {/* Messages Area */}
+        {/* Àrea de missatges */}
         <div className="flex-1 overflow-y-auto min-h-0">
           <div className="container py-6 max-w-4xl">
             {allMessages.length === 0 ? (
-              <div className="text-center py-12">
+              <div className="text-center py-8">
                 <MessageSquare className="h-16 w-16 text-blue-400 mx-auto mb-4" />
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">
                   Xat especialitzat en IT
@@ -422,16 +447,28 @@ export default function Chat() {
                   <Zap className="h-4 w-4 text-green-500" />
                   <span className="text-sm text-green-600 font-medium">Respostes en temps real amb streaming</span>
                 </div>
+
+                {/* Suggeriments ràpids */}
+                <div className="mb-6">
+                  <p className="text-sm font-semibold text-gray-700 mb-3 flex items-center justify-center gap-2">
+                    <Zap className="h-4 w-4 text-blue-500" />
+                    Suggeriments ràpids — clica per enviar
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-w-2xl mx-auto text-left">
+                    {QUICK_SUGGESTIONS.map((suggestion, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => handleSendMessage(suggestion)}
+                        disabled={isStreaming}
+                        className="text-left text-sm px-4 py-2.5 rounded-lg border border-blue-200 bg-blue-50 hover:bg-blue-100 hover:border-blue-400 text-blue-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {suggestion}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
-                  <Card className="p-4">
-                    <h3 className="font-semibold mb-2">Exemples de consultes:</h3>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      <li>• Durada màxima d'una IT?</li>
-                      <li>• Com gestionar una baixa retroactiva?</li>
-                      <li>• Procediment per a menstruació incapacitant</li>
-                      <li>• AT en treballador autònom (RETA)</li>
-                    </ul>
-                  </Card>
                   <Card className="p-4">
                     <h3 className="font-semibold mb-2">Fonts d'informació:</h3>
                     <ul className="text-sm text-gray-600 space-y-1">
@@ -439,6 +476,15 @@ export default function Chat() {
                       <li>• Casos especials documentats</li>
                       <li>• Guies pràctiques del Departament de Salut</li>
                       <li>• Jurisprudència del TS i TSJ</li>
+                    </ul>
+                  </Card>
+                  <Card className="p-4">
+                    <h3 className="font-semibold mb-2">Consells d'ús:</h3>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Fes preguntes concretes i específiques</li>
+                      <li>• Indica el règim (RGSS, RETA, TRADE...)</li>
+                      <li>• Menciona la durada de la baixa si és rellevant</li>
+                      <li>• Pots demanar exemples pràctics</li>
                     </ul>
                   </Card>
                 </div>
@@ -503,7 +549,7 @@ export default function Chat() {
           </div>
         </div>
 
-        {/* Input Area */}
+        {/* Àrea d'entrada */}
         <div className="border-t bg-white p-4">
           <div className="container max-w-4xl">
             <div className="flex gap-2">
@@ -521,7 +567,7 @@ export default function Chat() {
                 className="flex-1"
               />
               <Button
-                onClick={handleSendMessage}
+                onClick={() => handleSendMessage()}
                 disabled={!message.trim() || isStreaming}
                 className="gap-2 shrink-0"
               >
@@ -548,7 +594,7 @@ export default function Chat() {
         </div>
       </div>
 
-      {/* Delete Confirmation Dialog */}
+      {/* Diàleg de confirmació d'eliminació */}
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
