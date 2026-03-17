@@ -8,6 +8,7 @@ import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
 import { uploadRouter } from "../uploadRouter";
+import { streamRouter } from "../streamRouter";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -38,6 +39,8 @@ async function startServer() {
   registerOAuthRoutes(app);
   // Upload router per a pujada de PDFs (admin)
   app.use("/api/upload", uploadRouter);
+  // Stream router per a respostes en temps real del xat
+  app.use("/api/stream", streamRouter);
   // tRPC API
   app.use(
     "/api/trpc",

@@ -131,3 +131,11 @@
 - [x] Crear interfície de pujada al panel d'administració amb drag & drop
 - [x] Afegir gestió (llistar i eliminar) dels documents pujats
 - [x] Escriure tests per al nou endpoint (10 tests)
+
+## Streaming de respostes del xat
+- [x] Crear endpoint REST /api/stream/chat amb Server-Sent Events (SSE)
+- [x] Integrar streaming del LLM al backend
+- [x] Actualitzar la interfície del xat per consumir el stream
+- [x] Mostrar cursor animat mentre la IA escriu
+- [x] Gestionar errors i cancel·lació del stream
+- [x] Escriure tests per al nou endpoint

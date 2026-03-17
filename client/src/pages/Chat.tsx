@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,7 +15,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { Shield, Send, Loader2, Home, MessageSquare, Trash2, Plus, Menu, X, Download } from "lucide-react";
+import { Shield, Send, Loader2, Home, MessageSquare, Trash2, Plus, Menu, X, Download, Zap } from "lucide-react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { Streamdown } from "streamdown";
@@ -29,6 +29,23 @@ type Conversation = {
   updatedAt: Date;
 };
 
+type Message = {
+  id: number;
+  conversationId: number;
+  role: string;
+  content: string;
+  sources?: Array<{ title: string; documentId?: number; caseId?: number }> | null;
+  createdAt: Date;
+};
+
+// Missatge temporal mentre s'està fent streaming
+type StreamingMessage = {
+  id: "streaming";
+  role: "assistant";
+  content: string;
+  sources?: Array<{ title: string; documentId?: number; caseId?: number }>;
+};
+
 export default function Chat() {
   const { user, isAuthenticated } = useAuth();
   const [message, setMessage] = useState("");
@@ -36,55 +53,52 @@ export default function Chat() {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [conversationToDelete, setConversationToDelete] = useState<number | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isStreaming, setIsStreaming] = useState(false);
+  const [streamingMessage, setStreamingMessage] = useState<StreamingMessage | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const abortControllerRef = useRef<AbortController | null>(null);
 
-  const createConversation = trpc.chat.createConversation.useMutation();
-  const sendMessage = trpc.chat.sendMessage.useMutation();
   const deleteConversation = trpc.chat.deleteConversation.useMutation();
   const exportPDF = trpc.chat.exportPDF.useMutation();
-  
+
   const { data: messages, refetch: refetchMessages } = trpc.chat.getMessages.useQuery(
     { conversationId: currentConversationId! },
     { enabled: !!currentConversationId }
   );
-  
+
   const { data: conversations, refetch: refetchConversations } = trpc.chat.getUserConversations.useQuery(
     undefined,
     { enabled: isAuthenticated }
   );
 
-  const scrollToBottom = () => {
+  const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  }, []);
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, streamingMessage?.content]);
 
-  const handleNewConversation = async () => {
-    try {
-      const result = await createConversation.mutateAsync({});
-      setCurrentConversationId(result.conversationId);
-      refetchConversations();
-    } catch (error) {
-      console.error("Error creating conversation:", error);
-    }
+  const handleNewConversation = () => {
+    setCurrentConversationId(null);
+    setStreamingMessage(null);
+    setSidebarOpen(false);
   };
 
   const handleSelectConversation = (id: number) => {
     setCurrentConversationId(id);
+    setStreamingMessage(null);
+    setSidebarOpen(false);
   };
 
   const handleDeleteConversation = async () => {
     if (!conversationToDelete) return;
-
     try {
       await deleteConversation.mutateAsync({ conversationId: conversationToDelete });
-      
       if (currentConversationId === conversationToDelete) {
         setCurrentConversationId(null);
+        setStreamingMessage(null);
       }
-      
       refetchConversations();
       setDeleteDialogOpen(false);
       setConversationToDelete(null);
@@ -95,11 +109,8 @@ export default function Chat() {
 
   const handleExportPDF = async () => {
     if (!currentConversationId) return;
-
     try {
       const result = await exportPDF.mutateAsync({ conversationId: currentConversationId });
-      
-      // Convertir base64 a blob y descargar
       const byteCharacters = atob(result.pdf);
       const byteNumbers = new Array(byteCharacters.length);
       for (let i = 0; i < byteCharacters.length; i++) {
@@ -107,7 +118,6 @@ export default function Chat() {
       }
       const byteArray = new Uint8Array(byteNumbers);
       const blob = new Blob([byteArray], { type: "application/pdf" });
-      
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
@@ -122,35 +132,104 @@ export default function Chat() {
   };
 
   const handleSendMessage = async () => {
-    if (!message.trim() || !isAuthenticated) return;
+    if (!message.trim() || !isAuthenticated || isStreaming) return;
 
-    const messageText = message;
+    const messageText = message.trim();
     setMessage("");
+    setIsStreaming(true);
+    setStreamingMessage({ id: "streaming", role: "assistant", content: "" });
+
+    // Cancel·lar qualsevol stream anterior
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+    }
+    abortControllerRef.current = new AbortController();
 
     try {
-      // Crear conversación si no existe
-      if (!currentConversationId) {
-        const result = await createConversation.mutateAsync({});
-        setCurrentConversationId(result.conversationId);
-        
-        // Enviar mensaje
-        await sendMessage.mutateAsync({
-          conversationId: result.conversationId,
+      const response = await fetch("/api/stream/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
           message: messageText,
-        });
-        
-        refetchMessages();
-        refetchConversations();
-      } else {
-        await sendMessage.mutateAsync({
-          conversationId: currentConversationId,
-          message: messageText,
-        });
-        refetchMessages();
-        refetchConversations();
+          conversationId: currentConversationId ?? undefined,
+        }),
+        signal: abortControllerRef.current.signal,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error del servidor: ${response.status}`);
       }
-    } catch (error) {
-      console.error("Error sending message:", error);
+
+      const reader = response.body?.getReader();
+      if (!reader) throw new Error("No s'ha pogut llegir el stream");
+
+      const decoder = new TextDecoder();
+      let buffer = "";
+      let streamedSources: Array<{ title: string; documentId?: number; caseId?: number }> = [];
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split("\n");
+        buffer = lines.pop() || "";
+
+        for (const line of lines) {
+          const trimmed = line.trim();
+          if (!trimmed || !trimmed.startsWith("data: ")) continue;
+
+          const jsonStr = trimmed.slice(6);
+          if (jsonStr === "[DONE]") continue;
+
+          try {
+            const event = JSON.parse(jsonStr) as {
+              type: string;
+              content?: string;
+              conversationId?: number;
+              sources?: typeof streamedSources;
+              error?: string;
+            };
+
+            if (event.type === "conversationId" && event.conversationId) {
+              setCurrentConversationId(event.conversationId);
+            } else if (event.type === "sources" && event.sources) {
+              streamedSources = event.sources;
+              setStreamingMessage(prev =>
+                prev ? { ...prev, sources: event.sources } : null
+              );
+            } else if (event.type === "chunk" && event.content) {
+              setStreamingMessage(prev =>
+                prev ? { ...prev, content: prev.content + event.content } : null
+              );
+            } else if (event.type === "done") {
+              // Stream completat
+            } else if (event.type === "error") {
+              throw new Error(event.error || "Error del servidor");
+            }
+          } catch (parseError) {
+            // Ignorar línies no JSON
+          }
+        }
+      }
+
+      // Refrescar dades un cop el stream ha acabat
+      await refetchMessages();
+      await refetchConversations();
+      setStreamingMessage(null);
+
+    } catch (error: any) {
+      if (error.name !== "AbortError") {
+        console.error("Error en streaming:", error);
+        setStreamingMessage({
+          id: "streaming",
+          role: "assistant",
+          content: "S'ha produït un error en generar la resposta. Torna-ho a intentar.",
+        });
+        setTimeout(() => setStreamingMessage(null), 3000);
+      }
+    } finally {
+      setIsStreaming(false);
     }
   };
 
@@ -177,6 +256,12 @@ export default function Chat() {
     );
   }
 
+  // Combinar missatges de la BD amb el missatge en streaming
+  const allMessages: (Message | StreamingMessage)[] = [
+    ...(messages || []),
+    ...(streamingMessage ? [streamingMessage] : []),
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex relative">
       {/* Overlay per a mòbil */}
@@ -186,6 +271,7 @@ export default function Chat() {
           onClick={() => setSidebarOpen(false)}
         />
       )}
+
       {/* Sidebar - Historial de conversaciones */}
       <div
         className={`${
@@ -197,11 +283,7 @@ export default function Chat() {
         <div className="p-4 border-b">
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-semibold text-lg">Historial</h2>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setSidebarOpen(false)}
-            >
+            <Button variant="ghost" size="sm" onClick={() => setSidebarOpen(false)}>
               <X className="h-4 w-4" />
             </Button>
           </div>
@@ -267,12 +349,12 @@ export default function Chat() {
       </div>
 
       {/* Main Chat Area */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col min-w-0">
         {/* Header */}
         <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-10">
           <div className="px-3 sm:px-4 py-3">
             <div className="flex items-center justify-between gap-2">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 min-w-0">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -288,9 +370,15 @@ export default function Chat() {
                   </Button>
                 </Link>
                 <Separator orientation="vertical" className="h-5 hidden sm:block" />
-                <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-1.5 min-w-0">
                   <MessageSquare className="h-5 w-5 text-blue-600 shrink-0" />
-                  <h1 className="text-base sm:text-lg font-bold text-gray-900 truncate">Consulta amb IA</h1>
+                  <div className="min-w-0">
+                    <h1 className="font-semibold text-sm sm:text-base truncate">Consulta IT</h1>
+                    <div className="flex items-center gap-1">
+                      <Zap className="h-3 w-3 text-green-500" />
+                      <span className="text-xs text-green-600 hidden sm:inline">Respostes en temps real</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="flex items-center gap-1.5 shrink-0">
@@ -299,7 +387,7 @@ export default function Chat() {
                     variant="outline"
                     size="sm"
                     onClick={handleExportPDF}
-                    disabled={exportPDF.isPending}
+                    disabled={exportPDF.isPending || isStreaming}
                     className="gap-1.5 px-2 sm:px-3"
                   >
                     {exportPDF.isPending ? (
@@ -321,15 +409,19 @@ export default function Chat() {
         {/* Messages Area */}
         <div className="flex-1 overflow-y-auto">
           <div className="container py-6 max-w-4xl">
-            {!currentConversationId && messages?.length === 0 ? (
+            {allMessages.length === 0 ? (
               <div className="text-center py-12">
                 <MessageSquare className="h-16 w-16 text-blue-400 mx-auto mb-4" />
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">
                   Xat especialitzat en IT
                 </h2>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-2">
                   Fes qualsevol consulta sobre normativa d'Incapacitat Temporal
                 </p>
+                <div className="flex items-center justify-center gap-1.5 mb-6">
+                  <Zap className="h-4 w-4 text-green-500" />
+                  <span className="text-sm text-green-600 font-medium">Respostes en temps real amb streaming</span>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
                   <Card className="p-4">
                     <h3 className="font-semibold mb-2">Exemples de consultes:</h3>
@@ -337,6 +429,7 @@ export default function Chat() {
                       <li>• Durada màxima d'una IT?</li>
                       <li>• Com gestionar una baixa retroactiva?</li>
                       <li>• Procediment per a menstruació incapacitant</li>
+                      <li>• AT en treballador autònom (RETA)</li>
                     </ul>
                   </Card>
                   <Card className="p-4">
@@ -345,21 +438,20 @@ export default function Chat() {
                       <li>• Normativa estatal i autonòmica</li>
                       <li>• Casos especials documentats</li>
                       <li>• Guies pràctiques del Departament de Salut</li>
+                      <li>• Jurisprudència del TS i TSJ</li>
                     </ul>
                   </Card>
                 </div>
               </div>
             ) : (
               <div className="space-y-4">
-                {messages?.map((msg) => (
+                {allMessages.map((msg, idx) => (
                   <div
-                    key={msg.id}
-                    className={`flex ${
-                      msg.role === "user" ? "justify-end" : "justify-start"
-                    }`}
+                    key={msg.id === "streaming" ? `streaming-${idx}` : msg.id}
+                    className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                   >
                     <Card
-                      className={`max-w-[80%] p-4 ${
+                      className={`max-w-[85%] p-4 ${
                         msg.role === "user"
                           ? "bg-blue-600 text-white"
                           : "bg-white border-gray-200"
@@ -367,7 +459,20 @@ export default function Chat() {
                     >
                       <div className="prose prose-sm max-w-none">
                         {msg.role === "assistant" ? (
-                          <Streamdown>{msg.content}</Streamdown>
+                          <>
+                            <Streamdown>{msg.content}</Streamdown>
+                            {/* Cursor animat mentre s'escriu */}
+                            {msg.id === "streaming" && msg.content && (
+                              <span className="inline-block w-2 h-4 bg-blue-600 animate-pulse ml-0.5 align-text-bottom" />
+                            )}
+                            {/* Indicador de càrrega inicial */}
+                            {msg.id === "streaming" && !msg.content && (
+                              <div className="flex items-center gap-2 text-gray-500">
+                                <Loader2 className="h-4 w-4 animate-spin text-blue-600" />
+                                <span className="text-sm">Consultant documentació...</span>
+                              </div>
+                            )}
+                          </>
                         ) : (
                           <p className="whitespace-pre-wrap">{msg.content}</p>
                         )}
@@ -378,9 +483,9 @@ export default function Chat() {
                             Fonts consultades:
                           </p>
                           <div className="flex flex-wrap gap-1">
-                            {msg.sources.map((source: any, idx: number) => (
+                            {msg.sources.map((source: any, sidx: number) => (
                               <span
-                                key={idx}
+                                key={sidx}
                                 className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
                               >
                                 {source.title}
@@ -392,18 +497,6 @@ export default function Chat() {
                     </Card>
                   </div>
                 ))}
-                {sendMessage.isPending && (
-                  <div className="flex justify-start">
-                    <Card className="max-w-[80%] p-4 bg-white border-gray-200">
-                      <div className="flex items-center gap-2">
-                        <Loader2 className="h-4 w-4 animate-spin text-blue-600" />
-                        <span className="text-sm text-gray-600">
-                          Consultant documentació...
-                        </span>
-                      </div>
-                    </Card>
-                  </div>
-                )}
                 <div ref={messagesEndRef} />
               </div>
             )}
@@ -424,22 +517,33 @@ export default function Chat() {
                     handleSendMessage();
                   }
                 }}
-                disabled={sendMessage.isPending}
+                disabled={isStreaming}
                 className="flex-1"
               />
               <Button
                 onClick={handleSendMessage}
-                disabled={!message.trim() || sendMessage.isPending}
-                className="gap-2"
+                disabled={!message.trim() || isStreaming}
+                className="gap-2 shrink-0"
               >
-                {sendMessage.isPending ? (
-                  <Loader2 className="h-4 w-4 animate-spin" />
+                {isStreaming ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    <span className="hidden sm:inline">Generant...</span>
+                  </>
                 ) : (
-                  <Send className="h-4 w-4" />
+                  <>
+                    <Send className="h-4 w-4" />
+                    <span className="hidden sm:inline">Enviar</span>
+                  </>
                 )}
-                Enviar
               </Button>
             </div>
+            {isStreaming && (
+              <p className="text-xs text-gray-500 mt-2 flex items-center gap-1">
+                <Zap className="h-3 w-3 text-green-500" />
+                La IA està generant la resposta en temps real...
+              </p>
+            )}
           </div>
         </div>
       </div>
