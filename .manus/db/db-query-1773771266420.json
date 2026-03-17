@@ -1,0 +1,9 @@
+{
+  "query": "\nUPDATE documents SET publicationYear = 2012, status = 'vigent' WHERE id = 11;\nUPDATE documents SET publicationYear = 2014, status = 'vigent' WHERE id = 12;\nUPDATE documents SET publicationYear = 2023, status = 'vigent' WHERE id = 13;\nUPDATE documents SET publicationYear = 2022, status = 'vigent' WHERE id = 14;\nUPDATE documents SET publicationYear = 2024, status = 'vigent' WHERE id = 16;\nUPDATE documents SET publicationYear = 2024, status = 'vigent' WHERE id = 17;\nUPDATE documents SET publicationYear = 2017, status = 'vigent' WHERE id = 20;\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute \nUPDATE documents SET publicationYear = 2012, status = 'vigent' WHERE id = 11;\nUPDATE documents SET publicationYear = 2014, status = 'vigent' WHERE id = 12;\nUPDATE documents SET publicationYear = 2023, status = 'vigent' WHERE id = 13;\nUPDATE documents SET publicationYear = 2022, status = 'vigent' WHERE id = 14;\nUPDATE documents SET publicationYear = 2024, status = 'vigent' WHERE id = 16;\nUPDATE documents SET publicationYear = 2024, status = 'vigent' WHERE id = 17;\nUPDATE documents SET publicationYear = 2017, status = 'vigent' WHERE id = 20;\n",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 695
+}

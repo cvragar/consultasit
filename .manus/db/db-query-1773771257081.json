@@ -1,0 +1,99 @@
+{
+  "query": "SELECT id, title, source, LEFT(content, 200) as content_preview FROM documents WHERE publicationYear IS NULL ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, source, LEFT(content, 200) as content_preview FROM documents WHERE publicationYear IS NULL ORDER BY id;",
+  "rows": [
+    {
+      "id": "11",
+      "title": "Guía de valoración de incapacidad laboral para médicos de atención primaria",
+      "source": "ENMT - Instituto de Salud Carlos III",
+      "content_preview": "Monografías"
+    },
+    {
+      "id": "12",
+      "title": "Incapacidad Temporal: Manual para el manejo en atención primaria",
+      "source": "AMAT",
+      "content_preview": "INCAPACIDAD TEMPORAL"
+    },
+    {
+      "id": "13",
+      "title": "Tiempos estándar de Incapacidad Temporal",
+      "source": "INSS",
+      "content_preview": "INSS"
+    },
+    {
+      "id": "14",
+      "title": "Gestió de la incapacitat temporal - Fullet informatiu",
+      "source": "Departament de Salut de Catalunya",
+      "content_preview": "Gestió de la incapacitat temporal (IT): "
+    },
+    {
+      "id": "16",
+      "title": "Duración máxima de IT y prórrogas",
+      "source": "Compilación normativa",
+      "content_preview": "# Duración Máxima de la Incapacidad Temporal y Prórrogas"
+    },
+    {
+      "id": "17",
+      "title": "Situaciones especiales de IT",
+      "source": "Wolters Kluwer / Normativa",
+      "content_preview": "# Situaciones Especiales de Incapacidad Temporal (IT)"
+    },
+    {
+      "id": "20",
+      "title": "Curso de formación: Incapacitats Temporals",
+      "source": "Metges de Catalunya",
+      "content_preview": "# Curso de Formación: Incapacitats Temporals - Metges de Catalunya"
+    }
+  ],
+  "messages": [
+    "Ministerio de Ciencia e Innovación",
+    "Instituto",
+    "CarlosIII",
+    "de Salud",
+    "Escuela Nacional de",
+    "Medicina del Trabajo",
+    "GUÍA DE VALORACIÓN",
+    "DE INCAPACIDAD LABORAL",
+    "PARA MÉDICOS ",
+    "DE ATENCIÓN PRIMARIA",
+    "2",
+    "MANUAL PARA EL MANEJO",
+    "EN ATENCIÓN PRIMARIA",
+    "GRUPO LEX ARTIS",
+    "SOCIEDAD MADRILEÑA DE MEDICINA FAMILIAR Y COMUNITARIA",
+    "INCAPACIDAD TEMPORAL ",
+    "MANUAL PARA EL MANEJO ",
+    "EN ATENCION PRIMARIA ",
+    "GOBIERNO",
+    "DE ESPAÑA",
+    "MINISTERIO",
+    "DE TRABAJO",
+    "E INMIGRACIÓN",
+    "SECRETARIA DE ESTADO",
+    "DE LA SEGURIDAD SOCIAL",
+    "INSTITUTO NACIONAL DE LA",
+    "SEGURIDAD SOCIAL",
+    "Tiempos estándar de",
+    "INCAPACIDAD",
+    "TEMPORAL",
+    "INSS",
+    "Tiempos ",
+    "· De les persones hospitalitzades. ",
+    "· De les persones a qui s’ha practicat una Cirurgia Major Ambulatòria (CMA). ",
+    "· Les dones que ingressen per part amb baixa ",
+    "## Marco normativo",
+    "La duración de la incapacidad temporal está regulada en el **Real Decreto Legislativo 8/2015** (Ley General de la Segurida",
+    "## Fuente",
+    "- **Wolters Kluwer - a3responde**",
+    "- **Fecha de creación**: 17/04/2024",
+    "- **Última actualización**: 27/09/2025",
+    "- **URL**: https://a3respo",
+    "## Información general",
+    "- **Organizador**: Metges de Catalunya (Sindicat de Metges de Catalunya)",
+    "- **Fecha**: 3 de octubre de 2017",
+    "-"
+  ],
+  "stdout": "id\ttitle\tsource\tcontent_preview\n11\tGuía de valoración de incapacidad laboral para médicos de atención primaria\tENMT - Instituto de Salud Carlos III\tMonografías\nMinisterio de Ciencia e Innovación\nInstituto\nCarlosIII\nde Salud\nEscuela Nacional de\nMedicina del Trabajo\nGUÍA DE VALORACIÓN\nDE INCAPACIDAD LABORAL\nPARA MÉDICOS \nDE ATENCIÓN PRIMARIA\n \n \n2\n\n12\tIncapacidad Temporal: Manual para el manejo en atención primaria\tAMAT\tINCAPACIDAD TEMPORAL\nMANUAL PARA EL MANEJO\nEN ATENCIÓN PRIMARIA\nGRUPO LEX ARTIS\nSOCIEDAD MADRILEÑA DE MEDICINA FAMILIAR Y COMUNITARIA\nINCAPACIDAD TEMPORAL \nMANUAL PARA EL MANEJO \nEN ATENCION PRIMARIA \n13\tTiempos estándar de Incapacidad Temporal\tINSS\tINSS\nGOBIERNO\nDE ESPAÑA\nMINISTERIO\nDE TRABAJO\nE INMIGRACIÓN\nSECRETARIA DE ESTADO\nDE LA SEGURIDAD SOCIAL\nINSTITUTO NACIONAL DE LA\nSEGURIDAD SOCIAL\nTiempos estándar de\nINCAPACIDAD\nTEMPORAL\nINSS\nTiempos \n14\tGestió de la incapacitat temporal - Fullet informatiu\tDepartament de Salut de Catalunya\tGestió de la incapacitat temporal (IT): \n· De les persones hospitalitzades. \n· De les persones a qui s’ha practicat una Cirurgia Major Ambulatòria (CMA). \n· Les dones que ingressen per part amb baixa \n16\tDuración máxima de IT y prórrogas\tCompilación normativa\t# Duración Máxima de la Incapacidad Temporal y Prórrogas\n\n## Marco normativo\n\nLa duración de la incapacidad temporal está regulada en el **Real Decreto Legislativo 8/2015** (Ley General de la Segurida\n17\tSituaciones especiales de IT\tWolters Kluwer / Normativa\t# Situaciones Especiales de Incapacidad Temporal (IT)\n\n## Fuente\n- **Wolters Kluwer - a3responde**\n- **Fecha de creación**: 17/04/2024\n- **Última actualización**: 27/09/2025\n- **URL**: https://a3respo\n20\tCurso de formación: Incapacitats Temporals\tMetges de Catalunya\t# Curso de Formación: Incapacitats Temporals - Metges de Catalunya\n\n## Información general\n\n- **Organizador**: Metges de Catalunya (Sindicat de Metges de Catalunya)\n- **Fecha**: 3 de octubre de 2017\n-\n",
+  "stderr": "",
+  "execution_time_ms": 434
+}

@@ -18,6 +18,11 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
   Shield,
   Home,
   Search,
@@ -30,6 +35,10 @@ import {
   Star,
   Filter,
   X,
+  CheckCircle2,
+  XCircle,
+  AlertCircle,
+  Calendar,
 } from "lucide-react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
@@ -61,6 +70,27 @@ const jurisdictionLabels: Record<string, string> = {
   ambas: "Estatal i Autonòmica",
 };
 
+const statusConfig: Record<string, { label: string; color: string; icon: React.ElementType; badgeClass: string }> = {
+  vigent: {
+    label: "Vigent",
+    color: "text-green-700",
+    icon: CheckCircle2,
+    badgeClass: "bg-green-100 text-green-800 border-green-200",
+  },
+  derogada: {
+    label: "Derogada",
+    color: "text-red-700",
+    icon: XCircle,
+    badgeClass: "bg-red-100 text-red-800 border-red-200",
+  },
+  en_revisio: {
+    label: "En revisió",
+    color: "text-amber-700",
+    icon: AlertCircle,
+    badgeClass: "bg-amber-100 text-amber-800 border-amber-200",
+  },
+};
+
 type Document = {
   id: number;
   title: string;
@@ -71,15 +101,41 @@ type Document = {
   summary: string | null;
   tags: string[] | null;
   url: string | null;
+  publicationYear: number | null;
+  status: string;
   createdAt: Date;
   updatedAt: Date;
 };
+
+function StatusBadge({ status }: { status: string }) {
+  const cfg = statusConfig[status] ?? statusConfig.vigent;
+  const Icon = cfg.icon;
+  return (
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <span
+          className={`inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-full border ${cfg.badgeClass} cursor-help`}
+        >
+          <Icon className="h-3 w-3" />
+          {cfg.label}
+        </span>
+      </TooltipTrigger>
+      <TooltipContent>
+        {status === "vigent" && "Normativa en vigor. Aplicable actualment."}
+        {status === "derogada" && "Normativa derogada. No és d'aplicació actual."}
+        {status === "en_revisio" && "Normativa parcialment modificada o pendent de revisió."}
+      </TooltipContent>
+    </Tooltip>
+  );
+}
 
 export default function Documentos() {
   const { isAuthenticated } = useAuth();
   const [searchQuery, setSearchQuery] = useState("");
   const [filterType, setFilterType] = useState<string>("all");
   const [filterJurisdiction, setFilterJurisdiction] = useState<string>("all");
+  const [filterYear, setFilterYear] = useState<string>("all");
+  const [filterStatus, setFilterStatus] = useState<string>("all");
   const [selectedDocument, setSelectedDocument] = useState<Document | null>(null);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
@@ -129,9 +185,18 @@ export default function Documentos() {
 
   const { data: allDocuments } = trpc.documents.list.useQuery();
 
+  // Extreure anys únics per al selector
+  const availableYears = useMemo(() => {
+    const years = new Set<number>();
+    (allDocuments ?? []).forEach(d => {
+      if ((d as Document).publicationYear) years.add((d as Document).publicationYear!);
+    });
+    return Array.from(years).sort((a, b) => b - a); // Ordre descendent
+  }, [allDocuments]);
+
   // Filtrat local combinat
   const displayedDocuments = useMemo(() => {
-    let docs = allDocuments ?? [];
+    let docs = (allDocuments ?? []) as Document[];
     if (searchQuery.length > 1) {
       const q = searchQuery.toLowerCase();
       docs = docs.filter(d =>
@@ -147,16 +212,26 @@ export default function Documentos() {
     if (filterJurisdiction !== "all") {
       docs = docs.filter(d => d.jurisdiction === filterJurisdiction);
     }
+    if (filterYear !== "all") {
+      docs = docs.filter(d => d.publicationYear === parseInt(filterYear));
+    }
+    if (filterStatus !== "all") {
+      docs = docs.filter(d => d.status === filterStatus);
+    }
     return docs;
-  }, [allDocuments, searchQuery, filterType, filterJurisdiction]);
+  }, [allDocuments, searchQuery, filterType, filterJurisdiction, filterYear, filterStatus]);
 
-  const hasActiveFilters = filterType !== "all" || filterJurisdiction !== "all";
+  const hasActiveFilters = filterType !== "all" || filterJurisdiction !== "all" || filterYear !== "all" || filterStatus !== "all";
 
   const clearFilters = () => {
     setFilterType("all");
     setFilterJurisdiction("all");
+    setFilterYear("all");
+    setFilterStatus("all");
     setSearchQuery("");
   };
+
+  const activeFilterCount = [filterType, filterJurisdiction, filterYear, filterStatus].filter(f => f !== "all").length;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
@@ -222,9 +297,9 @@ export default function Documentos() {
             >
               <Filter className="h-4 w-4" />
               Filtres
-              {hasActiveFilters && (
-                <Badge className="ml-1 bg-white text-primary h-5 w-5 p-0 flex items-center justify-center text-xs">
-                  !
+              {activeFilterCount > 0 && (
+                <Badge className="ml-1 bg-white text-primary h-5 w-5 p-0 flex items-center justify-center text-xs font-bold">
+                  {activeFilterCount}
                 </Badge>
               )}
             </Button>
@@ -245,14 +320,15 @@ export default function Documentos() {
                   </Button>
                 )}
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {/* Filtre per tipus */}
                 <div>
                   <label className="text-xs font-medium text-muted-foreground mb-1 block">
-                    Tipus de document
+                    Tipus
                   </label>
                   <Select value={filterType} onValueChange={setFilterType}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Tots els tipus" />
+                    <SelectTrigger className="h-9">
+                      <SelectValue placeholder="Tots" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="all">Tots els tipus</SelectItem>
@@ -265,19 +341,74 @@ export default function Documentos() {
                     </SelectContent>
                   </Select>
                 </div>
+
+                {/* Filtre per jurisdicció */}
                 <div>
                   <label className="text-xs font-medium text-muted-foreground mb-1 block">
                     Jurisdicció
                   </label>
                   <Select value={filterJurisdiction} onValueChange={setFilterJurisdiction}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Totes les jurisdiccions" />
+                    <SelectTrigger className="h-9">
+                      <SelectValue placeholder="Totes" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="all">Totes les jurisdiccions</SelectItem>
+                      <SelectItem value="all">Totes</SelectItem>
                       <SelectItem value="estatal">Estatal</SelectItem>
-                      <SelectItem value="autonomica">Autonòmica (Catalunya)</SelectItem>
+                      <SelectItem value="autonomica">Autonòmica (Cat.)</SelectItem>
                       <SelectItem value="ambas">Estatal i Autonòmica</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {/* Filtre per any de publicació */}
+                <div>
+                  <label className="text-xs font-medium text-muted-foreground mb-1 flex items-center gap-1">
+                    <Calendar className="h-3 w-3" />
+                    Any de publicació
+                  </label>
+                  <Select value={filterYear} onValueChange={setFilterYear}>
+                    <SelectTrigger className="h-9">
+                      <SelectValue placeholder="Tots els anys" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">Tots els anys</SelectItem>
+                      {availableYears.map(year => (
+                        <SelectItem key={year} value={String(year)}>{year}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {/* Filtre per estat de vigència */}
+                <div>
+                  <label className="text-xs font-medium text-muted-foreground mb-1 flex items-center gap-1">
+                    <CheckCircle2 className="h-3 w-3" />
+                    Vigència
+                  </label>
+                  <Select value={filterStatus} onValueChange={setFilterStatus}>
+                    <SelectTrigger className="h-9">
+                      <SelectValue placeholder="Tots els estats" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">Tots els estats</SelectItem>
+                      <SelectItem value="vigent">
+                        <span className="flex items-center gap-1.5">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-green-600" />
+                          Vigent
+                        </span>
+                      </SelectItem>
+                      <SelectItem value="en_revisio">
+                        <span className="flex items-center gap-1.5">
+                          <AlertCircle className="h-3.5 w-3.5 text-amber-600" />
+                          En revisió
+                        </span>
+                      </SelectItem>
+                      <SelectItem value="derogada">
+                        <span className="flex items-center gap-1.5">
+                          <XCircle className="h-3.5 w-3.5 text-red-600" />
+                          Derogada
+                        </span>
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -287,11 +418,20 @@ export default function Documentos() {
 
           {/* Resum de filtres actius */}
           {(hasActiveFilters || searchQuery) && (
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
               <span>Mostrant {displayedDocuments.length} resultats</span>
               {searchQuery && <Badge variant="secondary">Cerca: "{searchQuery}"</Badge>}
               {filterType !== "all" && <Badge variant="secondary">{typeLabels[filterType]}</Badge>}
               {filterJurisdiction !== "all" && <Badge variant="secondary">{jurisdictionLabels[filterJurisdiction]}</Badge>}
+              {filterYear !== "all" && <Badge variant="secondary" className="flex items-center gap-1"><Calendar className="h-3 w-3" />{filterYear}</Badge>}
+              {filterStatus !== "all" && (
+                <Badge variant="secondary" className={`flex items-center gap-1 ${statusConfig[filterStatus]?.badgeClass}`}>
+                  {filterStatus === "vigent" && <CheckCircle2 className="h-3 w-3" />}
+                  {filterStatus === "derogada" && <XCircle className="h-3 w-3" />}
+                  {filterStatus === "en_revisio" && <AlertCircle className="h-3 w-3" />}
+                  {statusConfig[filterStatus]?.label}
+                </Badge>
+              )}
             </div>
           )}
         </div>
@@ -310,8 +450,14 @@ export default function Documentos() {
             {displayedDocuments.map((doc) => (
               <Card
                 key={doc.id}
-                className="cursor-pointer hover:shadow-lg transition-all duration-200 group border-l-4 border-l-green-500"
-                onClick={() => { setSelectedDocument(doc as Document); setDialogOpen(true); }}
+                className={`cursor-pointer hover:shadow-lg transition-all duration-200 group border-l-4 ${
+                  doc.status === "derogada"
+                    ? "border-l-red-400 opacity-80"
+                    : doc.status === "en_revisio"
+                    ? "border-l-amber-400"
+                    : "border-l-green-500"
+                }`}
+                onClick={() => { setSelectedDocument(doc); setDialogOpen(true); }}
               >
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between gap-2">
@@ -344,28 +490,41 @@ export default function Documentos() {
                 </CardHeader>
                 <CardContent>
                   {doc.summary && (
-                    <p className="text-xs text-muted-foreground line-clamp-3 mb-3">{doc.summary}</p>
+                    <p className="text-xs text-muted-foreground line-clamp-2 mb-3">{doc.summary}</p>
                   )}
-                  <div className="flex items-center justify-between">
-                    {doc.source && (
-                      <span className="text-xs text-muted-foreground flex items-center gap-1">
-                        <Building2 className="h-3 w-3" />
-                        {doc.source}
-                      </span>
-                    )}
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-7 w-7 ml-auto"
-                      onClick={(e) => handleExportPDF(doc.id, e)}
-                      disabled={exportPDF.isPending}
-                    >
-                      {exportPDF.isPending ? (
-                        <Loader2 className="h-3 w-3 animate-spin" />
-                      ) : (
-                        <Download className="h-3 w-3" />
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2 flex-wrap min-w-0">
+                      {/* Indicador de vigència */}
+                      <StatusBadge status={doc.status} />
+                      {/* Any de publicació */}
+                      {doc.publicationYear && (
+                        <span className="text-xs text-muted-foreground flex items-center gap-0.5">
+                          <Calendar className="h-3 w-3" />
+                          {doc.publicationYear}
+                        </span>
                       )}
-                    </Button>
+                    </div>
+                    <div className="flex items-center gap-1 shrink-0">
+                      {doc.source && (
+                        <span className="text-xs text-muted-foreground flex items-center gap-1 hidden sm:flex">
+                          <Building2 className="h-3 w-3" />
+                          <span className="truncate max-w-[80px]">{doc.source}</span>
+                        </span>
+                      )}
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="h-7 w-7"
+                        onClick={(e) => handleExportPDF(doc.id, e)}
+                        disabled={exportPDF.isPending}
+                      >
+                        {exportPDF.isPending ? (
+                          <Loader2 className="h-3 w-3 animate-spin" />
+                        ) : (
+                          <Download className="h-3 w-3" />
+                        )}
+                      </Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -380,7 +539,7 @@ export default function Documentos() {
           {selectedDocument && (
             <>
               <DialogHeader>
-                <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
                   <div className="flex items-center gap-2 flex-wrap">
                     <Badge className={typeColors[selectedDocument.type]}>
                       {typeLabels[selectedDocument.type] || selectedDocument.type}
@@ -388,6 +547,13 @@ export default function Documentos() {
                     <Badge variant="outline">
                       {jurisdictionLabels[selectedDocument.jurisdiction]}
                     </Badge>
+                    <StatusBadge status={selectedDocument.status} />
+                    {selectedDocument.publicationYear && (
+                      <span className="text-xs text-muted-foreground flex items-center gap-1">
+                        <Calendar className="h-3.5 w-3.5" />
+                        Publicat: {selectedDocument.publicationYear}
+                      </span>
+                    )}
                   </div>
                   <div className="flex gap-2">
                     <Button
@@ -427,6 +593,22 @@ export default function Documentos() {
                     <Building2 className="h-4 w-4" />
                     {selectedDocument.source}
                   </DialogDescription>
+                )}
+                {selectedDocument.status === "derogada" && (
+                  <div className="mt-3 flex items-start gap-2 bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700">
+                    <XCircle className="h-4 w-4 mt-0.5 shrink-0" />
+                    <span>
+                      <strong>Normativa derogada.</strong> Aquest document ja no és d'aplicació. Consulta la normativa vigent actualitzada.
+                    </span>
+                  </div>
+                )}
+                {selectedDocument.status === "en_revisio" && (
+                  <div className="mt-3 flex items-start gap-2 bg-amber-50 border border-amber-200 rounded-lg p-3 text-sm text-amber-700">
+                    <AlertCircle className="h-4 w-4 mt-0.5 shrink-0" />
+                    <span>
+                      <strong>Normativa en revisió.</strong> Aquest document pot estar parcialment modificat. Verifica la versió actualitzada.
+                    </span>
+                  </div>
                 )}
               </DialogHeader>
 

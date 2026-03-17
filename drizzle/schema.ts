@@ -32,12 +32,16 @@ export const documents = mysqlTable("documents", {
   url: varchar("url", { length: 500 }), // URL original si existe
   fileKey: varchar("fileKey", { length: 500 }), // Clave del archivo en S3
   tags: json("tags").$type<string[]>(), // Etiquetas para búsqueda
+  publicationYear: int("publicationYear"), // Any de publicació del document
+  status: mysqlEnum("status", ["vigent", "derogada", "en_revisio"]).default("vigent").notNull(), // Estat de vigència
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
   createdBy: int("createdBy").references(() => users.id),
 }, (table) => ({
   titleIdx: index("title_idx").on(table.title),
   typeIdx: index("type_idx").on(table.type),
+  statusIdx: index("status_idx").on(table.status),
+  yearIdx: index("year_idx").on(table.publicationYear),
 }));
 
 export type Document = typeof documents.$inferSelect;

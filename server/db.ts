@@ -372,6 +372,8 @@ export async function advancedSearchDocuments(params: {
   jurisdiction?: string;
   dateFrom?: Date;
   dateTo?: Date;
+  publicationYear?: number;
+  status?: string;
   limit?: number;
 }) {
   const db = await getDb();
@@ -394,6 +396,14 @@ export async function advancedSearchDocuments(params: {
 
   if (params.jurisdiction) {
     conditions.push(eq(documents.jurisdiction, params.jurisdiction as any));
+  }
+
+  if (params.publicationYear) {
+    conditions.push(eq(documents.publicationYear, params.publicationYear));
+  }
+
+  if (params.status) {
+    conditions.push(eq(documents.status, params.status as any));
   }
 
   if (params.dateFrom) {

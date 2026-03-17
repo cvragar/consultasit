@@ -167,3 +167,13 @@
 - [x] Obrir automàticament el sidebar quan l'usuari té converses anteriors (useEffect amb sidebarInitialized)
 - [x] Corregir tots els links interns per usar rutes en català (/casos-especials, /documents)
 - [x] Afegir 10 tests per a les millores del xat (72 tests en total, tots passen)
+
+## Millores pàgina de Documentació
+- [x] Afegir camps publicationYear (int) i status (vigent/derogada/en_revisio) a la taula documents
+- [x] Migrar la BD amb pnpm db:push (migració 0003 aplicada)
+- [x] Actualitzar el router tRPC per filtrar per any i per estat
+- [x] Actualitzar la pàgina de Documentació amb filtre per any de publicació (selector dinàmic)
+- [x] Afegir indicador visual de vigència (badge verd/vermell/groc) a cada targeta i al diàleg
+- [x] Actualitzar tots els documents existents amb any i estat (SQL directe)
+- [x] Afegir avís visual al diàleg per a documents derogats i en revisió
+- [x] Escriure 19 tests per als nous filtres (91 tests en total, tots passen)

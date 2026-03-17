@@ -167,6 +167,8 @@ export const appRouter = router({
         jurisdiction: z.string().optional(),
         dateFrom: z.date().optional(),
         dateTo: z.date().optional(),
+        publicationYear: z.number().optional(),
+        status: z.enum(["vigent", "derogada", "en_revisio"]).optional(),
         limit: z.number().optional(),
       }))
       .query(async ({ input }) => {
