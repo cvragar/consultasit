@@ -122,3 +122,12 @@
 - [x] Investigar el criteri de l'INSS i les mútues sobre dies de teletreball vs presencial
 - [x] Documentar el procediment des de l'eCap per a parts de baixa per AT en teletreball
 - [x] Inserir el nou cas especial a la base de dades
+
+## Pujada de PDFs des del panel d'administració
+- [x] Instal·lar pdf-parse per extracció de text de PDFs al servidor
+- [x] Crear endpoint REST POST /api/upload/pdf amb multer + pdf-parse + S3
+- [x] Implementar extracció automàtica de text del PDF
+- [x] Guardar el PDF a S3 i el contingut a la BD com a document
+- [x] Crear interfície de pujada al panel d'administració amb drag & drop
+- [x] Afegir gestió (llistar i eliminar) dels documents pujats
+- [x] Escriure tests per al nou endpoint (10 tests)
