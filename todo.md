@@ -155,3 +155,7 @@
 - [x] Traduir tots els camps (títol, descripció, base legal, procediment, exemples) al català (10 casos traducts)
 - [x] Actualitzar la base de dades amb el contingut traduït
 - [x] Verificar la visualització al frontend (tots els casos mostren contingut en català)
+
+## Bug: quadre d'entrada de text no apareix a la pàgina de xat
+- [x] Diagnosticar per què no es mostra el camp d'entrada de text al xat (causa: min-h-screen sense overflow-hidden feia que el quadre quedés fora del viewport)
+- [x] Corregir el bug: canviat a h-screen + overflow-hidden + min-h-0 al contenidor de missatges

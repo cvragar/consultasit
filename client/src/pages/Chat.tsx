@@ -263,7 +263,7 @@ export default function Chat() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex relative">
+    <div className="h-screen bg-gradient-to-b from-blue-50 to-white flex relative overflow-hidden">
       {/* Overlay per a mòbil */}
       {sidebarOpen && (
         <div
@@ -349,7 +349,7 @@ export default function Chat() {
       </div>
 
       {/* Main Chat Area */}
-      <div className="flex-1 flex flex-col min-w-0">
+      <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* Header */}
         <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-10">
           <div className="px-3 sm:px-4 py-3">
@@ -407,7 +407,7 @@ export default function Chat() {
         </header>
 
         {/* Messages Area */}
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto min-h-0">
           <div className="container py-6 max-w-4xl">
             {allMessages.length === 0 ? (
               <div className="text-center py-12">
