@@ -149,3 +149,9 @@
 - [x] Investigar jurisprudència rellevant: STS 19/02/2002, STS 07/04/2004, STSJ Castella i Lleó 18/10/2022
 - [x] Inserir el nou cas especial a la base de dades (ID: 70001, categoria: pluriempleo)
 - [x] Escriure tests per al nou cas especial (10 tests, tots passen)
+
+## Traducció al català de tots els casos especials
+- [x] Exportar el contingut actual de tots els casos especials de la BD
+- [x] Traduir tots els camps (títol, descripció, base legal, procediment, exemples) al català (10 casos traducts)
+- [x] Actualitzar la base de dades amb el contingut traduït
+- [x] Verificar la visualització al frontend (tots els casos mostren contingut en català)
