@@ -1,0 +1,59 @@
+{
+  "query": "SELECT id, title, category, LEFT(examples, 200) as ex_preview, LEFT(`procedure`, 200) as proc_preview FROM special_cases WHERE examples LIKE '[%' OR examples LIKE '{%' OR `procedure` LIKE '[%' OR `procedure` LIKE '{%' ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, category, LEFT(examples, 200) as ex_preview, LEFT(`procedure`, 200) as proc_preview FROM special_cases WHERE examples LIKE '[%' OR examples LIKE '{%' OR `procedure` LIKE '[%' OR `procedure` LIKE '{%' ORDER BY id;",
+  "rows": [
+    {
+      "id": "30001",
+      "title": "Accident de treball en treballador autònom (RETA)",
+      "category": "accident_treball",
+      "ex_preview": "[{\"title\": \"Aut\\u00f2nom fuster amb cobertura CP: caiguda al taller\", \"description\": \"Fuster aut\\u00f2nom cau al seu taller i es fractura el canell. T\\u00e9 contractada la cobertura de CP amb FREMAP.\"",
+      "proc_preview": "REQUISIT PREVI: Verificar si l'autònom té cobertura de contingències professionals (CP) amb mútua."
+    },
+    {
+      "id": "30002",
+      "title": "Accident de treball en treballador en situació de pluriocupació",
+      "category": "accident_treball",
+      "ex_preview": "[{\"title\": \"Treballador en dues empreses: AT en l'empresa A\", \"description\": \"Treballador treballa a l'empresa A (8h, base cotitzaci\\u00f3 1.500\\u20ac/mes, m\\u00fatua ASEPEYO) i a l'empresa B (4h, bas",
+      "proc_preview": "ESCENARI A: L'altra activitat és per compte aliè (altra empresa assalariada)"
+    },
+    {
+      "id": "30003",
+      "title": "TRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball",
+      "category": "accident_treball",
+      "ex_preview": "[{\"title\": \"TRADE que pateix un accident a les oficines del client\", \"description\": \"TRADE inform\\u00e0tic que cau per les escales de les oficines del seu client principal mentre treballa. Qualificaci",
+      "proc_preview": "PROCEDIMENT DES DE L'eCAP"
+    },
+    {
+      "id": "30004",
+      "title": "Accident in itinere per a autònoms amb múltiples llocs de treball declarats",
+      "category": "accident_treball",
+      "ex_preview": "[{\"title\": \"Fisioterapeuta amb dos locals declarats a Hisenda\", \"description\": \"Fisioterapeuta aut\\u00f2nom amb Local A (principal, 4 dies/setmana) i Local B (secundari, 1 dia/setmana), tots dos decla",
+      "proc_preview": "PROTOCOL PER AL METGE DE L'eCap:"
+    },
+    {
+      "id": "60001",
+      "title": "Accident in itinere en treballadors assalariats amb contracte de teletreball parcial",
+      "category": "accident_treball",
+      "ex_preview": "[{\"titol\":\"Infermera amb teletreball 2 dies - accident de trànsit en dia presencial\",\"resolucio\":\"AT in itinere clar. El metge de l'eCap emet el part indicant AT. La mútua gestiona la prestació (75% B",
+      "proc_preview": "PROCEDIMENT DES DE L'ECAP:"
+    }
+  ],
+  "messages": [
+    "SI TÉ COBERTURA DE CP AMB MÚTUA:",
+    "- La MÚTUA emet el part de baixa per AT (no l'eCap)",
+    "- El metge de l",
+    "- L'AT es considera AT EN AMBDUES relacions laborals",
+    "- Cada empresa ha de notificar l'accident (part d'accident - Delt@)",
+    "- ",
+    "1. IDENTIFICACIÓ: Verificar si el pacient és TRADE (autònom que factura ≥75% a un sol client, amb contracte TRADE registrat al SEPE).",
+    "2. COBERTURA: Des de l'01/01/2019 tots",
+    "PREGUNTA 1: L'autònom té cobertura de contingències professionals (mútua)?",
+    "→ SÍ: Derivar a la mútua. La mútua emet el part de baixa per AT.",
+    "→ NO: Emetre part de baixa",
+    "1. PREGUNTAR SEMPRE: Si el treballador té contracte de teletreball i si el dia de l'accident era dia presencial o de teletreball.",
+    "2. DIA PRESENCIAL - ACCIDENT EN TRAJECTE "
+  ],
+  "stdout": "id\ttitle\tcategory\tex_preview\tproc_preview\n30001\tAccident de treball en treballador autònom (RETA)\taccident_treball\t[{\"title\": \"Aut\\u00f2nom fuster amb cobertura CP: caiguda al taller\", \"description\": \"Fuster aut\\u00f2nom cau al seu taller i es fractura el canell. T\\u00e9 contractada la cobertura de CP amb FREMAP.\"\tREQUISIT PREVI: Verificar si l'autònom té cobertura de contingències professionals (CP) amb mútua.\n\nSI TÉ COBERTURA DE CP AMB MÚTUA:\n- La MÚTUA emet el part de baixa per AT (no l'eCap)\n- El metge de l\n30002\tAccident de treball en treballador en situació de pluriocupació\taccident_treball\t[{\"title\": \"Treballador en dues empreses: AT en l'empresa A\", \"description\": \"Treballador treballa a l'empresa A (8h, base cotitzaci\\u00f3 1.500\\u20ac/mes, m\\u00fatua ASEPEYO) i a l'empresa B (4h, bas\tESCENARI A: L'altra activitat és per compte aliè (altra empresa assalariada)\n- L'AT es considera AT EN AMBDUES relacions laborals\n- Cada empresa ha de notificar l'accident (part d'accident - Delt@)\n- \n30003\tTRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball\taccident_treball\t[{\"title\": \"TRADE que pateix un accident a les oficines del client\", \"description\": \"TRADE inform\\u00e0tic que cau per les escales de les oficines del seu client principal mentre treballa. Qualificaci\tPROCEDIMENT DES DE L'eCAP\n\n1. IDENTIFICACIÓ: Verificar si el pacient és TRADE (autònom que factura ≥75% a un sol client, amb contracte TRADE registrat al SEPE).\n\n2. COBERTURA: Des de l'01/01/2019 tots\n30004\tAccident in itinere per a autònoms amb múltiples llocs de treball declarats\taccident_treball\t[{\"title\": \"Fisioterapeuta amb dos locals declarats a Hisenda\", \"description\": \"Fisioterapeuta aut\\u00f2nom amb Local A (principal, 4 dies/setmana) i Local B (secundari, 1 dia/setmana), tots dos decla\tPROTOCOL PER AL METGE DE L'eCap:\n\nPREGUNTA 1: L'autònom té cobertura de contingències professionals (mútua)?\n→ SÍ: Derivar a la mútua. La mútua emet el part de baixa per AT.\n→ NO: Emetre part de baixa\n60001\tAccident in itinere en treballadors assalariats amb contracte de teletreball parcial\taccident_treball\t[{\"titol\":\"Infermera amb teletreball 2 dies - accident de trànsit en dia presencial\",\"resolucio\":\"AT in itinere clar. El metge de l'eCap emet el part indicant AT. La mútua gestiona la prestació (75% B\tPROCEDIMENT DES DE L'ECAP:\n\n1. PREGUNTAR SEMPRE: Si el treballador té contracte de teletreball i si el dia de l'accident era dia presencial o de teletreball.\n\n2. DIA PRESENCIAL - ACCIDENT EN TRAJECTE \n",
+  "stderr": "",
+  "execution_time_ms": 355
+}

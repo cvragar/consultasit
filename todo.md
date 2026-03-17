@@ -177,3 +177,9 @@
 - [x] Actualitzar tots els documents existents amb any i estat (SQL directe)
 - [x] Afegir avís visual al diàleg per a documents derogats i en revisió
 - [x] Escriure 19 tests per als nous filtres (91 tests en total, tots passen)
+
+## Bug: camps examples i procedure es mostren com a JSON en brut a les targetes de casos especials
+- [x] Diagnosticar: el problema era a la BD (dades guardades com a JSON array en lloc de text pla)
+- [x] Corregir el camp examples: 5 casos (30001-30004, 60001) convertits de JSON array a Markdown
+- [x] Corregir el camp legalBasis: 2 casos (30001, 30002) convertits de JSON array a llista Markdown
+- [x] Verificar que no queden camps amb JSON escapat (0 resultats a la consulta de verificació)

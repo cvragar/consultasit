@@ -1,0 +1,9 @@
+{
+  "query": "SELECT id, title, \n  CASE WHEN examples LIKE '[%' OR examples LIKE '{%' THEN 'JSON' ELSE 'OK' END as examples_status,\n  CASE WHEN legalBasis LIKE '[%' OR legalBasis LIKE '{%' THEN 'JSON' ELSE 'OK' END as legalBasis_status,\n  CASE WHEN `procedure` LIKE '[%' OR `procedure` LIKE '{%' THEN 'JSON' ELSE 'OK' END as procedure_status,\n  CASE WHEN description LIKE '[%' OR description LIKE '{%' THEN 'JSON' ELSE 'OK' END as description_status\nFROM special_cases\nWHERE examples LIKE '[%' OR examples LIKE '{%' \n   OR legalBasis LIKE '[%' OR legalBasis LIKE '{%'\n   OR `procedure` LIKE '[%' OR `procedure` LIKE '{%'\n   OR description LIKE '[%' OR description LIKE '{%'\nORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, \n  CASE WHEN examples LIKE '[%' OR examples LIKE '{%' THEN 'JSON' ELSE 'OK' END as examples_status,\n  CASE WHEN legalBasis LIKE '[%' OR legalBasis LIKE '{%' THEN 'JSON' ELSE 'OK' END as legalBasis_status,\n  CASE WHEN `procedure` LIKE '[%' OR `procedure` LIKE '{%' THEN 'JSON' ELSE 'OK' END as procedure_status,\n  CASE WHEN description LIKE '[%' OR description LIKE '{%' THEN 'JSON' ELSE 'OK' END as description_status\nFROM special_cases\nWHERE examples LIKE '[%' OR examples LIKE '{%' \n   OR legalBasis LIKE '[%' OR legalBasis LIKE '{%'\n   OR `procedure` LIKE '[%' OR `procedure` LIKE '{%'\n   OR description LIKE '[%' OR description LIKE '{%'\nORDER BY id;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 378
+}

@@ -1,0 +1,9 @@
+{
+  "query": "SELECT id, title, LEFT(examples, 150) as ex_preview FROM special_cases WHERE examples LIKE '[%' OR examples LIKE '{%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, LEFT(examples, 150) as ex_preview FROM special_cases WHERE examples LIKE '[%' OR examples LIKE '{%';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 360
+}

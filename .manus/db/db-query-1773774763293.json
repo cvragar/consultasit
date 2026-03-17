@@ -1,0 +1,20 @@
+{
+  "query": "SELECT id, title, LEFT(legalBasis, 300) as lb_preview FROM special_cases WHERE legalBasis LIKE '[%' OR legalBasis LIKE '{%' ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, LEFT(legalBasis, 300) as lb_preview FROM special_cases WHERE legalBasis LIKE '[%' OR legalBasis LIKE '{%' ORDER BY id;",
+  "rows": [
+    {
+      "id": "30001",
+      "title": "Accident de treball en treballador autònom (RETA)",
+      "lb_preview": "[\"Llei 20/2007, art. 26 (LETA): Definici\\u00f3 d'AT per a aut\\u00f2nom\", \"LGSS (RDL 8/2015), art. 316: AT en RETA\", \"RD 1273/2003: Cobertura conting\\u00e8ncies professionals RETA\", \"RD 625/2014, art. 1.2: Emissi\\u00f3 de parts de baixa\", \"STS 5 juliol 2023 (ROJ: STS 3098/2023)\", \"Criteri de gesti\\u0"
+    },
+    {
+      "id": "30002",
+      "title": "Accident de treball en treballador en situació de pluriocupació",
+      "lb_preview": "[\"LGSS (RDL 8/2015), art. 156: Definici\\u00f3 d'AT\", \"LGSS (RDL 8/2015), art. 143: Pluriocupaci\\u00f3 i base reguladora\", \"RD 625/2014, art. 1.2: Emissi\\u00f3 de parts de baixa\", \"STS 22 juliol 1998 (rcud 1878/1979): AT en pluriocupaci\\u00f3\", \"STS 5 juliol 2023 (ROJ: STS 3098/2023): Qualificaci\\u00"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tlb_preview\n30001\tAccident de treball en treballador autònom (RETA)\t[\"Llei 20/2007, art. 26 (LETA): Definici\\u00f3 d'AT per a aut\\u00f2nom\", \"LGSS (RDL 8/2015), art. 316: AT en RETA\", \"RD 1273/2003: Cobertura conting\\u00e8ncies professionals RETA\", \"RD 625/2014, art. 1.2: Emissi\\u00f3 de parts de baixa\", \"STS 5 juliol 2023 (ROJ: STS 3098/2023)\", \"Criteri de gesti\\u0\n30002\tAccident de treball en treballador en situació de pluriocupació\t[\"LGSS (RDL 8/2015), art. 156: Definici\\u00f3 d'AT\", \"LGSS (RDL 8/2015), art. 143: Pluriocupaci\\u00f3 i base reguladora\", \"RD 625/2014, art. 1.2: Emissi\\u00f3 de parts de baixa\", \"STS 22 juliol 1998 (rcud 1878/1979): AT en pluriocupaci\\u00f3\", \"STS 5 juliol 2023 (ROJ: STS 3098/2023): Qualificaci\\u00\n",
+  "stderr": "",
+  "execution_time_ms": 358
+}
