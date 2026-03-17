@@ -1,0 +1,54 @@
+{
+  "query": "SELECT COLUMN_NAME, DATA_TYPE FROM information_schema.COLUMNS WHERE TABLE_NAME = 'special_cases' ORDER BY ORDINAL_POSITION;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT COLUMN_NAME, DATA_TYPE FROM information_schema.COLUMNS WHERE TABLE_NAME = 'special_cases' ORDER BY ORDINAL_POSITION;",
+  "rows": [
+    {
+      "COLUMN_NAME": "id",
+      "DATA_TYPE": "int"
+    },
+    {
+      "COLUMN_NAME": "title",
+      "DATA_TYPE": "varchar"
+    },
+    {
+      "COLUMN_NAME": "category",
+      "DATA_TYPE": "enum"
+    },
+    {
+      "COLUMN_NAME": "description",
+      "DATA_TYPE": "text"
+    },
+    {
+      "COLUMN_NAME": "legalBasis",
+      "DATA_TYPE": "text"
+    },
+    {
+      "COLUMN_NAME": "procedure",
+      "DATA_TYPE": "text"
+    },
+    {
+      "COLUMN_NAME": "examples",
+      "DATA_TYPE": "text"
+    },
+    {
+      "COLUMN_NAME": "relatedDocumentIds",
+      "DATA_TYPE": "json"
+    },
+    {
+      "COLUMN_NAME": "createdAt",
+      "DATA_TYPE": "timestamp"
+    },
+    {
+      "COLUMN_NAME": "updatedAt",
+      "DATA_TYPE": "timestamp"
+    },
+    {
+      "COLUMN_NAME": "createdBy",
+      "DATA_TYPE": "int"
+    }
+  ],
+  "messages": [],
+  "stdout": "COLUMN_NAME\tDATA_TYPE\nid\tint\ntitle\tvarchar\ncategory\tenum\ndescription\ttext\nlegalBasis\ttext\nprocedure\ttext\nexamples\ttext\nrelatedDocumentIds\tjson\ncreatedAt\ttimestamp\nupdatedAt\ttimestamp\ncreatedBy\tint\n",
+  "stderr": "",
+  "execution_time_ms": 375
+}

@@ -1,0 +1,23 @@
+{
+  "query": "SELECT * FROM special_cases LIMIT 1;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT * FROM special_cases LIMIT 1;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "Menstruación incapacitante",
+      "category": "menstruacion",
+      "description": "Desde el 1 de junio de 2023, las mujeres con menstruaciones incapacitantes pueden solicitar baja médica por IT. Se considera situación de incapacidad temporal derivada de enfermedad común.",
+      "legalBasis": "Real Decreto-ley 5/2023, de 28 de junio. Artículo 9 que modifica el artículo 169 de la Ley General de la Seguridad Social.",
+      "procedure": "La baja la emite el médico de atención primaria o ginecólogo del sistema público de salud. No se requiere periodo mínimo de cotización. La prestación es del 60% de la base reguladora desde el primer día (sin los 3 días de carencia habitual).",
+      "examples": "Dismenorrea severa, endometriosis sintomática, síndrome premenstrual incapacitante.",
+      "relatedDocumentIds": "NULL",
+      "createdAt": "2026-02-11 13:08:16",
+      "updatedAt": "2026-02-11 13:08:16",
+      "createdBy": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tcategory\tdescription\tlegalBasis\tprocedure\texamples\trelatedDocumentIds\tcreatedAt\tupdatedAt\tcreatedBy\n1\tMenstruación incapacitante\tmenstruacion\tDesde el 1 de junio de 2023, las mujeres con menstruaciones incapacitantes pueden solicitar baja médica por IT. Se considera situación de incapacidad temporal derivada de enfermedad común.\tReal Decreto-ley 5/2023, de 28 de junio. Artículo 9 que modifica el artículo 169 de la Ley General de la Seguridad Social.\tLa baja la emite el médico de atención primaria o ginecólogo del sistema público de salud. No se requiere periodo mínimo de cotización. La prestación es del 60% de la base reguladora desde el primer día (sin los 3 días de carencia habitual).\tDismenorrea severa, endometriosis sintomática, síndrome premenstrual incapacitante.\tNULL\t2026-02-11 13:08:16\t2026-02-11 13:08:16\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 354
+}

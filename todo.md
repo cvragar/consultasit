@@ -115,3 +115,10 @@
 - [x] Actualitzar el frontend per mostrar la nova categoria amb filtre específic
 - [x] Investigar i afegir cas in itinere per a autònoms amb múltiples llocs de treball
 - [x] Inserir el nou cas in itinere a la base de dades
+
+## Nou cas especial - In itinere en teletreball parcial
+- [x] Investigar normativa Llei 10/2021 de treball a distància i AT
+- [x] Investigar jurisprudència TS i TSJ sobre in itinere en dies de teletreball
+- [x] Investigar el criteri de l'INSS i les mútues sobre dies de teletreball vs presencial
+- [x] Documentar el procediment des de l'eCap per a parts de baixa per AT en teletreball
+- [x] Inserir el nou cas especial a la base de dades
