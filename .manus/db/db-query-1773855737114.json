@@ -1,0 +1,17 @@
+{
+  "query": "SELECT diagnosis, cie10Code, minDays, averageDays, maxDays FROM it_durations WHERE cie10Code = 'A09';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT diagnosis, cie10Code, minDays, averageDays, maxDays FROM it_durations WHERE cie10Code = 'A09';",
+  "rows": [
+    {
+      "diagnosis": "Gastroenteritis aguda infecciosa",
+      "cie10Code": "A09",
+      "minDays": "3",
+      "averageDays": "7",
+      "maxDays": "14"
+    }
+  ],
+  "messages": [],
+  "stdout": "diagnosis\tcie10Code\tminDays\taverageDays\tmaxDays\nGastroenteritis aguda infecciosa\tA09\t3\t7\t14\n",
+  "stderr": "",
+  "execution_time_ms": 447
+}

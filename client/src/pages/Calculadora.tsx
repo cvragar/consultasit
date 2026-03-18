@@ -1,29 +1,75 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import { Shield, Home, Calculator, AlertCircle, Calendar, Info } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Badge } from "@/components/ui/badge";
+import { Shield, Home, Calculator, AlertCircle, Calendar, Info, ChevronDown, ChevronUp, Briefcase } from "lucide-react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
+
+// Grups d'ocupació CNO-11 (17 grups EPA/INE)
+const OCCUPATION_GROUPS = [
+  { id: "G1",  label: "Directors i gerents", cnoCodes: "CNO 11-15" },
+  { id: "G2",  label: "Tècnics professionals científics (salut/ensenyament)", cnoCodes: "CNO 21-23" },
+  { id: "G3",  label: "Altres tècnics professionals científics", cnoCodes: "CNO 24-29" },
+  { id: "G4",  label: "Tècnics i professionals de suport", cnoCodes: "CNO 31-38" },
+  { id: "G5",  label: "Empleats d'oficina (sense atenció al públic)", cnoCodes: "CNO 41-43" },
+  { id: "G6",  label: "Empleats d'oficina (amb atenció al públic)", cnoCodes: "CNO 44-45" },
+  { id: "G7",  label: "Treballadors serveis restauració i comerç", cnoCodes: "CNO 50-55" },
+  { id: "G8",  label: "Treballadors serveis salut i cura de persones", cnoCodes: "CNO 56-58" },
+  { id: "G9",  label: "Treballadors serveis protecció i seguretat", cnoCodes: "CNO 59" },
+  { id: "G10", label: "Treballadors qualificats sector agrícola/forestal", cnoCodes: "CNO 61-64" },
+  { id: "G11", label: "Treballadors qualificats de la construcció", cnoCodes: "CNO 71-72" },
+  { id: "G12", label: "Treballadors qualificats indústries manufactureres", cnoCodes: "CNO 73-78" },
+  { id: "G13", label: "Operadors instal·lacions i maquinària fixes", cnoCodes: "CNO 81-82" },
+  { id: "G14", label: "Conductors i operadors maquinària mòbil", cnoCodes: "CNO 83-84" },
+  { id: "G15", label: "Treballadors no qualificats en serveis", cnoCodes: "CNO 91-94" },
+  { id: "G16", label: "Peons agricultura, pesca, construcció, indústria", cnoCodes: "CNO 95-98" },
+  { id: "G17", label: "Ocupacions militars", cnoCodes: "CNO 00" },
+];
+
+function getFactorForGroup(occupationAdjustment: any[], groupId: string): number | null {
+  if (!occupationAdjustment || !Array.isArray(occupationAdjustment)) return null;
+  const entry = occupationAdjustment.find((o: any) => o.cnoGroup === groupId);
+  return entry ? entry.factor : null;
+}
+
+function getFactorLabel(factor: number): { label: string; color: string } {
+  if (factor < 0.80) return { label: "Molt inferior a la mitjana", color: "bg-blue-100 text-blue-800" };
+  if (factor < 0.95) return { label: "Inferior a la mitjana", color: "bg-green-100 text-green-800" };
+  if (factor <= 1.05) return { label: "En la mitjana", color: "bg-gray-100 text-gray-800" };
+  if (factor <= 1.15) return { label: "Superior a la mitjana", color: "bg-orange-100 text-orange-800" };
+  return { label: "Molt superior a la mitjana", color: "bg-red-100 text-red-800" };
+}
 
 export default function Calculadora() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDiagnosis, setSelectedDiagnosis] = useState<any>(null);
+  const [selectedGroupId, setSelectedGroupId] = useState<string>("");
+  const [showAllFactors, setShowAllFactors] = useState(false);
 
   const { data: searchResults } = trpc.itDurations.search.useQuery(
     { query: searchQuery },
     { enabled: searchQuery.length > 2 }
   );
 
-  const calculateDuration = (diagnosis: any) => {
+  // Calcular dies ajustats per ocupació
+  const adjustedDays = useMemo(() => {
+    if (!selectedDiagnosis || !selectedGroupId) return null;
+    const factor = getFactorForGroup(selectedDiagnosis.occupationAdjustment, selectedGroupId);
+    if (!factor) return null;
     return {
-      min: diagnosis.minDays,
-      max: diagnosis.maxDays,
-      average: diagnosis.averageDays,
+      factor,
+      min: Math.round(selectedDiagnosis.minDays * factor),
+      average: Math.round(selectedDiagnosis.averageDays * factor),
+      max: Math.round(selectedDiagnosis.maxDays * factor),
     };
-  };
+  }, [selectedDiagnosis, selectedGroupId]);
+
+  const selectedGroup = OCCUPATION_GROUPS.find(g => g.id === selectedGroupId);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
@@ -57,8 +103,9 @@ export default function Calculadora() {
                 <div>
                   <CardTitle className="text-lg">Sobre la calculadora</CardTitle>
                   <CardDescription className="mt-2">
-                    Aquesta eina proporciona temps orientatius d'IT basats en criteris de l'INSS i guies
-                    clíniques. Els temps reals poden variar segons l'edat, ocupació i comorbiditats del pacient.
+                    Temps estàndard basats en el <strong>Manual de Tiempos Óptimos de IT (INSS, 4a edició)</strong>.
+                    Inclou factors de correcció per <strong>grup d'ocupació CNO-11</strong> extrets de la Taula 15 del manual.
+                    Els temps reals poden variar segons l'edat, comorbiditats i evolució clínica.
                   </CardDescription>
                 </div>
               </div>
@@ -66,11 +113,11 @@ export default function Calculadora() {
           </Card>
 
           {/* Search Diagnosis */}
-          <Card className="mb-8">
+          <Card className="mb-6">
             <CardHeader>
-              <CardTitle>Cerca per diagnòstic</CardTitle>
+              <CardTitle>1. Cerca per diagnòstic</CardTitle>
               <CardDescription>
-                Introdueix el nom de la patologia o el codi CIE-10
+                Introdueix el nom de la patologia o el codi CIE-10 (mínim 3 caràcters)
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -79,46 +126,107 @@ export default function Calculadora() {
                   <Label htmlFor="diagnosis">Diagnòstic o codi CIE-10</Label>
                   <Input
                     id="diagnosis"
-                    placeholder="Ex: Hernia discal, lumbalgia, fractura..."
+                    placeholder="Ex: lumbalgia, hèrnia discal, depressió, neoplàsia mama..."
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={(e) => {
+                      setSearchQuery(e.target.value);
+                      setSelectedDiagnosis(null);
+                      setSelectedGroupId("");
+                    }}
+                    className="mt-1"
                   />
                 </div>
 
                 {searchResults && searchResults.length > 0 && (
                   <div className="space-y-2">
-                    <Label>Resultats de la cerca:</Label>
-                    {searchResults.map((result) => (
-                      <Button
-                        key={result.id}
-                        variant="outline"
-                        className="w-full justify-start text-left h-auto py-3"
-                        onClick={() => setSelectedDiagnosis(result)}
-                      >
-                        <div className="flex-1">
-                          <div className="font-semibold">{result.diagnosis}</div>
-                          {result.cie10Code && (
-                            <div className="text-xs text-gray-600">CIE-10: {result.cie10Code}</div>
-                          )}
-                          {result.category && (
-                            <div className="text-xs text-gray-600">Categoria: {result.category}</div>
-                          )}
-                        </div>
-                      </Button>
-                    ))}
+                    <Label>Resultats ({searchResults.length}):</Label>
+                    <div className="max-h-64 overflow-y-auto space-y-1.5 pr-1">
+                      {searchResults.map((result) => (
+                        <button
+                          key={result.id}
+                          className={`w-full text-left px-4 py-3 rounded-lg border transition-colors ${
+                            selectedDiagnosis?.id === result.id
+                              ? "border-purple-400 bg-purple-50"
+                              : "border-gray-200 bg-white hover:border-purple-300 hover:bg-purple-50/50"
+                          }`}
+                          onClick={() => {
+                            setSelectedDiagnosis(result);
+                            setSelectedGroupId("");
+                          }}
+                        >
+                          <div className="font-semibold text-gray-900 text-sm">{result.diagnosis}</div>
+                          <div className="flex gap-3 mt-1">
+                            {result.cie10Code && (
+                              <span className="text-xs text-gray-500">CIE-10: <strong>{result.cie10Code}</strong></span>
+                            )}
+                            {result.category && (
+                              <span className="text-xs text-gray-500">{result.category}</span>
+                            )}
+                          </div>
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 )}
 
                 {searchQuery.length > 2 && (!searchResults || searchResults.length === 0) && (
                   <div className="text-center py-6 text-gray-600">
-                    <AlertCircle className="h-12 w-12 mx-auto mb-2 text-gray-400" />
-                    <p>No s'han trobat resultats per aquesta cerca</p>
+                    <AlertCircle className="h-10 w-10 mx-auto mb-2 text-gray-400" />
+                    <p className="font-medium">No s'han trobat resultats</p>
                     <p className="text-sm mt-1">Prova amb un altre terme o consulta amb el xat d'IA</p>
                   </div>
                 )}
               </div>
             </CardContent>
           </Card>
+
+          {/* Occupation Selector */}
+          {selectedDiagnosis && (
+            <Card className="mb-6 border-blue-200">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Briefcase className="h-5 w-5 text-blue-600" />
+                  2. Grup d'ocupació del pacient (opcional)
+                </CardTitle>
+                <CardDescription>
+                  Selecciona el grup CNO-11 per aplicar el factor de correcció de l'INSS
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Select value={selectedGroupId} onValueChange={setSelectedGroupId}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecciona el grup d'ocupació..." />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {OCCUPATION_GROUPS.map((g) => {
+                      const factor = getFactorForGroup(selectedDiagnosis.occupationAdjustment, g.id);
+                      return (
+                        <SelectItem key={g.id} value={g.id}>
+                          <span className="flex items-center gap-2">
+                            <span>{g.label}</span>
+                            {factor && (
+                              <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${
+                                factor < 0.95 ? "bg-green-100 text-green-700" :
+                                factor > 1.05 ? "bg-orange-100 text-orange-700" :
+                                "bg-gray-100 text-gray-600"
+                              }`}>
+                                ×{factor.toFixed(2)}
+                              </span>
+                            )}
+                          </span>
+                        </SelectItem>
+                      );
+                    })}
+                  </SelectContent>
+                </Select>
+                {selectedGroupId && (
+                  <p className="text-xs text-gray-500 mt-2">
+                    {selectedGroup?.cnoCodes} · Factor: ×{adjustedDays?.factor.toFixed(2)}
+                  </p>
+                )}
+              </CardContent>
+            </Card>
+          )}
 
           {/* Results */}
           {selectedDiagnosis && (
@@ -128,55 +236,151 @@ export default function Calculadora() {
                   <Calendar className="h-5 w-5 text-purple-600" />
                   Temps estimat d'IT
                 </CardTitle>
-                <CardDescription className="text-base font-semibold">
-                  {selectedDiagnosis.diagnosis}
-                </CardDescription>
-                {selectedDiagnosis.cie10Code && (
-                  <p className="text-sm text-gray-600">Codi CIE-10: {selectedDiagnosis.cie10Code}</p>
-                )}
+                <div className="space-y-1">
+                  <CardDescription className="text-base font-semibold text-gray-900">
+                    {selectedDiagnosis.diagnosis}
+                  </CardDescription>
+                  <div className="flex flex-wrap gap-2 mt-1">
+                    {selectedDiagnosis.cie10Code && (
+                      <Badge variant="outline" className="text-xs font-mono">
+                        CIE-10: {selectedDiagnosis.cie10Code}
+                      </Badge>
+                    )}
+                    {selectedDiagnosis.category && (
+                      <Badge variant="secondary" className="text-xs">
+                        {selectedDiagnosis.category}
+                      </Badge>
+                    )}
+                  </div>
+                </div>
               </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-3 gap-6 mb-6">
-                  <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <div className="text-3xl font-bold text-blue-600">
-                      {selectedDiagnosis.minDays}
+              <CardContent className="space-y-6">
+                {/* Dies base (INSS) */}
+                <div>
+                  <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-1.5">
+                    <Shield className="h-4 w-4 text-purple-500" />
+                    Temps estàndard INSS (sense ajust per ocupació)
+                  </h4>
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="text-center p-4 bg-blue-50 rounded-lg">
+                      <div className="text-3xl font-bold text-blue-600">{selectedDiagnosis.minDays}</div>
+                      <div className="text-xs text-gray-600 mt-1">Dies mínims</div>
                     </div>
-                    <div className="text-sm text-gray-600 mt-1">Dies mínims</div>
-                  </div>
-                  <div className="text-center p-4 bg-purple-50 rounded-lg">
-                    <div className="text-3xl font-bold text-purple-600">
-                      {selectedDiagnosis.averageDays}
+                    <div className="text-center p-4 bg-purple-50 rounded-lg border-2 border-purple-200">
+                      <div className="text-3xl font-bold text-purple-600">{selectedDiagnosis.averageDays}</div>
+                      <div className="text-xs text-gray-600 mt-1">Dies estàndard</div>
                     </div>
-                    <div className="text-sm text-gray-600 mt-1">Dies mitjans</div>
-                  </div>
-                  <div className="text-center p-4 bg-orange-50 rounded-lg">
-                    <div className="text-3xl font-bold text-orange-600">
-                      {selectedDiagnosis.maxDays}
+                    <div className="text-center p-4 bg-orange-50 rounded-lg">
+                      <div className="text-3xl font-bold text-orange-600">{selectedDiagnosis.maxDays}</div>
+                      <div className="text-xs text-gray-600 mt-1">Dies màxims</div>
                     </div>
-                    <div className="text-sm text-gray-600 mt-1">Dies màxims</div>
                   </div>
                 </div>
 
+                {/* Dies ajustats per ocupació */}
+                {adjustedDays && selectedGroup && (
+                  <>
+                    <Separator />
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-1.5">
+                        <Briefcase className="h-4 w-4 text-blue-500" />
+                        Temps ajustat per ocupació: {selectedGroup.label}
+                        <Badge className={`ml-1 text-xs font-mono ${getFactorLabel(adjustedDays.factor).color}`}>
+                          ×{adjustedDays.factor.toFixed(2)} — {getFactorLabel(adjustedDays.factor).label}
+                        </Badge>
+                      </h4>
+                      <div className="grid grid-cols-3 gap-4">
+                        <div className="text-center p-4 bg-blue-100 rounded-lg">
+                          <div className="text-3xl font-bold text-blue-700">{adjustedDays.min}</div>
+                          <div className="text-xs text-gray-600 mt-1">Dies mínims</div>
+                        </div>
+                        <div className="text-center p-4 bg-purple-100 rounded-lg border-2 border-purple-300">
+                          <div className="text-3xl font-bold text-purple-700">{adjustedDays.average}</div>
+                          <div className="text-xs text-gray-600 mt-1">Dies estàndard</div>
+                        </div>
+                        <div className="text-center p-4 bg-orange-100 rounded-lg">
+                          <div className="text-3xl font-bold text-orange-700">{adjustedDays.max}</div>
+                          <div className="text-xs text-gray-600 mt-1">Dies màxims</div>
+                        </div>
+                      </div>
+                      <p className="text-xs text-gray-500 mt-2 text-center">
+                        Font: Taula 15 del Manual de Tiempos Óptimos de IT (INSS, 4a edició) · {selectedGroup.cnoCodes}
+                      </p>
+                    </div>
+                  </>
+                )}
+
+                {/* Taula de tots els factors per ocupació */}
+                {selectedDiagnosis.occupationAdjustment && Array.isArray(selectedDiagnosis.occupationAdjustment) && (
+                  <>
+                    <Separator />
+                    <div>
+                      <button
+                        className="flex items-center gap-2 text-sm font-semibold text-gray-700 hover:text-purple-600 transition-colors w-full"
+                        onClick={() => setShowAllFactors(!showAllFactors)}
+                      >
+                        <Briefcase className="h-4 w-4" />
+                        Factors de correcció per tots els grups d'ocupació (CNO-11)
+                        {showAllFactors ? <ChevronUp className="h-4 w-4 ml-auto" /> : <ChevronDown className="h-4 w-4 ml-auto" />}
+                      </button>
+                      {showAllFactors && (
+                        <div className="mt-3 overflow-x-auto">
+                          <table className="w-full text-xs border-collapse">
+                            <thead>
+                              <tr className="bg-gray-50">
+                                <th className="text-left px-3 py-2 border border-gray-200 font-semibold">Grup d'ocupació</th>
+                                <th className="text-center px-3 py-2 border border-gray-200 font-semibold">CNO</th>
+                                <th className="text-center px-3 py-2 border border-gray-200 font-semibold">Factor</th>
+                                <th className="text-center px-3 py-2 border border-gray-200 font-semibold">Dies ajustats</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {selectedDiagnosis.occupationAdjustment.map((adj: any, i: number) => {
+                                const adjDays = Math.round(selectedDiagnosis.averageDays * adj.factor);
+                                const { color } = getFactorLabel(adj.factor);
+                                return (
+                                  <tr key={i} className={`${selectedGroupId === adj.cnoGroup ? "bg-purple-50" : "hover:bg-gray-50"}`}>
+                                    <td className="px-3 py-1.5 border border-gray-200">{adj.type}</td>
+                                    <td className="px-3 py-1.5 border border-gray-200 text-center font-mono text-gray-500">{adj.cnoCodes}</td>
+                                    <td className="px-3 py-1.5 border border-gray-200 text-center">
+                                      <span className={`px-1.5 py-0.5 rounded font-mono font-semibold ${color}`}>
+                                        ×{adj.factor.toFixed(2)}
+                                      </span>
+                                    </td>
+                                    <td className="px-3 py-1.5 border border-gray-200 text-center font-semibold text-purple-700">
+                                      {adjDays} dies
+                                    </td>
+                                  </tr>
+                                );
+                              })}
+                            </tbody>
+                          </table>
+                          <p className="text-xs text-gray-400 mt-2">
+                            Dies ajustats calculats sobre el temps estàndard de {selectedDiagnosis.averageDays} dies.
+                            Font: Taula 15, Manual de Tiempos Óptimos de IT, INSS 4a edició.
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </>
+                )}
+
+                {/* Notes clíniques */}
                 {selectedDiagnosis.notes && (
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-2">Notes clíniques:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">Notes clíniques i font:</h4>
                     <p className="text-sm text-gray-700">{selectedDiagnosis.notes}</p>
                   </div>
                 )}
 
-                {selectedDiagnosis.source && (
-                  <div className="mt-4 text-sm text-gray-600">
-                    <strong>Font:</strong> {selectedDiagnosis.source}
-                  </div>
-                )}
-
-                <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                {/* Avís */}
+                <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                   <div className="flex items-start gap-2">
                     <AlertCircle className="h-5 w-5 text-yellow-600 mt-0.5 flex-shrink-0" />
                     <div className="text-sm text-gray-700">
-                      <strong>Important:</strong> Aquests temps són orientatius. La durada real de la IT depèn
-                      de l'evolució clínica del pacient, l'edat, l'ocupació i les comorbiditats. El metge
-                      responsable ha de valorar cada cas individualment.
+                      <strong>Important:</strong> Aquests temps són orientatius basats en el Manual de Tiempos Óptimos de l'INSS.
+                      La durada real depèn de l'evolució clínica, l'edat, les comorbiditats i el criteri mèdic.
+                      Els factors d'ocupació s'apliquen sobre el temps estàndard i no substitueixen la valoració individual.
                     </div>
                   </div>
                 </div>
@@ -192,13 +396,13 @@ export default function Calculadora() {
             <CardContent>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Durada estàndard</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">Durada màxima estàndard</h4>
                   <p className="text-sm text-gray-700">
                     La durada màxima d'una IT és de <strong>365 dies naturals</strong> des de la data de la baixa mèdica.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Primera pròrroga</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">Primera pròrroga (art. 174 LGSS)</h4>
                   <p className="text-sm text-gray-700">
                     Al complir-se els 365 dies, l'INSS pot prorrogar la IT per altres <strong>180 dies més</strong> (total: 545 dies / 18 mesos).
                   </p>
@@ -206,7 +410,8 @@ export default function Calculadora() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Segona pròrroga excepcional</h4>
                   <p className="text-sm text-gray-700">
-                    En casos excepcionals, es pot concedir una segona pròrroga de fins a <strong>185 dies més</strong> (total màxim: 730 dies / 24 mesos).
+                    En casos excepcionals (neoplàsies, cirurgia major, malalties greus), es pot concedir una
+                    pròrroga de fins a <strong>185 dies més</strong> (total màxim: 730 dies / 24 mesos).
                   </p>
                 </div>
                 <div className="pt-4 border-t">

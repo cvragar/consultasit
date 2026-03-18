@@ -206,3 +206,12 @@
 - [x] Afegir viewport-fit=cover al meta viewport per gestionar el notch i la safe area
 - [x] Afegir padding-bottom: max(1rem, env(safe-area-inset-bottom)) a l'àrea d'entrada
 - [x] Verificar que el servidor compila correctament (132 tests passen)
+
+## Millora calculadora: durades reals INSS 2023 i ajustaments CNAE/CNO
+- [x] Investigar el Manual de Tiempos Óptimos de IT (INSS, 4a edició) - PDF oficial descarregat i analitzat
+- [x] Investigar la relació CNO-11 i ajustaments de durada (Taula 15 del manual)
+- [x] Corregir les durades de 70 diagnòstics (neoplàsies: 90-365 dies; cardiovascular: 30-180; etc.)
+- [x] Afegir factors de correcció per 17 grups d'ocupació CNO-11 a les patologies més prevalents
+- [x] Actualitzar el frontend amb selector de grup CNO-11 i càlcul de dies ajustats en temps real
+- [x] Afegir taula expandible amb tots els factors per grup d'ocupació
+- [x] Escriure 19 tests nous (151 tests en total, tots passen)
