@@ -1,0 +1,31 @@
+{
+  "query": "SELECT COUNT(*) as total FROM it_durations; SELECT diagnosis, cie10Code, minDays, averageDays, maxDays FROM it_durations WHERE diagnosis LIKE '%lumbal%' OR diagnosis LIKE '%hèrnia%' LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT COUNT(*) as total FROM it_durations; SELECT diagnosis, cie10Code, minDays, averageDays, maxDays FROM it_durations WHERE diagnosis LIKE '%lumbal%' OR diagnosis LIKE '%hèrnia%' LIMIT 5;",
+  "rows": [
+    {
+      "total": "96"
+    },
+    {
+      "total": "diagnosis\tcie10Code\tminDays\taverageDays\tmaxDays"
+    },
+    {
+      "total": "Lumbalgia aguda inespecífica\tM54.5\t7\t14\t30"
+    },
+    {
+      "total": "Lumbalgia crònica\tM54.5\t15\t45\t90"
+    },
+    {
+      "total": "Hèrnia discal lumbar sense cirurgia\tM51.1\t30\t60\t120"
+    },
+    {
+      "total": "Hèrnia discal lumbar amb cirurgia (discectomia)\tM51.1\t45\t75\t120"
+    },
+    {
+      "total": "Hèrnia discal cervical sense cirurgia\tM50.1\t21\t45\t90"
+    }
+  ],
+  "messages": [],
+  "stdout": "total\n96\ndiagnosis\tcie10Code\tminDays\taverageDays\tmaxDays\nLumbalgia aguda inespecífica\tM54.5\t7\t14\t30\nLumbalgia crònica\tM54.5\t15\t45\t90\nHèrnia discal lumbar sense cirurgia\tM51.1\t30\t60\t120\nHèrnia discal lumbar amb cirurgia (discectomia)\tM51.1\t45\t75\t120\nHèrnia discal cervical sense cirurgia\tM50.1\t21\t45\t90\n",
+  "stderr": "",
+  "execution_time_ms": 429
+}

@@ -194,3 +194,9 @@
 - [x] Procediment tRPC specialCases.update afegit al router (protectedProcedure, admin only)
 - [x] Funció updateSpecialCase afegida a db.ts
 - [x] 23 tests nous (114 tests en total, tots passen)
+
+## Bug: cerca de diagnòstic a la calculadora d'IT no retorna resultats
+- [x] Diagnosticar: la taula it_durations estava completament buida (0 registres)
+- [x] Poblar la taula amb 96 diagnòstics de 12 categories basats en les taules de l'INSS 2023
+- [x] Verificar que la cerca funciona correctament (lumbalgia, hèrnia, fractura, depressió, etc.)
+- [x] Escriure 18 tests per a la calculadora (132 tests en total, tots passen)
