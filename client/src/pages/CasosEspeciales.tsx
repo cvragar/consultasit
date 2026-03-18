@@ -3,12 +3,33 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
+  DialogFooter,
 } from "@/components/ui/dialog";
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogCancel,
+  AlertDialogAction,
+} from "@/components/ui/alert-dialog";
 import {
   Shield,
   Home,
@@ -22,6 +43,9 @@ import {
   Star,
   Filter,
   X,
+  Pencil,
+  AlertTriangle,
+  Save,
 } from "lucide-react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
@@ -71,15 +95,55 @@ type SpecialCase = {
   updatedAt: Date;
 };
 
+/** Detecta si un string sembla un JSON array o object */
+function looksLikeJson(value: string): boolean {
+  const trimmed = value.trim();
+  return (trimmed.startsWith("[") && trimmed.endsWith("]")) ||
+    (trimmed.startsWith("{") && trimmed.endsWith("}"));
+}
+
 export default function CasosEspeciales() {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, user } = useAuth();
+  const isAdmin = isAuthenticated && user?.role === "admin";
+
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCase, setSelectedCase] = useState<SpecialCase | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [dialogOpen, setDialogOpen] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
 
+  // Estat del diàleg d'edició
+  const [editDialogOpen, setEditDialogOpen] = useState(false);
+  const [editingCase, setEditingCase] = useState<SpecialCase | null>(null);
+  const [editForm, setEditForm] = useState({
+    title: "",
+    category: "",
+    description: "",
+    legalBasis: "",
+    procedure: "",
+    examples: "",
+  });
+  const [jsonWarnings, setJsonWarnings] = useState<Record<string, boolean>>({});
+  const [jsonConfirmOpen, setJsonConfirmOpen] = useState(false);
+  const [pendingSave, setPendingSave] = useState(false);
+
+  const utils = trpc.useUtils();
   const exportPDF = trpc.specialCases.exportPDF.useMutation();
+  const updateCase = trpc.specialCases.update.useMutation({
+    onSuccess: (updated) => {
+      toast.success("Cas especial actualitzat correctament");
+      utils.specialCases.list.invalidate();
+      // Actualitzar el cas seleccionat si és el mateix
+      if (selectedCase?.id === updated.id) {
+        setSelectedCase(updated as SpecialCase);
+      }
+      setEditDialogOpen(false);
+    },
+    onError: (err) => {
+      toast.error(`Error en desar: ${err.message}`);
+    },
+  });
+
   const addFav = trpc.favorites.add.useMutation({ onSuccess: () => toast.success("Afegit als favorits") });
   const removeFav = trpc.favorites.remove.useMutation({ onSuccess: () => toast.success("Eliminat dels favorits") });
   const { data: favoriteIds, refetch: refetchFavs } = trpc.favorites.getIds.useQuery(undefined, {
@@ -120,6 +184,55 @@ export default function CasosEspeciales() {
     } catch {
       toast.error("Error en exportar el PDF");
     }
+  };
+
+  // Obrir el diàleg d'edició
+  const handleOpenEdit = (caso: SpecialCase, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setEditingCase(caso);
+    setEditForm({
+      title: caso.title,
+      category: caso.category,
+      description: caso.description,
+      legalBasis: caso.legalBasis ?? "",
+      procedure: caso.procedure ?? "",
+      examples: caso.examples ?? "",
+    });
+    setJsonWarnings({});
+    setEditDialogOpen(true);
+  };
+
+  // Actualitzar un camp del formulari i detectar JSON
+  const handleEditField = (field: string, value: string) => {
+    setEditForm(prev => ({ ...prev, [field]: value }));
+    if (value.trim() && looksLikeJson(value)) {
+      setJsonWarnings(prev => ({ ...prev, [field]: true }));
+    } else {
+      setJsonWarnings(prev => ({ ...prev, [field]: false }));
+    }
+  };
+
+  // Desar el formulari (amb confirmació si hi ha JSON)
+  const handleSave = () => {
+    const hasJsonWarning = Object.values(jsonWarnings).some(Boolean);
+    if (hasJsonWarning) {
+      setJsonConfirmOpen(true);
+      return;
+    }
+    doSave();
+  };
+
+  const doSave = () => {
+    if (!editingCase) return;
+    updateCase.mutate({
+      id: editingCase.id,
+      title: editForm.title.trim() || undefined,
+      category: editForm.category || undefined,
+      description: editForm.description.trim() || undefined,
+      legalBasis: editForm.legalBasis.trim() || undefined,
+      procedure: editForm.procedure.trim() || undefined,
+      examples: editForm.examples.trim() || undefined,
+    });
   };
 
   const { data: allCases } = trpc.specialCases.list.useQuery();
@@ -163,6 +276,14 @@ export default function CasosEspeciales() {
     setSearchQuery("");
   };
 
+  const fieldLabels: Record<string, string> = {
+    title: "Títol",
+    description: "Descripció",
+    legalBasis: "Base Legal",
+    procedure: "Procediment",
+    examples: "Exemples Pràctics",
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       {/* Header */}
@@ -183,6 +304,12 @@ export default function CasosEspeciales() {
               </div>
             </div>
             <div className="flex items-center gap-2">
+              {isAdmin && (
+                <Badge variant="outline" className="gap-1 text-xs border-orange-300 text-orange-700 bg-orange-50">
+                  <Shield className="h-3 w-3" />
+                  Mode admin
+                </Badge>
+              )}
               {isAuthenticated && (
                 <Link href="/favorits">
                   <Button variant="ghost" size="sm" className="gap-2">
@@ -264,7 +391,6 @@ export default function CasosEspeciales() {
                     variant={selectedCategory === cat ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory(cat)}
-                    className={selectedCategory === cat ? "" : ""}
                   >
                     {categoryLabels[cat]}
                   </Button>
@@ -308,7 +434,7 @@ export default function CasosEspeciales() {
                   {cases.map((caso) => (
                     <Card
                       key={caso.id}
-                      className="cursor-pointer hover:shadow-lg transition-all duration-200 group border-l-4 border-l-orange-500"
+                      className="cursor-pointer hover:shadow-lg transition-all duration-200 group border-l-4 border-l-orange-500 relative"
                       onClick={() => { setSelectedCase(caso as SpecialCase); setDialogOpen(true); }}
                     >
                       <CardHeader className="pb-2">
@@ -316,20 +442,33 @@ export default function CasosEspeciales() {
                           <CardTitle className="text-sm font-semibold line-clamp-2 group-hover:text-orange-700 transition-colors flex-1">
                             {caso.title}
                           </CardTitle>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            className="h-7 w-7 shrink-0"
-                            onClick={(e) => toggleFavorite(caso.id, e)}
-                          >
-                            <Star
-                              className={`h-4 w-4 transition-colors ${
-                                isFavorite(caso.id)
-                                  ? "fill-yellow-400 text-yellow-400"
-                                  : "text-muted-foreground group-hover:text-yellow-400"
-                              }`}
-                            />
-                          </Button>
+                          <div className="flex items-center gap-1 shrink-0">
+                            {isAdmin && (
+                              <Button
+                                variant="ghost"
+                                size="icon"
+                                className="h-7 w-7 text-muted-foreground hover:text-orange-700 hover:bg-orange-50"
+                                title="Editar cas especial"
+                                onClick={(e) => handleOpenEdit(caso as SpecialCase, e)}
+                              >
+                                <Pencil className="h-3.5 w-3.5" />
+                              </Button>
+                            )}
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              className="h-7 w-7 shrink-0"
+                              onClick={(e) => toggleFavorite(caso.id, e)}
+                            >
+                              <Star
+                                className={`h-4 w-4 transition-colors ${
+                                  isFavorite(caso.id)
+                                    ? "fill-yellow-400 text-yellow-400"
+                                    : "text-muted-foreground group-hover:text-yellow-400"
+                                }`}
+                              />
+                            </Button>
+                          </div>
                         </div>
                       </CardHeader>
                       <CardContent>
@@ -375,7 +514,7 @@ export default function CasosEspeciales() {
         )}
       </main>
 
-      {/* Diàleg de cas especial */}
+      {/* Diàleg de visualització del cas especial */}
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
         <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto">
           {selectedCase && (
@@ -386,6 +525,20 @@ export default function CasosEspeciales() {
                     {categoryLabels[selectedCase.category] || selectedCase.category}
                   </Badge>
                   <div className="flex gap-2">
+                    {isAdmin && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={(e) => {
+                          setDialogOpen(false);
+                          setTimeout(() => handleOpenEdit(selectedCase, e), 100);
+                        }}
+                        className="gap-2 border-orange-300 text-orange-700 hover:bg-orange-50"
+                      >
+                        <Pencil className="h-4 w-4" />
+                        Editar
+                      </Button>
+                    )}
                     <Button
                       variant="outline"
                       size="sm"
@@ -465,6 +618,198 @@ export default function CasosEspeciales() {
           )}
         </DialogContent>
       </Dialog>
+
+      {/* Diàleg d'edició (admin only) */}
+      <Dialog open={editDialogOpen} onOpenChange={setEditDialogOpen}>
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Pencil className="h-5 w-5 text-orange-600" />
+              Editar cas especial
+            </DialogTitle>
+            <DialogDescription>
+              Modifica el contingut del cas especial. Els canvis es guardaran a la base de dades immediatament.
+            </DialogDescription>
+          </DialogHeader>
+
+          {editingCase && (
+            <div className="space-y-4 mt-2">
+              {/* Títol */}
+              <div>
+                <Label htmlFor="edit-title">Títol *</Label>
+                <Input
+                  id="edit-title"
+                  value={editForm.title}
+                  onChange={e => handleEditField("title", e.target.value)}
+                  className="mt-1"
+                  placeholder="Títol del cas especial"
+                />
+              </div>
+
+              {/* Categoria */}
+              <div>
+                <Label>Categoria</Label>
+                <Select
+                  value={editForm.category}
+                  onValueChange={v => setEditForm(prev => ({ ...prev, category: v }))}
+                >
+                  <SelectTrigger className="mt-1">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {Object.entries(categoryLabels).map(([value, label]) => (
+                      <SelectItem key={value} value={value}>{label}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Descripció */}
+              <div>
+                <Label htmlFor="edit-description">Descripció *</Label>
+                <Textarea
+                  id="edit-description"
+                  value={editForm.description}
+                  onChange={e => handleEditField("description", e.target.value)}
+                  className="mt-1 resize-none"
+                  rows={3}
+                  placeholder="Descripció breu del cas especial"
+                />
+                {jsonWarnings.description && (
+                  <div className="flex items-center gap-2 mt-1 text-amber-600 text-xs">
+                    <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
+                    El contingut sembla un JSON. Assegura't que és text pla (Markdown), no dades estructurades.
+                  </div>
+                )}
+              </div>
+
+              {/* Base Legal */}
+              <div>
+                <Label htmlFor="edit-legal">Base Legal</Label>
+                <Textarea
+                  id="edit-legal"
+                  value={editForm.legalBasis}
+                  onChange={e => handleEditField("legalBasis", e.target.value)}
+                  className="mt-1 resize-none font-mono text-xs"
+                  rows={5}
+                  placeholder="Normativa aplicable (Markdown acceptat: **negreta**, - llistes...)"
+                />
+                {jsonWarnings.legalBasis && (
+                  <div className="flex items-center gap-2 mt-1 text-amber-600 text-xs">
+                    <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
+                    El contingut sembla un JSON. Assegura't que és text pla (Markdown), no dades estructurades.
+                  </div>
+                )}
+              </div>
+
+              {/* Procediment */}
+              <div>
+                <Label htmlFor="edit-procedure">Procediment</Label>
+                <Textarea
+                  id="edit-procedure"
+                  value={editForm.procedure}
+                  onChange={e => handleEditField("procedure", e.target.value)}
+                  className="mt-1 resize-none font-mono text-xs"
+                  rows={5}
+                  placeholder="Passos a seguir (Markdown acceptat)"
+                />
+                {jsonWarnings.procedure && (
+                  <div className="flex items-center gap-2 mt-1 text-amber-600 text-xs">
+                    <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
+                    El contingut sembla un JSON. Assegura't que és text pla (Markdown), no dades estructurades.
+                  </div>
+                )}
+              </div>
+
+              {/* Exemples */}
+              <div>
+                <Label htmlFor="edit-examples">Exemples Pràctics</Label>
+                <Textarea
+                  id="edit-examples"
+                  value={editForm.examples}
+                  onChange={e => handleEditField("examples", e.target.value)}
+                  className="mt-1 resize-none font-mono text-xs"
+                  rows={5}
+                  placeholder="Exemples pràctics (Markdown acceptat)"
+                />
+                {jsonWarnings.examples && (
+                  <div className="flex items-center gap-2 mt-1 text-amber-600 text-xs">
+                    <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
+                    El contingut sembla un JSON. Assegura't que és text pla (Markdown), no dades estructurades.
+                  </div>
+                )}
+              </div>
+
+              {/* Avís general si hi ha JSON */}
+              {Object.values(jsonWarnings).some(Boolean) && (
+                <div className="flex items-start gap-3 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                  <AlertTriangle className="h-5 w-5 text-amber-600 shrink-0 mt-0.5" />
+                  <div className="text-sm text-amber-800">
+                    <p className="font-semibold">Avís: contingut JSON detectat</p>
+                    <p className="mt-1">
+                      Un o més camps contenen el que sembla ser dades JSON. Si deses, el contingut es mostrarà
+                      com a text JSON en brut en lloc de text formatat. Utilitza text pla o Markdown en lloc de JSON.
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          <DialogFooter className="mt-6 gap-2">
+            <Button
+              variant="outline"
+              onClick={() => setEditDialogOpen(false)}
+              disabled={updateCase.isPending}
+            >
+              Cancel·lar
+            </Button>
+            <Button
+              onClick={handleSave}
+              disabled={updateCase.isPending || !editForm.title.trim() || !editForm.description.trim()}
+              className="gap-2 bg-orange-600 hover:bg-orange-700"
+            >
+              {updateCase.isPending ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                <Save className="h-4 w-4" />
+              )}
+              Desar canvis
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* Confirmació per desar JSON */}
+      <AlertDialog open={jsonConfirmOpen} onOpenChange={setJsonConfirmOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle className="flex items-center gap-2">
+              <AlertTriangle className="h-5 w-5 text-amber-600" />
+              Contingut JSON detectat
+            </AlertDialogTitle>
+            <AlertDialogDescription>
+              Un o més camps semblen contenir dades JSON. Si continues, el contingut es mostrarà
+              com a text JSON en brut als usuaris, en lloc de text formatat correctament.
+              Estàs segur que vols desar igualment?
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel onClick={() => setJsonConfirmOpen(false)}>
+              Tornar a editar
+            </AlertDialogCancel>
+            <AlertDialogAction
+              onClick={() => {
+                setJsonConfirmOpen(false);
+                doSave();
+              }}
+              className="bg-amber-600 hover:bg-amber-700"
+            >
+              Desar igualment
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }

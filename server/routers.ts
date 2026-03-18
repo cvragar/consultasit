@@ -11,6 +11,7 @@ import {
   getSpecialCasesByCategory,
   getSpecialCaseById,
   searchSpecialCases,
+  updateSpecialCase,
   searchItDurations,
   getItDurationById,
   createConversation,
@@ -77,6 +78,25 @@ export const appRouter = router({
 
   // ===== SPECIAL CASES =====
   specialCases: router({
+    update: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+        title: z.string().optional(),
+        category: z.string().optional(),
+        description: z.string().optional(),
+        legalBasis: z.string().optional(),
+        procedure: z.string().optional(),
+        examples: z.string().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") {
+          throw new Error("Accés restringit: cal ser administrador");
+        }
+        const { id, ...data } = input;
+        const updated = await updateSpecialCase(id, data);
+        if (!updated) throw new Error("Cas especial no trobat");
+        return updated;
+      }),
     list: publicProcedure.query(async () => {
       return await getAllSpecialCases();
     }),

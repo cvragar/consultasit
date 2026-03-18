@@ -183,3 +183,14 @@
 - [x] Corregir el camp examples: 5 casos (30001-30004, 60001) convertits de JSON array a Markdown
 - [x] Corregir el camp legalBasis: 2 casos (30001, 30002) convertits de JSON array a llista Markdown
 - [x] Verificar que no queden camps amb JSON escapat (0 resultats a la consulta de verificació)
+
+## Millores panell d'admin i edició directa de casos especials
+- [x] Afegir validació anti-JSON al formulari d'admin (avís si el contingut sembla JSON array/object)
+- [x] Afegir botó "Editar" a les targetes de Casos Especials (visible només per a admins, icona llapis)
+- [x] El botó d'edició obre un diàleg modal amb el formulari d'edició del cas
+- [x] El formulari d'edició inclou tots els camps: títol, descripció, base legal, procediment, exemples, categoria
+- [x] Confirmació addicional si es detecta JSON als camps (AlertDialog)
+- [x] Botó "Editar" també visible al diàleg de visualització del cas
+- [x] Procediment tRPC specialCases.update afegit al router (protectedProcedure, admin only)
+- [x] Funció updateSpecialCase afegida a db.ts
+- [x] 23 tests nous (114 tests en total, tots passen)

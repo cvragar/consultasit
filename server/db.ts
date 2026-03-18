@@ -179,6 +179,35 @@ export async function searchSpecialCases(query: string) {
   return result;
 }
 
+export async function updateSpecialCase(
+  id: number,
+  data: {
+    title?: string;
+    category?: string;
+    description?: string;
+    legalBasis?: string;
+    procedure?: string;
+    examples?: string;
+  }
+) {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db
+    .update(specialCases)
+    .set({
+      ...(data.title !== undefined && { title: data.title }),
+      ...(data.category !== undefined && { category: data.category as any }),
+      ...(data.description !== undefined && { description: data.description }),
+      ...(data.legalBasis !== undefined && { legalBasis: data.legalBasis }),
+      ...(data.procedure !== undefined && { procedure: data.procedure }),
+      ...(data.examples !== undefined && { examples: data.examples }),
+    })
+    .where(eq(specialCases.id, id));
+
+  return await getSpecialCaseById(id);
+}
+
 // ===== IT DURATIONS =====
 
 export async function searchItDurations(query: string) {
