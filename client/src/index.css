@@ -120,6 +120,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Classe auxiliar per a la pàgina de xat a Safari iOS */
+  .h-dvh {
+    height: 100dvh; /* Dynamic Viewport Height - suportat des de Safari iOS 15.4 */
+  }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),

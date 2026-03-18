@@ -200,3 +200,9 @@
 - [x] Poblar la taula amb 96 diagnòstics de 12 categories basats en les taules de l'INSS 2023
 - [x] Verificar que la cerca funciona correctament (lumbalgia, hèrnia, fractura, depressió, etc.)
 - [x] Escriure 18 tests per a la calculadora (132 tests en total, tots passen)
+
+## Bug: quadre d'entrada del xat no visible a Safari iOS
+- [x] Corregir h-screen → h-dvh (Dynamic Viewport Height, suportat des de Safari iOS 15.4)
+- [x] Afegir viewport-fit=cover al meta viewport per gestionar el notch i la safe area
+- [x] Afegir padding-bottom: max(1rem, env(safe-area-inset-bottom)) a l'àrea d'entrada
+- [x] Verificar que el servidor compila correctament (132 tests passen)

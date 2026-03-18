@@ -286,7 +286,7 @@ export default function Chat() {
   ];
 
   return (
-    <div className="h-screen bg-gradient-to-b from-blue-50 to-white flex relative overflow-hidden">
+    <div className="h-dvh bg-gradient-to-b from-blue-50 to-white flex relative overflow-hidden">
       {/* Overlay per a mòbil */}
       {sidebarOpen && (
         <div
@@ -550,7 +550,7 @@ export default function Chat() {
         </div>
 
         {/* Àrea d'entrada */}
-        <div className="border-t bg-white p-4">
+        <div className="border-t bg-white p-4" style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}>
           <div className="container max-w-4xl">
             <div className="flex gap-2">
               <Input
