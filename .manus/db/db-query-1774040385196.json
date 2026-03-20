@@ -1,0 +1,18 @@
+{
+  "query": "SELECT id, title, LENGTH(content) as content_len, url, publicationYear, status FROM documents WHERE title LIKE '%1/2023%' OR title LIKE '%menstrua%' OR tags LIKE '%menstrua%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, LENGTH(content) as content_len, url, publicationYear, status FROM documents WHERE title LIKE '%1/2023%' OR title LIKE '%menstrua%' OR tags LIKE '%menstrua%';",
+  "rows": [
+    {
+      "id": "17",
+      "title": "Situaciones especiales de IT",
+      "content_len": "5498",
+      "url": "NULL",
+      "publicationYear": "2024",
+      "status": "vigent"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tcontent_len\turl\tpublicationYear\tstatus\n17\tSituaciones especiales de IT\t5498\tNULL\t2024\tvigent\n",
+  "stderr": "",
+  "execution_time_ms": 429
+}

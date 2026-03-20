@@ -537,3 +537,47 @@ export async function getRelevantContext(query: string, limit: number = 5) {
     cases: relevantCases,
   };
 }
+
+// ===== NOVETATS (últims 30 dies) =====
+
+export async function getRecentItems(days: number = 30) {
+  const db = await getDb();
+  if (!db) return { documents: [], cases: [] };
+
+  const since = new Date();
+  since.setDate(since.getDate() - days);
+
+  const recentDocs = await db
+    .select({
+      id: documents.id,
+      title: documents.title,
+      type: documents.type,
+      source: documents.source,
+      jurisdiction: documents.jurisdiction,
+      summary: documents.summary,
+      tags: documents.tags,
+      publicationYear: documents.publicationYear,
+      status: documents.status,
+      url: documents.url,
+      createdAt: documents.createdAt,
+      updatedAt: documents.updatedAt,
+    })
+    .from(documents)
+    .where(sql`${documents.createdAt} >= ${since}`)
+    .orderBy(desc(documents.createdAt));
+
+  const recentCases = await db
+    .select({
+      id: specialCases.id,
+      title: specialCases.title,
+      category: specialCases.category,
+      description: specialCases.description,
+      createdAt: specialCases.createdAt,
+      updatedAt: specialCases.updatedAt,
+    })
+    .from(specialCases)
+    .where(sql`${specialCases.createdAt} >= ${since}`)
+    .orderBy(desc(specialCases.createdAt));
+
+  return { documents: recentDocs, cases: recentCases };
+}

@@ -2,7 +2,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MessageSquare, FileText, AlertCircle, Calculator, Shield, LogIn, Star, Menu, X, Stethoscope, HardHat, HeartPulse, ChevronRight } from "lucide-react";
+import { MessageSquare, FileText, AlertCircle, Calculator, Shield, LogIn, Star, Menu, X, Stethoscope, HardHat, HeartPulse, ChevronRight, Sparkles } from "lucide-react";
 import { Link } from "wouter";
 import { getLoginUrl } from "@/const";
 import { useState } from "react";
@@ -72,6 +72,12 @@ export default function Home() {
                   <span className="text-sm text-gray-600 truncate max-w-[140px]">
                     {user?.name?.split(" ")[0] || "Usuari"}
                   </span>
+                  <Link href="/novetats">
+                    <Button variant="ghost" size="sm" className="gap-1.5">
+                      <Sparkles className="h-4 w-4 text-yellow-500" />
+                      Novetats
+                    </Button>
+                  </Link>
                   <Link href="/favorits">
                     <Button variant="ghost" size="sm" className="gap-1.5">
                       <Star className="h-4 w-4 text-yellow-500" />
@@ -126,6 +132,12 @@ export default function Home() {
               <p className="text-xs text-gray-500 px-1 mb-2">
                 Hola, {user?.name || "Usuari"}
               </p>
+              <Link href="/novetats" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" size="sm" className="w-full justify-start gap-2">
+                  <Sparkles className="h-4 w-4 text-yellow-500" />
+                  Novetats
+                </Button>
+              </Link>
               <Link href="/favorits" onClick={() => setMobileMenuOpen(false)}>
                 <Button variant="ghost" size="sm" className="w-full justify-start gap-2">
                   <Star className="h-4 w-4 text-yellow-500" />

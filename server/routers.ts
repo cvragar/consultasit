@@ -27,6 +27,7 @@ import {
   getUserFavoriteIds,
   advancedSearchDocuments,
   advancedSearchSpecialCases,
+  getRecentItems,
 } from "./db";
 import { invokeLLM } from "./_core/llm";
 import {
@@ -175,6 +176,15 @@ export const appRouter = router({
       .mutation(async ({ ctx, input }) => {
         await removeFavorite(ctx.user.id, input.entityType, input.entityId);
         return { success: true };
+      }),
+  }),
+
+  // ===== NOVETATS =====
+  novetats: router({
+    getRecent: publicProcedure
+      .input(z.object({ days: z.number().optional() }))
+      .query(async ({ input }) => {
+        return await getRecentItems(input.days ?? 30);
       }),
   }),
 

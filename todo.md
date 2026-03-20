@@ -261,3 +261,7 @@
 - [x] Afegir badge "Nou" a les targetes de casos especials afegits en els últims 30 dies
 - [x] Afegir filtre "Nous" a la pàgina de Casos Especials per filtrar per casos recents
 - [x] Escriure tests per al nou cas especial i les millores visuals
+
+## Iteració 2025-03-20 (tard)
+- [ ] Ampliar document Llei 1/2023 (menstruació incapacitant) amb text complet i protocol català
+- [ ] Crear pàgina de Novetats (últims 30 dies: casos i documents)

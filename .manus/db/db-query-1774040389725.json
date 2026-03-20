@@ -1,0 +1,82 @@
+{
+  "query": "SELECT id, title, LENGTH(content) as content_len, tags FROM documents ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, LENGTH(content) as content_len, tags FROM documents ORDER BY id;",
+  "rows": [
+    {
+      "id": "11",
+      "title": "Guía de valoración de incapacidad laboral para médicos de atención primaria",
+      "content_len": "51366",
+      "tags": "[\"valoracion\", \"atencion_primaria\", \"guia_practica\"]"
+    },
+    {
+      "id": "12",
+      "title": "Incapacidad Temporal: Manual para el manejo en atención primaria",
+      "content_len": "50902",
+      "tags": "[\"manual\", \"atencion_primaria\", \"gestion\"]"
+    },
+    {
+      "id": "13",
+      "title": "Tiempos estándar de Incapacidad Temporal",
+      "content_len": "50831",
+      "tags": "[\"tiempos_estandar\", \"duracion\", \"inss\"]"
+    },
+    {
+      "id": "14",
+      "title": "Gestió de la incapacitat temporal - Fullet informatiu",
+      "content_len": "3199",
+      "tags": "[\"catalunya\", \"gestion\", \"informacion\"]"
+    },
+    {
+      "id": "15",
+      "title": "Reial Decret 625/2014 (BOE-A-2014-7684)",
+      "content_len": "18609",
+      "tags": "[\"IT\", \"parts mèdics\", \"gestió IT\", \"365 dies\", \"grups de processos\", \"terminis confirmació\", \"informe complementari\", \"informe de control\", \"mútues\", \"INSS\", \"tramitació electrònica\", \"sistema RED\", \"RD 625/2014\"]"
+    },
+    {
+      "id": "16",
+      "title": "Duración máxima de IT y prórrogas",
+      "content_len": "6229",
+      "tags": "[\"duracion\", \"prorrogas\", \"365_dias\", \"545_dias\", \"730_dias\"]"
+    },
+    {
+      "id": "17",
+      "title": "Situaciones especiales de IT",
+      "content_len": "5498",
+      "tags": "[\"situaciones_especiales\", \"menstruacion\", \"embarazo\", \"donacion\"]"
+    },
+    {
+      "id": "18",
+      "title": "Gestión de IT - Departament de Salut",
+      "content_len": "3782",
+      "tags": "[\"catalunya\", \"gestion\", \"departament_salut\"]"
+    },
+    {
+      "id": "19",
+      "title": "Gestió de la IT en l'Àmbit Hospitalari - Catalunya (ICS / Canal Salut)",
+      "content_len": "11006",
+      "tags": "[\"IT hospitalari\", \"ICS\", \"Catalunya\", \"ingrés hospitalari\", \"CMA\", \"cirurgia major ambulatòria\", \"ZAS_GESTIO_IT\", \"eCap\", \"Canal Salut\", \"hospitalització prolongada\", \"part\", \"baixa laboral hospital\", \"RD 625/2014\"]"
+    },
+    {
+      "id": "20",
+      "title": "Curso de formación: Incapacitats Temporals",
+      "content_len": "3128",
+      "tags": "[\"catalunya\", \"formacion\", \"casos_especiales\"]"
+    },
+    {
+      "id": "30003",
+      "title": "Reial Decret 1299/2006, de 10 de novembre (BOE-A-2006-22169) - Quadre de malalties professionals",
+      "content_len": "10670",
+      "tags": "[\"RD 1299/2006\", \"malalties professionals\", \"quadre de malalties professionals\", \"agents biològics\", \"agents físics\", \"agents químics\", \"síndrome del túnel carpià\", \"hipoacúsia\", \"asma professional\", \"dermatitis professional\", \"hepatitis B laboral\", \"personal sanitari\", \"contingència professional\", \"mútua\", \"CEPROSS\", \"Ordre TAS/1/2007\", \"BOE-A-2006-22169\", \"IT malaltia professional\"]"
+    },
+    {
+      "id": "60001",
+      "title": "Reial Decret 1060/2022, de 27 de desembre (BOE-A-2023-160) - Gestió electrònica dels parts d'IT",
+      "content_len": "13853",
+      "tags": "[\"IT\", \"parts mèdics\", \"tramitació electrònica\", \"RD 625/2014\", \"gestió IT\", \"sistema RED\", \"INSS\", \"RD 1060/2022\"]"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tcontent_len\ttags\n11\tGuía de valoración de incapacidad laboral para médicos de atención primaria\t51366\t[\"valoracion\", \"atencion_primaria\", \"guia_practica\"]\n12\tIncapacidad Temporal: Manual para el manejo en atención primaria\t50902\t[\"manual\", \"atencion_primaria\", \"gestion\"]\n13\tTiempos estándar de Incapacidad Temporal\t50831\t[\"tiempos_estandar\", \"duracion\", \"inss\"]\n14\tGestió de la incapacitat temporal - Fullet informatiu\t3199\t[\"catalunya\", \"gestion\", \"informacion\"]\n15\tReial Decret 625/2014 (BOE-A-2014-7684)\t18609\t[\"IT\", \"parts mèdics\", \"gestió IT\", \"365 dies\", \"grups de processos\", \"terminis confirmació\", \"informe complementari\", \"informe de control\", \"mútues\", \"INSS\", \"tramitació electrònica\", \"sistema RED\", \"RD 625/2014\"]\n16\tDuración máxima de IT y prórrogas\t6229\t[\"duracion\", \"prorrogas\", \"365_dias\", \"545_dias\", \"730_dias\"]\n17\tSituaciones especiales de IT\t5498\t[\"situaciones_especiales\", \"menstruacion\", \"embarazo\", \"donacion\"]\n18\tGestión de IT - Departament de Salut\t3782\t[\"catalunya\", \"gestion\", \"departament_salut\"]\n19\tGestió de la IT en l'Àmbit Hospitalari - Catalunya (ICS / Canal Salut)\t11006\t[\"IT hospitalari\", \"ICS\", \"Catalunya\", \"ingrés hospitalari\", \"CMA\", \"cirurgia major ambulatòria\", \"ZAS_GESTIO_IT\", \"eCap\", \"Canal Salut\", \"hospitalització prolongada\", \"part\", \"baixa laboral hospital\", \"RD 625/2014\"]\n20\tCurso de formación: Incapacitats Temporals\t3128\t[\"catalunya\", \"formacion\", \"casos_especiales\"]\n30003\tReial Decret 1299/2006, de 10 de novembre (BOE-A-2006-22169) - Quadre de malalties professionals\t10670\t[\"RD 1299/2006\", \"malalties professionals\", \"quadre de malalties professionals\", \"agents biològics\", \"agents físics\", \"agents químics\", \"síndrome del túnel carpià\", \"hipoacúsia\", \"asma professional\", \"dermatitis professional\", \"hepatitis B laboral\", \"personal sanitari\", \"contingència professional\", \"mútua\", \"CEPROSS\", \"Ordre TAS/1/2007\", \"BOE-A-2006-22169\", \"IT malaltia professional\"]\n60001\tReial Decret 1060/2022, de 27 de desembre (BOE-A-2023-160) - Gestió electrònica dels parts d'IT\t13853\t[\"IT\", \"parts mèdics\", \"tramitació electrònica\", \"RD 625/2014\", \"gestió IT\", \"sistema RED\", \"INSS\", \"RD 1060/2022\"]\n",
+  "stderr": "",
+  "execution_time_ms": 360
+}
