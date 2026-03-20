@@ -59,6 +59,8 @@ const QUICK_SUGGESTIONS = [
   "Diferència entre embaràs de risc (IT) i prestació per risc durant l'embaràs",
   "IT amb reducció de jornada per guarda legal: com es calcula la base reguladora?",
   "Com funciona la nova tramitació electrònica dels parts mèdics des de l'abril de 2023?",
+  "Quins són els terminis de confirmació de la baixa per a cada grup de processos (RD 625/2014)?",
+  "Com es gestiona la IT quan el pacient és ingressat a l'hospital?",
 ];
 
 export default function Chat() {
