@@ -1,0 +1,22 @@
+{
+  "query": "SELECT id, title, LEFT(content, 100) as content_preview FROM documents WHERE (title LIKE '%BOE-A-2023-160%' OR content LIKE '%BOE-A-2023-160%') AND id != 60001;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, LEFT(content, 100) as content_preview FROM documents WHERE (title LIKE '%BOE-A-2023-160%' OR content LIKE '%BOE-A-2023-160%') AND id != 60001;",
+  "rows": [
+    {
+      "id": "30001",
+      "title": "BOE-A-2023-160",
+      "content_preview": "[No s'ha pogut extreure el text del PDF]"
+    },
+    {
+      "id": "30003",
+      "title": "Reial Decret 1299/2006, de 10 de novembre (BOE-A-2006-22169) - Quadre de malalties professionals",
+      "content_preview": "# Reial Decret 1299/2006, de 10 de novembre"
+    }
+  ],
+  "messages": [
+    "**BOE núm. 302, de 19 de desembre de 2006 | Referència:"
+  ],
+  "stdout": "id\ttitle\tcontent_preview\n30001\tBOE-A-2023-160\t[No s'ha pogut extreure el text del PDF]\n30003\tReial Decret 1299/2006, de 10 de novembre (BOE-A-2006-22169) - Quadre de malalties professionals\t# Reial Decret 1299/2006, de 10 de novembre\n\n**BOE núm. 302, de 19 de desembre de 2006 | Referència:\n",
+  "stderr": "",
+  "execution_time_ms": 391
+}

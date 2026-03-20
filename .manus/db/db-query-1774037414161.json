@@ -1,0 +1,9 @@
+{
+  "query": "\nDELETE FROM documents WHERE id = 30001;\nUPDATE documents SET \n  publicationYear = 2023,\n  tags = '[\"IT\",\"parts mèdics\",\"tramitació electrònica\",\"RD 625/2014\",\"gestió IT\",\"sistema RED\",\"INSS\",\"RD 1060/2022\"]'\nWHERE id = 60001;\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute \nDELETE FROM documents WHERE id = 30001;\nUPDATE documents SET \n  publicationYear = 2023,\n  tags = '[\"IT\",\"parts mèdics\",\"tramitació electrònica\",\"RD 625/2014\",\"gestió IT\",\"sistema RED\",\"INSS\",\"RD 1060/2022\"]'\nWHERE id = 60001;\n",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 442
+}

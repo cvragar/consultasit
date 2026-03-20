@@ -1,0 +1,27 @@
+{
+  "query": "SELECT id, title, type, source, LEFT(content, 300) as content_preview, createdAt FROM documents WHERE source LIKE '%BOE-A-2023-160%' OR title LIKE '%1060/2022%' OR title LIKE '%625/2014%' OR content LIKE '%BOE-A-2023-160%' LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, type, source, LEFT(content, 300) as content_preview, createdAt FROM documents WHERE source LIKE '%BOE-A-2023-160%' OR title LIKE '%1060/2022%' OR title LIKE '%625/2014%' OR content LIKE '%BOE-A-2023-160%' LIMIT 10;",
+  "rows": [],
+  "messages": [
+    "15\tReial Decret 625/2014 (BOE-A-2014-7684)\tdecreto\tBOE\t# Real Decreto 625/2014 - Gestión y Control de IT (primeros 365 días)",
+    "## Referencia",
+    "- **BOE-A-2014-7684**",
+    "- **Publicado**: 21/07/2014",
+    "- **Entrada en vigor**: 01/09/2014",
+    "- **Última actualización**: 05/01/2023",
+    "- **URL**: https://www.boe.es/buscar/act.php?id=BOE-A-2014-7684",
+    "## Objeto",
+    "Regula determina\t2026-02-11 13:08:15",
+    "30002\tReial Decret 1060/2022, de 27 de desembre (BOE-A-2023-160) - Gestió electrònica dels parts d'IT\tdecreto\tBOE - Ministeri d'Inclusió, Seguretat Social i Migracions\t# Reial Decret 1060/2022, de 27 de desembre",
+    "**BOE núm. 4, de 5 de gener de 2023 | Referència: BOE-A-2023-160**",
+    "**Entrada en vigor: 1 d'abril de 2023**",
+    "Modifica el Reial Decret 625/2014, de 18 de juliol, pel qual es regulen determinats aspectes de la gestió i control dels processos per incapacitat \t2026-03-20 06:16:11",
+    "30003\tReial Decret 1299/2006, de 10 de novembre (BOE-A-2006-22169) - Quadre de malalties professionals\tdecreto\tBOE - Ministeri de Treball i Assumptes Socials\t# Reial Decret 1299/2006, de 10 de novembre",
+    "**BOE núm. 302, de 19 de desembre de 2006 | Referència: BOE-A-2006-22169**",
+    "**Entrada en vigor: 1 de gener de 2007**",
+    "Aprova el quadre de malalties professionals en el sistema de la Seguretat Social i estableix criteris per a la seva notificació i registre\t2026-03-20 06:26:00"
+  ],
+  "stdout": "id\ttitle\ttype\tsource\tcontent_preview\tcreatedAt\n15\tReial Decret 625/2014 (BOE-A-2014-7684)\tdecreto\tBOE\t# Real Decreto 625/2014 - Gestión y Control de IT (primeros 365 días)\n\n## Referencia\n- **BOE-A-2014-7684**\n- **Publicado**: 21/07/2014\n- **Entrada en vigor**: 01/09/2014\n- **Última actualización**: 05/01/2023\n- **URL**: https://www.boe.es/buscar/act.php?id=BOE-A-2014-7684\n\n## Objeto\nRegula determina\t2026-02-11 13:08:15\n30002\tReial Decret 1060/2022, de 27 de desembre (BOE-A-2023-160) - Gestió electrònica dels parts d'IT\tdecreto\tBOE - Ministeri d'Inclusió, Seguretat Social i Migracions\t# Reial Decret 1060/2022, de 27 de desembre\n\n**BOE núm. 4, de 5 de gener de 2023 | Referència: BOE-A-2023-160**\n**Entrada en vigor: 1 d'abril de 2023**\n\nModifica el Reial Decret 625/2014, de 18 de juliol, pel qual es regulen determinats aspectes de la gestió i control dels processos per incapacitat \t2026-03-20 06:16:11\n30003\tReial Decret 1299/2006, de 10 de novembre (BOE-A-2006-22169) - Quadre de malalties professionals\tdecreto\tBOE - Ministeri de Treball i Assumptes Socials\t# Reial Decret 1299/2006, de 10 de novembre\n\n**BOE núm. 302, de 19 de desembre de 2006 | Referència: BOE-A-2006-22169**\n**Entrada en vigor: 1 de gener de 2007**\n\nAprova el quadre de malalties professionals en el sistema de la Seguretat Social i estableix criteris per a la seva notificació i registre\t2026-03-20 06:26:00\n",
+  "stderr": "",
+  "execution_time_ms": 593
+}

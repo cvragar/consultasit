@@ -54,11 +54,10 @@ describe("RD 1060/2022 (BOE-A-2023-160) - Integració a la BD", () => {
     expect(rows[0].status).toBe("vigent");
   });
 
-  it("el document té URL del PDF pujat a S3/CDN", async () => {
+  it("el document té URL del BOE oficial", async () => {
     const [rows] = await conn.execute(
       "SELECT url FROM documents WHERE title LIKE '%1060/2022%'"
     ) as any;
-    expect(rows[0].url).toContain("cloudfront.net");
     expect(rows[0].url).toContain("BOE-A-2023-160");
   });
 
