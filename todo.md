@@ -224,3 +224,11 @@
 - [x] Contingut estructurat en català amb implicacions pràctiques per al metge de família (eCap)
 - [x] Etiquetes: RD 1060/2022, parts mèdics, tramitació electrònica, 180 dies, INSS, mútua, eCap
 - [x] Escriure 13 tests (164 tests en total, tots passen)
+
+## Integració Reial Decret 1299/2006 sobre malalties professionals
+- [x] Descarregar el PDF del RD 1299/2006 del BOE (1,9 MB, 9854 línies de text)
+- [x] Extreure i estructurar el contingut: 6 grups de malalties, implicacions per al sector sanitari
+- [x] Inserir el document a la BD (ID: 30003, tipus: decreto, estat: vigent, any: 2006)
+- [x] PDF pujat a S3/CDN amb URL pública permanent
+- [x] Contingut estructurat en català amb èmfasi en el personal sanitari (Grups 2H i 3A)
+- [x] Escriure 15 tests (179 tests en total, tots passen)
