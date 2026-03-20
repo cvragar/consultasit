@@ -244,3 +244,13 @@
 - [x] Inserir cas especial ID 90001: IT durant embaràs de risc vs. prestació per risc durant l'embaràs (categoria: embarazo)
 - [x] Inserir cas especial ID 90002: Reducció de jornada per guarda legal i IT: càlcul de la base reguladora (categoria: otro)
 - [x] Escriure 21 tests per als dos nous casos (218 tests en total, tots passen)
+
+## Correccions visuals i millores xat (20/03/2026 - sprint 3)
+- [ ] Corregir errors visuals als casos especials: Markdown no renderitzat (## ** | taules) al diàleg i les targetes
+- [ ] Afegir suggeriments ràpids al xat: "Diferència entre embaràs de risc i risc durant l'embaràs"
+- [ ] Afegir suggeriments ràpids al xat: "IT amb reducció de jornada per guarda legal"
+- [ ] Revisar la bibliografia recent per identificar nous casos especials potencials
+- [x] Inserir cas especial ID 90003: IT durant un ERTE/ERTO: qui paga i com es gestiona (categoria: otro)
+- [x] Inserir cas especial ID 90004: Prestació per risc durant la lactància natural (categoria: lactancia)
+- [x] Escriure tests per als nous casos 90003 i 90004 (239 tests en total, tots passen)
+- [x] Revisar la bibliografia recent i identificar nous casos (ERTE+IT, risc durant la lactància)

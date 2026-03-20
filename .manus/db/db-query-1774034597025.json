@@ -1,0 +1,105 @@
+{
+  "query": "SELECT id, title, category FROM special_cases ORDER BY category, id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, category FROM special_cases ORDER BY category, id;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "Menstruació incapacitant",
+      "category": "menstruacion"
+    },
+    {
+      "id": "2",
+      "title": "Interrupció voluntària de l'embaràs (IVE)",
+      "category": "embarazo"
+    },
+    {
+      "id": "3",
+      "title": "Gestació a partir de la setmana 39",
+      "category": "embarazo"
+    },
+    {
+      "id": "90001",
+      "title": "IT durant embaràs de risc vs. prestació per risc durant l'embaràs",
+      "category": "embarazo"
+    },
+    {
+      "id": "4",
+      "title": "Donació d'òrgans",
+      "category": "donacion_organos"
+    },
+    {
+      "id": "5",
+      "title": "Baixes retroactives",
+      "category": "baja_retroactiva"
+    },
+    {
+      "id": "6",
+      "title": "Pluriocupació",
+      "category": "pluriempleo"
+    },
+    {
+      "id": "70001",
+      "title": "Pluriactivitat: treballador simultàniament autònom (RETA) i assalariat (Règim General)",
+      "category": "pluriempleo"
+    },
+    {
+      "id": "7",
+      "title": "IT i presó",
+      "category": "prision"
+    },
+    {
+      "id": "8",
+      "title": "IT en estrangers",
+      "category": "extranjeros"
+    },
+    {
+      "id": "9",
+      "title": "Vacances durant la IT",
+      "category": "vacaciones"
+    },
+    {
+      "id": "10",
+      "title": "Recaiguda en IT",
+      "category": "recaida"
+    },
+    {
+      "id": "30001",
+      "title": "Accident de treball en treballador autònom (RETA)",
+      "category": "accident_treball"
+    },
+    {
+      "id": "30002",
+      "title": "Accident de treball en treballador en situació de pluriocupació",
+      "category": "accident_treball"
+    },
+    {
+      "id": "30003",
+      "title": "TRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball",
+      "category": "accident_treball"
+    },
+    {
+      "id": "30004",
+      "title": "Accident in itinere per a autònoms amb múltiples llocs de treball declarats",
+      "category": "accident_treball"
+    },
+    {
+      "id": "60001",
+      "title": "Accident in itinere en treballadors assalariats amb contracte de teletreball parcial",
+      "category": "accident_treball"
+    },
+    {
+      "id": "80001",
+      "title": "Malaltia professional en personal sanitari: punxada accidental",
+      "category": "accident_treball"
+    },
+    {
+      "id": "90002",
+      "title": "Reducció de jornada per guarda legal i IT: càlcul de la base reguladora",
+      "category": "otro"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tcategory\n1\tMenstruació incapacitant\tmenstruacion\n2\tInterrupció voluntària de l'embaràs (IVE)\tembarazo\n3\tGestació a partir de la setmana 39\tembarazo\n90001\tIT durant embaràs de risc vs. prestació per risc durant l'embaràs\tembarazo\n4\tDonació d'òrgans\tdonacion_organos\n5\tBaixes retroactives\tbaja_retroactiva\n6\tPluriocupació\tpluriempleo\n70001\tPluriactivitat: treballador simultàniament autònom (RETA) i assalariat (Règim General)\tpluriempleo\n7\tIT i presó\tprision\n8\tIT en estrangers\textranjeros\n9\tVacances durant la IT\tvacaciones\n10\tRecaiguda en IT\trecaida\n30001\tAccident de treball en treballador autònom (RETA)\taccident_treball\n30002\tAccident de treball en treballador en situació de pluriocupació\taccident_treball\n30003\tTRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball\taccident_treball\n30004\tAccident in itinere per a autònoms amb múltiples llocs de treball declarats\taccident_treball\n60001\tAccident in itinere en treballadors assalariats amb contracte de teletreball parcial\taccident_treball\n80001\tMalaltia professional en personal sanitari: punxada accidental\taccident_treball\n90002\tReducció de jornada per guarda legal i IT: càlcul de la base reguladora\totro\n",
+  "stderr": "",
+  "execution_time_ms": 484
+}

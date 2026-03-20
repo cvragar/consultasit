@@ -56,6 +56,8 @@ const QUICK_SUGGESTIONS = [
   "Pluriactivitat: IT cobrant per dos règims alhora",
   "Recaiguda en IT: quan es considera nova baixa?",
   "Baixa mèdica durant les vacances: quins drets té el treballador?",
+  "Diferència entre embaràs de risc (IT) i prestació per risc durant l'embaràs",
+  "IT amb reducció de jornada per guarda legal: com es calcula la base reguladora?",
 ];
 
 export default function Chat() {

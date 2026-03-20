@@ -472,9 +472,9 @@ export default function CasosEspeciales() {
                         </div>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-xs text-muted-foreground line-clamp-3 mb-3">
-                          {caso.description}
-                        </p>
+                        <div className="text-xs text-muted-foreground line-clamp-3 mb-3 prose prose-xs max-w-none [&_strong]:font-semibold [&_p]:m-0 [&_ul]:m-0 [&_li]:m-0 [&_h1]:text-xs [&_h2]:text-xs [&_h3]:text-xs [&_table]:hidden">
+                          <Streamdown>{caso.description}</Streamdown>
+                        </div>
                         <div className="flex items-center justify-between">
                           <div className="flex gap-2 text-xs text-muted-foreground">
                             {caso.legalBasis && (
@@ -574,8 +574,8 @@ export default function CasosEspeciales() {
               </DialogHeader>
 
               <div className="space-y-6 mt-4">
-                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
-                  <p className="text-sm leading-relaxed">{selectedCase.description}</p>
+                <div className="prose prose-sm max-w-none bg-orange-50 border border-orange-200 rounded-lg p-4">
+                  <Streamdown>{selectedCase.description}</Streamdown>
                 </div>
 
                 {selectedCase.legalBasis && (
