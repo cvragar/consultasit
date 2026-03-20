@@ -1,7 +1,8 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { MessageSquare, FileText, AlertCircle, Calculator, Shield, LogIn, Star, Menu, X } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { MessageSquare, FileText, AlertCircle, Calculator, Shield, LogIn, Star, Menu, X, Stethoscope, HardHat, HeartPulse, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import { getLoginUrl } from "@/const";
 import { useState } from "react";
@@ -213,6 +214,141 @@ export default function Home() {
               </Link>
             );
           })}
+        </div>
+      </section>
+
+      {/* Secció Contingències Professionals */}
+      <section className="container py-8 sm:py-12">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
+              <HardHat className="h-5 w-5 text-red-600" />
+            </div>
+            <div>
+              <h3 className="text-lg sm:text-2xl font-bold text-gray-900">Contingències professionals</h3>
+              <p className="text-sm text-gray-500">Diferències clau entre AT, malaltia professional i contingència comuna</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Accident de Treball */}
+            <div className="rounded-xl border-2 border-red-200 bg-red-50 p-5">
+              <div className="flex items-center gap-2 mb-3">
+                <HardHat className="h-5 w-5 text-red-600" />
+                <h4 className="font-bold text-red-800 text-base">Accident de Treball (AT)</h4>
+              </div>
+              <p className="text-xs text-red-700 mb-3">
+                Lesió corporal que el treballador pateix amb ocasió o per conseqüència del treball (art. 156 LGSS).
+              </p>
+              <ul className="text-xs text-red-800 space-y-1.5 mb-4">
+                <li className="flex items-start gap-1.5"><span className="text-red-500 mt-0.5 shrink-0">▸</span>Prestació: <strong>75% BR des del dia 2</strong> (dia 1 a càrrec empresa)</li>
+                <li className="flex items-start gap-1.5"><span className="text-red-500 mt-0.5 shrink-0">▸</span>Gestió: <strong>mútua col·laboradora</strong></li>
+                <li className="flex items-start gap-1.5"><span className="text-red-500 mt-0.5 shrink-0">▸</span>Part de baixa: <strong>mútua o eCap</strong></li>
+                <li className="flex items-start gap-1.5"><span className="text-red-500 mt-0.5 shrink-0">▸</span>Inclou: <strong>accident in itinere</strong>, AT en pluriocupació, AT en RETA</li>
+              </ul>
+              <div className="flex flex-wrap gap-1.5">
+                <Link href="/casos-especials">
+                  <Badge variant="outline" className="text-xs cursor-pointer border-red-300 text-red-700 hover:bg-red-100 gap-1">
+                    Casos AT <ChevronRight className="h-3 w-3" />
+                  </Badge>
+                </Link>
+                <Link href="/documents">
+                  <Badge variant="outline" className="text-xs cursor-pointer border-red-300 text-red-700 hover:bg-red-100 gap-1">
+                    Normativa <ChevronRight className="h-3 w-3" />
+                  </Badge>
+                </Link>
+              </div>
+            </div>
+
+            {/* Malaltia Professional */}
+            <div className="rounded-xl border-2 border-orange-200 bg-orange-50 p-5">
+              <div className="flex items-center gap-2 mb-3">
+                <Stethoscope className="h-5 w-5 text-orange-600" />
+                <h4 className="font-bold text-orange-800 text-base">Malaltia Professional (MP)</h4>
+              </div>
+              <p className="text-xs text-orange-700 mb-3">
+                Malaltia contreta per l'exposició a agents o situacions laborals recollits al quadre del RD 1299/2006 (art. 157 LGSS).
+              </p>
+              <ul className="text-xs text-orange-800 space-y-1.5 mb-4">
+                <li className="flex items-start gap-1.5"><span className="text-orange-500 mt-0.5 shrink-0">▸</span>Prestació: <strong>75% BR des del dia 1</strong></li>
+                <li className="flex items-start gap-1.5"><span className="text-orange-500 mt-0.5 shrink-0">▸</span>Gestió: <strong>mútua col·laboradora</strong></li>
+                <li className="flex items-start gap-1.5"><span className="text-orange-500 mt-0.5 shrink-0">▸</span>Exemples: <strong>hepatitis B/C per punxada</strong> (Grup 3A), síndrome del túnel carpià (Grup 2H), tuberculosi en sanitaris</li>
+                <li className="flex items-start gap-1.5"><span className="text-orange-500 mt-0.5 shrink-0">▸</span>Notificació obligatòria: <strong>CEPROSS</strong></li>
+              </ul>
+              <div className="flex flex-wrap gap-1.5">
+                <Link href="/casos-especials">
+                  <Badge variant="outline" className="text-xs cursor-pointer border-orange-300 text-orange-700 hover:bg-orange-100 gap-1">
+                    Cas punxada accidental <ChevronRight className="h-3 w-3" />
+                  </Badge>
+                </Link>
+                <Link href="/documents">
+                  <Badge variant="outline" className="text-xs cursor-pointer border-orange-300 text-orange-700 hover:bg-orange-100 gap-1">
+                    RD 1299/2006 <ChevronRight className="h-3 w-3" />
+                  </Badge>
+                </Link>
+              </div>
+            </div>
+
+            {/* Contingència Comuna */}
+            <div className="rounded-xl border-2 border-blue-200 bg-blue-50 p-5">
+              <div className="flex items-center gap-2 mb-3">
+                <HeartPulse className="h-5 w-5 text-blue-600" />
+                <h4 className="font-bold text-blue-800 text-base">Contingència Comuna (CC)</h4>
+              </div>
+              <p className="text-xs text-blue-700 mb-3">
+                Malaltia o lesió no relacionada amb el treball, ni recollida al quadre de malalties professionals.
+              </p>
+              <ul className="text-xs text-blue-800 space-y-1.5 mb-4">
+                <li className="flex items-start gap-1.5"><span className="text-blue-500 mt-0.5 shrink-0">▸</span>Prestació: <strong>60% BR dies 4–20, 75% des del dia 21</strong></li>
+                <li className="flex items-start gap-1.5"><span className="text-blue-500 mt-0.5 shrink-0">▸</span>Gestió: <strong>INSS o mútua</strong> (si l'empresa ha optat)</li>
+                <li className="flex items-start gap-1.5"><span className="text-blue-500 mt-0.5 shrink-0">▸</span>Part de baixa: <strong>metge de família (eCap)</strong></li>
+                <li className="flex items-start gap-1.5"><span className="text-blue-500 mt-0.5 shrink-0">▸</span>Casos especials: <strong>menstruació, embaràs, donació d'òrgans</strong></li>
+              </ul>
+              <div className="flex flex-wrap gap-1.5">
+                <Link href="/casos-especials">
+                  <Badge variant="outline" className="text-xs cursor-pointer border-blue-300 text-blue-700 hover:bg-blue-100 gap-1">
+                    Casos CC <ChevronRight className="h-3 w-3" />
+                  </Badge>
+                </Link>
+                <Link href="/documents">
+                  <Badge variant="outline" className="text-xs cursor-pointer border-blue-300 text-blue-700 hover:bg-blue-100 gap-1">
+                    RD 625/2014 <ChevronRight className="h-3 w-3" />
+                  </Badge>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Taula comparativa */}
+          <div className="mt-5 overflow-x-auto">
+            <table className="w-full text-xs border-collapse rounded-lg overflow-hidden">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="text-left p-2.5 font-semibold text-gray-700 border border-gray-200">Aspecte</th>
+                  <th className="text-center p-2.5 font-semibold text-red-700 border border-gray-200">AT</th>
+                  <th className="text-center p-2.5 font-semibold text-orange-700 border border-gray-200">MP</th>
+                  <th className="text-center p-2.5 font-semibold text-blue-700 border border-gray-200">CC</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white">
+                {[
+                  ["Prestació dia 1", "75% BR", "75% BR", "No (dies 1-3 sense prestació)"],
+                  ["Prestació dies 4-20", "75% BR", "75% BR", "60% BR"],
+                  ["Prestació des del dia 21", "75% BR", "75% BR", "75% BR"],
+                  ["Qui gestiona la IT", "Mútua", "Mútua", "INSS o mútua"],
+                  ["Qui emet el part", "Mútua o eCap", "eCap (provisional)", "eCap"],
+                  ["Normativa principal", "Art. 156 LGSS", "Art. 157 LGSS + RD 1299/2006", "Art. 169 LGSS + RD 625/2014"],
+                ].map(([aspect, at, mp, cc]) => (
+                  <tr key={aspect} className="border-b border-gray-100 hover:bg-gray-50">
+                    <td className="p-2.5 font-medium text-gray-700 border border-gray-200">{aspect}</td>
+                    <td className="p-2.5 text-center text-red-700 border border-gray-200">{at}</td>
+                    <td className="p-2.5 text-center text-orange-700 border border-gray-200">{mp}</td>
+                    <td className="p-2.5 text-center text-blue-700 border border-gray-200">{cc}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 

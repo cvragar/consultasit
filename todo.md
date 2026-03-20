@@ -232,3 +232,9 @@
 - [x] PDF pujat a S3/CDN amb URL pública permanent
 - [x] Contingut estructurat en català amb èmfasi en el personal sanitari (Grups 2H i 3A)
 - [x] Escriure 15 tests (179 tests en total, tots passen)
+
+## Tres noves millores (20/03/2026)
+- [x] Afegir cas especial: malaltia professional en personal sanitari (punxada accidental → Hepatitis B, Grup 3A RD 1299/2006) - ID: 80001
+- [x] Integrar el RD 625/2014 com a font normativa fiable (norma base gestió parts IT primers 365 dies) - ID: 15 actualitzat
+- [x] Crear secció "Contingències Professionals" a la pàgina d'inici (AT vs MP vs CC, taula comparativa, links a casos i documents)
+- [x] Escriure 18 tests per a les tres millores (197 tests en total, tots passen)
