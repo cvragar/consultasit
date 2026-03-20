@@ -58,6 +58,7 @@ const QUICK_SUGGESTIONS = [
   "Baixa mèdica durant les vacances: quins drets té el treballador?",
   "Diferència entre embaràs de risc (IT) i prestació per risc durant l'embaràs",
   "IT amb reducció de jornada per guarda legal: com es calcula la base reguladora?",
+  "Com funciona la nova tramitació electrònica dels parts mèdics des de l'abril de 2023?",
 ];
 
 export default function Chat() {
