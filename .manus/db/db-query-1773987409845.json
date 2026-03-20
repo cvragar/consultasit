@@ -1,0 +1,21 @@
+{
+  "query": "SELECT id, title, type, source, jurisdiction, publicationYear, status, LENGTH(content) as content_length, url FROM documents WHERE id = 30002;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, type, source, jurisdiction, publicationYear, status, LENGTH(content) as content_length, url FROM documents WHERE id = 30002;",
+  "rows": [
+    {
+      "id": "30002",
+      "title": "Reial Decret 1060/2022, de 27 de desembre (BOE-A-2023-160) - Gestió electrònica dels parts d'IT",
+      "type": "decreto",
+      "source": "BOE - Ministeri d'Inclusió, Seguretat Social i Migracions",
+      "jurisdiction": "estatal",
+      "publicationYear": "2023",
+      "status": "vigent",
+      "content_length": "5598",
+      "url": "https://d2xsxph8kpxj0f.cloudfront.net/310519663242490001/DirVLPm6UeFJi3utFGbgZe/BOE-A-2023-160_0b0ae01a.pdf"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\ttype\tsource\tjurisdiction\tpublicationYear\tstatus\tcontent_length\turl\n30002\tReial Decret 1060/2022, de 27 de desembre (BOE-A-2023-160) - Gestió electrònica dels parts d'IT\tdecreto\tBOE - Ministeri d'Inclusió, Seguretat Social i Migracions\testatal\t2023\tvigent\t5598\thttps://d2xsxph8kpxj0f.cloudfront.net/310519663242490001/DirVLPm6UeFJi3utFGbgZe/BOE-A-2023-160_0b0ae01a.pdf\n",
+  "stderr": "",
+  "execution_time_ms": 387
+}

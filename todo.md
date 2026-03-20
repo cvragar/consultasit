@@ -215,3 +215,12 @@
 - [x] Actualitzar el frontend amb selector de grup CNO-11 i càlcul de dies ajustats en temps real
 - [x] Afegir taula expandible amb tots els factors per grup d'ocupació
 - [x] Escriure 19 tests nous (151 tests en total, tots passen)
+
+## Integració Reial Decret BOE-A-2023-160
+- [x] Extreure el contingut del PDF del BOE (pdftotext, 350 línies)
+- [x] Identificar l'articulat rellevant: modificació art. 2.3 i nova redacció art. 7 del RD 625/2014
+- [x] Inserir el document a la BD (ID: 30002, tipus: decreto, estat: vigent, any: 2023)
+- [x] PDF pujat a S3/CDN amb URL pública permanent
+- [x] Contingut estructurat en català amb implicacions pràctiques per al metge de família (eCap)
+- [x] Etiquetes: RD 1060/2022, parts mèdics, tramitació electrònica, 180 dies, INSS, mútua, eCap
+- [x] Escriure 13 tests (164 tests en total, tots passen)
