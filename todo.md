@@ -254,3 +254,10 @@
 - [x] Inserir cas especial ID 90004: Prestació per risc durant la lactància natural (categoria: lactancia)
 - [x] Escriure tests per als nous casos 90003 i 90004 (239 tests en total, tots passen)
 - [x] Revisar la bibliografia recent i identificar nous casos (ERTE+IT, risc durant la lactància)
+
+## Sprint 4 (20/03/2026)
+- [x] Inserir cas especial ID 90005: IT i permís parental (16 setmanes): compatibilitat i base reguladora
+- [x] Implementar funció stripMarkdown per netejar el preview de les targetes de casos especials
+- [x] Afegir badge "Nou" a les targetes de casos especials afegits en els últims 30 dies
+- [x] Afegir filtre "Nous" a la pàgina de Casos Especials per filtrar per casos recents
+- [x] Escriure tests per al nou cas especial i les millores visuals

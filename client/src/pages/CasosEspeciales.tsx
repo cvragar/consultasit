@@ -46,6 +46,7 @@ import {
   Pencil,
   AlertTriangle,
   Save,
+  Sparkles,
 } from "lucide-react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
@@ -95,6 +96,32 @@ type SpecialCase = {
   updatedAt: Date;
 };
 
+/** Elimina la sintaxi Markdown d'un string per mostrar text pla al preview */
+function stripMarkdown(text: string): string {
+  return text
+    .replace(/^#{1,6}\s+/gm, "")          // Capçaleres ##
+    .replace(/\*\*(.+?)\*\*/g, "$1")      // Negreta **text**
+    .replace(/\*(.+?)\*/g, "$1")          // Cursiva *text*
+    .replace(/`(.+?)`/g, "$1")            // Codi `text`
+    .replace(/^[-*+]\s+/gm, "")           // Llistes - item
+    .replace(/^\d+\.\s+/gm, "")          // Llistes numerades 1. item
+    .replace(/^>\s+/gm, "")              // Cites > text
+    .replace(/\[(.+?)\]\(.+?\)/g, "$1") // Links [text](url)
+    .replace(/!\[.+?\]\(.+?\)/g, "")    // Imatges
+    .replace(/^\|.+\|$/gm, "")           // Taules
+    .replace(/^[-|\s]+$/gm, "")          // Separadors de taula
+    .replace(/\n{2,}/g, " ")             // Salts de línia múltiples → espai
+    .replace(/\n/g, " ")                 // Salts de línia → espai
+    .trim();
+}
+
+/** Retorna true si el cas s'ha creat en els últims N dies */
+function isNew(createdAt: Date, days = 30): boolean {
+  const now = new Date();
+  const diff = now.getTime() - new Date(createdAt).getTime();
+  return diff < days * 24 * 60 * 60 * 1000;
+}
+
 /** Detecta si un string sembla un JSON array o object */
 function looksLikeJson(value: string): boolean {
   const trimmed = value.trim();
@@ -109,6 +136,7 @@ export default function CasosEspeciales() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCase, setSelectedCase] = useState<SpecialCase | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [showOnlyNew, setShowOnlyNew] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
 
@@ -253,8 +281,11 @@ export default function CasosEspeciales() {
     if (selectedCategory !== "all") {
       cases = cases.filter(c => c.category === selectedCategory);
     }
+    if (showOnlyNew) {
+      cases = cases.filter(c => isNew(c.createdAt));
+    }
     return cases;
-  }, [allCases, searchQuery, selectedCategory]);
+  }, [allCases, searchQuery, selectedCategory, showOnlyNew]);
 
   // Agrupar per categoria
   const groupedCases = useMemo(() => {
@@ -269,11 +300,13 @@ export default function CasosEspeciales() {
   }, [displayedCases, selectedCategory]);
 
   const categories = Object.keys(categoryLabels);
-  const hasActiveFilters = selectedCategory !== "all";
+  const newCasesCount = useMemo(() => (allCases ?? []).filter(c => isNew(c.createdAt)).length, [allCases]);
+  const hasActiveFilters = selectedCategory !== "all" || showOnlyNew;
 
   const clearFilters = () => {
     setSelectedCategory("all");
     setSearchQuery("");
+    setShowOnlyNew(false);
   };
 
   const fieldLabels: Record<string, string> = {
@@ -385,12 +418,21 @@ export default function CasosEspeciales() {
                 >
                   Tots
                 </Button>
+                <Button
+                    variant={showOnlyNew ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => { setShowOnlyNew(!showOnlyNew); setSelectedCategory("all"); }}
+                    className={showOnlyNew ? "bg-emerald-600 hover:bg-emerald-700" : "border-emerald-300 text-emerald-700 hover:bg-emerald-50"}
+                  >
+                    <Sparkles className="h-3.5 w-3.5 mr-1" />
+                    Nous ({newCasesCount})
+                  </Button>
                 {categories.map(cat => (
                   <Button
                     key={cat}
                     variant={selectedCategory === cat ? "default" : "outline"}
                     size="sm"
-                    onClick={() => setSelectedCategory(cat)}
+                    onClick={() => { setSelectedCategory(cat); setShowOnlyNew(false); }}
                   >
                     {categoryLabels[cat]}
                   </Button>
@@ -400,12 +442,18 @@ export default function CasosEspeciales() {
           )}
 
           {/* Resum de filtres actius */}
-          {(hasActiveFilters || searchQuery) && (
+                {(hasActiveFilters || searchQuery) && (
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <span>Mostrant {displayedCases.length} resultats</span>
               {searchQuery && <Badge variant="secondary">Cerca: "{searchQuery}"</Badge>}
               {selectedCategory !== "all" && (
                 <Badge variant="secondary">{categoryLabels[selectedCategory]}</Badge>
+              )}
+              {showOnlyNew && (
+                <Badge className="bg-emerald-100 text-emerald-800">
+                  <Sparkles className="h-3 w-3 mr-1" />
+                  Nous
+                </Badge>
               )}
             </div>
           )}
@@ -439,9 +487,17 @@ export default function CasosEspeciales() {
                     >
                       <CardHeader className="pb-2">
                         <div className="flex items-start justify-between gap-2">
-                          <CardTitle className="text-sm font-semibold line-clamp-2 group-hover:text-orange-700 transition-colors flex-1">
-                            {caso.title}
-                          </CardTitle>
+                          <div className="flex-1 min-w-0">
+                            {isNew(caso.createdAt) && (
+                              <span className="inline-flex items-center gap-1 text-[10px] font-semibold bg-emerald-100 text-emerald-700 px-1.5 py-0.5 rounded-full mb-1">
+                                <Sparkles className="h-2.5 w-2.5" />
+                                Nou
+                              </span>
+                            )}
+                            <CardTitle className="text-sm font-semibold line-clamp-2 group-hover:text-orange-700 transition-colors">
+                              {caso.title}
+                            </CardTitle>
+                          </div>
                           <div className="flex items-center gap-1 shrink-0">
                             {isAdmin && (
                               <Button
@@ -472,9 +528,9 @@ export default function CasosEspeciales() {
                         </div>
                       </CardHeader>
                       <CardContent>
-                        <div className="text-xs text-muted-foreground line-clamp-3 mb-3 prose prose-xs max-w-none [&_strong]:font-semibold [&_p]:m-0 [&_ul]:m-0 [&_li]:m-0 [&_h1]:text-xs [&_h2]:text-xs [&_h3]:text-xs [&_table]:hidden">
-                          <Streamdown>{caso.description}</Streamdown>
-                        </div>
+                        <p className="text-xs text-muted-foreground line-clamp-3 mb-3 leading-relaxed">
+                          {stripMarkdown(caso.description)}
+                        </p>
                         <div className="flex items-center justify-between">
                           <div className="flex gap-2 text-xs text-muted-foreground">
                             {caso.legalBasis && (
