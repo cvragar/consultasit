@@ -1,0 +1,35 @@
+{
+  "query": "SELECT id, title, category FROM special_cases ORDER BY id LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, category FROM special_cases ORDER BY id LIMIT 5;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "Menstruació incapacitant",
+      "category": "menstruacion"
+    },
+    {
+      "id": "2",
+      "title": "Interrupció voluntària de l'embaràs (IVE)",
+      "category": "embarazo"
+    },
+    {
+      "id": "3",
+      "title": "Gestació a partir de la setmana 39",
+      "category": "embarazo"
+    },
+    {
+      "id": "4",
+      "title": "Donació d'òrgans",
+      "category": "donacion_organos"
+    },
+    {
+      "id": "5",
+      "title": "Baixes retroactives",
+      "category": "baja_retroactiva"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tcategory\n1\tMenstruació incapacitant\tmenstruacion\n2\tInterrupció voluntària de l'embaràs (IVE)\tembarazo\n3\tGestació a partir de la setmana 39\tembarazo\n4\tDonació d'òrgans\tdonacion_organos\n5\tBaixes retroactives\tbaja_retroactiva\n",
+  "stderr": "",
+  "execution_time_ms": 383
+}

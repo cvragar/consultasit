@@ -238,3 +238,9 @@
 - [x] Integrar el RD 625/2014 com a font normativa fiable (norma base gestió parts IT primers 365 dies) - ID: 15 actualitzat
 - [x] Crear secció "Contingències Professionals" a la pàgina d'inici (AT vs MP vs CC, taula comparativa, links a casos i documents)
 - [x] Escriure 18 tests per a les tres millores (197 tests en total, tots passen)
+## Nous casos especials: embaràs de risc i reducció de jornada (20/03/2026)
+- [x] Investigar normativa IT durant embaràs de risc vs. prestació per risc durant l'embaràs (LGSS art. 186-187, RD 295/2009)
+- [x] Investigar normativa reducció de jornada per guarda legal i IT (ET art. 37.6, LGSS art. 237.3, STSJ Andalusia 2019)
+- [x] Inserir cas especial ID 90001: IT durant embaràs de risc vs. prestació per risc durant l'embaràs (categoria: embarazo)
+- [x] Inserir cas especial ID 90002: Reducció de jornada per guarda legal i IT: càlcul de la base reguladora (categoria: otro)
+- [x] Escriure 21 tests per als dos nous casos (218 tests en total, tots passen)
