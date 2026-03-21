@@ -61,6 +61,7 @@ const QUICK_SUGGESTIONS = [
   "Com funciona la nova tramitació electrònica dels parts mèdics des de l'abril de 2023?",
   "Quins són els terminis de confirmació de la baixa per a cada grup de processos (RD 625/2014)?",
   "Com es gestiona la IT quan el pacient és ingressat a l'hospital?",
+  "IT en teletreball: quan es considera accident de treball i quan contingència comuna?",
 ];
 
 export default function Chat() {
