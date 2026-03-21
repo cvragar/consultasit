@@ -181,13 +181,11 @@
 }
 /* ── Taules responsives dins de contenidors prose ─────────────────────────── */
 /* Garanteix scroll horitzontal en Safari, Chrome i Firefox per a taules Markdown */
+/* NOTA: display:block s'aplica via Tailwind [&_table]:block als contenidors específics */
 .prose table {
-  display: block;
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* scroll suau en iOS Safari */
   font-size: 0.8rem;
   border-collapse: collapse;
+  -webkit-overflow-scrolling: touch; /* scroll suau en iOS Safari */
 }
 
 .prose table th,
@@ -196,7 +194,6 @@
   border: 1px solid #d1d5db;
   vertical-align: top;
   min-width: 80px;
-  word-break: normal;
 }
 
 .prose table th {
@@ -205,7 +202,7 @@
   white-space: nowrap;
 }
 
-/* Evita que el text de les cel·les es trenqui de manera agressiva */
 .prose table td {
+  word-break: break-word;
   hyphens: auto;
 }

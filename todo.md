@@ -265,3 +265,4 @@
 ## Iteració 2025-03-20 (tard)
 - [ ] Ampliar document Llei 1/2023 (menstruació incapacitant) amb text complet i protocol català
 - [ ] Crear pàgina de Novetats (últims 30 dies: casos i documents)
+- [ ] Corregir desbordament definitiu del diàleg de casos especials (títol llarg + taules en mòbil)

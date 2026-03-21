@@ -572,15 +572,15 @@ export default function CasosEspeciales() {
 
       {/* Diàleg de visualització del cas especial */}
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="max-w-5xl w-[95vw] max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-5xl w-[95vw] max-h-[90vh] overflow-y-auto overflow-x-hidden">
           {selectedCase && (
             <>
               <DialogHeader>
-                <div className="flex items-center justify-between mb-3">
+                <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
                   <Badge className={categoryColors[selectedCase.category]}>
                     {categoryLabels[selectedCase.category] || selectedCase.category}
                   </Badge>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-2">
                     {isAdmin && (
                       <Button
                         variant="outline"
@@ -626,11 +626,11 @@ export default function CasosEspeciales() {
                     </Button>
                   </div>
                 </div>
-                <DialogTitle className="text-2xl">{selectedCase.title}</DialogTitle>
+                <DialogTitle className="text-xl sm:text-2xl break-words leading-tight">{selectedCase.title}</DialogTitle>
               </DialogHeader>
 
               <div className="space-y-6 mt-4">
-                <div className="prose prose-sm max-w-none bg-orange-50 border border-orange-200 rounded-lg p-4 overflow-x-auto [&_table]:text-xs [&_table]:min-w-full [&_th]:whitespace-nowrap [&_td]:align-top">
+                <div className="prose prose-sm max-w-none bg-orange-50 border border-orange-200 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
                   <Streamdown>{selectedCase.description}</Streamdown>
                 </div>
 
@@ -640,7 +640,7 @@ export default function CasosEspeciales() {
                       <Scale className="h-4 w-4 text-blue-600" />
                       Base Legal
                     </h3>
-                    <div className="prose prose-sm max-w-none bg-blue-50 rounded-lg p-4 overflow-x-auto [&_table]:text-xs [&_table]:min-w-full [&_th]:whitespace-nowrap [&_td]:align-top">
+                    <div className="prose prose-sm max-w-none bg-blue-50 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
                       <Streamdown>{selectedCase.legalBasis}</Streamdown>
                     </div>
                   </div>
@@ -652,7 +652,7 @@ export default function CasosEspeciales() {
                       <FileText className="h-4 w-4 text-green-600" />
                       Procediment
                     </h3>
-                    <div className="prose prose-sm max-w-none bg-green-50 rounded-lg p-4 overflow-x-auto [&_table]:text-xs [&_table]:min-w-full [&_th]:whitespace-nowrap [&_td]:align-top">
+                    <div className="prose prose-sm max-w-none bg-green-50 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
                       <Streamdown>{selectedCase.procedure}</Streamdown>
                     </div>
                   </div>
@@ -664,7 +664,7 @@ export default function CasosEspeciales() {
                       <BookOpen className="h-4 w-4 text-purple-600" />
                       Exemples Pràctics
                     </h3>
-                    <div className="prose prose-sm max-w-none bg-purple-50 rounded-lg p-4 overflow-x-auto [&_table]:text-xs [&_table]:min-w-full [&_th]:whitespace-nowrap [&_td]:align-top">
+                    <div className="prose prose-sm max-w-none bg-purple-50 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
                       <Streamdown>{selectedCase.examples}</Streamdown>
                     </div>
                   </div>
