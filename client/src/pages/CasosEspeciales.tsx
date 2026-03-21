@@ -572,7 +572,7 @@ export default function CasosEspeciales() {
 
       {/* Diàleg de visualització del cas especial */}
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto">
+        <DialogContent className="max-w-5xl w-[95vw] max-h-[90vh] overflow-y-auto">
           {selectedCase && (
             <>
               <DialogHeader>
@@ -630,7 +630,7 @@ export default function CasosEspeciales() {
               </DialogHeader>
 
               <div className="space-y-6 mt-4">
-                <div className="prose prose-sm max-w-none bg-orange-50 border border-orange-200 rounded-lg p-4">
+                <div className="prose prose-sm max-w-none bg-orange-50 border border-orange-200 rounded-lg p-4 overflow-x-auto [&_table]:text-xs [&_table]:min-w-full [&_th]:whitespace-nowrap [&_td]:align-top">
                   <Streamdown>{selectedCase.description}</Streamdown>
                 </div>
 
@@ -640,7 +640,7 @@ export default function CasosEspeciales() {
                       <Scale className="h-4 w-4 text-blue-600" />
                       Base Legal
                     </h3>
-                    <div className="prose prose-sm max-w-none bg-blue-50 rounded-lg p-4">
+                    <div className="prose prose-sm max-w-none bg-blue-50 rounded-lg p-4 overflow-x-auto [&_table]:text-xs [&_table]:min-w-full [&_th]:whitespace-nowrap [&_td]:align-top">
                       <Streamdown>{selectedCase.legalBasis}</Streamdown>
                     </div>
                   </div>
@@ -652,7 +652,7 @@ export default function CasosEspeciales() {
                       <FileText className="h-4 w-4 text-green-600" />
                       Procediment
                     </h3>
-                    <div className="prose prose-sm max-w-none bg-green-50 rounded-lg p-4">
+                    <div className="prose prose-sm max-w-none bg-green-50 rounded-lg p-4 overflow-x-auto [&_table]:text-xs [&_table]:min-w-full [&_th]:whitespace-nowrap [&_td]:align-top">
                       <Streamdown>{selectedCase.procedure}</Streamdown>
                     </div>
                   </div>
@@ -664,7 +664,7 @@ export default function CasosEspeciales() {
                       <BookOpen className="h-4 w-4 text-purple-600" />
                       Exemples Pràctics
                     </h3>
-                    <div className="prose prose-sm max-w-none bg-purple-50 rounded-lg p-4">
+                    <div className="prose prose-sm max-w-none bg-purple-50 rounded-lg p-4 overflow-x-auto [&_table]:text-xs [&_table]:min-w-full [&_th]:whitespace-nowrap [&_td]:align-top">
                       <Streamdown>{selectedCase.examples}</Streamdown>
                     </div>
                   </div>
