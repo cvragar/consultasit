@@ -286,3 +286,4 @@
 - [x] Botó Reclamacions al hero de la pàgina d'inici
 - [x] Afegir via impugnació alta ICAM < 365 dies a Reclamacions (proposta mútua confirmada per ICAM)
 - [x] Afegir suggeriment ràpid al xat sobre proposta d'alta de mútua confirmada per ICAM (17 suggeriments en total)
+- [x] Millorar hero de Reclamacions: subtítol amb les 5 vies + banner destacat escenari proposta mútua/ICAM

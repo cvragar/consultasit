@@ -395,9 +395,17 @@ export default function Reclamacions() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 leading-tight">
             Reclamacions i Recursos en IT
           </h1>
-          <p className="text-base sm:text-lg text-gray-600 mb-6">
-            Com pot reclamar el pacient una alta mèdica, com impugnar una alta de la mútua per accident laboral, i com sol·licitar la determinació de contingències.
+          <p className="text-base sm:text-lg text-gray-600 mb-4">
+            Cinc vies de reclamació explicades pas a pas: alta del metge de família, alta de la mútua per AT/MP, alta de l’ICAM quan la mútua ha proposat l’alta i el metge de família ha discrepat, alta de l’INSS passats els 365 dies, i determinació de contingències.
           </p>
+          {/* Cas destacat: proposta mútua confirmada per ICAM */}
+          <div className="inline-flex items-start gap-2.5 bg-rose-50 border border-rose-200 rounded-xl px-4 py-3 text-sm text-rose-800 text-left mb-6">
+            <AlertTriangle className="h-4 w-4 text-rose-500 shrink-0 mt-0.5" />
+            <span>
+              <span className="font-semibold">Escenari freqüent i confús:</span> la mútua proposa l’alta a l’ICAM, el metge de família discrepa, però l’ICAM confirma l’alta igualment.
+              {" "}<span className="font-medium">La via correcta és reclamar al Departament de Salut en 11 dies hàbils</span>, no a l’INSS.
+            </span>
+          </div>
 
           {/* Taula resum de terminis */}
           <div className="overflow-x-auto rounded-xl border bg-white shadow-sm mt-6">
