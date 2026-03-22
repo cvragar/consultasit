@@ -1,0 +1,58 @@
+{
+  "query": "SELECT id, title, url, source FROM documents WHERE source LIKE '%Wolters%' OR source LIKE '%wolters%' OR source LIKE '%kluwer%' OR source NOT LIKE '%boe%' AND source NOT LIKE '%BOE%' AND source NOT LIKE '%gencat%' AND source NOT LIKE '%Gencat%' AND source NOT LIKE '%seg-social%' AND source NOT LIKE '%ICS%' AND source NOT LIKE '%Canal Salut%' AND source NOT LIKE '%INSS%' AND source NOT LIKE '%Govern%' ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, url, source FROM documents WHERE source LIKE '%Wolters%' OR source LIKE '%wolters%' OR source LIKE '%kluwer%' OR source NOT LIKE '%boe%' AND source NOT LIKE '%BOE%' AND source NOT LIKE '%gencat%' AND source NOT LIKE '%Gencat%' AND source NOT LIKE '%seg-social%' AND source NOT LIKE '%ICS%' AND source NOT LIKE '%Canal Salut%' AND source NOT LIKE '%INSS%' AND source NOT LIKE '%Govern%' ORDER BY id;",
+  "rows": [
+    {
+      "id": "11",
+      "title": "Guía de valoración de incapacidad laboral para médicos de atención primaria",
+      "url": "NULL",
+      "source": "ENMT - Instituto de Salud Carlos III"
+    },
+    {
+      "id": "12",
+      "title": "Incapacidad Temporal: Manual para el manejo en atención primaria",
+      "url": "NULL",
+      "source": "AMAT"
+    },
+    {
+      "id": "14",
+      "title": "Gestió de la incapacitat temporal - Fullet informatiu",
+      "url": "NULL",
+      "source": "Departament de Salut de Catalunya"
+    },
+    {
+      "id": "16",
+      "title": "Duración máxima de IT y prórrogas",
+      "url": "NULL",
+      "source": "Compilación normativa"
+    },
+    {
+      "id": "17",
+      "title": "Llei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-5364",
+      "source": "Wolters Kluwer / Normativa"
+    },
+    {
+      "id": "18",
+      "title": "Gestión de IT - Departament de Salut",
+      "url": "NULL",
+      "source": "Departament de Salut de Catalunya"
+    },
+    {
+      "id": "19",
+      "title": "Gestió de la IT en l'Àmbit Hospitalari - Catalunya (ICS / Canal Salut)",
+      "url": "https://canalsalut.gencat.cat/ca/salut-a-z/a/avaluacions-mediques/baixa-medica/gestio-ingres-hospitalari/",
+      "source": "Institut Català de la Salut"
+    },
+    {
+      "id": "20",
+      "title": "Curso de formación: Incapacitats Temporals",
+      "url": "NULL",
+      "source": "Metges de Catalunya"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\turl\tsource\n11\tGuía de valoración de incapacidad laboral para médicos de atención primaria\tNULL\tENMT - Instituto de Salud Carlos III\n12\tIncapacidad Temporal: Manual para el manejo en atención primaria\tNULL\tAMAT\n14\tGestió de la incapacitat temporal - Fullet informatiu\tNULL\tDepartament de Salut de Catalunya\n16\tDuración máxima de IT y prórrogas\tNULL\tCompilación normativa\n17\tLlei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT\thttps://www.boe.es/buscar/act.php?id=BOE-A-2023-5364\tWolters Kluwer / Normativa\n18\tGestión de IT - Departament de Salut\tNULL\tDepartament de Salut de Catalunya\n19\tGestió de la IT en l'Àmbit Hospitalari - Catalunya (ICS / Canal Salut)\thttps://canalsalut.gencat.cat/ca/salut-a-z/a/avaluacions-mediques/baixa-medica/gestio-ingres-hospitalari/\tInstitut Català de la Salut\n20\tCurso de formación: Incapacitats Temporals\tNULL\tMetges de Catalunya\n",
+  "stderr": "",
+  "execution_time_ms": 351
+}

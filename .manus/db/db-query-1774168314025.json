@@ -1,0 +1,15 @@
+{
+  "query": "SELECT id, title, SUBSTRING(legalBasis, 1, 800) as lb FROM special_cases WHERE category = 'menstruacion' LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, SUBSTRING(legalBasis, 1, 800) as lb FROM special_cases WHERE category = 'menstruacion' LIMIT 5;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "Menstruació incapacitant",
+      "lb": "Reial Decret-llei 5/2023, de 28 de juny. Article 9 que modifica l'article 169 de la Llei General de la Seguretat Social."
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tlb\n1\tMenstruació incapacitant\tReial Decret-llei 5/2023, de 28 de juny. Article 9 que modifica l'article 169 de la Llei General de la Seguretat Social.\n",
+  "stderr": "",
+  "execution_time_ms": 356
+}

@@ -1,0 +1,8 @@
+{
+  "query": "SELECT id, title, url, legal_basis FROM special_cases WHERE title LIKE '%menstrua%' OR title LIKE '%1/2023%' OR legal_basis LIKE '%1/2023%' LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, url, legal_basis FROM special_cases WHERE title LIKE '%menstrua%' OR title LIKE '%1/2023%' OR legal_basis LIKE '%1/2023%' LIMIT 10;",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1054 (42S22) at line 1: Unknown column 'legal_basis' in 'where clause'"
+  ]
+}
