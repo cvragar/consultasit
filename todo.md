@@ -293,3 +293,8 @@
 - [x] Botó PDF a les targetes: ghost → outline amb tooltip "Exportar a PDF"
 - [x] Auditoria completa dels source de tots els documents (BOE, Gencat, INSS, etc.) - 11/12 amb URL oficial
 - [x] Col·lapsar botó PDF en icona a mòbil als diàlegs de detall (CasosEspeciales i Documentos)
+
+## Millores documents (22/03/2026 - tarda)
+- [x] Enriquir document ID 16 (durada màxima IT) amb refs exactes LGSS art. 169, 170, 173, 174, 175 + corregir termini rec. prèvia a 20 dies hàbils
+- [x] Corregir tipus LO 1/2023 (ID 17): guia → ley
+- [x] Crear document RD 295/2009 sobre risc durant l'embaràs i la lactància (ID 90001)

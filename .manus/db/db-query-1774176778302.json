@@ -1,0 +1,30 @@
+{
+  "query": "SELECT id, title, type, source, url, LEFT(content, 200) as content_preview FROM documents WHERE id IN (16, 17);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, type, source, url, LEFT(content, 200) as content_preview FROM documents WHERE id IN (16, 17);",
+  "rows": [
+    {
+      "id": "16",
+      "title": "Duración máxima de IT y prórrogas",
+      "type": "guia",
+      "source": "INSS - Institut Nacional de la Seguretat Social / LGSS",
+      "url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionUtil/44539/43384/44673",
+      "content_preview": "# Duración Máxima de la Incapacidad Temporal y Prórrogas"
+    },
+    {
+      "id": "17",
+      "title": "Llei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT",
+      "type": "guia",
+      "source": "BOE - Agència Estatal Butlletí Oficial de l'Estat",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-5364",
+      "content_preview": "## Resum executiu per al metge de família"
+    }
+  ],
+  "messages": [
+    "## Marco normativo",
+    "La duración de la incapacidad temporal está regulada en el **Real Decreto Legislativo 8/2015** (Ley General de la Segurida",
+    "La **Llei Orgànica 1/2023, de 28 de febrer** (BOE núm. 51, 01/03/2023, en vigor des del **1 de juny de 2023**) introdueix tres noves **situacions especials d"
+  ],
+  "stdout": "id\ttitle\ttype\tsource\turl\tcontent_preview\n16\tDuración máxima de IT y prórrogas\tguia\tINSS - Institut Nacional de la Seguretat Social / LGSS\thttps://www.seg-social.es/wps/portal/wss/internet/InformacionUtil/44539/43384/44673\t# Duración Máxima de la Incapacidad Temporal y Prórrogas\n\n## Marco normativo\n\nLa duración de la incapacidad temporal está regulada en el **Real Decreto Legislativo 8/2015** (Ley General de la Segurida\n17\tLlei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT\tguia\tBOE - Agència Estatal Butlletí Oficial de l'Estat\thttps://www.boe.es/buscar/act.php?id=BOE-A-2023-5364\t## Resum executiu per al metge de família\n\nLa **Llei Orgànica 1/2023, de 28 de febrer** (BOE núm. 51, 01/03/2023, en vigor des del **1 de juny de 2023**) introdueix tres noves **situacions especials d\n",
+  "stderr": "",
+  "execution_time_ms": 371
+}

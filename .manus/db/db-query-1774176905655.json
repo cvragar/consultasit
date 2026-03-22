@@ -1,0 +1,17 @@
+{
+  "query": "SELECT id, title, type, source, LEFT(content, 100) as content_preview, publicationYear FROM documents WHERE id IN (16, 17) OR title LIKE '%295/2009%' ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, type, source, LEFT(content, 100) as content_preview, publicationYear FROM documents WHERE id IN (16, 17) OR title LIKE '%295/2009%' ORDER BY id;",
+  "rows": [],
+  "messages": [
+    "16\tDuración máxima de IT y prórrogas\tguia\tINSS - Institut Nacional de la Seguretat Social / LGSS\t# Duración Máxima de la Incapacidad Temporal y Prórrogas",
+    "## Marco normativo",
+    "La duración de la inca\t2024",
+    "17\tLlei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT\tley\tBOE - Agència Estatal Butlletí Oficial de l'Estat\t## Resum executiu per al metge de família",
+    "La **Llei Orgànica 1/2023, de 28 de febrer** (BOE núm. 51\t2023",
+    "90001\tRD 295/2009 - Prestació per risc durant l'embaràs i la lactància natural\tdecreto\tBOE - Ministeri de Treball i Immigració\t# Reial Decret 295/2009, de 6 de març",
+    "## Prestació per risc durant l'embaràs i risc durant la lactàn\t2009"
+  ],
+  "stdout": "id\ttitle\ttype\tsource\tcontent_preview\tpublicationYear\n16\tDuración máxima de IT y prórrogas\tguia\tINSS - Institut Nacional de la Seguretat Social / LGSS\t# Duración Máxima de la Incapacidad Temporal y Prórrogas\n\n## Marco normativo\n\nLa duración de la inca\t2024\n17\tLlei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT\tley\tBOE - Agència Estatal Butlletí Oficial de l'Estat\t## Resum executiu per al metge de família\n\nLa **Llei Orgànica 1/2023, de 28 de febrer** (BOE núm. 51\t2023\n90001\tRD 295/2009 - Prestació per risc durant l'embaràs i la lactància natural\tdecreto\tBOE - Ministeri de Treball i Immigració\t# Reial Decret 295/2009, de 6 de març\n## Prestació per risc durant l'embaràs i risc durant la lactàn\t2009\n",
+  "stderr": "",
+  "execution_time_ms": 350
+}

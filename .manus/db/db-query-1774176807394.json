@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE documents SET type = 'ley', title = 'Llei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d''IT', publicationYear = 2023, updatedAt = NOW() WHERE id = 17;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute UPDATE documents SET type = 'ley', title = 'Llei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d''IT', publicationYear = 2023, updatedAt = NOW() WHERE id = 17;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 373
+}
