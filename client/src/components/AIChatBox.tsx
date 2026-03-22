@@ -254,14 +254,14 @@ export function AIChatBox({
 
                     <div
                       className={cn(
-                        "max-w-[80%] rounded-lg px-4 py-2.5",
+                        "max-w-[80%] min-w-0 overflow-x-hidden rounded-lg px-4 py-2.5",
                         message.role === "user"
                           ? "bg-primary text-primary-foreground"
                           : "bg-muted text-foreground"
                       )}
                     >
                       {message.role === "assistant" ? (
-                        <div className="prose prose-sm dark:prose-invert max-w-none">
+                        <div className="prose prose-sm dark:prose-invert max-w-none [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full [&_table]:text-xs [&_th]:whitespace-nowrap [&_td]:align-top [&_td]:break-words">
                           <Streamdown>{message.content}</Streamdown>
                         </div>
                       ) : (
