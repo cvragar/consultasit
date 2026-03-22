@@ -309,7 +309,11 @@
 - [x] Ampliar i traduir al català els casos ID 6-10 amb format enriquit (pluriocupació, presó, estrangers, vacances, recaiguda)
 
 ## Revisió casos ID 11-30 i nou cas recaiguda post-alta ICAM (22/03/2026)
-- [ ] Avaluar contingut actual dels casos ID 11-30 (extensió, qualitat)
-- [ ] Ampliar els casos ID 11-30 que ho necessitin amb format enriquit
-- [ ] Buscar documentació oficial eCap i ICAM sobre formulari IS3 i recaiguda post-alta ICAM
-- [ ] Crear cas especial: recaiguda post-alta de l'ICAM (procediment IS3 eCap)
+- [x] Avaluar contingut actual dels casos ID 11-30 (extensió, qualitat) - ja estaven ben desenvolupats
+- [x] Ampliar els casos ID 11-30 que ho necessitin amb format enriquit - no necessari
+- [x] Buscar documentació oficial eCap i ICAM sobre formulari IS3 i recaiguda post-alta ICAM
+- [x] Crear cas especial ID 90007: recaiguda post-alta de l'ICAM (procediment IS3 eCap) - 3 escenaris, 4 exemples
+
+## Suggeriment xat recaiguda ICAM i cas IT + permís parental (22/03/2026)
+- [ ] Afegir suggeriment ràpid al xat sobre recaiguda post-alta de l'ICAM (IS3)
+- [ ] Crear cas especial IT i permís parental (16 setmanes) - compatibilitat IT prèvia al part

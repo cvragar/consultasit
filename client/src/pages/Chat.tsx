@@ -65,6 +65,8 @@ const QUICK_SUGGESTIONS = [
   "Com pot reclamar un pacient l'alta de la mútua per accident de treball?",
   "Quin termini té el pacient per impugnar una alta del metge de família a Catalunya?",
   "La mútua ha proposat l'alta a l'ICAM, el metge de família ha discrepat però l'ICAM confirma l'alta: com pot reclamar el pacient?",
+  "Recaiguda post-alta de l'ICAM: com tramitar la nova baixa a través del formulari IS3 de l'eCap?",
+  "IT i permís parental (16 setmanes): què passa amb la IT si la mare està de baixa quan arriba el part?",
 ];
 
 export default function Chat() {
