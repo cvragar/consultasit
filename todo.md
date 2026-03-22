@@ -281,3 +281,5 @@
 - [x] Targeta Reclamacions a la pàgina d'inici (features grid)
 - [x] Suggeriments ràpids al xat sobre reclamacions (2 nous)
 - [x] Corregir títol de la pestanya del navegador en català
+- [x] Eliminar badges d'urgència de la pàgina de Reclamacions
+- [x] Corregir títol de la pestanya (VITE_APP_TITLE) en català
