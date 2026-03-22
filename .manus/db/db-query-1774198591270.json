@@ -1,0 +1,9 @@
+{
+  "query": "SELECT id, title, category, LENGTH(description) as desc_len, LENGTH(legalBasis) as legal_len, LENGTH(`procedure`) as proc_len, LENGTH(examples) as ex_len FROM special_cases WHERE id BETWEEN 11 AND 30 ORDER BY id",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, category, LENGTH(description) as desc_len, LENGTH(legalBasis) as legal_len, LENGTH(`procedure`) as proc_len, LENGTH(examples) as ex_len FROM special_cases WHERE id BETWEEN 11 AND 30 ORDER BY id",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 460
+}

@@ -307,3 +307,9 @@
 - [x] Avaluar contingut actual dels casos ID 1-10 (idioma, extensió, qualitat) - tots en català però molt breus
 - [x] Ampliar i traduir al català els casos ID 1-5 amb format enriquit (menstruació, IVE, setmana 39, donació òrgans, baixes retroactives)
 - [x] Ampliar i traduir al català els casos ID 6-10 amb format enriquit (pluriocupació, presó, estrangers, vacances, recaiguda)
+
+## Revisió casos ID 11-30 i nou cas recaiguda post-alta ICAM (22/03/2026)
+- [ ] Avaluar contingut actual dels casos ID 11-30 (extensió, qualitat)
+- [ ] Ampliar els casos ID 11-30 que ho necessitin amb format enriquit
+- [ ] Buscar documentació oficial eCap i ICAM sobre formulari IS3 i recaiguda post-alta ICAM
+- [ ] Crear cas especial: recaiguda post-alta de l'ICAM (procediment IS3 eCap)

@@ -1,0 +1,127 @@
+{
+  "query": "SELECT id, title, category, LENGTH(description) as desc_len, LENGTH(legalBasis) as legal_len, LENGTH(`procedure`) as proc_len, LENGTH(examples) as ex_len FROM special_cases WHERE id > 10 ORDER BY id",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, category, LENGTH(description) as desc_len, LENGTH(legalBasis) as legal_len, LENGTH(`procedure`) as proc_len, LENGTH(examples) as ex_len FROM special_cases WHERE id > 10 ORDER BY id",
+  "rows": [
+    {
+      "id": "30001",
+      "title": "Accident de treball en treballador autònom (RETA)",
+      "category": "accident_treball",
+      "desc_len": "245",
+      "legal_len": "292",
+      "proc_len": "809",
+      "ex_len": "1542"
+    },
+    {
+      "id": "30002",
+      "title": "Accident de treball en treballador en situació de pluriocupació",
+      "category": "accident_treball",
+      "desc_len": "282",
+      "legal_len": "378",
+      "proc_len": "1163",
+      "ex_len": "1814"
+    },
+    {
+      "id": "30003",
+      "title": "TRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball",
+      "category": "accident_treball",
+      "desc_len": "266",
+      "legal_len": "416",
+      "proc_len": "1224",
+      "ex_len": "1172"
+    },
+    {
+      "id": "30004",
+      "title": "Accident in itinere per a autònoms amb múltiples llocs de treball declarats",
+      "category": "accident_treball",
+      "desc_len": "4576",
+      "legal_len": "204",
+      "proc_len": "1071",
+      "ex_len": "2174"
+    },
+    {
+      "id": "60001",
+      "title": "Accident in itinere en treballadors assalariats amb contracte de teletreball parcial",
+      "category": "accident_treball",
+      "desc_len": "666",
+      "legal_len": "989",
+      "proc_len": "1040",
+      "ex_len": "943"
+    },
+    {
+      "id": "70001",
+      "title": "Pluriactivitat: treballador simultàniament autònom (RETA) i assalariat (Règim General)",
+      "category": "pluriempleo",
+      "desc_len": "671",
+      "legal_len": "2353",
+      "proc_len": "2876",
+      "ex_len": "3919"
+    },
+    {
+      "id": "80001",
+      "title": "Malaltia professional en personal sanitari: punxada accidental",
+      "category": "accident_treball",
+      "desc_len": "1793",
+      "legal_len": "1454",
+      "proc_len": "2030",
+      "ex_len": "2535"
+    },
+    {
+      "id": "90001",
+      "title": "IT durant embaràs de risc vs. prestació per risc durant l'embaràs",
+      "category": "embarazo",
+      "desc_len": "1574",
+      "legal_len": "895",
+      "proc_len": "1926",
+      "ex_len": "1619"
+    },
+    {
+      "id": "90002",
+      "title": "Reducció de jornada per guarda legal i IT: càlcul de la base reguladora",
+      "category": "otro",
+      "desc_len": "1582",
+      "legal_len": "1181",
+      "proc_len": "1784",
+      "ex_len": "1820"
+    },
+    {
+      "id": "90003",
+      "title": "IT durant un ERTE/ERTO: qui paga i com es gestiona",
+      "category": "otro",
+      "desc_len": "1637",
+      "legal_len": "865",
+      "proc_len": "1433",
+      "ex_len": "1617"
+    },
+    {
+      "id": "90004",
+      "title": "Prestació per risc durant la lactància natural: diferències amb la IT",
+      "category": "lactancia",
+      "desc_len": "1449",
+      "legal_len": "1090",
+      "proc_len": "1639",
+      "ex_len": "1839"
+    },
+    {
+      "id": "90005",
+      "title": "IT prèvia al part i permís per naixement i cura de menor (16 setmanes)",
+      "category": "embarazo",
+      "desc_len": "1626",
+      "legal_len": "1079",
+      "proc_len": "1978",
+      "ex_len": "2313"
+    },
+    {
+      "id": "90006",
+      "title": "IT en teletreball: accident laboral vs. contingència comuna",
+      "category": "accident_treball",
+      "desc_len": "2425",
+      "legal_len": "1717",
+      "proc_len": "1569",
+      "ex_len": "2256"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tcategory\tdesc_len\tlegal_len\tproc_len\tex_len\n30001\tAccident de treball en treballador autònom (RETA)\taccident_treball\t245\t292\t809\t1542\n30002\tAccident de treball en treballador en situació de pluriocupació\taccident_treball\t282\t378\t1163\t1814\n30003\tTRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball\taccident_treball\t266\t416\t1224\t1172\n30004\tAccident in itinere per a autònoms amb múltiples llocs de treball declarats\taccident_treball\t4576\t204\t1071\t2174\n60001\tAccident in itinere en treballadors assalariats amb contracte de teletreball parcial\taccident_treball\t666\t989\t1040\t943\n70001\tPluriactivitat: treballador simultàniament autònom (RETA) i assalariat (Règim General)\tpluriempleo\t671\t2353\t2876\t3919\n80001\tMalaltia professional en personal sanitari: punxada accidental\taccident_treball\t1793\t1454\t2030\t2535\n90001\tIT durant embaràs de risc vs. prestació per risc durant l'embaràs\tembarazo\t1574\t895\t1926\t1619\n90002\tReducció de jornada per guarda legal i IT: càlcul de la base reguladora\totro\t1582\t1181\t1784\t1820\n90003\tIT durant un ERTE/ERTO: qui paga i com es gestiona\totro\t1637\t865\t1433\t1617\n90004\tPrestació per risc durant la lactància natural: diferències amb la IT\tlactancia\t1449\t1090\t1639\t1839\n90005\tIT prèvia al part i permís per naixement i cura de menor (16 setmanes)\tembarazo\t1626\t1079\t1978\t2313\n90006\tIT en teletreball: accident laboral vs. contingència comuna\taccident_treball\t2425\t1717\t1569\t2256\n",
+  "stderr": "",
+  "execution_time_ms": 361
+}

@@ -94,10 +94,10 @@ describe("Cas especial IT en teletreball (ID 90006)", () => {
     expect(chatContent).toContain("accident de treball");
   });
 
-  it("el total de casos especials és 23", async () => {
+  it("el total de casos especials és 24", async () => {
     const [rows] = await connection.execute<mysql.RowDataPacket[]>(
       "SELECT COUNT(*) as total FROM special_cases"
     );
-    expect(rows[0].total).toBe(23);
+    expect(rows[0].total).toBe(24);
   });
 });
