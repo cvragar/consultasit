@@ -64,6 +64,7 @@ const QUICK_SUGGESTIONS = [
   "IT en teletreball: quan es considera accident de treball i quan contingència comuna?",
   "Com pot reclamar un pacient l'alta de la mútua per accident de treball?",
   "Quin termini té el pacient per impugnar una alta del metge de família a Catalunya?",
+  "La mútua ha proposat l'alta a l'ICAM, el metge de família ha discrepat però l'ICAM confirma l'alta: com pot reclamar el pacient?",
 ];
 
 export default function Chat() {

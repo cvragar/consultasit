@@ -211,6 +211,85 @@ const VIES = [
     urlLabel: "Tràmit Seguretat Social",
   },
   {
+    id: "icam-proposta-mutua",
+    icon: Shield,
+    color: "text-rose-600",
+    bgColor: "bg-rose-50",
+    borderColor: "border-l-rose-500",
+    badgeColor: "bg-rose-100 text-rose-800",
+    title: "Alta per proposta de mútua confirmada per l'ICAM (<365 dies)",
+    subtitle: "Reclamació administrativa prèvia — ICAM / Dep. Salut (Catalunya)",
+    termini: "11 dies hàbils",
+    organisme: "ICAM / Dep. Salut",
+    urgencia: "Alta",
+    resum:
+      "Escenari específic: la mútua presenta una proposta motivada d'alta a l'ICAM; el metge de família discrepa i confirma la baixa; però l'ICAM no accepta la discrepància i dicta l'alta efectiva. En aquest cas, l'alta l'ha emès l'ICAM (no la mútua directament), de manera que la via de reclamació és la mateixa que per a qualsevol alta de l'ICAM: reclamació administrativa prèvia al Departament de Salut en 11 dies hàbils.",
+    passos: [
+      {
+        num: 1,
+        titol: "Entendre qui ha emès l'alta",
+        desc: "En la proposta motivada d'alta de la mútua, l'alta efectiva la dicta sempre l'ICAM (no la mútua). Per tant, la via de reclamació és contra l'alta de l'ICAM, no contra la mútua. L'alta genera efectes l'endemà de la seva emissió per l'ICAM.",
+      },
+      {
+        num: 2,
+        titol: "Presentar la reclamació administrativa prèvia (11 dies hàbils)",
+        desc: "El treballador disposa d'11 dies hàbils des de la notificació de l'alta per presentar una reclamació administrativa prèvia adreçada a la Direcció General d'Ordenació i Regulació Sanitària del Departament de Salut. Es pot fer per internet (formulari Gencat) o presencialment en qualsevol registre oficial.",
+      },
+      {
+        num: 3,
+        titol: "Reincorporació mentre es recorre",
+        desc: "IMPORTANT: La reclamació NO suspèn l'alta. El treballador ha de reincorporar-se al treball l'endemà de l'alta mentre s'espera la resolució. Si no ho fa, pot ser considerat absència injustificada. Excepció: si el metge de família emet un nou part de baixa per recaiguda o nova patologia, el treballador pot continuar de baixa.",
+      },
+      {
+        num: 4,
+        titol: "Revisió per l'ICAM (nova avaluació)",
+        desc: "L'ICAM revisa la reclamació. Pot citar el treballador per a un nou reconeixement mèdic. Si l'ICAM considera que la reclamació és fonamentada, pot revocar l'alta i emetre un nou part de baixa amb efectes retroactius des de la data de l'alta.",
+      },
+      {
+        num: 5,
+        titol: "Si la reclamació és denegada → via judicial",
+        desc: "Si l'ICAM confirma l'alta (o no respon), el treballador pot presentar demanda al Jutjat Social en el termini de 30 dies hàbils des de la notificació de la resolució denegatòria (o des que s'esgota el termini de silenci administratiu). La demanda judicial pot sol·licitar la nul·litat de l'alta i el reconeixement de la prestació d'IT.",
+      },
+      {
+        num: 6,
+        titol: "Alternativa: nova baixa per recaiguda",
+        desc: "Si el metge de família considera que el pacient no està en condicions de treballar, pot emetre un nou part de baixa per recaiguda (mateixa o similar patologia, dins dels 180 dies naturals). En aquest cas, el procés continua com una recaiguda del mateix procés d'IT. Si la recaiguda és per la mateixa patologia, l'INSS (a través de la mútua o el SPS) pot qüestionar si és realment una recaiguda o un nou procés.",
+      },
+    ],
+    documentacio: [
+      "DNI/NIE de la persona sol·licitant",
+      "Alta mèdica emesa per l'ICAM (no per la mútua)",
+      "Informe del metge de família on consta la discrepància amb la proposta d'alta",
+      "Historial de parts de confirmació de la baixa",
+      "Informes d'especialistes que avalin la continuació de la IT",
+      "Documentació de la proposta motivada d'alta de la mútua (si es disposa)",
+    ],
+    consells: [
+      "Clau: l'alta l'emet l'ICAM, no la mútua. La via correcta és la reclamació al Dep. de Salut (11 dies hàbils), no la revisió a l'INSS.",
+      "El metge de família ha de documentar detalladament la discrepància: diagnòstic, tractament actiu, limitacions funcionals i pronòstic.",
+      "Si el pacient té un especialista que no estigui d'acord amb l'alta, demana un informe escrit urgent per adjuntar a la reclamació.",
+      "La reclamació NO suspèn la reincorporació. Si el pacient no pot treballar, el metge de família pot emetre un nou part de baixa per recaiguda o nova patologia.",
+      "Si el pacient es reincorpora i empitjora, el metge de família pot emetre un nou part de baixa per recaiguda dins dels 180 dies naturals.",
+      "En casos on la mútua ha presentat la proposta d'alta, és recomanable que el metge de família contacti directament amb l'ICAM per explicar la situació clínica.",
+      "Per a casos complexos o si hi ha sospita de pressió indeguda de la mútua, es recomana que el pacient consulti un advocat laboralista.",
+    ],
+    baseLegal: [
+      "Art. 170.1 LGSS (RDLeg 8/2015): competències de l'INSS i del SPS fins als 365 dies",
+      "RD 1430/2009, d'11 de setembre: procediment de proposta motivada d'alta de les mútues",
+      "Art. 71.2 Llei 36/2011, de 10 d'octubre: reclamació prèvia a la via judicial social",
+      "Decret 196/2010, de 14 de desembre: inspecció mèdica de l'ICAM a Catalunya",
+      "Canal Salut (Gencat): \"Proposta motivada d'alta mèdica\" — procediment de 5 dies",
+    ],
+    contacte: [
+      { label: "ICAM Barcelona", valor: "93 511 94 00" },
+      { label: "ICAM Girona", valor: "97 294 23 22" },
+      { label: "ICAM Lleida", valor: "97 325 43 61" },
+      { label: "ICAM Tarragona", valor: "97 721 36 12" },
+    ],
+    url: "https://tramits.gencat.cat/ca/tramits/tramits-temes/Reclamacio-administrativa-previa-a-la-via-judicial-social-en-materia-dincapacitats-temporals",
+    urlLabel: "Tràmit Gencat — Reclamació administrativa prèvia",
+  },
+  {
     id: "determinacio-contingencies",
     icon: Scale,
     color: "text-purple-600",
@@ -343,6 +422,12 @@ export default function Reclamacions() {
                   <td className="px-4 py-3">10 dies hàbils</td>
                   <td className="px-4 py-3"><span className="text-green-600 font-medium">Sí (10 dies)</span></td>
                   <td className="px-4 py-3">INSS</td>
+                </tr>
+                <tr className="border-b hover:bg-slate-50">
+                  <td className="px-4 py-3 font-medium text-rose-700">Alta ICAM (proposta mútua, &lt;365 dies)</td>
+                  <td className="px-4 py-3">11 dies hàbils</td>
+                  <td className="px-4 py-3"><span className="text-red-600 font-medium">No</span></td>
+                  <td className="px-4 py-3">ICAM / Dep. Salut</td>
                 </tr>
                 <tr className="border-b hover:bg-slate-50">
                   <td className="px-4 py-3 font-medium text-green-700">Alta INSS (&gt;365 dies CC)</td>

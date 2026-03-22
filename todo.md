@@ -284,3 +284,5 @@
 - [x] Eliminar badges d'urgència de la pàgina de Reclamacions
 - [x] Corregir títol de la pestanya (VITE_APP_TITLE) en català
 - [x] Botó Reclamacions al hero de la pàgina d'inici
+- [x] Afegir via impugnació alta ICAM < 365 dies a Reclamacions (proposta mútua confirmada per ICAM)
+- [x] Afegir suggeriment ràpid al xat sobre proposta d'alta de mútua confirmada per ICAM (17 suggeriments en total)
