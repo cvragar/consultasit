@@ -581,20 +581,29 @@ export default function Documentos() {
                       />
                       {isFavorite(selectedDocument.id) ? "Treure de favorits" : "Afegir a favorits"}
                     </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={(e) => handleExportPDF(selectedDocument.id, e)}
-                      disabled={exportPDF.isPending}
-                      className="gap-2"
-                    >
-                      {exportPDF.isPending ? (
-                        <Loader2 className="h-4 w-4 animate-spin" />
-                      ) : (
-                        <Download className="h-4 w-4" />
-                      )}
-                      Exportar PDF
-                    </Button>
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={(e) => handleExportPDF(selectedDocument.id, e)}
+                            disabled={exportPDF.isPending}
+                            className="gap-2"
+                          >
+                            {exportPDF.isPending ? (
+                              <Loader2 className="h-4 w-4 animate-spin" />
+                            ) : (
+                              <Download className="h-4 w-4" />
+                            )}
+                            <span className="hidden sm:inline">Exportar PDF</span>
+                          </Button>
+                        </TooltipTrigger>
+                        <TooltipContent side="bottom" className="sm:hidden">
+                          <p>Exportar a PDF</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                   </div>
                 </div>
                 <DialogTitle className="text-2xl">{selectedDocument.title}</DialogTitle>

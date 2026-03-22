@@ -287,3 +287,9 @@
 - [x] Afegir via impugnació alta ICAM < 365 dies a Reclamacions (proposta mútua confirmada per ICAM)
 - [x] Afegir suggeriment ràpid al xat sobre proposta d'alta de mútua confirmada per ICAM (17 suggeriments en total)
 - [x] Millorar hero de Reclamacions: subtítol amb les 5 vies + banner destacat escenari proposta mútua/ICAM
+
+## Auditoria i millores visuals (22/03/2026)
+- [x] Corregir source LO 1/2023: Wolters Kluwer → BOE oficial
+- [x] Botó PDF a les targetes: ghost → outline amb tooltip "Exportar a PDF"
+- [x] Auditoria completa dels source de tots els documents (BOE, Gencat, INSS, etc.) - 11/12 amb URL oficial
+- [x] Col·lapsar botó PDF en icona a mòbil als diàlegs de detall (CasosEspeciales i Documentos)

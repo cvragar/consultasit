@@ -1,0 +1,106 @@
+{
+  "query": "SELECT id, title, url, source, type, publicationYear FROM documents ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, url, source, type, publicationYear FROM documents ORDER BY id;",
+  "rows": [
+    {
+      "id": "11",
+      "title": "Guía de valoración de incapacidad laboral para médicos de atención primaria",
+      "url": "NULL",
+      "source": "ENMT - Instituto de Salud Carlos III",
+      "type": "guia",
+      "publicationYear": "2012"
+    },
+    {
+      "id": "12",
+      "title": "Incapacidad Temporal: Manual para el manejo en atención primaria",
+      "url": "NULL",
+      "source": "AMAT",
+      "type": "manual",
+      "publicationYear": "2014"
+    },
+    {
+      "id": "13",
+      "title": "Tiempos estándar de Incapacidad Temporal",
+      "url": "NULL",
+      "source": "INSS",
+      "type": "guia",
+      "publicationYear": "2023"
+    },
+    {
+      "id": "14",
+      "title": "Gestió de la incapacitat temporal - Fullet informatiu",
+      "url": "NULL",
+      "source": "Departament de Salut de Catalunya",
+      "type": "guia",
+      "publicationYear": "2022"
+    },
+    {
+      "id": "15",
+      "title": "Reial Decret 625/2014 (BOE-A-2014-7684)",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2014-7684",
+      "source": "BOE",
+      "type": "decreto",
+      "publicationYear": "2014"
+    },
+    {
+      "id": "16",
+      "title": "Duración máxima de IT y prórrogas",
+      "url": "NULL",
+      "source": "Compilación normativa",
+      "type": "guia",
+      "publicationYear": "2024"
+    },
+    {
+      "id": "17",
+      "title": "Llei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-5364",
+      "source": "BOE - Agència Estatal Butlletí Oficial de l'Estat",
+      "type": "guia",
+      "publicationYear": "2023"
+    },
+    {
+      "id": "18",
+      "title": "Gestión de IT - Departament de Salut",
+      "url": "NULL",
+      "source": "Departament de Salut de Catalunya",
+      "type": "guia",
+      "publicationYear": "2023"
+    },
+    {
+      "id": "19",
+      "title": "Gestió de la IT en l'Àmbit Hospitalari - Catalunya (ICS / Canal Salut)",
+      "url": "https://canalsalut.gencat.cat/ca/salut-a-z/a/avaluacions-mediques/baixa-medica/gestio-ingres-hospitalari/",
+      "source": "Institut Català de la Salut",
+      "type": "guia",
+      "publicationYear": "2024"
+    },
+    {
+      "id": "20",
+      "title": "Curso de formación: Incapacitats Temporals",
+      "url": "NULL",
+      "source": "Metges de Catalunya",
+      "type": "guia",
+      "publicationYear": "2017"
+    },
+    {
+      "id": "30003",
+      "title": "Reial Decret 1299/2006, de 10 de novembre (BOE-A-2006-22169) - Quadre de malalties professionals",
+      "url": "https://d2xsxph8kpxj0f.cloudfront.net/310519663242490001/DirVLPm6UeFJi3utFGbgZe/BOE-A-2006-22169_b54ceec9.pdf",
+      "source": "BOE - Ministeri de Treball i Assumptes Socials",
+      "type": "decreto",
+      "publicationYear": "2006"
+    },
+    {
+      "id": "60001",
+      "title": "Reial Decret 1060/2022, de 27 de desembre (BOE-A-2023-160) - Gestió electrònica dels parts d'IT",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-160",
+      "source": "BOE - Ministeri d'Inclusió, Seguretat Social i Migracions",
+      "type": "decreto",
+      "publicationYear": "2023"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\turl\tsource\ttype\tpublicationYear\n11\tGuía de valoración de incapacidad laboral para médicos de atención primaria\tNULL\tENMT - Instituto de Salud Carlos III\tguia\t2012\n12\tIncapacidad Temporal: Manual para el manejo en atención primaria\tNULL\tAMAT\tmanual\t2014\n13\tTiempos estándar de Incapacidad Temporal\tNULL\tINSS\tguia\t2023\n14\tGestió de la incapacitat temporal - Fullet informatiu\tNULL\tDepartament de Salut de Catalunya\tguia\t2022\n15\tReial Decret 625/2014 (BOE-A-2014-7684)\thttps://www.boe.es/buscar/act.php?id=BOE-A-2014-7684\tBOE\tdecreto\t2014\n16\tDuración máxima de IT y prórrogas\tNULL\tCompilación normativa\tguia\t2024\n17\tLlei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT\thttps://www.boe.es/buscar/act.php?id=BOE-A-2023-5364\tBOE - Agència Estatal Butlletí Oficial de l'Estat\tguia\t2023\n18\tGestión de IT - Departament de Salut\tNULL\tDepartament de Salut de Catalunya\tguia\t2023\n19\tGestió de la IT en l'Àmbit Hospitalari - Catalunya (ICS / Canal Salut)\thttps://canalsalut.gencat.cat/ca/salut-a-z/a/avaluacions-mediques/baixa-medica/gestio-ingres-hospitalari/\tInstitut Català de la Salut\tguia\t2024\n20\tCurso de formación: Incapacitats Temporals\tNULL\tMetges de Catalunya\tguia\t2017\n30003\tReial Decret 1299/2006, de 10 de novembre (BOE-A-2006-22169) - Quadre de malalties professionals\thttps://d2xsxph8kpxj0f.cloudfront.net/310519663242490001/DirVLPm6UeFJi3utFGbgZe/BOE-A-2006-22169_b54ceec9.pdf\tBOE - Ministeri de Treball i Assumptes Socials\tdecreto\t2006\n60001\tReial Decret 1060/2022, de 27 de desembre (BOE-A-2023-160) - Gestió electrònica dels parts d'IT\thttps://www.boe.es/buscar/act.php?id=BOE-A-2023-160\tBOE - Ministeri d'Inclusió, Seguretat Social i Migracions\tdecreto\t2023\n",
+  "stderr": "",
+  "execution_time_ms": 392
+}
