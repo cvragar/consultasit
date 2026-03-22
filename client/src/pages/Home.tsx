@@ -48,6 +48,15 @@ export default function Home() {
       bgColor: "bg-purple-50",
       borderColor: "border-l-purple-500",
     },
+    {
+      icon: Gavel,
+      title: "Reclamacions",
+      description: "Com impugnar una alta mèdica (ICAM, mútua, INSS) i sol·licitar la determinació de contingències",
+      href: "/reclamacions",
+      color: "text-slate-600",
+      bgColor: "bg-slate-100",
+      borderColor: "border-l-slate-500",
+    },
   ];
 
   return (
@@ -221,7 +230,7 @@ export default function Home() {
 
       {/* Features Grid */}
       <section className="container py-8 sm:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (

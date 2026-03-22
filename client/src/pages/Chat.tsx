@@ -62,6 +62,8 @@ const QUICK_SUGGESTIONS = [
   "Quins són els terminis de confirmació de la baixa per a cada grup de processos (RD 625/2014)?",
   "Com es gestiona la IT quan el pacient és ingressat a l'hospital?",
   "IT en teletreball: quan es considera accident de treball i quan contingència comuna?",
+  "Com pot reclamar un pacient l'alta de la mútua per accident de treball?",
+  "Quin termini té el pacient per impugnar una alta del metge de família a Catalunya?",
 ];
 
 export default function Chat() {

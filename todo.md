@@ -278,3 +278,6 @@
 - [x] Pàgina de Reclamacions i Recursos (4 vies: ICAM, mútua AT, INSS CC, determinació contingències)
 - [x] Link Reclamacions a la navegació (desktop i mòbil)
 - [x] Tests per a la pàgina de Reclamacions (21 tests)
+- [x] Targeta Reclamacions a la pàgina d'inici (features grid)
+- [x] Suggeriments ràpids al xat sobre reclamacions (2 nous)
+- [x] Corregir títol de la pestanya del navegador en català
