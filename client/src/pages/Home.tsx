@@ -211,7 +211,7 @@ export default function Home() {
           <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">
             Resol dubtes sobre processos d'IT, normativa estatal i autonòmica, casos especials i situacions complexes
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
             <Link href="/chat" className="w-full sm:w-auto">
               <Button size="lg" className="w-full sm:w-auto text-base">
                 <MessageSquare className="h-5 w-5 mr-2" />
@@ -222,6 +222,12 @@ export default function Home() {
               <Button size="lg" variant="outline" className="w-full sm:w-auto text-base">
                 <AlertCircle className="h-5 w-5 mr-2" />
                 Casos especials
+              </Button>
+            </Link>
+            <Link href="/reclamacions" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto text-base border-slate-400 text-slate-700 hover:bg-slate-100">
+                <Gavel className="h-5 w-5 mr-2" />
+                Reclamacions
               </Button>
             </Link>
           </div>
