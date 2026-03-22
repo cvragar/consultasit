@@ -298,3 +298,7 @@
 - [x] Enriquir document ID 16 (durada màxima IT) amb refs exactes LGSS art. 169, 170, 173, 174, 175 + corregir termini rec. prèvia a 20 dies hàbils
 - [x] Corregir tipus LO 1/2023 (ID 17): guia → ley
 - [x] Crear document RD 295/2009 sobre risc durant l'embaràs i la lactància (ID 90001)
+
+## Millores LO 1/2023 i Markdown (22/03/2026 - nit)
+- [x] Ampliar document ID 17 (LO 1/2023) amb text literal arts. 144.4, 169.1a, 169.2, 172, 173 LGSS (Disposició Final Tercera LO 1/2023) + protocol català ASSIR
+- [x] Corregir errors visuals Markdown: afegida funció normalitzeMd() a CasosEspeciales.tsx i Documentos.tsx (converteïx "; " en salts de línia reals)

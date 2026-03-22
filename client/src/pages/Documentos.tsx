@@ -65,6 +65,17 @@ const typeColors: Record<string, string> = {
   otro: "bg-gray-100 text-gray-800",
 };
 
+/**
+ * Normalitza el contingut Markdown de la BD:
+ * Alguns camps usen "; " com a separador de línies (artefacte de la inserció SQL).
+ * Aquesta funció els converteix en salts de línia reals perquè Streamdown els renderitzi correctament.
+ */
+function normalitzeMd(text: string | null | undefined): string {
+  if (!text) return "";
+  if (text.includes("\n")) return text;
+  return text.replace(/; /g, "\n");
+}
+
 const jurisdictionLabels: Record<string, string> = {
   estatal: "Estatal",
   autonomica: "Autonòmica",
@@ -653,7 +664,7 @@ export default function Documentos() {
                 )}
 
                 <div className="prose prose-sm max-w-none">
-                  <Streamdown>{selectedDocument.content}</Streamdown>
+                  <Streamdown>{normalitzeMd(selectedDocument.content)}</Streamdown>
                 </div>
 
                 {selectedDocument.url && (

@@ -121,6 +121,19 @@ function stripMarkdown(text: string): string {
     .trim();
 }
 
+/**
+ * Normalitza el contingut Markdown de la BD:
+ * Alguns camps usen "; " com a separador de línies (artefacte de la inserció SQL).
+ * Aquesta funció els converteix en salts de línia reals perquè Streamdown els renderitzi correctament.
+ */
+function normalitzeMd(text: string | null | undefined): string {
+  if (!text) return "";
+  // Si el text ja conté salts de línia reals, no cal fer res
+  if (text.includes("\n")) return text;
+  // Reemplaça "; " per salt de línia (separador usat en inserció SQL)
+  return text.replace(/; /g, "\n");
+}
+
 /** Retorna true si el cas s'ha creat en els últims N dies */
 function isNew(createdAt: Date, days = 30): boolean {
   const now = new Date();
@@ -655,7 +668,7 @@ export default function CasosEspeciales() {
 
               <div className="space-y-6 mt-4">
                 <div className="prose prose-sm max-w-none bg-orange-50 border border-orange-200 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
-                  <Streamdown>{selectedCase.description}</Streamdown>
+                  <Streamdown>{normalitzeMd(selectedCase.description)}</Streamdown>
                 </div>
 
                 {selectedCase.legalBasis && (
@@ -665,7 +678,7 @@ export default function CasosEspeciales() {
                       Base Legal
                     </h3>
                     <div className="prose prose-sm max-w-none bg-blue-50 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
-                      <Streamdown>{selectedCase.legalBasis}</Streamdown>
+                      <Streamdown>{normalitzeMd(selectedCase.legalBasis)}</Streamdown>
                     </div>
                   </div>
                 )}
@@ -677,7 +690,7 @@ export default function CasosEspeciales() {
                       Procediment
                     </h3>
                     <div className="prose prose-sm max-w-none bg-green-50 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
-                      <Streamdown>{selectedCase.procedure}</Streamdown>
+                      <Streamdown>{normalitzeMd(selectedCase.procedure)}</Streamdown>
                     </div>
                   </div>
                 )}
@@ -689,7 +702,7 @@ export default function CasosEspeciales() {
                       Exemples Pràctics
                     </h3>
                     <div className="prose prose-sm max-w-none bg-purple-50 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
-                      <Streamdown>{selectedCase.examples}</Streamdown>
+                      <Streamdown>{normalitzeMd(selectedCase.examples)}</Streamdown>
                     </div>
                   </div>
                 )}

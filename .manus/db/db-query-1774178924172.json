@@ -1,0 +1,25 @@
+{
+  "query": "SELECT id, title, SUBSTRING(`procedure`, 1, 500) as procedure_preview FROM special_cases WHERE `procedure` IS NOT NULL LIMIT 3;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, SUBSTRING(`procedure`, 1, 500) as procedure_preview FROM special_cases WHERE `procedure` IS NOT NULL LIMIT 3;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "Menstruació incapacitant",
+      "procedure_preview": "La baixa l'emet el metge d'atenció primària o ginecòleg del sistema públic de salut. No es requereix període mínim de cotització. La prestació és del 60% de la base reguladora des del primer dia (sense els 3 dies de carència habitual)."
+    },
+    {
+      "id": "2",
+      "title": "Interrupció voluntària de l'embaràs (IVE)",
+      "procedure_preview": "El metge que realitza la IVE emet el part de baixa. Es considera contingència comuna. La durada habitual és de 3-7 dies segons el mètode utilitzat i l'evolució clínica."
+    },
+    {
+      "id": "3",
+      "title": "Gestació a partir de la setmana 39",
+      "procedure_preview": "El metge d'atenció primària o ginecòleg valora la situació laboral i l'estat de la gestant. Es considera contingència comuna. La baixa s'estén fins al part."
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tprocedure_preview\n1\tMenstruació incapacitant\tLa baixa l'emet el metge d'atenció primària o ginecòleg del sistema públic de salut. No es requereix període mínim de cotització. La prestació és del 60% de la base reguladora des del primer dia (sense els 3 dies de carència habitual).\n2\tInterrupció voluntària de l'embaràs (IVE)\tEl metge que realitza la IVE emet el part de baixa. Es considera contingència comuna. La durada habitual és de 3-7 dies segons el mètode utilitzat i l'evolució clínica.\n3\tGestació a partir de la setmana 39\tEl metge d'atenció primària o ginecòleg valora la situació laboral i l'estat de la gestant. Es considera contingència comuna. La baixa s'estén fins al part.\n",
+  "stderr": "",
+  "execution_time_ms": 345
+}
