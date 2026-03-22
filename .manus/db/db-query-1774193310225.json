@@ -1,0 +1,110 @@
+{
+  "query": "SELECT id, title, category, CHAR_LENGTH(description) as desc_len, CHAR_LENGTH(COALESCE(legalBasis,'')) as legal_len, CHAR_LENGTH(COALESCE(`procedure`,'')) as proc_len, CHAR_LENGTH(COALESCE(examples,'')) as ex_len, SUBSTRING(description, 1, 200) as desc_preview FROM special_cases WHERE id BETWEEN 1 AND 10 ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, category, CHAR_LENGTH(description) as desc_len, CHAR_LENGTH(COALESCE(legalBasis,'')) as legal_len, CHAR_LENGTH(COALESCE(`procedure`,'')) as proc_len, CHAR_LENGTH(COALESCE(examples,'')) as ex_len, SUBSTRING(description, 1, 200) as desc_preview FROM special_cases WHERE id BETWEEN 1 AND 10 ORDER BY id;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "Menstruació incapacitant",
+      "category": "menstruacion",
+      "desc_len": "182",
+      "legal_len": "120",
+      "proc_len": "235",
+      "ex_len": "82",
+      "desc_preview": "Des de l'1 de juny de 2023, les dones amb menstruacions incapacitants poden sol·licitar baixa mèdica per IT. Es considera situació d'incapacitat temporal derivada de malaltia comuna."
+    },
+    {
+      "id": "2",
+      "title": "Interrupció voluntària de l'embaràs (IVE)",
+      "category": "embarazo",
+      "desc_len": "93",
+      "legal_len": "111",
+      "proc_len": "168",
+      "ex_len": "95",
+      "desc_preview": "La interrupció voluntària de l'embaràs genera dret a IT des del mateix dia de la intervenció."
+    },
+    {
+      "id": "3",
+      "title": "Gestació a partir de la setmana 39",
+      "category": "embarazo",
+      "desc_len": "136",
+      "legal_len": "64",
+      "proc_len": "156",
+      "ex_len": "92",
+      "desc_preview": "A partir de la setmana 39 de gestació, l'embarassada pot sol·licitar la baixa per IT si el seu estat o activitat laboral ho requereixen."
+    },
+    {
+      "id": "4",
+      "title": "Donació d'òrgans",
+      "category": "donacion_organos",
+      "desc_len": "86",
+      "legal_len": "112",
+      "proc_len": "249",
+      "ex_len": "105",
+      "desc_preview": "La donació d'òrgans en vida genera dret a IT com a contingència d'accident no laboral."
+    },
+    {
+      "id": "5",
+      "title": "Baixes retroactives",
+      "category": "baja_retroactiva",
+      "desc_len": "106",
+      "legal_len": "67",
+      "proc_len": "319",
+      "ex_len": "96",
+      "desc_preview": "Les baixes amb efecte retroactiu només són possibles en situacions excepcionals i degudament justificades."
+    },
+    {
+      "id": "6",
+      "title": "Pluriocupació",
+      "category": "pluriempleo",
+      "desc_len": "134",
+      "legal_len": "72",
+      "proc_len": "255",
+      "ex_len": "144",
+      "desc_preview": "El treballador pluriocupat en IT ha de causar baixa en totes les seves ocupacions, encara que la incapacitat només afecti una d'elles."
+    },
+    {
+      "id": "7",
+      "title": "IT i presó",
+      "category": "prision",
+      "desc_len": "74",
+      "legal_len": "76",
+      "proc_len": "260",
+      "ex_len": "144",
+      "desc_preview": "L'ingrés en presó suspèn la prestació per IT, però no extingeix el procés."
+    },
+    {
+      "id": "8",
+      "title": "IT en estrangers",
+      "category": "extranjeros",
+      "desc_len": "194",
+      "legal_len": "111",
+      "proc_len": "278",
+      "ex_len": "118",
+      "desc_preview": "Els estrangers amb permís de treball tenen els mateixos drets a IT que els espanyols. Els estrangers sense permís de treball no tenen dret a prestació econòmica, però sí a assistència sanitària."
+    },
+    {
+      "id": "9",
+      "title": "Vacances durant la IT",
+      "category": "vacaciones",
+      "desc_len": "132",
+      "legal_len": "126",
+      "proc_len": "286",
+      "ex_len": "130",
+      "desc_preview": "El treballador en IT no pot gaudir de vacances. Si estava de vacances i cau malalt, pot sol·licitar IT i les vacances s'interrompen."
+    },
+    {
+      "id": "10",
+      "title": "Recaiguda en IT",
+      "category": "recaida",
+      "desc_len": "137",
+      "legal_len": "40",
+      "proc_len": "339",
+      "ex_len": "235",
+      "desc_preview": "Es considera recaiguda quan el treballador torna a causar baixa per la mateixa patologia o relacionada en els 180 dies següents a l'alta."
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tcategory\tdesc_len\tlegal_len\tproc_len\tex_len\tdesc_preview\n1\tMenstruació incapacitant\tmenstruacion\t182\t120\t235\t82\tDes de l'1 de juny de 2023, les dones amb menstruacions incapacitants poden sol·licitar baixa mèdica per IT. Es considera situació d'incapacitat temporal derivada de malaltia comuna.\n2\tInterrupció voluntària de l'embaràs (IVE)\tembarazo\t93\t111\t168\t95\tLa interrupció voluntària de l'embaràs genera dret a IT des del mateix dia de la intervenció.\n3\tGestació a partir de la setmana 39\tembarazo\t136\t64\t156\t92\tA partir de la setmana 39 de gestació, l'embarassada pot sol·licitar la baixa per IT si el seu estat o activitat laboral ho requereixen.\n4\tDonació d'òrgans\tdonacion_organos\t86\t112\t249\t105\tLa donació d'òrgans en vida genera dret a IT com a contingència d'accident no laboral.\n5\tBaixes retroactives\tbaja_retroactiva\t106\t67\t319\t96\tLes baixes amb efecte retroactiu només són possibles en situacions excepcionals i degudament justificades.\n6\tPluriocupació\tpluriempleo\t134\t72\t255\t144\tEl treballador pluriocupat en IT ha de causar baixa en totes les seves ocupacions, encara que la incapacitat només afecti una d'elles.\n7\tIT i presó\tprision\t74\t76\t260\t144\tL'ingrés en presó suspèn la prestació per IT, però no extingeix el procés.\n8\tIT en estrangers\textranjeros\t194\t111\t278\t118\tEls estrangers amb permís de treball tenen els mateixos drets a IT que els espanyols. Els estrangers sense permís de treball no tenen dret a prestació econòmica, però sí a assistència sanitària.\n9\tVacances durant la IT\tvacaciones\t132\t126\t286\t130\tEl treballador en IT no pot gaudir de vacances. Si estava de vacances i cau malalt, pot sol·licitar IT i les vacances s'interrompen.\n10\tRecaiguda en IT\trecaida\t137\t40\t339\t235\tEs considera recaiguda quan el treballador torna a causar baixa per la mateixa patologia o relacionada en els 180 dies següents a l'alta.\n",
+  "stderr": "",
+  "execution_time_ms": 419
+}

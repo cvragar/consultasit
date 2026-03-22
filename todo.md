@@ -302,3 +302,8 @@
 ## Millores LO 1/2023 i Markdown (22/03/2026 - nit)
 - [x] Ampliar document ID 17 (LO 1/2023) amb text literal arts. 144.4, 169.1a, 169.2, 172, 173 LGSS (Disposició Final Tercera LO 1/2023) + protocol català ASSIR
 - [x] Corregir errors visuals Markdown: afegida funció normalitzeMd() a CasosEspeciales.tsx i Documentos.tsx (converteïx "; " en salts de línia reals)
+
+## Revisió i ampliació casos especials ID 1-10 (22/03/2026)
+- [x] Avaluar contingut actual dels casos ID 1-10 (idioma, extensió, qualitat) - tots en català però molt breus
+- [x] Ampliar i traduir al català els casos ID 1-5 amb format enriquit (menstruació, IVE, setmana 39, donació òrgans, baixes retroactives)
+- [x] Ampliar i traduir al català els casos ID 6-10 amb format enriquit (pluriocupació, presó, estrangers, vacances, recaiguda)

@@ -1,0 +1,35 @@
+{
+  "query": "SELECT id, title, category FROM special_cases WHERE id BETWEEN 6 AND 10 ORDER BY id",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, category FROM special_cases WHERE id BETWEEN 6 AND 10 ORDER BY id",
+  "rows": [
+    {
+      "id": "6",
+      "title": "Pluriocupació",
+      "category": "pluriempleo"
+    },
+    {
+      "id": "7",
+      "title": "IT i presó",
+      "category": "prision"
+    },
+    {
+      "id": "8",
+      "title": "IT en estrangers",
+      "category": "extranjeros"
+    },
+    {
+      "id": "9",
+      "title": "Vacances durant la IT",
+      "category": "vacaciones"
+    },
+    {
+      "id": "10",
+      "title": "Recaiguda en IT",
+      "category": "recaida"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tcategory\n6\tPluriocupació\tpluriempleo\n7\tIT i presó\tprision\n8\tIT en estrangers\textranjeros\n9\tVacances durant la IT\tvacaciones\n10\tRecaiguda en IT\trecaida\n",
+  "stderr": "",
+  "execution_time_ms": 372
+}
