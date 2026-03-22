@@ -2,7 +2,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MessageSquare, FileText, AlertCircle, Calculator, Shield, LogIn, Star, Menu, X, Stethoscope, HardHat, HeartPulse, ChevronRight, Sparkles } from "lucide-react";
+import { MessageSquare, FileText, AlertCircle, Calculator, Shield, LogIn, Star, Menu, X, Stethoscope, HardHat, HeartPulse, ChevronRight, Sparkles, Gavel } from "lucide-react";
 import { Link } from "wouter";
 import { getLoginUrl } from "@/const";
 import { useState } from "react";
@@ -78,6 +78,12 @@ export default function Home() {
                       Novetats
                     </Button>
                   </Link>
+                  <Link href="/reclamacions">
+                    <Button variant="ghost" size="sm" className="gap-1.5">
+                      <Gavel className="h-4 w-4 text-slate-500" />
+                      Reclamacions
+                    </Button>
+                  </Link>
                   <Link href="/favorits">
                     <Button variant="ghost" size="sm" className="gap-1.5">
                       <Star className="h-4 w-4 text-yellow-500" />
@@ -136,6 +142,12 @@ export default function Home() {
                 <Button variant="ghost" size="sm" className="w-full justify-start gap-2">
                   <Sparkles className="h-4 w-4 text-yellow-500" />
                   Novetats
+                </Button>
+              </Link>
+              <Link href="/reclamacions" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" size="sm" className="w-full justify-start gap-2">
+                  <Gavel className="h-4 w-4 text-slate-500" />
+                  Reclamacions
                 </Button>
               </Link>
               <Link href="/favorits" onClick={() => setMobileMenuOpen(false)}>

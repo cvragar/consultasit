@@ -12,6 +12,7 @@ import Calculadora from "./pages/Calculadora";
 import Admin from "./pages/Admin";
 import Favorits from "./pages/Favorits";
 import Novetats from "./pages/Novetats";
+import Reclamacions from "./pages/Reclamacions";
 
 function Router() {
   return (
@@ -27,6 +28,7 @@ function Router() {
       <Route path={"/admin"} component={Admin} />
       <Route path={"/favorits"} component={Favorits} />
       <Route path={"/novetats"} component={Novetats} />
+      <Route path={"/reclamacions"} component={Reclamacions} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

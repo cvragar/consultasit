@@ -266,3 +266,15 @@
 - [ ] Ampliar document Llei 1/2023 (menstruació incapacitant) amb text complet i protocol català
 - [ ] Crear pàgina de Novetats (últims 30 dies: casos i documents)
 - [x] Corregir desbordament definitiu del diàleg de casos especials (títol llarg + taules en mòbil)
+
+## Pàgina Reclamacions i Recursos
+- [ ] Investigar normativa reclamació alta metge de família (art. 170 LGSS, RD 625/2014)
+- [ ] Investigar normativa reclamació alta ICAM/inspecció mèdica (Catalunya)
+- [ ] Investigar normativa reclamació alta mútua (accident laboral)
+- [ ] Investigar normativa determinació de contingències
+- [ ] Crear dades de reclamacions a la BD
+- [ ] Crear pàgina Reclamacions.tsx amb les 4 vies
+- [ ] Registrar ruta /reclamacions a App.tsx i navegació
+- [x] Pàgina de Reclamacions i Recursos (4 vies: ICAM, mútua AT, INSS CC, determinació contingències)
+- [x] Link Reclamacions a la navegació (desktop i mòbil)
+- [x] Tests per a la pàgina de Reclamacions (21 tests)
