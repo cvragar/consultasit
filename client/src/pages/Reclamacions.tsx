@@ -110,23 +110,23 @@ const VIES = [
       },
       {
         num: 2,
-        titol: "Suspensió de la reincorporació",
-        desc: "IMPORTANT: Durant els 10 dies hàbils des de la sol·licitud, el treballador NO ha de reincorporar-se al treball. La mútua segueix pagant la prestació durant aquest període.",
+        titol: "Suspensió automàtica de la reincorporació",
+        desc: "IMPORTANT: La mera presentació de la sol·licitud de revisió suspèn automàticament els efectes de l'alta (art. 4.3 RD 1430/2009). El treballador NO ha de reincorporar-se al treball fins que l'INSS resolgui. La mútua segueix pagant la prestació en modalitat de pagament delegat durant la tramitació. Cal comunicar l'inici del procediment a l'empresa el mateix dia o el dia hàbil següent.",
       },
       {
         num: 3,
-        titol: "Resolució de l'INSS (7 dies hàbils)",
-        desc: "L'INSS té 7 dies hàbils per emetre resolució. Pot: (a) confirmar l'alta de la mútua, (b) emetre una nova baixa per contingència professional, o (c) emetre una baixa per contingència comuna.",
+        titol: "Resolució de l'INSS (màx. 15 dies hàbils)",
+        desc: "L'INSS té un màxim de 15 dies hàbils per emetre resolució (comptats des que la mútua aporta la documentació en 4 dies hàbils). Pot: (a) confirmar l'alta de la mútua, (b) mantenir la baixa per contingència professional, o (c) determinar la contingència causant si hi ha processos concurrents.",
       },
       {
         num: 4,
         titol: "Si l'INSS confirma l'alta",
-        desc: "Si l'INSS confirma l'alta de la mútua, el treballador ha de reincorporar-se immediatament. Si no ho fa, pot ser considerat absència injustificada. Pot recórrer la resolució de l'INSS en via administrativa (reclamació prèvia) i posteriorment judicial.",
+        desc: "Si l'INSS confirma l'alta de la mútua, el treballador ha de reincorporar-se a partir de la data que fixi la resolució. Les prestacions percebudes durant la tramitació es consideraran indegudament percebudes (art. 4.8 RD 1430/2009). Pot recórrer la resolució de l'INSS en via administrativa (reclamació prèvia, 20 dies hàbils) i posteriorment judicial (30 dies hàbils). Aquesta reclamació prèvia posterior NO suspèn la reincorporació.",
       },
       {
         num: 5,
-        titol: "Si no hi ha resposta en 7 dies",
-        desc: "Si l'INSS no respon en 7 dies hàbils, s'entén que confirma l'alta de la mútua (silenci administratiu positiu per a la mútua). El treballador ha de reincorporar-se.",
+        titol: "Si no hi ha resposta en el termini màxim",
+        desc: "Si l'INSS no respon en el termini màxim de 15 dies hàbils (des de l'aportació de documentació per la mútua), la resolució es considera dictada amb els efectes d'una resolució de reclamació prèvia (art. 4.12 RD 1430/2009). El treballador ha de reincorporar-se.",
       },
     ],
     documentacio: [
@@ -137,16 +137,18 @@ const VIES = [
       "Documentació sobre l'accident de treball (informe d'accident, testimonis)",
     ],
     consells: [
-      "La sol·licitud de revisió SUSPÈN la reincorporació: és l'única via de reclamació que ho fa.",
-      "Presenta la sol·licitud el primer dia hàbil possible per aprofitar al màxim els 10 dies de suspensió.",
+      "La sol·licitud de revisió SUSPÈN la reincorporació automàticament des del primer moment (art. 4.3 RD 1430/2009). Juntament amb la disconformitat de 4 dies naturals per alta de l'INSS >365 dies, és una de les dues vies que suspenen.",
+      "Presenta la sol·licitud el primer dia hàbil possible. La suspensió dura fins a la resolució de l'INSS (màx. 15 dies hàbils des de l'aportació de documentació per la mútua).",
       "Guarda còpia segellada de la sol·licitud presentada a l'INSS.",
-      "Si l'INSS confirma l'alta i no estàs d'acord, pots presentar reclamació prèvia en 30 dies i posteriorment demanda judicial.",
+      "Si l'INSS confirma l'alta i no estàs d'acord, pots presentar reclamació prèvia en 20 dies hàbils i posteriorment demanda judicial (30 dies hàbils). Aquesta reclamació prèvia posterior NO suspèn la reincorporació.",
       "Consulta amb un advocat laboralista si l'accident és greu o hi ha discrepàncies sobre la contingència.",
     ],
     baseLegal: [
-      "Art. 170.2 LGSS (RDLeg 8/2015): procediment de revisió d'alta de mútua",
-      "RD 1430/2009, d'11 de setembre: procediment de revisió d'altes mèdiques de mútues",
-      "Art. 80 Llei 36/2011: reclamació prèvia en matèria de Seguretat Social",
+      "Art. 170.2 LGSS (RDLeg 8/2015): procediment de revisió d'alta de mútua per AT/EP <365 dies",
+      "Art. 4 RD 1430/2009, d'11 de setembre: procediment especial de revisió i efecte suspensiu automàtic (art. 4.3)",
+      "Art. 4.8 RD 1430/2009: prestacions indegudament percebudes si l'INSS confirma l'alta",
+      "Art. 4.12 RD 1430/2009: resolució de l'INSS amb efectes de reclamació prèvia",
+      "STSJ Castilla y León 20-10-2021: confirma l'efecte suspensiu de la impugnació de l'alta de mútua",
     ],
     contacte: [
       { label: "INSS (línia general)", valor: "901 16 65 65" },
@@ -164,24 +166,34 @@ const VIES = [
     badgeColor: "bg-green-100 text-green-800",
     title: "Alta de l'INSS (contingència comuna, >365 dies)",
     subtitle: "Reclamació prèvia administrativa — INSS",
-    termini: "30 dies hàbils",
-    organisme: "INSS / Jutjat Social",
-    urgencia: "Mitjana",
+    termini: "4 dies naturals (disconformitat) / 20 dies hàbils (rec. prèvia)",
+    organisme: "Inspecció Mèdica SPS → INSS → Jutjat Social",
+    urgencia: "Molt alta (disconformitat: 4 dies naturals)",
     resum:
-      "Quan l'INSS emet una alta mèdica per contingència comuna (malaltia comuna o accident no laboral) passats els 365 dies d'IT, el treballador pot impugnar-la. A diferència de les altes de mútua, aquesta via NO suspèn la reincorporació al treball.",
+      "Quan l'INSS emet una alta mèdica passats els 365 dies d'IT, hi ha DOS moments de reclamació amb efectes molt diferents. La disconformitat de 4 dies naturals davant la Inspecció Mèdica del servei públic de salut SÍ suspèn la reincorporació (art. 170.3 LGSS). La reclamació prèvia posterior davant l'INSS NO suspèn.",
     passos: [
       {
         num: 1,
-        titol: "Presentar reclamació prèvia a l'INSS",
-        desc: "Escrit de reclamació administrativa prèvia davant l'INSS en el termini de 30 dies hàbils des de la notificació de l'alta. Es pot presentar presencialment, per internet o per correu.",
+        titol: "Disconformitat davant la Inspecció Mèdica (4 dies NATURALS) — SUSPÈN",
+        desc: "URGENT: en el termini de 4 dies naturals des de la notificació de l'alta de l'INSS, el treballador pot manifestar la seva disconformitat davant la Inspecció Mèdica del servei públic de salut (ICAM a Catalunya). Mentre es tramita, la IT es considera prorrogada i el treballador NO ha de reincorporar-se (art. 170.3 LGSS i art. 3 RD 1430/2009). Cal comunicar la disconformitat a l'empresa el mateix dia o el dia hàbil següent.",
       },
       {
         num: 2,
-        titol: "Resolució de l'INSS (45 dies)",
-        desc: "L'INSS té 45 dies per resoldre la reclamació. Si no respon en 45 dies, s'entén desestimada per silenci administratiu negatiu.",
+        titol: "Resolució de la Inspecció Mèdica",
+        desc: "La Inspecció Mèdica resol si confirma l'alta o manté la baixa. Si confirma l'alta, el treballador ha de reincorporar-se des que la resolució adquireix plens efectes.",
       },
       {
         num: 3,
+        titol: "Reclamació prèvia davant l'INSS (20 dies hàbils) — NO suspèn",
+        desc: "Si la Inspecció Mèdica confirma l'alta, el treballador pot presentar reclamació prèvia davant l'INSS en el termini de 20 dies hàbils (o directament demanda judicial). IMPORTANT: aquesta reclamació prèvia NO suspèn l'obligació de reincorporació. El treballador ha de treballar mentre es tramita.",
+      },
+      {
+        num: 4,
+        titol: "Resolució de l'INSS (45 dies)",
+        desc: "L'INSS té 45 dies per resoldre la reclamació prèvia. Si no respon en 45 dies, s'entén desestimada per silenci administratiu negatiu.",
+      },
+      {
+        num: 5,
         titol: "Demanda judicial (si cal)",
         desc: "Si l'INSS desestima la reclamació (o silenci), el treballador pot presentar demanda al Jutjat Social en el termini de 30 dies hàbils des de la notificació de la resolució o des que s'esgota el termini de silenci.",
       },
@@ -193,15 +205,17 @@ const VIES = [
       "Informes del metge de família sobre l'estat actual",
     ],
     consells: [
-      "L'alta de l'INSS NO suspèn la reincorporació: has de tornar a treballar mentre recorres.",
-      "Si el metge de família considera que no estàs en condicions, pot emetre un nou part de baixa per recaiguda.",
-      "Considera sol·licitar una nova baixa per recaiguda si la patologia persisteix.",
+      "CLAU: hi ha DOS moments. La disconformitat de 4 dies naturals davant la Inspecció Mèdica SÍ suspèn la reincorporació. La reclamació prèvia posterior davant l'INSS NO suspèn.",
+      "El termini de 4 dies naturals és molt curt: comença a comptar des de la notificació de l'alta, incloent dissabtes i diumenges.",
+      "Comunica la disconformitat a l'empresa el mateix dia o el dia hàbil següent per evitar sancions disciplinàries.",
+      "Si el metge de família considera que no estàs en condicions de treballar, pot emetre un nou part de baixa per recaiguda.",
       "En casos complexos, valora sol·licitar una valoració per a Incapacitat Permanent si la patologia és crònica.",
     ],
     baseLegal: [
-      "Art. 170-173 LGSS (RDLeg 8/2015): extinció de la IT per alta de l'INSS",
+      "Art. 170.3 LGSS (RDLeg 8/2015): disconformitat de 4 dies naturals suspèn la reincorporació",
+      "Art. 3 RD 1430/2009, d'11 de setembre: procediment de disconformitat amb l'alta de l'INSS",
       "Art. 71 Llei 36/2011: reclamació prèvia en matèria de Seguretat Social",
-      "Art. 80 Llei 36/2011: terminis de la reclamació prèvia",
+      "STS 17-4-2023 (EDJ 550548): la reclamació prèvia per CC <365 dies no suspèn (criteri aplicable a rec. prèvia posterior a resolució Inspecció Mèdica)",
     ],
     contacte: [
       { label: "INSS (línia general)", valor: "901 16 65 65" },
@@ -396,7 +410,7 @@ export default function Reclamacions() {
             Reclamacions i Recursos en IT
           </h1>
           <p className="text-base sm:text-lg text-gray-600 mb-4">
-            Cinc vies de reclamació explicades pas a pas: alta del metge de família, alta de la mútua per AT/MP, alta de l’ICAM quan la mútua ha proposat l’alta i el metge de família ha discrepat, alta de l’INSS passats els 365 dies, i determinació de contingències.
+            Cinc vies de reclamació explicades pas a pas: alta del metge de família, alta de la mútua per AT/MP, alta de l'ICAM quan la mútua ha proposat l'alta i el metge de família ha discrepat, alta de l'INSS passats els 365 dies, i determinació de contingències. <span className="font-medium text-gray-800">Atenció: no totes les reclamacions suspenen la reincorporació.</span>
           </p>
           {/* Cas destacat: proposta mútua confirmada per ICAM */}
           <div className="inline-flex items-start gap-2.5 bg-rose-50 border border-rose-200 rounded-xl px-4 py-3 text-sm text-rose-800 text-left mb-6">
@@ -420,26 +434,32 @@ export default function Reclamacions() {
               </thead>
               <tbody>
                 <tr className="border-b hover:bg-slate-50">
-                  <td className="px-4 py-3 font-medium text-blue-700">Alta metge de família (ICAM)</td>
+                  <td className="px-4 py-3 font-medium text-blue-700">Alta metge de família (CC, &lt;365 dies)</td>
                   <td className="px-4 py-3">11 dies hàbils</td>
                   <td className="px-4 py-3"><span className="text-red-600 font-medium">No</span></td>
                   <td className="px-4 py-3">ICAM / Dep. Salut</td>
                 </tr>
                 <tr className="border-b hover:bg-slate-50">
-                  <td className="px-4 py-3 font-medium text-orange-700">Alta mútua (AT/MP)</td>
+                  <td className="px-4 py-3 font-medium text-orange-700">Alta mútua (AT/MP, &lt;365 dies)</td>
                   <td className="px-4 py-3">10 dies hàbils</td>
-                  <td className="px-4 py-3"><span className="text-green-600 font-medium">Sí (10 dies)</span></td>
+                  <td className="px-4 py-3"><span className="text-green-600 font-medium">Sí (fins resolució INSS)</span></td>
                   <td className="px-4 py-3">INSS</td>
                 </tr>
                 <tr className="border-b hover:bg-slate-50">
-                  <td className="px-4 py-3 font-medium text-rose-700">Alta ICAM (proposta mútua, &lt;365 dies)</td>
+                  <td className="px-4 py-3 font-medium text-rose-700">Alta ICAM (proposta mútua CC, &lt;365 dies)</td>
                   <td className="px-4 py-3">11 dies hàbils</td>
                   <td className="px-4 py-3"><span className="text-red-600 font-medium">No</span></td>
                   <td className="px-4 py-3">ICAM / Dep. Salut</td>
                 </tr>
                 <tr className="border-b hover:bg-slate-50">
-                  <td className="px-4 py-3 font-medium text-green-700">Alta INSS (&gt;365 dies CC)</td>
-                  <td className="px-4 py-3">30 dies hàbils</td>
+                  <td className="px-4 py-3 font-medium text-green-700">Alta INSS (&gt;365 dies) — disconformitat (4 dies naturals)</td>
+                  <td className="px-4 py-3">4 dies naturals</td>
+                  <td className="px-4 py-3"><span className="text-green-600 font-medium">Sí (fins resolució)</span></td>
+                  <td className="px-4 py-3">Inspecció Mèdica SPS</td>
+                </tr>
+                <tr className="border-b hover:bg-slate-50">
+                  <td className="px-4 py-3 font-medium text-green-700">Alta INSS (&gt;365 dies) — rec. prèvia posterior</td>
+                  <td className="px-4 py-3">20 dies hàbils</td>
                   <td className="px-4 py-3"><span className="text-red-600 font-medium">No</span></td>
                   <td className="px-4 py-3">INSS / Jutjat Social</td>
                 </tr>
