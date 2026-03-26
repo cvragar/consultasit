@@ -28,6 +28,7 @@ import {
   advancedSearchDocuments,
   advancedSearchSpecialCases,
   getRecentItems,
+  updateUserLanguage,
 } from "./db";
 import { invokeLLM } from "./_core/llm";
 import {
@@ -47,6 +48,19 @@ export const appRouter = router({
         success: true,
       } as const;
     }),
+  }),
+
+  // ===== USER PREFERENCES =====
+  user: router({
+    getLanguage: protectedProcedure.query(async ({ ctx }) => {
+      return { language: ctx.user.preferredLanguage ?? "ca" };
+    }),
+    setLanguage: protectedProcedure
+      .input(z.object({ language: z.enum(["ca", "es"]) }))
+      .mutation(async ({ ctx, input }) => {
+        await updateUserLanguage(ctx.user.openId, input.language);
+        return { success: true };
+      }),
   }),
 
   // ===== DOCUMENTS =====

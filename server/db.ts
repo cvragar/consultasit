@@ -93,6 +93,15 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
+export async function updateUserLanguage(openId: string, language: "ca" | "es"): Promise<void> {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot update user language: database not available");
+    return;
+  }
+  await db.update(users).set({ preferredLanguage: language }).where(eq(users.openId, openId));
+}
+
 // ===== DOCUMENTS =====
 
 export async function searchDocuments(query: string, limit: number = 10) {

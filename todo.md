@@ -344,3 +344,12 @@
 - [x] Corregir Novetats.tsx: tots els textos hardcodeats (header, nav, timeAgo, badges, filtres)
 - [x] Ampliar ca.ts i es.ts amb totes les cadenes que falten (ja estaven completes)
 - [x] Verificar que cap text queda en un sol idioma (372 tests passen, 0 errors TypeScript)
+
+## Persistència d'idioma al perfil d'usuari (26/03/2026)
+- [x] Afegir columna preferredLanguage (enum ca/es, default ca) a la taula user
+- [x] Migrar la BD amb pnpm db:push (migració 0004 aplicada)
+- [x] Crear procediment tRPC user.getLanguage per llegir la preferència
+- [x] Crear procediment tRPC user.setLanguage per actualitzar la preferència
+- [x] Actualitzar LanguageContext: sincronitzar amb el servidor en iniciar sessió
+- [x] Quan l'usuari canvia d'idioma, desar a la BD (si autenticat) i a localStorage (sempre)
+- [x] Escriure 8 tests per als nous procediments (380 tests en total, tots passen)
