@@ -1,0 +1,17 @@
+{
+  "query": "SELECT id, title, LENGTH(content) as content_length, LEFT(summary, 200) as summary_preview, updatedAt FROM documents WHERE id = 17;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, LENGTH(content) as content_length, LEFT(summary, 200) as summary_preview, updatedAt FROM documents WHERE id = 17;",
+  "rows": [
+    {
+      "id": "17",
+      "title": "Llei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT",
+      "content_length": "10100",
+      "summary_preview": "La LO 1/2023 (en vigor des de l'1 de juny de 2023) crea tres situacions especials d'IT per contingències comunes: (1) menstruació incapacitant secundària (dismenorrea per patologia diagnosticada, SS p",
+      "updatedAt": "2026-03-26 17:58:59"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tcontent_length\tsummary_preview\tupdatedAt\n17\tLlei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT\t10100\tLa LO 1/2023 (en vigor des de l'1 de juny de 2023) crea tres situacions especials d'IT per contingències comunes: (1) menstruació incapacitant secundària (dismenorrea per patologia diagnosticada, SS p\t2026-03-26 17:58:59\n",
+  "stderr": "",
+  "execution_time_ms": 354
+}

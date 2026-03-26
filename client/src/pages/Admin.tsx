@@ -1,4 +1,6 @@
 import { useAuth } from "@/_core/hooks/useAuth";
+import { useT } from "@/contexts/LanguageContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -56,23 +58,26 @@ interface UploadedDoc {
   createdAt: Date;
 }
 
-const TYPE_LABELS: Record<string, string> = {
-  ley: "Llei",
-  decreto: "Decret",
-  guia: "Guia",
-  manual: "Manual",
-  pildora: "Píndola IT",
-  otro: "Altre",
-};
-
-const JURISDICTION_LABELS: Record<string, string> = {
-  estatal: "Estatal",
-  autonomica: "Autonòmica",
-  ambas: "Ambdues",
-};
+// TYPE_LABELS i JURISDICTION_LABELS es generen dins del component per tenir accés a language
 
 export default function Admin() {
   const { user, isAuthenticated } = useAuth();
+  const { language } = useT();
+
+  const TYPE_LABELS: Record<string, string> = {
+    ley: language === "ca" ? "Llei" : "Ley",
+    decreto: language === "ca" ? "Decret" : "Decreto",
+    guia: language === "ca" ? "Guia" : "Guía",
+    manual: "Manual",
+    pildora: language === "ca" ? "Píndola IT" : "Píldora IT",
+    otro: language === "ca" ? "Altre" : "Otro",
+  };
+
+  const JURISDICTION_LABELS: Record<string, string> = {
+    estatal: language === "ca" ? "Estatal" : "Estatal",
+    autonomica: language === "ca" ? "Autonòmica" : "Autonómica",
+    ambas: language === "ca" ? "Ambdues" : "Ambas",
+  };
 
   // Upload form state
   const [uploadOpen, setUploadOpen] = useState(false);
@@ -111,7 +116,7 @@ export default function Admin() {
       const data = await res.json();
       setAdminDocs(data);
     } catch (err: any) {
-      toast.error("Error carregant la llista de documents");
+      toast.error(language === "ca" ? "Error carregant la llista de documents" : "Error cargando la lista de documentos");
     } finally {
       setLoadingDocs(false);
     }
@@ -133,7 +138,7 @@ export default function Admin() {
         setFormData(prev => ({ ...prev, title: file.name.replace(/\.pdf$/i, "").replace(/_/g, " ") }));
       }
     } else {
-      toast.error("Només s'accepten fitxers PDF");
+      toast.error(language === "ca" ? "Només s'accepten fitxers PDF" : "Solo se aceptan archivos PDF");
     }
   };
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -149,11 +154,11 @@ export default function Admin() {
   // Enviar el formulari de pujada
   const handleUpload = async () => {
     if (!selectedFile) {
-      toast.error("Selecciona un fitxer PDF");
+      toast.error(language === "ca" ? "Selecciona un fitxer PDF" : "Selecciona un archivo PDF");
       return;
     }
     if (!formData.title.trim()) {
-      toast.error("El títol és obligatori");
+      toast.error(language === "ca" ? "El títol és obligatori" : "El título es obligatorio");
       return;
     }
 
@@ -185,7 +190,7 @@ export default function Admin() {
 
       setUploadStatus("success");
       setUploadResult(data);
-      toast.success(`Document "${formData.title}" afegit correctament`);
+      toast.success(language === "ca" ? `Document "${formData.title}" afegit correctament` : `Documento "${formData.title}" añadido correctamente`);
 
       // Refrescar la llista de documents
       refetchDocuments();
@@ -199,7 +204,7 @@ export default function Admin() {
     } catch (err: any) {
       setUploadStatus("error");
       setUploadError(err.message || "Error desconegut");
-      toast.error(err.message || "Error pujant el document");
+      toast.error(err.message || (language === "ca" ? "Error pujant el document" : "Error subiendo el documento"));
     }
   };
 
@@ -213,13 +218,13 @@ export default function Admin() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Error eliminant el document");
-      toast.success(`Document "${docTitle}" eliminat`);
+      toast.success(language === "ca" ? `Document "${docTitle}" eliminat` : `Documento "${docTitle}" eliminado`);
       refetchDocuments();
       if (adminDocs !== null) {
         setAdminDocs(prev => prev?.filter(d => d.id !== docId) ?? null);
       }
     } catch (err: any) {
-      toast.error(err.message || "Error eliminant el document");
+      toast.error(err.message || (language === "ca" ? "Error eliminant el document" : "Error eliminando el documento"));
     } finally {
       setDeletingId(null);
     }
@@ -230,14 +235,14 @@ export default function Admin() {
       <div className="min-h-screen bg-gradient-to-b from-red-50 to-white flex items-center justify-center p-4">
         <Card className="p-8 max-w-md text-center">
           <Shield className="h-16 w-16 text-red-600 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold mb-2">Accés restringit</h2>
+          <h2 className="text-2xl font-bold mb-2">{language === "ca" ? "Accés restringit" : "Acceso restringido"}</h2>
           <p className="text-gray-600 mb-6">
-            Necessites permisos d'administrador per accedir a aquesta pàgina
+            {language === "ca" ? "Necessites permisos d'administrador per accedir a aquesta pàgina" : "Necesitas permisos de administrador para acceder a esta página"}
           </p>
           <Link href="/">
             <Button className="w-full">
               <Home className="h-4 w-4 mr-2" />
-              Tornar a l'inici
+              {language === "ca" ? "Tornar a l'inici" : "Volver al inicio"}
             </Button>
           </Link>
         </Card>
@@ -255,16 +260,19 @@ export default function Admin() {
               <Link href="/">
                 <Button variant="ghost" size="sm">
                   <Home className="h-4 w-4 mr-1" />
-                  <span className="hidden sm:inline">Inici</span>
+                  <span className="hidden sm:inline">{language === "ca" ? "Inici" : "Inicio"}</span>
                 </Button>
               </Link>
               <Separator orientation="vertical" className="h-6" />
               <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-gray-900" />
-                <h1 className="text-lg font-bold text-gray-900">Panell d'Administració</h1>
+                <h1 className="text-lg font-bold text-gray-900">{language === "ca" ? "Panell d'Administració" : "Panel de Administración"}</h1>
               </div>
             </div>
-            <span className="text-sm text-gray-600 hidden sm:block">Admin: {user?.name}</span>
+            <div className="flex items-center gap-3">
+              <span className="text-sm text-gray-600 hidden sm:block">Admin: {user?.name}</span>
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </header>
@@ -277,7 +285,7 @@ export default function Admin() {
             <Card>
               <CardHeader className="pb-2 pt-4 px-4">
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-sm font-medium text-gray-600">Documents</CardTitle>
+                  <CardTitle className="text-sm font-medium text-gray-600">{language === "ca" ? "Documents" : "Documentos"}</CardTitle>
                   <FileText className="h-4 w-4 text-blue-600" />
                 </div>
               </CardHeader>
@@ -288,7 +296,7 @@ export default function Admin() {
             <Card>
               <CardHeader className="pb-2 pt-4 px-4">
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-sm font-medium text-gray-600">Casos</CardTitle>
+                  <CardTitle className="text-sm font-medium text-gray-600">{language === "ca" ? "Casos" : "Casos"}</CardTitle>
                   <AlertCircle className="h-4 w-4 text-orange-600" />
                 </div>
               </CardHeader>
@@ -299,7 +307,7 @@ export default function Admin() {
             <Card>
               <CardHeader className="pb-2 pt-4 px-4">
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-sm font-medium text-gray-600">Converses</CardTitle>
+                  <CardTitle className="text-sm font-medium text-gray-600">{language === "ca" ? "Converses" : "Conversaciones"}</CardTitle>
                   <Database className="h-4 w-4 text-green-600" />
                 </div>
               </CardHeader>
@@ -316,10 +324,10 @@ export default function Admin() {
                 <div>
                   <CardTitle className="flex items-center gap-2 text-blue-900">
                     <FileUp className="h-5 w-5" />
-                    Pujar Píndola de IT / Document PDF
+                    {language === "ca" ? "Pujar Píndola de IT / Document PDF" : "Subir Píldora de IT / Documento PDF"}
                   </CardTitle>
                   <CardDescription className="mt-1">
-                    Puja un PDF del Departament de Salut, ICS o altra font. El text s'extreu automàticament i s'indexa a la base de dades.
+                    {language === "ca" ? "Puja un PDF del Departament de Salut, ICS o altra font. El text s'extreu automàticament i s'indexa a la base de dades." : "Sube un PDF del Departamento de Salud, ICS u otra fuente. El texto se extrae automáticamente y se indexa en la base de datos."}
                   </CardDescription>
                 </div>
                 <Dialog open={uploadOpen} onOpenChange={(open) => {
@@ -333,17 +341,17 @@ export default function Admin() {
                   <DialogTrigger asChild>
                     <Button className="bg-blue-700 hover:bg-blue-800 text-white shrink-0">
                       <Upload className="h-4 w-4 mr-2" />
-                      Pujar PDF
+                      {language === "ca" ? "Pujar PDF" : "Subir PDF"}
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
                     <DialogHeader>
                       <DialogTitle className="flex items-center gap-2">
                         <FileUp className="h-5 w-5 text-blue-600" />
-                        Pujar nou document PDF
+                        {language === "ca" ? "Pujar nou document PDF" : "Subir nuevo documento PDF"}
                       </DialogTitle>
                       <DialogDescription>
-                        El text del PDF s'extraurà automàticament i estarà disponible per a la IA i el cercador.
+                        {language === "ca" ? "El text del PDF s'extraurà automàticament i estarà disponible per a la IA i el cercador." : "El texto del PDF se extraerá automáticamente y estará disponible para la IA y el buscador."}
                       </DialogDescription>
                     </DialogHeader>
 
@@ -352,10 +360,10 @@ export default function Admin() {
                         <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-lg">
                           <CheckCircle className="h-8 w-8 text-green-600 shrink-0" />
                           <div>
-                            <p className="font-semibold text-green-800">Document afegit correctament</p>
+                            <p className="font-semibold text-green-800">{language === "ca" ? "Document afegit correctament" : "Documento añadido correctamente"}</p>
                             <p className="text-sm text-green-700">{uploadResult.message}</p>
                             <p className="text-xs text-green-600 mt-1">
-                              {uploadResult.extractedLength.toLocaleString()} caràcters extrets del PDF
+                              {uploadResult.extractedLength.toLocaleString()} {language === "ca" ? "caràcters extrets del PDF" : "caracteres extraídos del PDF"}
                             </p>
                           </div>
                         </div>
@@ -368,10 +376,10 @@ export default function Admin() {
                             variant="outline"
                             className="flex-1"
                           >
-                            Pujar un altre
+                            {language === "ca" ? "Pujar un altre" : "Subir otro"}
                           </Button>
                           <Button onClick={() => setUploadOpen(false)} className="flex-1">
-                            Tancar
+                            {language === "ca" ? "Tancar" : "Cerrar"}
                           </Button>
                         </div>
                       </div>
@@ -405,15 +413,15 @@ export default function Admin() {
                               <p className="text-sm text-green-600">
                                 {(selectedFile.size / 1024 / 1024).toFixed(2)} MB
                               </p>
-                              <p className="text-xs text-gray-500">Clica per canviar el fitxer</p>
+                              <p className="text-xs text-gray-500">{language === "ca" ? "Clica per canviar el fitxer" : "Haz clic para cambiar el archivo"}</p>
                             </div>
                           ) : (
                             <div className="space-y-2">
                               <Upload className="h-10 w-10 text-gray-400 mx-auto" />
                               <p className="text-gray-600 font-medium">
-                                Arrossega el PDF aquí o clica per seleccionar
+                                {language === "ca" ? "Arrossega el PDF aquí o clica per seleccionar" : "Arrastra el PDF aquí o haz clic para seleccionar"}
                               </p>
-                              <p className="text-sm text-gray-400">Màxim 20 MB · Només PDF</p>
+                              <p className="text-sm text-gray-400">{language === "ca" ? "Màxim 20 MB · Només PDF" : "Máximo 20 MB · Solo PDF"}</p>
                             </div>
                           )}
                         </div>
@@ -421,19 +429,19 @@ export default function Admin() {
                         {/* Form Fields */}
                         <div className="grid gap-3">
                           <div>
-                            <Label htmlFor="doc-title">Títol del document *</Label>
+                            <Label htmlFor="doc-title">{language === "ca" ? "Títol del document *" : "Título del documento *"}</Label>
                             <Input
                               id="doc-title"
                               value={formData.title}
                               onChange={e => setFormData(prev => ({ ...prev, title: e.target.value }))}
-                              placeholder="Ex: Píndola IT 15 - Gestació setmana 39"
+                              placeholder={language === "ca" ? "Ex: Píndola IT 15 - Gestació setmana 39" : "Ej: Píldora IT 15 - Gestación semana 39"}
                               className="mt-1"
                             />
                           </div>
 
                           <div className="grid grid-cols-2 gap-3">
                             <div>
-                              <Label>Tipus de document</Label>
+                              <Label>{language === "ca" ? "Tipus de document" : "Tipo de documento"}</Label>
                               <Select
                                 value={formData.type}
                                 onValueChange={v => setFormData(prev => ({ ...prev, type: v }))}
@@ -442,17 +450,17 @@ export default function Admin() {
                                   <SelectValue />
                                 </SelectTrigger>
                                 <SelectContent>
-                                  <SelectItem value="pildora">Píndola IT</SelectItem>
-                                  <SelectItem value="guia">Guia</SelectItem>
+                                  <SelectItem value="pildora">{language === "ca" ? "Píndola IT" : "Píldora IT"}</SelectItem>
+                                  <SelectItem value="guia">{language === "ca" ? "Guia" : "Guía"}</SelectItem>
                                   <SelectItem value="manual">Manual</SelectItem>
-                                  <SelectItem value="ley">Llei</SelectItem>
-                                  <SelectItem value="decreto">Decret</SelectItem>
-                                  <SelectItem value="otro">Altre</SelectItem>
+                                  <SelectItem value="ley">{language === "ca" ? "Llei" : "Ley"}</SelectItem>
+                                  <SelectItem value="decreto">{language === "ca" ? "Decret" : "Decreto"}</SelectItem>
+                                  <SelectItem value="otro">{language === "ca" ? "Altre" : "Otro"}</SelectItem>
                                 </SelectContent>
                               </Select>
                             </div>
                             <div>
-                              <Label>Jurisdicció</Label>
+                              <Label>{language === "ca" ? "Jurisdicció" : "Jurisdicción"}</Label>
                               <Select
                                 value={formData.jurisdiction}
                                 onValueChange={v => setFormData(prev => ({ ...prev, jurisdiction: v }))}
@@ -461,39 +469,39 @@ export default function Admin() {
                                   <SelectValue />
                                 </SelectTrigger>
                                 <SelectContent>
-                                  <SelectItem value="autonomica">Autonòmica (Cat)</SelectItem>
+                                  <SelectItem value="autonomica">{language === "ca" ? "Autonòmica (Cat)" : "Autonómica (Cat)"}</SelectItem>
                                   <SelectItem value="estatal">Estatal</SelectItem>
-                                  <SelectItem value="ambas">Ambdues</SelectItem>
+                                  <SelectItem value="ambas">{language === "ca" ? "Ambdues" : "Ambas"}</SelectItem>
                                 </SelectContent>
                               </Select>
                             </div>
                           </div>
 
                           <div>
-                            <Label htmlFor="doc-source">Font / Organisme</Label>
+                            <Label htmlFor="doc-source">{language === "ca" ? "Font / Organisme" : "Fuente / Organismo"}</Label>
                             <Input
                               id="doc-source"
                               value={formData.source}
                               onChange={e => setFormData(prev => ({ ...prev, source: e.target.value }))}
-                              placeholder="Ex: Departament de Salut, ICS, INSS..."
+                              placeholder={language === "ca" ? "Ex: Departament de Salut, ICS, INSS..." : "Ej: Departamento de Salud, ICS, INSS..."}
                               className="mt-1"
                             />
                           </div>
 
                           <div>
-                            <Label htmlFor="doc-summary">Resum (opcional)</Label>
+                            <Label htmlFor="doc-summary">{language === "ca" ? "Resum (opcional)" : "Resumen (opcional)"}</Label>
                             <Textarea
                               id="doc-summary"
                               value={formData.summary}
                               onChange={e => setFormData(prev => ({ ...prev, summary: e.target.value }))}
-                              placeholder="Breu descripció del contingut del document..."
+                              placeholder={language === "ca" ? "Breu descripció del contingut del document..." : "Breve descripción del contenido del documento..."}
                               className="mt-1 resize-none"
                               rows={2}
                             />
                           </div>
 
                           <div>
-                            <Label htmlFor="doc-url">URL original (opcional)</Label>
+                            <Label htmlFor="doc-url">{language === "ca" ? "URL original (opcional)" : "URL original (opcional)"}</Label>
                             <Input
                               id="doc-url"
                               value={formData.url}
@@ -520,12 +528,12 @@ export default function Admin() {
                           {uploadStatus === "uploading" ? (
                             <>
                               <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                              Pujant i extraient text...
+                              {language === "ca" ? "Pujant i extraient text..." : "Subiendo y extrayendo texto..."}
                             </>
                           ) : (
                             <>
                               <Upload className="h-4 w-4 mr-2" />
-                              Pujar i indexar document
+                              {language === "ca" ? "Pujar i indexar document" : "Subir e indexar documento"}
                             </>
                           )}
                         </Button>
@@ -544,10 +552,10 @@ export default function Admin() {
                 <div>
                   <CardTitle className="flex items-center gap-2">
                     <FileText className="h-5 w-5" />
-                    Gestió de Documents
+                    {language === "ca" ? "Gestió de Documents" : "Gestión de Documentos"}
                   </CardTitle>
                   <CardDescription>
-                    {documents?.length || 0} documents a la base de dades
+                    {documents?.length || 0} {language === "ca" ? "documents a la base de dades" : "documentos en la base de datos"}
                   </CardDescription>
                 </div>
                 <Button
@@ -561,7 +569,7 @@ export default function Admin() {
                   ) : (
                     <RefreshCw className="h-4 w-4" />
                   )}
-                  <span className="ml-2 hidden sm:inline">Carregar llista</span>
+                  <span className="ml-2 hidden sm:inline">{language === "ca" ? "Carregar llista" : "Cargar lista"}</span>
                 </Button>
               </div>
             </CardHeader>
@@ -569,9 +577,9 @@ export default function Admin() {
               {adminDocs === null ? (
                 <div className="text-center py-8 text-gray-500">
                   <FileText className="h-10 w-10 mx-auto mb-3 text-gray-300" />
-                  <p className="text-sm">Clica "Carregar llista" per veure tots els documents</p>
+                  <p className="text-sm">{language === "ca" ? 'Clica "Carregar llista" per veure tots els documents' : 'Haz clic en "Cargar lista" para ver todos los documentos'}</p>
                   <Button variant="outline" size="sm" className="mt-3" onClick={loadAdminDocs}>
-                    Carregar llista de documents
+                    {language === "ca" ? "Carregar llista de documents" : "Cargar lista de documentos"}
                   </Button>
                 </div>
               ) : loadingDocs ? (
@@ -579,7 +587,7 @@ export default function Admin() {
                   <Loader2 className="h-6 w-6 animate-spin text-gray-400" />
                 </div>
               ) : adminDocs.length === 0 ? (
-                <p className="text-center text-gray-500 py-8">No hi ha documents a la base de dades</p>
+                <p className="text-center text-gray-500 py-8">{language === "ca" ? "No hi ha documents a la base de dades" : "No hay documentos en la base de datos"}</p>
               ) : (
                 <div className="space-y-2">
                   {adminDocs.map(doc => (
@@ -626,19 +634,22 @@ export default function Admin() {
                           </AlertDialogTrigger>
                           <AlertDialogContent>
                             <AlertDialogHeader>
-                              <AlertDialogTitle>Eliminar document</AlertDialogTitle>
+                              <AlertDialogTitle>{language === "ca" ? "Eliminar document" : "Eliminar documento"}</AlertDialogTitle>
                               <AlertDialogDescription>
-                                Estàs segur que vols eliminar <strong>"{doc.title}"</strong>?
-                                Aquesta acció no es pot desfer.
+                                {language === "ca" ? (
+                                  <>Estàs segur que vols eliminar <strong>"{doc.title}"</strong>? Aquesta acció no es pot desfer.</>
+                                ) : (
+                                  <>¿Estás seguro de que quieres eliminar <strong>"{doc.title}"</strong>? Esta acción no se puede deshacer.</>
+                                )}
                               </AlertDialogDescription>
                             </AlertDialogHeader>
                             <AlertDialogFooter>
-                              <AlertDialogCancel>Cancel·lar</AlertDialogCancel>
+                              <AlertDialogCancel>{language === "ca" ? "Cancel·lar" : "Cancelar"}</AlertDialogCancel>
                               <AlertDialogAction
                                 onClick={() => handleDelete(doc.id, doc.title)}
                                 className="bg-red-600 hover:bg-red-700"
                               >
-                                Eliminar
+                                {language === "ca" ? "Eliminar" : "Eliminar"}
                               </AlertDialogAction>
                             </AlertDialogFooter>
                           </AlertDialogContent>
@@ -655,21 +666,21 @@ export default function Admin() {
           <div className="grid md:grid-cols-2 gap-6">
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                  <CardTitle className="flex items-center gap-2">
                   <AlertCircle className="h-5 w-5" />
-                  Casos Especials
+                  {language === "ca" ? "Casos Especials" : "Casos Especiales"}
                 </CardTitle>
                 <CardDescription>
-                  {specialCases?.length || 0} casos documentats
+                  {specialCases?.length || 0} {language === "ca" ? "casos documentats" : "casos documentados"}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-4">
-                  Per afegir nous casos especials, utilitza els scripts de càrrega o contacta amb l'administrador del sistema.
+                  {language === "ca" ? "Per afegir nous casos especials, utilitza els scripts de càrrega o contacta amb l'administrador del sistema." : "Para añadir nuevos casos especiales, utiliza los scripts de carga o contacta con el administrador del sistema."}
                 </p>
                 <Link href="/casos-especials">
                   <Button variant="outline" className="w-full">
-                    Veure tots els casos
+                    {language === "ca" ? "Veure tots els casos" : "Ver todos los casos"}
                   </Button>
                 </Link>
               </CardContent>
@@ -679,27 +690,27 @@ export default function Admin() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Settings className="h-5 w-5" />
-                  Informació del Sistema
+                  {language === "ca" ? "Informació del Sistema" : "Información del Sistema"}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Documents:</span>
+                    <span className="text-gray-600">{language === "ca" ? "Documents:" : "Documentos:"}</span>
                     <span className="font-semibold">{documents?.length || 0}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Casos especials:</span>
+                    <span className="text-gray-600">{language === "ca" ? "Casos especials:" : "Casos especiales:"}</span>
                     <span className="font-semibold">{specialCases?.length || 0}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Converses:</span>
+                    <span className="text-gray-600">{language === "ca" ? "Converses:" : "Conversaciones:"}</span>
                     <span className="font-semibold">{conversations?.length || 0}</span>
                   </div>
                   <Separator className="my-2" />
                   <div className="flex items-center gap-2 text-green-600">
                     <CheckCircle className="h-4 w-4" />
-                    <span>Base de dades operativa</span>
+                    <span>{language === "ca" ? "Base de dades operativa" : "Base de datos operativa"}</span>
                   </div>
                 </div>
               </CardContent>

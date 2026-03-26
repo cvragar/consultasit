@@ -353,3 +353,11 @@
 - [x] Actualitzar LanguageContext: sincronitzar amb el servidor en iniciar sessió
 - [x] Quan l'usuari canvia d'idioma, desar a la BD (si autenticat) i a localStorage (sempre)
 - [x] Escriure 8 tests per als nous procediments (380 tests en total, tots passen)
+
+## Traducció toasts Admin i ampliació LO 1/2023 (26/03/2026)
+- [x] Auditar tots els missatges toast del panel Admin (Admin.tsx) - 30+ toasts en català identificats
+- [x] Corregir tots els toasts hardcodeats en català al panel Admin (Admin.tsx completament bilingüe)
+- [x] Investigar protocol ASSIR de Catalunya per a menstruació incapacitant (3Cat, CCOO, PDF BOE)
+- [x] Investigar text literal Disposició Final Tercera LO 1/2023 (modificació arts. 144.4, 169.1a, 169.2, 172, 173 LGSS)
+- [x] Ampliar document ID 17 (LO 1/2023) a la BD: 10.100 caràcters, text literal DFT, protocol ASSIR, 4 casos pràctics, FAQ
+- [x] 380 tests passen, 0 errors TypeScript
