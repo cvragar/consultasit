@@ -29,6 +29,8 @@ import { Link } from "wouter";
 import { Streamdown } from "streamdown";
 import { getLoginUrl } from "@/const";
 import { toast } from "sonner";
+import { useT } from "@/contexts/LanguageContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const typeColors: Record<string, string> = {
   ley: "bg-blue-100 text-blue-800",
@@ -37,29 +39,6 @@ const typeColors: Record<string, string> = {
   manual: "bg-orange-100 text-orange-800",
   pildora: "bg-pink-100 text-pink-800",
   otro: "bg-gray-100 text-gray-800",
-};
-
-const typeLabels: Record<string, string> = {
-  ley: "Llei",
-  decreto: "Decret",
-  guia: "Guia",
-  manual: "Manual",
-  pildora: "Píndola",
-  otro: "Altre",
-};
-
-const categoryLabels: Record<string, string> = {
-  menstruacion: "Menstruació incapacitant",
-  embarazo: "Embaràs",
-  lactancia: "Lactància",
-  donacion_organos: "Donació d'òrgans",
-  baja_retroactiva: "Baixa retroactiva",
-  pluriempleo: "Pluriocupació / Pluriactivitat",
-  prision: "Presó",
-  extranjeros: "Estrangers",
-  vacaciones: "Vacances i IT",
-  recaida: "Recaiguda",
-  otro: "Altre",
 };
 
 const categoryColors: Record<string, string> = {
@@ -103,11 +82,35 @@ type SpecialCase = {
 };
 
 export default function Favorits() {
+  const { t, language } = useT();
   const { isAuthenticated } = useAuth();
   const [selectedDoc, setSelectedDoc] = useState<Document | null>(null);
   const [selectedCase, setSelectedCase] = useState<SpecialCase | null>(null);
   const [docDialogOpen, setDocDialogOpen] = useState(false);
   const [caseDialogOpen, setCaseDialogOpen] = useState(false);
+
+  const typeLabels: Record<string, string> = {
+    ley: language === "ca" ? "Llei" : "Ley",
+    decreto: language === "ca" ? "Decret" : "Decreto",
+    guia: language === "ca" ? "Guia" : "Guía",
+    manual: "Manual",
+    pildora: language === "ca" ? "Píndola" : "Píldora",
+    otro: language === "ca" ? "Altre" : "Otro",
+  };
+
+  const categoryLabels: Record<string, string> = {
+    menstruacion: language === "ca" ? "Menstruació incapacitant" : "Menstruación incapacitante",
+    embarazo: language === "ca" ? "Embaràs" : "Embarazo",
+    lactancia: language === "ca" ? "Lactància" : "Lactancia",
+    donacion_organos: language === "ca" ? "Donació d'òrgans" : "Donación de órganos",
+    baja_retroactiva: language === "ca" ? "Baixa retroactiva" : "Baja retroactiva",
+    pluriempleo: language === "ca" ? "Pluriocupació / Pluriactivitat" : "Pluriempleo / Pluriactividad",
+    prision: language === "ca" ? "Presó" : "Prisión",
+    extranjeros: language === "ca" ? "Estrangers" : "Extranjeros",
+    vacaciones: language === "ca" ? "Vacances i IT" : "Vacaciones e IT",
+    recaida: language === "ca" ? "Recaiguda" : "Recaída",
+    otro: language === "ca" ? "Altre" : "Otro",
+  };
 
   const { data: favorites, refetch } = trpc.favorites.getAll.useQuery(undefined, {
     enabled: isAuthenticated,
@@ -116,7 +119,7 @@ export default function Favorits() {
   const removeFav = trpc.favorites.remove.useMutation({
     onSuccess: () => {
       refetch();
-      toast.success("Eliminat dels favorits");
+      toast.success(language === "ca" ? "Eliminat dels favorits" : "Eliminado de favoritos");
     },
   });
 
@@ -149,7 +152,7 @@ export default function Favorits() {
       window.URL.revokeObjectURL(url);
       document.body.removeChild(a);
     } catch {
-      toast.error("Error en exportar el PDF");
+      toast.error(language === "ca" ? "Error en exportar el PDF" : "Error al exportar el PDF");
     }
   };
 
@@ -169,7 +172,7 @@ export default function Favorits() {
       window.URL.revokeObjectURL(url);
       document.body.removeChild(a);
     } catch {
-      toast.error("Error en exportar el PDF");
+      toast.error(language === "ca" ? "Error en exportar el PDF" : "Error al exportar el PDF");
     }
   };
 
@@ -179,14 +182,16 @@ export default function Favorits() {
         <Card className="max-w-md w-full mx-4">
           <CardHeader className="text-center">
             <Star className="h-12 w-12 text-yellow-500 mx-auto mb-4" />
-            <CardTitle>Inicia sessió per veure els teus favorits</CardTitle>
+            <CardTitle>
+              {language === "ca" ? "Inicia sessió per veure els teus favorits" : "Inicia sesión para ver tus favoritos"}
+            </CardTitle>
           </CardHeader>
           <CardContent className="text-center">
             <p className="text-muted-foreground mb-6">
-              Necessites estar autenticat per gestionar els teus favorits.
+              {language === "ca" ? "Necessites estar autenticat per gestionar els teus favorits." : "Necesitas estar autenticado para gestionar tus favoritos."}
             </p>
             <Button asChild>
-              <a href={getLoginUrl()}>Iniciar sessió</a>
+              <a href={getLoginUrl()}>{language === "ca" ? "Iniciar sessió" : "Iniciar sesión"}</a>
             </Button>
           </CardContent>
         </Card>
@@ -208,18 +213,21 @@ export default function Favorits() {
               <Link href="/">
                 <Button variant="ghost" size="sm" className="gap-2">
                   <Home className="h-4 w-4" />
-                  Inici
+                  {language === "ca" ? "Inici" : "Inicio"}
                 </Button>
               </Link>
               <span className="text-muted-foreground">/</span>
               <div className="flex items-center gap-2">
                 <Star className="h-5 w-5 text-yellow-500 fill-yellow-500" />
-                <h1 className="text-xl font-bold">Els meus Favorits</h1>
+                <h1 className="text-xl font-bold">{t.favorits.title}</h1>
               </div>
             </div>
-            <Badge variant="outline" className="text-sm">
-              {totalFavs} {totalFavs === 1 ? "element" : "elements"}
-            </Badge>
+            <div className="flex items-center gap-3">
+              <Badge variant="outline" className="text-sm">
+                {totalFavs} {language === "ca" ? (totalFavs === 1 ? "element" : "elements") : (totalFavs === 1 ? "elemento" : "elementos")}
+              </Badge>
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </header>
@@ -229,22 +237,24 @@ export default function Favorits() {
           <div className="text-center py-20">
             <Star className="h-16 w-16 text-yellow-300 mx-auto mb-4" />
             <h2 className="text-2xl font-semibold text-muted-foreground mb-2">
-              Encara no tens favorits
+              {language === "ca" ? "Encara no tens favorits" : "Aún no tienes favoritos"}
             </h2>
             <p className="text-muted-foreground mb-8">
-              Marca documents i casos especials com a favorits per accedir-hi ràpidament des d'aquí.
+              {language === "ca"
+                ? "Marca documents i casos especials com a favorits per accedir-hi ràpidament des d'aquí."
+                : "Marca documentos y casos especiales como favoritos para acceder a ellos rápidamente desde aquí."}
             </p>
             <div className="flex gap-4 justify-center">
               <Button asChild variant="outline">
                 <Link href="/documents">
                   <FileText className="h-4 w-4 mr-2" />
-                  Explorar documents
+                  {language === "ca" ? "Explorar documents" : "Explorar documentos"}
                 </Link>
               </Button>
               <Button asChild variant="outline">
                 <Link href="/casos-especials">
                   <AlertCircle className="h-4 w-4 mr-2" />
-                  Explorar casos especials
+                  {language === "ca" ? "Explorar casos especials" : "Explorar casos especiales"}
                 </Link>
               </Button>
             </div>
@@ -253,32 +263,34 @@ export default function Favorits() {
           <Tabs defaultValue="all">
             <TabsList className="mb-6">
               <TabsTrigger value="all">
-                Tots ({totalFavs})
+                {language === "ca" ? "Tots" : "Todos"} ({totalFavs})
               </TabsTrigger>
               <TabsTrigger value="documents">
                 <FileText className="h-4 w-4 mr-2" />
-                Documents ({favDocs.length})
+                {language === "ca" ? "Documents" : "Documentos"} ({favDocs.length})
               </TabsTrigger>
               <TabsTrigger value="cases">
                 <AlertCircle className="h-4 w-4 mr-2" />
-                Casos especials ({favCases.length})
+                {language === "ca" ? "Casos especials" : "Casos especiales"} ({favCases.length})
               </TabsTrigger>
             </TabsList>
 
-            {/* Tots */}
+            {/* Tots / Todos */}
             <TabsContent value="all">
               <div className="space-y-6">
                 {favDocs.length > 0 && (
                   <section>
                     <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
                       <FileText className="h-5 w-5 text-green-600" />
-                      Documents ({favDocs.length})
+                      {language === "ca" ? "Documents" : "Documentos"} ({favDocs.length})
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                       {favDocs.map(doc => (
                         <FavoriteDocCard
                           key={doc.id}
                           doc={doc}
+                          typeLabels={typeLabels}
+                          language={language}
                           onOpen={() => { setSelectedDoc(doc); setDocDialogOpen(true); }}
                           onRemove={(e) => handleRemoveDoc(doc.id, e)}
                           onExport={(e) => handleExportDocPDF(doc.id, doc.title, e)}
@@ -292,13 +304,15 @@ export default function Favorits() {
                   <section>
                     <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
                       <AlertCircle className="h-5 w-5 text-orange-600" />
-                      Casos especials ({favCases.length})
+                      {language === "ca" ? "Casos especials" : "Casos especiales"} ({favCases.length})
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                       {favCases.map(c => (
                         <FavoriteCaseCard
                           key={c.id}
                           caso={c}
+                          categoryLabels={categoryLabels}
+                          language={language}
                           onOpen={() => { setSelectedCase(c); setCaseDialogOpen(true); }}
                           onRemove={(e) => handleRemoveCase(c.id, e)}
                           onExport={(e) => handleExportCasePDF(c.id, e)}
@@ -314,13 +328,15 @@ export default function Favorits() {
             {/* Documents */}
             <TabsContent value="documents">
               {favDocs.length === 0 ? (
-                <EmptyState type="documents" />
+                <EmptyState type="documents" language={language} />
               ) : (
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {favDocs.map(doc => (
                     <FavoriteDocCard
                       key={doc.id}
                       doc={doc}
+                      typeLabels={typeLabels}
+                      language={language}
                       onOpen={() => { setSelectedDoc(doc); setDocDialogOpen(true); }}
                       onRemove={(e) => handleRemoveDoc(doc.id, e)}
                       onExport={(e) => handleExportDocPDF(doc.id, doc.title, e)}
@@ -334,13 +350,15 @@ export default function Favorits() {
             {/* Casos */}
             <TabsContent value="cases">
               {favCases.length === 0 ? (
-                <EmptyState type="cases" />
+                <EmptyState type="cases" language={language} />
               ) : (
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {favCases.map(c => (
                     <FavoriteCaseCard
                       key={c.id}
                       caso={c}
+                      categoryLabels={categoryLabels}
+                      language={language}
                       onOpen={() => { setSelectedCase(c); setCaseDialogOpen(true); }}
                       onRemove={(e) => handleRemoveCase(c.id, e)}
                       onExport={(e) => handleExportCasePDF(c.id, e)}
@@ -375,7 +393,7 @@ export default function Favorits() {
                       className="gap-2 text-red-600 hover:text-red-700"
                     >
                       <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      Treure de favorits
+                      {language === "ca" ? "Treure de favorits" : "Quitar de favoritos"}
                     </Button>
                     <Button
                       variant="outline"
@@ -402,7 +420,7 @@ export default function Favorits() {
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                     <h3 className="font-semibold mb-2 flex items-center gap-2">
                       <BookOpen className="h-4 w-4 text-yellow-600" />
-                      Resum
+                      {language === "ca" ? "Resum" : "Resumen"}
                     </h3>
                     <p className="text-sm text-muted-foreground">{selectedDoc.summary}</p>
                   </div>
@@ -414,7 +432,7 @@ export default function Favorits() {
                   <a href={selectedDoc.url} target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-blue-600 hover:underline">
                     <ExternalLink className="h-4 w-4" />
-                    Accedir al document original
+                    {language === "ca" ? "Accedir al document original" : "Acceder al documento original"}
                   </a>
                 )}
               </div>
@@ -441,7 +459,7 @@ export default function Favorits() {
                       className="gap-2 text-red-600 hover:text-red-700"
                     >
                       <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      Treure de favorits
+                      {language === "ca" ? "Treure de favorits" : "Quitar de favoritos"}
                     </Button>
                     <Button
                       variant="outline"
@@ -465,7 +483,7 @@ export default function Favorits() {
                   <div>
                     <h3 className="font-semibold mb-2 flex items-center gap-2">
                       <Shield className="h-4 w-4 text-blue-600" />
-                      Base legal
+                      {language === "ca" ? "Base legal" : "Base legal"}
                     </h3>
                     <div className="prose prose-sm max-w-none">
                       <Streamdown>{selectedCase.legalBasis}</Streamdown>
@@ -476,7 +494,7 @@ export default function Favorits() {
                   <div>
                     <h3 className="font-semibold mb-2 flex items-center gap-2">
                       <FileText className="h-4 w-4 text-green-600" />
-                      Procediment
+                      {language === "ca" ? "Procediment" : "Procedimiento"}
                     </h3>
                     <div className="prose prose-sm max-w-none">
                       <Streamdown>{selectedCase.procedure}</Streamdown>
@@ -487,7 +505,7 @@ export default function Favorits() {
                   <div>
                     <h3 className="font-semibold mb-2 flex items-center gap-2">
                       <BookOpen className="h-4 w-4 text-purple-600" />
-                      Exemples pràctics
+                      {language === "ca" ? "Exemples pràctics" : "Ejemplos prácticos"}
                     </h3>
                     <div className="prose prose-sm max-w-none">
                       <Streamdown>{selectedCase.examples}</Streamdown>
@@ -503,8 +521,10 @@ export default function Favorits() {
   );
 }
 
-function FavoriteDocCard({ doc, onOpen, onRemove, onExport, isExporting }: {
+function FavoriteDocCard({ doc, typeLabels, language, onOpen, onRemove, onExport, isExporting }: {
   doc: Document;
+  typeLabels: Record<string, string>;
+  language: string;
   onOpen: () => void;
   onRemove: (e: React.MouseEvent) => void;
   onExport: (e: React.MouseEvent) => void;
@@ -557,8 +577,10 @@ function FavoriteDocCard({ doc, onOpen, onRemove, onExport, isExporting }: {
   );
 }
 
-function FavoriteCaseCard({ caso, onOpen, onRemove, onExport, isExporting }: {
+function FavoriteCaseCard({ caso, categoryLabels, language, onOpen, onRemove, onExport, isExporting }: {
   caso: SpecialCase;
+  categoryLabels: Record<string, string>;
+  language: string;
   onOpen: () => void;
   onRemove: (e: React.MouseEvent) => void;
   onExport: (e: React.MouseEvent) => void;
@@ -603,18 +625,20 @@ function FavoriteCaseCard({ caso, onOpen, onRemove, onExport, isExporting }: {
   );
 }
 
-function EmptyState({ type }: { type: "documents" | "cases" }) {
+function EmptyState({ type, language }: { type: "documents" | "cases"; language: string }) {
   return (
     <div className="text-center py-12">
       <Star className="h-12 w-12 text-yellow-300 mx-auto mb-3" />
       <p className="text-muted-foreground">
         {type === "documents"
-          ? "No tens cap document als favorits"
-          : "No tens cap cas especial als favorits"}
+          ? (language === "ca" ? "No tens cap document als favorits" : "No tienes ningún documento en favoritos")
+          : (language === "ca" ? "No tens cap cas especial als favorits" : "No tienes ningún caso especial en favoritos")}
       </p>
       <Button asChild variant="outline" className="mt-4">
         <Link href={type === "documents" ? "/documents" : "/casos-especials"}>
-          {type === "documents" ? "Explorar documents" : "Explorar casos especials"}
+          {type === "documents"
+            ? (language === "ca" ? "Explorar documents" : "Explorar documentos")
+            : (language === "ca" ? "Explorar casos especials" : "Explorar casos especiales")}
         </Link>
       </Button>
     </div>

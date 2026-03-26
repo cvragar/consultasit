@@ -73,27 +73,6 @@ function normalitzeMd(text: string | null | undefined): string {
 
 
 
-const statusConfig: Record<string, { label: string; color: string; icon: React.ElementType; badgeClass: string }> = {
-  vigent: {
-    label: "Vigent",
-    color: "text-green-700",
-    icon: CheckCircle2,
-    badgeClass: "bg-green-100 text-green-800 border-green-200",
-  },
-  derogada: {
-    label: "Derogada",
-    color: "text-red-700",
-    icon: XCircle,
-    badgeClass: "bg-red-100 text-red-800 border-red-200",
-  },
-  en_revisio: {
-    label: "En revisió",
-    color: "text-amber-700",
-    icon: AlertCircle,
-    badgeClass: "bg-amber-100 text-amber-800 border-amber-200",
-  },
-};
-
 type Document = {
   id: number;
   title: string;
@@ -110,31 +89,52 @@ type Document = {
   updatedAt: Date;
 };
 
-function StatusBadge({ status }: { status: string }) {
-  const cfg = statusConfig[status] ?? statusConfig.vigent;
-  const Icon = cfg.icon;
-  return (
-    <Tooltip>
-      <TooltipTrigger asChild>
-        <span
-          className={`inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-full border ${cfg.badgeClass} cursor-help`}
-        >
-          <Icon className="h-3 w-3" />
-          {cfg.label}
-        </span>
-      </TooltipTrigger>
-      <TooltipContent>
-        {status === "vigent" && "Normativa en vigor. Aplicable actualment."}
-        {status === "derogada" && "Normativa derogada. No és d'aplicació actual."}
-        {status === "en_revisio" && "Normativa parcialment modificada o pendent de revisió."}
-      </TooltipContent>
-    </Tooltip>
-  );
-}
-
 export default function Documentos() {
   const { isAuthenticated } = useAuth();
   const { t, language } = useT();
+
+  const statusConfig: Record<string, { label: string; color: string; icon: React.ElementType; badgeClass: string }> = {
+    vigent: {
+      label: language === "ca" ? "Vigent" : "Vigente",
+      color: "text-green-700",
+      icon: CheckCircle2,
+      badgeClass: "bg-green-100 text-green-800 border-green-200",
+    },
+    derogada: {
+      label: language === "ca" ? "Derogada" : "Derogada",
+      color: "text-red-700",
+      icon: XCircle,
+      badgeClass: "bg-red-100 text-red-800 border-red-200",
+    },
+    en_revisio: {
+      label: language === "ca" ? "En revisió" : "En revisión",
+      color: "text-amber-700",
+      icon: AlertCircle,
+      badgeClass: "bg-amber-100 text-amber-800 border-amber-200",
+    },
+  };
+
+  function StatusBadge({ status }: { status: string }) {
+    const cfg = statusConfig[status] ?? statusConfig.vigent;
+    const Icon = cfg.icon;
+    return (
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <span
+            className={`inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-full border ${cfg.badgeClass} cursor-help`}
+          >
+            <Icon className="h-3 w-3" />
+            {cfg.label}
+          </span>
+        </TooltipTrigger>
+        <TooltipContent>
+          {status === "vigent" && (language === "ca" ? "Normativa en vigor. Aplicable actualment." : "Normativa en vigor. Aplicable actualmente.")}
+          {status === "derogada" && (language === "ca" ? "Normativa derogada. No és d'aplicació actual." : "Normativa derogada. No es de aplicación actual.")}
+          {status === "en_revisio" && (language === "ca" ? "Normativa parcialment modificada o pendent de revisió." : "Normativa parcialmente modificada o pendiente de revisión.")}
+        </TooltipContent>
+      </Tooltip>
+    );
+  }
 
   const typeLabels: Record<string, string> = {
     ley: language === "ca" ? "Llei" : "Ley",
@@ -160,8 +160,8 @@ export default function Documentos() {
   const [showFilters, setShowFilters] = useState(false);
 
   const exportPDF = trpc.documents.exportPDF.useMutation();
-  const addFav = trpc.favorites.add.useMutation({ onSuccess: () => toast.success("Afegit als favorits") });
-  const removeFav = trpc.favorites.remove.useMutation({ onSuccess: () => toast.success("Eliminat dels favorits") });
+  const addFav = trpc.favorites.add.useMutation({ onSuccess: () => toast.success(language === "ca" ? "Afegit als favorits" : "Añadido a favoritos") });
+  const removeFav = trpc.favorites.remove.useMutation({ onSuccess: () => toast.success(language === "ca" ? "Eliminat dels favorits" : "Eliminado de favoritos") });
   const { data: favoriteIds, refetch: refetchFavs } = trpc.favorites.getIds.useQuery(undefined, {
     enabled: isAuthenticated,
   });
@@ -172,7 +172,7 @@ export default function Documentos() {
   const toggleFavorite = (docId: number, e: React.MouseEvent) => {
     e.stopPropagation();
     if (!isAuthenticated) {
-      toast.error("Has d'iniciar sessió per gestionar favorits");
+      toast.error(language === "ca" ? "Has d'iniciar sessió per gestionar favorits" : "Debes iniciar sesión para gestionar favoritos");
       return;
     }
     if (isFavorite(docId)) {
@@ -198,7 +198,7 @@ export default function Documentos() {
       window.URL.revokeObjectURL(url);
       document.body.removeChild(a);
     } catch {
-      toast.error("Error en exportar el PDF");
+      toast.error(language === "ca" ? "Error en exportar el PDF" : "Error al exportar el PDF");
     }
   };
 
@@ -316,7 +316,7 @@ export default function Documentos() {
               className="gap-2"
             >
               <Filter className="h-4 w-4" />
-              Filtres
+              {language === "ca" ? "Filtres" : "Filtros"}
               {activeFilterCount > 0 && (
                 <Badge className="ml-1 bg-white text-primary h-5 w-5 p-0 flex items-center justify-center text-xs font-bold">
                   {activeFilterCount}
@@ -331,12 +331,12 @@ export default function Documentos() {
               <div className="flex items-center justify-between">
                 <h3 className="font-semibold text-sm flex items-center gap-2">
                   <Filter className="h-4 w-4" />
-                  Filtres avançats
+                  {language === "ca" ? "Filtres avançats" : "Filtros avanzados"}
                 </h3>
                 {hasActiveFilters && (
                   <Button variant="ghost" size="sm" onClick={clearFilters} className="text-red-500 gap-1">
                     <X className="h-3 w-3" />
-                    Netejar filtres
+                    {language === "ca" ? "Netejar filtres" : "Limpiar filtros"}
                   </Button>
                 )}
               </div>
@@ -344,20 +344,20 @@ export default function Documentos() {
                 {/* Filtre per tipus */}
                 <div>
                   <label className="text-xs font-medium text-muted-foreground mb-1 block">
-                    Tipus
+                    {language === "ca" ? "Tipus" : "Tipo"}
                   </label>
                   <Select value={filterType} onValueChange={setFilterType}>
                     <SelectTrigger className="h-9">
-                      <SelectValue placeholder="Tots" />
+                      <SelectValue placeholder={language === "ca" ? "Tots" : "Todos"} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="all">Tots els tipus</SelectItem>
-                      <SelectItem value="ley">Llei</SelectItem>
-                      <SelectItem value="decreto">Decret</SelectItem>
-                      <SelectItem value="guia">Guia</SelectItem>
+                      <SelectItem value="all">{language === "ca" ? "Tots els tipus" : "Todos los tipos"}</SelectItem>
+                      <SelectItem value="ley">{language === "ca" ? "Llei" : "Ley"}</SelectItem>
+                      <SelectItem value="decreto">{language === "ca" ? "Decret" : "Decreto"}</SelectItem>
+                      <SelectItem value="guia">{language === "ca" ? "Guia" : "Guía"}</SelectItem>
                       <SelectItem value="manual">Manual</SelectItem>
-                      <SelectItem value="pildora">Píndola</SelectItem>
-                      <SelectItem value="otro">Altre</SelectItem>
+                      <SelectItem value="pildora">{language === "ca" ? "Píndola" : "Píldora"}</SelectItem>
+                      <SelectItem value="otro">{language === "ca" ? "Altre" : "Otro"}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -365,17 +365,17 @@ export default function Documentos() {
                 {/* Filtre per jurisdicció */}
                 <div>
                   <label className="text-xs font-medium text-muted-foreground mb-1 block">
-                    Jurisdicció
+                    {language === "ca" ? "Jurisdicció" : "Jurisdicción"}
                   </label>
                   <Select value={filterJurisdiction} onValueChange={setFilterJurisdiction}>
                     <SelectTrigger className="h-9">
-                      <SelectValue placeholder="Totes" />
+                      <SelectValue placeholder={language === "ca" ? "Totes" : "Todas"} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="all">Totes</SelectItem>
+                      <SelectItem value="all">{language === "ca" ? "Totes" : "Todas"}</SelectItem>
                       <SelectItem value="estatal">Estatal</SelectItem>
-                      <SelectItem value="autonomica">Autonòmica (Cat.)</SelectItem>
-                      <SelectItem value="ambas">Estatal i Autonòmica</SelectItem>
+                      <SelectItem value="autonomica">{language === "ca" ? "Autonòmica (Cat.)" : "Autonómica (Cat.)"}</SelectItem>
+                      <SelectItem value="ambas">{language === "ca" ? "Estatal i Autonòmica" : "Estatal y Autonómica"}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -384,14 +384,14 @@ export default function Documentos() {
                 <div>
                   <label className="text-xs font-medium text-muted-foreground mb-1 flex items-center gap-1">
                     <Calendar className="h-3 w-3" />
-                    Any de publicació
+                    {language === "ca" ? "Any de publicació" : "Año de publicación"}
                   </label>
                   <Select value={filterYear} onValueChange={setFilterYear}>
                     <SelectTrigger className="h-9">
-                      <SelectValue placeholder="Tots els anys" />
+                      <SelectValue placeholder={language === "ca" ? "Tots els anys" : "Todos los años"} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="all">Tots els anys</SelectItem>
+                      <SelectItem value="all">{language === "ca" ? "Tots els anys" : "Todos los años"}</SelectItem>
                       {availableYears.map(year => (
                         <SelectItem key={year} value={String(year)}>{year}</SelectItem>
                       ))}
@@ -403,30 +403,30 @@ export default function Documentos() {
                 <div>
                   <label className="text-xs font-medium text-muted-foreground mb-1 flex items-center gap-1">
                     <CheckCircle2 className="h-3 w-3" />
-                    Vigència
+                    {language === "ca" ? "Vigència" : "Vigencia"}
                   </label>
                   <Select value={filterStatus} onValueChange={setFilterStatus}>
                     <SelectTrigger className="h-9">
-                      <SelectValue placeholder="Tots els estats" />
+                      <SelectValue placeholder={language === "ca" ? "Tots els estats" : "Todos los estados"} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="all">Tots els estats</SelectItem>
+                      <SelectItem value="all">{language === "ca" ? "Tots els estats" : "Todos los estados"}</SelectItem>
                       <SelectItem value="vigent">
                         <span className="flex items-center gap-1.5">
                           <CheckCircle2 className="h-3.5 w-3.5 text-green-600" />
-                          Vigent
+                          {language === "ca" ? "Vigent" : "Vigente"}
                         </span>
                       </SelectItem>
                       <SelectItem value="en_revisio">
                         <span className="flex items-center gap-1.5">
                           <AlertCircle className="h-3.5 w-3.5 text-amber-600" />
-                          En revisió
+                          {language === "ca" ? "En revisió" : "En revisión"}
                         </span>
                       </SelectItem>
                       <SelectItem value="derogada">
                         <span className="flex items-center gap-1.5">
                           <XCircle className="h-3.5 w-3.5 text-red-600" />
-                          Derogada
+                          {language === "ca" ? "Derogada" : "Derogada"}
                         </span>
                       </SelectItem>
                     </SelectContent>
@@ -439,8 +439,8 @@ export default function Documentos() {
           {/* Resum de filtres actius */}
           {(hasActiveFilters || searchQuery) && (
             <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-              <span>Mostrant {displayedDocuments.length} resultats</span>
-              {searchQuery && <Badge variant="secondary">Cerca: "{searchQuery}"</Badge>}
+              <span>{language === "ca" ? "Mostrant" : "Mostrando"} {displayedDocuments.length} {language === "ca" ? "resultats" : "resultados"}</span>
+              {searchQuery && <Badge variant="secondary">{language === "ca" ? "Cerca" : "Búsqueda"}: "{searchQuery}"</Badge>}
               {filterType !== "all" && <Badge variant="secondary">{typeLabels[filterType]}</Badge>}
               {filterJurisdiction !== "all" && <Badge variant="secondary">{jurisdictionLabelsLocal[filterJurisdiction]}</Badge>}
               {filterYear !== "all" && <Badge variant="secondary" className="flex items-center gap-1"><Calendar className="h-3 w-3" />{filterYear}</Badge>}
@@ -460,9 +460,9 @@ export default function Documentos() {
         {displayedDocuments.length === 0 ? (
           <div className="text-center py-16">
             <FileText className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <p className="text-muted-foreground text-lg">No s'han trobat documents amb els filtres actuals</p>
+            <p className="text-muted-foreground text-lg">{language === "ca" ? "No s'han trobat documents amb els filtres actuals" : "No se han encontrado documentos con los filtros actuales"}</p>
             <Button variant="outline" className="mt-4" onClick={clearFilters}>
-              Netejar filtres
+              {language === "ca" ? "Netejar filtres" : "Limpiar filtros"}
             </Button>
           </div>
         ) : (
@@ -549,7 +549,7 @@ export default function Documentos() {
                             </Button>
                           </TooltipTrigger>
                           <TooltipContent side="top">
-                            <p>Exportar a PDF</p>
+                            <p>{language === "ca" ? "Exportar a PDF" : "Exportar a PDF"}</p>
                           </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
@@ -577,10 +577,10 @@ export default function Documentos() {
                       {jurisdictionLabelsLocal[selectedDocument.jurisdiction]}
                     </Badge>
                     <StatusBadge status={selectedDocument.status} />
-                    {selectedDocument.publicationYear && (
+                      {selectedDocument.publicationYear && (
                       <span className="text-xs text-muted-foreground flex items-center gap-1">
                         <Calendar className="h-3.5 w-3.5" />
-                        Publicat: {selectedDocument.publicationYear}
+                        {language === "ca" ? "Publicat" : "Publicado"}: {selectedDocument.publicationYear}
                       </span>
                     )}
                   </div>
@@ -598,7 +598,7 @@ export default function Documentos() {
                             : "text-muted-foreground"
                         }`}
                       />
-                      {isFavorite(selectedDocument.id) ? "Treure de favorits" : "Afegir a favorits"}
+                      {isFavorite(selectedDocument.id) ? (language === "ca" ? "Treure de favorits" : "Quitar de favoritos") : (language === "ca" ? "Afegir a favorits" : "Añadir a favoritos")}
                     </Button>
                     <TooltipProvider>
                       <Tooltip>
@@ -615,11 +615,11 @@ export default function Documentos() {
                             ) : (
                               <Download className="h-4 w-4" />
                             )}
-                            <span className="hidden sm:inline">Exportar PDF</span>
+                            <span className="hidden sm:inline">{language === "ca" ? "Exportar PDF" : "Exportar PDF"}</span>
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent side="bottom" className="sm:hidden">
-                          <p>Exportar a PDF</p>
+                          <p>{language === "ca" ? "Exportar a PDF" : "Exportar a PDF"}</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
@@ -636,7 +636,7 @@ export default function Documentos() {
                   <div className="mt-3 flex items-start gap-2 bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700">
                     <XCircle className="h-4 w-4 mt-0.5 shrink-0" />
                     <span>
-                      <strong>Normativa derogada.</strong> Aquest document ja no és d'aplicació. Consulta la normativa vigent actualitzada.
+                      {language === "ca" ? <><strong>Normativa derogada.</strong> Aquest document ja no és d'aplicació. Consulta la normativa vigent actualitzada.</> : <><strong>Normativa derogada.</strong> Este documento ya no es de aplicación. Consulta la normativa vigente actualizada.</>}
                     </span>
                   </div>
                 )}
@@ -644,7 +644,7 @@ export default function Documentos() {
                   <div className="mt-3 flex items-start gap-2 bg-amber-50 border border-amber-200 rounded-lg p-3 text-sm text-amber-700">
                     <AlertCircle className="h-4 w-4 mt-0.5 shrink-0" />
                     <span>
-                      <strong>Normativa en revisió.</strong> Aquest document pot estar parcialment modificat. Verifica la versió actualitzada.
+                      {language === "ca" ? <><strong>Normativa en revisió.</strong> Aquest document pot estar parcialment modificat. Verifica la versió actualitzada.</> : <><strong>Normativa en revisión.</strong> Este documento puede estar parcialmente modificado. Verifica la versión actualizada.</>}
                     </span>
                   </div>
                 )}
@@ -655,7 +655,7 @@ export default function Documentos() {
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                     <h3 className="font-semibold mb-2 flex items-center gap-2">
                       <BookOpen className="h-4 w-4 text-green-600" />
-                      Resum
+                      {language === "ca" ? "Resum" : "Resumen"}
                     </h3>
                     <p className="text-sm text-muted-foreground">{selectedDocument.summary}</p>
                   </div>
@@ -684,7 +684,7 @@ export default function Documentos() {
                     onClick={(e) => e.stopPropagation()}
                   >
                     <ExternalLink className="h-4 w-4" />
-                    Accedir al document original
+                    {language === "ca" ? "Accedir al document original" : "Acceder al documento original"}
                   </a>
                 )}
               </div>

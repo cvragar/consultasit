@@ -21,6 +21,8 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
+import { useT } from "@/contexts/LanguageContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 
@@ -38,24 +40,23 @@ function stripMarkdown(text: string): string {
     .trim();
 }
 
-function timeAgo(date: Date): string {
+function timeAgo(date: Date, language: string): string {
   const now = new Date();
   const diff = Math.floor((now.getTime() - new Date(date).getTime()) / 1000);
-  if (diff < 60) return "Fa uns moments";
-  if (diff < 3600) return `Fa ${Math.floor(diff / 60)} min`;
-  if (diff < 86400) return `Fa ${Math.floor(diff / 3600)} h`;
-  if (diff < 7 * 86400) return `Fa ${Math.floor(diff / 86400)} dies`;
-  return new Date(date).toLocaleDateString("ca-ES", { day: "numeric", month: "short" });
+  if (language === "ca") {
+    if (diff < 60) return "Fa uns moments";
+    if (diff < 3600) return `Fa ${Math.floor(diff / 60)} min`;
+    if (diff < 86400) return `Fa ${Math.floor(diff / 3600)} h`;
+    if (diff < 7 * 86400) return `Fa ${Math.floor(diff / 86400)} dies`;
+    return new Date(date).toLocaleDateString("ca-ES", { day: "numeric", month: "short" });
+  } else {
+    if (diff < 60) return "Hace un momento";
+    if (diff < 3600) return `Hace ${Math.floor(diff / 60)} min`;
+    if (diff < 86400) return `Hace ${Math.floor(diff / 3600)} h`;
+    if (diff < 7 * 86400) return `Hace ${Math.floor(diff / 86400)} días`;
+    return new Date(date).toLocaleDateString("es-ES", { day: "numeric", month: "short" });
+  }
 }
-
-const docTypeLabels: Record<string, string> = {
-  ley: "Llei",
-  decreto: "Decret",
-  guia: "Guia",
-  manual: "Manual",
-  pildora: "Píndola",
-  otro: "Altre",
-};
 
 const docTypeIcons: Record<string, React.ElementType> = {
   ley: Scale,
@@ -64,21 +65,6 @@ const docTypeIcons: Record<string, React.ElementType> = {
   manual: ClipboardList,
   pildora: Star,
   otro: FileText,
-};
-
-const categoryLabels: Record<string, string> = {
-  menstruacion: "Menstruació incapacitant",
-  embarazo: "Embaràs",
-  lactancia: "Lactància",
-  donacion_organos: "Donació d'òrgans",
-  baja_retroactiva: "Baixa retroactiva",
-  pluriempleo: "Pluriocupació",
-  prision: "Presó",
-  extranjeros: "Estrangers",
-  vacaciones: "Vacances i IT",
-  recaida: "Recaiguda",
-  accident_treball: "Accident de Treball",
-  otro: "Altres",
 };
 
 const categoryColors: Record<string, string> = {
@@ -99,11 +85,43 @@ const categoryColors: Record<string, string> = {
 // ─── component ──────────────────────────────────────────────────────────────
 
 export default function Novetats() {
+  const { language } = useT();
   const [days, setDays] = useState(30);
 
   const { data, isLoading } = trpc.novetats.getRecent.useQuery({ days });
 
   const totalItems = (data?.documents.length ?? 0) + (data?.cases.length ?? 0);
+
+  const docTypeLabels: Record<string, string> = {
+    ley: language === "ca" ? "Llei" : "Ley",
+    decreto: language === "ca" ? "Decret" : "Decreto",
+    guia: language === "ca" ? "Guia" : "Guía",
+    manual: "Manual",
+    pildora: language === "ca" ? "Píndola" : "Píldora",
+    otro: language === "ca" ? "Altre" : "Otro",
+  };
+
+  const categoryLabels: Record<string, string> = {
+    menstruacion: language === "ca" ? "Menstruació incapacitant" : "Menstruación incapacitante",
+    embarazo: language === "ca" ? "Embaràs" : "Embarazo",
+    lactancia: language === "ca" ? "Lactància" : "Lactancia",
+    donacion_organos: language === "ca" ? "Donació d'òrgans" : "Donación de órganos",
+    baja_retroactiva: language === "ca" ? "Baixa retroactiva" : "Baja retroactiva",
+    pluriempleo: language === "ca" ? "Pluriocupació" : "Pluriempleo",
+    prision: language === "ca" ? "Presó" : "Prisión",
+    extranjeros: language === "ca" ? "Estrangers" : "Extranjeros",
+    vacaciones: language === "ca" ? "Vacances i IT" : "Vacaciones e IT",
+    recaida: language === "ca" ? "Recaiguda" : "Recaída",
+    accident_treball: language === "ca" ? "Accident de Treball" : "Accidente de Trabajo",
+    otro: language === "ca" ? "Altres" : "Otros",
+  };
+
+  const dayLabels: Record<number, string> = {
+    7: language === "ca" ? "7 dies" : "7 días",
+    30: language === "ca" ? "30 dies" : "30 días",
+    60: language === "ca" ? "2 mesos" : "2 meses",
+    90: language === "ca" ? "3 mesos" : "3 meses",
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
@@ -114,42 +132,47 @@ export default function Novetats() {
             <div className="flex items-center gap-2 shrink-0">
               <Shield className="h-7 w-7 text-blue-600" />
               <div>
-                <h1 className="text-lg font-bold text-gray-900 leading-tight">Consultes IT</h1>
-                <p className="text-xs text-gray-500 hidden sm:block">Assistent per a professionals sanitaris</p>
+                <h1 className="text-lg font-bold text-gray-900 leading-tight">
+                  {language === "ca" ? "Consultes IT" : "Consultas IT"}
+                </h1>
+                <p className="text-xs text-gray-500 hidden sm:block">
+                  {language === "ca" ? "Assistent per a professionals sanitaris" : "Asistente para profesionales sanitarios"}
+                </p>
               </div>
             </div>
             <nav className="hidden md:flex items-center gap-1">
               <Link href="/">
                 <Button variant="ghost" size="sm" className="gap-1.5">
                   <Home className="h-4 w-4" />
-                  Inici
+                  {language === "ca" ? "Inici" : "Inicio"}
                 </Button>
               </Link>
               <Link href="/chat">
                 <Button variant="ghost" size="sm" className="gap-1.5">
                   <MessageSquare className="h-4 w-4" />
-                  Xat
+                  {language === "ca" ? "Xat" : "Chat"}
                 </Button>
               </Link>
               <Link href="/casos-especials">
                 <Button variant="ghost" size="sm" className="gap-1.5">
                   <AlertCircle className="h-4 w-4" />
-                  Casos Especials
+                  {language === "ca" ? "Casos Especials" : "Casos Especiales"}
                 </Button>
               </Link>
               <Link href="/documents">
                 <Button variant="ghost" size="sm" className="gap-1.5">
                   <FileText className="h-4 w-4" />
-                  Documents
+                  {language === "ca" ? "Documents" : "Documentos"}
                 </Button>
               </Link>
               <Link href="/calculadora">
                 <Button variant="ghost" size="sm" className="gap-1.5">
                   <Calculator className="h-4 w-4" />
-                  Calculadora
+                  {language === "ca" ? "Calculadora" : "Calculadora"}
                 </Button>
               </Link>
             </nav>
+            <LanguageSwitcher />
           </div>
         </div>
       </header>
@@ -160,13 +183,13 @@ export default function Novetats() {
           <Link href="/">
             <span className="hover:text-blue-600 cursor-pointer flex items-center gap-1">
               <Home className="h-3.5 w-3.5" />
-              Inici
+              {language === "ca" ? "Inici" : "Inicio"}
             </span>
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />
           <span className="text-gray-900 font-medium flex items-center gap-1">
             <Sparkles className="h-3.5 w-3.5 text-yellow-500" />
-            Novetats
+            {language === "ca" ? "Novetats" : "Novedades"}
           </span>
         </div>
       </div>
@@ -178,17 +201,19 @@ export default function Novetats() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
               <Sparkles className="h-6 w-6 text-yellow-500" />
-              Novetats
+              {language === "ca" ? "Novetats" : "Novedades"}
             </h2>
             <p className="text-gray-500 text-sm mt-1">
               {isLoading
-                ? "Carregant..."
-                : `${totalItems} element${totalItems !== 1 ? "s" : ""} afegit${totalItems !== 1 ? "s" : ""} en els últims ${days} dies`}
+                ? (language === "ca" ? "Carregant..." : "Cargando...")
+                : language === "ca"
+                  ? `${totalItems} element${totalItems !== 1 ? "s" : ""} afegit${totalItems !== 1 ? "s" : ""} en els últims ${days} dies`
+                  : `${totalItems} elemento${totalItems !== 1 ? "s" : ""} añadido${totalItems !== 1 ? "s" : ""} en los últimos ${days} días`}
             </p>
           </div>
           <div className="flex items-center gap-2">
             <Calendar className="h-4 w-4 text-gray-400" />
-            <span className="text-sm text-gray-500">Mostrar:</span>
+            <span className="text-sm text-gray-500">{language === "ca" ? "Mostrar:" : "Mostrar:"}</span>
             {[7, 30, 60, 90].map((d) => (
               <Button
                 key={d}
@@ -197,7 +222,7 @@ export default function Novetats() {
                 onClick={() => setDays(d)}
                 className="text-xs px-3"
               >
-                {d === 7 ? "7 dies" : d === 30 ? "30 dies" : d === 60 ? "2 mesos" : "3 mesos"}
+                {dayLabels[d]}
               </Button>
             ))}
           </div>
@@ -212,10 +237,18 @@ export default function Novetats() {
         ) : totalItems === 0 ? (
           <div className="text-center py-20">
             <Sparkles className="h-12 w-12 text-gray-300 mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-gray-600 mb-2">Cap novetat en els últims {days} dies</h3>
-            <p className="text-gray-400 text-sm mb-6">Prova ampliar el rang de dates per veure contingut anterior</p>
+            <h3 className="text-lg font-semibold text-gray-600 mb-2">
+              {language === "ca"
+                ? `Cap novetat en els últims ${days} dies`
+                : `Sin novedades en los últimos ${days} días`}
+            </h3>
+            <p className="text-gray-400 text-sm mb-6">
+              {language === "ca"
+                ? "Prova ampliar el rang de dates per veure contingut anterior"
+                : "Prueba ampliar el rango de fechas para ver contenido anterior"}
+            </p>
             <Button variant="outline" onClick={() => setDays(90)}>
-              Mostrar últims 3 mesos
+              {language === "ca" ? "Mostrar últims 3 mesos" : "Mostrar últimos 3 meses"}
             </Button>
           </div>
         ) : (
@@ -228,7 +261,7 @@ export default function Novetats() {
                     <FileText className="h-4 w-4 text-green-600" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">
-                    Documents normatius
+                    {language === "ca" ? "Documents normatius" : "Documentos normativos"}
                     <Badge variant="secondary" className="ml-2 text-xs">{data.documents.length}</Badge>
                   </h3>
                 </div>
@@ -248,7 +281,9 @@ export default function Novetats() {
                                   {doc.title}
                                 </CardTitle>
                               </div>
-                              <Badge className="bg-green-100 text-green-800 text-xs shrink-0 ml-1">Nou</Badge>
+                              <Badge className="bg-green-100 text-green-800 text-xs shrink-0 ml-1">
+                                {language === "ca" ? "Nou" : "Nuevo"}
+                              </Badge>
                             </div>
                           </CardHeader>
                           <CardContent className="px-4 pb-4">
@@ -274,7 +309,7 @@ export default function Novetats() {
                             )}
                             <div className="flex items-center gap-1 text-xs text-gray-400">
                               <Calendar className="h-3 w-3" />
-                              {timeAgo(doc.createdAt)}
+                              {timeAgo(doc.createdAt, language)}
                             </div>
                           </CardContent>
                         </Card>
@@ -293,7 +328,7 @@ export default function Novetats() {
                     <AlertCircle className="h-4 w-4 text-orange-600" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">
-                    Casos especials
+                    {language === "ca" ? "Casos especials" : "Casos especiales"}
                     <Badge variant="secondary" className="ml-2 text-xs">{data.cases.length}</Badge>
                   </h3>
                 </div>
@@ -311,7 +346,9 @@ export default function Novetats() {
                                 {cas.title}
                               </CardTitle>
                             </div>
-                            <Badge className="bg-orange-100 text-orange-800 text-xs shrink-0 ml-1">Nou</Badge>
+                            <Badge className="bg-orange-100 text-orange-800 text-xs shrink-0 ml-1">
+                              {language === "ca" ? "Nou" : "Nuevo"}
+                            </Badge>
                           </div>
                         </CardHeader>
                         <CardContent className="px-4 pb-4">
@@ -327,7 +364,7 @@ export default function Novetats() {
                           </p>
                           <div className="flex items-center gap-1 text-xs text-gray-400">
                             <Calendar className="h-3 w-3" />
-                            {timeAgo(cas.createdAt)}
+                            {timeAgo(cas.createdAt, language)}
                           </div>
                         </CardContent>
                       </Card>

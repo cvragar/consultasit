@@ -331,3 +331,16 @@
 - [x] Afegir botó CA/ES a totes les pàgines (Home, CasosEspeciales, Documentos, Calculadora, Reclamacions, Chat)
 - [x] Adaptar el backend: el xat envia l'idioma preferit a l'LLM (streamRouter.ts)
 - [ ] Adaptar els casos especials i documents de la BD per retornar contingut en l'idioma seleccionat (pendent: requereix traduccions a la BD)
+
+## Traducció completa CA/ES - textos hardcodeats (26/03/2026)
+- [x] Auditar tots els textos hardcodeats que no es tradueixen a Home.tsx
+- [x] Corregir Home.tsx: botó "Començar consulta", tarjetes de funcionalitats, seccions hero, contingències professionals (ja estava correcte)
+- [x] Corregir CasosEspeciales.tsx: tots els textos hardcodeats (filtres, badges, botons, labels, formulari edició)
+- [x] Corregir Documentos.tsx: tots els textos hardcodeats (StatusBadge, filtres, botons, avisos)
+- [x] Corregir Calculadora.tsx: tots els textos hardcodeats (resultats, fonts, disclaimer)
+- [x] Corregir Reclamacions.tsx: tots els textos hardcodeats (ja estava correcte)
+- [x] Corregir Chat.tsx: textos hardcodeats (error message, format de data, sidebar)
+- [x] Corregir Favorits.tsx: tots els textos hardcodeats (typeLabels, categoryLabels, botons, diàlegs)
+- [x] Corregir Novetats.tsx: tots els textos hardcodeats (header, nav, timeAgo, badges, filtres)
+- [x] Ampliar ca.ts i es.ts amb totes les cadenes que falten (ja estaven completes)
+- [x] Verificar que cap text queda en un sol idioma (372 tests passen, 0 errors TypeScript)

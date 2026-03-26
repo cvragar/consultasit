@@ -471,7 +471,7 @@ export default function CasosEspeciales() {
                 {(hasActiveFilters || searchQuery) && (
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <span>{language === "ca" ? "Mostrant" : "Mostrando"} {displayedCases.length} {language === "ca" ? "resultats" : "resultados"}</span>
-              {searchQuery && <Badge variant="secondary">Cerca: "{searchQuery}"</Badge>}
+              {searchQuery && <Badge variant="secondary">{language === "ca" ? "Cerca" : "Búsqueda"}: "{searchQuery}"</Badge>}
               {selectedCategory !== "all" && (
                 <Badge variant="secondary">{categoryLabels[selectedCategory]}</Badge>
               )}
@@ -530,7 +530,7 @@ export default function CasosEspeciales() {
                                 variant="ghost"
                                 size="icon"
                                 className="h-7 w-7 text-muted-foreground hover:text-orange-700 hover:bg-orange-50"
-                                title="Editar cas especial"
+                                title={language === "ca" ? "Editar cas especial" : "Editar caso especial"}
                                 onClick={(e) => handleOpenEdit(caso as SpecialCase, e)}
                               >
                                 <Pencil className="h-3.5 w-3.5" />
@@ -562,13 +562,13 @@ export default function CasosEspeciales() {
                             {caso.legalBasis && (
                               <span className="flex items-center gap-1">
                                 <Scale className="h-3 w-3" />
-                                Base legal
+                                {language === "ca" ? "Base legal" : "Base legal"}
                               </span>
                             )}
                             {caso.procedure && (
                               <span className="flex items-center gap-1">
                                 <FileText className="h-3 w-3" />
-                                Procediment
+                                {language === "ca" ? "Procediment" : "Procedimiento"}
                               </span>
                             )}
                           </div>
@@ -590,7 +590,7 @@ export default function CasosEspeciales() {
                                 </Button>
                               </TooltipTrigger>
                               <TooltipContent side="top">
-                                <p>Exportar a PDF</p>
+                                <p>{language === "ca" ? "Exportar a PDF" : "Exportar a PDF"}</p>
                               </TooltipContent>
                             </Tooltip>
                           </TooltipProvider>
@@ -627,7 +627,7 @@ export default function CasosEspeciales() {
                         className="gap-2 border-orange-300 text-orange-700 hover:bg-orange-50"
                       >
                         <Pencil className="h-4 w-4" />
-                        Editar
+                        {language === "ca" ? "Editar" : "Editar"}
                       </Button>
                     )}
                     <Button
@@ -664,7 +664,7 @@ export default function CasosEspeciales() {
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent side="bottom" className="sm:hidden">
-                          <p>Exportar a PDF</p>
+                          <p>{language === "ca" ? "Exportar a PDF" : "Exportar a PDF"}</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
@@ -736,19 +736,19 @@ export default function CasosEspeciales() {
             <div className="space-y-4 mt-2">
               {/* Títol */}
               <div>
-                <Label htmlFor="edit-title">Títol *</Label>
+                <Label htmlFor="edit-title">{language === "ca" ? "Títol *" : "Título *"}</Label>
                 <Input
                   id="edit-title"
                   value={editForm.title}
                   onChange={e => handleEditField("title", e.target.value)}
                   className="mt-1"
-                  placeholder="Títol del cas especial"
+                  placeholder={language === "ca" ? "Títol del cas especial" : "Título del caso especial"}
                 />
               </div>
 
               {/* Categoria */}
               <div>
-                <Label>Categoria</Label>
+                <Label>{language === "ca" ? "Categoria" : "Categoría"}</Label>
                 <Select
                   value={editForm.category}
                   onValueChange={v => setEditForm(prev => ({ ...prev, category: v }))}
@@ -766,76 +766,76 @@ export default function CasosEspeciales() {
 
               {/* Descripció */}
               <div>
-                <Label htmlFor="edit-description">Descripció *</Label>
+                <Label htmlFor="edit-description">{language === "ca" ? "Descripció *" : "Descripción *"}</Label>
                 <Textarea
                   id="edit-description"
                   value={editForm.description}
                   onChange={e => handleEditField("description", e.target.value)}
                   className="mt-1 resize-none"
                   rows={3}
-                  placeholder="Descripció breu del cas especial"
+                  placeholder={language === "ca" ? "Descripció breu del cas especial" : "Descripción breve del caso especial"}
                 />
                 {jsonWarnings.description && (
                   <div className="flex items-center gap-2 mt-1 text-amber-600 text-xs">
                     <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
-                    El contingut sembla un JSON. Assegura't que és text pla (Markdown), no dades estructurades.
+                    {language === "ca" ? "El contingut sembla un JSON. Assegura't que és text pla (Markdown), no dades estructurades." : "El contenido parece un JSON. Asegúrate de que es texto plano (Markdown), no datos estructurados."}
                   </div>
                 )}
               </div>
 
               {/* Base Legal */}
               <div>
-                <Label htmlFor="edit-legal">Base Legal</Label>
+                <Label htmlFor="edit-legal">{language === "ca" ? "Base Legal" : "Base Legal"}</Label>
                 <Textarea
                   id="edit-legal"
                   value={editForm.legalBasis}
                   onChange={e => handleEditField("legalBasis", e.target.value)}
                   className="mt-1 resize-none font-mono text-xs"
                   rows={5}
-                  placeholder="Normativa aplicable (Markdown acceptat: **negreta**, - llistes...)"
+                  placeholder={language === "ca" ? "Normativa aplicable (Markdown acceptat: **negreta**, - llistes...)" : "Normativa aplicable (Markdown aceptado: **negrita**, - listas...)"}
                 />
                 {jsonWarnings.legalBasis && (
                   <div className="flex items-center gap-2 mt-1 text-amber-600 text-xs">
                     <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
-                    El contingut sembla un JSON. Assegura't que és text pla (Markdown), no dades estructurades.
+                    {language === "ca" ? "El contingut sembla un JSON. Assegura't que és text pla (Markdown), no dades estructurades." : "El contenido parece un JSON. Asegúrate de que es texto plano (Markdown), no datos estructurados."}
                   </div>
                 )}
               </div>
 
               {/* Procediment */}
               <div>
-                <Label htmlFor="edit-procedure">Procediment</Label>
+                <Label htmlFor="edit-procedure">{language === "ca" ? "Procediment" : "Procedimiento"}</Label>
                 <Textarea
                   id="edit-procedure"
                   value={editForm.procedure}
                   onChange={e => handleEditField("procedure", e.target.value)}
                   className="mt-1 resize-none font-mono text-xs"
                   rows={5}
-                  placeholder="Passos a seguir (Markdown acceptat)"
+                  placeholder={language === "ca" ? "Passos a seguir (Markdown acceptat)" : "Pasos a seguir (Markdown aceptado)"}
                 />
                 {jsonWarnings.procedure && (
                   <div className="flex items-center gap-2 mt-1 text-amber-600 text-xs">
                     <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
-                    El contingut sembla un JSON. Assegura't que és text pla (Markdown), no dades estructurades.
+                    {language === "ca" ? "El contingut sembla un JSON. Assegura't que és text pla (Markdown), no dades estructurades." : "El contenido parece un JSON. Asegúrate de que es texto plano (Markdown), no datos estructurados."}
                   </div>
                 )}
               </div>
 
               {/* Exemples */}
               <div>
-                <Label htmlFor="edit-examples">Exemples Pràctics</Label>
+                <Label htmlFor="edit-examples">{language === "ca" ? "Exemples Pràctics" : "Ejemplos Prácticos"}</Label>
                 <Textarea
                   id="edit-examples"
                   value={editForm.examples}
                   onChange={e => handleEditField("examples", e.target.value)}
                   className="mt-1 resize-none font-mono text-xs"
                   rows={5}
-                  placeholder="Exemples pràctics (Markdown acceptat)"
+                  placeholder={language === "ca" ? "Exemples pràctics (Markdown acceptat)" : "Ejemplos prácticos (Markdown aceptado)"}
                 />
                 {jsonWarnings.examples && (
                   <div className="flex items-center gap-2 mt-1 text-amber-600 text-xs">
                     <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
-                    El contingut sembla un JSON. Assegura't que és text pla (Markdown), no dades estructurades.
+                    {language === "ca" ? "El contingut sembla un JSON. Assegura't que és text pla (Markdown), no dades estructurades." : "El contenido parece un JSON. Asegúrate de que es texto plano (Markdown), no datos estructurados."}
                   </div>
                 )}
               </div>
@@ -845,10 +845,9 @@ export default function CasosEspeciales() {
                 <div className="flex items-start gap-3 p-3 bg-amber-50 border border-amber-200 rounded-lg">
                   <AlertTriangle className="h-5 w-5 text-amber-600 shrink-0 mt-0.5" />
                   <div className="text-sm text-amber-800">
-                    <p className="font-semibold">Avís: contingut JSON detectat</p>
+                    <p className="font-semibold">{language === "ca" ? "Avís: contingut JSON detectat" : "Aviso: contenido JSON detectado"}</p>
                     <p className="mt-1">
-                      Un o més camps contenen el que sembla ser dades JSON. Si deses, el contingut es mostrarà
-                      com a text JSON en brut en lloc de text formatat. Utilitza text pla o Markdown en lloc de JSON.
+                      {language === "ca" ? "Un o més camps contenen el que sembla ser dades JSON. Si deses, el contingut es mostrarà com a text JSON en brut en lloc de text formatat. Utilitza text pla o Markdown en lloc de JSON." : "Uno o más campos contienen lo que parece ser datos JSON. Si guardas, el contenido se mostrará como texto JSON en bruto en lugar de texto formateado. Usa texto plano o Markdown en lugar de JSON."}
                     </p>
                   </div>
                 </div>
@@ -862,7 +861,7 @@ export default function CasosEspeciales() {
               onClick={() => setEditDialogOpen(false)}
               disabled={updateCase.isPending}
             >
-              Cancel·lar
+              {language === "ca" ? "Cancel·lar" : "Cancelar"}
             </Button>
             <Button
               onClick={handleSave}
@@ -874,7 +873,7 @@ export default function CasosEspeciales() {
               ) : (
                 <Save className="h-4 w-4" />
               )}
-              Desar canvis
+              {language === "ca" ? "Desar canvis" : "Guardar cambios"}
             </Button>
           </DialogFooter>
         </DialogContent>
@@ -886,17 +885,15 @@ export default function CasosEspeciales() {
           <AlertDialogHeader>
             <AlertDialogTitle className="flex items-center gap-2">
               <AlertTriangle className="h-5 w-5 text-amber-600" />
-              Contingut JSON detectat
+              {language === "ca" ? "Contingut JSON detectat" : "Contenido JSON detectado"}
             </AlertDialogTitle>
             <AlertDialogDescription>
-              Un o més camps semblen contenir dades JSON. Si continues, el contingut es mostrarà
-              com a text JSON en brut als usuaris, en lloc de text formatat correctament.
-              Estàs segur que vols desar igualment?
+              {language === "ca" ? "Un o més camps semblen contenir dades JSON. Si continues, el contingut es mostrarà com a text JSON en brut als usuaris, en lloc de text formatat correctament. Estàs segur que vols desar igualment?" : "Uno o más campos parecen contener datos JSON. Si continuas, el contenido se mostrará como texto JSON en bruto a los usuarios, en lugar de texto formateado correctamente. ¿Estás seguro de que quieres guardar igualmente?"}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel onClick={() => setJsonConfirmOpen(false)}>
-              Tornar a editar
+              {language === "ca" ? "Tornar a editar" : "Volver a editar"}
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={() => {
@@ -905,7 +902,7 @@ export default function CasosEspeciales() {
               }}
               className="bg-amber-600 hover:bg-amber-700"
             >
-              Desar igualment
+              {language === "ca" ? "Desar igualment" : "Guardar igualmente"}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

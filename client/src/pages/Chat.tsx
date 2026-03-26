@@ -284,7 +284,7 @@ export default function Chat() {
         setStreamingMessage({
           id: "streaming",
           role: "assistant",
-          content: "S'ha produït un error en generar la resposta. Torna-ho a intentar.",
+          content: language === "ca" ? "S'ha produït un error en generar la resposta. Torna-ho a intentar." : "Se ha producido un error al generar la respuesta. Vuelve a intentarlo.",
         });
         setTimeout(() => setStreamingMessage(null), 3000);
       }
@@ -298,17 +298,17 @@ export default function Chat() {
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex items-center justify-center">
         <Card className="p-8 max-w-md text-center">
           <Shield className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold mb-2">Inicia sessió per continuar</h2>
+          <h2 className="text-2xl font-bold mb-2">{language === "ca" ? "Inicia sessió per continuar" : "Inicia sesión para continuar"}</h2>
           <p className="text-gray-600 mb-6">
-            Necessites iniciar sessió per utilitzar el xat amb IA especialitzada en IT
+            {language === "ca" ? "Necessites iniciar sessió per utilitzar el xat amb IA especialitzada en IT" : "Necesitas iniciar sesión para utilizar el chat con IA especializada en IT"}
           </p>
           <Button asChild className="w-full">
-            <a href={getLoginUrl()}>Iniciar sessió</a>
+            <a href={getLoginUrl()}>{language === "ca" ? "Iniciar sessió" : "Iniciar sesión"}</a>
           </Button>
           <Link href="/">
             <Button variant="ghost" className="w-full mt-2">
               <Home className="h-4 w-4 mr-2" />
-              Tornar a l'inici
+              {language === "ca" ? "Tornar a l'inici" : "Volver al inicio"}
             </Button>
           </Link>
         </Card>
@@ -342,14 +342,14 @@ export default function Chat() {
       >
         <div className="p-4 border-b">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-semibold text-lg">Historial</h2>
+            <h2 className="font-semibold text-lg">{language === "ca" ? "Historial" : "Historial"}</h2>
             <Button variant="ghost" size="sm" onClick={() => setSidebarOpen(false)}>
               <X className="h-4 w-4" />
             </Button>
           </div>
-          <Button onClick={handleNewConversation} className="w-full gap-2">
+            <Button onClick={handleNewConversation} className="w-full gap-2">
             <Plus className="h-4 w-4" />
-            Nova consulta
+            {language === "ca" ? "Nova consulta" : "Nueva consulta"}
           </Button>
         </div>
 
@@ -376,7 +376,7 @@ export default function Chat() {
                       </span>
                     </div>
                     <p className="text-xs text-gray-500 mt-1">
-                      {new Date(conv.updatedAt).toLocaleDateString("ca-ES", {
+                      {new Date(conv.updatedAt).toLocaleDateString(language === "ca" ? "ca-ES" : "es-ES", {
                         day: "numeric",
                         month: "short",
                         year: "numeric",
@@ -400,8 +400,8 @@ export default function Chat() {
             ) : (
               <div className="text-center py-8 text-gray-500 text-sm">
                 <MessageSquare className="h-12 w-12 mx-auto mb-2 opacity-50" />
-                <p>Encara no tens converses</p>
-                <p className="text-xs mt-1">Comença una nova consulta</p>
+                <p>{language === "ca" ? "Encara no tens converses" : "Aún no tienes conversaciones"}</p>
+                <p className="text-xs mt-1">{language === "ca" ? "Comença una nova consulta" : "Empieza una nueva consulta"}</p>
               </div>
             )}
           </div>
@@ -420,24 +420,24 @@ export default function Chat() {
                   size="icon"
                   onClick={() => setSidebarOpen(!sidebarOpen)}
                   className="h-8 w-8 shrink-0"
-                  title="Obrir historial"
+                  title={language === "ca" ? "Obrir historial" : "Abrir historial"}
                 >
                   <Menu className="h-4 w-4" />
                 </Button>
                 <Link href="/">
                   <Button variant="ghost" size="sm" className="gap-1.5 px-2">
                     <Home className="h-4 w-4" />
-                    <span className="hidden sm:inline">Inici</span>
+                    <span className="hidden sm:inline">{language === "ca" ? "Inici" : "Inicio"}</span>
                   </Button>
                 </Link>
                 <Separator orientation="vertical" className="h-5 hidden sm:block" />
                 <div className="flex items-center gap-1.5 min-w-0">
                   <MessageSquare className="h-5 w-5 text-blue-600 shrink-0" />
                   <div className="min-w-0">
-                    <h1 className="font-semibold text-sm sm:text-base truncate">Consulta IT</h1>
+                    <h1 className="font-semibold text-sm sm:text-base truncate">{language === "ca" ? "Consulta IT" : "Consulta IT"}</h1>
                     <div className="flex items-center gap-1">
                       <Zap className="h-3 w-3 text-green-500" />
-                      <span className="text-xs text-green-600 hidden sm:inline">Respostes en temps real</span>
+                      <span className="text-xs text-green-600 hidden sm:inline">{language === "ca" ? "Respostes en temps real" : "Respuestas en tiempo real"}</span>
                     </div>
                   </div>
                 </div>
@@ -450,7 +450,7 @@ export default function Chat() {
                     onClick={handleExportPDF}
                     disabled={exportPDF.isPending || isStreaming}
                     className="gap-1.5 px-2 sm:px-3"
-                    title="Exportar conversa a PDF"
+                    title={language === "ca" ? "Exportar conversa a PDF" : "Exportar conversación a PDF"}
                   >
                     {exportPDF.isPending ? (
                       <Loader2 className="h-4 w-4 animate-spin" />
@@ -476,14 +476,14 @@ export default function Chat() {
               <div className="text-center py-8">
                 <MessageSquare className="h-16 w-16 text-blue-400 mx-auto mb-4" />
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                  Xat especialitzat en IT
+                  {language === "ca" ? "Xat especialitzat en IT" : "Chat especializado en IT"}
                 </h2>
                 <p className="text-gray-600 mb-2">
-                  Fes qualsevol consulta sobre normativa d'Incapacitat Temporal
+                  {language === "ca" ? "Fes qualsevol consulta sobre normativa d'Incapacitat Temporal" : "Haz cualquier consulta sobre normativa de Incapacidad Temporal"}
                 </p>
                 <div className="flex items-center justify-center gap-1.5 mb-6">
                   <Zap className="h-4 w-4 text-green-500" />
-                  <span className="text-sm text-green-600 font-medium">Respostes en temps real amb streaming</span>
+                  <span className="text-sm text-green-600 font-medium">{language === "ca" ? "Respostes en temps real amb streaming" : "Respuestas en tiempo real con streaming"}</span>
                 </div>
 
                 {/* Suggeriments ràpids */}
@@ -508,21 +508,21 @@ export default function Chat() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
                   <Card className="p-4">
-                    <h3 className="font-semibold mb-2">Fonts d'informació:</h3>
+                    <h3 className="font-semibold mb-2">{language === "ca" ? "Fonts d'informació:" : "Fuentes de información:"}</h3>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      <li>• Normativa estatal i autonòmica</li>
-                      <li>• Casos especials documentats</li>
-                      <li>• Guies pràctiques del Departament de Salut</li>
-                      <li>• Jurisprudència del TS i TSJ</li>
+                      <li>• {language === "ca" ? "Normativa estatal i autonòmica" : "Normativa estatal y autonómica"}</li>
+                      <li>• {language === "ca" ? "Casos especials documentats" : "Casos especiales documentados"}</li>
+                      <li>• {language === "ca" ? "Guies pràctiques del Departament de Salut" : "Guías prácticas del Departamento de Salud"}</li>
+                      <li>• {language === "ca" ? "Jurisprudència del TS i TSJ" : "Jurisprudencia del TS y TSJ"}</li>
                     </ul>
                   </Card>
                   <Card className="p-4">
-                    <h3 className="font-semibold mb-2">Consells d'ús:</h3>
+                    <h3 className="font-semibold mb-2">{language === "ca" ? "Consells d'ús:" : "Consejos de uso:"}</h3>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      <li>• Fes preguntes concretes i específiques</li>
-                      <li>• Indica el règim (RGSS, RETA, TRADE...)</li>
-                      <li>• Menciona la durada de la baixa si és rellevant</li>
-                      <li>• Pots demanar exemples pràctics</li>
+                      <li>• {language === "ca" ? "Fes preguntes concretes i específiques" : "Haz preguntas concretas y específicas"}</li>
+                      <li>• {language === "ca" ? "Indica el règim (RGSS, RETA, TRADE...)" : "Indica el régimen (RGSS, RETA, TRADE...)"}</li>
+                      <li>• {language === "ca" ? "Menciona la durada de la baixa si és rellevant" : "Menciona la duración de la baja si es relevante"}</li>
+                      <li>• {language === "ca" ? "Pots demanar exemples pràctics" : "Puedes pedir ejemplos prácticos"}</li>
                     </ul>
                   </Card>
                 </div>
@@ -553,7 +553,7 @@ export default function Chat() {
                             {msg.id === "streaming" && !msg.content && (
                               <div className="flex items-center gap-2 text-gray-500">
                                 <Loader2 className="h-4 w-4 animate-spin text-blue-600" />
-                                <span className="text-sm">Consultant documentació...</span>
+                                <span className="text-sm">{language === "ca" ? "Consultant documentació..." : "Consultando documentación..."}</span>
                               </div>
                             )}
                           </>
@@ -564,7 +564,7 @@ export default function Chat() {
                       {msg.sources && msg.sources.length > 0 && (
                         <div className="mt-3 pt-3 border-t border-gray-200">
                           <p className="text-xs font-semibold text-gray-600 mb-1">
-                            Fonts consultades:
+                            {language === "ca" ? "Fonts consultades:" : "Fuentes consultadas:"}
                           </p>
                           <div className="flex flex-wrap gap-1">
                             {msg.sources.map((source: any, sidx: number) => (
@@ -592,7 +592,7 @@ export default function Chat() {
           <div className="container max-w-4xl">
             <div className="flex gap-2">
               <Input
-                placeholder="Escriu la teva consulta sobre IT..."
+                placeholder={language === "ca" ? "Escriu la teva consulta sobre IT..." : "Escribe tu consulta sobre IT..."}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 onKeyDown={(e) => {
@@ -612,12 +612,12 @@ export default function Chat() {
                 {isStreaming ? (
                   <>
                     <Loader2 className="h-4 w-4 animate-spin" />
-                    <span className="hidden sm:inline">Generant...</span>
+                    <span className="hidden sm:inline">{language === "ca" ? "Generant..." : "Generando..."}</span>
                   </>
                 ) : (
                   <>
                     <Send className="h-4 w-4" />
-                    <span className="hidden sm:inline">Enviar</span>
+                    <span className="hidden sm:inline">{language === "ca" ? "Enviar" : "Enviar"}</span>
                   </>
                 )}
               </Button>
@@ -625,7 +625,7 @@ export default function Chat() {
             {isStreaming && (
               <p className="text-xs text-gray-500 mt-2 flex items-center gap-1">
                 <Zap className="h-3 w-3 text-green-500" />
-                La IA està generant la resposta en temps real...
+                {language === "ca" ? "La IA està generant la resposta en temps real..." : "La IA está generando la respuesta en tiempo real..."}
               </p>
             )}
           </div>
@@ -636,19 +636,18 @@ export default function Chat() {
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Eliminar conversa?</AlertDialogTitle>
+            <AlertDialogTitle>{language === "ca" ? "Eliminar conversa?" : "¿Eliminar conversación?"}</AlertDialogTitle>
             <AlertDialogDescription>
-              Aquesta acció no es pot desfer. La conversa i tots els seus missatges
-              s'eliminaran permanentment.
+              {language === "ca" ? "Aquesta acció no es pot desfer. La conversa i tots els seus missatges s'eliminaran permanentment." : "Esta acción no se puede deshacer. La conversación y todos sus mensajes se eliminarán permanentemente."}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Cancel·lar</AlertDialogCancel>
+            <AlertDialogCancel>{language === "ca" ? "Cancel·lar" : "Cancelar"}</AlertDialogCancel>
             <AlertDialogAction
               onClick={handleDeleteConversation}
               className="bg-red-600 hover:bg-red-700"
             >
-              Eliminar
+              {language === "ca" ? "Eliminar" : "Eliminar"}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

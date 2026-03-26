@@ -242,7 +242,7 @@ export default function Calculadora() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Calendar className="h-5 w-5 text-purple-600" />
-                  Temps estimat d'IT
+                  {language === "ca" ? "Temps estimat d'IT" : "Tiempo estimado de IT"}
                 </CardTitle>
                 <div className="space-y-1">
                   <CardDescription className="text-base font-semibold text-gray-900">
@@ -312,7 +312,7 @@ export default function Calculadora() {
                         </div>
                       </div>
                       <p className="text-xs text-gray-500 mt-2 text-center">
-                        Font: Taula 15 del Manual de Tiempos Óptimos de IT (INSS, 4a edició) · {selectedGroup.cnoCodes}
+                        {language === "ca" ? "Font" : "Fuente"}: Taula 15 del Manual de Tiempos Óptimos de IT (INSS, 4a edició) · {selectedGroup.cnoCodes}
                       </p>
                     </div>
                   </>
@@ -365,7 +365,7 @@ export default function Calculadora() {
                           </table>
                           <p className="text-xs text-gray-400 mt-2">
                                 {language === "ca" ? `Dies ajustats calculats sobre el temps estàndard de ${selectedDiagnosis.averageDays} dies.` : `Días ajustados calculados sobre el tiempo estándar de ${selectedDiagnosis.averageDays} días.`}
-                            Font: Taula 15, Manual de Tiempos Óptimos de IT, INSS 4a edició.
+                            {language === "ca" ? "Font" : "Fuente"}: Taula 15, Manual de Tiempos Óptimos de IT, INSS 4a edició.
                           </p>
                         </div>
                       )}
