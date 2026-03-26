@@ -1,4 +1,6 @@
 import { useState, useMemo } from "react";
+import { useT } from "@/contexts/LanguageContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -47,14 +49,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { Streamdown } from "streamdown";
 import { toast } from "sonner";
 
-const typeLabels: Record<string, string> = {
-  ley: "Llei",
-  decreto: "Decret",
-  guia: "Guia",
-  manual: "Manual",
-  pildora: "Píndola",
-  otro: "Altre",
-};
+// typeLabels es defineix dins del component per ser reactiu a l'idioma
 
 const typeColors: Record<string, string> = {
   ley: "bg-red-100 text-red-800",
@@ -76,11 +71,7 @@ function normalitzeMd(text: string | null | undefined): string {
   return text.replace(/; /g, "\n");
 }
 
-const jurisdictionLabels: Record<string, string> = {
-  estatal: "Estatal",
-  autonomica: "Autonòmica",
-  ambas: "Estatal i Autonòmica",
-};
+
 
 const statusConfig: Record<string, { label: string; color: string; icon: React.ElementType; badgeClass: string }> = {
   vigent: {
@@ -143,6 +134,22 @@ function StatusBadge({ status }: { status: string }) {
 
 export default function Documentos() {
   const { isAuthenticated } = useAuth();
+  const { t, language } = useT();
+
+  const typeLabels: Record<string, string> = {
+    ley: language === "ca" ? "Llei" : "Ley",
+    decreto: language === "ca" ? "Decret" : "Decreto",
+    guia: language === "ca" ? "Guia" : "Guía",
+    manual: language === "ca" ? "Manual" : "Manual",
+    pildora: language === "ca" ? "Píndola" : "Píldora",
+    otro: language === "ca" ? "Altre" : "Otro",
+  };
+
+  const jurisdictionLabelsLocal: Record<string, string> = {
+    estatal: language === "ca" ? "Estatal" : "Estatal",
+    autonomica: language === "ca" ? "Autonòmica" : "Autonómica",
+    ambas: language === "ca" ? "Estatal i Autonòmica" : "Estatal y Autonómica",
+  };
   const [searchQuery, setSearchQuery] = useState("");
   const [filterType, setFilterType] = useState<string>("all");
   const [filterJurisdiction, setFilterJurisdiction] = useState<string>("all");
@@ -255,13 +262,13 @@ export default function Documentos() {
               <Link href="/">
                 <Button variant="ghost" size="sm" className="gap-1.5 px-2 shrink-0">
                   <Home className="h-4 w-4" />
-                  <span className="hidden sm:inline">Inici</span>
+                  <span className="hidden sm:inline">{language === "ca" ? "Inici" : "Inicio"}</span>
                 </Button>
               </Link>
               <span className="text-muted-foreground hidden sm:inline">/</span>
               <div className="flex items-center gap-1.5 min-w-0">
                 <Shield className="h-5 w-5 text-green-600 shrink-0" />
-                <h1 className="text-base sm:text-xl font-bold truncate">Documentació Normativa</h1>
+                <h1 className="text-base sm:text-xl font-bold truncate">{language === "ca" ? "Documentació Normativa" : "Documentación Normativa"}</h1>
               </div>
             </div>
             <div className="flex items-center gap-2 shrink-0">
@@ -269,10 +276,11 @@ export default function Documentos() {
                 <Link href="/favorits">
                   <Button variant="ghost" size="sm" className="gap-1.5 px-2">
                     <Star className="h-4 w-4 text-yellow-500" />
-                    <span className="hidden sm:inline">Favorits</span>
+                    <span className="hidden sm:inline">{language === "ca" ? "Favorits" : "Favoritos"}</span>
                   </Button>
                 </Link>
               )}
+              <LanguageSwitcher />
               <Badge variant="outline" className="text-xs">
                 {displayedDocuments.length} docs
               </Badge>
@@ -288,7 +296,7 @@ export default function Documentos() {
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
-                placeholder="Cercar per títol, contingut o font..."
+                placeholder={language === "ca" ? "Cercar per títol, contingut o font..." : "Buscar por título, contenido o fuente..."}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10"
@@ -434,7 +442,7 @@ export default function Documentos() {
               <span>Mostrant {displayedDocuments.length} resultats</span>
               {searchQuery && <Badge variant="secondary">Cerca: "{searchQuery}"</Badge>}
               {filterType !== "all" && <Badge variant="secondary">{typeLabels[filterType]}</Badge>}
-              {filterJurisdiction !== "all" && <Badge variant="secondary">{jurisdictionLabels[filterJurisdiction]}</Badge>}
+              {filterJurisdiction !== "all" && <Badge variant="secondary">{jurisdictionLabelsLocal[filterJurisdiction]}</Badge>}
               {filterYear !== "all" && <Badge variant="secondary" className="flex items-center gap-1"><Calendar className="h-3 w-3" />{filterYear}</Badge>}
               {filterStatus !== "all" && (
                 <Badge variant="secondary" className={`flex items-center gap-1 ${statusConfig[filterStatus]?.badgeClass}`}>
@@ -478,7 +486,7 @@ export default function Documentos() {
                         {typeLabels[doc.type] || doc.type}
                       </Badge>
                       <Badge variant="outline" className="text-xs">
-                        {jurisdictionLabels[doc.jurisdiction]}
+                        {jurisdictionLabelsLocal[doc.jurisdiction]}
                       </Badge>
                     </div>
                     <Button
@@ -566,7 +574,7 @@ export default function Documentos() {
                       {typeLabels[selectedDocument.type] || selectedDocument.type}
                     </Badge>
                     <Badge variant="outline">
-                      {jurisdictionLabels[selectedDocument.jurisdiction]}
+                      {jurisdictionLabelsLocal[selectedDocument.jurisdiction]}
                     </Badge>
                     <StatusBadge status={selectedDocument.status} />
                     {selectedDocument.publicationYear && (

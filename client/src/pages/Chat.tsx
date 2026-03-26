@@ -1,3 +1,5 @@
+import { useT } from "@/contexts/LanguageContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -47,7 +49,7 @@ type StreamingMessage = {
 };
 
 // Suggeriments ràpids per a la pantalla inicial
-const QUICK_SUGGESTIONS = [
+const QUICK_SUGGESTIONS_CA = [
   "Quina és la durada màxima d'una IT per contingència comuna?",
   "Com es gestiona una baixa mèdica retroactiva?",
   "Procediment per a la menstruació incapacitant",
@@ -69,7 +71,30 @@ const QUICK_SUGGESTIONS = [
   "IT i permís parental (16 setmanes): què passa amb la IT si la mare està de baixa quan arriba el part?",
 ];
 
+const QUICK_SUGGESTIONS_ES = [
+  "¿Cuál es la duración máxima de una IT por contingencia común?",
+  "¿Cómo se gestiona una baja médica retroactiva?",
+  "Procedimiento para la menstruación incapacitante",
+  "AT en trabajador autónomo del RETA: ¿cómo se gestiona?",
+  "Prórroga de la IT más allá de los 365 días",
+  "Pluriactividad: IT cobrando por dos regímenes a la vez",
+  "Recaida en IT: ¿cuándo se considera nueva baja?",
+  "Baja médica durante las vacaciones: ¿qué derechos tiene el trabajador?",
+  "Diferencia entre embarazo de riesgo (IT) y prestación por riesgo durante el embarazo",
+  "IT con reducción de jornada por guarda legal: ¿cómo se calcula la base reguladora?",
+  "¿Cómo funciona la nueva tramitación electrónica de los partes médicos desde abril de 2023?",
+  "¿Cuáles son los plazos de confirmación de la baja para cada grupo de procesos (RD 625/2014)?",
+  "¿Cómo se gestiona la IT cuando el paciente está ingresado en el hospital?",
+  "IT en teletrabajo: ¿cuándo se considera accidente de trabajo y cuándo contingencia común?",
+  "¿Cómo puede reclamar un paciente el alta de la mutua por accidente de trabajo?",
+  "¿Qué plazo tiene el paciente para impugnar un alta del médico de familia en Cataluña?",
+  "La mutua ha propuesto el alta al ICAM, el médico de familia ha discrepado pero el ICAM confirma el alta: ¿cómo puede reclamar el paciente?",
+  "Recaida post-alta del ICAM: ¿cómo tramitar la nueva baja a través del formulario IS3 del eCap?",
+  "IT y permiso parental (16 semanas): ¿qué pasa con la IT si la madre está de baja cuando llega el parto?",
+];
+
 export default function Chat() {
+  const { t, language } = useT();
   const { user, isAuthenticated } = useAuth();
   const [message, setMessage] = useState("");
   const [currentConversationId, setCurrentConversationId] = useState<number | null>(null);
@@ -186,6 +211,7 @@ export default function Chat() {
         body: JSON.stringify({
           message: textToSend,
           conversationId: currentConversationId ?? undefined,
+          language: language,
         }),
         signal: abortControllerRef.current.signal,
       });
@@ -434,6 +460,7 @@ export default function Chat() {
                     <span className="hidden sm:inline">PDF</span>
                   </Button>
                 )}
+                <LanguageSwitcher />
                 <div className="text-xs sm:text-sm text-gray-600 truncate max-w-[80px] sm:max-w-none hidden sm:block">
                   {user?.name?.split(" ")[0] || user?.email}
                 </div>
@@ -463,10 +490,10 @@ export default function Chat() {
                 <div className="mb-6">
                   <p className="text-sm font-semibold text-gray-700 mb-3 flex items-center justify-center gap-2">
                     <Zap className="h-4 w-4 text-blue-500" />
-                    Suggeriments ràpids — clica per enviar
+                    {language === "ca" ? "Suggeriments ràpids — clica per enviar" : "Sugerencias rápidas — haz clic para enviar"}
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-w-2xl mx-auto text-left">
-                    {QUICK_SUGGESTIONS.map((suggestion, idx) => (
+                    {(language === "ca" ? QUICK_SUGGESTIONS_CA : QUICK_SUGGESTIONS_ES).map((suggestion: string, idx: number) => (
                       <button
                         key={idx}
                         onClick={() => handleSendMessage(suggestion)}

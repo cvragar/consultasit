@@ -1,3 +1,5 @@
+import { useT } from "@/contexts/LanguageContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -378,23 +380,27 @@ const VIES = [
 // ─── Component principal ─────────────────────────────────────────────────────
 
 export default function Reclamacions() {
+  const { t, language } = useT();
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Header */}
       <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-20">
         <div className="container py-3">
-          <div className="flex items-center gap-2 text-sm text-gray-500">
+            <div className="flex items-center justify-between gap-2 text-sm text-gray-500">
+            <div className="flex items-center gap-2">
             <Link href="/">
               <Button variant="ghost" size="sm" className="gap-1.5 h-8 px-2">
                 <Home className="h-4 w-4" />
-                <span className="hidden sm:inline">Inici</span>
+                <span className="hidden sm:inline">{language === "ca" ? "Inici" : "Inicio"}</span>
               </Button>
             </Link>
             <ChevronRight className="h-3.5 w-3.5 text-gray-400" />
             <div className="flex items-center gap-1.5 font-medium text-gray-800">
               <Gavel className="h-4 w-4 text-slate-600" />
-              <span>Reclamacions i Recursos</span>
+              <span>{language === "ca" ? "Reclamacions i Recursos" : "Reclamaciones y Recursos"}</span>
             </div>
+            </div>
+            <LanguageSwitcher />
           </div>
         </div>
       </header>
@@ -404,20 +410,27 @@ export default function Reclamacions() {
         <div className="max-w-3xl mx-auto text-center px-2">
           <div className="inline-flex items-center gap-2 bg-slate-100 rounded-full px-4 py-1.5 text-sm text-slate-600 mb-4">
             <Scale className="h-4 w-4" />
-            Guia pràctica per a professionals sanitaris
+            {language === "ca" ? "Guia pràctica per a professionals sanitaris" : "Guía práctica para profesionales sanitarios"}
           </div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 leading-tight">
-            Reclamacions i Recursos en IT
+            {language === "ca" ? "Reclamacions i Recursos en IT" : "Reclamaciones y Recursos en IT"}
           </h1>
           <p className="text-base sm:text-lg text-gray-600 mb-4">
-            Cinc vies de reclamació explicades pas a pas: alta del metge de família, alta de la mútua per AT/MP, alta de l'ICAM quan la mútua ha proposat l'alta i el metge de família ha discrepat, alta de l'INSS passats els 365 dies, i determinació de contingències. <span className="font-medium text-gray-800">Atenció: no totes les reclamacions suspenen la reincorporació.</span>
+            {language === "ca" ? (
+              <>Cinc vies de reclamació explicades pas a pas: alta del metge de família, alta de la mútua per AT/MP, alta de l'ICAM quan la mútua ha proposat l'alta i el metge de família ha discrepat, alta de l'INSS passats els 365 dies, i determinació de contingències. <span className="font-medium text-gray-800">Atenció: no totes les reclamacions suspenen la reincorporació.</span></>
+            ) : (
+              <>Cinco vías de reclamación explicadas paso a paso: alta del médico de familia, alta de la mutua por AT/EP, alta del ICAM cuando la mutua ha propuesto el alta y el médico de familia ha discrepado, alta del INSS pasados los 365 días, y determinación de contingencias. <span className="font-medium text-gray-800">Atención: no todas las reclamaciones suspenden la reincorporación.</span></>
+            )}
           </p>
           {/* Cas destacat: proposta mútua confirmada per ICAM */}
           <div className="inline-flex items-start gap-2.5 bg-rose-50 border border-rose-200 rounded-xl px-4 py-3 text-sm text-rose-800 text-left mb-6">
             <AlertTriangle className="h-4 w-4 text-rose-500 shrink-0 mt-0.5" />
             <span>
-              <span className="font-semibold">Escenari freqüent i confús:</span> la mútua proposa l’alta a l’ICAM, el metge de família discrepa, però l’ICAM confirma l’alta igualment.
-              {" "}<span className="font-medium">La via correcta és reclamar al Departament de Salut en 11 dies hàbils</span>, no a l’INSS.
+              {language === "ca" ? (
+                <><span className="font-semibold">Escenari freqüent i confús:</span> la mútua proposa l'alta a l'ICAM, el metge de família discrepa, però l'ICAM confirma l'alta igualment. <span className="font-medium">La via correcta és reclamar al Departament de Salut en 11 dies hàbils</span>, no a l'INSS.</>
+              ) : (
+                <><span className="font-semibold">Escenario frecuente y confuso:</span> la mutua propone el alta al ICAM, el médico de familia discrepa, pero el ICAM confirma el alta igualmente. <span className="font-medium">La vía correcta es reclamar al Departament de Salut en 11 días hábiles</span>, no al INSS.</>
+              )}
             </span>
           </div>
 
@@ -426,46 +439,46 @@ export default function Reclamacions() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-slate-50 border-b">
-                  <th className="text-left px-4 py-3 font-semibold text-gray-700">Via de reclamació</th>
-                  <th className="text-left px-4 py-3 font-semibold text-gray-700">Termini</th>
-                  <th className="text-left px-4 py-3 font-semibold text-gray-700">Suspèn reincorporació?</th>
-                  <th className="text-left px-4 py-3 font-semibold text-gray-700">Organisme</th>
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700">{language === "ca" ? "Via de reclamació" : "Vía de reclamación"}</th>
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700">{language === "ca" ? "Termini" : "Plazo"}</th>
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700">{language === "ca" ? "Sustèn reincorporació?" : "¿Suspende reincorporación?"}</th>
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700">{language === "ca" ? "Organisme" : "Organismo"}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b hover:bg-slate-50">
-                  <td className="px-4 py-3 font-medium text-blue-700">Alta metge de família (CC, &lt;365 dies)</td>
-                  <td className="px-4 py-3">11 dies hàbils</td>
+                  <td className="px-4 py-3 font-medium text-blue-700">{language === "ca" ? "Alta metge de família (CC, <365 dies)" : "Alta médico de familia (CC, <365 días)"}</td>
+                  <td className="px-4 py-3">{language === "ca" ? "11 dies hàbils" : "11 días hábiles"}</td>
                   <td className="px-4 py-3"><span className="text-red-600 font-medium">No</span></td>
                   <td className="px-4 py-3">ICAM / Dep. Salut</td>
                 </tr>
                 <tr className="border-b hover:bg-slate-50">
-                  <td className="px-4 py-3 font-medium text-orange-700">Alta mútua (AT/MP, &lt;365 dies)</td>
-                  <td className="px-4 py-3">10 dies hàbils</td>
-                  <td className="px-4 py-3"><span className="text-green-600 font-medium">Sí (fins resolució INSS)</span></td>
+                  <td className="px-4 py-3 font-medium text-orange-700">{language === "ca" ? "Alta mútua (AT/MP, <365 dies)" : "Alta mutua (AT/EP, <365 días)"}</td>
+                  <td className="px-4 py-3">{language === "ca" ? "10 dies hàbils" : "10 días hábiles"}</td>
+                  <td className="px-4 py-3"><span className="text-green-600 font-medium">{language === "ca" ? "Sí (fins resolució INSS)" : "Sí (hasta resolución INSS)"}</span></td>
                   <td className="px-4 py-3">INSS</td>
                 </tr>
                 <tr className="border-b hover:bg-slate-50">
-                  <td className="px-4 py-3 font-medium text-rose-700">Alta ICAM (proposta mútua CC, &lt;365 dies)</td>
-                  <td className="px-4 py-3">11 dies hàbils</td>
+                  <td className="px-4 py-3 font-medium text-rose-700">{language === "ca" ? "Alta ICAM (proposta mútua CC, <365 dies)" : "Alta ICAM (propuesta mutua CC, <365 días)"}</td>
+                  <td className="px-4 py-3">{language === "ca" ? "11 dies hàbils" : "11 días hábiles"}</td>
                   <td className="px-4 py-3"><span className="text-red-600 font-medium">No</span></td>
                   <td className="px-4 py-3">ICAM / Dep. Salut</td>
                 </tr>
                 <tr className="border-b hover:bg-slate-50">
-                  <td className="px-4 py-3 font-medium text-green-700">Alta INSS (&gt;365 dies) — disconformitat (4 dies naturals)</td>
-                  <td className="px-4 py-3">4 dies naturals</td>
-                  <td className="px-4 py-3"><span className="text-green-600 font-medium">Sí (fins resolució)</span></td>
-                  <td className="px-4 py-3">Inspecció Mèdica SPS</td>
+                  <td className="px-4 py-3 font-medium text-green-700">{language === "ca" ? "Alta INSS (>365 dies) — disconformitat (4 dies naturals)" : "Alta INSS (>365 días) — disconformidad (4 días naturales)"}</td>
+                  <td className="px-4 py-3">{language === "ca" ? "4 dies naturals" : "4 días naturales"}</td>
+                  <td className="px-4 py-3"><span className="text-green-600 font-medium">{language === "ca" ? "Sí (fins resolució)" : "Sí (hasta resolución)"}</span></td>
+                  <td className="px-4 py-3">{language === "ca" ? "Inspecció Mèdica SPS" : "Inspección Médica SPS"}</td>
                 </tr>
                 <tr className="border-b hover:bg-slate-50">
-                  <td className="px-4 py-3 font-medium text-green-700">Alta INSS (&gt;365 dies) — rec. prèvia posterior</td>
-                  <td className="px-4 py-3">20 dies hàbils</td>
+                  <td className="px-4 py-3 font-medium text-green-700">{language === "ca" ? "Alta INSS (>365 dies) — rec. prèvia posterior" : "Alta INSS (>365 días) — rec. previa posterior"}</td>
+                  <td className="px-4 py-3">{language === "ca" ? "20 dies hàbils" : "20 días hábiles"}</td>
                   <td className="px-4 py-3"><span className="text-red-600 font-medium">No</span></td>
-                  <td className="px-4 py-3">INSS / Jutjat Social</td>
+                  <td className="px-4 py-3">{language === "ca" ? "INSS / Jutjat Social" : "INSS / Juzgado Social"}</td>
                 </tr>
                 <tr className="hover:bg-slate-50">
-                  <td className="px-4 py-3 font-medium text-purple-700">Determinació contingències</td>
-                  <td className="px-4 py-3">En qualsevol moment</td>
+                  <td className="px-4 py-3 font-medium text-purple-700">{language === "ca" ? "Determinació contingències" : "Determinación contingencias"}</td>
+                  <td className="px-4 py-3">{language === "ca" ? "En qualsevol moment" : "En cualquier momento"}</td>
                   <td className="px-4 py-3"><span className="text-gray-500">N/A</span></td>
                   <td className="px-4 py-3">INSS</td>
                 </tr>
@@ -499,12 +512,12 @@ export default function Reclamacions() {
                   <div className="flex flex-wrap gap-2 mt-2">
                     <div className="flex items-center gap-1.5 text-xs bg-gray-100 rounded-full px-3 py-1">
                       <Clock className="h-3.5 w-3.5 text-gray-500" />
-                      <span className="font-medium">Termini:</span>
+                      <span className="font-medium">{language === "ca" ? "Termini:" : "Plazo:"}</span>
                       <span>{via.termini}</span>
                     </div>
                     <div className="flex items-center gap-1.5 text-xs bg-gray-100 rounded-full px-3 py-1">
                       <Building2 className="h-3.5 w-3.5 text-gray-500" />
-                      <span className="font-medium">Organisme:</span>
+                      <span className="font-medium">{language === "ca" ? "Organisme:" : "Organismo:"}</span>
                       <span>{via.organisme}</span>
                     </div>
                   </div>
@@ -520,7 +533,7 @@ export default function Reclamacions() {
                       <AccordionTrigger className="text-sm font-semibold hover:no-underline">
                         <div className="flex items-center gap-2">
                           <ClipboardList className="h-4 w-4 text-gray-500" />
-                          Procediment pas a pas
+                          {language === "ca" ? "Procediment pas a pas" : "Procedimiento paso a paso"}
                         </div>
                       </AccordionTrigger>
                       <AccordionContent>
@@ -545,7 +558,7 @@ export default function Reclamacions() {
                       <AccordionTrigger className="text-sm font-semibold hover:no-underline">
                         <div className="flex items-center gap-2">
                           <FileText className="h-4 w-4 text-gray-500" />
-                          Documentació necessària
+                          {language === "ca" ? "Documentació necessària" : "Documentación necesaria"}
                         </div>
                       </AccordionTrigger>
                       <AccordionContent>
@@ -565,7 +578,7 @@ export default function Reclamacions() {
                       <AccordionTrigger className="text-sm font-semibold hover:no-underline">
                         <div className="flex items-center gap-2">
                           <Info className="h-4 w-4 text-gray-500" />
-                          Consells pràctics
+                          {language === "ca" ? "Consells pràctics" : "Consejos prácticos"}
                         </div>
                       </AccordionTrigger>
                       <AccordionContent>
@@ -585,7 +598,7 @@ export default function Reclamacions() {
                       <AccordionTrigger className="text-sm font-semibold hover:no-underline">
                         <div className="flex items-center gap-2">
                           <Scale className="h-4 w-4 text-gray-500" />
-                          Base legal
+                          {language === "ca" ? "Base legal" : "Base legal"}
                         </div>
                       </AccordionTrigger>
                       <AccordionContent>
@@ -606,7 +619,7 @@ export default function Reclamacions() {
                         <AccordionTrigger className="text-sm font-semibold hover:no-underline">
                           <div className="flex items-center gap-2">
                             <Phone className="h-4 w-4 text-gray-500" />
-                            Contacte i tràmit oficial
+                            {language === "ca" ? "Contacte i tràmit oficial" : "Contacto y trámite oficial"}
                           </div>
                         </AccordionTrigger>
                         <AccordionContent>
@@ -627,7 +640,7 @@ export default function Reclamacions() {
                               className="inline-flex items-center gap-1.5 text-sm text-blue-600 hover:text-blue-800 hover:underline"
                             >
                               <ExternalLink className="h-3.5 w-3.5" />
-                              {via.urlLabel} — Tràmit oficial
+                              {via.urlLabel} — {language === "ca" ? "Tràmit oficial" : "Trámite oficial"}
                             </a>
                           </div>
                         </AccordionContent>
@@ -647,9 +660,9 @@ export default function Reclamacions() {
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
             <AlertTriangle className="h-5 w-5 text-amber-600 shrink-0 mt-0.5" />
             <div className="text-sm text-amber-800">
-              <p className="font-semibold mb-1">Nota per a professionals sanitaris</p>
+              <p className="font-semibold mb-1">{language === "ca" ? "Nota per a professionals sanitaris" : "Nota para profesionales sanitarios"}</p>
               <p>
-                Aquesta guia és orientativa per informar els pacients sobre les seves opcions de reclamació. Els terminis i procediments poden variar. Per a casos complexos, es recomana que el pacient consulti un advocat laboralista o un sindicat. La informació s'ha actualitzat d'acord amb la normativa vigent a Catalunya (març 2026).
+                {language === "ca" ? "Aquesta guia és orientativa per informar els pacients sobre les seves opcions de reclamació. Els terminis i procediments poden variar. Per a casos complexos, es recomana que el pacient consulti un advocat laboralista o un sindicat. La informació s'ha actualitzat d'acord amb la normativa vigent a Catalunya (març 2026)." : "Esta guía es orientativa para informar a los pacientes sobre sus opciones de reclamación. Los plazos y procedimientos pueden variar. Para casos complejos, se recomienda que el paciente consulte a un abogado laboralista o un sindicato. La información se ha actualizado de acuerdo con la normativa vigente en Cataluña (marzo 2026)."}
               </p>
             </div>
           </div>
@@ -660,13 +673,13 @@ export default function Reclamacions() {
       <section className="container pb-16">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-6 text-white text-center">
-            <h3 className="text-lg font-bold mb-2">Tens dubtes sobre un cas concret?</h3>
+            <h3 className="text-lg font-bold mb-2">{language === "ca" ? "Tens dubtes sobre un cas concret?" : "¿Tienes dudas sobre un caso concreto?"}</h3>
             <p className="text-blue-100 text-sm mb-4">
-              Consulta amb l'assistent d'IA especialitzat en normativa d'IT per obtenir orientació personalitzada.
+              {language === "ca" ? "Consulta amb l'assistent d'IA especialitzat en normativa d'IT per obtenir orientació personalitzada." : "Consulta con el asistente de IA especializado en normativa de IT para obtener orientación personalizada."}
             </p>
             <Link href="/chat">
               <Button variant="secondary" className="gap-2">
-                Consultar amb l'assistent
+                {language === "ca" ? "Consultar amb l'assistent" : "Consultar con el asistente"}
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>

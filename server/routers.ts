@@ -255,10 +255,11 @@ export const appRouter = router({
         z.object({
           conversationId: z.number(),
           message: z.string(),
+          language: z.enum(["ca", "es"]).optional().default("ca"),
         })
       )
       .mutation(async ({ input }) => {
-        const { conversationId, message } = input;
+        const { conversationId, message, language } = input;
 
         // Guardar mensaje del usuario
         await addMessage(conversationId, "user", message);
@@ -267,20 +268,24 @@ export const appRouter = router({
         const context = await getRelevantContext(message);
 
         // Construir prompt del sistema con contexto
-        let systemPrompt = `Eres un asistente especializado en normativa de Incapacidad Temporal (IT) en España y Catalunya.
+        const langInstruction = language === "es"
+          ? "Responde SIEMPRE en castellano (español), ya que el usuario ha seleccionado el español como idioma preferido."
+          : "Respon SEMPRE en català, ja que l'usuari ha seleccionat el català com a idioma preferit.";
 
-Tu objetivo es responder preguntas de profesionales sanitarios y administrativos sobre:
-- Normativa estatal y autonómica de IT
-- Casos especiales y situaciones extremas
-- Procedimientos administrativos
-- Duración de IT y prórrogas
-- Gestión de bajas médicas
+        let systemPrompt = `Ets un assistent especialitzat en normativa d'Incapacitat Temporal (IT) a Espanya i Catalunya.
 
-IMPORTANTE:
-- Responde SIEMPRE en catalán, ya que es el idioma preferido del usuario
-- Sé preciso y cita la normativa aplicable
-- Si no tienes información suficiente, indícalo claramente
-- Proporciona ejemplos prácticos cuando sea relevante
+El teu objectiu és respondre preguntes de professionals sanitàries i administratius sobre:
+- Normativa estatal i autonòmica d'IT
+- Casos especials i situacions complexes
+- Procediments administratius
+- Durada d'IT i pròrrogues
+- Gestió de baixes mèdiques
+
+IMPORTANT:
+- ${langInstruction}
+- Sigues precís i cita la normativa aplicable (LGSS, RD 625/2014, etc.)
+- Si no tens informació suficient, indica-ho clarament
+- Proporciona exemples pràctics quan sigui rellevant
 
 `;
 

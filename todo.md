@@ -315,5 +315,19 @@
 - [x] Crear cas especial ID 90007: recaiguda post-alta de l'ICAM (procediment IS3 eCap) - 3 escenaris, 4 exemples
 
 ## Suggeriment xat recaiguda ICAM i cas IT + permís parental (22/03/2026)
-- [ ] Afegir suggeriment ràpid al xat sobre recaiguda post-alta de l'ICAM (IS3)
-- [ ] Crear cas especial IT i permís parental (16 setmanes) - compatibilitat IT prèvia al part
+- [x] Afegir suggeriment ràpid al xat sobre recaiguda post-alta de l'ICAM (IS3)
+- [x] Crear cas especial IT i permís parental (16 setmanes) - compatibilitat IT prèvia al part (ID 90008)
+
+## Sistema de selecció d'idioma CA/ES (26/03/2026)
+- [x] Crear context LanguageContext (ca/es) amb persistència localStorage
+- [x] Crear fitxers de traduccions translations/ca.ts i translations/es.ts
+- [x] Aplicar traduccions a la navegació i layout principal
+- [x] Aplicar traduccions a Home.tsx
+- [x] Aplicar traduccions a CasosEspeciales.tsx
+- [x] Aplicar traduccions a Documentos.tsx
+- [x] Aplicar traduccions a Calculadora.tsx
+- [x] Aplicar traduccions a Reclamacions.tsx
+- [x] Aplicar traduccions a Chat.tsx (suggeriments ràpids i UI)
+- [x] Afegir botó CA/ES a totes les pàgines (Home, CasosEspeciales, Documentos, Calculadora, Reclamacions, Chat)
+- [x] Adaptar el backend: el xat envia l'idioma preferit a l'LLM (streamRouter.ts)
+- [ ] Adaptar els casos especials i documents de la BD per retornar contingut en l'idioma seleccionat (pendent: requereix traduccions a la BD)

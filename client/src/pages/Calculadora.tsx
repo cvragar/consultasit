@@ -1,3 +1,5 @@
+import { useT } from "@/contexts/LanguageContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -46,6 +48,7 @@ function getFactorLabel(factor: number): { label: string; color: string } {
 }
 
 export default function Calculadora() {
+  const { t, language } = useT();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDiagnosis, setSelectedDiagnosis] = useState<any>(null);
   const [selectedGroupId, setSelectedGroupId] = useState<string>("");
@@ -80,13 +83,16 @@ export default function Calculadora() {
             <Link href="/">
               <Button variant="ghost" size="sm" className="gap-1.5 px-2 shrink-0">
                 <Home className="h-4 w-4" />
-                <span className="hidden sm:inline">Inici</span>
+                <span className="hidden sm:inline">{language === "ca" ? "Inici" : "Inicio"}</span>
               </Button>
             </Link>
             <Separator orientation="vertical" className="h-5 hidden sm:block" />
             <div className="flex items-center gap-1.5">
               <Calculator className="h-5 w-5 text-purple-600 shrink-0" />
-              <h1 className="text-base sm:text-xl font-bold text-gray-900">Calculadora d'IT</h1>
+              <h1 className="text-base sm:text-xl font-bold text-gray-900">{language === "ca" ? "Calculadora d'IT" : "Calculadora de IT"}</h1>
+            </div>
+            <div className="ml-auto">
+              <LanguageSwitcher />
             </div>
           </div>
         </div>
@@ -101,11 +107,13 @@ export default function Calculadora() {
               <div className="flex items-start gap-3">
                 <Info className="h-5 w-5 text-purple-600 mt-0.5" />
                 <div>
-                  <CardTitle className="text-lg">Sobre la calculadora</CardTitle>
+                  <CardTitle className="text-lg">{language === "ca" ? "Sobre la calculadora" : "Sobre la calculadora"}</CardTitle>
                   <CardDescription className="mt-2">
-                    Temps estàndard basats en el <strong>Manual de Tiempos Óptimos de IT (INSS, 4a edició)</strong>.
-                    Inclou factors de correcció per <strong>grup d'ocupació CNO-11</strong> extrets de la Taula 15 del manual.
-                    Els temps reals poden variar segons l'edat, comorbiditats i evolució clínica.
+                    {language === "ca" ? (
+                      <>Temps estàndard basats en el <strong>Manual de Tiempos Óptimos de IT (INSS, 4a edició)</strong>. Inclou factors de correcció per <strong>grup d'ocupació CNO-11</strong> extrets de la Taula 15 del manual. Els temps reals poden variar segóns l'edat, comorbiditats i evolució clínica.</>
+                    ) : (
+                      <>Tiempos estándar basados en el <strong>Manual de Tiempos Óptimos de IT (INSS, 4a edición)</strong>. Incluye factores de corrección por <strong>grupo de ocupación CNO-11</strong> extraídos de la Tabla 15 del manual. Los tiempos reales pueden variar según la edad, comorbilidades y evolución clínica.</>
+                    )}
                   </CardDescription>
                 </div>
               </div>
@@ -115,18 +123,18 @@ export default function Calculadora() {
           {/* Search Diagnosis */}
           <Card className="mb-6">
             <CardHeader>
-              <CardTitle>1. Cerca per diagnòstic</CardTitle>
+              <CardTitle>{language === "ca" ? "1. Cerca per diagnòstic" : "1. Buscar por diagnóstico"}</CardTitle>
               <CardDescription>
-                Introdueix el nom de la patologia o el codi CIE-10 (mínim 3 caràcters)
+                {language === "ca" ? "Introdueix el nom de la patologia o el codi CIE-10 (mínim 3 caràcters)" : "Introduce el nombre de la patología o el código CIE-10 (mínimo 3 caracteres)"}
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <div>
-                  <Label htmlFor="diagnosis">Diagnòstic o codi CIE-10</Label>
+                  <Label htmlFor="diagnosis">{language === "ca" ? "Diagnòstic o codi CIE-10" : "Diagnóstico o código CIE-10"}</Label>
                   <Input
                     id="diagnosis"
-                    placeholder="Ex: lumbalgia, hèrnia discal, depressió, neoplàsia mama..."
+                    placeholder={language === "ca" ? "Ex: lumbalgia, hèrnia discal, depressió, neoplàsia mama..." : "Ej: lumbalgia, hernia discal, depresión, neoplasia mama..."}
                     value={searchQuery}
                     onChange={(e) => {
                       setSearchQuery(e.target.value);
@@ -139,7 +147,7 @@ export default function Calculadora() {
 
                 {searchResults && searchResults.length > 0 && (
                   <div className="space-y-2">
-                    <Label>Resultats ({searchResults.length}):</Label>
+                    <Label>{language === "ca" ? `Resultats (${searchResults.length}):` : `Resultados (${searchResults.length}):`}</Label>
                     <div className="max-h-64 overflow-y-auto space-y-1.5 pr-1">
                       {searchResults.map((result) => (
                         <button
@@ -172,8 +180,8 @@ export default function Calculadora() {
                 {searchQuery.length > 2 && (!searchResults || searchResults.length === 0) && (
                   <div className="text-center py-6 text-gray-600">
                     <AlertCircle className="h-10 w-10 mx-auto mb-2 text-gray-400" />
-                    <p className="font-medium">No s'han trobat resultats</p>
-                    <p className="text-sm mt-1">Prova amb un altre terme o consulta amb el xat d'IA</p>
+                    <p className="font-medium">{language === "ca" ? "No s'han trobat resultats" : "No se han encontrado resultados"}</p>
+                    <p className="text-sm mt-1">{language === "ca" ? "Prova amb un altre terme o consulta amb el xat d'IA" : "Prueba con otro término o consulta con el chat de IA"}</p>
                   </div>
                 )}
               </div>
@@ -186,16 +194,16 @@ export default function Calculadora() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Briefcase className="h-5 w-5 text-blue-600" />
-                  2. Grup d'ocupació del pacient (opcional)
+                  {language === "ca" ? "2. Grup d'ocupació del pacient (opcional)" : "2. Grupo de ocupación del paciente (opcional)"}
                 </CardTitle>
                 <CardDescription>
-                  Selecciona el grup CNO-11 per aplicar el factor de correcció de l'INSS
+                  {language === "ca" ? "Selecciona el grup CNO-11 per aplicar el factor de correcció de l'INSS" : "Selecciona el grupo CNO-11 para aplicar el factor de corrección del INSS"}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <Select value={selectedGroupId} onValueChange={setSelectedGroupId}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Selecciona el grup d'ocupació..." />
+                    <SelectValue placeholder={language === "ca" ? "Selecciona el grup d'ocupació..." : "Selecciona el grupo de ocupación..."} />
                   </SelectTrigger>
                   <SelectContent>
                     {OCCUPATION_GROUPS.map((g) => {
@@ -259,20 +267,20 @@ export default function Calculadora() {
                 <div>
                   <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-1.5">
                     <Shield className="h-4 w-4 text-purple-500" />
-                    Temps estàndard INSS (sense ajust per ocupació)
+                    {language === "ca" ? "Temps estàndard INSS (sense ajust per ocupació)" : "Tiempos estándar INSS (sin ajuste por ocupación)"}
                   </h4>
                   <div className="grid grid-cols-3 gap-4">
                     <div className="text-center p-4 bg-blue-50 rounded-lg">
                       <div className="text-3xl font-bold text-blue-600">{selectedDiagnosis.minDays}</div>
-                      <div className="text-xs text-gray-600 mt-1">Dies mínims</div>
+                      <div className="text-xs text-gray-600 mt-1">{language === "ca" ? "Dies mínims" : "Días mínimos"}</div>
                     </div>
                     <div className="text-center p-4 bg-purple-50 rounded-lg border-2 border-purple-200">
                       <div className="text-3xl font-bold text-purple-600">{selectedDiagnosis.averageDays}</div>
-                      <div className="text-xs text-gray-600 mt-1">Dies estàndard</div>
+                      <div className="text-xs text-gray-600 mt-1">{language === "ca" ? "Dies estàndard" : "Días estándar"}</div>
                     </div>
                     <div className="text-center p-4 bg-orange-50 rounded-lg">
                       <div className="text-3xl font-bold text-orange-600">{selectedDiagnosis.maxDays}</div>
-                      <div className="text-xs text-gray-600 mt-1">Dies màxims</div>
+                      <div className="text-xs text-gray-600 mt-1">{language === "ca" ? "Dies màxims" : "Días máximos"}</div>
                     </div>
                   </div>
                 </div>
@@ -284,7 +292,7 @@ export default function Calculadora() {
                     <div>
                       <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-1.5">
                         <Briefcase className="h-4 w-4 text-blue-500" />
-                        Temps ajustat per ocupació: {selectedGroup.label}
+                        {language === "ca" ? "Temps ajustat per ocupació" : "Tiempo ajustado por ocupación"}: {selectedGroup.label}
                         <Badge className={`ml-1 text-xs font-mono ${getFactorLabel(adjustedDays.factor).color}`}>
                           ×{adjustedDays.factor.toFixed(2)} — {getFactorLabel(adjustedDays.factor).label}
                         </Badge>
@@ -292,15 +300,15 @@ export default function Calculadora() {
                       <div className="grid grid-cols-3 gap-4">
                         <div className="text-center p-4 bg-blue-100 rounded-lg">
                           <div className="text-3xl font-bold text-blue-700">{adjustedDays.min}</div>
-                          <div className="text-xs text-gray-600 mt-1">Dies mínims</div>
+                          <div className="text-xs text-gray-600 mt-1">{language === "ca" ? "Dies mínims" : "Días mínimos"}</div>
                         </div>
                         <div className="text-center p-4 bg-purple-100 rounded-lg border-2 border-purple-300">
                           <div className="text-3xl font-bold text-purple-700">{adjustedDays.average}</div>
-                          <div className="text-xs text-gray-600 mt-1">Dies estàndard</div>
+                          <div className="text-xs text-gray-600 mt-1">{language === "ca" ? "Dies estàndard" : "Días estándar"}</div>
                         </div>
                         <div className="text-center p-4 bg-orange-100 rounded-lg">
                           <div className="text-3xl font-bold text-orange-700">{adjustedDays.max}</div>
-                          <div className="text-xs text-gray-600 mt-1">Dies màxims</div>
+                          <div className="text-xs text-gray-600 mt-1">{language === "ca" ? "Dies màxims" : "Días máximos"}</div>
                         </div>
                       </div>
                       <p className="text-xs text-gray-500 mt-2 text-center">
@@ -320,7 +328,7 @@ export default function Calculadora() {
                         onClick={() => setShowAllFactors(!showAllFactors)}
                       >
                         <Briefcase className="h-4 w-4" />
-                        Factors de correcció per tots els grups d'ocupació (CNO-11)
+                        {language === "ca" ? "Factors de correcció per tots els grups d'ocupació (CNO-11)" : "Factores de corrección para todos los grupos de ocupación (CNO-11)"}
                         {showAllFactors ? <ChevronUp className="h-4 w-4 ml-auto" /> : <ChevronDown className="h-4 w-4 ml-auto" />}
                       </button>
                       {showAllFactors && (
@@ -328,10 +336,10 @@ export default function Calculadora() {
                           <table className="w-full text-xs border-collapse">
                             <thead>
                               <tr className="bg-gray-50">
-                                <th className="text-left px-3 py-2 border border-gray-200 font-semibold">Grup d'ocupació</th>
+                                <th className="text-left px-3 py-2 border border-gray-200 font-semibold">{language === "ca" ? "Grup d'ocupació" : "Grupo de ocupación"}</th>
                                 <th className="text-center px-3 py-2 border border-gray-200 font-semibold">CNO</th>
                                 <th className="text-center px-3 py-2 border border-gray-200 font-semibold">Factor</th>
-                                <th className="text-center px-3 py-2 border border-gray-200 font-semibold">Dies ajustats</th>
+                                <th className="text-center px-3 py-2 border border-gray-200 font-semibold">{language === "ca" ? "Dies ajustats" : "Días ajustados"}</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -348,7 +356,7 @@ export default function Calculadora() {
                                       </span>
                                     </td>
                                     <td className="px-3 py-1.5 border border-gray-200 text-center font-semibold text-purple-700">
-                                      {adjDays} dies
+                                      {adjDays} {language === "ca" ? "dies" : "días"}
                                     </td>
                                   </tr>
                                 );
@@ -356,7 +364,7 @@ export default function Calculadora() {
                             </tbody>
                           </table>
                           <p className="text-xs text-gray-400 mt-2">
-                            Dies ajustats calculats sobre el temps estàndard de {selectedDiagnosis.averageDays} dies.
+                                {language === "ca" ? `Dies ajustats calculats sobre el temps estàndard de ${selectedDiagnosis.averageDays} dies.` : `Días ajustados calculados sobre el tiempo estándar de ${selectedDiagnosis.averageDays} días.`}
                             Font: Taula 15, Manual de Tiempos Óptimos de IT, INSS 4a edició.
                           </p>
                         </div>
@@ -368,7 +376,7 @@ export default function Calculadora() {
                 {/* Notes clíniques */}
                 {selectedDiagnosis.notes && (
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">Notes clíniques i font:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">{language === "ca" ? "Notes clíniques i font:" : "Notas clínicas y fuente:"}</h4>
                     <p className="text-sm text-gray-700">{selectedDiagnosis.notes}</p>
                   </div>
                 )}
@@ -378,9 +386,11 @@ export default function Calculadora() {
                   <div className="flex items-start gap-2">
                     <AlertCircle className="h-5 w-5 text-yellow-600 mt-0.5 flex-shrink-0" />
                     <div className="text-sm text-gray-700">
-                      <strong>Important:</strong> Aquests temps són orientatius basats en el Manual de Tiempos Óptimos de l'INSS.
-                      La durada real depèn de l'evolució clínica, l'edat, les comorbiditats i el criteri mèdic.
-                      Els factors d'ocupació s'apliquen sobre el temps estàndard i no substitueixen la valoració individual.
+                      {language === "ca" ? (
+                        <><strong>Important:</strong> Aquests temps són orientatius basats en el Manual de Tiempos Óptimos de l'INSS. La durada real depèn de l'evolució clínica, l'edat, les comorbiditats i el criteri mèdic. Els factors d'ocupació s'apliquen sobre el temps estàndard i no substitueixen la valoració individual.</>
+                      ) : (
+                        <><strong>Importante:</strong> Estos tiempos son orientativos basados en el Manual de Tiempos Óptimos del INSS. La duración real depende de la evolución clínica, la edad, las comorbilidades y el criterio médico. Los factores de ocupación se aplican sobre el tiempo estándar y no sustituyen la valoración individual.</>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -391,33 +401,32 @@ export default function Calculadora() {
           {/* Guide Card */}
           <Card className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50">
             <CardHeader>
-              <CardTitle>Guia de durada de processos d'IT</CardTitle>
+              <CardTitle>{language === "ca" ? "Guia de durada de processos d'IT" : "Guía de duración de procesos de IT"}</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Durada màxima estàndard</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">{language === "ca" ? "Durada màxima estàndard" : "Duración máxima estándar"}</h4>
                   <p className="text-sm text-gray-700">
-                    La durada màxima d'una IT és de <strong>365 dies naturals</strong> des de la data de la baixa mèdica.
+                    {language === "ca" ? <><span>La durada màxima d'una IT és de </span><strong>365 dies naturals</strong><span> des de la data de la baixa mèdica.</span></> : <><span>La duración máxima de una IT es de </span><strong>365 días naturales</strong><span> desde la fecha de la baja médica.</span></>}
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Primera pròrroga (art. 174 LGSS)</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">{language === "ca" ? "Primera pròrroga (art. 174 LGSS)" : "Primera prórroga (art. 174 LGSS)"}</h4>
                   <p className="text-sm text-gray-700">
-                    Al complir-se els 365 dies, l'INSS pot prorrogar la IT per altres <strong>180 dies més</strong> (total: 545 dies / 18 mesos).
+                    {language === "ca" ? <><span>Al complir-se els 365 dies, l'INSS pot prorrogar la IT per altres </span><strong>180 dies més</strong><span> (total: 545 dies / 18 mesos).</span></> : <><span>Al cumplirse los 365 días, el INSS puede prorrogar la IT por otros </span><strong>180 días más</strong><span> (total: 545 días / 18 meses).</span></>}
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Segona pròrroga excepcional</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">{language === "ca" ? "Segona pròrroga excepcional" : "Segunda prórroga excepcional"}</h4>
                   <p className="text-sm text-gray-700">
-                    En casos excepcionals (neoplàsies, cirurgia major, malalties greus), es pot concedir una
-                    pròrroga de fins a <strong>185 dies més</strong> (total màxim: 730 dies / 24 mesos).
+                    {language === "ca" ? <><span>En casos excepcionals (neoplàsies, cirurgia major, malalties greus), es pot concedir una pròrroga de fins a </span><strong>185 dies més</strong><span> (total màxim: 730 dies / 24 mesos).</span></> : <><span>En casos excepcionales (neoplasias, cirugía mayor, enfermedades graves), se puede conceder una prórroga de hasta </span><strong>185 días más</strong><span> (total máximo: 730 días / 24 meses).</span></>}
                   </p>
                 </div>
                 <div className="pt-4 border-t">
                   <Link href="/chat">
                     <Button variant="outline" className="w-full">
-                      Tens dubtes? Consulta amb la IA especialitzada
+                      {language === "ca" ? "Tens dubtes? Consulta amb la IA especialitzada" : "¿Tienes dudas? Consulta con la IA especializada"}
                     </Button>
                   </Link>
                 </div>

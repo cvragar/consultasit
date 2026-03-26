@@ -1,4 +1,6 @@
 import { useState, useMemo } from "react";
+import { useT } from "@/contexts/LanguageContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -60,20 +62,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { Streamdown } from "streamdown";
 import { toast } from "sonner";
 
-const categoryLabels: Record<string, string> = {
-  menstruacion: "Menstruació incapacitant",
-  embarazo: "Embaràs",
-  lactancia: "Lactància",
-  donacion_organos: "Donació d'òrgans",
-  baja_retroactiva: "Baixa retroactiva",
-  pluriempleo: "Pluriocupació / Pluriactivitat",
-  prision: "Presó",
-  extranjeros: "Estrangers",
-  vacaciones: "Vacances i IT",
-  recaida: "Recaiguda",
-  accident_treball: "Accident de Treball",
-  otro: "Altres",
-};
+// categoryLabels es calcula dinàmicament via t.casos.categories dins del component
 
 const categoryColors: Record<string, string> = {
   menstruacion: "bg-pink-100 text-pink-800",
@@ -149,6 +138,7 @@ function looksLikeJson(value: string): boolean {
 }
 
 export default function CasosEspeciales() {
+  const { t, language } = useT();
   const { isAuthenticated, user } = useAuth();
   const isAdmin = isAuthenticated && user?.role === "admin";
 
@@ -318,7 +308,6 @@ export default function CasosEspeciales() {
     }, {} as Record<string, SpecialCase[]>);
   }, [displayedCases, selectedCategory]);
 
-  const categories = Object.keys(categoryLabels);
   const newCasesCount = useMemo(() => (allCases ?? []).filter(c => isNew(c.createdAt)).length, [allCases]);
   const hasActiveFilters = selectedCategory !== "all" || showOnlyNew;
 
@@ -328,12 +317,29 @@ export default function CasosEspeciales() {
     setShowOnlyNew(false);
   };
 
+  const categoryLabels: Record<string, string> = {
+    menstruacion: (t.casos.categories as Record<string,string>).menstruacion,
+    embarazo: (t.casos.categories as Record<string,string>).embarazo,
+    lactancia: (t.casos.categories as Record<string,string>).lactancia,
+    donacion_organos: (t.casos.categories as Record<string,string>).donacion_organos,
+    baja_retroactiva: (t.casos.categories as Record<string,string>).baja_retroactiva,
+    pluriempleo: (t.casos.categories as Record<string,string>).pluriempleo,
+    prision: (t.casos.categories as Record<string,string>).prision,
+    extranjeros: (t.casos.categories as Record<string,string>).extranjeros,
+    vacaciones: (t.casos.categories as Record<string,string>).vacaciones,
+    recaida: (t.casos.categories as Record<string,string>).recaida,
+    accident_treball: (t.casos.categories as Record<string,string>).accident_treball,
+    otro: (t.casos.categories as Record<string,string>).otro,
+  };
+
+  const categories = Object.keys(categoryLabels);
+
   const fieldLabels: Record<string, string> = {
-    title: "Títol",
-    description: "Descripció",
-    legalBasis: "Base Legal",
-    procedure: "Procediment",
-    examples: "Exemples Pràctics",
+    title: language === "ca" ? "Títol" : "Título",
+    description: language === "ca" ? "Descripció" : "Descripción",
+    legalBasis: language === "ca" ? "Base Legal" : "Base Legal",
+    procedure: language === "ca" ? "Procediment" : "Procedimiento",
+    examples: language === "ca" ? "Exemples Pràctics" : "Ejemplos Prácticos",
   };
 
   return (
@@ -346,30 +352,31 @@ export default function CasosEspeciales() {
               <Link href="/">
                 <Button variant="ghost" size="sm" className="gap-1.5 px-2 shrink-0">
                   <Home className="h-4 w-4" />
-                  <span className="hidden sm:inline">Inici</span>
+                  <span className="hidden sm:inline">{language === "ca" ? "Inici" : "Inicio"}</span>
                 </Button>
               </Link>
               <span className="text-muted-foreground hidden sm:inline">/</span>
               <div className="flex items-center gap-1.5 min-w-0">
                 <AlertCircle className="h-5 w-5 text-orange-600 shrink-0" />
-                <h1 className="text-base sm:text-xl font-bold truncate">Casos Especials</h1>
+                <h1 className="text-base sm:text-xl font-bold truncate">{String(t.casos.title)}</h1>
               </div>
             </div>
             <div className="flex items-center gap-2">
               {isAdmin && (
                 <Badge variant="outline" className="gap-1 text-xs border-orange-300 text-orange-700 bg-orange-50">
                   <Shield className="h-3 w-3" />
-                  Mode admin
+                  {language === "ca" ? "Mode admin" : "Modo admin"}
                 </Badge>
               )}
               {isAuthenticated && (
                 <Link href="/favorits">
                   <Button variant="ghost" size="sm" className="gap-2">
                     <Star className="h-4 w-4 text-yellow-500" />
-                    Favorits
+                    {t.nav.favorits}
                   </Button>
                 </Link>
               )}
+              <LanguageSwitcher />
               <Badge variant="outline">
                 {displayedCases.length} casos
               </Badge>
@@ -385,7 +392,7 @@ export default function CasosEspeciales() {
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
-                placeholder="Cercar per títol, descripció, base legal o procediment..."
+                placeholder={String(t.casos.searchPlaceholder)}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10"
@@ -405,7 +412,7 @@ export default function CasosEspeciales() {
               className="gap-2"
             >
               <Filter className="h-4 w-4" />
-              Filtres
+              {language === "ca" ? "Filtres" : "Filtros"}
               {hasActiveFilters && (
                 <Badge className="ml-1 bg-white text-primary h-5 w-5 p-0 flex items-center justify-center text-xs">
                   !
@@ -420,12 +427,12 @@ export default function CasosEspeciales() {
               <div className="flex items-center justify-between">
                 <h3 className="font-semibold text-sm flex items-center gap-2">
                   <Filter className="h-4 w-4" />
-                  Filtrar per categoria
+                  {language === "ca" ? "Filtrar per categoria" : "Filtrar por categoría"}
                 </h3>
                 {hasActiveFilters && (
                   <Button variant="ghost" size="sm" onClick={clearFilters} className="text-red-500 gap-1">
                     <X className="h-3 w-3" />
-                    Netejar
+                    {language === "ca" ? "Netejar" : "Limpiar"}
                   </Button>
                 )}
               </div>
@@ -435,7 +442,7 @@ export default function CasosEspeciales() {
                   size="sm"
                   onClick={() => setSelectedCategory("all")}
                 >
-                  Tots
+                  {String(t.casos.filterAll)}
                 </Button>
                 <Button
                     variant={showOnlyNew ? "default" : "outline"}
@@ -444,7 +451,7 @@ export default function CasosEspeciales() {
                     className={showOnlyNew ? "bg-emerald-600 hover:bg-emerald-700" : "border-emerald-300 text-emerald-700 hover:bg-emerald-50"}
                   >
                     <Sparkles className="h-3.5 w-3.5 mr-1" />
-                    Nous ({newCasesCount})
+                    {language === "ca" ? "Nous" : "Nuevos"} ({newCasesCount})
                   </Button>
                 {categories.map(cat => (
                   <Button
@@ -463,7 +470,7 @@ export default function CasosEspeciales() {
           {/* Resum de filtres actius */}
                 {(hasActiveFilters || searchQuery) && (
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span>Mostrant {displayedCases.length} resultats</span>
+              <span>{language === "ca" ? "Mostrant" : "Mostrando"} {displayedCases.length} {language === "ca" ? "resultats" : "resultados"}</span>
               {searchQuery && <Badge variant="secondary">Cerca: "{searchQuery}"</Badge>}
               {selectedCategory !== "all" && (
                 <Badge variant="secondary">{categoryLabels[selectedCategory]}</Badge>
@@ -471,7 +478,7 @@ export default function CasosEspeciales() {
               {showOnlyNew && (
                 <Badge className="bg-emerald-100 text-emerald-800">
                   <Sparkles className="h-3 w-3 mr-1" />
-                  Nous
+                  {language === "ca" ? "Nous" : "Nuevos"}
                 </Badge>
               )}
             </div>
@@ -482,9 +489,9 @@ export default function CasosEspeciales() {
         {displayedCases.length === 0 ? (
           <div className="text-center py-16">
             <AlertCircle className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <p className="text-muted-foreground text-lg">No s'han trobat casos amb els filtres actuals</p>
+            <p className="text-muted-foreground text-lg">{String(t.casos.noResults)}</p>
             <Button variant="outline" className="mt-4" onClick={clearFilters}>
-              Netejar filtres
+              {language === "ca" ? "Netejar filtres" : "Limpiar filtros"}
             </Button>
           </div>
         ) : (
@@ -495,7 +502,7 @@ export default function CasosEspeciales() {
                   <Badge className={`${categoryColors[category]} text-sm px-3 py-1`}>
                     {categoryLabels[category] || category}
                   </Badge>
-                  <span className="text-sm text-muted-foreground">({cases.length} casos)</span>
+                  <span className="text-sm text-muted-foreground">({cases.length} {language === "ca" ? "casos" : "casos"})</span>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {cases.map((caso) => (
@@ -510,7 +517,7 @@ export default function CasosEspeciales() {
                             {isNew(caso.createdAt) && (
                               <span className="inline-flex items-center gap-1 text-[10px] font-semibold bg-emerald-100 text-emerald-700 px-1.5 py-0.5 rounded-full mb-1">
                                 <Sparkles className="h-2.5 w-2.5" />
-                                Nou
+                                {String(t.casos.badgeNew)}
                               </span>
                             )}
                             <CardTitle className="text-sm font-semibold line-clamp-2 group-hover:text-orange-700 transition-colors">
@@ -636,7 +643,7 @@ export default function CasosEspeciales() {
                             : "text-muted-foreground"
                         }`}
                       />
-                      {isFavorite(selectedCase.id) ? "Treure de favorits" : "Afegir a favorits"}
+                      {isFavorite(selectedCase.id) ? (language === "ca" ? "Treure de favorits" : "Quitar de favoritos") : (language === "ca" ? "Afegir a favorits" : "Añadir a favoritos")}
                     </Button>
                     <TooltipProvider>
                       <Tooltip>
@@ -653,7 +660,7 @@ export default function CasosEspeciales() {
                             ) : (
                               <Download className="h-4 w-4" />
                             )}
-                            <span className="hidden sm:inline">Exportar PDF</span>
+                            <span className="hidden sm:inline">{language === "ca" ? "Exportar PDF" : "Exportar PDF"}</span>
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent side="bottom" className="sm:hidden">
@@ -675,7 +682,7 @@ export default function CasosEspeciales() {
                   <div>
                     <h3 className="font-semibold mb-3 flex items-center gap-2">
                       <Scale className="h-4 w-4 text-blue-600" />
-                      Base Legal
+                      {language === "ca" ? "Base Legal" : "Base Legal"}
                     </h3>
                     <div className="prose prose-sm max-w-none bg-blue-50 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
                       <Streamdown>{normalitzeMd(selectedCase.legalBasis)}</Streamdown>
@@ -687,7 +694,7 @@ export default function CasosEspeciales() {
                   <div>
                     <h3 className="font-semibold mb-3 flex items-center gap-2">
                       <FileText className="h-4 w-4 text-green-600" />
-                      Procediment
+                      {language === "ca" ? "Procediment" : "Procedimiento"}
                     </h3>
                     <div className="prose prose-sm max-w-none bg-green-50 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
                       <Streamdown>{normalitzeMd(selectedCase.procedure)}</Streamdown>
@@ -699,7 +706,7 @@ export default function CasosEspeciales() {
                   <div>
                     <h3 className="font-semibold mb-3 flex items-center gap-2">
                       <BookOpen className="h-4 w-4 text-purple-600" />
-                      Exemples Pràctics
+                      {language === "ca" ? "Exemples Pràctics" : "Ejemplos Prácticos"}
                     </h3>
                     <div className="prose prose-sm max-w-none bg-purple-50 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
                       <Streamdown>{normalitzeMd(selectedCase.examples)}</Streamdown>
@@ -718,10 +725,10 @@ export default function CasosEspeciales() {
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
               <Pencil className="h-5 w-5 text-orange-600" />
-              Editar cas especial
+              {language === "ca" ? "Editar cas especial" : "Editar caso especial"}
             </DialogTitle>
             <DialogDescription>
-              Modifica el contingut del cas especial. Els canvis es guardaran a la base de dades immediatament.
+              {language === "ca" ? "Modifica el contingut del cas especial. Els canvis es guardaran a la base de dades immediatament." : "Modifica el contenido del caso especial. Los cambios se guardarán en la base de datos inmediatamente."}
             </DialogDescription>
           </DialogHeader>
 

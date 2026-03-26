@@ -12,19 +12,24 @@ export const streamRouter = Router();
 
 // Construir el system prompt amb context RAG
 function buildSystemPrompt(
-  context: Awaited<ReturnType<typeof getRelevantContext>>
+  context: Awaited<ReturnType<typeof getRelevantContext>>,
+  language: "ca" | "es" = "ca"
 ): string {
+  const langInstruction = language === "es"
+    ? "Responde SIEMPRE en castellano (español). El usuario ha seleccionado el español como idioma preferido."
+    : "Respon SEMPRE en català. L'usuari ha seleccionat el català com a idioma preferit.";
+
   let systemPrompt = `Ets un assistent especialitzat en normativa d'Incapacitat Temporal (IT) a Espanya i Catalunya, dissenyat per a professionals sanitaris.
 
 El teu objectiu és respondre preguntes sobre:
 - Normativa estatal i autonòmica d'IT (RD 625/2014, RD 1060/2022, LGSS, LETA, Llei 10/2021)
 - Casos especials i situacions extremes (menstruació incapacitant, gestació setmana 39, donants d'òrgans, TRADE, pluriocupació, teletreball, accidents in itinere)
-- Procediments administratius des de l'eCap (sistema de gestió de bajas de Catalunya)
+- Procediments administratius des de l'eCap (sistema de gestió de baixes de Catalunya)
 - Durada de la IT i pròrrogues (fins a 365, 545 i 730 dies)
 - Gestió de baixes mèdiques per contingències comunes i professionals
 
 INSTRUCCIONS CRÍTIQUES:
-- Respon SEMPRE en català
+- ${langInstruction}
 - Sigues precís i cita la normativa aplicable (article, llei, decret)
 - Si no tens informació suficient, indica-ho clarament i no alucinis
 - Proporciona exemples pràctics quan sigui rellevant
@@ -66,10 +71,12 @@ streamRouter.post("/chat", async (req: Request, res: Response) => {
       return;
     }
 
-    const { message, conversationId: inputConversationId } = req.body as {
+    const { message, conversationId: inputConversationId, language: inputLanguage } = req.body as {
       message: string;
       conversationId?: number;
+      language?: "ca" | "es";
     };
+    const language: "ca" | "es" = inputLanguage === "es" ? "es" : "ca";
 
     if (!message || typeof message !== "string" || message.trim().length === 0) {
       res.status(400).json({ error: "El missatge és obligatori" });
@@ -90,7 +97,7 @@ streamRouter.post("/chat", async (req: Request, res: Response) => {
     const context = await getRelevantContext(message.trim());
 
     // Construir el system prompt
-    const systemPrompt = buildSystemPrompt(context);
+    const systemPrompt = buildSystemPrompt(context, language);
 
     // Obtenir historial de missatges previs (últims 6)
     const previousMessages = await getConversationMessages(conversationId);
