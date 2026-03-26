@@ -374,3 +374,9 @@
 - [x] Afegir procediment admin.pretranslateAll per pre-traduir tots els casos i documents des del panel Admin
 - [x] Afegir botó "Traduir ara" al panel Admin (secció lila) per llançar la pre-traducció
 - [x] 380 tests passen, 0 errors TypeScript
+
+## Correccions traducció (26/03/2026 - tarda)
+- [ ] Diagnosticar per què pretranslateAll retorna 0 casos i 0 documents
+- [ ] Corregir la detecció de registres sense traducció (NULL vs string buit)
+- [ ] Traduir textos de navegació al castellà (App.tsx: Novetats→Novedades, Reclamacions→Reclamaciones, Favorits→Favoritos, Admin→Admin)
+- [ ] Verificar que la invalidació de caché funciona en editar un cas especial

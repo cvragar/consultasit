@@ -32,7 +32,7 @@ import {
   saveSpecialCaseTranslation,
   saveDocumentTranslation,
 } from "./db";
-import { translateFieldsToEs } from "./translation";
+import { translateFieldsToEs, translateCaToEs } from "./translation";
 import { invokeLLM } from "./_core/llm";
 
 // ===== TRANSLATION HELPERS =====
@@ -69,14 +69,18 @@ async function applySpecialCaseTranslation(c: any) {
 
   const translated = await translateFieldsToEs(fieldsToTranslate);
 
-  // Save to cache asynchronously (don't await to avoid blocking)
-  saveSpecialCaseTranslation(c.id, {
-    titleEs: translated.title,
-    descriptionEs: translated.description,
-    legalBasisEs: translated.legalBasis,
-    procedureEs: translated.procedure,
-    examplesEs: translated.examples,
-  }).catch(err => console.error("[translation] Failed to save cache:", err));
+  // Only save to cache if the translation is actually different from the original
+  // (i.e., the LLM actually translated it, not just returned the fallback)
+  const translationSucceeded = translated.title && translated.title !== c.title;
+  if (translationSucceeded) {
+    saveSpecialCaseTranslation(c.id, {
+      titleEs: translated.title,
+      descriptionEs: translated.description,
+      legalBasisEs: translated.legalBasis,
+      procedureEs: translated.procedure,
+      examplesEs: translated.examples,
+    }).catch(err => console.error("[translation] Failed to save cache:", err));
+  }
 
   return {
     ...c,
@@ -116,11 +120,15 @@ async function applyDocumentTranslation(d: any) {
 
   const translated = await translateFieldsToEs(fieldsToTranslate);
 
-  saveDocumentTranslation(d.id, {
-    titleEs: translated.title,
-    summaryEs: translated.summary,
-    contentEs: translated.content,
-  }).catch(err => console.error("[translation] Failed to save doc cache:", err));
+  // Only save to cache if the translation is actually different from the original
+  const translationSucceeded = translated.title && translated.title !== d.title;
+  if (translationSucceeded) {
+    saveDocumentTranslation(d.id, {
+      titleEs: translated.title,
+      summaryEs: translated.summary,
+      contentEs: translated.content,
+    }).catch(err => console.error("[translation] Failed to save doc cache:", err));
+  }
 
   return {
     ...d,
@@ -578,36 +586,46 @@ IMPORTANT:
       let docsDone = 0;
       const errors: string[] = [];
 
-      for (const c of casesToTranslate) {
+       for (const c of casesToTranslate) {
         try {
-          const fields: Record<string, string> = { title: c.title, description: c.description };
-          if (c.legalBasis) fields.legalBasis = c.legalBasis;
-          if (c.procedure) fields.procedure = c.procedure;
-          if (c.examples) fields.examples = c.examples;
-          const translated = await translateFieldsToEs(fields);
+          // Translate title first to verify the LLM is working
+          const titleTranslated = await translateCaToEs(c.title);
+          if (!titleTranslated || titleTranslated === c.title) {
+            errors.push(`Case #${c.id}: translation returned same text, skipping`);
+            continue;
+          }
+          const descTranslated = await translateCaToEs(c.description);
+          const legalTranslated = c.legalBasis ? await translateCaToEs(c.legalBasis) : undefined;
+          const procTranslated = c.procedure ? await translateCaToEs(c.procedure) : undefined;
+          const exTranslated = c.examples ? await translateCaToEs(c.examples) : undefined;
           await saveSpecialCaseTranslation(c.id, {
-            titleEs: translated.title,
-            descriptionEs: translated.description,
-            legalBasisEs: translated.legalBasis,
-            procedureEs: translated.procedure,
-            examplesEs: translated.examples,
+            titleEs: titleTranslated,
+            descriptionEs: descTranslated !== c.description ? descTranslated : undefined,
+            legalBasisEs: legalTranslated !== c.legalBasis ? legalTranslated : undefined,
+            procedureEs: procTranslated !== c.procedure ? procTranslated : undefined,
+            examplesEs: exTranslated !== c.examples ? exTranslated : undefined,
           });
           casesDone++;
         } catch (err) {
           errors.push(`Case #${c.id}: ${(err as Error).message}`);
         }
       }
-
       for (const d of docsToTranslate) {
         try {
-          const fields: Record<string, string> = { title: d.title };
-          if (d.summary) fields.summary = d.summary;
-          if (d.content && d.content.length <= 6000) fields.content = d.content;
-          const translated = await translateFieldsToEs(fields);
+          const titleTranslated = await translateCaToEs(d.title);
+          if (!titleTranslated || titleTranslated === d.title) {
+            errors.push(`Doc #${d.id}: translation returned same text, skipping`);
+            continue;
+          }
+          const summaryTranslated = d.summary ? await translateCaToEs(d.summary) : undefined;
+          // Only translate content if not too long
+          const contentTranslated = (d.content && d.content.length <= 6000)
+            ? await translateCaToEs(d.content)
+            : undefined;
           await saveDocumentTranslation(d.id, {
-            titleEs: translated.title,
-            summaryEs: translated.summary,
-            contentEs: translated.content,
+            titleEs: titleTranslated,
+            summaryEs: summaryTranslated !== d.summary ? summaryTranslated : undefined,
+            contentEs: contentTranslated !== d.content ? contentTranslated : undefined,
           });
           docsDone++;
         } catch (err) {

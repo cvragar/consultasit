@@ -1,0 +1,16 @@
+{
+  "query": "\nSELECT \n  (SELECT COUNT(*) FROM special_cases WHERE titleEs IS NOT NULL AND titleEs != title) as cases_translated,\n  (SELECT COUNT(*) FROM special_cases) as cases_total,\n  (SELECT COUNT(*) FROM documents WHERE titleEs IS NOT NULL AND titleEs != title) as docs_translated,\n  (SELECT COUNT(*) FROM documents) as docs_total;\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute \nSELECT \n  (SELECT COUNT(*) FROM special_cases WHERE titleEs IS NOT NULL AND titleEs != title) as cases_translated,\n  (SELECT COUNT(*) FROM special_cases) as cases_total,\n  (SELECT COUNT(*) FROM documents WHERE titleEs IS NOT NULL AND titleEs != title) as docs_translated,\n  (SELECT COUNT(*) FROM documents) as docs_total;\n",
+  "rows": [
+    {
+      "cases_translated": "13",
+      "cases_total": "25",
+      "docs_translated": "6",
+      "docs_total": "12"
+    }
+  ],
+  "messages": [],
+  "stdout": "cases_translated\tcases_total\tdocs_translated\tdocs_total\n13\t25\t6\t12\n",
+  "stderr": "",
+  "execution_time_ms": 376
+}

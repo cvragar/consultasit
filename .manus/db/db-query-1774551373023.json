@@ -1,0 +1,65 @@
+{
+  "query": "SELECT id, title, titleEs FROM special_cases LIMIT 5; SELECT id, title, titleEs FROM documents LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, titleEs FROM special_cases LIMIT 5; SELECT id, title, titleEs FROM documents LIMIT 5;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "Menstruació incapacitant",
+      "titleEs": "Menstruació incapacitant"
+    },
+    {
+      "id": "2",
+      "title": "Interrupció voluntària de l'embaràs (IVE)",
+      "titleEs": "Interrupció voluntària de l'embaràs (IVE)"
+    },
+    {
+      "id": "3",
+      "title": "Gestació a partir de la setmana 39",
+      "titleEs": "Gestació a partir de la setmana 39"
+    },
+    {
+      "id": "4",
+      "title": "Donació d'òrgans",
+      "titleEs": "Donació d'òrgans"
+    },
+    {
+      "id": "5",
+      "title": "Baixes retroactives",
+      "titleEs": "Baixes retroactives"
+    },
+    {
+      "id": "id",
+      "title": "title",
+      "titleEs": "titleEs"
+    },
+    {
+      "id": "11",
+      "title": "Guía de valoración de incapacidad laboral para médicos de atención primaria",
+      "titleEs": "Guía de valoración de incapacidad laboral para médicos de atención primaria"
+    },
+    {
+      "id": "12",
+      "title": "Incapacidad Temporal: Manual para el manejo en atención primaria",
+      "titleEs": "Incapacidad Temporal: Manual para el manejo en atención primaria"
+    },
+    {
+      "id": "13",
+      "title": "Tiempos estándar de Incapacidad Temporal",
+      "titleEs": "Tiempos estándar de Incapacidad Temporal"
+    },
+    {
+      "id": "14",
+      "title": "Gestió de la incapacitat temporal - Fullet informatiu",
+      "titleEs": "Gestió de la incapacitat temporal - Fullet informatiu"
+    },
+    {
+      "id": "15",
+      "title": "Reial Decret 625/2014 (BOE-A-2014-7684)",
+      "titleEs": "Reial Decret 625/2014 (BOE-A-2014-7684)"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\ttitleEs\n1\tMenstruació incapacitant\tMenstruació incapacitant\n2\tInterrupció voluntària de l'embaràs (IVE)\tInterrupció voluntària de l'embaràs (IVE)\n3\tGestació a partir de la setmana 39\tGestació a partir de la setmana 39\n4\tDonació d'òrgans\tDonació d'òrgans\n5\tBaixes retroactives\tBaixes retroactives\nid\ttitle\ttitleEs\n11\tGuía de valoración de incapacidad laboral para médicos de atención primaria\tGuía de valoración de incapacidad laboral para médicos de atención primaria\n12\tIncapacidad Temporal: Manual para el manejo en atención primaria\tIncapacidad Temporal: Manual para el manejo en atención primaria\n13\tTiempos estándar de Incapacidad Temporal\tTiempos estándar de Incapacidad Temporal\n14\tGestió de la incapacitat temporal - Fullet informatiu\tGestió de la incapacitat temporal - Fullet informatiu\n15\tReial Decret 625/2014 (BOE-A-2014-7684)\tReial Decret 625/2014 (BOE-A-2014-7684)\n",
+  "stderr": "",
+  "execution_time_ms": 396
+}

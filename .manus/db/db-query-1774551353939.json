@@ -1,0 +1,82 @@
+{
+  "query": "SHOW COLUMNS FROM special_cases LIKE '%s%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SHOW COLUMNS FROM special_cases LIKE '%s%';",
+  "rows": [
+    {
+      "Field": "description",
+      "Type": "text",
+      "Null": "NO",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "legalBasis",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "examples",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "relatedDocumentIds",
+      "Type": "json",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "titleEs",
+      "Type": "varchar(500)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "descriptionEs",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "legalBasisEs",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "procedureEs",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "examplesEs",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    }
+  ],
+  "messages": [],
+  "stdout": "Field\tType\tNull\tKey\tDefault\tExtra\ndescription\ttext\tNO\t\tNULL\t\nlegalBasis\ttext\tYES\t\tNULL\t\nexamples\ttext\tYES\t\tNULL\t\nrelatedDocumentIds\tjson\tYES\t\tNULL\t\ntitleEs\tvarchar(500)\tYES\t\tNULL\t\ndescriptionEs\ttext\tYES\t\tNULL\t\nlegalBasisEs\ttext\tYES\t\tNULL\t\nprocedureEs\ttext\tYES\t\tNULL\t\nexamplesEs\ttext\tYES\t\tNULL\t\n",
+  "stderr": "",
+  "execution_time_ms": 433
+}

@@ -168,7 +168,7 @@ export default function CasosEspeciales() {
   const exportPDF = trpc.specialCases.exportPDF.useMutation();
   const updateCase = trpc.specialCases.update.useMutation({
     onSuccess: (updated) => {
-      toast.success("Cas especial actualitzat correctament");
+      toast.success(language === "ca" ? "Cas especial actualitzat correctament" : "Caso especial actualizado correctamente");
       utils.specialCases.list.invalidate();
       // Actualitzar el cas seleccionat si és el mateix
       if (selectedCase?.id === updated.id) {
@@ -177,12 +177,12 @@ export default function CasosEspeciales() {
       setEditDialogOpen(false);
     },
     onError: (err) => {
-      toast.error(`Error en desar: ${err.message}`);
+      toast.error(language === "ca" ? `Error en desar: ${err.message}` : `Error al guardar: ${err.message}`);
     },
   });
 
-  const addFav = trpc.favorites.add.useMutation({ onSuccess: () => toast.success("Afegit als favorits") });
-  const removeFav = trpc.favorites.remove.useMutation({ onSuccess: () => toast.success("Eliminat dels favorits") });
+  const addFav = trpc.favorites.add.useMutation({ onSuccess: () => toast.success(language === "ca" ? "Afegit als favorits" : "Añadido a favoritos") });
+  const removeFav = trpc.favorites.remove.useMutation({ onSuccess: () => toast.success(language === "ca" ? "Eliminat dels favorits" : "Eliminado de favoritos") });
   const { data: favoriteIds, refetch: refetchFavs } = trpc.favorites.getIds.useQuery(undefined, {
     enabled: isAuthenticated,
   });
@@ -193,7 +193,7 @@ export default function CasosEspeciales() {
   const toggleFavorite = (caseId: number, e: React.MouseEvent) => {
     e.stopPropagation();
     if (!isAuthenticated) {
-      toast.error("Has d'iniciar sessió per gestionar favorits");
+      toast.error(language === "ca" ? "Has d'iniciar sessió per gestionar favorits" : "Debes iniciar sesión para gestionar favoritos");
       return;
     }
     if (isFavorite(caseId)) {

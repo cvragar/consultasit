@@ -1,0 +1,54 @@
+{
+  "query": "\nSELECT id, title FROM special_cases WHERE titleEs IS NULL OR titleEs = title ORDER BY id;\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute \nSELECT id, title FROM special_cases WHERE titleEs IS NULL OR titleEs = title ORDER BY id;\n",
+  "rows": [
+    {
+      "id": "5",
+      "title": "Baixes retroactives"
+    },
+    {
+      "id": "7",
+      "title": "IT i presó"
+    },
+    {
+      "id": "8",
+      "title": "IT en estrangers"
+    },
+    {
+      "id": "9",
+      "title": "Vacances durant la IT"
+    },
+    {
+      "id": "30001",
+      "title": "Accident de treball en treballador autònom (RETA)"
+    },
+    {
+      "id": "90001",
+      "title": "IT durant embaràs de risc vs. prestació per risc durant l'embaràs"
+    },
+    {
+      "id": "90002",
+      "title": "Reducció de jornada per guarda legal i IT: càlcul de la base reguladora"
+    },
+    {
+      "id": "90003",
+      "title": "IT durant un ERTE/ERTO: qui paga i com es gestiona"
+    },
+    {
+      "id": "90004",
+      "title": "Prestació per risc durant la lactància natural: diferències amb la IT"
+    },
+    {
+      "id": "90006",
+      "title": "IT en teletreball: accident laboral vs. contingència comuna"
+    },
+    {
+      "id": "90008",
+      "title": "IT i permís parental (16 setmanes): compatibilitat i gestió des de l'eCap"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\n5\tBaixes retroactives\n7\tIT i presó\n8\tIT en estrangers\n9\tVacances durant la IT\n30001\tAccident de treball en treballador autònom (RETA)\n90001\tIT durant embaràs de risc vs. prestació per risc durant l'embaràs\n90002\tReducció de jornada per guarda legal i IT: càlcul de la base reguladora\n90003\tIT durant un ERTE/ERTO: qui paga i com es gestiona\n90004\tPrestació per risc durant la lactància natural: diferències amb la IT\n90006\tIT en teletreball: accident laboral vs. contingència comuna\n90008\tIT i permís parental (16 setmanes): compatibilitat i gestió des de l'eCap\n",
+  "stderr": "",
+  "execution_time_ms": 370
+}

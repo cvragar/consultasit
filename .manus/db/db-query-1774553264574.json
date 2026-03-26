@@ -1,0 +1,70 @@
+{
+  "query": "\nSELECT id, title, titleEs FROM special_cases WHERE titleEs IS NULL OR titleEs = title ORDER BY id;\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute \nSELECT id, title, titleEs FROM special_cases WHERE titleEs IS NULL OR titleEs = title ORDER BY id;\n",
+  "rows": [
+    {
+      "id": "1",
+      "title": "Menstruació incapacitant",
+      "titleEs": "NULL"
+    },
+    {
+      "id": "5",
+      "title": "Baixes retroactives",
+      "titleEs": "NULL"
+    },
+    {
+      "id": "7",
+      "title": "IT i presó",
+      "titleEs": "NULL"
+    },
+    {
+      "id": "8",
+      "title": "IT en estrangers",
+      "titleEs": "NULL"
+    },
+    {
+      "id": "9",
+      "title": "Vacances durant la IT",
+      "titleEs": "NULL"
+    },
+    {
+      "id": "30001",
+      "title": "Accident de treball en treballador autònom (RETA)",
+      "titleEs": "NULL"
+    },
+    {
+      "id": "90001",
+      "title": "IT durant embaràs de risc vs. prestació per risc durant l'embaràs",
+      "titleEs": "NULL"
+    },
+    {
+      "id": "90002",
+      "title": "Reducció de jornada per guarda legal i IT: càlcul de la base reguladora",
+      "titleEs": "NULL"
+    },
+    {
+      "id": "90003",
+      "title": "IT durant un ERTE/ERTO: qui paga i com es gestiona",
+      "titleEs": "NULL"
+    },
+    {
+      "id": "90004",
+      "title": "Prestació per risc durant la lactància natural: diferències amb la IT",
+      "titleEs": "NULL"
+    },
+    {
+      "id": "90006",
+      "title": "IT en teletreball: accident laboral vs. contingència comuna",
+      "titleEs": "NULL"
+    },
+    {
+      "id": "90008",
+      "title": "IT i permís parental (16 setmanes): compatibilitat i gestió des de l'eCap",
+      "titleEs": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\ttitleEs\n1\tMenstruació incapacitant\tNULL\n5\tBaixes retroactives\tNULL\n7\tIT i presó\tNULL\n8\tIT en estrangers\tNULL\n9\tVacances durant la IT\tNULL\n30001\tAccident de treball en treballador autònom (RETA)\tNULL\n90001\tIT durant embaràs de risc vs. prestació per risc durant l'embaràs\tNULL\n90002\tReducció de jornada per guarda legal i IT: càlcul de la base reguladora\tNULL\n90003\tIT durant un ERTE/ERTO: qui paga i com es gestiona\tNULL\n90004\tPrestació per risc durant la lactància natural: diferències amb la IT\tNULL\n90006\tIT en teletreball: accident laboral vs. contingència comuna\tNULL\n90008\tIT i permís parental (16 setmanes): compatibilitat i gestió des de l'eCap\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 480
+}
