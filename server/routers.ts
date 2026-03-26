@@ -555,6 +555,75 @@ IMPORTANT:
         return { pdf: base64, filename: `conversa_${input.conversationId}.pdf` };
       }),
   }),
+
+  // ===== ADMIN =====
+  admin: router({
+    /**
+     * Pre-translate all special cases and documents to Spanish.
+     * Admin only. Processes items without cached translations.
+     */
+    pretranslateAll: protectedProcedure.mutation(async ({ ctx }) => {
+      if (ctx.user.role !== "admin") {
+        throw new Error("Accés restringit: cal ser administrador");
+      }
+
+      const cases = await getAllSpecialCases();
+      const docs = await getAllDocuments();
+
+      // Translate cases without cache
+      const casesToTranslate = cases.filter(c => !c.titleEs);
+      const docsToTranslate = docs.filter(d => !d.titleEs);
+
+      let casesDone = 0;
+      let docsDone = 0;
+      const errors: string[] = [];
+
+      for (const c of casesToTranslate) {
+        try {
+          const fields: Record<string, string> = { title: c.title, description: c.description };
+          if (c.legalBasis) fields.legalBasis = c.legalBasis;
+          if (c.procedure) fields.procedure = c.procedure;
+          if (c.examples) fields.examples = c.examples;
+          const translated = await translateFieldsToEs(fields);
+          await saveSpecialCaseTranslation(c.id, {
+            titleEs: translated.title,
+            descriptionEs: translated.description,
+            legalBasisEs: translated.legalBasis,
+            procedureEs: translated.procedure,
+            examplesEs: translated.examples,
+          });
+          casesDone++;
+        } catch (err) {
+          errors.push(`Case #${c.id}: ${(err as Error).message}`);
+        }
+      }
+
+      for (const d of docsToTranslate) {
+        try {
+          const fields: Record<string, string> = { title: d.title };
+          if (d.summary) fields.summary = d.summary;
+          if (d.content && d.content.length <= 6000) fields.content = d.content;
+          const translated = await translateFieldsToEs(fields);
+          await saveDocumentTranslation(d.id, {
+            titleEs: translated.title,
+            summaryEs: translated.summary,
+            contentEs: translated.content,
+          });
+          docsDone++;
+        } catch (err) {
+          errors.push(`Doc #${d.id}: ${(err as Error).message}`);
+        }
+      }
+
+      return {
+        casesDone,
+        docsDone,
+        casesSkipped: cases.length - casesToTranslate.length,
+        docsSkipped: docs.length - docsToTranslate.length,
+        errors,
+      };
+    }),
+  }),
 });
 
 // ===== FAVORITES =====

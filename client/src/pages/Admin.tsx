@@ -209,6 +209,27 @@ export default function Admin() {
     }
   };
 
+  // Pre-traducció de tots els casos i documents
+  const pretranslateAll = trpc.admin.pretranslateAll.useMutation({
+    onSuccess: (result) => {
+      toast.success(
+        language === "ca"
+          ? `Traducció completada: ${result.casesDone} casos i ${result.docsDone} documents traduïts`
+          : `Traducción completada: ${result.casesDone} casos y ${result.docsDone} documentos traducidos`
+      );
+      if (result.errors.length > 0) {
+        toast.warning(
+          language === "ca"
+            ? `${result.errors.length} errors durant la traducció`
+            : `${result.errors.length} errores durante la traducción`
+        );
+      }
+    },
+    onError: (err) => {
+      toast.error(language === "ca" ? `Error: ${err.message}` : `Error: ${err.message}`);
+    },
+  });
+
   // Eliminar document
   const handleDelete = async (docId: number, docTitle: string) => {
     setDeletingId(docId);
@@ -317,6 +338,36 @@ export default function Admin() {
               </CardContent>
             </Card>
           </div>
+
+          {/* Pre-translation Section */}
+          <Card className="border-purple-200 bg-purple-50/30">
+            <CardHeader className="pb-3">
+              <div className="flex items-center justify-between">
+                <div>
+                  <CardTitle className="flex items-center gap-2 text-purple-900">
+                    <RefreshCw className="h-5 w-5" />
+                    {language === "ca" ? "Pre-traducció al castellà" : "Pre-traducción al castellano"}
+                  </CardTitle>
+                  <CardDescription className="mt-1">
+                    {language === "ca"
+                      ? "Genera les traduccions al castellà de tots els casos especials i documents que encara no en tinguin. La primera visita en ES serà instantània."
+                      : "Genera las traducciones al castellano de todos los casos especiales y documentos que aún no las tengan. La primera visita en ES será instantánea."}
+                  </CardDescription>
+                </div>
+                <Button
+                  onClick={() => pretranslateAll.mutate()}
+                  disabled={pretranslateAll.isPending}
+                  className="bg-purple-700 hover:bg-purple-800 text-white shrink-0"
+                >
+                  {pretranslateAll.isPending ? (
+                    <><Loader2 className="h-4 w-4 mr-2 animate-spin" />{language === "ca" ? "Traduint..." : "Traduciendo..."}</>
+                  ) : (
+                    <><RefreshCw className="h-4 w-4 mr-2" />{language === "ca" ? "Traduir ara" : "Traducir ahora"}</>
+                  )}
+                </Button>
+              </div>
+            </CardHeader>
+          </Card>
 
           {/* Upload PDF Section */}
           <Card className="border-blue-200 bg-blue-50/30">

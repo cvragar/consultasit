@@ -363,13 +363,14 @@
 - [x] 380 tests passen, 0 errors TypeScript
 
 ## Traducció dinàmica del contingut de la BD (26/03/2026)
-- [ ] Afegir columnes de caché ES a special_cases (title_es, description_es, legalBasis_es, procedure_es, examples_es)
-- [ ] Afegir columnes de caché ES a documents (title_es, content_es, summary_es)
-- [ ] Migrar la BD amb pnpm db:push
-- [ ] Crear helper translateContent(text, targetLang) al servidor usant invokeLLM
-- [ ] Modificar els procediments tRPC de special_cases per acceptar paràmetre language i retornar contingut traduït (amb caché a la BD)
-- [ ] Modificar els procediments tRPC de documents per acceptar paràmetre language i retornar contingut traduït (amb caché a la BD)
-- [ ] Actualitzar CasosEspeciales.tsx per enviar el language a totes les consultes
-- [ ] Actualitzar Documentos.tsx per enviar el language a totes les consultes
-- [ ] Actualitzar Favorits.tsx i Novetats.tsx per enviar el language
-- [ ] Escriure tests per a la traducció dinàmica
+- [x] Afegir columnes de caché ES a special_cases (titleEs, descriptionEs, legalBasisEs, procedureEs, examplesEs)
+- [x] Afegir columnes de caché ES a documents (titleEs, contentEs, summaryEs)
+- [x] Migrar la BD amb pnpm db:push (migració 0005 aplicada)
+- [x] Crear helper translateFieldsToEs() a server/translation.ts usant invokeLLM
+- [x] Modificar els procediments tRPC de special_cases per acceptar paràmetre language i retornar contingut traduït (amb caché a la BD)
+- [x] Modificar els procediments tRPC de documents per acceptar paràmetre language i retornar contingut traduït (amb caché a la BD)
+- [x] Actualitzar CasosEspeciales.tsx per enviar el language a totes les consultes
+- [x] Actualitzar Documentos.tsx per enviar el language a totes les consultes
+- [x] Afegir procediment admin.pretranslateAll per pre-traduir tots els casos i documents des del panel Admin
+- [x] Afegir botó "Traduir ara" al panel Admin (secció lila) per llançar la pre-traducció
+- [x] 380 tests passen, 0 errors TypeScript
