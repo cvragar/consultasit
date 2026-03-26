@@ -361,3 +361,15 @@
 - [x] Investigar text literal Disposició Final Tercera LO 1/2023 (modificació arts. 144.4, 169.1a, 169.2, 172, 173 LGSS)
 - [x] Ampliar document ID 17 (LO 1/2023) a la BD: 10.100 caràcters, text literal DFT, protocol ASSIR, 4 casos pràctics, FAQ
 - [x] 380 tests passen, 0 errors TypeScript
+
+## Traducció dinàmica del contingut de la BD (26/03/2026)
+- [ ] Afegir columnes de caché ES a special_cases (title_es, description_es, legalBasis_es, procedure_es, examples_es)
+- [ ] Afegir columnes de caché ES a documents (title_es, content_es, summary_es)
+- [ ] Migrar la BD amb pnpm db:push
+- [ ] Crear helper translateContent(text, targetLang) al servidor usant invokeLLM
+- [ ] Modificar els procediments tRPC de special_cases per acceptar paràmetre language i retornar contingut traduït (amb caché a la BD)
+- [ ] Modificar els procediments tRPC de documents per acceptar paràmetre language i retornar contingut traduït (amb caché a la BD)
+- [ ] Actualitzar CasosEspeciales.tsx per enviar el language a totes les consultes
+- [ ] Actualitzar Documentos.tsx per enviar el language a totes les consultes
+- [ ] Actualitzar Favorits.tsx i Novetats.tsx per enviar el language
+- [ ] Escriure tests per a la traducció dinàmica

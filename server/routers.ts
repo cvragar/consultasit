@@ -29,8 +29,106 @@ import {
   advancedSearchSpecialCases,
   getRecentItems,
   updateUserLanguage,
+  saveSpecialCaseTranslation,
+  saveDocumentTranslation,
 } from "./db";
+import { translateFieldsToEs } from "./translation";
 import { invokeLLM } from "./_core/llm";
+
+// ===== TRANSLATION HELPERS =====
+
+/**
+ * Apply Spanish translation to a special case, using cached values if available.
+ * If no cache exists, translate on-the-fly and save to DB.
+ */
+async function applySpecialCaseTranslation(c: any) {
+  // Check if all required fields are already cached
+  const hasTitleCache = !!c.titleEs;
+  const hasDescCache = !!c.descriptionEs;
+
+  if (hasTitleCache && hasDescCache) {
+    // Return with cached translations
+    return {
+      ...c,
+      title: c.titleEs || c.title,
+      description: c.descriptionEs || c.description,
+      legalBasis: c.legalBasisEs || c.legalBasis,
+      procedure: c.procedureEs || c.procedure,
+      examples: c.examplesEs || c.examples,
+    };
+  }
+
+  // Translate and cache
+  const fieldsToTranslate: Record<string, string> = {
+    title: c.title || "",
+    description: c.description || "",
+  };
+  if (c.legalBasis) fieldsToTranslate.legalBasis = c.legalBasis;
+  if (c.procedure) fieldsToTranslate.procedure = c.procedure;
+  if (c.examples) fieldsToTranslate.examples = c.examples;
+
+  const translated = await translateFieldsToEs(fieldsToTranslate);
+
+  // Save to cache asynchronously (don't await to avoid blocking)
+  saveSpecialCaseTranslation(c.id, {
+    titleEs: translated.title,
+    descriptionEs: translated.description,
+    legalBasisEs: translated.legalBasis,
+    procedureEs: translated.procedure,
+    examplesEs: translated.examples,
+  }).catch(err => console.error("[translation] Failed to save cache:", err));
+
+  return {
+    ...c,
+    title: translated.title || c.title,
+    description: translated.description || c.description,
+    legalBasis: translated.legalBasis || c.legalBasis,
+    procedure: translated.procedure || c.procedure,
+    examples: translated.examples || c.examples,
+  };
+}
+
+/**
+ * Apply Spanish translation to a document, using cached values if available.
+ */
+async function applyDocumentTranslation(d: any) {
+  const hasTitleCache = !!d.titleEs;
+  const hasSummaryCache = !!d.summaryEs;
+
+  if (hasTitleCache && hasSummaryCache) {
+    return {
+      ...d,
+      title: d.titleEs || d.title,
+      summary: d.summaryEs || d.summary,
+      content: d.contentEs || d.content,
+    };
+  }
+
+  // Translate and cache
+  const fieldsToTranslate: Record<string, string> = {
+    title: d.title || "",
+  };
+  if (d.summary) fieldsToTranslate.summary = d.summary;
+  // Only translate content if it's not too long (>8000 chars split into summary only)
+  if (d.content && d.content.length <= 8000) {
+    fieldsToTranslate.content = d.content;
+  }
+
+  const translated = await translateFieldsToEs(fieldsToTranslate);
+
+  saveDocumentTranslation(d.id, {
+    titleEs: translated.title,
+    summaryEs: translated.summary,
+    contentEs: translated.content,
+  }).catch(err => console.error("[translation] Failed to save doc cache:", err));
+
+  return {
+    ...d,
+    title: translated.title || d.title,
+    summary: translated.summary || d.summary,
+    content: translated.content || d.content,
+  };
+}
 import {
   generateConversationPDF,
   generateSpecialCasePDF,
@@ -65,18 +163,33 @@ export const appRouter = router({
 
   // ===== DOCUMENTS =====
   documents: router({
-    list: publicProcedure.query(async () => {
-      return await getAllDocuments();
-    }),
-    search: publicProcedure
-      .input(z.object({ query: z.string(), limit: z.number().optional() }))
+    list: publicProcedure
+      .input(z.object({ language: z.enum(["ca", "es"]).optional().default("ca") }))
       .query(async ({ input }) => {
-        return await searchDocuments(input.query, input.limit);
+        const docs = await getAllDocuments();
+        if (input.language === "es") {
+          return await Promise.all(docs.map(d => applyDocumentTranslation(d)));
+        }
+        return docs;
+      }),
+    search: publicProcedure
+      .input(z.object({ query: z.string(), limit: z.number().optional(), language: z.enum(["ca", "es"]).optional().default("ca") }))
+      .query(async ({ input }) => {
+        const docs = await searchDocuments(input.query, input.limit);
+        if (input.language === "es") {
+          return await Promise.all(docs.map(d => applyDocumentTranslation(d)));
+        }
+        return docs;
       }),
     getById: publicProcedure
-      .input(z.object({ id: z.number() }))
+      .input(z.object({ id: z.number(), language: z.enum(["ca", "es"]).optional().default("ca") }))
       .query(async ({ input }) => {
-        return await getDocumentById(input.id);
+        const doc = await getDocumentById(input.id);
+        if (!doc) return null;
+        if (input.language === "es") {
+          return await applyDocumentTranslation(doc);
+        }
+        return doc;
       }),
     exportPDF: publicProcedure
       .input(z.object({ id: z.number() }))
@@ -108,27 +221,55 @@ export const appRouter = router({
           throw new Error("Accés restringit: cal ser administrador");
         }
         const { id, ...data } = input;
-        const updated = await updateSpecialCase(id, data);
+        // Invalidate ES cache when content is updated
+        await updateSpecialCase(id, data);
+        await saveSpecialCaseTranslation(id, {
+          titleEs: undefined,
+          descriptionEs: undefined,
+          legalBasisEs: undefined,
+          procedureEs: undefined,
+          examplesEs: undefined,
+        });
+        const updated = await getSpecialCaseById(id);
         if (!updated) throw new Error("Cas especial no trobat");
         return updated;
       }),
-    list: publicProcedure.query(async () => {
-      return await getAllSpecialCases();
-    }),
-    getByCategory: publicProcedure
-      .input(z.object({ category: z.string() }))
+    list: publicProcedure
+      .input(z.object({ language: z.enum(["ca", "es"]).optional().default("ca") }))
       .query(async ({ input }) => {
-        return await getSpecialCasesByCategory(input.category);
+        const cases = await getAllSpecialCases();
+        if (input.language === "es") {
+          return await Promise.all(cases.map(c => applySpecialCaseTranslation(c)));
+        }
+        return cases;
+      }),
+    getByCategory: publicProcedure
+      .input(z.object({ category: z.string(), language: z.enum(["ca", "es"]).optional().default("ca") }))
+      .query(async ({ input }) => {
+        const cases = await getSpecialCasesByCategory(input.category);
+        if (input.language === "es") {
+          return await Promise.all(cases.map(c => applySpecialCaseTranslation(c)));
+        }
+        return cases;
       }),
     getById: publicProcedure
-      .input(z.object({ id: z.number() }))
+      .input(z.object({ id: z.number(), language: z.enum(["ca", "es"]).optional().default("ca") }))
       .query(async ({ input }) => {
-        return await getSpecialCaseById(input.id);
+        const c = await getSpecialCaseById(input.id);
+        if (!c) return null;
+        if (input.language === "es") {
+          return await applySpecialCaseTranslation(c);
+        }
+        return c;
       }),
     search: publicProcedure
-      .input(z.object({ query: z.string() }))
+      .input(z.object({ query: z.string(), language: z.enum(["ca", "es"]).optional().default("ca") }))
       .query(async ({ input }) => {
-        return await searchSpecialCases(input.query);
+        const cases = await searchSpecialCases(input.query);
+        if (input.language === "es") {
+          return await Promise.all(cases.map(c => applySpecialCaseTranslation(c)));
+        }
+        return cases;
       }),
     exportPDF: publicProcedure
       .input(z.object({ id: z.number() }))
@@ -214,9 +355,15 @@ export const appRouter = router({
         publicationYear: z.number().optional(),
         status: z.enum(["vigent", "derogada", "en_revisio"]).optional(),
         limit: z.number().optional(),
+        language: z.enum(["ca", "es"]).optional().default("ca"),
       }))
       .query(async ({ input }) => {
-        return await advancedSearchDocuments(input);
+        const { language, ...params } = input;
+        const docs = await advancedSearchDocuments(params);
+        if (language === "es") {
+          return await Promise.all(docs.map(d => applyDocumentTranslation(d)));
+        }
+        return docs;
       }),
 
     specialCases: publicProcedure
@@ -224,19 +371,33 @@ export const appRouter = router({
         query: z.string().optional(),
         category: z.string().optional(),
         limit: z.number().optional(),
+        language: z.enum(["ca", "es"]).optional().default("ca"),
       }))
       .query(async ({ input }) => {
-        return await advancedSearchSpecialCases(input);
+        const { language, ...params } = input;
+        const cases = await advancedSearchSpecialCases(params);
+        if (language === "es") {
+          return await Promise.all(cases.map(c => applySpecialCaseTranslation(c)));
+        }
+        return cases;
       }),
 
     // Cerca global (documents + casos)
     global: publicProcedure
-      .input(z.object({ query: z.string(), limit: z.number().optional() }))
+      .input(z.object({ query: z.string(), limit: z.number().optional(), language: z.enum(["ca", "es"]).optional().default("ca") }))
       .query(async ({ input }) => {
+        const { language, query, limit } = input;
         const [docs, cases] = await Promise.all([
-          advancedSearchDocuments({ query: input.query, limit: input.limit ?? 5 }),
-          advancedSearchSpecialCases({ query: input.query, limit: input.limit ?? 5 }),
+          advancedSearchDocuments({ query, limit: limit ?? 5 }),
+          advancedSearchSpecialCases({ query, limit: limit ?? 5 }),
         ]);
+        if (language === "es") {
+          const [translatedDocs, translatedCases] = await Promise.all([
+            Promise.all(docs.map(d => applyDocumentTranslation(d))),
+            Promise.all(cases.map(c => applySpecialCaseTranslation(c))),
+          ]);
+          return { documents: translatedDocs, cases: translatedCases };
+        }
         return { documents: docs, cases };
       }),
   }),

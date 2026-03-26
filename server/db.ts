@@ -590,3 +590,57 @@ export async function getRecentItems(days: number = 30) {
 
   return { documents: recentDocs, cases: recentCases };
 }
+
+// ===== TRANSLATION CACHE =====
+
+/**
+ * Save Spanish translation cache for a special case.
+ */
+export async function saveSpecialCaseTranslation(
+  id: number,
+  data: {
+    titleEs?: string;
+    descriptionEs?: string;
+    legalBasisEs?: string;
+    procedureEs?: string;
+    examplesEs?: string;
+  }
+) {
+  const db = await getDb();
+  if (!db) return;
+
+  await db
+    .update(specialCases)
+    .set({
+      ...(data.titleEs !== undefined && { titleEs: data.titleEs }),
+      ...(data.descriptionEs !== undefined && { descriptionEs: data.descriptionEs }),
+      ...(data.legalBasisEs !== undefined && { legalBasisEs: data.legalBasisEs }),
+      ...(data.procedureEs !== undefined && { procedureEs: data.procedureEs }),
+      ...(data.examplesEs !== undefined && { examplesEs: data.examplesEs }),
+    })
+    .where(eq(specialCases.id, id));
+}
+
+/**
+ * Save Spanish translation cache for a document.
+ */
+export async function saveDocumentTranslation(
+  id: number,
+  data: {
+    titleEs?: string;
+    summaryEs?: string;
+    contentEs?: string;
+  }
+) {
+  const db = await getDb();
+  if (!db) return;
+
+  await db
+    .update(documents)
+    .set({
+      ...(data.titleEs !== undefined && { titleEs: data.titleEs }),
+      ...(data.summaryEs !== undefined && { summaryEs: data.summaryEs }),
+      ...(data.contentEs !== undefined && { contentEs: data.contentEs }),
+    })
+    .where(eq(documents.id, id));
+}

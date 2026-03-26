@@ -37,7 +37,7 @@ describe("PDF Export", () => {
     const caller = appRouter.createCaller(ctx);
 
     // Get first document
-    const documents = await caller.documents.list();
+    const documents = await caller.documents.list({ language: "ca" });
     expect(documents).toBeDefined();
     expect(documents.length).toBeGreaterThan(0);
 
@@ -64,7 +64,7 @@ describe("PDF Export", () => {
     const caller = appRouter.createCaller(ctx);
 
     // Get first special case
-    const cases = await caller.specialCases.list();
+    const cases = await caller.specialCases.list({ language: "ca" });
     expect(cases).toBeDefined();
     expect(cases.length).toBeGreaterThan(0);
 

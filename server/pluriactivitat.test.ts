@@ -160,7 +160,7 @@ describe("Cas especial de Pluriactivitat (RETA + Règim General)", () => {
   it("getAllSpecialCases inclou el cas de pluriactivitat", async () => {
     const ctx = createPublicContext();
     const caller = appRouter.createCaller(ctx);
-    const result = await caller.specialCases.list();
+    const result = await caller.specialCases.list({ language: "ca" });
     const pluriactivitatCase = result.find(c => c.id === 70001);
     expect(pluriactivitatCase).toBeDefined();
     expect(pluriactivitatCase?.category).toBe("pluriempleo");
@@ -180,7 +180,7 @@ describe("Cas especial de Pluriactivitat (RETA + Règim General)", () => {
   it("getSpecialCaseById retorna el cas de pluriactivitat per ID 70001", async () => {
     const ctx = createPublicContext();
     const caller = appRouter.createCaller(ctx);
-    const result = await caller.specialCases.getById({ id: 70001 });
+    const result = await caller.specialCases.getById({ language: "ca", id: 70001 });
     expect(result).toBeDefined();
     expect(result?.id).toBe(70001);
     expect(result?.title).toContain("Pluriactivitat");
@@ -190,7 +190,7 @@ describe("Cas especial de Pluriactivitat (RETA + Règim General)", () => {
   it("el cas de pluriactivitat té base legal amb normativa LGSS i jurisprudència TS", async () => {
     const ctx = createPublicContext();
     const caller = appRouter.createCaller(ctx);
-    const result = await caller.specialCases.getById({ id: 70001 });
+    const result = await caller.specialCases.getById({ language: "ca", id: 70001 });
     expect(result?.legalBasis).toBeDefined();
     expect(result?.legalBasis).toContain("LGSS");
     expect(result?.legalBasis).toContain("STS");
@@ -199,7 +199,7 @@ describe("Cas especial de Pluriactivitat (RETA + Règim General)", () => {
   it("el cas de pluriactivitat té procediment amb instruccions per a l'eCap", async () => {
     const ctx = createPublicContext();
     const caller = appRouter.createCaller(ctx);
-    const result = await caller.specialCases.getById({ id: 70001 });
+    const result = await caller.specialCases.getById({ language: "ca", id: 70001 });
     expect(result?.procedure).toBeDefined();
     expect(result?.procedure).toContain("PARTS DE BAIXA SEPARATS");
   });
@@ -207,7 +207,7 @@ describe("Cas especial de Pluriactivitat (RETA + Règim General)", () => {
   it("el cas de pluriactivitat té exemples pràctics", async () => {
     const ctx = createPublicContext();
     const caller = appRouter.createCaller(ctx);
-    const result = await caller.specialCases.getById({ id: 70001 });
+    const result = await caller.specialCases.getById({ language: "ca", id: 70001 });
     expect(result?.examples).toBeDefined();
     expect(result?.examples).toContain("EXEMPLE");
   });
@@ -215,7 +215,7 @@ describe("Cas especial de Pluriactivitat (RETA + Règim General)", () => {
   it("searchSpecialCases troba el cas de pluriactivitat per la paraula clau 'pluriactivitat'", async () => {
     const ctx = createPublicContext();
     const caller = appRouter.createCaller(ctx);
-    const result = await caller.specialCases.search({ query: "pluriactivitat" });
+    const result = await caller.specialCases.search({ language: "ca", query: "pluriactivitat" });
     expect(Array.isArray(result)).toBe(true);
     expect(result.length).toBeGreaterThan(0);
     const found = result.find(c => c.id === 70001);
@@ -225,7 +225,7 @@ describe("Cas especial de Pluriactivitat (RETA + Règim General)", () => {
   it("searchSpecialCases troba el cas de pluriactivitat per la paraula clau 'RETA'", async () => {
     const ctx = createPublicContext();
     const caller = appRouter.createCaller(ctx);
-    const result = await caller.specialCases.search({ query: "RETA" });
+    const result = await caller.specialCases.search({ language: "ca", query: "RETA" });
     expect(Array.isArray(result)).toBe(true);
     expect(result.length).toBeGreaterThan(0);
   });

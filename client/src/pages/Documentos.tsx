@@ -202,7 +202,7 @@ export default function Documentos() {
     }
   };
 
-  const { data: allDocuments } = trpc.documents.list.useQuery();
+  const { data: allDocuments } = trpc.documents.list.useQuery({ language });
 
   // Extreure anys únics per al selector
   const availableYears = useMemo(() => {

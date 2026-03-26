@@ -101,8 +101,9 @@ export default function Admin() {
   const [adminDocs, setAdminDocs] = useState<UploadedDoc[] | null>(null);
   const [loadingDocs, setLoadingDocs] = useState(false);
 
-  const { data: documents, refetch: refetchDocuments } = trpc.documents.list.useQuery();
-  const { data: specialCases } = trpc.specialCases.list.useQuery();
+  // Admin always uses Catalan for content management (source language)
+  const { data: documents, refetch: refetchDocuments } = trpc.documents.list.useQuery({ language: "ca" });
+  const { data: specialCases } = trpc.specialCases.list.useQuery({ language: "ca" });
   const { data: conversations } = trpc.chat.getUserConversations.useQuery(undefined, {
     enabled: isAuthenticated && user?.role === "admin",
   });

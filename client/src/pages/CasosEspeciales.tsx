@@ -272,7 +272,7 @@ export default function CasosEspeciales() {
     });
   };
 
-  const { data: allCases } = trpc.specialCases.list.useQuery();
+  const { data: allCases } = trpc.specialCases.list.useQuery({ language });
 
   // Filtrat local combinat
   const displayedCases = useMemo(() => {
@@ -496,7 +496,7 @@ export default function CasosEspeciales() {
           </div>
         ) : (
           <div className="space-y-10">
-            {Object.entries(groupedCases).map(([category, cases]) => (
+            {(Object.entries(groupedCases) as [string, SpecialCase[]][]).map(([category, cases]) => (
               <section key={category}>
                 <div className="flex items-center gap-3 mb-4">
                   <Badge className={`${categoryColors[category]} text-sm px-3 py-1`}>

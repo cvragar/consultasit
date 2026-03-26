@@ -35,6 +35,10 @@ export const documents = mysqlTable("documents", {
   tags: json("tags").$type<string[]>(), // Etiquetas para búsqueda
   publicationYear: int("publicationYear"), // Any de publicació del document
   status: mysqlEnum("status", ["vigent", "derogada", "en_revisio"]).default("vigent").notNull(), // Estat de vigència
+  // Caché de traducció al castellà (generat automàticament per IA)
+  titleEs: varchar("titleEs", { length: 500 }),
+  summaryEs: text("summaryEs"),
+  contentEs: text("contentEs"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
   createdBy: int("createdBy").references(() => users.id),
@@ -73,6 +77,12 @@ export const specialCases = mysqlTable("special_cases", {
   procedure: text("procedure"), // Procedimiento a seguir
   examples: text("examples"), // Ejemplos prácticos
   relatedDocumentIds: json("relatedDocumentIds").$type<number[]>(),
+  // Caché de traducció al castellà (generat automàticament per IA)
+  titleEs: varchar("titleEs", { length: 500 }),
+  descriptionEs: text("descriptionEs"),
+  legalBasisEs: text("legalBasisEs"),
+  procedureEs: text("procedureEs"),
+  examplesEs: text("examplesEs"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
   createdBy: int("createdBy").references(() => users.id),

@@ -130,7 +130,7 @@ describe("Suport backend per a les millores del xat", () => {
     it("retorna tots els casos especials en català", async () => {
       const ctx = createPublicContext();
       const caller = appRouter.createCaller(ctx);
-      const result = await caller.specialCases.list();
+      const result = await caller.specialCases.list({ language: "ca" });
       expect(Array.isArray(result)).toBe(true);
       expect(result.length).toBeGreaterThan(0);
     });
@@ -138,7 +138,7 @@ describe("Suport backend per a les millores del xat", () => {
     it("el cas de pluriactivitat (suggeriment ràpid) és accessible via specialCases.list", async () => {
       const ctx = createPublicContext();
       const caller = appRouter.createCaller(ctx);
-      const result = await caller.specialCases.list();
+      const result = await caller.specialCases.list({ language: "ca" });
       const pluriactivitatCase = result.find(c => c.id === 70001);
       expect(pluriactivitatCase).toBeDefined();
       expect(pluriactivitatCase?.title).toContain("Pluriactivitat");
@@ -147,7 +147,7 @@ describe("Suport backend per a les millores del xat", () => {
     it("la llista inclou casos de diverses categories per cobrir tots els suggeriments ràpids", async () => {
       const ctx = createPublicContext();
       const caller = appRouter.createCaller(ctx);
-      const result = await caller.specialCases.list();
+      const result = await caller.specialCases.list({ language: "ca" });
       const categories = new Set(result.map(c => c.category));
       // Els suggeriments ràpids cobreixen menstruació, pluriactivitat, recaiguda, vacances...
       expect(categories.size).toBeGreaterThan(1);

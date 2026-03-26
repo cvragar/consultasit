@@ -36,7 +36,7 @@ describe("Documents Router", () => {
     const ctx = createAuthContext();
     const caller = appRouter.createCaller(ctx);
 
-    const documents = await caller.documents.list();
+    const documents = await caller.documents.list({ language: "ca" });
 
     expect(documents).toBeDefined();
     expect(Array.isArray(documents)).toBe(true);
@@ -59,9 +59,9 @@ describe("Documents Router", () => {
     const caller = appRouter.createCaller(ctx);
 
     // Primero obtener un documento válido
-    const documents = await caller.documents.list();
+    const documents = await caller.documents.list({ language: "ca" });
     if (documents.length > 0) {
-      const doc = await caller.documents.getById({ id: documents[0]!.id });
+      const doc = await caller.documents.getById({ language: "ca", id: documents[0]!.id });
       expect(doc).toBeDefined();
       expect(doc?.id).toBe(documents[0]!.id);
     }
@@ -73,7 +73,7 @@ describe("Special Cases Router", () => {
     const ctx = createAuthContext();
     const caller = appRouter.createCaller(ctx);
 
-    const cases = await caller.specialCases.list();
+    const cases = await caller.specialCases.list({ language: "ca" });
 
     expect(cases).toBeDefined();
     expect(Array.isArray(cases)).toBe(true);
@@ -84,7 +84,7 @@ describe("Special Cases Router", () => {
     const ctx = createAuthContext();
     const caller = appRouter.createCaller(ctx);
 
-    const results = await caller.specialCases.search({ query: "menstruación" });
+    const results = await caller.specialCases.search({ language: "ca", query: "menstruación" });
 
     expect(results).toBeDefined();
     expect(Array.isArray(results)).toBe(true);
@@ -94,9 +94,9 @@ describe("Special Cases Router", () => {
     const ctx = createAuthContext();
     const caller = appRouter.createCaller(ctx);
 
-    const cases = await caller.specialCases.list();
+    const cases = await caller.specialCases.list({ language: "ca" });
     if (cases.length > 0) {
-      const caso = await caller.specialCases.getById({ id: cases[0]!.id });
+      const caso = await caller.specialCases.getById({ language: "ca", id: cases[0]!.id });
       expect(caso).toBeDefined();
       expect(caso?.id).toBe(cases[0]!.id);
     }
