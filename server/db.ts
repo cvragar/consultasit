@@ -102,6 +102,15 @@ export async function updateUserLanguage(openId: string, language: "ca" | "es"):
   await db.update(users).set({ preferredLanguage: language }).where(eq(users.openId, openId));
 }
 
+export async function updateUserTheme(openId: string, theme: "light" | "dark"): Promise<void> {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot update user theme: database not available");
+    return;
+  }
+  await db.update(users).set({ preferredTheme: theme }).where(eq(users.openId, openId));
+}
+
 // ===== DOCUMENTS =====
 
 export async function searchDocuments(query: string, limit: number = 10) {

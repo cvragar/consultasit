@@ -29,6 +29,7 @@ import {
   advancedSearchSpecialCases,
   getRecentItems,
   updateUserLanguage,
+  updateUserTheme,
   saveSpecialCaseTranslation,
   saveDocumentTranslation,
 } from "./db";
@@ -165,6 +166,15 @@ export const appRouter = router({
       .input(z.object({ language: z.enum(["ca", "es"]) }))
       .mutation(async ({ ctx, input }) => {
         await updateUserLanguage(ctx.user.openId, input.language);
+        return { success: true };
+      }),
+    getTheme: protectedProcedure.query(async ({ ctx }) => {
+      return { theme: (ctx.user as any).preferredTheme ?? "light" };
+    }),
+    setTheme: protectedProcedure
+      .input(z.object({ theme: z.enum(["light", "dark"]) }))
+      .mutation(async ({ ctx, input }) => {
+        await updateUserTheme(ctx.user.openId, input.theme);
         return { success: true };
       }),
   }),

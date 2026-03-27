@@ -23,6 +23,7 @@ import { Link } from "wouter";
 import { useState } from "react";
 import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 
@@ -172,7 +173,10 @@ export default function Novetats() {
                 </Button>
               </Link>
             </nav>
-            <LanguageSwitcher />
+            <div className="flex items-center gap-2">
+              <ThemeSwitcher />
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </header>

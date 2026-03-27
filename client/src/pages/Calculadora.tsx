@@ -1,5 +1,6 @@
 import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -91,7 +92,8 @@ export default function Calculadora() {
               <Calculator className="h-5 w-5 text-purple-600 shrink-0" />
               <h1 className="text-base sm:text-xl font-bold text-gray-900">{language === "ca" ? "Calculadora d'IT" : "Calculadora de IT"}</h1>
             </div>
-            <div className="ml-auto">
+            <div className="ml-auto flex items-center gap-2">
+              <ThemeSwitcher />
               <LanguageSwitcher />
             </div>
           </div>

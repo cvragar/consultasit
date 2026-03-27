@@ -54,7 +54,17 @@
 - [x] Añadir sistema de navegación y menús
 - [x] Implementar diseño responsive
 
-## Testing y entrega
+## Mode fosc (dark mode)
+- [x] Migració BD: columna preferredTheme a la taula users
+- [x] Procediments tRPC getTheme i setTheme creats al servidor
+- [x] ThemeContext reescrit amb persistència localStorage + BD
+- [x] Component ThemeSwitcher creat (icona Sol/Lluna)
+- [x] ThemeSwitcher integrat a totes les pàgines: Home, CasosEspeciales, Documentos, Calculadora, Chat, Admin, Favorits, Novetats, Reclamacions
+- [x] Colors de Home.tsx adaptats per al mode fosc (gradients, seccions de contingències, taula, footer)
+- [x] Variables CSS del tema fosc definides a index.css
+- [x] 380 tests passen, 0 errors TypeScript
+
+## Testing i entrega
 - [x] Escribir tests para procedimientos tRPC
 - [x] Probar sistema de chat con casos reales
 - [x] Validar calculadora con diferentes escenarios
@@ -380,3 +390,14 @@
 - [ ] Corregir la detecció de registres sense traducció (NULL vs string buit)
 - [ ] Traduir textos de navegació al castellà (App.tsx: Novetats→Novedades, Reclamacions→Reclamaciones, Favorits→Favoritos, Admin→Admin)
 - [ ] Verificar que la invalidació de caché funciona en editar un cas especial
+
+## Mode Fosc (27/03/2026)
+- [ ] Afegir columna preferredTheme (enum light/dark, default light) a la taula users
+- [ ] Migrar la BD amb pnpm db:push
+- [ ] Crear procediment tRPC user.setTheme i user.getTheme
+- [ ] Crear ThemeContext amb persistència localStorage + BD
+- [ ] Actualitzar index.css amb variables CSS del tema fosc (.dark {})
+- [ ] Crear component ThemeSwitcher (icona sol/lluna)
+- [ ] Integrar ThemeSwitcher a totes les pàgines (Home, CasosEspeciales, Documentos, Calculadora, Reclamacions, Chat, Admin, Favorits, Novetats)
+- [ ] Verificar que tots els components (targetes, diàlegs, formularis) respecten el tema fosc
+- [ ] Escriure tests per als nous procediments

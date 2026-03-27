@@ -14,6 +14,7 @@ export const users = mysqlTable("users", {
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
   lastSignedIn: timestamp("lastSignedIn").defaultNow().notNull(),
   preferredLanguage: mysqlEnum("preferredLanguage", ["ca", "es"]).default("ca").notNull(),
+  preferredTheme: mysqlEnum("preferredTheme", ["light", "dark"]).default("light").notNull(),
 });
 
 export type User = typeof users.$inferSelect;

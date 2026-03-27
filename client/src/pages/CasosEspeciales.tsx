@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -376,6 +377,7 @@ export default function CasosEspeciales() {
                   </Button>
                 </Link>
               )}
+              <ThemeSwitcher />
               <LanguageSwitcher />
               <Badge variant="outline">
                 {displayedCases.length} casos

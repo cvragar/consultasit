@@ -1,5 +1,6 @@
 import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -460,6 +461,7 @@ export default function Chat() {
                     <span className="hidden sm:inline">PDF</span>
                   </Button>
                 )}
+                <ThemeSwitcher />
                 <LanguageSwitcher />
                 <div className="text-xs sm:text-sm text-gray-600 truncate max-w-[80px] sm:max-w-none hidden sm:block">
                   {user?.name?.split(" ")[0] || user?.email}

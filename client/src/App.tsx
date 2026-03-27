@@ -40,7 +40,7 @@ function App() {
   return (
     <ErrorBoundary>
       <LanguageProvider>
-        <ThemeProvider defaultTheme="light">
+        <ThemeProvider>
           <TooltipProvider>
             <Toaster />
             <Router />

@@ -1,34 +1,28 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState, useRef, type ReactNode } from "react";
+import { trpc } from "@/lib/trpc";
 
-type Theme = "light" | "dark";
+export type Theme = "light" | "dark";
 
 interface ThemeContextType {
   theme: Theme;
-  toggleTheme?: () => void;
-  switchable: boolean;
+  setTheme: (theme: Theme) => void;
+  isDark: boolean;
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+const ThemeContext = createContext<ThemeContextType>({
+  theme: "light",
+  setTheme: () => {},
+  isDark: false,
+});
 
-interface ThemeProviderProps {
-  children: React.ReactNode;
-  defaultTheme?: Theme;
-  switchable?: boolean;
-}
-
-export function ThemeProvider({
-  children,
-  defaultTheme = "light",
-  switchable = false,
-}: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (switchable) {
-      const stored = localStorage.getItem("theme");
-      return (stored as Theme) || defaultTheme;
-    }
-    return defaultTheme;
+export function ThemeProvider({ children }: { children: ReactNode }) {
+  // Inicialitzem des de localStorage per evitar flash en carregar
+  const [theme, setThemeState] = useState<Theme>(() => {
+    const stored = localStorage.getItem("consultesit-theme");
+    return stored === "light" || stored === "dark" ? stored : "light";
   });
 
+  // Apliquem la classe .dark al <html> quan canvia el tema
   useEffect(() => {
     const root = document.documentElement;
     if (theme === "dark") {
@@ -36,29 +30,43 @@ export function ThemeProvider({
     } else {
       root.classList.remove("dark");
     }
+  }, [theme]);
 
-    if (switchable) {
-      localStorage.setItem("theme", theme);
-    }
-  }, [theme, switchable]);
+  // Llegim la preferència del servidor (si l'usuari està autenticat)
+  const { data: serverTheme } = trpc.user.getTheme.useQuery(undefined, {
+    retry: false,
+  });
 
-  const toggleTheme = switchable
-    ? () => {
-        setTheme(prev => (prev === "light" ? "dark" : "light"));
+  // Quan el servidor retorna la preferència, la sincronitzem (una sola vegada)
+  const synced = useRef(false);
+  useEffect(() => {
+    if (serverTheme && !synced.current) {
+      synced.current = true;
+      const t = serverTheme.theme as Theme;
+      if (t !== theme) {
+        setThemeState(t);
+        localStorage.setItem("consultesit-theme", t);
       }
-    : undefined;
+    }
+  }, [serverTheme]);
+
+  // Mutació per desar al servidor
+  const setThemeMutation = trpc.user.setTheme.useMutation();
+
+  const setTheme = (t: Theme) => {
+    setThemeState(t);
+    localStorage.setItem("consultesit-theme", t);
+    // Intentem desar al servidor (si l'usuari no està autenticat, fallarà silenciosament)
+    setThemeMutation.mutate({ theme: t });
+  };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, switchable }}>
+    <ThemeContext.Provider value={{ theme, setTheme, isDark: theme === "dark" }}>
       {children}
     </ThemeContext.Provider>
   );
 }
 
 export function useTheme() {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error("useTheme must be used within ThemeProvider");
-  }
-  return context;
+  return useContext(ThemeContext);
 }

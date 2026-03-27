@@ -1,6 +1,7 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -293,6 +294,7 @@ export default function Admin() {
             </div>
             <div className="flex items-center gap-3">
               <span className="text-sm text-gray-600 hidden sm:block">Admin: {user?.name}</span>
+              <ThemeSwitcher />
               <LanguageSwitcher />
             </div>
           </div>

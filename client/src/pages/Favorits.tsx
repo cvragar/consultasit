@@ -31,6 +31,7 @@ import { getLoginUrl } from "@/const";
 import { toast } from "sonner";
 import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 const typeColors: Record<string, string> = {
   ley: "bg-blue-100 text-blue-800",
@@ -226,6 +227,7 @@ export default function Favorits() {
               <Badge variant="outline" className="text-sm">
                 {totalFavs} {language === "ca" ? (totalFavs === 1 ? "element" : "elements") : (totalFavs === 1 ? "elemento" : "elementos")}
               </Badge>
+              <ThemeSwitcher />
               <LanguageSwitcher />
             </div>
           </div>

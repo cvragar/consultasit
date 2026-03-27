@@ -8,6 +8,7 @@ import { getLoginUrl } from "@/const";
 import { useState } from "react";
 import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 export default function Home() {
   const { user, isAuthenticated } = useAuth();
@@ -63,9 +64,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-950">
       {/* Header responsive */}
-      <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-20">
+      <header className="border-b bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm sticky top-0 z-20">
         <div className="container py-3">
           <div className="flex items-center justify-between gap-2">
             {/* Logo */}
@@ -79,6 +80,7 @@ export default function Home() {
 
             {/* Nav desktop */}
             <div className="hidden md:flex items-center gap-2">
+              <ThemeSwitcher />
               <LanguageSwitcher />
               {isAuthenticated ? (
                 <>
@@ -124,6 +126,7 @@ export default function Home() {
 
             {/* Nav mòbil: botó hamburguesa + switcher */}
             <div className="flex md:hidden items-center gap-2">
+              <ThemeSwitcher />
               <LanguageSwitcher />
               {!isAuthenticated && (
                 <Button asChild size="sm">
@@ -210,10 +213,10 @@ export default function Home() {
       {/* Hero Section */}
       <section className="container py-10 sm:py-16">
         <div className="max-w-3xl mx-auto text-center px-2">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4 leading-tight">
             {t.home.heroTitle}
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8">
             {t.home.heroSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
@@ -276,17 +279,17 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Accident de Treball */}
-            <div className="rounded-xl border-2 border-red-200 bg-red-50 p-5">
+            <div className="rounded-xl border-2 border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-950/30 p-5">
               <div className="flex items-center gap-2 mb-3">
                 <HardHat className="h-5 w-5 text-red-600" />
-                <h4 className="font-bold text-red-800 text-base">{t.home.contingencies.atTitle}</h4>
+                <h4 className="font-bold text-red-800 dark:text-red-300 text-base">{t.home.contingencies.atTitle}</h4>
               </div>
-              <p className="text-xs text-red-700 mb-3">
+              <p className="text-xs text-red-700 dark:text-red-400 mb-3">
                 {language === "ca"
                   ? "Lesió corporal que el treballador pateix amb ocasió o per conseqüència del treball (art. 156 LGSS)."
                   : "Lesión corporal que el trabajador sufre con ocasión o por consecuencia del trabajo (art. 156 LGSS)."}
               </p>
-              <ul className="text-xs text-red-800 space-y-1.5 mb-4">
+              <ul className="text-xs text-red-800 dark:text-red-300 space-y-1.5 mb-4">
                 <li className="flex items-start gap-1.5"><span className="text-red-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Prestació:" : "Prestación:"} <strong>75% BR {language === "ca" ? "des del dia 2" : "desde el día 2"}</strong></li>
                 <li className="flex items-start gap-1.5"><span className="text-red-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Gestió:" : "Gestión:"} <strong>{language === "ca" ? "mútua col·laboradora" : "mutua colaboradora"}</strong></li>
                 <li className="flex items-start gap-1.5"><span className="text-red-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Part de baixa:" : "Parte de baja:"} <strong>{language === "ca" ? "mútua o eCap" : "mutua o eCap"}</strong></li>
@@ -307,17 +310,17 @@ export default function Home() {
             </div>
 
             {/* Malaltia Professional */}
-            <div className="rounded-xl border-2 border-orange-200 bg-orange-50 p-5">
+            <div className="rounded-xl border-2 border-orange-200 dark:border-orange-900 bg-orange-50 dark:bg-orange-950/30 p-5">
               <div className="flex items-center gap-2 mb-3">
                 <Stethoscope className="h-5 w-5 text-orange-600" />
-                <h4 className="font-bold text-orange-800 text-base">{t.home.contingencies.mpTitle}</h4>
+                <h4 className="font-bold text-orange-800 dark:text-orange-300 text-base">{t.home.contingencies.mpTitle}</h4>
               </div>
-              <p className="text-xs text-orange-700 mb-3">
+              <p className="text-xs text-orange-700 dark:text-orange-400 mb-3">
                 {language === "ca"
                   ? "Malaltia contreta per l'exposició a agents laborals recollits al quadre del RD 1299/2006 (art. 157 LGSS)."
                   : "Enfermedad contraída por la exposición a agentes laborales recogidos en el cuadro del RD 1299/2006 (art. 157 LGSS)."}
               </p>
-              <ul className="text-xs text-orange-800 space-y-1.5 mb-4">
+              <ul className="text-xs text-orange-800 dark:text-orange-300 space-y-1.5 mb-4">
                 <li className="flex items-start gap-1.5"><span className="text-orange-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Prestació:" : "Prestación:"} <strong>75% BR {language === "ca" ? "des del dia 1" : "desde el día 1"}</strong></li>
                 <li className="flex items-start gap-1.5"><span className="text-orange-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Gestió:" : "Gestión:"} <strong>{language === "ca" ? "mútua col·laboradora" : "mutua colaboradora"}</strong></li>
                 <li className="flex items-start gap-1.5"><span className="text-orange-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Exemples:" : "Ejemplos:"} <strong>{language === "ca" ? "hepatitis B/C per punxada (Grup 3A)" : "hepatitis B/C por pinchazo (Grupo 3A)"}</strong></li>
@@ -338,17 +341,17 @@ export default function Home() {
             </div>
 
             {/* Contingència Comuna */}
-            <div className="rounded-xl border-2 border-blue-200 bg-blue-50 p-5">
+            <div className="rounded-xl border-2 border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-950/30 p-5">
               <div className="flex items-center gap-2 mb-3">
                 <HeartPulse className="h-5 w-5 text-blue-600" />
-                <h4 className="font-bold text-blue-800 text-base">{t.home.contingencies.ccTitle}</h4>
+                <h4 className="font-bold text-blue-800 dark:text-blue-300 text-base">{t.home.contingencies.ccTitle}</h4>
               </div>
-              <p className="text-xs text-blue-700 mb-3">
+              <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
                 {language === "ca"
                   ? "Malaltia o lesió no relacionada amb el treball, ni recollida al quadre de malalties professionals."
                   : "Enfermedad o lesión no relacionada con el trabajo, ni recogida en el cuadro de enfermedades profesionales."}
               </p>
-              <ul className="text-xs text-blue-800 space-y-1.5 mb-4">
+              <ul className="text-xs text-blue-800 dark:text-blue-300 space-y-1.5 mb-4">
                 <li className="flex items-start gap-1.5"><span className="text-blue-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Prestació:" : "Prestación:"} <strong>60% BR {language === "ca" ? "dies 4–20, 75% des del dia 21" : "días 4–20, 75% desde el día 21"}</strong></li>
                 <li className="flex items-start gap-1.5"><span className="text-blue-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Gestió:" : "Gestión:"} <strong>INSS {language === "ca" ? "o mútua" : "o mutua"}</strong></li>
                 <li className="flex items-start gap-1.5"><span className="text-blue-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Part de baixa:" : "Parte de baja:"} <strong>{language === "ca" ? "metge de família (eCap)" : "médico de familia (eCap)"}</strong></li>
@@ -373,14 +376,14 @@ export default function Home() {
           <div className="mt-5 overflow-x-auto">
             <table className="w-full text-xs border-collapse rounded-lg overflow-hidden">
               <thead>
-                <tr className="bg-gray-100">
-                  <th className="text-left p-2.5 font-semibold text-gray-700 border border-gray-200">{language === "ca" ? "Aspecte" : "Aspecto"}</th>
+                <tr className="bg-gray-100 dark:bg-gray-800">
+                  <th className="text-left p-2.5 font-semibold text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">{language === "ca" ? "Aspecte" : "Aspecto"}</th>
                   <th className="text-center p-2.5 font-semibold text-red-700 border border-gray-200">AT</th>
                   <th className="text-center p-2.5 font-semibold text-orange-700 border border-gray-200">MP</th>
                   <th className="text-center p-2.5 font-semibold text-blue-700 border border-gray-200">CC</th>
                 </tr>
               </thead>
-              <tbody className="bg-white">
+              <tbody className="bg-white dark:bg-gray-900">
                 {(language === "ca" ? [
                   ["Prestació dia 1", "75% BR", "75% BR", "No (dies 1-3 sense prestació)"],
                   ["Prestació dies 4-20", "75% BR", "75% BR", "60% BR"],
@@ -396,8 +399,8 @@ export default function Home() {
                   ["Quién emite el parte", "Mutua o eCap", "eCap (provisional)", "eCap"],
                   ["Normativa principal", "Art. 156 LGSS", "Art. 157 LGSS + RD 1299/2006", "Art. 169 LGSS + RD 625/2014"],
                 ]).map(([aspect, at, mp, cc]) => (
-                  <tr key={aspect} className="border-b border-gray-100 hover:bg-gray-50">
-                    <td className="p-2.5 font-medium text-gray-700 border border-gray-200">{aspect}</td>
+                  <tr key={aspect} className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800">
+                    <td className="p-2.5 font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">{aspect}</td>
                     <td className="p-2.5 text-center text-red-700 border border-gray-200">{at}</td>
                     <td className="p-2.5 text-center text-orange-700 border border-gray-200">{mp}</td>
                     <td className="p-2.5 text-center text-blue-700 border border-gray-200">{cc}</td>
@@ -411,7 +414,7 @@ export default function Home() {
 
       {/* Info Section */}
       <section className="container py-8 sm:py-12">
-        <div className="max-w-4xl mx-auto bg-blue-50 rounded-xl p-5 sm:p-8">
+        <div className="max-w-4xl mx-auto bg-blue-50 dark:bg-blue-950/20 rounded-xl p-5 sm:p-8">
           <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mb-4">
             {language === "ca" ? "Què inclou la plataforma?" : "¿Qué incluye la plataforma?"}
           </h3>
@@ -452,7 +455,7 @@ export default function Home() {
               },
             ]).map((section) => (
               <div key={section.title}>
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">{section.title}</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-sm sm:text-base">{section.title}</h4>
                 <ul className="text-gray-700 space-y-1">
                   {section.items.map((item) => (
                     <li key={item} className="text-xs sm:text-sm flex items-start gap-1.5">
@@ -468,10 +471,10 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t bg-white py-6">
+      <footer className="border-t bg-white dark:bg-gray-900 py-6">
         <div className="container text-center text-xs sm:text-sm text-gray-500 space-y-1">
-          <p>© 2026 {t.nav.title} — {language === "ca" ? "Plataforma especialitzada en Incapacitat Temporal" : "Plataforma especializada en Incapacidad Temporal"}</p>
-          <p>{language === "ca" ? "Informació basada en normativa vigent. Consulta sempre amb professionals qualificats." : "Información basada en normativa vigente. Consulta siempre con profesionales cualificados."}</p>
+          <p className="dark:text-gray-400">© 2026 {t.nav.title} — {language === "ca" ? "Plataforma especialitzada en Incapacitat Temporal" : "Plataforma especializada en Incapacidad Temporal"}</p>
+          <p className="dark:text-gray-400">{language === "ca" ? "Informació basada en normativa vigent. Consulta sempre amb professionals qualificats." : "Información basada en normativa vigente. Consulta siempre con profesionales cualificados."}</p>
         </div>
       </footer>
     </div>
