@@ -62,6 +62,7 @@
 - [x] ThemeSwitcher integrat a totes les pàgines: Home, CasosEspeciales, Documentos, Calculadora, Chat, Admin, Favorits, Novetats, Reclamacions
 - [x] Colors de Home.tsx adaptats per al mode fosc (gradients, seccions de contingències, taula, footer)
 - [x] Variables CSS del tema fosc definides a index.css
+- [x] Bug: títol "Consultas IT" no visible al header en mode fosc (text negre sobre fons fosc)
 - [x] 380 tests passen, 0 errors TypeScript
 
 ## Testing i entrega

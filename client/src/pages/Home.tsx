@@ -73,8 +73,8 @@ export default function Home() {
             <div className="flex items-center gap-2 shrink-0">
               <Shield className="h-7 w-7 text-blue-600" />
               <div>
-                <h1 className="text-lg font-bold text-gray-900 leading-tight">{t.nav.title}</h1>
-                <p className="text-xs text-gray-500 hidden sm:block">{t.nav.subtitle}</p>
+                <h1 className="text-lg font-bold text-gray-900 dark:text-white leading-tight">{t.nav.title}</h1>
+                <p className="text-xs text-gray-500 dark:text-gray-400 hidden sm:block">{t.nav.subtitle}</p>
               </div>
             </div>
 
@@ -272,8 +272,8 @@ export default function Home() {
               <HardHat className="h-5 w-5 text-red-600" />
             </div>
             <div>
-              <h3 className="text-lg sm:text-2xl font-bold text-gray-900">{t.home.contingencies.title}</h3>
-              <p className="text-sm text-gray-500">{t.home.contingencies.subtitle}</p>
+              <h3 className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-gray-100">{t.home.contingencies.title}</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">{t.home.contingencies.subtitle}</p>
             </div>
           </div>
 
@@ -415,7 +415,7 @@ export default function Home() {
       {/* Info Section */}
       <section className="container py-8 sm:py-12">
         <div className="max-w-4xl mx-auto bg-blue-50 dark:bg-blue-950/20 rounded-xl p-5 sm:p-8">
-          <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mb-4">
+          <h3 className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             {language === "ca" ? "Què inclou la plataforma?" : "¿Qué incluye la plataforma?"}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
