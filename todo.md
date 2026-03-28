@@ -476,3 +476,9 @@
 - [x] Convertir a favicon.ico (multi-res: 16x16, 32x32, 48x48), favicon-16x16.png, favicon-32x32.png
 - [x] Generar apple-touch-icon.png (180x180px, fons blanc per iOS)
 - [x] Actualitzar index.html amb link rel=icon (ico, png 32x32, png 16x16) i apple-touch-icon
+
+## Sprint 11 - hreflang, PWA manifest i errors previsualització
+- [x] Afegir link rel=alternate hreflang="ca", hreflang="es" i hreflang="x-default" a index.html
+- [x] Crear manifest.webmanifest a client/public/ per PWA (name, icons 16/32/180/512, 3 shortcuts: Chat, Casos, Calculadora)
+- [x] Afegir link rel=manifest a index.html
+- [x] Investigar errors previsualització (errors antics de 26/03, codi actual correcte)

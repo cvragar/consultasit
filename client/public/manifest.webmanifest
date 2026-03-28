@@ -1,0 +1,58 @@
+{
+  "name": "Consultes IT — Normativa d'Incapacitat Temporal",
+  "short_name": "Consultes IT",
+  "description": "Plataforma especialitzada en normativa d'Incapacitat Temporal per a professionals sanitaris. Casos especials, calculadora, documentació i xat amb IA.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "lang": "ca",
+  "categories": ["medical", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "https://d2xsxph8kpxj0f.cloudfront.net/310519663242490001/DirVLPm6UeFJi3utFGbgZe/favicon-shield-512-2S4Rq98n3Rva7G86oYnzp8.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Iniciar consulta",
+      "short_name": "Consulta",
+      "description": "Obre el xat d'IA per a consultes d'IT",
+      "url": "/chat",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "Casos Especials",
+      "short_name": "Casos",
+      "description": "Consulta els casos especials d'IT",
+      "url": "/casos-especials",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "Calculadora IT",
+      "short_name": "Calculadora",
+      "description": "Calcula la durada estimada d'una IT",
+      "url": "/calculadora",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    }
+  ]
+}
