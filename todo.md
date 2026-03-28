@@ -493,3 +493,9 @@
 - [x] Afegir metes iOS (apple-mobile-web-app-capable, status-bar-style, apple-mobile-web-app-title, mobile-web-app-capable) a index.html
 - [x] Crear component InstallBanner (beforeinstallprompt Android + instruccions manuals iOS, descartable via localStorage)
 - [x] Integrar InstallBanner a App.tsx (dins TooltipProvider, visible a totes les pàgines)
+
+## Sprint 14 - Mode Guàrdia Nocturna
+- [x] Ampliar ThemeContext: nou mode "auto" (fosc 21:00-08:00, clar la resta) + resolveTheme()
+- [x] Actualitzar ThemeSwitcher: desplegable amb 3 opcions (Clar/Fosc/Guàrdia) + indicador actiu + nota mode Guàrdia
+- [x] Persistir la preferència "auto" a localStorage i BD (via setThemeMutation)
+- [x] Interval de comprovació cada 60s per canviar el tema automàticament en mode "auto"
