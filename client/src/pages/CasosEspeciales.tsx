@@ -66,17 +66,17 @@ import { toast } from "sonner";
 // categoryLabels es calcula dinàmicament via t.casos.categories dins del component
 
 const categoryColors: Record<string, string> = {
-  menstruacion: "bg-pink-100 text-pink-800",
-  embarazo: "bg-purple-100 text-purple-800",
-  lactancia: "bg-blue-100 text-blue-800",
-  donacion_organos: "bg-green-100 text-green-800",
-  baja_retroactiva: "bg-orange-100 text-orange-800",
-  pluriempleo: "bg-yellow-100 text-yellow-800",
-  prision: "bg-red-100 text-red-800",
-  extranjeros: "bg-indigo-100 text-indigo-800",
-  vacaciones: "bg-teal-100 text-teal-800",
-  recaida: "bg-amber-100 text-amber-800",
-  accident_treball: "bg-red-200 text-red-900",
+  menstruacion: "bg-pink-100 dark:bg-pink-900/40 text-pink-800 dark:text-pink-300",
+  embarazo: "bg-purple-100 dark:bg-purple-900/40 text-purple-800 dark:text-purple-300",
+  lactancia: "bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300",
+  donacion_organos: "bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-300",
+  baja_retroactiva: "bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-300",
+  pluriempleo: "bg-yellow-100 dark:bg-yellow-900/40 text-yellow-800 dark:text-yellow-300",
+  prision: "bg-red-100 dark:bg-red-900/40 text-red-800 dark:text-red-300",
+  extranjeros: "bg-indigo-100 dark:bg-indigo-900/40 text-indigo-800 dark:text-indigo-300",
+  vacaciones: "bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300",
+  recaida: "bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300",
+  accident_treball: "bg-red-200 dark:bg-red-900/50 text-red-900 dark:text-red-300",
   otro: "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200",
 };
 
@@ -676,7 +676,7 @@ export default function CasosEspeciales() {
               </DialogHeader>
 
               <div className="space-y-6 mt-4">
-                <div className="prose prose-sm max-w-none bg-orange-50 border border-orange-200 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
+                <div className="prose prose-sm max-w-none bg-orange-50 dark:bg-orange-950/30 border border-orange-200 dark:border-orange-800/50 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
                   <Streamdown>{normalitzeMd(selectedCase.description)}</Streamdown>
                 </div>
 
@@ -686,7 +686,7 @@ export default function CasosEspeciales() {
                       <Scale className="h-4 w-4 text-blue-600" />
                       {language === "ca" ? "Base Legal" : "Base Legal"}
                     </h3>
-                    <div className="prose prose-sm max-w-none bg-blue-50 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
+                    <div className="prose prose-sm max-w-none bg-blue-50 dark:bg-blue-950/30 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
                       <Streamdown>{normalitzeMd(selectedCase.legalBasis)}</Streamdown>
                     </div>
                   </div>
@@ -698,7 +698,7 @@ export default function CasosEspeciales() {
                       <FileText className="h-4 w-4 text-green-600" />
                       {language === "ca" ? "Procediment" : "Procedimiento"}
                     </h3>
-                    <div className="prose prose-sm max-w-none bg-green-50 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
+                    <div className="prose prose-sm max-w-none bg-green-50 dark:bg-green-950/30 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
                       <Streamdown>{normalitzeMd(selectedCase.procedure)}</Streamdown>
                     </div>
                   </div>
@@ -710,7 +710,7 @@ export default function CasosEspeciales() {
                       <BookOpen className="h-4 w-4 text-purple-600" />
                       {language === "ca" ? "Exemples Pràctics" : "Ejemplos Prácticos"}
                     </h3>
-                    <div className="prose prose-sm max-w-none bg-purple-50 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
+                    <div className="prose prose-sm max-w-none bg-purple-50 dark:bg-purple-950/30 rounded-lg p-4 [&_table]:text-xs [&_table]:w-full [&_th]:whitespace-nowrap [&_td]:align-top [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
                       <Streamdown>{normalitzeMd(selectedCase.examples)}</Streamdown>
                     </div>
                   </div>

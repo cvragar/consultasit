@@ -120,7 +120,13 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+  /* Transició suau per a tots els elements quan canvia el tema */
+  *, *::before, *::after {
+    transition-property: background-color, border-color, color;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
   }
   /* Classe auxiliar per a la pàgina de xat a Safari iOS */
   .h-dvh {

@@ -435,3 +435,8 @@
 - [x] Eliminar colors hardcoded text-gray-900 de Chat.tsx (bg-muted/text-muted-foreground)
 - [x] Eliminar colors hardcoded text-gray-900 de Calculadora.tsx (23 correccions)
 - [x] Eliminar colors hardcoded text-gray-900 de Documentos.tsx (bg-card/bg-background)
+
+## Sprint 5 - Transició tema i badges dark mode
+- [x] Afegir transition-colors duration-300 al body per canvi de tema suau (+ 200ms a tots els elements)
+- [x] Corregir badges de categories de CasosEspeciales en mode fosc (11 categories: pink, purple, blue, green, orange, yellow, red, indigo, teal, amber, gray)
+- [x] Corregir panells de contingut del cas seleccionat (base legal, procediment, exemples) amb dark:bg-*-950/30
