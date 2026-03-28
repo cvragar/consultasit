@@ -43,9 +43,9 @@ function getFactorForGroup(occupationAdjustment: any[], groupId: string): number
 function getFactorLabel(factor: number): { label: string; color: string } {
   if (factor < 0.80) return { label: "Molt inferior a la mitjana", color: "bg-blue-100 text-blue-800" };
   if (factor < 0.95) return { label: "Inferior a la mitjana", color: "bg-green-100 text-green-800" };
-  if (factor <= 1.05) return { label: "En la mitjana", color: "bg-gray-100 text-gray-800" };
-  if (factor <= 1.15) return { label: "Superior a la mitjana", color: "bg-orange-100 text-orange-800" };
-  return { label: "Molt superior a la mitjana", color: "bg-red-100 text-red-800" };
+  if (factor <= 1.05) return { label: "En la mitjana", color: "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200" };
+  if (factor <= 1.15) return { label: "Superior a la mitjana", color: "bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-300" };
+  return { label: "Molt superior a la mitjana", color: "bg-red-100 dark:bg-red-900/40 text-red-800 dark:text-red-300" };
 }
 
 export default function Calculadora() {
@@ -218,7 +218,7 @@ export default function Calculadora() {
                               <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${
                                 factor < 0.95 ? "bg-green-100 text-green-700" :
                                 factor > 1.05 ? "bg-orange-100 text-orange-700" :
-                                "bg-gray-100 text-gray-600"
+                                "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
                               }`}>
                                 ×{factor.toFixed(2)}
                               </span>
@@ -247,7 +247,7 @@ export default function Calculadora() {
                   {language === "ca" ? "Temps estimat d'IT" : "Tiempo estimado de IT"}
                 </CardTitle>
                 <div className="space-y-1">
-                  <CardDescription className="text-base font-semibold text-gray-900">
+                  <CardDescription className="text-base font-semibold text-foreground">
                     {selectedDiagnosis.diagnosis}
                   </CardDescription>
                   <div className="flex flex-wrap gap-2 mt-1">
@@ -267,22 +267,22 @@ export default function Calculadora() {
               <CardContent className="space-y-6">
                 {/* Dies base (INSS) */}
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-1.5">
+                  <h4 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-1.5">
                     <Shield className="h-4 w-4 text-purple-500" />
                     {language === "ca" ? "Temps estàndard INSS (sense ajust per ocupació)" : "Tiempos estándar INSS (sin ajuste por ocupación)"}
                   </h4>
                   <div className="grid grid-cols-3 gap-4">
                     <div className="text-center p-4 bg-blue-50 rounded-lg">
                       <div className="text-3xl font-bold text-blue-600">{selectedDiagnosis.minDays}</div>
-                      <div className="text-xs text-gray-600 mt-1">{language === "ca" ? "Dies mínims" : "Días mínimos"}</div>
+                      <div className="text-xs text-muted-foreground mt-1">{language === "ca" ? "Dies mínims" : "Días mínimos"}</div>
                     </div>
                     <div className="text-center p-4 bg-purple-50 rounded-lg border-2 border-purple-200">
                       <div className="text-3xl font-bold text-purple-600">{selectedDiagnosis.averageDays}</div>
-                      <div className="text-xs text-gray-600 mt-1">{language === "ca" ? "Dies estàndard" : "Días estándar"}</div>
+                      <div className="text-xs text-muted-foreground mt-1">{language === "ca" ? "Dies estàndard" : "Días estándar"}</div>
                     </div>
                     <div className="text-center p-4 bg-orange-50 rounded-lg">
                       <div className="text-3xl font-bold text-orange-600">{selectedDiagnosis.maxDays}</div>
-                      <div className="text-xs text-gray-600 mt-1">{language === "ca" ? "Dies màxims" : "Días máximos"}</div>
+                      <div className="text-xs text-muted-foreground mt-1">{language === "ca" ? "Dies màxims" : "Días máximos"}</div>
                     </div>
                   </div>
                 </div>
@@ -292,7 +292,7 @@ export default function Calculadora() {
                   <>
                     <Separator />
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-1.5">
+                      <h4 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-1.5">
                         <Briefcase className="h-4 w-4 text-blue-500" />
                         {language === "ca" ? "Temps ajustat per ocupació" : "Tiempo ajustado por ocupación"}: {selectedGroup.label}
                         <Badge className={`ml-1 text-xs font-mono ${getFactorLabel(adjustedDays.factor).color}`}>
@@ -302,18 +302,18 @@ export default function Calculadora() {
                       <div className="grid grid-cols-3 gap-4">
                         <div className="text-center p-4 bg-blue-100 rounded-lg">
                           <div className="text-3xl font-bold text-blue-700">{adjustedDays.min}</div>
-                          <div className="text-xs text-gray-600 mt-1">{language === "ca" ? "Dies mínims" : "Días mínimos"}</div>
-                        </div>
-                        <div className="text-center p-4 bg-purple-100 rounded-lg border-2 border-purple-300">
+                          <div className="text-xs text-muted-foreground mt-1">{language === "ca" ? "Dies mínims" : "Días mínimos"}</div>
+                          </div>
+                          <div className="text-center p-4 bg-purple-100 rounded-lg border-2 border-purple-300">
                           <div className="text-3xl font-bold text-purple-700">{adjustedDays.average}</div>
-                          <div className="text-xs text-gray-600 mt-1">{language === "ca" ? "Dies estàndard" : "Días estándar"}</div>
-                        </div>
-                        <div className="text-center p-4 bg-orange-100 rounded-lg">
+                          <div className="text-xs text-muted-foreground mt-1">{language === "ca" ? "Dies estàndard" : "Días estándar"}</div>
+                          </div>
+                          <div className="text-center p-4 bg-orange-100 rounded-lg">
                           <div className="text-3xl font-bold text-orange-700">{adjustedDays.max}</div>
-                          <div className="text-xs text-gray-600 mt-1">{language === "ca" ? "Dies màxims" : "Días máximos"}</div>
+                          <div className="text-xs text-muted-foreground mt-1">{language === "ca" ? "Dies màxims" : "Días máximos"}</div>
                         </div>
                       </div>
-                      <p className="text-xs text-gray-500 mt-2 text-center">
+                      <p className="text-xs text-muted-foreground mt-2 text-center">
                         {language === "ca" ? "Font" : "Fuente"}: Taula 15 del Manual de Tiempos Óptimos de IT (INSS, 4a edició) · {selectedGroup.cnoCodes}
                       </p>
                     </div>
@@ -326,7 +326,7 @@ export default function Calculadora() {
                     <Separator />
                     <div>
                       <button
-                        className="flex items-center gap-2 text-sm font-semibold text-gray-700 hover:text-purple-600 transition-colors w-full"
+                        className="flex items-center gap-2 text-sm font-semibold text-foreground hover:text-purple-600 transition-colors w-full"
                         onClick={() => setShowAllFactors(!showAllFactors)}
                       >
                         <Briefcase className="h-4 w-4" />
@@ -337,11 +337,11 @@ export default function Calculadora() {
                         <div className="mt-3 overflow-x-auto">
                           <table className="w-full text-xs border-collapse">
                             <thead>
-                              <tr className="bg-gray-50">
-                                <th className="text-left px-3 py-2 border border-gray-200 font-semibold">{language === "ca" ? "Grup d'ocupació" : "Grupo de ocupación"}</th>
-                                <th className="text-center px-3 py-2 border border-gray-200 font-semibold">CNO</th>
-                                <th className="text-center px-3 py-2 border border-gray-200 font-semibold">Factor</th>
-                                <th className="text-center px-3 py-2 border border-gray-200 font-semibold">{language === "ca" ? "Dies ajustats" : "Días ajustados"}</th>
+                              <tr className="bg-muted/50">
+                                <th className="text-left px-3 py-2 border border-border font-semibold">{language === "ca" ? "Grup d'ocupació" : "Grupo de ocupación"}</th>
+                                <th className="text-center px-3 py-2 border border-border font-semibold">CNO</th>
+                                <th className="text-center px-3 py-2 border border-border font-semibold">Factor</th>
+                                <th className="text-center px-3 py-2 border border-border font-semibold">{language === "ca" ? "Dies ajustats" : "Días ajustados"}</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -349,15 +349,15 @@ export default function Calculadora() {
                                 const adjDays = Math.round(selectedDiagnosis.averageDays * adj.factor);
                                 const { color } = getFactorLabel(adj.factor);
                                 return (
-                                  <tr key={i} className={`${selectedGroupId === adj.cnoGroup ? "bg-purple-50" : "hover:bg-gray-50"}`}>
-                                    <td className="px-3 py-1.5 border border-gray-200">{adj.type}</td>
-                                    <td className="px-3 py-1.5 border border-gray-200 text-center font-mono text-gray-500">{adj.cnoCodes}</td>
-                                    <td className="px-3 py-1.5 border border-gray-200 text-center">
+                                  <tr key={i} className={`${selectedGroupId === adj.cnoGroup ? "bg-purple-50 dark:bg-purple-900/20" : "hover:bg-muted/30"}`}>
+                                    <td className="px-3 py-1.5 border border-border">{adj.type}</td>
+                                    <td className="px-3 py-1.5 border border-border text-center font-mono text-muted-foreground">{adj.cnoCodes}</td>
+                                    <td className="px-3 py-1.5 border border-border text-center">
                                       <span className={`px-1.5 py-0.5 rounded font-mono font-semibold ${color}`}>
                                         ×{adj.factor.toFixed(2)}
                                       </span>
                                     </td>
-                                    <td className="px-3 py-1.5 border border-gray-200 text-center font-semibold text-purple-700">
+                                    <td className="px-3 py-1.5 border border-border text-center font-semibold text-purple-700 dark:text-purple-400">
                                       {adjDays} {language === "ca" ? "dies" : "días"}
                                     </td>
                                   </tr>
@@ -365,7 +365,7 @@ export default function Calculadora() {
                               })}
                             </tbody>
                           </table>
-                          <p className="text-xs text-gray-400 mt-2">
+                          <p className="text-xs text-muted-foreground mt-2">
                                 {language === "ca" ? `Dies ajustats calculats sobre el temps estàndard de ${selectedDiagnosis.averageDays} dies.` : `Días ajustados calculados sobre el tiempo estándar de ${selectedDiagnosis.averageDays} días.`}
                             {language === "ca" ? "Font" : "Fuente"}: Taula 15, Manual de Tiempos Óptimos de IT, INSS 4a edició.
                           </p>
@@ -377,9 +377,9 @@ export default function Calculadora() {
 
                 {/* Notes clíniques */}
                 {selectedDiagnosis.notes && (
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">{language === "ca" ? "Notes clíniques i font:" : "Notas clínicas y fuente:"}</h4>
-                    <p className="text-sm text-gray-700">{selectedDiagnosis.notes}</p>
+                  <div className="bg-muted/50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-foreground mb-2 text-sm">{language === "ca" ? "Notes clíniques i font:" : "Notas clínicas y fuente:"}</h4>
+                    <p className="text-sm text-muted-foreground">{selectedDiagnosis.notes}</p>
                   </div>
                 )}
 
@@ -387,7 +387,7 @@ export default function Calculadora() {
                 <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                   <div className="flex items-start gap-2">
                     <AlertCircle className="h-5 w-5 text-yellow-600 mt-0.5 flex-shrink-0" />
-                    <div className="text-sm text-gray-700">
+                    <div className="text-sm text-foreground">
                       {language === "ca" ? (
                         <><strong>Important:</strong> Aquests temps són orientatius basats en el Manual de Tiempos Óptimos de l'INSS. La durada real depèn de l'evolució clínica, l'edat, les comorbiditats i el criteri mèdic. Els factors d'ocupació s'apliquen sobre el temps estàndard i no substitueixen la valoració individual.</>
                       ) : (
@@ -408,20 +408,20 @@ export default function Calculadora() {
             <CardContent>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">{language === "ca" ? "Durada màxima estàndard" : "Duración máxima estándar"}</h4>
-                  <p className="text-sm text-gray-700">
+                  <h4 className="font-semibold text-foreground mb-2">{language === "ca" ? "Durada màxima estàndard" : "Duración máxima estándar"}</h4>
+                  <p className="text-sm text-muted-foreground">
                     {language === "ca" ? <><span>La durada màxima d'una IT és de </span><strong>365 dies naturals</strong><span> des de la data de la baixa mèdica.</span></> : <><span>La duración máxima de una IT es de </span><strong>365 días naturales</strong><span> desde la fecha de la baja médica.</span></>}
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">{language === "ca" ? "Primera pròrroga (art. 174 LGSS)" : "Primera prórroga (art. 174 LGSS)"}</h4>
-                  <p className="text-sm text-gray-700">
+                  <h4 className="font-semibold text-foreground mb-2">{language === "ca" ? "Primera pròrroga (art. 174 LGSS)" : "Primera prórroga (art. 174 LGSS)"}</h4>
+                  <p className="text-sm text-muted-foreground">
                     {language === "ca" ? <><span>Al complir-se els 365 dies, l'INSS pot prorrogar la IT per altres </span><strong>180 dies més</strong><span> (total: 545 dies / 18 mesos).</span></> : <><span>Al cumplirse los 365 días, el INSS puede prorrogar la IT por otros </span><strong>180 días más</strong><span> (total: 545 días / 18 meses).</span></>}
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">{language === "ca" ? "Segona pròrroga excepcional" : "Segunda prórroga excepcional"}</h4>
-                  <p className="text-sm text-gray-700">
+                  <h4 className="font-semibold text-foreground mb-2">{language === "ca" ? "Segona pròrroga excepcional" : "Segunda prórroga excepcional"}</h4>
+                  <p className="text-sm text-muted-foreground">
                     {language === "ca" ? <><span>En casos excepcionals (neoplàsies, cirurgia major, malalties greus), es pot concedir una pròrroga de fins a </span><strong>185 dies més</strong><span> (total màxim: 730 dies / 24 mesos).</span></> : <><span>En casos excepcionales (neoplasias, cirugía mayor, enfermedades graves), se puede conceder una prórroga de hasta </span><strong>185 días más</strong><span> (total máximo: 730 días / 24 meses).</span></>}
                   </p>
                 </div>

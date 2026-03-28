@@ -572,7 +572,7 @@ export default function Chat() {
                             {msg.sources.map((source: any, sidx: number) => (
                               <span
                                 key={sidx}
-                                className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
+                                className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded"
                               >
                                 {source.title}
                               </span>

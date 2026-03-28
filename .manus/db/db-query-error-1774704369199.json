@@ -1,0 +1,8 @@
+{
+  "query": "SELECT id, title, category, CHAR_LENGTH(COALESCE(title_es,'')) as title_es_len, CHAR_LENGTH(COALESCE(description_es,'')) as desc_es_len FROM special_cases WHERE title_es IS NULL OR title_es = '' OR description_es IS NULL OR description_es = '' ORDER BY id LIMIT 30;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, category, CHAR_LENGTH(COALESCE(title_es,'')) as title_es_len, CHAR_LENGTH(COALESCE(description_es,'')) as desc_es_len FROM special_cases WHERE title_es IS NULL OR title_es = '' OR description_es IS NULL OR description_es = '' ORDER BY id LIMIT 30;",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1054 (42S22) at line 1: Unknown column 'title_es' in 'where clause'"
+  ]
+}

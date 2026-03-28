@@ -58,7 +58,7 @@ const typeColors: Record<string, string> = {
   guia: "bg-blue-100 text-blue-800",
   manual: "bg-green-100 text-green-800",
   pildora: "bg-purple-100 text-purple-800",
-  otro: "bg-gray-100 text-gray-800",
+  otro: "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200",
 };
 
 /**
@@ -320,7 +320,7 @@ export default function Documentos() {
               <Filter className="h-4 w-4" />
               {language === "ca" ? "Filtres" : "Filtros"}
               {activeFilterCount > 0 && (
-                <Badge className="ml-1 bg-white text-primary h-5 w-5 p-0 flex items-center justify-center text-xs font-bold">
+                <Badge className="ml-1 bg-background text-primary h-5 w-5 p-0 flex items-center justify-center text-xs font-bold">
                   {activeFilterCount}
                 </Badge>
               )}
@@ -329,7 +329,7 @@ export default function Documentos() {
 
           {/* Filtres avançats */}
           {showFilters && (
-            <div className="bg-white border rounded-lg p-4 space-y-4">
+            <div className="bg-card border rounded-lg p-4 space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="font-semibold text-sm flex items-center gap-2">
                   <Filter className="h-4 w-4" />

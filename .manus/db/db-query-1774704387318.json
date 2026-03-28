@@ -1,0 +1,60 @@
+{
+  "query": "SELECT id, title, type FROM documents WHERE titleEs IS NULL OR titleEs = '' OR contentEs IS NULL OR contentEs = '' ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, type FROM documents WHERE titleEs IS NULL OR titleEs = '' OR contentEs IS NULL OR contentEs = '' ORDER BY id;",
+  "rows": [
+    {
+      "id": "11",
+      "title": "Guía de valoración de incapacidad laboral para médicos de atención primaria",
+      "type": "guia"
+    },
+    {
+      "id": "12",
+      "title": "Incapacidad Temporal: Manual para el manejo en atención primaria",
+      "type": "manual"
+    },
+    {
+      "id": "13",
+      "title": "Tiempos estándar de Incapacidad Temporal",
+      "type": "guia"
+    },
+    {
+      "id": "15",
+      "title": "Reial Decret 625/2014 (BOE-A-2014-7684)",
+      "type": "decreto"
+    },
+    {
+      "id": "16",
+      "title": "Duración máxima de IT y prórrogas",
+      "type": "guia"
+    },
+    {
+      "id": "17",
+      "title": "Llei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT",
+      "type": "ley"
+    },
+    {
+      "id": "19",
+      "title": "Gestió de la IT en l'Àmbit Hospitalari - Catalunya (ICS / Canal Salut)",
+      "type": "guia"
+    },
+    {
+      "id": "30003",
+      "title": "Reial Decret 1299/2006, de 10 de novembre (BOE-A-2006-22169) - Quadre de malalties professionals",
+      "type": "decreto"
+    },
+    {
+      "id": "60001",
+      "title": "Reial Decret 1060/2022, de 27 de desembre (BOE-A-2023-160) - Gestió electrònica dels parts d'IT",
+      "type": "decreto"
+    },
+    {
+      "id": "90001",
+      "title": "RD 295/2009 - Prestació per risc durant l'embaràs i la lactància natural",
+      "type": "decreto"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\ttype\n11\tGuía de valoración de incapacidad laboral para médicos de atención primaria\tguia\n12\tIncapacidad Temporal: Manual para el manejo en atención primaria\tmanual\n13\tTiempos estándar de Incapacidad Temporal\tguia\n15\tReial Decret 625/2014 (BOE-A-2014-7684)\tdecreto\n16\tDuración máxima de IT y prórrogas\tguia\n17\tLlei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT\tley\n19\tGestió de la IT en l'Àmbit Hospitalari - Catalunya (ICS / Canal Salut)\tguia\n30003\tReial Decret 1299/2006, de 10 de novembre (BOE-A-2006-22169) - Quadre de malalties professionals\tdecreto\n60001\tReial Decret 1060/2022, de 27 de desembre (BOE-A-2023-160) - Gestió electrònica dels parts d'IT\tdecreto\n90001\tRD 295/2009 - Prestació per risc durant l'embaràs i la lactància natural\tdecreto\n",
+  "stderr": "",
+  "execution_time_ms": 375
+}

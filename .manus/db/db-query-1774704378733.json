@@ -1,0 +1,30 @@
+{
+  "query": "SELECT id, title, category FROM special_cases WHERE titleEs IS NULL OR titleEs = '' OR descriptionEs IS NULL OR descriptionEs = '' ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, category FROM special_cases WHERE titleEs IS NULL OR titleEs = '' OR descriptionEs IS NULL OR descriptionEs = '' ORDER BY id;",
+  "rows": [
+    {
+      "id": "9",
+      "title": "Vacances durant la IT",
+      "category": "vacaciones"
+    },
+    {
+      "id": "90001",
+      "title": "IT durant embaràs de risc vs. prestació per risc durant l'embaràs",
+      "category": "embarazo"
+    },
+    {
+      "id": "90002",
+      "title": "Reducció de jornada per guarda legal i IT: càlcul de la base reguladora",
+      "category": "otro"
+    },
+    {
+      "id": "90004",
+      "title": "Prestació per risc durant la lactància natural: diferències amb la IT",
+      "category": "lactancia"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tcategory\n9\tVacances durant la IT\tvacaciones\n90001\tIT durant embaràs de risc vs. prestació per risc durant l'embaràs\tembarazo\n90002\tReducció de jornada per guarda legal i IT: càlcul de la base reguladora\totro\n90004\tPrestació per risc durant la lactància natural: diferències amb la IT\tlactancia\n",
+  "stderr": "",
+  "execution_time_ms": 390
+}

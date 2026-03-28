@@ -427,3 +427,11 @@
 - [ ] Revisar i corregir colors hardcoded a Favorits.tsx (fons, capçalera, breadcrumb)
 - [ ] Revisar i corregir colors hardcoded a Novetats.tsx (fons, capçalera, breadcrumb)
 - [ ] Revisar i corregir colors hardcoded a Chat.tsx (fons, capçalera)
+
+## Sprint 4 - Traduccions i colors mode fosc
+- [x] Completar traducció ES dels casos especials pendents (4 casos: vacances IT, embaràs risc, reducció jornada, lactància)
+- [x] Completar traducció ES dels documents pendents (10 documents: guies, decrets, lleis)
+- [x] Corregir missatge de benvinguda del xat per idioma CA/ES (ja usat language context correctament)
+- [x] Eliminar colors hardcoded text-gray-900 de Chat.tsx (bg-muted/text-muted-foreground)
+- [x] Eliminar colors hardcoded text-gray-900 de Calculadora.tsx (23 correccions)
+- [x] Eliminar colors hardcoded text-gray-900 de Documentos.tsx (bg-card/bg-background)
