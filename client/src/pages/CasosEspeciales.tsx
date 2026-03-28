@@ -77,7 +77,7 @@ const categoryColors: Record<string, string> = {
   vacaciones: "bg-teal-100 text-teal-800",
   recaida: "bg-amber-100 text-amber-800",
   accident_treball: "bg-red-200 text-red-900",
-  otro: "bg-gray-100 text-gray-800",
+  otro: "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200",
 };
 
 type SpecialCase = {
@@ -344,9 +344,9 @@ export default function CasosEspeciales() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-10">
+      <header className="border-b bg-background/90 backdrop-blur-sm sticky top-0 z-10">
         <div className="container py-3">
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2 min-w-0">
@@ -425,7 +425,7 @@ export default function CasosEspeciales() {
 
           {/* Filtres avançats: categories com a botons */}
           {showFilters && (
-            <div className="bg-white border rounded-lg p-4 space-y-3">
+            <div className="bg-card border rounded-lg p-4 space-y-3">
               <div className="flex items-center justify-between">
                 <h3 className="font-semibold text-sm flex items-center gap-2">
                   <Filter className="h-4 w-4" />

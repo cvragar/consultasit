@@ -383,9 +383,9 @@ const VIES = [
 export default function Reclamacions() {
   const { t, language } = useT();
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-20">
+      <header className="border-b bg-background/90 backdrop-blur-sm sticky top-0 z-20">
         <div className="container py-3">
             <div className="flex items-center justify-between gap-2 text-sm text-gray-500">
             <div className="flex items-center gap-2">
@@ -412,18 +412,18 @@ export default function Reclamacions() {
       {/* Hero */}
       <section className="container py-8 sm:py-12">
         <div className="max-w-3xl mx-auto text-center px-2">
-          <div className="inline-flex items-center gap-2 bg-slate-100 rounded-full px-4 py-1.5 text-sm text-slate-600 mb-4">
+          <div className="inline-flex items-center gap-2 bg-muted rounded-full px-4 py-1.5 text-sm text-muted-foreground mb-4">
             <Scale className="h-4 w-4" />
             {language === "ca" ? "Guia pràctica per a professionals sanitaris" : "Guía práctica para profesionales sanitarios"}
           </div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 leading-tight">
             {language === "ca" ? "Reclamacions i Recursos en IT" : "Reclamaciones y Recursos en IT"}
           </h1>
-          <p className="text-base sm:text-lg text-gray-600 mb-4">
+          <p className="text-base sm:text-lg text-muted-foreground mb-4">
             {language === "ca" ? (
-              <>Cinc vies de reclamació explicades pas a pas: alta del metge de família, alta de la mútua per AT/MP, alta de l'ICAM quan la mútua ha proposat l'alta i el metge de família ha discrepat, alta de l'INSS passats els 365 dies, i determinació de contingències. <span className="font-medium text-gray-800">Atenció: no totes les reclamacions suspenen la reincorporació.</span></>
+              <>Cinc vies de reclamació explicades pas a pas: alta del metge de família, alta de la mútua per AT/MP, alta de l'ICAM quan la mútua ha proposat l'alta i el metge de família ha discrepat, alta de l'INSS passats els 365 dies, i determinació de contingències. <span className="font-medium text-foreground">Atenció: no totes les reclamacions suspenen la reincorporació.</span></>
             ) : (
-              <>Cinco vías de reclamación explicadas paso a paso: alta del médico de familia, alta de la mutua por AT/EP, alta del ICAM cuando la mutua ha propuesto el alta y el médico de familia ha discrepado, alta del INSS pasados los 365 días, y determinación de contingencias. <span className="font-medium text-gray-800">Atención: no todas las reclamaciones suspenden la reincorporación.</span></>
+              <>Cinco vías de reclamación explicadas paso a paso: alta del médico de familia, alta de la mutua por AT/EP, alta del ICAM cuando la mutua ha propuesto el alta y el médico de familia ha discrepado, alta del INSS pasados los 365 días, y determinación de contingencias. <span className="font-medium text-foreground">Atención: no todas las reclamaciones suspenden la reincorporación.</span></>
             )}
           </p>
           {/* Cas destacat: proposta mútua confirmada per ICAM */}
@@ -439,48 +439,48 @@ export default function Reclamacions() {
           </div>
 
           {/* Taula resum de terminis */}
-          <div className="overflow-x-auto rounded-xl border bg-white shadow-sm mt-6">
+          <div className="overflow-x-auto rounded-xl border bg-card shadow-sm mt-6">
             <table className="w-full text-sm">
               <thead>
-                <tr className="bg-slate-50 border-b">
-                  <th className="text-left px-4 py-3 font-semibold text-gray-700">{language === "ca" ? "Via de reclamació" : "Vía de reclamación"}</th>
-                  <th className="text-left px-4 py-3 font-semibold text-gray-700">{language === "ca" ? "Termini" : "Plazo"}</th>
-                  <th className="text-left px-4 py-3 font-semibold text-gray-700">{language === "ca" ? "Sustèn reincorporació?" : "¿Suspende reincorporación?"}</th>
-                  <th className="text-left px-4 py-3 font-semibold text-gray-700">{language === "ca" ? "Organisme" : "Organismo"}</th>
+                <tr className="bg-muted/50 border-b">
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">{language === "ca" ? "Via de reclamació" : "Vía de reclamación"}</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">{language === "ca" ? "Termini" : "Plazo"}</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">{language === "ca" ? "Sustèn reincorporació?" : "¿Suspende reincorporación?"}</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">{language === "ca" ? "Organisme" : "Organismo"}</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b hover:bg-slate-50">
+                <tr className="border-b hover:bg-muted/40">
                   <td className="px-4 py-3 font-medium text-blue-700">{language === "ca" ? "Alta metge de família (CC, <365 dies)" : "Alta médico de familia (CC, <365 días)"}</td>
                   <td className="px-4 py-3">{language === "ca" ? "11 dies hàbils" : "11 días hábiles"}</td>
                   <td className="px-4 py-3"><span className="text-red-600 font-medium">No</span></td>
                   <td className="px-4 py-3">ICAM / Dep. Salut</td>
                 </tr>
-                <tr className="border-b hover:bg-slate-50">
+                <tr className="border-b hover:bg-muted/40">
                   <td className="px-4 py-3 font-medium text-orange-700">{language === "ca" ? "Alta mútua (AT/MP, <365 dies)" : "Alta mutua (AT/EP, <365 días)"}</td>
                   <td className="px-4 py-3">{language === "ca" ? "10 dies hàbils" : "10 días hábiles"}</td>
                   <td className="px-4 py-3"><span className="text-green-600 font-medium">{language === "ca" ? "Sí (fins resolució INSS)" : "Sí (hasta resolución INSS)"}</span></td>
                   <td className="px-4 py-3">INSS</td>
                 </tr>
-                <tr className="border-b hover:bg-slate-50">
+                <tr className="border-b hover:bg-muted/40">
                   <td className="px-4 py-3 font-medium text-rose-700">{language === "ca" ? "Alta ICAM (proposta mútua CC, <365 dies)" : "Alta ICAM (propuesta mutua CC, <365 días)"}</td>
                   <td className="px-4 py-3">{language === "ca" ? "11 dies hàbils" : "11 días hábiles"}</td>
                   <td className="px-4 py-3"><span className="text-red-600 font-medium">No</span></td>
                   <td className="px-4 py-3">ICAM / Dep. Salut</td>
                 </tr>
-                <tr className="border-b hover:bg-slate-50">
+                <tr className="border-b hover:bg-muted/40">
                   <td className="px-4 py-3 font-medium text-green-700">{language === "ca" ? "Alta INSS (>365 dies) — disconformitat (4 dies naturals)" : "Alta INSS (>365 días) — disconformidad (4 días naturales)"}</td>
                   <td className="px-4 py-3">{language === "ca" ? "4 dies naturals" : "4 días naturales"}</td>
                   <td className="px-4 py-3"><span className="text-green-600 font-medium">{language === "ca" ? "Sí (fins resolució)" : "Sí (hasta resolución)"}</span></td>
                   <td className="px-4 py-3">{language === "ca" ? "Inspecció Mèdica SPS" : "Inspección Médica SPS"}</td>
                 </tr>
-                <tr className="border-b hover:bg-slate-50">
+                <tr className="border-b hover:bg-muted/40">
                   <td className="px-4 py-3 font-medium text-green-700">{language === "ca" ? "Alta INSS (>365 dies) — rec. prèvia posterior" : "Alta INSS (>365 días) — rec. previa posterior"}</td>
                   <td className="px-4 py-3">{language === "ca" ? "20 dies hàbils" : "20 días hábiles"}</td>
                   <td className="px-4 py-3"><span className="text-red-600 font-medium">No</span></td>
                   <td className="px-4 py-3">{language === "ca" ? "INSS / Jutjat Social" : "INSS / Juzgado Social"}</td>
                 </tr>
-                <tr className="hover:bg-slate-50">
+                <tr className="hover:bg-muted/40">
                   <td className="px-4 py-3 font-medium text-purple-700">{language === "ca" ? "Determinació contingències" : "Determinación contingencias"}</td>
                   <td className="px-4 py-3">{language === "ca" ? "En qualsevol moment" : "En cualquier momento"}</td>
                   <td className="px-4 py-3"><span className="text-gray-500">N/A</span></td>
@@ -508,18 +508,18 @@ export default function Reclamacions() {
                       <div className="flex flex-wrap items-center gap-2 mb-1">
                         <CardTitle className="text-lg leading-tight">{via.title}</CardTitle>
                       </div>
-                      <p className="text-sm text-gray-500">{via.subtitle}</p>
+                      <p className="text-sm text-muted-foreground">{via.subtitle}</p>
                     </div>
                   </div>
 
                   {/* Badges de termini i organisme */}
                   <div className="flex flex-wrap gap-2 mt-2">
-                    <div className="flex items-center gap-1.5 text-xs bg-gray-100 rounded-full px-3 py-1">
+                    <div className="flex items-center gap-1.5 text-xs bg-muted rounded-full px-3 py-1">
                       <Clock className="h-3.5 w-3.5 text-gray-500" />
                       <span className="font-medium">{language === "ca" ? "Termini:" : "Plazo:"}</span>
                       <span>{via.termini}</span>
                     </div>
-                    <div className="flex items-center gap-1.5 text-xs bg-gray-100 rounded-full px-3 py-1">
+                    <div className="flex items-center gap-1.5 text-xs bg-muted rounded-full px-3 py-1">
                       <Building2 className="h-3.5 w-3.5 text-gray-500" />
                       <span className="font-medium">{language === "ca" ? "Organisme:" : "Organismo:"}</span>
                       <span>{via.organisme}</span>
@@ -529,7 +529,7 @@ export default function Reclamacions() {
 
                 <CardContent className="space-y-4">
                   {/* Resum */}
-                  <p className="text-sm text-gray-700 leading-relaxed">{via.resum}</p>
+                  <p className="text-sm text-foreground/80 leading-relaxed">{via.resum}</p>
 
                   <Accordion type="single" collapsible className="w-full">
                     {/* Passos */}
@@ -548,8 +548,8 @@ export default function Reclamacions() {
                                 {pas.num}
                               </span>
                               <div>
-                                <p className="text-sm font-semibold text-gray-800">{pas.titol}</p>
-                                <p className="text-sm text-gray-600 mt-0.5">{pas.desc}</p>
+                                <p className="text-sm font-semibold text-foreground">{pas.titol}</p>
+                                <p className="text-sm text-muted-foreground mt-0.5">{pas.desc}</p>
                               </div>
                             </li>
                           ))}
@@ -568,7 +568,7 @@ export default function Reclamacions() {
                       <AccordionContent>
                         <ul className="space-y-1.5 mt-2">
                           {via.documentacio.map((doc, i) => (
-                            <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                            <li key={i} className="flex items-start gap-2 text-sm text-foreground/80">
                               <CheckCircle className="h-4 w-4 text-green-500 shrink-0 mt-0.5" />
                               {doc}
                             </li>
@@ -588,7 +588,7 @@ export default function Reclamacions() {
                       <AccordionContent>
                         <ul className="space-y-2 mt-2">
                           {via.consells.map((consell, i) => (
-                            <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                            <li key={i} className="flex items-start gap-2 text-sm text-foreground/80">
                               <ArrowRight className="h-4 w-4 text-blue-500 shrink-0 mt-0.5" />
                               {consell}
                             </li>
@@ -608,7 +608,7 @@ export default function Reclamacions() {
                       <AccordionContent>
                         <ul className="space-y-1.5 mt-2">
                           {via.baseLegal.map((llei, i) => (
-                            <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                               <Gavel className="h-4 w-4 text-purple-500 shrink-0 mt-0.5" />
                               {llei}
                             </li>
@@ -630,10 +630,10 @@ export default function Reclamacions() {
                           <div className="space-y-3 mt-2">
                             <div className="flex flex-wrap gap-2">
                               {via.contacte.map((c, i) => (
-                                <div key={i} className="flex items-center gap-2 text-sm bg-gray-50 rounded-lg px-3 py-2">
-                                  <Phone className="h-3.5 w-3.5 text-gray-500" />
-                                  <span className="text-gray-600">{c.label}:</span>
-                                  <span className="font-semibold text-gray-800">{c.valor}</span>
+                                <div key={i} className="flex items-center gap-2 text-sm bg-muted rounded-lg px-3 py-2">
+                                  <Phone className="h-3.5 w-3.5 text-muted-foreground" />
+                                  <span className="text-muted-foreground">{c.label}:</span>
+                                  <span className="font-semibold text-foreground">{c.valor}</span>
                                 </div>
                               ))}
                             </div>

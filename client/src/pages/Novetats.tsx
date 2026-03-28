@@ -125,18 +125,18 @@ export default function Novetats() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-20">
+      <header className="border-b bg-background/90 backdrop-blur-sm sticky top-0 z-20">
         <div className="container py-3">
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2 shrink-0">
               <Shield className="h-7 w-7 text-blue-600" />
               <div>
-                <h1 className="text-lg font-bold text-gray-900 leading-tight">
+                <h1 className="text-lg font-bold text-foreground leading-tight">
                   {language === "ca" ? "Consultes IT" : "Consultas IT"}
                 </h1>
-                <p className="text-xs text-gray-500 hidden sm:block">
+                <p className="text-xs text-muted-foreground hidden sm:block">
                   {language === "ca" ? "Assistent per a professionals sanitaris" : "Asistente para profesionales sanitarios"}
                 </p>
               </div>

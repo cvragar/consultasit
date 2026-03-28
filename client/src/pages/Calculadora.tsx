@@ -76,9 +76,9 @@ export default function Calculadora() {
   const selectedGroup = OCCUPATION_GROUPS.find(g => g.id === selectedGroupId);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-10">
+      <header className="border-b bg-background/90 backdrop-blur-sm sticky top-0 z-10">
         <div className="container py-3">
           <div className="flex items-center gap-2">
             <Link href="/">
@@ -90,7 +90,7 @@ export default function Calculadora() {
             <Separator orientation="vertical" className="h-5 hidden sm:block" />
             <div className="flex items-center gap-1.5">
               <Calculator className="h-5 w-5 text-purple-600 shrink-0" />
-              <h1 className="text-base sm:text-xl font-bold text-gray-900">{language === "ca" ? "Calculadora d'IT" : "Calculadora de IT"}</h1>
+              <h1 className="text-base sm:text-xl font-bold text-foreground">{language === "ca" ? "Calculadora d'IT" : "Calculadora de IT"}</h1>
             </div>
             <div className="ml-auto flex items-center gap-2">
               <ThemeSwitcher />
@@ -104,7 +104,7 @@ export default function Calculadora() {
       <div className="container py-8">
         <div className="max-w-4xl mx-auto">
           {/* Info Card */}
-          <Card className="mb-8 border-purple-200 bg-purple-50">
+            <Card className="mb-8 border-purple-200 dark:border-purple-900 bg-purple-50 dark:bg-purple-950/30">
             <CardHeader>
               <div className="flex items-start gap-3">
                 <Info className="h-5 w-5 text-purple-600 mt-0.5" />
@@ -157,20 +157,20 @@ export default function Calculadora() {
                           className={`w-full text-left px-4 py-3 rounded-lg border transition-colors ${
                             selectedDiagnosis?.id === result.id
                               ? "border-purple-400 bg-purple-50"
-                              : "border-gray-200 bg-white hover:border-purple-300 hover:bg-purple-50/50"
+                              : "border-border bg-card hover:border-purple-300 hover:bg-purple-50/50 dark:hover:bg-purple-950/30"
                           }`}
                           onClick={() => {
                             setSelectedDiagnosis(result);
                             setSelectedGroupId("");
                           }}
                         >
-                          <div className="font-semibold text-gray-900 text-sm">{result.diagnosis}</div>
+                          <div className="font-semibold text-foreground text-sm">{result.diagnosis}</div>
                           <div className="flex gap-3 mt-1">
                             {result.cie10Code && (
-                              <span className="text-xs text-gray-500">CIE-10: <strong>{result.cie10Code}</strong></span>
+                              <span className="text-xs text-muted-foreground">CIE-10: <strong>{result.cie10Code}</strong></span>
                             )}
                             {result.category && (
-                              <span className="text-xs text-gray-500">{result.category}</span>
+                              <span className="text-xs text-muted-foreground">{result.category}</span>
                             )}
                           </div>
                         </button>

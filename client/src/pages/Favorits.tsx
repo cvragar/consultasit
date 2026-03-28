@@ -179,7 +179,7 @@ export default function Favorits() {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-white flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <Card className="max-w-md w-full mx-4">
           <CardHeader className="text-center">
             <Star className="h-12 w-12 text-yellow-500 mx-auto mb-4" />
@@ -205,9 +205,9 @@ export default function Favorits() {
   const totalFavs = favDocs.length + favCases.length;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-white">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
+      <header className="border-b bg-background/90 backdrop-blur-sm sticky top-0 z-10">
         <div className="container py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">

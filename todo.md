@@ -65,6 +65,19 @@
 - [x] Bug: títol "Consultas IT" no visible al header en mode fosc (text negre sobre fons fosc)
 - [x] 380 tests passen, 0 errors TypeScript
 
+## Millores mode fosc global (sprint 3)
+- [x] CSS global: variables dark mode actualitzades (bg-background fosc coherent)
+- [x] ThemeSwitcher: afegit text indicatiu del mode actiu (Clar/Fosc)
+- [x] Missatge de benvinguda del xat: adaptat per idioma CA/ES
+- [x] Chat.tsx: fons, sidebar i header adaptats a bg-background/bg-card
+- [x] CasosEspeciales.tsx: fons i header adaptats a bg-background
+- [x] Reclamacions.tsx: fons, header, hero, taula i targetes adaptats
+- [x] Documentos.tsx: fons i header adaptats a bg-background
+- [x] Calculadora.tsx: fons, header i targetes adaptats
+- [x] Favorits.tsx: fons i header adaptats a bg-background
+- [x] Novetats.tsx: fons i header adaptats a bg-background
+- [x] Admin.tsx: fons i header adaptats a bg-background
+
 ## Testing i entrega
 - [x] Escribir tests para procedimientos tRPC
 - [x] Probar sistema de chat con casos reales
@@ -402,3 +415,15 @@
 - [ ] Integrar ThemeSwitcher a totes les pàgines (Home, CasosEspeciales, Documentos, Calculadora, Reclamacions, Chat, Admin, Favorits, Novetats)
 - [ ] Verificar que tots els components (targetes, diàlegs, formularis) respecten el tema fosc
 - [ ] Escriure tests per als nous procediments
+
+## Millores mode fosc global i UX (sprint 3)
+- [ ] Corregir CSS global: bg-background i text-foreground en mode fosc per a totes les pàgines
+- [ ] Millorar ThemeSwitcher: afegir text "Fosc"/"Clar" indicatiu del mode actiu
+- [ ] Corregir missatge de benvinguda del xat per idioma (CA/ES)
+- [ ] Revisar i corregir colors hardcoded a CasosEspeciales.tsx (fons, capçalera, breadcrumb)
+- [ ] Revisar i corregir colors hardcoded a Reclamacions.tsx (fons, capçalera, breadcrumb)
+- [ ] Revisar i corregir colors hardcoded a Documentos.tsx (fons, capçalera, breadcrumb)
+- [ ] Revisar i corregir colors hardcoded a Calculadora.tsx (fons, capçalera, breadcrumb)
+- [ ] Revisar i corregir colors hardcoded a Favorits.tsx (fons, capçalera, breadcrumb)
+- [ ] Revisar i corregir colors hardcoded a Novetats.tsx (fons, capçalera, breadcrumb)
+- [ ] Revisar i corregir colors hardcoded a Chat.tsx (fons, capçalera)

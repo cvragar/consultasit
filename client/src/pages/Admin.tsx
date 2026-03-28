@@ -255,7 +255,7 @@ export default function Admin() {
 
   if (!isAuthenticated || user?.role !== "admin") {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-red-50 to-white flex items-center justify-center p-4">
+      <div className="min-h-screen bg-background flex items-center justify-center p-4">
         <Card className="p-8 max-w-md text-center">
           <Shield className="h-16 w-16 text-red-600 mx-auto mb-4" />
           <h2 className="text-2xl font-bold mb-2">{language === "ca" ? "Accés restringit" : "Acceso restringido"}</h2>
@@ -274,9 +274,9 @@ export default function Admin() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
+      <header className="border-b bg-background/90 backdrop-blur-sm sticky top-0 z-10">
         <div className="container py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -288,12 +288,12 @@ export default function Admin() {
               </Link>
               <Separator orientation="vertical" className="h-6" />
               <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-gray-900" />
-                <h1 className="text-lg font-bold text-gray-900">{language === "ca" ? "Panell d'Administració" : "Panel de Administración"}</h1>
+                <Shield className="h-5 w-5 text-foreground" />
+                <h1 className="text-lg font-bold text-foreground">{language === "ca" ? "Panell d'Administració" : "Panel de Administración"}</h1>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-sm text-gray-600 hidden sm:block">Admin: {user?.name}</span>
+              <span className="text-sm text-muted-foreground hidden sm:block">Admin: {user?.name}</span>
               <ThemeSwitcher />
               <LanguageSwitcher />
             </div>

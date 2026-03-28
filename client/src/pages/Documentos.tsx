@@ -254,9 +254,9 @@ export default function Documentos() {
   const activeFilterCount = [filterType, filterJurisdiction, filterYear, filterStatus].filter(f => f !== "all").length;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-10">
+      <header className="border-b bg-background/90 backdrop-blur-sm sticky top-0 z-10">
         <div className="container py-3">
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2 min-w-0">

@@ -296,7 +296,7 @@ export default function Chat() {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <Card className="p-8 max-w-md text-center">
           <Shield className="h-16 w-16 text-blue-600 mx-auto mb-4" />
           <h2 className="text-2xl font-bold mb-2">{language === "ca" ? "Inicia sessió per continuar" : "Inicia sesión para continuar"}</h2>
@@ -324,7 +324,7 @@ export default function Chat() {
   ];
 
   return (
-    <div className="h-dvh bg-gradient-to-b from-blue-50 to-white flex relative overflow-hidden">
+    <div className="h-dvh bg-background flex relative overflow-hidden">
       {/* Overlay per a mòbil */}
       {sidebarOpen && (
         <div
@@ -339,7 +339,7 @@ export default function Chat() {
           sidebarOpen
             ? "fixed md:relative inset-y-0 left-0 w-72 md:w-80 z-30 md:z-auto"
             : "w-0"
-        } transition-all duration-300 border-r bg-white flex flex-col overflow-hidden`}
+        } transition-all duration-300 border-r bg-card flex flex-col overflow-hidden`}
       >
         <div className="p-4 border-b">
           <div className="flex items-center justify-between mb-4">
@@ -412,7 +412,7 @@ export default function Chat() {
       {/* Àrea principal del xat */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* Capçalera */}
-        <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-10">
+        <header className="border-b bg-background/90 dark:bg-card/90 backdrop-blur-sm sticky top-0 z-10">
           <div className="px-3 sm:px-4 py-3">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2 min-w-0">
@@ -477,20 +477,20 @@ export default function Chat() {
             {allMessages.length === 0 ? (
               <div className="text-center py-8">
                 <MessageSquare className="h-16 w-16 text-blue-400 mx-auto mb-4" />
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                <h2 className="text-2xl font-bold text-foreground mb-2">
                   {language === "ca" ? "Xat especialitzat en IT" : "Chat especializado en IT"}
                 </h2>
-                <p className="text-gray-600 mb-2">
+                <p className="text-muted-foreground mb-2">
                   {language === "ca" ? "Fes qualsevol consulta sobre normativa d'Incapacitat Temporal" : "Haz cualquier consulta sobre normativa de Incapacidad Temporal"}
                 </p>
                 <div className="flex items-center justify-center gap-1.5 mb-6">
                   <Zap className="h-4 w-4 text-green-500" />
-                  <span className="text-sm text-green-600 font-medium">{language === "ca" ? "Respostes en temps real amb streaming" : "Respuestas en tiempo real con streaming"}</span>
+                  <span className="text-sm text-green-600 dark:text-green-400 font-medium">{language === "ca" ? "Respostes en temps real amb streaming" : "Respuestas en tiempo real con streaming"}</span>
                 </div>
 
                 {/* Suggeriments ràpids */}
                 <div className="mb-6">
-                  <p className="text-sm font-semibold text-gray-700 mb-3 flex items-center justify-center gap-2">
+                  <p className="text-sm font-semibold text-foreground mb-3 flex items-center justify-center gap-2">
                     <Zap className="h-4 w-4 text-blue-500" />
                     {language === "ca" ? "Suggeriments ràpids — clica per enviar" : "Sugerencias rápidas — haz clic para enviar"}
                   </p>
@@ -500,7 +500,7 @@ export default function Chat() {
                         key={idx}
                         onClick={() => handleSendMessage(suggestion)}
                         disabled={isStreaming}
-                        className="text-left text-sm px-4 py-2.5 rounded-lg border border-blue-200 bg-blue-50 hover:bg-blue-100 hover:border-blue-400 text-blue-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="text-left text-sm px-4 py-2.5 rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-900/50 hover:border-blue-400 text-blue-800 dark:text-blue-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {suggestion}
                       </button>
@@ -511,7 +511,7 @@ export default function Chat() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
                   <Card className="p-4">
                     <h3 className="font-semibold mb-2">{language === "ca" ? "Fonts d'informació:" : "Fuentes de información:"}</h3>
-                    <ul className="text-sm text-gray-600 space-y-1">
+                    <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• {language === "ca" ? "Normativa estatal i autonòmica" : "Normativa estatal y autonómica"}</li>
                       <li>• {language === "ca" ? "Casos especials documentats" : "Casos especiales documentados"}</li>
                       <li>• {language === "ca" ? "Guies pràctiques del Departament de Salut" : "Guías prácticas del Departamento de Salud"}</li>
@@ -520,7 +520,7 @@ export default function Chat() {
                   </Card>
                   <Card className="p-4">
                     <h3 className="font-semibold mb-2">{language === "ca" ? "Consells d'ús:" : "Consejos de uso:"}</h3>
-                    <ul className="text-sm text-gray-600 space-y-1">
+                    <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• {language === "ca" ? "Fes preguntes concretes i específiques" : "Haz preguntas concretas y específicas"}</li>
                       <li>• {language === "ca" ? "Indica el règim (RGSS, RETA, TRADE...)" : "Indica el régimen (RGSS, RETA, TRADE...)"}</li>
                       <li>• {language === "ca" ? "Menciona la durada de la baixa si és rellevant" : "Menciona la duración de la baja si es relevante"}</li>
