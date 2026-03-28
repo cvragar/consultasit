@@ -464,3 +464,9 @@
 - [x] Afegir noindex a Admin.tsx
 - [x] Afegir noindex a Favorits.tsx
 - [x] Afegir noindex a Chat.tsx
+
+## Sprint 9 - Open Graph image i Google Search Console
+- [x] Generar imatge OG 1200x630px per a Consultes IT (fons navy, escut+creu, 3 targetes de funcionalitats)
+- [x] Pujar imatge al CDN (CloudFront) i obtenir URL pública permanent
+- [x] Afegir og:image, og:url, og:image:width/height, og:image:alt, twitter:card=summary_large_image, twitter:image i twitter:image:alt a index.html
+- [x] Documentar procés de registre a Google Search Console (instruccions al missatge de lliurament)
