@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
@@ -142,6 +143,16 @@ export default function CasosEspeciales() {
   const { t, language } = useT();
   const { isAuthenticated, user } = useAuth();
   const isAdmin = isAuthenticated && user?.role === "admin";
+
+  useSEO({
+    title: language === "ca"
+      ? "Casos Especials d'IT — Consultes IT"
+      : "Casos Especiales de IT — Consultas IT",
+    description: language === "ca"
+      ? "Casos especials d'Incapacitat Temporal: menstruació incapacitant, embaràs, donació d'òrgans, baixa retroactiva, pluriocupació i més."
+      : "Casos especiales de Incapacidad Temporal: menstruación incapacitante, embarazo, donación de órganos, baja retroactiva, pluriempleo y más.",
+    canonicalPath: "/casos-especials",
+  });
 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCase, setSelectedCase] = useState<SpecialCase | null>(null);

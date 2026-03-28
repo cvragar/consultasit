@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://www.consultesit.com/</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.consultesit.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.consultesit.com/"/>
+  </url>
+
+  <url>
+    <loc>https://www.consultesit.com/casos-especials</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.consultesit.com/casos-especials"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.consultesit.com/casos-especials"/>
+  </url>
+
+  <url>
+    <loc>https://www.consultesit.com/documents</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.consultesit.com/documents"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.consultesit.com/documents"/>
+  </url>
+
+  <url>
+    <loc>https://www.consultesit.com/calculadora</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.consultesit.com/calculadora"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.consultesit.com/calculadora"/>
+  </url>
+
+  <url>
+    <loc>https://www.consultesit.com/reclamacions</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.consultesit.com/reclamacions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.consultesit.com/reclamacions"/>
+  </url>
+
+</urlset>

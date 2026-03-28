@@ -1,6 +1,7 @@
 import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { useSEO } from "@/hooks/useSEO";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -382,6 +383,16 @@ const VIES = [
 
 export default function Reclamacions() {
   const { t, language } = useT();
+
+  useSEO({
+    title: language === "ca"
+      ? "Reclamacions i Recursos d'IT — Consultes IT"
+      : "Reclamaciones y Recursos de IT — Consultas IT",
+    description: language === "ca"
+      ? "Procediments per reclamar altes mèdiques, impugnar resolucions de l'INSS i la mútua, i recursos administratius en Incapacitat Temporal."
+      : "Procedimientos para reclamar altas médicas, impugnar resoluciones del INSS y la mutua, y recursos administrativos en Incapacidad Temporal.",
+    canonicalPath: "/reclamacions",
+  });
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}

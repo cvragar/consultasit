@@ -446,3 +446,14 @@
 - [x] Afegir H1 semàntic a la pàgina d'inici (heroTitle convertit de h2 a h1)
 - [x] Afegir H2 semàntics a les seccions (Contingències Professionals i Què inclou la plataforma?)
 - [x] Afegir meta description, keywords, robots, og:title, og:description, twitter:card al index.html
+
+## Sprint 7 - SEO avançat (sitemap, títols dinàmics, canonical)
+- [x] Crear sitemap.xml a client/public/ amb les rutes principals (/, /casos-especials, /documents, /calculadora, /reclamacions)
+- [x] Crear hook useSEO reutilitzable (document.title + canonical link + meta description)
+- [x] Integrar useSEO a Home.tsx (substituir useEffect manual)
+- [x] Integrar useSEO a CasosEspeciales.tsx
+- [x] Integrar useSEO a Documentos.tsx
+- [x] Integrar useSEO a Calculadora.tsx
+- [x] Integrar useSEO a Reclamacions.tsx
+- [x] Integrar useSEO a Novetats.tsx
+- [x] Integrar useSEO a Chat.tsx

@@ -22,6 +22,7 @@ import {
 import { Link } from "wouter";
 import { useState } from "react";
 import { useT } from "@/contexts/LanguageContext";
+import { useSEO } from "@/hooks/useSEO";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
@@ -87,6 +88,16 @@ const categoryColors: Record<string, string> = {
 
 export default function Novetats() {
   const { language } = useT();
+
+  useSEO({
+    title: language === "ca"
+      ? "Novetats i Actualitzacions d'IT — Consultes IT"
+      : "Novedades y Actualizaciones de IT — Consultas IT",
+    description: language === "ca"
+      ? "Darreres actualitzacions de la plataforma Consultes IT: nous casos especials, documents i normativa d'Incapacitat Temporal."
+      : "\u00daLtimas actualizaciones de la plataforma Consultas IT: nuevos casos especiales, documentos y normativa de Incapacidad Temporal.",
+    canonicalPath: "/novetats",
+  });
   const [days, setDays] = useState(30);
 
   const { data, isLoading } = trpc.novetats.getRecent.useQuery({ days });

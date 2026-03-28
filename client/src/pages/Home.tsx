@@ -5,7 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { MessageSquare, FileText, AlertCircle, Calculator, Shield, LogIn, Star, Menu, X, Stethoscope, HardHat, HeartPulse, ChevronRight, Sparkles, Gavel } from "lucide-react";
 import { Link } from "wouter";
 import { getLoginUrl } from "@/const";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
@@ -15,12 +16,16 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { t, language } = useT();
 
-  // SEO: actualitzar el document.title per idioma
-  useEffect(() => {
-    document.title = language === "ca"
+  // SEO: títol dinàmic i canonical per idioma
+  useSEO({
+    title: language === "ca"
       ? "Consultes IT — Normativa d'Incapacitat Temporal per a Metges"
-      : "Consultas IT — Normativa de Incapacidad Temporal para Médicos";
-  }, [language]);
+      : "Consultas IT — Normativa de Incapacidad Temporal para Médicos",
+    description: language === "ca"
+      ? "Plataforma especialitzada en normativa d'IT per a professionals sanitaris. Casos especials, calculadora, documentació i xat amb IA."
+      : "Plataforma especializada en normativa de IT para profesionales sanitarios. Casos especiales, calculadora, documentación y chat con IA.",
+    canonicalPath: "/",
+  });
 
   const features = [
     {

@@ -1,6 +1,7 @@
 import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { useSEO } from "@/hooks/useSEO";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -96,6 +97,16 @@ const QUICK_SUGGESTIONS_ES = [
 
 export default function Chat() {
   const { t, language } = useT();
+
+  useSEO({
+    title: language === "ca"
+      ? "Xat amb IA especialitzada en IT — Consultes IT"
+      : "Chat con IA especializada en IT — Consultas IT",
+    description: language === "ca"
+      ? "Consulta dubtes sobre Incapacitat Temporal amb una IA especialitzada en normativa espanyola i catalana. Respostes precises amb citació de fonts."
+      : "Consulta dudas sobre Incapacidad Temporal con una IA especializada en normativa española y catalana. Respuestas precisas con citación de fuentes.",
+    canonicalPath: "/chat",
+  });
   const { user, isAuthenticated } = useAuth();
   const [message, setMessage] = useState("");
   const [currentConversationId, setCurrentConversationId] = useState<number | null>(null);

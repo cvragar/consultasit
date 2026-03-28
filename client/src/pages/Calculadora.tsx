@@ -2,6 +2,7 @@ import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { useState, useMemo } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -50,6 +51,17 @@ function getFactorLabel(factor: number): { label: string; color: string } {
 
 export default function Calculadora() {
   const { t, language } = useT();
+
+  useSEO({
+    title: language === "ca"
+      ? "Calculadora d'IT — Durada i Temps Estàndard — Consultes IT"
+      : "Calculadora de IT — Duración y Tiempos Estándar — Consultas IT",
+    description: language === "ca"
+      ? "Calcula la durada estimada d'una Incapacitat Temporal segons el diagnòstic i l'ocupació. Basada en la Taula 15 del Manual de Temps Òptims de l'INSS."
+      : "Calcula la duración estimada de una Incapacidad Temporal según el diagnóstico y la ocupación. Basada en la Tabla 15 del Manual de Tiempos Óptimos del INSS.",
+    canonicalPath: "/calculadora",
+  });
+
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDiagnosis, setSelectedDiagnosis] = useState<any>(null);
   const [selectedGroupId, setSelectedGroupId] = useState<string>("");

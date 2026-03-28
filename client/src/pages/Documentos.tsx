@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
@@ -93,6 +94,16 @@ type Document = {
 export default function Documentos() {
   const { isAuthenticated } = useAuth();
   const { t, language } = useT();
+
+  useSEO({
+    title: language === "ca"
+      ? "Documentació i Normativa d'IT — Consultes IT"
+      : "Documentación y Normativa de IT — Consultas IT",
+    description: language === "ca"
+      ? "Normativa actualitzada d'Incapacitat Temporal: RD 625/2014, LGSS, guïes de l'ICS, temps estàndard de l'INSS i més."
+      : "Normativa actualizada de Incapacidad Temporal: RD 625/2014, LGSS, guías del ICS, tiempos estándar del INSS y más.",
+    canonicalPath: "/documents",
+  });
 
   const statusConfig: Record<string, { label: string; color: string; icon: React.ElementType; badgeClass: string }> = {
     vigent: {
