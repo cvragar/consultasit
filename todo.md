@@ -457,3 +457,10 @@
 - [x] Integrar useSEO a Reclamacions.tsx
 - [x] Integrar useSEO a Novetats.tsx
 - [x] Integrar useSEO a Chat.tsx
+
+## Sprint 8 - SEO: robots.txt i noindex pàgines privades
+- [x] Crear robots.txt a client/public/ amb Sitemap i Disallow per /admin, /favorits i /chat
+- [x] Actualitzar hook useSEO per suportar noindex (paràmetre opcional noindex?: boolean)
+- [x] Afegir noindex a Admin.tsx
+- [x] Afegir noindex a Favorits.tsx
+- [x] Afegir noindex a Chat.tsx

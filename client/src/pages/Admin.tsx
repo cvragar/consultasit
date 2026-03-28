@@ -1,5 +1,6 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import { useT } from "@/contexts/LanguageContext";
+import { useSEO } from "@/hooks/useSEO";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { Button } from "@/components/ui/button";
@@ -64,6 +65,12 @@ interface UploadedDoc {
 export default function Admin() {
   const { user, isAuthenticated } = useAuth();
   const { language } = useT();
+
+  useSEO({
+    title: language === "ca" ? "Administració — Consultes IT" : "Administración — Consultas IT",
+    canonicalPath: "/admin",
+    noindex: true,
+  });
 
   const TYPE_LABELS: Record<string, string> = {
     ley: language === "ca" ? "Llei" : "Ley",

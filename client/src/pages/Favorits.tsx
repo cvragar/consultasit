@@ -30,6 +30,7 @@ import { Streamdown } from "streamdown";
 import { getLoginUrl } from "@/const";
 import { toast } from "sonner";
 import { useT } from "@/contexts/LanguageContext";
+import { useSEO } from "@/hooks/useSEO";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
@@ -84,6 +85,12 @@ type SpecialCase = {
 
 export default function Favorits() {
   const { t, language } = useT();
+
+  useSEO({
+    title: language === "ca" ? "Favorits — Consultes IT" : "Favoritos — Consultas IT",
+    canonicalPath: "/favorits",
+    noindex: true,
+  });
   const { isAuthenticated } = useAuth();
   const [selectedDoc, setSelectedDoc] = useState<Document | null>(null);
   const [selectedCase, setSelectedCase] = useState<SpecialCase | null>(null);

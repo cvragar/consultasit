@@ -106,6 +106,7 @@ export default function Chat() {
       ? "Consulta dubtes sobre Incapacitat Temporal amb una IA especialitzada en normativa espanyola i catalana. Respostes precises amb citació de fonts."
       : "Consulta dudas sobre Incapacidad Temporal con una IA especializada en normativa española y catalana. Respuestas precisas con citación de fuentes.",
     canonicalPath: "/chat",
+    noindex: true,
   });
   const { user, isAuthenticated } = useAuth();
   const [message, setMessage] = useState("");

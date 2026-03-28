@@ -7,6 +7,8 @@ interface SEOOptions {
   description?: string;
   /** URL canònica de la pàgina (sense paràmetres de consulta) */
   canonicalPath: string;
+  /** Si true, afegeix <meta name="robots" content="noindex, nofollow"> */
+  noindex?: boolean;
 }
 
 const BASE_URL = "https://www.consultesit.com";
@@ -17,7 +19,7 @@ const BASE_URL = "https://www.consultesit.com";
  * - Afegeix/actualitza <link rel="canonical"> per evitar contingut duplicat
  * - Afegeix/actualitza <meta name="description"> si es proporciona
  */
-export function useSEO({ title, description, canonicalPath }: SEOOptions) {
+export function useSEO({ title, description, canonicalPath, noindex }: SEOOptions) {
   useEffect(() => {
     // 1. Actualitzar el títol de la pàgina
     document.title = title;
@@ -43,9 +45,25 @@ export function useSEO({ title, description, canonicalPath }: SEOOptions) {
       metaDesc.setAttribute("content", description);
     }
 
+    // 4. Gestionar meta robots (noindex)
+    let metaRobots = document.querySelector<HTMLMetaElement>("meta[name='robots']");
+    if (noindex) {
+      if (!metaRobots) {
+        metaRobots = document.createElement("meta");
+        metaRobots.setAttribute("name", "robots");
+        document.head.appendChild(metaRobots);
+      }
+      metaRobots.setAttribute("content", "noindex, nofollow");
+    } else {
+      // Si la pàgina és indexable, eliminar el noindex si existia d'una pàgina anterior
+      if (metaRobots && metaRobots.getAttribute("content") === "noindex, nofollow") {
+        metaRobots.setAttribute("content", "index, follow");
+      }
+    }
+
     // Neteja: restaurar el títol per defecte en desmontar (opcional)
     return () => {
       // No restaurem per evitar flash de títol incorrecte en navegació
     };
-  }, [title, description, canonicalPath]);
+  }, [title, description, canonicalPath, noindex]);
 }

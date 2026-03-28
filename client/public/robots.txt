@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /favorits
+Disallow: /chat
+
+# Sitemap
+Sitemap: https://www.consultesit.com/sitemap.xml
