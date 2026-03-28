@@ -499,3 +499,7 @@
 - [x] Actualitzar ThemeSwitcher: desplegable amb 3 opcions (Clar/Fosc/Guàrdia) + indicador actiu + nota mode Guàrdia
 - [x] Persistir la preferència "auto" a localStorage i BD (via setThemeMutation)
 - [x] Interval de comprovació cada 60s per canviar el tema automàticament en mode "auto"
+
+## Sprint 14b - Ajust horari mode Guàrdia
+- [x] Canviar horari de 21:00–08:00 a 20:00–08:00 al ThemeContext i ThemeSwitcher
+- [x] Millorar text del desplegable: desc "Fosc de 20:00 a 08:00 h" + nota expandida amb dues línies

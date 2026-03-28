@@ -24,10 +24,10 @@ const ThemeContext = createContext<ThemeContextType>({
   setTheme: () => {},
 });
 
-/** Retorna true si l'hora local actual és entre les 21:00 i les 08:00 */
+/** Retorna true si l'hora local actual és entre les 20:00 i les 08:00 */
 function isNightShiftHour(): boolean {
   const h = new Date().getHours();
-  return h >= 21 || h < 8;
+  return h >= 20 || h < 8;
 }
 
 /** Resol el tema efectiu a partir del mode */

@@ -43,7 +43,7 @@ export function ThemeSwitcher({ className }: ThemeSwitcherProps) {
       value: "auto",
       icon: <Stethoscope className="h-3.5 w-3.5 shrink-0 text-emerald-500" />,
       label: ca ? "Guàrdia" : "Guardia",
-      desc: ca ? "Fosc 21:00–08:00 · Clar la resta" : "Oscuro 21:00–08:00 · Claro el resto",
+      desc: ca ? "Fosc de 20:00 a 08:00 h" : "Oscuro de 20:00 a 08:00 h",
     },
   ];
 
@@ -115,11 +115,14 @@ export function ThemeSwitcher({ className }: ThemeSwitcherProps) {
 
           {/* Nota sobre el mode Guàrdia */}
           {mode === "auto" && (
-            <div className="px-3 py-2 border-t border-border bg-emerald-50 dark:bg-emerald-950/30">
-              <p className="text-[11px] text-emerald-700 dark:text-emerald-400 leading-snug">
+            <div className="px-3 py-2.5 border-t border-border bg-emerald-50 dark:bg-emerald-950/30">
+              <p className="text-[11px] font-semibold text-emerald-700 dark:text-emerald-400 mb-1">
+                {ca ? "✅ Mode Guàrdia actiu" : "✅ Modo Guardia activo"}
+              </p>
+              <p className="text-[11px] text-emerald-600 dark:text-emerald-500 leading-relaxed">
                 {ca
-                  ? "Mode Guàrdia actiu · Es comprova l'hora cada minut"
-                  : "Modo Guardia activo · Se comprueba la hora cada minuto"}
+                  ? "Fosc automàtic de les 20:00 a les 08:00 h. La resta del dia, mode clar."
+                  : "Oscuro automático de 20:00 a 08:00 h. El resto del día, modo claro."}
               </p>
             </div>
           )}
