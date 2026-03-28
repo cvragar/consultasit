@@ -440,3 +440,9 @@
 - [x] Afegir transition-colors duration-300 al body per canvi de tema suau (+ 200ms a tots els elements)
 - [x] Corregir badges de categories de CasosEspeciales en mode fosc (11 categories: pink, purple, blue, green, orange, yellow, red, indigo, teal, amber, gray)
 - [x] Corregir panells de contingut del cas seleccionat (base legal, procediment, exemples) amb dark:bg-*-950/30
+
+## Sprint 6 - SEO pàgina d'inici
+- [x] Corregir document.title (ara 52 caràcters, dinàmic per idioma via useEffect)
+- [x] Afegir H1 semàntic a la pàgina d'inici (heroTitle convertit de h2 a h1)
+- [x] Afegir H2 semàntics a les seccions (Contingències Professionals i Què inclou la plataforma?)
+- [x] Afegir meta description, keywords, robots, og:title, og:description, twitter:card al index.html

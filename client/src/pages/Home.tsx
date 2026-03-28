@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { MessageSquare, FileText, AlertCircle, Calculator, Shield, LogIn, Star, Menu, X, Stethoscope, HardHat, HeartPulse, ChevronRight, Sparkles, Gavel } from "lucide-react";
 import { Link } from "wouter";
 import { getLoginUrl } from "@/const";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
@@ -14,6 +14,13 @@ export default function Home() {
   const { user, isAuthenticated } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { t, language } = useT();
+
+  // SEO: actualitzar el document.title per idioma
+  useEffect(() => {
+    document.title = language === "ca"
+      ? "Consultes IT — Normativa d'Incapacitat Temporal per a Metges"
+      : "Consultas IT — Normativa de Incapacidad Temporal para Médicos";
+  }, [language]);
 
   const features = [
     {
@@ -213,9 +220,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="container py-10 sm:py-16">
         <div className="max-w-3xl mx-auto text-center px-2">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4 leading-tight">
             {t.home.heroTitle}
-          </h2>
+          </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8">
             {t.home.heroSubtitle}
           </p>
@@ -272,7 +279,7 @@ export default function Home() {
               <HardHat className="h-5 w-5 text-red-600" />
             </div>
             <div>
-              <h3 className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-gray-100">{t.home.contingencies.title}</h3>
+              <h2 className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-gray-100">{t.home.contingencies.title}</h2>
               <p className="text-sm text-gray-500 dark:text-gray-400">{t.home.contingencies.subtitle}</p>
             </div>
           </div>
@@ -415,9 +422,9 @@ export default function Home() {
       {/* Info Section */}
       <section className="container py-8 sm:py-12">
         <div className="max-w-4xl mx-auto bg-blue-50 dark:bg-blue-950/20 rounded-xl p-5 sm:p-8">
-          <h3 className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+          <h2 className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             {language === "ca" ? "Què inclou la plataforma?" : "¿Qué incluye la plataforma?"}
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {(language === "ca" ? [
               {
