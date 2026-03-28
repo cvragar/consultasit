@@ -5,6 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import { InstallBanner } from "./components/InstallBanner";
 import Home from "./pages/Home";
 import Chat from "./pages/Chat";
 import CasosEspeciales from "./pages/CasosEspeciales";
@@ -44,6 +45,7 @@ function App() {
           <TooltipProvider>
             <Toaster />
             <Router />
+            <InstallBanner />
           </TooltipProvider>
         </ThemeProvider>
       </LanguageProvider>

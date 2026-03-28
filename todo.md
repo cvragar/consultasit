@@ -488,3 +488,8 @@
 - [x] Crear Service Worker (sw.js) amb cache offline per a rutes principals (cache-first assets, network-first API, fallback offline HTML)
 - [x] Registrar el Service Worker a main.tsx (window load event)
 - [x] manifest.webmanifest ja té theme_color #3b82f6 (el meta theme-color el sobreescriu dinàmicament)
+
+## Sprint 13 - PWA instal·lació mòbil i iOS
+- [x] Afegir metes iOS (apple-mobile-web-app-capable, status-bar-style, apple-mobile-web-app-title, mobile-web-app-capable) a index.html
+- [x] Crear component InstallBanner (beforeinstallprompt Android + instruccions manuals iOS, descartable via localStorage)
+- [x] Integrar InstallBanner a App.tsx (dins TooltipProvider, visible a totes les pàgines)
