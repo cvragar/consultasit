@@ -52,6 +52,20 @@ const trpcClient = trpc.createClient({
   ],
 });
 
+// Registre del Service Worker per a la PWA (cache offline)
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/sw.js", { scope: "/" })
+      .then((reg) => {
+        console.log("[SW] Registrat correctament:", reg.scope);
+      })
+      .catch((err) => {
+        console.warn("[SW] Error en el registre:", err);
+      });
+  });
+}
+
 createRoot(document.getElementById("root")!).render(
   <trpc.Provider client={trpcClient} queryClient={queryClient}>
     <QueryClientProvider client={queryClient}>

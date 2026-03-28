@@ -22,7 +22,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     return stored === "light" || stored === "dark" ? stored : "light";
   });
 
-  // Apliquem la classe .dark al <html> quan canvia el tema
+  // Apliquem la classe .dark al <html> i actualitzem meta theme-color quan canvia el tema
   useEffect(() => {
     const root = document.documentElement;
     if (theme === "dark") {
@@ -30,6 +30,15 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     } else {
       root.classList.remove("dark");
     }
+    // Actualitzem meta theme-color per a la barra d'adreces del navegador mòbil
+    const themeColor = theme === "dark" ? "#0f172a" : "#3b82f6";
+    let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (!metaThemeColor) {
+      metaThemeColor = document.createElement("meta");
+      metaThemeColor.setAttribute("name", "theme-color");
+      document.head.appendChild(metaThemeColor);
+    }
+    metaThemeColor.setAttribute("content", themeColor);
   }, [theme]);
 
   // Llegim la preferència del servidor (si l'usuari està autenticat)

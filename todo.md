@@ -482,3 +482,9 @@
 - [x] Crear manifest.webmanifest a client/public/ per PWA (name, icons 16/32/180/512, 3 shortcuts: Chat, Casos, Calculadora)
 - [x] Afegir link rel=manifest a index.html
 - [x] Investigar errors previsualització (errors antics de 26/03, codi actual correcte)
+
+## Sprint 12 - theme-color dinàmic i Service Worker PWA
+- [x] Afegir meta theme-color dinàmic al ThemeContext (#3b82f6 clar / #0f172a fosc)
+- [x] Crear Service Worker (sw.js) amb cache offline per a rutes principals (cache-first assets, network-first API, fallback offline HTML)
+- [x] Registrar el Service Worker a main.tsx (window load event)
+- [x] manifest.webmanifest ja té theme_color #3b82f6 (el meta theme-color el sobreescriu dinàmicament)
