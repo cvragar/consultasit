@@ -470,3 +470,9 @@
 - [x] Pujar imatge al CDN (CloudFront) i obtenir URL pública permanent
 - [x] Afegir og:image, og:url, og:image:width/height, og:image:alt, twitter:card=summary_large_image, twitter:image i twitter:image:alt a index.html
 - [x] Documentar procés de registre a Google Search Console (instruccions al missatge de lliurament)
+
+## Sprint 10 - Favicon personalitzat
+- [x] Generar imatge de l'escut blau per al favicon (512x512px, fons transparent)
+- [x] Convertir a favicon.ico (multi-res: 16x16, 32x32, 48x48), favicon-16x16.png, favicon-32x32.png
+- [x] Generar apple-touch-icon.png (180x180px, fons blanc per iOS)
+- [x] Actualitzar index.html amb link rel=icon (ico, png 32x32, png 16x16) i apple-touch-icon
