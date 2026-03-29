@@ -78,12 +78,12 @@ describe("Sitemap Router", () => {
       const xmlContent = mockRes.send.mock.calls[0][0];
       expect(xmlContent).toContain('<?xml version="1.0" encoding="UTF-8"?>');
       expect(xmlContent).toContain("<urlset");
-      expect(xmlContent).toContain("https://www.consultesit.com/");
-      expect(xmlContent).toContain("https://www.consultesit.com/casos-especials");
-      expect(xmlContent).toContain("https://www.consultesit.com/documents");
-      expect(xmlContent).toContain("https://www.consultesit.com/calculadora");
-      expect(xmlContent).toContain("https://www.consultesit.com/reclamacions");
-      expect(xmlContent).toContain("https://www.consultesit.com/novetats");
+      expect(xmlContent).toContain("https://consultesit.com/");
+      expect(xmlContent).toContain("https://consultesit.com/casos-especials");
+      expect(xmlContent).toContain("https://consultesit.com/documents");
+      expect(xmlContent).toContain("https://consultesit.com/calculadora");
+      expect(xmlContent).toContain("https://consultesit.com/reclamacions");
+      expect(xmlContent).toContain("https://consultesit.com/novetats");
       expect(xmlContent).toContain('hreflang="ca"');
       expect(xmlContent).toContain('hreflang="es"');
       expect(xmlContent).toContain("<lastmod>");

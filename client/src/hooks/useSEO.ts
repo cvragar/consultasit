@@ -13,7 +13,7 @@ interface SEOOptions {
   keywords?: string;
 }
 
-const BASE_URL = "https://www.consultesit.com";
+const BASE_URL = "https://consultesit.com";
 
 /**
  * Helper per crear o actualitzar un meta tag

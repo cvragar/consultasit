@@ -22,8 +22,8 @@ export default function Home() {
       ? "Consultes IT — Normativa d'Incapacitat Temporal per a Metges"
       : "Consultas IT — Normativa de Incapacidad Temporal para Médicos",
     description: language === "ca"
-      ? "Plataforma especialitzada en normativa d'Incapacitat Temporal (IT) per a professionals sanitaris. Casos especials, calculadora de durada, documentació oficial i xat amb IA especialitzada."
-      : "Plataforma especializada en normativa de Incapacidad Temporal (IT) para profesionales sanitarios. Casos especiales, calculadora de duración, documentación oficial y chat con IA especializada.",
+      ? "Plataforma de normativa d'Incapacitat Temporal per a metges. Casos especials, calculadora de durada, documentació oficial i xat amb IA."
+      : "Plataforma de normativa de Incapacidad Temporal para médicos. Casos especiales, calculadora de duración, documentación oficial y chat con IA.",
     canonicalPath: "/",
     keywords: language === "ca"
       ? "incapacitat temporal, IT, baixa mèdica, metge de família, INSS, mútua, contingència comuna, accident de treball, malaltia professional, normativa IT, RD 625/2014, LGSS, eCap, Catalunya, calculadora IT, casos especials"

@@ -539,3 +539,11 @@
 - [x] Sitemap dinàmic creat (server/sitemap.ts): 6 rutes públiques amb lastmod real de la BD
 - [x] robots.txt ja existia amb referència al sitemap; sitemap estàtic eliminat (ara és dinàmic)
 - [x] 6 tests nous per al sitemap (401 tests totals, 27 fitxers, 0 errors)
+
+## Sprint 20 - Correccions SEO (29/03/2026)
+- [x] Corregir inconsistència dominis: sitemap, JSON-LD, og:url, robots.txt, hreflang, useSEO → consultesit.com (sense www)
+- [x] Escurçar meta description a ~137 caràcters (CA) i ~140 caràcters (ES)
+- [x] Code splitting implementat: 8 pàgines amb React.lazy + Suspense (Home eager, resta lazy)
+- [x] Headers de seguretat afegits: X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy
+- [x] Comprimir imatge OG: 874KB → 72KB (redimensionada a 1200x630 JPEG q85, pujada a CDN)
+- [x] 401 tests passen, 27 fitxers, 0 errors TypeScript

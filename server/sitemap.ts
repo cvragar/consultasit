@@ -3,7 +3,7 @@ import { getDb } from "./db";
 import { specialCases, documents } from "../drizzle/schema";
 import { sql } from "drizzle-orm";
 
-const BASE_URL = "https://www.consultesit.com";
+const BASE_URL = "https://consultesit.com";
 
 interface SitemapUrl {
   loc: string;

@@ -5,4 +5,4 @@ Disallow: /favorits
 Disallow: /chat
 
 # Sitemap
-Sitemap: https://www.consultesit.com/sitemap.xml
+Sitemap: https://consultesit.com/sitemap.xml
