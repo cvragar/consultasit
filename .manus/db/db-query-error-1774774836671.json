@@ -1,0 +1,8 @@
+{
+  "query": "SELECT \n  'special_cases' as tbl,\n  COUNT(*) as total,\n  SUM(CASE WHEN title_es IS NULL THEN 1 ELSE 0 END) as null_count,\n  SUM(CASE WHEN title_es = '' THEN 1 ELSE 0 END) as empty_count,\n  SUM(CASE WHEN title_es IS NOT NULL AND title_es != '' THEN 1 ELSE 0 END) as has_value\nFROM special_cases\nUNION ALL\nSELECT \n  'documents' as tbl,\n  COUNT(*) as total,\n  SUM(CASE WHEN title_es IS NULL THEN 1 ELSE 0 END) as null_count,\n  SUM(CASE WHEN title_es = '' THEN 1 ELSE 0 END) as empty_count,\n  SUM(CASE WHEN title_es IS NOT NULL AND title_es != '' THEN 1 ELSE 0 END) as has_value\nFROM documents;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT \n  'special_cases' as tbl,\n  COUNT(*) as total,\n  SUM(CASE WHEN title_es IS NULL THEN 1 ELSE 0 END) as null_count,\n  SUM(CASE WHEN title_es = '' THEN 1 ELSE 0 END) as empty_count,\n  SUM(CASE WHEN title_es IS NOT NULL AND title_es != '' THEN 1 ELSE 0 END) as has_value\nFROM special_cases\nUNION ALL\nSELECT \n  'documents' as tbl,\n  COUNT(*) as total,\n  SUM(CASE WHEN title_es IS NULL THEN 1 ELSE 0 END) as null_count,\n  SUM(CASE WHEN title_es = '' THEN 1 ELSE 0 END) as empty_count,\n  SUM(CASE WHEN title_es IS NOT NULL AND title_es != '' THEN 1 ELSE 0 END) as has_value\nFROM documents;",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1054 (42S22) at line 1: Unknown column 'title_es' in ''"
+  ]
+}

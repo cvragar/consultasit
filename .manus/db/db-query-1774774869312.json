@@ -1,0 +1,35 @@
+{
+  "query": "SELECT id, LEFT(title, 50) as title_ca, LEFT(titleEs, 50) as title_es FROM special_cases LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, LEFT(title, 50) as title_ca, LEFT(titleEs, 50) as title_es FROM special_cases LIMIT 5;",
+  "rows": [
+    {
+      "id": "1",
+      "title_ca": "Menstruació incapacitant",
+      "title_es": "Menstruación incapacitante"
+    },
+    {
+      "id": "2",
+      "title_ca": "Interrupció voluntària de l'embaràs (IVE)",
+      "title_es": "Interrupción voluntaria del embarazo (IVE)"
+    },
+    {
+      "id": "3",
+      "title_ca": "Gestació a partir de la setmana 39",
+      "title_es": "Gestación a partir de la semana 39"
+    },
+    {
+      "id": "4",
+      "title_ca": "Donació d'òrgans",
+      "title_es": "Donación de órganos"
+    },
+    {
+      "id": "5",
+      "title_ca": "Baixes retroactives",
+      "title_es": "Bajas retroactivas"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle_ca\ttitle_es\n1\tMenstruació incapacitant\tMenstruación incapacitante\n2\tInterrupció voluntària de l'embaràs (IVE)\tInterrupción voluntaria del embarazo (IVE)\n3\tGestació a partir de la setmana 39\tGestación a partir de la semana 39\n4\tDonació d'òrgans\tDonación de órganos\n5\tBaixes retroactives\tBajas retroactivas\n",
+  "stderr": "",
+  "execution_time_ms": 63
+}

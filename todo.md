@@ -515,3 +515,10 @@
 - [x] Tests vitest per a la validació de magic bytes i els assumptes d'email (15/15 passen)
 - [x] Configurar GMAIL_APP_PASSWORD a les variables d'entorn del projecte
 - [x] 395 tests en total, tots passen, 0 errors TypeScript
+
+## Sprint 16 - Markdown, pre-traducció i Calculadora dark mode (29/03/2026)
+- [x] Renderitzar Markdown als diàlegs de Casos Especials (ja funciona amb Streamdown, verificat)
+- [x] Corregir la pre-traducció ES al panel Admin (filtre millorat: comprova tots els camps ES, no només titleEs)
+- [x] Corregir colors de la Calculadora d'IT en mode fosc (gradient fosc, títols blau clar, resultats amb dark variants)
+- [x] Corregir error de sintaxi a email.ts (template literal niat amb apòstrof)
+- [x] 395 tests passen, 0 errors TypeScript

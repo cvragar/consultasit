@@ -1,0 +1,24 @@
+{
+  "query": "SELECT \n  'special_cases' as tbl,\n  COUNT(*) as total,\n  SUM(CASE WHEN titleEs IS NULL THEN 1 ELSE 0 END) as null_count,\n  SUM(CASE WHEN titleEs = '' THEN 1 ELSE 0 END) as empty_count,\n  SUM(CASE WHEN titleEs IS NOT NULL AND titleEs != '' THEN 1 ELSE 0 END) as has_value\nFROM special_cases\nUNION ALL\nSELECT \n  'documents' as tbl,\n  COUNT(*) as total,\n  SUM(CASE WHEN titleEs IS NULL THEN 1 ELSE 0 END) as null_count,\n  SUM(CASE WHEN titleEs = '' THEN 1 ELSE 0 END) as empty_count,\n  SUM(CASE WHEN titleEs IS NOT NULL AND titleEs != '' THEN 1 ELSE 0 END) as has_value\nFROM documents;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT \n  'special_cases' as tbl,\n  COUNT(*) as total,\n  SUM(CASE WHEN titleEs IS NULL THEN 1 ELSE 0 END) as null_count,\n  SUM(CASE WHEN titleEs = '' THEN 1 ELSE 0 END) as empty_count,\n  SUM(CASE WHEN titleEs IS NOT NULL AND titleEs != '' THEN 1 ELSE 0 END) as has_value\nFROM special_cases\nUNION ALL\nSELECT \n  'documents' as tbl,\n  COUNT(*) as total,\n  SUM(CASE WHEN titleEs IS NULL THEN 1 ELSE 0 END) as null_count,\n  SUM(CASE WHEN titleEs = '' THEN 1 ELSE 0 END) as empty_count,\n  SUM(CASE WHEN titleEs IS NOT NULL AND titleEs != '' THEN 1 ELSE 0 END) as has_value\nFROM documents;",
+  "rows": [
+    {
+      "tbl": "special_cases",
+      "total": "25",
+      "null_count": "0",
+      "empty_count": "0",
+      "has_value": "25"
+    },
+    {
+      "tbl": "documents",
+      "total": "12",
+      "null_count": "0",
+      "empty_count": "0",
+      "has_value": "12"
+    }
+  ],
+  "messages": [],
+  "stdout": "tbl\ttotal\tnull_count\tempty_count\thas_value\nspecial_cases\t25\t0\t0\t25\ndocuments\t12\t0\t0\t12\n",
+  "stderr": "",
+  "execution_time_ms": 58
+}

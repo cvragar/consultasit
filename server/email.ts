@@ -60,7 +60,7 @@ export async function sendFeedbackEmail(opts: FeedbackEmailOptions): Promise<voi
 <p><strong>${lang === "ca" ? "De" : "De"}:</strong> ${senderInfo}</p>
 <p><strong>${lang === "ca" ? "Descripcio" : "Descripcion"}:</strong></p>
 <div style="background:#f1f5f9;border-radius:8px;padding:12px;white-space:pre-wrap">${description.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
-${images && images.length > 0 ? `<p style="color:#64748b;font-size:13px;margin-top:16px">${lang === "ca" ? `S adjunten ${images.length} captura(es).` : `Se adjuntan ${images.length} captura(s).`}</p>` : ""}
+${images && images.length > 0 ? "<p style=\"color:#64748b;font-size:13px;margin-top:16px\">" + (lang === "ca" ? "S'adjunten " + images.length + " captura(es)." : "Se adjuntan " + images.length + " captura(s).") + "</p>" : ""}
 </div>
 <div style="background:#f8fafc;border-top:1px solid #e2e8f0;padding:16px;font-size:12px;color:#94a3b8">
 consultesit.com

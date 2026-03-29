@@ -589,9 +589,17 @@ IMPORTANT:
       const cases = await getAllSpecialCases();
       const docs = await getAllDocuments();
 
-      // Translate cases without cache
-      const casesToTranslate = cases.filter(c => !c.titleEs);
-      const docsToTranslate = docs.filter(d => !d.titleEs);
+      // Translate cases that have any missing ES field (titleEs, descriptionEs, legalBasisEs, procedureEs, examplesEs)
+      const casesToTranslate = cases.filter(c => 
+        !c.titleEs || !c.descriptionEs || 
+        (c.legalBasis && !c.legalBasisEs) || 
+        (c.procedure && !c.procedureEs) || 
+        (c.examples && !c.examplesEs)
+      );
+      const docsToTranslate = docs.filter(d => 
+        !d.titleEs || !d.contentEs || 
+        (d.summary && !d.summaryEs)
+      );
 
       let casesDone = 0;
       let docsDone = 0;
@@ -599,46 +607,57 @@ IMPORTANT:
 
        for (const c of casesToTranslate) {
         try {
-          // Translate title first to verify the LLM is working
-          const titleTranslated = await translateCaToEs(c.title);
-          if (!titleTranslated || titleTranslated === c.title) {
-            errors.push(`Case #${c.id}: translation returned same text, skipping`);
-            continue;
+          // Only translate fields that are missing (null/empty)
+          const updates: Record<string, string | undefined> = {};
+          if (!c.titleEs) {
+            const titleTranslated = await translateCaToEs(c.title);
+            if (!titleTranslated || titleTranslated === c.title) {
+              errors.push(`Case #${c.id}: title translation returned same text, skipping`);
+              continue;
+            }
+            updates.titleEs = titleTranslated;
           }
-          const descTranslated = await translateCaToEs(c.description);
-          const legalTranslated = c.legalBasis ? await translateCaToEs(c.legalBasis) : undefined;
-          const procTranslated = c.procedure ? await translateCaToEs(c.procedure) : undefined;
-          const exTranslated = c.examples ? await translateCaToEs(c.examples) : undefined;
-          await saveSpecialCaseTranslation(c.id, {
-            titleEs: titleTranslated,
-            descriptionEs: descTranslated !== c.description ? descTranslated : undefined,
-            legalBasisEs: legalTranslated !== c.legalBasis ? legalTranslated : undefined,
-            procedureEs: procTranslated !== c.procedure ? procTranslated : undefined,
-            examplesEs: exTranslated !== c.examples ? exTranslated : undefined,
-          });
-          casesDone++;
+          if (!c.descriptionEs) {
+            updates.descriptionEs = await translateCaToEs(c.description);
+          }
+          if (c.legalBasis && !c.legalBasisEs) {
+            updates.legalBasisEs = await translateCaToEs(c.legalBasis);
+          }
+          if (c.procedure && !c.procedureEs) {
+            updates.procedureEs = await translateCaToEs(c.procedure);
+          }
+          if (c.examples && !c.examplesEs) {
+            updates.examplesEs = await translateCaToEs(c.examples);
+          }
+          if (Object.keys(updates).length > 0) {
+            await saveSpecialCaseTranslation(c.id, updates as any);
+            casesDone++;
+          }
         } catch (err) {
           errors.push(`Case #${c.id}: ${(err as Error).message}`);
         }
       }
       for (const d of docsToTranslate) {
         try {
-          const titleTranslated = await translateCaToEs(d.title);
-          if (!titleTranslated || titleTranslated === d.title) {
-            errors.push(`Doc #${d.id}: translation returned same text, skipping`);
-            continue;
+          const updates: Record<string, string | undefined> = {};
+          if (!d.titleEs) {
+            const titleTranslated = await translateCaToEs(d.title);
+            if (!titleTranslated || titleTranslated === d.title) {
+              errors.push(`Doc #${d.id}: title translation returned same text, skipping`);
+              continue;
+            }
+            updates.titleEs = titleTranslated;
           }
-          const summaryTranslated = d.summary ? await translateCaToEs(d.summary) : undefined;
-          // Only translate content if not too long
-          const contentTranslated = (d.content && d.content.length <= 6000)
-            ? await translateCaToEs(d.content)
-            : undefined;
-          await saveDocumentTranslation(d.id, {
-            titleEs: titleTranslated,
-            summaryEs: summaryTranslated !== d.summary ? summaryTranslated : undefined,
-            contentEs: contentTranslated !== d.content ? contentTranslated : undefined,
-          });
-          docsDone++;
+          if (d.summary && !d.summaryEs) {
+            updates.summaryEs = await translateCaToEs(d.summary);
+          }
+          if (d.content && !d.contentEs && d.content.length <= 6000) {
+            updates.contentEs = await translateCaToEs(d.content);
+          }
+          if (Object.keys(updates).length > 0) {
+            await saveDocumentTranslation(d.id, updates as any);
+            docsDone++;
+          }
         } catch (err) {
           errors.push(`Doc #${d.id}: ${(err as Error).message}`);
         }

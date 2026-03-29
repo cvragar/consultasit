@@ -1,0 +1,14 @@
+{
+  "query": "SELECT \n  SUM(CASE WHEN summaryEs IS NULL OR summaryEs = '' THEN 1 ELSE 0 END) as docs_no_summary_es,\n  SUM(CASE WHEN contentEs IS NULL OR contentEs = '' THEN 1 ELSE 0 END) as docs_no_content_es\nFROM documents;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT \n  SUM(CASE WHEN summaryEs IS NULL OR summaryEs = '' THEN 1 ELSE 0 END) as docs_no_summary_es,\n  SUM(CASE WHEN contentEs IS NULL OR contentEs = '' THEN 1 ELSE 0 END) as docs_no_content_es\nFROM documents;",
+  "rows": [
+    {
+      "docs_no_summary_es": "5",
+      "docs_no_content_es": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "docs_no_summary_es\tdocs_no_content_es\n5\t0\n",
+  "stderr": "",
+  "execution_time_ms": 59
+}

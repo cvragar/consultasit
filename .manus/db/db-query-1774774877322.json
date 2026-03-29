@@ -1,0 +1,16 @@
+{
+  "query": "SELECT \n  SUM(CASE WHEN descriptionEs IS NULL OR descriptionEs = '' THEN 1 ELSE 0 END) as cases_no_desc_es,\n  SUM(CASE WHEN legalBasisEs IS NULL OR legalBasisEs = '' THEN 1 ELSE 0 END) as cases_no_legal_es,\n  SUM(CASE WHEN procedureEs IS NULL OR procedureEs = '' THEN 1 ELSE 0 END) as cases_no_proc_es,\n  SUM(CASE WHEN examplesEs IS NULL OR examplesEs = '' THEN 1 ELSE 0 END) as cases_no_ex_es\nFROM special_cases;\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT \n  SUM(CASE WHEN descriptionEs IS NULL OR descriptionEs = '' THEN 1 ELSE 0 END) as cases_no_desc_es,\n  SUM(CASE WHEN legalBasisEs IS NULL OR legalBasisEs = '' THEN 1 ELSE 0 END) as cases_no_legal_es,\n  SUM(CASE WHEN procedureEs IS NULL OR procedureEs = '' THEN 1 ELSE 0 END) as cases_no_proc_es,\n  SUM(CASE WHEN examplesEs IS NULL OR examplesEs = '' THEN 1 ELSE 0 END) as cases_no_ex_es\nFROM special_cases;\n",
+  "rows": [
+    {
+      "cases_no_desc_es": "0",
+      "cases_no_legal_es": "0",
+      "cases_no_proc_es": "0",
+      "cases_no_ex_es": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "cases_no_desc_es\tcases_no_legal_es\tcases_no_proc_es\tcases_no_ex_es\n0\t0\t0\t0\n",
+  "stderr": "",
+  "execution_time_ms": 63
+}
