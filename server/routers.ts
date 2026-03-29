@@ -37,6 +37,7 @@ import {
 } from "./db";
 import { translateFieldsToEs, translateCaToEs } from "./translation";
 import { invokeLLM } from "./_core/llm";
+import { semanticSearchDiagnosis } from "./semanticSearch";
 
 // ===== TRANSLATION HELPERS =====
 
@@ -310,6 +311,11 @@ export const appRouter = router({
       .input(z.object({ query: z.string() }))
       .query(async ({ input }) => {
         return await searchItDurations(input.query);
+      }),
+    semanticSearch: publicProcedure
+      .input(z.object({ query: z.string() }))
+      .query(async ({ input }) => {
+        return await semanticSearchDiagnosis(input.query);
       }),
     getById: publicProcedure
       .input(z.object({ id: z.number() }))

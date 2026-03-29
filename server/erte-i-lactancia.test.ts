@@ -78,7 +78,7 @@ describe("Cas especial 90003: IT durant un ERTE/ERTO", () => {
     const procedure = rows[0].procedure || "";
     expect(
       procedure.toLowerCase().includes("metge") ||
-      procedure.toLowerCase().includes("part de baixa") ||
+      procedure.toLowerCase().includes("comunicat de baixa") ||
       procedure.toLowerCase().includes("ecap")
     ).toBe(true);
   });
@@ -181,7 +181,7 @@ describe("Cas especial 90004: Prestació per risc durant la lactància natural",
     expect(allContent.includes("9 mesos") || allContent.includes("9 meses")).toBe(true);
   });
 
-  it("ha de tenir procediment amb el rol del metge de família (informe, no part de baixa)", async () => {
+  it("ha de tenir procediment amb el rol del metge de família (informe, no comunicat de baixa)", async () => {
     const [rows] = await conn.execute<mysql.RowDataPacket[]>(
       "SELECT `procedure` FROM special_cases WHERE id = 90004"
     );

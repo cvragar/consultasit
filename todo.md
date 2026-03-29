@@ -557,3 +557,13 @@
 - [x] Afegir estadístiques d'ús al panel Admin: totals, gràfics 30d (missatges, converses, nous usuaris), top 10 usuaris, converses recents
 - [x] Registrar rutes noves a App.tsx: /guia-it, /faq (lazy loaded)
 - [x] Escriure tests per a les noves funcionalitats (getAdminStats): 3 tests nous, 404 tests totals, 28 fitxers, 0 errors
+## Sprint 22 - Navegació, dades IT, embeddings, alertes, terminologia, bibliografia, usabilitat
+
+- [x] Afegir enllaços Guia IT i FAQ a la navegació principal (desktop + mòbil) amb icones Route i CircleHelp
+- [x] Substituir tots els "part de baixa/alta" per "comunicat de baixa/alta" (Reclamacions.tsx, BD special_cases + documents, 5 fitxers de tests)
+- [x] Carregar temps estàndard IT a la BD: 166 diagnòstics en 19 categories (executat seed-it-durations.mjs)
+- [x] Crear cerca semàntica de diagnòstics: diccionari 150+ sinònims (CA/ES) + fallback LLM + indicador visual del mètode de cerca
+- [x] Afegir alertes de terminis a la Calculadora: 12d comunicat, controls periòdics, 180d informe, 330d proposta, 365d INSS (condicionals segons durada)
+- [x] Revisar bibliografia recent: 3 nous casos afegits (Ley 6/2024 donants òrgans, Ley 2/2025 IP no extinció contracte, altes progressives 2026)
+- [x] Proves d'usabilitat: navegació OK, mode fosc OK, Guia IT OK, FAQ OK, cerca semàntica OK, 29 casos visibles
+- [x] Escriure tests: 7 tests nous semanticSearch, actualitzats counts (29 casos, 166 diagnòstics). 411 tests totals, 29 fitxers, 0 errors

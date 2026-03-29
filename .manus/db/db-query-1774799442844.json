@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE special_cases SET `procedure` = REPLACE(`procedure`, 'part de baixa', 'comunicat de baixa'), description = REPLACE(description, 'part de baixa', 'comunicat de baixa'), legalBasis = REPLACE(legalBasis, 'part de baixa', 'comunicat de baixa'), examples = REPLACE(examples, 'part de baixa', 'comunicat de baixa'), procedureEs = REPLACE(procedureEs, 'parte de baja', 'comunicado de baja'), descriptionEs = REPLACE(descriptionEs, 'parte de baja', 'comunicado de baja'), legalBasisEs = REPLACE(legalBasisEs, 'parte de baja', 'comunicado de baja'), examplesEs = REPLACE(examplesEs, 'parte de baja', 'comunicado de baja')",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute UPDATE special_cases SET `procedure` = REPLACE(`procedure`, 'part de baixa', 'comunicat de baixa'), description = REPLACE(description, 'part de baixa', 'comunicat de baixa'), legalBasis = REPLACE(legalBasis, 'part de baixa', 'comunicat de baixa'), examples = REPLACE(examples, 'part de baixa', 'comunicat de baixa'), procedureEs = REPLACE(procedureEs, 'parte de baja', 'comunicado de baja'), descriptionEs = REPLACE(descriptionEs, 'parte de baja', 'comunicado de baja'), legalBasisEs = REPLACE(legalBasisEs, 'parte de baja', 'comunicado de baja'), examplesEs = REPLACE(examplesEs, 'parte de baja', 'comunicado de baja')",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 67
+}

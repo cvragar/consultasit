@@ -16,6 +16,8 @@ export const ca = {
     casosEspecials: "Casos Especials",
     documentacio: "Documentació",
     calculadora: "Calculadora d'IT",
+    guiaIT: "Guia IT",
+    faq: "FAQ",
   },
 
   // ---- Home ----

@@ -1,0 +1,15 @@
+{
+  "query": "SELECT COUNT(*) as total, MIN(id) as min_id, MAX(id) as max_id FROM it_durations",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT COUNT(*) as total, MIN(id) as min_id, MAX(id) as max_id FROM it_durations",
+  "rows": [
+    {
+      "total": "70",
+      "min_id": "30001",
+      "max_id": "30070"
+    }
+  ],
+  "messages": [],
+  "stdout": "total\tmin_id\tmax_id\n70\t30001\t30070\n",
+  "stderr": "",
+  "execution_time_ms": 64
+}

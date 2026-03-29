@@ -58,7 +58,7 @@ const VIES = [
       {
         num: 3,
         titol: "Revisió per l'ICAM",
-        desc: "L'ICAM (Inspecció Mèdica) revisa el cas i pot confirmar l'alta o emetre un nou part de baixa. La resolució es notifica a la persona interessada.",
+        desc: "L'ICAM (Inspecció Mèdica) revisa el cas i pot confirmar l'alta o emetre un nou comunicat de baixa. La resolució es notifica a la persona interessada.",
       },
       {
         num: 4,
@@ -68,7 +68,7 @@ const VIES = [
     ],
     documentacio: [
       "DNI/NIE de la persona sol·licitant",
-      "Part d'alta mèdica original",
+      "Comunicat d'alta mèdica original",
       "Documentació mèdica de suport (informes, proves diagnòstiques)",
       "Document de representació (si actua en nom d'una altra persona)",
     ],
@@ -135,8 +135,8 @@ const VIES = [
     ],
     documentacio: [
       "DNI/NIE de la persona sol·licitant",
-      "Part d'alta mèdica emès per la mútua",
-      "Part de baixa original i parts de confirmació",
+      "Comunicat d'alta mèdica emès per la mútua",
+      "Comunicat de baixa original i comunicats de confirmació",
       "Informes mèdics de la mútua i de l'atenció primària",
       "Documentació sobre l'accident de treball (informe d'accident, testimonis)",
     ],
@@ -212,7 +212,7 @@ const VIES = [
       "CLAU: hi ha DOS moments. La disconformitat de 4 dies naturals davant la Inspecció Mèdica SÍ suspèn la reincorporació. La reclamació prèvia posterior davant l'INSS NO suspèn.",
       "El termini de 4 dies naturals és molt curt: comença a comptar des de la notificació de l'alta, incloent dissabtes i diumenges.",
       "Comunica la disconformitat a l'empresa el mateix dia o el dia hàbil següent per evitar sancions disciplinàries.",
-      "Si el metge de família considera que no estàs en condicions de treballar, pot emetre un nou part de baixa per recaiguda.",
+      "Si el metge de família considera que no estàs en condicions de treballar, pot emetre un nou comunicat de baixa per recaiguda.",
       "En casos complexos, valora sol·licitar una valoració per a Incapacitat Permanent si la patologia és crònica.",
     ],
     baseLegal: [
@@ -256,12 +256,12 @@ const VIES = [
       {
         num: 3,
         titol: "Reincorporació mentre es recorre",
-        desc: "IMPORTANT: La reclamació NO suspèn l'alta. El treballador ha de reincorporar-se al treball l'endemà de l'alta mentre s'espera la resolució. Si no ho fa, pot ser considerat absència injustificada. Excepció: si el metge de família emet un nou part de baixa per recaiguda o nova patologia, el treballador pot continuar de baixa.",
+        desc: "IMPORTANT: La reclamació NO suspèn l'alta. El treballador ha de reincorporar-se al treball l'endemà de l'alta mentre s'espera la resolució. Si no ho fa, pot ser considerat absència injustificada. Excepció: si el metge de família emet un nou comunicat de baixa per recaiguda o nova patologia, el treballador pot continuar de baixa.",
       },
       {
         num: 4,
         titol: "Revisió per l'ICAM (nova avaluació)",
-        desc: "L'ICAM revisa la reclamació. Pot citar el treballador per a un nou reconeixement mèdic. Si l'ICAM considera que la reclamació és fonamentada, pot revocar l'alta i emetre un nou part de baixa amb efectes retroactius des de la data de l'alta.",
+        desc: "L'ICAM revisa la reclamació. Pot citar el treballador per a un nou reconeixement mèdic. Si l'ICAM considera que la reclamació és fonamentada, pot revocar l'alta i emetre un nou comunicat de baixa amb efectes retroactius des de la data de l'alta.",
       },
       {
         num: 5,
@@ -271,14 +271,14 @@ const VIES = [
       {
         num: 6,
         titol: "Alternativa: nova baixa per recaiguda",
-        desc: "Si el metge de família considera que el pacient no està en condicions de treballar, pot emetre un nou part de baixa per recaiguda (mateixa o similar patologia, dins dels 180 dies naturals). En aquest cas, el procés continua com una recaiguda del mateix procés d'IT. Si la recaiguda és per la mateixa patologia, l'INSS (a través de la mútua o el SPS) pot qüestionar si és realment una recaiguda o un nou procés.",
+        desc: "Si el metge de família considera que el pacient no està en condicions de treballar, pot emetre un nou comunicat de baixa per recaiguda (mateixa o similar patologia, dins dels 180 dies naturals). En aquest cas, el procés continua com una recaiguda del mateix procés d'IT. Si la recaiguda és per la mateixa patologia, l'INSS (a través de la mútua o el SPS) pot qüestionar si és realment una recaiguda o un nou procés.",
       },
     ],
     documentacio: [
       "DNI/NIE de la persona sol·licitant",
       "Alta mèdica emesa per l'ICAM (no per la mútua)",
       "Informe del metge de família on consta la discrepància amb la proposta d'alta",
-      "Historial de parts de confirmació de la baixa",
+      "Historial de comunicats de confirmació de la baixa",
       "Informes d'especialistes que avalin la continuació de la IT",
       "Documentació de la proposta motivada d'alta de la mútua (si es disposa)",
     ],
@@ -286,8 +286,8 @@ const VIES = [
       "Clau: l'alta l'emet l'ICAM, no la mútua. La via correcta és la reclamació al Dep. de Salut (11 dies hàbils), no la revisió a l'INSS.",
       "El metge de família ha de documentar detalladament la discrepància: diagnòstic, tractament actiu, limitacions funcionals i pronòstic.",
       "Si el pacient té un especialista que no estigui d'acord amb l'alta, demana un informe escrit urgent per adjuntar a la reclamació.",
-      "La reclamació NO suspèn la reincorporació. Si el pacient no pot treballar, el metge de família pot emetre un nou part de baixa per recaiguda o nova patologia.",
-      "Si el pacient es reincorpora i empitjora, el metge de família pot emetre un nou part de baixa per recaiguda dins dels 180 dies naturals.",
+      "La reclamació NO suspèn la reincorporació. Si el pacient no pot treballar, el metge de família pot emetre un nou comunicat de baixa per recaiguda o nova patologia.",
+      "Si el pacient es reincorpora i empitjora, el metge de família pot emetre un nou comunicat de baixa per recaiguda dins dels 180 dies naturals.",
       "En casos on la mútua ha presentat la proposta d'alta, és recomanable que el metge de família contacti directament amb l'ICAM per explicar la situació clínica.",
       "Per a casos complexos o si hi ha sospita de pressió indeguda de la mútua, es recomana que el pacient consulti un advocat laboralista.",
     ],
@@ -350,7 +350,7 @@ const VIES = [
     ],
     documentacio: [
       "DNI/NIE de la persona sol·licitant",
-      "Part de baixa mèdica",
+      "Comunicat de baixa mèdica",
       "Informe sobre les circumstàncies de l'accident o exposició laboral",
       "Contracte de treball i descripció del lloc de treball",
       "Testimonis de l'accident (si n'hi ha)",
@@ -361,7 +361,7 @@ const VIES = [
       "Si l'accident va ocórrer durant el teletreball, aplica la presumpció de l'art. 156 LGSS (iuris tantum).",
       "En malalties professionals, consulta el RD 1299/2006 (llistat de malalties professionals) per verificar si la patologia hi figura.",
       "Guarda tota la documentació sobre les condicions del lloc de treball (avaluació de riscos, equips de protecció).",
-      "El metge de família pot emetre el part de baixa com a AT si té indicis suficients; la qualificació definitiva la fa l'INSS.",
+      "El metge de família pot emetre el comunicat de baixa com a AT si té indicis suficients; la qualificació definitiva la fa l'INSS.",
     ],
     baseLegal: [
       "Art. 156-157 LGSS (RDLeg 8/2015): definició d'accident de treball i malaltia professional",

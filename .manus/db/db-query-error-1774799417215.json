@@ -1,0 +1,8 @@
+{
+  "query": "SELECT id, title, SUBSTRING(procedure_text, 1, 200) as proc_preview FROM special_cases WHERE procedure_text LIKE '%part de baixa%' OR procedure_text LIKE '%part d%alta%' LIMIT 10",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, SUBSTRING(procedure_text, 1, 200) as proc_preview FROM special_cases WHERE procedure_text LIKE '%part de baixa%' OR procedure_text LIKE '%part d%alta%' LIMIT 10",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1054 (42S22) at line 1: Unknown column 'procedure_text' in 'where clause'"
+  ]
+}

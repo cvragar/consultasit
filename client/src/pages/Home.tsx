@@ -2,7 +2,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MessageSquare, FileText, AlertCircle, Calculator, Shield, LogIn, Star, Menu, X, Stethoscope, HardHat, HeartPulse, ChevronRight, Sparkles, Gavel } from "lucide-react";
+import { MessageSquare, FileText, AlertCircle, Calculator, Shield, LogIn, Star, Menu, X, Stethoscope, HardHat, HeartPulse, ChevronRight, Sparkles, Gavel, Route, CircleHelp } from "lucide-react";
 import { Link } from "wouter";
 import { getLoginUrl } from "@/const";
 import { useState } from "react";
@@ -120,6 +120,18 @@ export default function Home() {
                       {t.nav.favorits}
                     </Button>
                   </Link>
+                  <Link href="/guia-it">
+                    <Button variant="ghost" size="sm" className="gap-1.5">
+                      <Route className="h-4 w-4 text-teal-500" />
+                      {t.nav.guiaIT}
+                    </Button>
+                  </Link>
+                  <Link href="/faq">
+                    <Button variant="ghost" size="sm" className="gap-1.5">
+                      <CircleHelp className="h-4 w-4 text-indigo-500" />
+                      {t.nav.faq}
+                    </Button>
+                  </Link>
                   {user?.role === "admin" && (
                     <Link href="/admin">
                       <Button variant="outline" size="sm" className="gap-1.5">
@@ -210,6 +222,18 @@ export default function Home() {
                 <Button variant="ghost" size="sm" className="w-full justify-start gap-2">
                   <Calculator className="h-4 w-4 text-purple-500" />
                   {t.nav.calculadora}
+                </Button>
+              </Link>
+              <Link href="/guia-it" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" size="sm" className="w-full justify-start gap-2">
+                  <Route className="h-4 w-4 text-teal-500" />
+                  {t.nav.guiaIT}
+                </Button>
+              </Link>
+              <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" size="sm" className="w-full justify-start gap-2">
+                  <CircleHelp className="h-4 w-4 text-indigo-500" />
+                  {t.nav.faq}
                 </Button>
               </Link>
               {user?.role === "admin" && (

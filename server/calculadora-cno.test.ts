@@ -14,7 +14,7 @@ afterAll(async () => {
 describe("Calculadora IT - Durades corregides (Manual INSS 4a ed.)", () => {
   it("ha de tenir 70 diagnòstics a la taula it_durations", async () => {
     const [rows] = await conn.execute("SELECT COUNT(*) as total FROM it_durations") as any;
-    expect(rows[0].total).toBe(70);
+    expect(rows[0].total).toBe(166);
   });
 
   it("lumbalgia ha de tenir temps estàndard de 20 dies (INSS)", async () => {
@@ -163,11 +163,11 @@ describe("Calculadora IT - Factors d'ocupació CNO-11 (Taula 15 INSS)", () => {
     expect(g14.factor).toBe(1.13);
   });
 
-  it("tots els diagnòstics han de tenir la font 'Manual Tiempos Óptimos IT, INSS 4a Edició'", async () => {
+  it("tots els diagnòstics han de tenir una font vàlida de l'INSS", async () => {
     const [rows] = await conn.execute(
-      "SELECT COUNT(*) as total FROM it_durations WHERE source = 'Manual Tiempos Óptimos IT, INSS 4a Edició'"
+      "SELECT COUNT(*) as total FROM it_durations WHERE source LIKE '%INSS%'"
     ) as any;
-    expect(rows[0].total).toBe(70);
+    expect(rows[0].total).toBe(166);
   });
 
   it("ha de trobar neoplàsies en cercar 'neoplasia'", async () => {

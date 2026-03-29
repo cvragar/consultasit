@@ -49,7 +49,7 @@ describe("streamRouter - buildSystemPrompt", () => {
           title: "Menstruació incapacitant",
           description: "IT per menstruació incapacitant...",
           legalBasis: "Art. 169 LGSS",
-          procedure: "El metge de l'eCap pot emetre el part de baixa...",
+          procedure: "El metge de l'eCap pot emetre el comunicat de baixa...",
         },
       ],
     };

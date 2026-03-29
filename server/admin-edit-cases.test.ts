@@ -56,7 +56,7 @@ describe("looksLikeJson - Detecció de contingut JSON", () => {
 - RD 625/2014
 
 **Procediment:**
-1. Emetre el part de baixa
+1. Emetre el comunicat de baixa
 2. Notificar a la mútua`;
     expect(looksLikeJson(markdown)).toBe(false);
   });

@@ -1,7 +1,7 @@
 import { useT } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useSEO } from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Home, Calculator, AlertCircle, Calendar, Info, ChevronDown, ChevronUp, Briefcase } from "lucide-react";
+import { Shield, Home, Calculator, AlertCircle, Calendar, Info, ChevronDown, ChevronUp, Briefcase, Search, Sparkles, Loader2 } from "lucide-react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
 
@@ -67,10 +67,27 @@ export default function Calculadora() {
   const [selectedGroupId, setSelectedGroupId] = useState<string>("");
   const [showAllFactors, setShowAllFactors] = useState(false);
 
-  const { data: searchResults } = trpc.itDurations.search.useQuery(
-    { query: searchQuery },
-    { enabled: searchQuery.length > 2 }
+  // Cerca semàntica amb debounce
+  const [debouncedQuery, setDebouncedQuery] = useState("");
+  const [isSearching, setIsSearching] = useState(false);
+  
+  useEffect(() => {
+    if (searchQuery.length <= 2) {
+      setDebouncedQuery("");
+      return;
+    }
+    const timer = setTimeout(() => setDebouncedQuery(searchQuery), 400);
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+
+  const { data: semanticData, isFetching } = trpc.itDurations.semanticSearch.useQuery(
+    { query: debouncedQuery },
+    { enabled: debouncedQuery.length > 2, staleTime: 60000 }
   );
+  
+  const searchResults = semanticData?.results;
+  const searchMethod = semanticData?.method;
+  const synonymsUsed = semanticData?.synonymsUsed;
 
   // Calcular dies ajustats per ocupació
   const adjustedDays = useMemo(() => {
@@ -159,9 +176,30 @@ export default function Calculadora() {
                   />
                 </div>
 
-                {searchResults && searchResults.length > 0 && (
+                {isFetching && debouncedQuery.length > 2 && (
+                  <div className="flex items-center gap-2 py-4 justify-center text-muted-foreground">
+                    <Loader2 className="h-5 w-5 animate-spin" />
+                    <span className="text-sm">{language === "ca" ? "Cercant diagnòstics..." : "Buscando diagnósticos..."}</span>
+                  </div>
+                )}
+
+                {!isFetching && searchResults && searchResults.length > 0 && (
                   <div className="space-y-2">
-                    <Label>{language === "ca" ? `Resultats (${searchResults.length}):` : `Resultados (${searchResults.length}):`}</Label>
+                    <div className="flex items-center justify-between">
+                      <Label>{language === "ca" ? `Resultats (${searchResults.length}):` : `Resultados (${searchResults.length}):`}</Label>
+                      {searchMethod === "synonyms" && (
+                        <span className="text-xs text-purple-600 dark:text-purple-400 flex items-center gap-1">
+                          <Sparkles className="h-3 w-3" />
+                          {language === "ca" ? "Cerca per sinònims" : "Búsqueda por sinónimos"}
+                        </span>
+                      )}
+                      {searchMethod === "llm" && (
+                        <span className="text-xs text-blue-600 dark:text-blue-400 flex items-center gap-1">
+                          <Sparkles className="h-3 w-3" />
+                          {language === "ca" ? "Cerca intel·ligent" : "Búsqueda inteligente"}
+                        </span>
+                      )}
+                    </div>
                     <div className="max-h-64 overflow-y-auto space-y-1.5 pr-1">
                       {searchResults.map((result) => (
                         <button
@@ -191,9 +229,9 @@ export default function Calculadora() {
                   </div>
                 )}
 
-                {searchQuery.length > 2 && (!searchResults || searchResults.length === 0) && (
-                  <div className="text-center py-6 text-gray-600">
-                    <AlertCircle className="h-10 w-10 mx-auto mb-2 text-gray-400" />
+                {!isFetching && debouncedQuery.length > 2 && (!searchResults || searchResults.length === 0) && (
+                  <div className="text-center py-6 text-muted-foreground">
+                    <AlertCircle className="h-10 w-10 mx-auto mb-2 text-muted-foreground/60" />
                     <p className="font-medium">{language === "ca" ? "No s'han trobat resultats" : "No se han encontrado resultados"}</p>
                     <p className="text-sm mt-1">{language === "ca" ? "Prova amb un altre terme o consulta amb el xat d'IA" : "Prueba con otro término o consulta con el chat de IA"}</p>
                   </div>
@@ -394,6 +432,81 @@ export default function Calculadora() {
                     <p className="text-sm text-muted-foreground">{selectedDiagnosis.notes}</p>
                   </div>
                 )}
+
+                {/* Alertes de terminis i dates crítiques */}
+                <Separator />
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-1.5">
+                    <AlertCircle className="h-4 w-4 text-red-500" />
+                    {language === "ca" ? "Alertes de terminis i dates crítiques" : "Alertas de plazos y fechas críticas"}
+                  </h4>
+                  <div className="space-y-2">
+                    {/* Alerta 12 dies: comunicat de confirmació */}
+                    <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800/50 rounded-lg">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/60 flex items-center justify-center">
+                        <span className="text-xs font-bold text-blue-700 dark:text-blue-300">12d</span>
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-foreground">{language === "ca" ? "Comunicat de confirmació" : "Parte de confirmación"}</p>
+                        <p className="text-xs text-muted-foreground">{language === "ca" ? "Als 12 dies de la baixa cal emetre el primer comunicat de confirmació de la IT (RD 625/2014)." : "A los 12 días de la baja hay que emitir el primer parte de confirmación de la IT (RD 625/2014)."}</p>
+                      </div>
+                    </div>
+                    {/* Alerta periòdica: controls */}
+                    {selectedDiagnosis.averageDays > 30 && (
+                      <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800/50 rounded-lg">
+                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/60 flex items-center justify-center">
+                          <Calendar className="h-4 w-4 text-purple-700 dark:text-purple-300" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-foreground">{language === "ca" ? "Controls periòdics" : "Controles periódicos"}</p>
+                          <p className="text-xs text-muted-foreground">{language === "ca" 
+                            ? "Comunicats de confirmació cada 14 dies (o 35 dies si el metge ho justifica). Revisió mèdica obligatòria." 
+                            : "Partes de confirmación cada 14 días (o 35 días si el médico lo justifica). Revisión médica obligatoria."}</p>
+                        </div>
+                      </div>
+                    )}
+                    {/* Alerta 180 dies: proposta d'alta o informe */}
+                    {selectedDiagnosis.maxDays >= 90 && (
+                      <div className="flex items-start gap-3 p-3 bg-orange-50 dark:bg-orange-950/30 border border-orange-200 dark:border-orange-800/50 rounded-lg">
+                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/60 flex items-center justify-center">
+                          <span className="text-xs font-bold text-orange-700 dark:text-orange-300">180d</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-foreground">{language === "ca" ? "Informe als 180 dies" : "Informe a los 180 días"}</p>
+                          <p className="text-xs text-muted-foreground">{language === "ca" 
+                            ? "Als 180 dies, el metge ha d'emetre un informe clínic complet per a la valoració de l'INSS sobre la continuació de la IT." 
+                            : "A los 180 días, el médico debe emitir un informe clínico completo para la valoración del INSS sobre la continuación de la IT."}</p>
+                        </div>
+                      </div>
+                    )}
+                    {/* Alerta 330 dies: proposta d'alta o pròrroga */}
+                    {selectedDiagnosis.maxDays >= 180 && (
+                      <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800/50 rounded-lg">
+                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/60 flex items-center justify-center">
+                          <span className="text-xs font-bold text-red-700 dark:text-red-300">330d</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-foreground">{language === "ca" ? "Proposta prèvia als 330 dies" : "Propuesta previa a los 330 días"}</p>
+                          <p className="text-xs text-muted-foreground">{language === "ca" 
+                            ? "Abans del dia 330, el metge ha d'emetre una proposta d'alta o de pròrroga. L'INSS assumeix el control a partir del dia 365." 
+                            : "Antes del día 330, el médico debe emitir una propuesta de alta o de prórroga. El INSS asume el control a partir del día 365."}</p>
+                        </div>
+                      </div>
+                    )}
+                    {/* Alerta 365 dies: l'INSS assumeix el control */}
+                    <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                        <span className="text-xs font-bold text-gray-700 dark:text-gray-300">365d</span>
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-foreground">{language === "ca" ? "L'INSS assumeix el control" : "El INSS asume el control"}</p>
+                        <p className="text-xs text-muted-foreground">{language === "ca" 
+                          ? "A partir del dia 365, l'INSS és l'únic competent per emetre altes, pròrrogues o propostes d'incapacitat permanent." 
+                          : "A partir del día 365, el INSS es el único competente para emitir altas, prórrogas o propuestas de incapacidad permanente."}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 {/* Avís */}
                 <div className="p-4 bg-yellow-50 dark:bg-yellow-950/30 border border-yellow-200 dark:border-yellow-800/50 rounded-lg">

@@ -1,0 +1,54 @@
+{
+  "query": "SELECT category, COUNT(*) as total FROM it_durations GROUP BY category ORDER BY total DESC",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT category, COUNT(*) as total FROM it_durations GROUP BY category ORDER BY total DESC",
+  "rows": [
+    {
+      "category": "Aparell locomotor",
+      "total": "18"
+    },
+    {
+      "category": "Neoplàsies",
+      "total": "16"
+    },
+    {
+      "category": "Salut mental",
+      "total": "7"
+    },
+    {
+      "category": "Sistema digestiu",
+      "total": "5"
+    },
+    {
+      "category": "Sistema cardiovascular",
+      "total": "5"
+    },
+    {
+      "category": "Sistema respiratori",
+      "total": "5"
+    },
+    {
+      "category": "Sistema nerviós",
+      "total": "4"
+    },
+    {
+      "category": "Ginecologia",
+      "total": "3"
+    },
+    {
+      "category": "Malalties infeccioses",
+      "total": "3"
+    },
+    {
+      "category": "Malalties endocrines",
+      "total": "2"
+    },
+    {
+      "category": "Malalties de la pell",
+      "total": "2"
+    }
+  ],
+  "messages": [],
+  "stdout": "category\ttotal\nAparell locomotor\t18\nNeoplàsies\t16\nSalut mental\t7\nSistema digestiu\t5\nSistema cardiovascular\t5\nSistema respiratori\t5\nSistema nerviós\t4\nGinecologia\t3\nMalalties infeccioses\t3\nMalalties endocrines\t2\nMalalties de la pell\t2\n",
+  "stderr": "",
+  "execution_time_ms": 57
+}

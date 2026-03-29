@@ -1,0 +1,13 @@
+{
+  "query": "SELECT COUNT(*) as total FROM it_durations",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT COUNT(*) as total FROM it_durations",
+  "rows": [
+    {
+      "total": "70"
+    }
+  ],
+  "messages": [],
+  "stdout": "total\n70\n",
+  "stderr": "",
+  "execution_time_ms": 55
+}

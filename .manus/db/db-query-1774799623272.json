@@ -1,0 +1,110 @@
+{
+  "query": "SELECT id, diagnosis, cie10Code, category, minDays, maxDays, averageDays, source FROM it_durations ORDER BY id LIMIT 10",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, diagnosis, cie10Code, category, minDays, maxDays, averageDays, source FROM it_durations ORDER BY id LIMIT 10",
+  "rows": [
+    {
+      "id": "30001",
+      "diagnosis": "Lumbalgia inespecífica (dolor lumbar baix)",
+      "cie10Code": "M54.5",
+      "category": "Aparell locomotor",
+      "minDays": "7",
+      "maxDays": "45",
+      "averageDays": "20",
+      "source": "Manual Tiempos Óptimos IT, INSS 4a Edició"
+    },
+    {
+      "id": "30002",
+      "diagnosis": "Lumbàlgia amb ciàtica",
+      "cie10Code": "M54.4",
+      "category": "Aparell locomotor",
+      "minDays": "14",
+      "maxDays": "60",
+      "averageDays": "30",
+      "source": "Manual Tiempos Óptimos IT, INSS 4a Edició"
+    },
+    {
+      "id": "30003",
+      "diagnosis": "Hèrnia discal lumbar amb radiculopatia",
+      "cie10Code": "M51.16",
+      "category": "Aparell locomotor",
+      "minDays": "30",
+      "maxDays": "120",
+      "averageDays": "60",
+      "source": "Manual Tiempos Óptimos IT, INSS 4a Edició"
+    },
+    {
+      "id": "30004",
+      "diagnosis": "Hèrnia discal cervical amb radiculopatia",
+      "cie10Code": "M50.12",
+      "category": "Aparell locomotor",
+      "minDays": "20",
+      "maxDays": "90",
+      "averageDays": "60",
+      "source": "Manual Tiempos Óptimos IT, INSS 4a Edició"
+    },
+    {
+      "id": "30005",
+      "diagnosis": "Cervicàlgia / Síndrome cervicobraquial",
+      "cie10Code": "M54.2",
+      "category": "Aparell locomotor",
+      "minDays": "7",
+      "maxDays": "45",
+      "averageDays": "20",
+      "source": "Manual Tiempos Óptimos IT, INSS 4a Edició"
+    },
+    {
+      "id": "30006",
+      "diagnosis": "Esguinç de turmell",
+      "cie10Code": "S93.4",
+      "category": "Aparell locomotor",
+      "minDays": "7",
+      "maxDays": "45",
+      "averageDays": "21",
+      "source": "Manual Tiempos Óptimos IT, INSS 4a Edició"
+    },
+    {
+      "id": "30007",
+      "diagnosis": "Síndrome del túnel carpià",
+      "cie10Code": "G56.00",
+      "category": "Aparell locomotor",
+      "minDays": "14",
+      "maxDays": "60",
+      "averageDays": "30",
+      "source": "Manual Tiempos Óptimos IT, INSS 4a Edició"
+    },
+    {
+      "id": "30008",
+      "diagnosis": "Artrosi de genoll (gonartrosi)",
+      "cie10Code": "M17.1",
+      "category": "Aparell locomotor",
+      "minDays": "14",
+      "maxDays": "90",
+      "averageDays": "30",
+      "source": "Manual Tiempos Óptimos IT, INSS 4a Edició"
+    },
+    {
+      "id": "30009",
+      "diagnosis": "Artrosi de maluc (coxartrosi)",
+      "cie10Code": "M16.1",
+      "category": "Aparell locomotor",
+      "minDays": "14",
+      "maxDays": "90",
+      "averageDays": "30",
+      "source": "Manual Tiempos Óptimos IT, INSS 4a Edició"
+    },
+    {
+      "id": "30010",
+      "diagnosis": "Fractura de cúbit i radi (avantbraç)",
+      "cie10Code": "S52",
+      "category": "Aparell locomotor",
+      "minDays": "30",
+      "maxDays": "90",
+      "averageDays": "60",
+      "source": "Manual Tiempos Óptimos IT, INSS 4a Edició"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tdiagnosis\tcie10Code\tcategory\tminDays\tmaxDays\taverageDays\tsource\n30001\tLumbalgia inespecífica (dolor lumbar baix)\tM54.5\tAparell locomotor\t7\t45\t20\tManual Tiempos Óptimos IT, INSS 4a Edició\n30002\tLumbàlgia amb ciàtica\tM54.4\tAparell locomotor\t14\t60\t30\tManual Tiempos Óptimos IT, INSS 4a Edició\n30003\tHèrnia discal lumbar amb radiculopatia\tM51.16\tAparell locomotor\t30\t120\t60\tManual Tiempos Óptimos IT, INSS 4a Edició\n30004\tHèrnia discal cervical amb radiculopatia\tM50.12\tAparell locomotor\t20\t90\t60\tManual Tiempos Óptimos IT, INSS 4a Edició\n30005\tCervicàlgia / Síndrome cervicobraquial\tM54.2\tAparell locomotor\t7\t45\t20\tManual Tiempos Óptimos IT, INSS 4a Edició\n30006\tEsguinç de turmell\tS93.4\tAparell locomotor\t7\t45\t21\tManual Tiempos Óptimos IT, INSS 4a Edició\n30007\tSíndrome del túnel carpià\tG56.00\tAparell locomotor\t14\t60\t30\tManual Tiempos Óptimos IT, INSS 4a Edició\n30008\tArtrosi de genoll (gonartrosi)\tM17.1\tAparell locomotor\t14\t90\t30\tManual Tiempos Óptimos IT, INSS 4a Edició\n30009\tArtrosi de maluc (coxartrosi)\tM16.1\tAparell locomotor\t14\t90\t30\tManual Tiempos Óptimos IT, INSS 4a Edició\n30010\tFractura de cúbit i radi (avantbraç)\tS52\tAparell locomotor\t30\t90\t60\tManual Tiempos Óptimos IT, INSS 4a Edició\n",
+  "stderr": "",
+  "execution_time_ms": 64
+}

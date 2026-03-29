@@ -1,0 +1,18 @@
+{
+  "query": "SELECT source, COUNT(*) as total FROM it_durations GROUP BY source;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT source, COUNT(*) as total FROM it_durations GROUP BY source;",
+  "rows": [
+    {
+      "source": "INSS 2023",
+      "total": "96"
+    },
+    {
+      "source": "Manual Tiempos Óptimos IT, INSS 4a Edició",
+      "total": "70"
+    }
+  ],
+  "messages": [],
+  "stdout": "source\ttotal\nINSS 2023\t96\nManual Tiempos Óptimos IT, INSS 4a Edició\t70\n",
+  "stderr": "",
+  "execution_time_ms": 59
+}

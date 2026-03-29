@@ -86,7 +86,7 @@ describe("Cas especial 90001: IT durant embaràs de risc vs. prestació per risc
     expect(
       procedure.toLowerCase().includes("ecap") ||
       procedure.toLowerCase().includes("metge") ||
-      procedure.toLowerCase().includes("part de baixa")
+      procedure.toLowerCase().includes("comunicat de baixa")
     ).toBe(true);
   });
 
@@ -214,7 +214,7 @@ describe("Cas especial 90002: Reducció de jornada per guarda legal i IT", () =>
     expect(
       procedure.toLowerCase().includes("metge") ||
       procedure.toLowerCase().includes("ecap") ||
-      procedure.toLowerCase().includes("part de baixa") ||
+      procedure.toLowerCase().includes("comunicat de baixa") ||
       procedure.toLowerCase().includes("treballadora")
     ).toBe(true);
   });

@@ -16,6 +16,8 @@ export const es = {
     casosEspecials: "Casos Especiales",
     documentacio: "Documentación",
     calculadora: "Calculadora de IT",
+    guiaIT: "Guía IT",
+    faq: "FAQ",
   },
 
   // ---- Home ----

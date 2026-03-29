@@ -1,0 +1,87 @@
+{
+  "query": "SELECT id, title, SUBSTRING(`procedure`, 1, 200) as proc_preview FROM special_cases WHERE `procedure` LIKE '%part de baixa%' OR `procedure` LIKE '%part d%' LIMIT 10",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, SUBSTRING(`procedure`, 1, 200) as proc_preview FROM special_cases WHERE `procedure` LIKE '%part de baixa%' OR `procedure` LIKE '%part d%' LIMIT 10",
+  "rows": [
+    {
+      "id": "1",
+      "title": "Menstruació incapacitant",
+      "proc_preview": "## Procediment des de l'eCap"
+    },
+    {
+      "id": "2",
+      "title": "Interrupció voluntària de l'embaràs (IVE)",
+      "proc_preview": "## Procediment des de l'eCap"
+    },
+    {
+      "id": "3",
+      "title": "Gestació a partir de la setmana 39",
+      "proc_preview": "## Procediment des de l'eCap"
+    },
+    {
+      "id": "4",
+      "title": "Donació d'òrgans",
+      "proc_preview": "## Procediment des de l'eCap"
+    },
+    {
+      "id": "5",
+      "title": "Baixes retroactives",
+      "proc_preview": "## Procediment des de l'eCap"
+    },
+    {
+      "id": "6",
+      "title": "Pluriocupació",
+      "proc_preview": "## Procediment des de l'eCap"
+    },
+    {
+      "id": "7",
+      "title": "IT i presó",
+      "proc_preview": "## Procediment des de l'eCap"
+    },
+    {
+      "id": "8",
+      "title": "IT en estrangers",
+      "proc_preview": "## Procediment des de l'eCap"
+    },
+    {
+      "id": "9",
+      "title": "Vacances durant la IT",
+      "proc_preview": "## Procediment des de l'eCap"
+    },
+    {
+      "id": "10",
+      "title": "Recaiguda en IT",
+      "proc_preview": "## Procediment des de l'eCap"
+    }
+  ],
+  "messages": [
+    "### Pas 1: Verificació del diagnòstic previ",
+    "1. Confirmar que la treballadora té un **diagnòstic previ documentat** de patologia que causa la menstruació incapacitant (end",
+    "### Pas 1: Emissió del part de baixa",
+    "1. **Quan emetre la baixa**: el dia de la intervenció (IVE) o el dia en que la treballadora acudeix per l'avortament espontani i qued",
+    "### Pas 1: Verificació dels requisits",
+    "1. Confirmar que la treballadora ha complert la **setmana 39 de gestació**.",
+    "2. Verificar que compleix el **període mínim de cotitzac",
+    "### Pas 1: Coordinació amb l'hospital",
+    "1. La donació d'òrgans en vida es gestiona a través del servei especialitzat de l'hospital de referència (Coordinació de Trasplantam",
+    "### Cas 1: Treballador hospitalitzat (cas més freqüent)",
+    "1. El treballador és ingressat a l'hospital i no pot acudir al CAP.",
+    "2. A l'alta hospitalària, el metge de família ",
+    "### Pas 1: Identificació de la pluriocupació",
+    "1. Preguntar al treballador si té **més d'un contracte de treball** actiu (o una activitat per compte propi simultàniament).",
+    "### Situació 1: Treballador en IT que ingressa a presó",
+    "1. El treballador o un familiar comunica al metge de família que ha ingressat a presó (preventiva o condemna).",
+    "2. E",
+    "### Cas 1: Treballador comunitari (UE/EEE/Suïssa)",
+    "1. El metge de família emet el part de baixa de la mateixa manera que per a un treballador espanyol.",
+    "2. Si el treballado",
+    "### Pas 1: Emissió del part de baixa durant les vacances",
+    "1. El treballador acudeix al CAP durant les vacances per una malaltia o accident incapacitant.",
+    "2. El metge de fam",
+    "### Pas 1: Valoració de si és recaiguda o nou procés",
+    "1. Comprovar la data de l'alta del procés anterior (accessible a la història clínica de l'eCap).",
+    "2. Calcular si han p"
+  ],
+  "stdout": "id\ttitle\tproc_preview\n1\tMenstruació incapacitant\t## Procediment des de l'eCap\n\n### Pas 1: Verificació del diagnòstic previ\n1. Confirmar que la treballadora té un **diagnòstic previ documentat** de patologia que causa la menstruació incapacitant (end\n2\tInterrupció voluntària de l'embaràs (IVE)\t## Procediment des de l'eCap\n\n### Pas 1: Emissió del part de baixa\n1. **Quan emetre la baixa**: el dia de la intervenció (IVE) o el dia en que la treballadora acudeix per l'avortament espontani i qued\n3\tGestació a partir de la setmana 39\t## Procediment des de l'eCap\n\n### Pas 1: Verificació dels requisits\n1. Confirmar que la treballadora ha complert la **setmana 39 de gestació**.\n2. Verificar que compleix el **període mínim de cotitzac\n4\tDonació d'òrgans\t## Procediment des de l'eCap\n\n### Pas 1: Coordinació amb l'hospital\n1. La donació d'òrgans en vida es gestiona a través del servei especialitzat de l'hospital de referència (Coordinació de Trasplantam\n5\tBaixes retroactives\t## Procediment des de l'eCap\n\n### Cas 1: Treballador hospitalitzat (cas més freqüent)\n1. El treballador és ingressat a l'hospital i no pot acudir al CAP.\n2. A l'alta hospitalària, el metge de família \n6\tPluriocupació\t## Procediment des de l'eCap\n\n### Pas 1: Identificació de la pluriocupació\n1. Preguntar al treballador si té **més d'un contracte de treball** actiu (o una activitat per compte propi simultàniament).\n\n7\tIT i presó\t## Procediment des de l'eCap\n\n### Situació 1: Treballador en IT que ingressa a presó\n1. El treballador o un familiar comunica al metge de família que ha ingressat a presó (preventiva o condemna).\n2. E\n8\tIT en estrangers\t## Procediment des de l'eCap\n\n### Cas 1: Treballador comunitari (UE/EEE/Suïssa)\n1. El metge de família emet el part de baixa de la mateixa manera que per a un treballador espanyol.\n2. Si el treballado\n9\tVacances durant la IT\t## Procediment des de l'eCap\n\n### Pas 1: Emissió del part de baixa durant les vacances\n1. El treballador acudeix al CAP durant les vacances per una malaltia o accident incapacitant.\n2. El metge de fam\n10\tRecaiguda en IT\t## Procediment des de l'eCap\n\n### Pas 1: Valoració de si és recaiguda o nou procés\n1. Comprovar la data de l'alta del procés anterior (accessible a la història clínica de l'eCap).\n2. Calcular si han p\n",
+  "stderr": "",
+  "execution_time_ms": 57
+}

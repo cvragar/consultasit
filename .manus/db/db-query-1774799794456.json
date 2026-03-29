@@ -1,0 +1,67 @@
+{
+  "query": "SELECT COUNT(*) as total FROM it_durations; SELECT category, COUNT(*) as cnt FROM it_durations GROUP BY category ORDER BY cnt DESC",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT COUNT(*) as total FROM it_durations; SELECT category, COUNT(*) as cnt FROM it_durations GROUP BY category ORDER BY cnt DESC",
+  "rows": [
+    {
+      "total": "166"
+    },
+    {
+      "total": "category\tcnt"
+    },
+    {
+      "total": "Aparell locomotor\t40"
+    },
+    {
+      "total": "Neoplàsies\t16"
+    },
+    {
+      "total": "Salut mental\t15"
+    },
+    {
+      "total": "Sistema digestiu\t14"
+    },
+    {
+      "total": "Sistema nerviós\t13"
+    },
+    {
+      "total": "Sistema respiratori\t13"
+    },
+    {
+      "total": "Sistema cardiovascular\t12"
+    },
+    {
+      "total": "Ginecologia\t9"
+    },
+    {
+      "total": "Traumatologia\t7"
+    },
+    {
+      "total": "Infeccions\t6"
+    },
+    {
+      "total": "Sistema endocrí\t4"
+    },
+    {
+      "total": "Sistema genitourinari\t4"
+    },
+    {
+      "total": "Dermatologia\t3"
+    },
+    {
+      "total": "Malalties infeccioses\t3"
+    },
+    {
+      "total": "Oncologia\t3"
+    },
+    {
+      "total": "Malalties endocrines\t2"
+    },
+    {
+      "total": "Malalties de la pell\t2"
+    }
+  ],
+  "messages": [],
+  "stdout": "total\n166\ncategory\tcnt\nAparell locomotor\t40\nNeoplàsies\t16\nSalut mental\t15\nSistema digestiu\t14\nSistema nerviós\t13\nSistema respiratori\t13\nSistema cardiovascular\t12\nGinecologia\t9\nTraumatologia\t7\nInfeccions\t6\nSistema endocrí\t4\nSistema genitourinari\t4\nDermatologia\t3\nMalalties infeccioses\t3\nOncologia\t3\nMalalties endocrines\t2\nMalalties de la pell\t2\n",
+  "stderr": "",
+  "execution_time_ms": 60
+}
