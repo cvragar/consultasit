@@ -1,12 +1,14 @@
 /**
  * Service Worker — Consultes IT PWA
  * Estratègia:
+ *  - Stale-while-revalidate per a dades API cachejables (casos, documents, novetats)
  *  - Cache-first per a assets estàtics (JS, CSS, imatges, fonts)
- *  - Network-first per a peticions API (tRPC, OAuth)
- *  - Cache-first amb fallback offline per a rutes de navegació (HTML shell)
+ *  - Network-first per a peticions API no cachejables (tRPC, OAuth)
+ *  - Network-first amb fallback offline per a rutes de navegació (HTML shell)
  */
 
-const CACHE_NAME = "consultesit-v1";
+const CACHE_NAME = "consultesit-v2";
+const DATA_CACHE_NAME = "consultesit-data-v1";
 const OFFLINE_URL = "/";
 
 // Assets que es precachen en instal·lar el SW
@@ -16,11 +18,21 @@ const PRECACHE_ASSETS = [
   "/documents",
   "/calculadora",
   "/reclamacions",
+  "/guia-it",
+  "/faq",
+  "/novetats",
   "/manifest.webmanifest",
   "/favicon.ico",
   "/favicon-32x32.png",
   "/favicon-16x16.png",
   "/apple-touch-icon.png",
+];
+
+// Endpoints de dades que es cachen per accés offline (stale-while-revalidate)
+const CACHEABLE_API_PATHS = [
+  "/api/trpc/specialCases.getAll",
+  "/api/trpc/documents.getAll",
+  "/api/trpc/news.getAll",
 ];
 
 // ── Instal·lació: precache de les rutes principals ──────────────────────────
@@ -34,6 +46,7 @@ self.addEventListener("install", (event) => {
 });
 
 // ── Activació: neteja de caches antigues ────────────────────────────────────
+const VALID_CACHES = [CACHE_NAME, DATA_CACHE_NAME];
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches
@@ -41,7 +54,7 @@ self.addEventListener("activate", (event) => {
       .then((keys) =>
         Promise.all(
           keys
-            .filter((key) => key !== CACHE_NAME)
+            .filter((key) => !VALID_CACHES.includes(key))
             .map((key) => caches.delete(key))
         )
       )
@@ -58,13 +71,44 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET") return;
   if (url.origin !== self.location.origin) return;
 
-  // Peticions API → network-first (mai des de cache)
+  // Peticions API cachejables → stale-while-revalidate (per offline)
+  const isCacheableApi = CACHEABLE_API_PATHS.some((path) =>
+    url.pathname.startsWith(path)
+  );
+
+  if (isCacheableApi) {
+    event.respondWith(
+      caches.open(DATA_CACHE_NAME).then((cache) =>
+        cache.match(request).then((cached) => {
+          const fetchPromise = fetch(request)
+            .then((response) => {
+              if (response.ok) {
+                cache.put(request, response.clone());
+              }
+              return response;
+            })
+            .catch(() => {
+              // Sense xarxa: retornem la versió cacheada
+              if (cached) return cached;
+              return new Response(
+                JSON.stringify({ error: "Sense connexió. Dades no disponibles offline." }),
+                { status: 503, headers: { "Content-Type": "application/json" } }
+              );
+            });
+          // Retornem la cacheada immediatament si existeix, actualitzant en segon pla
+          return cached || fetchPromise;
+        })
+      )
+    );
+    return;
+  }
+
+  // Altres peticions API → network-first (mai des de cache)
   if (url.pathname.startsWith("/api/")) {
     event.respondWith(
       fetch(request).catch(() => {
-        // Si no hi ha xarxa i és una petició API, retornem un error JSON
         return new Response(
-          JSON.stringify({ error: "Sin conexión. Comprueba tu red." }),
+          JSON.stringify({ error: "Sense connexió. Comprova la teva xarxa." }),
           {
             status: 503,
             headers: { "Content-Type": "application/json" },

@@ -43,7 +43,8 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, lazy, Suspense } from "react";
+const AdminStats = lazy(() => import("@/components/AdminStats"));
 import { toast } from "sonner";
 
 type UploadStatus = "idle" | "uploading" | "success" | "error";
@@ -311,42 +312,12 @@ export default function Admin() {
       <div className="container py-6">
         <div className="max-w-6xl mx-auto space-y-6">
 
-          {/* Stats Grid */}
-          <div className="grid grid-cols-3 gap-4">
-            <Card>
-              <CardHeader className="pb-2 pt-4 px-4">
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-sm font-medium text-gray-600">{language === "ca" ? "Documents" : "Documentos"}</CardTitle>
-                  <FileText className="h-4 w-4 text-blue-600" />
-                </div>
-              </CardHeader>
-              <CardContent className="px-4 pb-4">
-                <div className="text-2xl font-bold text-blue-600">{documents?.length || 0}</div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader className="pb-2 pt-4 px-4">
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-sm font-medium text-gray-600">{language === "ca" ? "Casos" : "Casos"}</CardTitle>
-                  <AlertCircle className="h-4 w-4 text-orange-600" />
-                </div>
-              </CardHeader>
-              <CardContent className="px-4 pb-4">
-                <div className="text-2xl font-bold text-orange-600">{specialCases?.length || 0}</div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader className="pb-2 pt-4 px-4">
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-sm font-medium text-gray-600">{language === "ca" ? "Converses" : "Conversaciones"}</CardTitle>
-                  <Database className="h-4 w-4 text-green-600" />
-                </div>
-              </CardHeader>
-              <CardContent className="px-4 pb-4">
-                <div className="text-2xl font-bold text-green-600">{conversations?.length || 0}</div>
-              </CardContent>
-            </Card>
-          </div>
+          {/* Estadístiques d'ús (component lazy) */}
+          <Suspense fallback={
+            <Card><CardContent className="flex items-center justify-center py-8"><Loader2 className="h-5 w-5 animate-spin text-muted-foreground" /></CardContent></Card>
+          }>
+            <AdminStats />
+          </Suspense>
 
           {/* Pre-translation Section */}
           <Card className="border-purple-200 bg-purple-50/30">

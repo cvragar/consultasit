@@ -547,3 +547,13 @@
 - [x] Headers de seguretat afegits: X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy
 - [x] Comprimir imatge OG: 874KB → 72KB (redimensionada a 1200x630 JPEG q85, pujada a CDN)
 - [x] 401 tests passen, 27 fitxers, 0 errors TypeScript
+
+## Sprint 21 - Millores majors (29/03/2026)
+- [x] Corregir text "Qui emet el part" → "Qui emet el comunicat" a Home.tsx (+ "Comunicat de baixa" en lloc de "Part de baixa")
+- [x] Afegir cas especial: Recaiguda post-alta ICAM (180 dies, IS3, eCap) - inserit a BD amb CA+ES
+- [x] Crear pàgina Guia interactiva pas a pas (diagnòstic → baixa → controls → alta) - /guia-it
+- [x] Crear secció FAQ / Preguntes freqüents organitzades per temàtica - /faq (6 categories, 19 preguntes CA+ES)
+- [x] Millorar PWA amb cache offline: SW v2 amb stale-while-revalidate per dades API (casos, docs, novetats), noves rutes precachejades (/guia-it, /faq, /novetats)
+- [x] Afegir estadístiques d'ús al panel Admin: totals, gràfics 30d (missatges, converses, nous usuaris), top 10 usuaris, converses recents
+- [x] Registrar rutes noves a App.tsx: /guia-it, /faq (lazy loaded)
+- [x] Escriure tests per a les noves funcionalitats (getAdminStats): 3 tests nous, 404 tests totals, 28 fitxers, 0 errors

@@ -33,6 +33,7 @@ import {
   updateUserTheme,
   saveSpecialCaseTranslation,
   saveDocumentTranslation,
+  getAdminStats,
 } from "./db";
 import { translateFieldsToEs, translateCaToEs } from "./translation";
 import { invokeLLM } from "./_core/llm";
@@ -581,6 +582,13 @@ IMPORTANT:
      * Pre-translate all special cases and documents to Spanish.
      * Admin only. Processes items without cached translations.
      */
+    getStats: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user.role !== "admin") {
+        throw new Error("Accés restringit: cal ser administrador");
+      }
+      return await getAdminStats();
+    }),
+
     pretranslateAll: protectedProcedure.mutation(async ({ ctx }) => {
       if (ctx.user.role !== "admin") {
         throw new Error("Accés restringit: cal ser administrador");

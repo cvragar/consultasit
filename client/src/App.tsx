@@ -21,6 +21,8 @@ const Admin = lazy(() => import("./pages/Admin"));
 const Favorits = lazy(() => import("./pages/Favorits"));
 const Novetats = lazy(() => import("./pages/Novetats"));
 const Reclamacions = lazy(() => import("./pages/Reclamacions"));
+const GuiaIT = lazy(() => import("./pages/GuiaIT"));
+const FAQ = lazy(() => import("./pages/FAQ"));
 
 /** Spinner de càrrega mínim per a les pàgines lazy */
 function PageLoader() {
@@ -50,6 +52,8 @@ function Router() {
         <Route path={"/favorits"} component={Favorits} />
         <Route path={"/novetats"} component={Novetats} />
         <Route path={"/reclamacions"} component={Reclamacions} />
+        <Route path={"/guia-it"} component={GuiaIT} />
+        <Route path={"/faq"} component={FAQ} />
         <Route path={"/404"} component={NotFound} />
         <Route component={NotFound} />
       </Switch>

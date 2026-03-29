@@ -308,7 +308,7 @@ export default function Home() {
               <ul className="text-xs text-red-800 dark:text-red-300 space-y-1.5 mb-4">
                 <li className="flex items-start gap-1.5"><span className="text-red-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Prestació:" : "Prestación:"} <strong>75% BR {language === "ca" ? "des del dia 2" : "desde el día 2"}</strong></li>
                 <li className="flex items-start gap-1.5"><span className="text-red-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Gestió:" : "Gestión:"} <strong>{language === "ca" ? "mútua col·laboradora" : "mutua colaboradora"}</strong></li>
-                <li className="flex items-start gap-1.5"><span className="text-red-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Part de baixa:" : "Parte de baja:"} <strong>{language === "ca" ? "mútua o eCap" : "mutua o eCap"}</strong></li>
+                <li className="flex items-start gap-1.5"><span className="text-red-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Comunicat de baixa:" : "Parte de baja:"} <strong>{language === "ca" ? "mútua o eCap" : "mutua o eCap"}</strong></li>
                 <li className="flex items-start gap-1.5"><span className="text-red-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Inclou:" : "Incluye:"} <strong>{language === "ca" ? "accident in itinere" : "accidente in itinere"}</strong></li>
               </ul>
               <div className="flex flex-wrap gap-1.5">
@@ -370,7 +370,7 @@ export default function Home() {
               <ul className="text-xs text-blue-800 dark:text-blue-300 space-y-1.5 mb-4">
                 <li className="flex items-start gap-1.5"><span className="text-blue-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Prestació:" : "Prestación:"} <strong>60% BR {language === "ca" ? "dies 4–20, 75% des del dia 21" : "días 4–20, 75% desde el día 21"}</strong></li>
                 <li className="flex items-start gap-1.5"><span className="text-blue-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Gestió:" : "Gestión:"} <strong>INSS {language === "ca" ? "o mútua" : "o mutua"}</strong></li>
-                <li className="flex items-start gap-1.5"><span className="text-blue-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Part de baixa:" : "Parte de baja:"} <strong>{language === "ca" ? "metge de família (eCap)" : "médico de familia (eCap)"}</strong></li>
+                <li className="flex items-start gap-1.5"><span className="text-blue-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Comunicat de baixa:" : "Parte de baja:"} <strong>{language === "ca" ? "metge de família (eCap)" : "médico de familia (eCap)"}</strong></li>
                 <li className="flex items-start gap-1.5"><span className="text-blue-500 mt-0.5 shrink-0">▸</span>{language === "ca" ? "Casos especials:" : "Casos especiales:"} <strong>{language === "ca" ? "menstruació, embaràs, donació d'òrgans" : "menstruación, embarazo, donación de órganos"}</strong></li>
               </ul>
               <div className="flex flex-wrap gap-1.5">
@@ -405,14 +405,14 @@ export default function Home() {
                   ["Prestació dies 4-20", "75% BR", "75% BR", "60% BR"],
                   ["Prestació des del dia 21", "75% BR", "75% BR", "75% BR"],
                   ["Qui gestiona la IT", "Mútua", "Mútua", "INSS o mútua"],
-                  ["Qui emet el part", "Mútua o eCap", "eCap (provisional)", "eCap"],
+                  ["Qui emet el comunicat", "Mútua o eCap", "eCap (provisional)", "eCap"],
                   ["Normativa principal", "Art. 156 LGSS", "Art. 157 LGSS + RD 1299/2006", "Art. 169 LGSS + RD 625/2014"],
                 ] : [
                   ["Prestación día 1", "75% BR", "75% BR", "No (días 1-3 sin prestación)"],
                   ["Prestación días 4-20", "75% BR", "75% BR", "60% BR"],
                   ["Prestación desde el día 21", "75% BR", "75% BR", "75% BR"],
                   ["Quién gestiona la IT", "Mutua", "Mutua", "INSS o mutua"],
-                  ["Quién emite el parte", "Mutua o eCap", "eCap (provisional)", "eCap"],
+                  ["Quién emite el parte de confirmación", "Mutua o eCap", "eCap (provisional)", "eCap"],
                   ["Normativa principal", "Art. 156 LGSS", "Art. 157 LGSS + RD 1299/2006", "Art. 169 LGSS + RD 625/2014"],
                 ]).map(([aspect, at, mp, cc]) => (
                   <tr key={aspect} className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800">

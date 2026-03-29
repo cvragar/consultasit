@@ -653,3 +653,88 @@ export async function saveDocumentTranslation(
     })
     .where(eq(documents.id, id));
 }
+
+// ─── Estadístiques d'ús per al panel Admin ──────────────────────────────────
+
+export async function getAdminStats() {
+  const db = await getDb();
+  if (!db) throw new Error("Database not initialized");
+
+  // Total counts
+  const [docsCount] = await db.select({ count: sql<number>`COUNT(*)` }).from(documents);
+  const [casesCount] = await db.select({ count: sql<number>`COUNT(*)` }).from(specialCases);
+  const [usersCount] = await db.select({ count: sql<number>`COUNT(*)` }).from(users);
+  const [convsCount] = await db.select({ count: sql<number>`COUNT(*)` }).from(conversations);
+  const [msgsCount] = await db.select({ count: sql<number>`COUNT(*)` }).from(messages);
+
+  // Messages per day (last 30 days)
+  const messagesPerDay = await db.select({
+    date: sql<string>`DATE(${messages.createdAt})`.as("date"),
+    count: sql<number>`COUNT(*)`.as("count"),
+  })
+    .from(messages)
+    .where(sql`${messages.createdAt} >= DATE_SUB(NOW(), INTERVAL 30 DAY)`)
+    .groupBy(sql`DATE(${messages.createdAt})`)
+    .orderBy(sql`DATE(${messages.createdAt})`);
+
+  // Conversations per day (last 30 days)
+  const conversationsPerDay = await db.select({
+    date: sql<string>`DATE(${conversations.createdAt})`.as("date"),
+    count: sql<number>`COUNT(*)`.as("count"),
+  })
+    .from(conversations)
+    .where(sql`${conversations.createdAt} >= DATE_SUB(NOW(), INTERVAL 30 DAY)`)
+    .groupBy(sql`DATE(${conversations.createdAt})`)
+    .orderBy(sql`DATE(${conversations.createdAt})`);
+
+  // New users per day (last 30 days)
+  const usersPerDay = await db.select({
+    date: sql<string>`DATE(${users.createdAt})`.as("date"),
+    count: sql<number>`COUNT(*)`.as("count"),
+  })
+    .from(users)
+    .where(sql`${users.createdAt} >= DATE_SUB(NOW(), INTERVAL 30 DAY)`)
+    .groupBy(sql`DATE(${users.createdAt})`)
+    .orderBy(sql`DATE(${users.createdAt})`);
+
+  // Most active users (top 10 by messages)
+  const topUsers = await db.select({
+    userId: conversations.userId,
+    userName: users.name,
+    messageCount: sql<number>`COUNT(${messages.id})`.as("messageCount"),
+    conversationCount: sql<number>`COUNT(DISTINCT ${conversations.id})`.as("conversationCount"),
+  })
+    .from(messages)
+    .innerJoin(conversations, eq(messages.conversationId, conversations.id))
+    .innerJoin(users, eq(conversations.userId, users.id))
+    .groupBy(conversations.userId, users.name)
+    .orderBy(sql`COUNT(${messages.id}) DESC`)
+    .limit(10);
+
+  // Recent conversations (last 20)
+  const recentConversations = await db.select({
+    id: conversations.id,
+    title: conversations.title,
+    userName: users.name,
+    createdAt: conversations.createdAt,
+  })
+    .from(conversations)
+    .innerJoin(users, eq(conversations.userId, users.id))
+    .orderBy(sql`${conversations.createdAt} DESC`)
+    .limit(20);
+
+  return {
+    totals: {
+      documents: Number(docsCount.count),
+      specialCases: Number(casesCount.count),
+      users: Number(usersCount.count),
+      conversations: Number(convsCount.count),
+      messages: Number(msgsCount.count),
+    },
+    messagesPerDay,
+    conversationsPerDay,
+    usersPerDay,
+    topUsers,
+    recentConversations,
+  };
+}
