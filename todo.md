@@ -533,3 +533,9 @@
 - [x] H1 al hero section; header canviat de h1 a span per evitar H1 duplicat
 - [x] H2 a Features (sr-only), Contingències i Què inclou; + noscript amb H1/H2 per crawlers
 - [x] Keywords bilingües (CA+ES) al index.html i dinàmiques via useSEO; schema.org JSON-LD afegit
+
+## Sprint 19 - VITE_APP_TITLE SEO + Sitemap.xml (29/03/2026)
+- [x] VITE_APP_TITLE: és built-in, cal canviar-lo manualment des de Settings > General
+- [x] Sitemap dinàmic creat (server/sitemap.ts): 6 rutes públiques amb lastmod real de la BD
+- [x] robots.txt ja existia amb referència al sitemap; sitemap estàtic eliminat (ara és dinàmic)
+- [x] 6 tests nous per al sitemap (401 tests totals, 27 fitxers, 0 errors)

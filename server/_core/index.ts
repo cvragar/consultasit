@@ -9,6 +9,7 @@ import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
 import { uploadRouter } from "../uploadRouter";
 import { streamRouter } from "../streamRouter";
+import { sitemapRouter } from "../sitemap";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -37,6 +38,8 @@ async function startServer() {
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
   // OAuth callback under /api/oauth/callback
   registerOAuthRoutes(app);
+  // Sitemap dinàmic (SEO)
+  app.use(sitemapRouter);
   // Upload router per a pujada de PDFs (admin)
   app.use("/api/upload", uploadRouter);
   // Stream router per a respostes en temps real del xat
