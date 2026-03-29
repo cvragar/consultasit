@@ -6,6 +6,8 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { InstallBanner } from "./components/InstallBanner";
+import { FeedbackModal, FeedbackButton } from "./components/FeedbackModal";
+import { useState } from "react";
 import Home from "./pages/Home";
 import Chat from "./pages/Chat";
 import CasosEspeciales from "./pages/CasosEspeciales";
@@ -38,6 +40,8 @@ function Router() {
 }
 
 function App() {
+  const [feedbackOpen, setFeedbackOpen] = useState(false);
+
   return (
     <ErrorBoundary>
       <LanguageProvider>
@@ -46,6 +50,8 @@ function App() {
             <Toaster />
             <Router />
             <InstallBanner />
+            <FeedbackButton onClick={() => setFeedbackOpen(true)} />
+            <FeedbackModal open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
           </TooltipProvider>
         </ThemeProvider>
       </LanguageProvider>

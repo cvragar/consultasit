@@ -1,5 +1,6 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
+import { feedbackRouter } from "./routers/feedback";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
@@ -652,8 +653,9 @@ IMPORTANT:
       };
     }),
   }),
+  feedback: feedbackRouter,
 });
 
-// ===== FAVORITES =====
+// ===== FEEDBACK =====
 
 export type AppRouter = typeof appRouter;

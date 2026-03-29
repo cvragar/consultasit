@@ -503,3 +503,15 @@
 ## Sprint 14b - Ajust horari mode Guàrdia
 - [x] Canviar horari de 21:00–08:00 a 20:00–08:00 al ThemeContext i ThemeSwitcher
 - [x] Millorar text del desplegable: desc "Fosc de 20:00 a 08:00 h" + nota expandida amb dues línies
+
+## Sprint 15 - Formulari de Feedback/Contacte (29/03/2026)
+- [x] Instal·lar nodemailer i configurar credencials Gmail (GMAIL_APP_PASSWORD)
+- [x] Crear server/email.ts amb helper sendFeedbackEmail (SMTP Gmail, port 587 TLS)
+- [x] Crear server/routers/feedback.ts amb procediment feedback.send (validació magic bytes server-side)
+- [x] Crear FeedbackModal.tsx amb formulari (tipus, descripció, nom, email, imatges + validació magic bytes client-side)
+- [x] Validació de seguretat: magic bytes client-side + server-side per a JPEG/PNG/GIF/WEBP (rebutja PHP, PDF, scripts)
+- [x] Botó flotant "Contacte" a App.tsx (visible a totes les pàgines, bilingüe CA/ES)
+- [x] Integrar feedbackRouter al router principal (server/routers.ts, línia 656)
+- [x] Tests vitest per a la validació de magic bytes i els assumptes d'email (15/15 passen)
+- [x] Configurar GMAIL_APP_PASSWORD a les variables d'entorn del projecte
+- [x] 395 tests en total, tots passen, 0 errors TypeScript
