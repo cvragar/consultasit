@@ -22,9 +22,12 @@ export default function Home() {
       ? "Consultes IT — Normativa d'Incapacitat Temporal per a Metges"
       : "Consultas IT — Normativa de Incapacidad Temporal para Médicos",
     description: language === "ca"
-      ? "Plataforma especialitzada en normativa d'IT per a professionals sanitaris. Casos especials, calculadora, documentació i xat amb IA."
-      : "Plataforma especializada en normativa de IT para profesionales sanitarios. Casos especiales, calculadora, documentación y chat con IA.",
+      ? "Plataforma especialitzada en normativa d'Incapacitat Temporal (IT) per a professionals sanitaris. Casos especials, calculadora de durada, documentació oficial i xat amb IA especialitzada."
+      : "Plataforma especializada en normativa de Incapacidad Temporal (IT) para profesionales sanitarios. Casos especiales, calculadora de duración, documentación oficial y chat con IA especializada.",
     canonicalPath: "/",
+    keywords: language === "ca"
+      ? "incapacitat temporal, IT, baixa mèdica, metge de família, INSS, mútua, contingència comuna, accident de treball, malaltia professional, normativa IT, RD 625/2014, LGSS, eCap, Catalunya, calculadora IT, casos especials"
+      : "incapacidad temporal, IT, baja médica, médico de familia, INSS, mutua, contingencia común, accidente de trabajo, enfermedad profesional, normativa IT, RD 625/2014, LGSS, eCap, Cataluña, calculadora IT, casos especiales",
   });
 
   const features = [
@@ -85,7 +88,7 @@ export default function Home() {
             <div className="flex items-center gap-2 shrink-0">
               <Shield className="h-7 w-7 text-blue-600" />
               <div>
-                <h1 className="text-lg font-bold text-gray-900 dark:text-white leading-tight">{t.nav.title}</h1>
+                <span className="text-lg font-bold text-gray-900 dark:text-white leading-tight" role="heading" aria-level={2}>{t.nav.title}</span>
                 <p className="text-xs text-gray-500 dark:text-gray-400 hidden sm:block">{t.nav.subtitle}</p>
               </div>
             </div>
@@ -256,6 +259,7 @@ export default function Home() {
 
       {/* Features Grid */}
       <section className="container py-8 sm:py-16">
+        <h2 className="sr-only">{language === "ca" ? "Eines i funcionalitats de la plataforma" : "Herramientas y funcionalidades de la plataforma"}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {features.map((feature) => {
             const Icon = feature.icon;

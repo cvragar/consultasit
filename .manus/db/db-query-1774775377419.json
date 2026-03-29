@@ -1,0 +1,40 @@
+{
+  "query": "SELECT id, title, titleEs, LEFT(descriptionEs, 100) as descEs_preview FROM special_cases LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT id, title, titleEs, LEFT(descriptionEs, 100) as descEs_preview FROM special_cases LIMIT 5;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "Menstruació incapacitant",
+      "titleEs": "Menstruación incapacitante",
+      "descEs_preview": "Desde el 1 de junio de 2023, la **Ley Orgánica 1/2023, de 28 de febrero** (BOE núm. 51, 01/03/2023) "
+    },
+    {
+      "id": "2",
+      "title": "Interrupció voluntària de l'embaràs (IVE)",
+      "titleEs": "Interrupción voluntaria del embarazo (IVE)",
+      "descEs_preview": "Desde el 1 de junio de 2023, la **Ley Orgánica 1/2023, de 28 de febrero** (BOE-A-2023-5364) establec"
+    },
+    {
+      "id": "3",
+      "title": "Gestació a partir de la setmana 39",
+      "titleEs": "Gestación a partir de la semana 39",
+      "descEs_preview": "Desde el 1 de junio de 2023, la **Ley Orgánica 1/2023, de 28 de febrero** (BOE-A-2023-5364) establec"
+    },
+    {
+      "id": "4",
+      "title": "Donació d'òrgans",
+      "titleEs": "Donación de órganos",
+      "descEs_preview": "La **donación de órganos o tejidos en vida** para el trasplante es una **situación especial de IT po"
+    },
+    {
+      "id": "5",
+      "title": "Baixes retroactives",
+      "titleEs": "Bajas retroactivas",
+      "descEs_preview": "Las **bajas con efecto retroactivo** (partes de baja emitidos con fecha anterior a la visita médica)"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\ttitleEs\tdescEs_preview\n1\tMenstruació incapacitant\tMenstruación incapacitante\tDesde el 1 de junio de 2023, la **Ley Orgánica 1/2023, de 28 de febrero** (BOE núm. 51, 01/03/2023) \n2\tInterrupció voluntària de l'embaràs (IVE)\tInterrupción voluntaria del embarazo (IVE)\tDesde el 1 de junio de 2023, la **Ley Orgánica 1/2023, de 28 de febrero** (BOE-A-2023-5364) establec\n3\tGestació a partir de la setmana 39\tGestación a partir de la semana 39\tDesde el 1 de junio de 2023, la **Ley Orgánica 1/2023, de 28 de febrero** (BOE-A-2023-5364) establec\n4\tDonació d'òrgans\tDonación de órganos\tLa **donación de órganos o tejidos en vida** para el trasplante es una **situación especial de IT po\n5\tBaixes retroactives\tBajas retroactivas\tLas **bajas con efecto retroactivo** (partes de baja emitidos con fecha anterior a la visita médica)\n",
+  "stderr": "",
+  "execution_time_ms": 59
+}

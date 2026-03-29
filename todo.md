@@ -522,3 +522,14 @@
 - [x] Corregir colors de la Calculadora d'IT en mode fosc (gradient fosc, títols blau clar, resultats amb dark variants)
 - [x] Corregir error de sintaxi a email.ts (template literal niat amb apòstrof)
 - [x] 395 tests passen, 0 errors TypeScript
+
+## Sprint 17 - Executar pre-traducció ES (29/03/2026)
+- [x] Verificar registres sense traducció ES a la BD (25 casos + 12 docs, tots complets)
+- [x] No cal executar: tots els 37 registres ja tenen traduccions ES completes
+- [x] Qualitat verificada: traduccions correctes (ex: Menstruación incapacitante, Bajas retroactivas, etc.)
+
+## Sprint 18 - Correccions SEO pàgina principal (29/03/2026)
+- [x] Títol de pàgina: 57 caràcters al index.html; useSEO actualitza dinàmicament amb títol bilingüe
+- [x] H1 al hero section; header canviat de h1 a span per evitar H1 duplicat
+- [x] H2 a Features (sr-only), Contingències i Què inclou; + noscript amb H1/H2 per crawlers
+- [x] Keywords bilingües (CA+ES) al index.html i dinàmiques via useSEO; schema.org JSON-LD afegit

@@ -1,0 +1,18 @@
+{
+  "query": "SELECT \n  COUNT(*) as total_cases,\n  SUM(CASE WHEN titleEs IS NULL OR titleEs = '' THEN 1 ELSE 0 END) as missing_titleEs,\n  SUM(CASE WHEN descriptionEs IS NULL OR descriptionEs = '' THEN 1 ELSE 0 END) as missing_descEs,\n  SUM(CASE WHEN legalBasis IS NOT NULL AND legalBasis != '' AND (legalBasisEs IS NULL OR legalBasisEs = '') THEN 1 ELSE 0 END) as missing_legalEs,\n  SUM(CASE WHEN `procedure` IS NOT NULL AND `procedure` != '' AND (procedureEs IS NULL OR procedureEs = '') THEN 1 ELSE 0 END) as missing_procEs,\n  SUM(CASE WHEN examples IS NOT NULL AND examples != '' AND (examplesEs IS NULL OR examplesEs = '') THEN 1 ELSE 0 END) as missing_examplesEs\nFROM special_cases;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT \n  COUNT(*) as total_cases,\n  SUM(CASE WHEN titleEs IS NULL OR titleEs = '' THEN 1 ELSE 0 END) as missing_titleEs,\n  SUM(CASE WHEN descriptionEs IS NULL OR descriptionEs = '' THEN 1 ELSE 0 END) as missing_descEs,\n  SUM(CASE WHEN legalBasis IS NOT NULL AND legalBasis != '' AND (legalBasisEs IS NULL OR legalBasisEs = '') THEN 1 ELSE 0 END) as missing_legalEs,\n  SUM(CASE WHEN `procedure` IS NOT NULL AND `procedure` != '' AND (procedureEs IS NULL OR procedureEs = '') THEN 1 ELSE 0 END) as missing_procEs,\n  SUM(CASE WHEN examples IS NOT NULL AND examples != '' AND (examplesEs IS NULL OR examplesEs = '') THEN 1 ELSE 0 END) as missing_examplesEs\nFROM special_cases;",
+  "rows": [
+    {
+      "total_cases": "25",
+      "missing_titleEs": "0",
+      "missing_descEs": "0",
+      "missing_legalEs": "0",
+      "missing_procEs": "0",
+      "missing_examplesEs": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "total_cases\tmissing_titleEs\tmissing_descEs\tmissing_legalEs\tmissing_procEs\tmissing_examplesEs\n25\t0\t0\t0\t0\t0\n",
+  "stderr": "",
+  "execution_time_ms": 60
+}

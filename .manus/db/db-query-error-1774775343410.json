@@ -1,0 +1,8 @@
+{
+  "query": "SELECT \n  COUNT(*) as total_cases,\n  SUM(CASE WHEN title_es IS NULL OR title_es = '' THEN 1 ELSE 0 END) as missing_title_es,\n  SUM(CASE WHEN description_es IS NULL OR description_es = '' THEN 1 ELSE 0 END) as missing_desc_es,\n  SUM(CASE WHEN legal_basis IS NOT NULL AND legal_basis != '' AND (legal_basis_es IS NULL OR legal_basis_es = '') THEN 1 ELSE 0 END) as missing_legal_es,\n  SUM(CASE WHEN procedure_steps IS NOT NULL AND procedure_steps != '' AND (procedure_es IS NULL OR procedure_es = '') THEN 1 ELSE 0 END) as missing_proc_es,\n  SUM(CASE WHEN examples IS NOT NULL AND examples != '' AND (examples_es IS NULL OR examples_es = '') THEN 1 ELSE 0 END) as missing_examples_es\nFROM special_cases;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT \n  COUNT(*) as total_cases,\n  SUM(CASE WHEN title_es IS NULL OR title_es = '' THEN 1 ELSE 0 END) as missing_title_es,\n  SUM(CASE WHEN description_es IS NULL OR description_es = '' THEN 1 ELSE 0 END) as missing_desc_es,\n  SUM(CASE WHEN legal_basis IS NOT NULL AND legal_basis != '' AND (legal_basis_es IS NULL OR legal_basis_es = '') THEN 1 ELSE 0 END) as missing_legal_es,\n  SUM(CASE WHEN procedure_steps IS NOT NULL AND procedure_steps != '' AND (procedure_es IS NULL OR procedure_es = '') THEN 1 ELSE 0 END) as missing_proc_es,\n  SUM(CASE WHEN examples IS NOT NULL AND examples != '' AND (examples_es IS NULL OR examples_es = '') THEN 1 ELSE 0 END) as missing_examples_es\nFROM special_cases;",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1054 (42S22) at line 1: Unknown column 'title_es' in ''"
+  ]
+}

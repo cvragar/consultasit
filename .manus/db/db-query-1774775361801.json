@@ -1,0 +1,16 @@
+{
+  "query": "SELECT \n  COUNT(*) as total_docs,\n  SUM(CASE WHEN titleEs IS NULL OR titleEs = '' THEN 1 ELSE 0 END) as missing_titleEs,\n  SUM(CASE WHEN summary IS NOT NULL AND summary != '' AND (summaryEs IS NULL OR summaryEs = '') THEN 1 ELSE 0 END) as missing_summaryEs,\n  SUM(CASE WHEN content IS NOT NULL AND content != '' AND (contentEs IS NULL OR contentEs = '') THEN 1 ELSE 0 END) as missing_contentEs\nFROM documents;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user qC6e8XA9uYDpdWY.4aab5d30693d --database DirVLPm6UeFJi3utFGbgZe --execute SELECT \n  COUNT(*) as total_docs,\n  SUM(CASE WHEN titleEs IS NULL OR titleEs = '' THEN 1 ELSE 0 END) as missing_titleEs,\n  SUM(CASE WHEN summary IS NOT NULL AND summary != '' AND (summaryEs IS NULL OR summaryEs = '') THEN 1 ELSE 0 END) as missing_summaryEs,\n  SUM(CASE WHEN content IS NOT NULL AND content != '' AND (contentEs IS NULL OR contentEs = '') THEN 1 ELSE 0 END) as missing_contentEs\nFROM documents;",
+  "rows": [
+    {
+      "total_docs": "12",
+      "missing_titleEs": "0",
+      "missing_summaryEs": "0",
+      "missing_contentEs": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "total_docs\tmissing_titleEs\tmissing_summaryEs\tmissing_contentEs\n12\t0\t0\t0\n",
+  "stderr": "",
+  "execution_time_ms": 56
+}
