@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { X, Download, Share, Plus } from "lucide-react";
+import { X, Download, Share, Plus, Smartphone } from "lucide-react";
 import { useT } from "@/contexts/LanguageContext";
 
 /**
@@ -8,8 +8,10 @@ import { useT } from "@/contexts/LanguageContext";
  * Android/Chrome: captura l'event `beforeinstallprompt` i mostra un botó
  * que activa el diàleg natiu d'instal·lació.
  *
- * iOS/Safari: detecta iOS i mostra instruccions manuals (Compartir → Afegir
- * a la pantalla d'inici), ja que Safari no suporta `beforeinstallprompt`.
+ * iOS/Safari (iOS 26+): detecta iOS i mostra instruccions actualitzades.
+ * A partir d'iOS 26, els llocs afegits a la pantalla d'inici s'obren
+ * automàticament com a web apps (mode standalone) per defecte, sense
+ * necessitat de manifest amb display:standalone.
  *
  * El banner es descarta permanentment un cop l'usuari el tanca o instal·la
  * l'app (es guarda a localStorage).
@@ -83,7 +85,7 @@ export function InstallBanner() {
   if (!showAndroid && !showIOS) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 pb-safe">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-4" style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}>
       <div className="max-w-md mx-auto bg-card border border-border rounded-2xl shadow-2xl p-4 flex flex-col gap-3">
         {/* Capçalera */}
         <div className="flex items-start justify-between gap-3">
@@ -122,47 +124,62 @@ export function InstallBanner() {
           </button>
         )}
 
-        {/* iOS: instruccions manuals */}
+        {/* iOS: instruccions actualitzades per a iOS 26+ */}
         {showIOS && (
           <div className="bg-muted/60 rounded-xl p-3 space-y-2">
             <p className="text-xs font-medium text-foreground">
-              {ca ? "Com instal·lar a iOS:" : "Cómo instalar en iOS:"}
+              {ca ? "Com instal·lar a iOS (26 o superior):" : "Cómo instalar en iOS (26 o superior):"}
             </p>
             <ol className="space-y-1.5">
               <li className="flex items-center gap-2 text-xs text-muted-foreground">
                 <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-[10px]">1</span>
                 <span className="flex items-center gap-1">
-                  {ca ? "Toca" : "Toca"}
-                  <Share className="h-3.5 w-3.5 text-blue-500 inline" />
-                  <strong>{ca ? "Compartir" : "Compartir"}</strong>
-                  {ca ? " a la barra de Safari" : " en la barra de Safari"}
+                  {ca ? "Obre aquesta pàgina a" : "Abre esta página en"}
+                  <strong> Safari</strong>
                 </span>
               </li>
               <li className="flex items-center gap-2 text-xs text-muted-foreground">
                 <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-[10px]">2</span>
                 <span className="flex items-center gap-1">
-                  {ca ? "Selecciona" : "Selecciona"}
-                  <Plus className="h-3.5 w-3.5 text-blue-500 inline" />
-                  <strong>{ca ? '"Afegir a l\'inici"' : '"Añadir a inicio"'}</strong>
+                  {ca ? "Toca" : "Toca"}
+                  <Share className="h-3.5 w-3.5 text-blue-500 inline" />
+                  <strong>{ca ? " Compartir" : " Compartir"}</strong>
+                  {ca ? " (barra inferior)" : " (barra inferior)"}
                 </span>
               </li>
               <li className="flex items-center gap-2 text-xs text-muted-foreground">
                 <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-[10px]">3</span>
-                <span>
-                  {ca
-                    ? 'Confirma tocant "Afegir" a dalt a la dreta'
-                    : 'Confirma tocando "Añadir" arriba a la derecha'}
+                <span className="flex items-center gap-1">
+                  {ca ? "Toca" : "Toca"}
+                  <Plus className="h-3.5 w-3.5 text-blue-500 inline" />
+                  <strong>{ca ? ' "Afegir a la pantalla d\'inici"' : ' "Añadir a pantalla de inicio"'}</strong>
+                </span>
+              </li>
+              <li className="flex items-center gap-2 text-xs text-muted-foreground">
+                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-[10px]">4</span>
+                <span className="flex items-center gap-1">
+                  {ca ? "Toca" : "Toca"}
+                  <strong>{ca ? ' "Afegir"' : ' "Añadir"'}</strong>
+                  {ca ? " a dalt a la dreta" : " arriba a la derecha"}
                 </span>
               </li>
             </ol>
+            <div className="flex items-start gap-1.5 mt-2 pt-2 border-t border-border/50">
+              <Smartphone className="h-3.5 w-3.5 text-green-500 shrink-0 mt-0.5" />
+              <p className="text-[11px] text-muted-foreground">
+                {ca
+                  ? "A iOS 26+, l'app s'obrirà automàticament en mode pantalla completa (sense barra de Safari), com una app nativa."
+                  : "En iOS 26+, la app se abrirá automáticamente en modo pantalla completa (sin barra de Safari), como una app nativa."}
+              </p>
+            </div>
           </div>
         )}
 
         {/* Beneficis */}
         <p className="text-[11px] text-muted-foreground text-center">
           {ca
-            ? "Funciona parcialment sense connexió · Accés instantani · Sense publicitat"
-            : "Funciona parcialmente sin conexión · Acceso instantáneo · Sin publicidad"}
+            ? "Funciona parcialment sense connexió · Notificacions · Sense publicitat"
+            : "Funciona parcialmente sin conexión · Notificaciones · Sin publicidad"}
         </p>
       </div>
     </div>

@@ -284,7 +284,7 @@ export default function Admin() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-background/90 backdrop-blur-sm sticky top-0 z-10">
+      <header className="border-b bg-background/90 backdrop-blur-sm sticky top-0 z-10 sticky-safe">
         <div className="container py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -625,7 +625,7 @@ export default function Admin() {
                   {adminDocs.map(doc => (
                     <div
                       key={doc.id}
-                      className="flex items-center justify-between p-3 rounded-lg border bg-white hover:bg-gray-50 transition-colors"
+                      className="flex items-center justify-between p-3 rounded-lg border bg-card hover:bg-muted transition-colors"
                     >
                       <div className="flex-1 min-w-0 mr-3">
                         <div className="flex items-center gap-2 flex-wrap">

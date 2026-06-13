@@ -138,7 +138,7 @@ export default function Novetats() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-background/90 backdrop-blur-sm sticky top-0 z-20">
+      <header className="border-b bg-background/90 backdrop-blur-sm sticky top-0 z-20 sticky-safe">
         <div className="container py-3">
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2 shrink-0">

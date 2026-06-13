@@ -81,7 +81,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-950">
       {/* Header responsive */}
-      <header className="border-b bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm sticky top-0 z-20">
+      <header className="border-b bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm sticky top-0 z-20 sticky-safe">
         <div className="container py-3">
           <div className="flex items-center justify-between gap-2">
             {/* Logo */}
@@ -99,7 +99,7 @@ export default function Home() {
               <LanguageSwitcher />
               {isAuthenticated ? (
                 <>
-                  <span className="text-sm text-gray-600 truncate max-w-[140px]">
+                  <span className="text-sm text-muted-foreground truncate max-w-[140px]">
                     {user?.name?.split(" ")[0] || t.nav.user}
                   </span>
                   <Link href="/novetats">
@@ -179,7 +179,7 @@ export default function Home() {
           {/* Menú mòbil desplegable */}
           {mobileMenuOpen && isAuthenticated && (
             <div className="md:hidden border-t mt-3 pt-3 pb-1 space-y-1">
-              <p className="text-xs text-gray-500 px-1 mb-2">
+              <p className="text-xs text-muted-foreground px-1 mb-2">
                 {t.nav.hello}, {user?.name || t.nav.user}
               </p>
               <Link href="/novetats" onClick={() => setMobileMenuOpen(false)}>
@@ -496,7 +496,7 @@ export default function Home() {
             ]).map((section) => (
               <div key={section.title}>
                 <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-sm sm:text-base">{section.title}</h4>
-                <ul className="text-gray-700 space-y-1">
+                <ul className="text-foreground/80 space-y-1">
                   {section.items.map((item) => (
                     <li key={item} className="text-xs sm:text-sm flex items-start gap-1.5">
                       <span className="text-blue-500 mt-0.5 shrink-0">•</span>
@@ -512,7 +512,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t bg-white dark:bg-gray-900 py-6">
-        <div className="container text-center text-xs sm:text-sm text-gray-500 space-y-1">
+        <div className="container text-center text-xs sm:text-sm text-muted-foreground space-y-1">
           <p className="dark:text-gray-400">© 2026 {t.nav.title} — {language === "ca" ? "Plataforma especialitzada en Incapacitat Temporal" : "Plataforma especializada en Incapacidad Temporal"}</p>
           <p className="dark:text-gray-400">{language === "ca" ? "Informació basada en normativa vigent. Consulta sempre amb professionals qualificats." : "Información basada en normativa vigente. Consulta siempre con profesionales cualificados."}</p>
         </div>

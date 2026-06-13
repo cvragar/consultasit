@@ -312,7 +312,7 @@ export default function Chat() {
         <Card className="p-8 max-w-md text-center">
           <Shield className="h-16 w-16 text-blue-600 mx-auto mb-4" />
           <h2 className="text-2xl font-bold mb-2">{language === "ca" ? "Inicia sessió per continuar" : "Inicia sesión para continuar"}</h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-muted-foreground mb-6">
             {language === "ca" ? "Necessites iniciar sessió per utilitzar el xat amb IA especialitzada en IT" : "Necesitas iniciar sesión para utilizar el chat con IA especializada en IT"}
           </p>
           <Button asChild className="w-full">
@@ -375,7 +375,7 @@ export default function Chat() {
                   className={`group flex items-center gap-2 p-3 rounded-lg cursor-pointer transition-colors ${
                     currentConversationId === conv.id
                       ? "bg-blue-100 text-blue-900"
-                      : "hover:bg-gray-100"
+                      : "hover:bg-muted"
                   }`}
                 >
                   <div
@@ -424,7 +424,7 @@ export default function Chat() {
       {/* Àrea principal del xat */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* Capçalera */}
-        <header className="border-b bg-background/90 dark:bg-card/90 backdrop-blur-sm sticky top-0 z-10">
+        <header className="border-b bg-background/90 dark:bg-card/90 backdrop-blur-sm sticky top-0 z-10 sticky-safe">
           <div className="px-3 sm:px-4 py-3">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2 min-w-0">
@@ -552,7 +552,7 @@ export default function Chat() {
                       className={`max-w-[85%] p-4 ${
                         msg.role === "user"
                           ? "bg-blue-600 text-white"
-                          : "bg-white border-gray-200"
+                          : "bg-card border-border dark:bg-card"
                       }`}
                     >
                       <div className="prose prose-sm max-w-none">
@@ -577,7 +577,7 @@ export default function Chat() {
                       </div>
                       {msg.sources && msg.sources.length > 0 && (
                         <div className="mt-3 pt-3 border-t border-gray-200">
-                          <p className="text-xs font-semibold text-gray-600 mb-1">
+                          <p className="text-xs font-semibold text-muted-foreground mb-1">
                             {language === "ca" ? "Fonts consultades:" : "Fuentes consultadas:"}
                           </p>
                           <div className="flex flex-wrap gap-1">
@@ -602,7 +602,7 @@ export default function Chat() {
         </div>
 
         {/* Àrea d'entrada */}
-        <div className="border-t bg-white p-4" style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}>
+        <div className="border-t bg-background dark:bg-card p-4" style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}>
           <div className="container max-w-4xl">
             <div className="flex gap-2">
               <Input

@@ -2,35 +2,37 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle, Home } from "lucide-react";
 import { useLocation } from "wouter";
+import { useT } from "@/contexts/LanguageContext";
 
 export default function NotFound() {
   const [, setLocation] = useLocation();
+  const { language } = useT();
 
   const handleGoHome = () => {
     setLocation("/");
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
-      <Card className="w-full max-w-lg mx-4 shadow-lg border-0 bg-white/80 backdrop-blur-sm">
+    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 dark:from-gray-950 dark:to-gray-900">
+      <Card className="w-full max-w-lg mx-4 shadow-lg border-0 bg-card/80 backdrop-blur-sm">
         <CardContent className="pt-8 pb-8 text-center">
           <div className="flex justify-center mb-6">
             <div className="relative">
-              <div className="absolute inset-0 bg-red-100 rounded-full animate-pulse" />
+              <div className="absolute inset-0 bg-red-100 dark:bg-red-900/30 rounded-full animate-pulse" />
               <AlertCircle className="relative h-16 w-16 text-red-500" />
             </div>
           </div>
 
-          <h1 className="text-4xl font-bold text-slate-900 mb-2">404</h1>
+          <h1 className="text-4xl font-bold text-foreground mb-2">404</h1>
 
-          <h2 className="text-xl font-semibold text-slate-700 mb-4">
-            Pàgina no trobada
+          <h2 className="text-xl font-semibold text-foreground/80 mb-4">
+            {language === "ca" ? "Pàgina no trobada" : "Página no encontrada"}
           </h2>
 
-          <p className="text-slate-600 mb-8 leading-relaxed">
-            La pàgina que esteu buscant no existeix.
+          <p className="text-muted-foreground mb-8 leading-relaxed">
+            {language === "ca" ? "La pàgina que esteu buscant no existeix." : "La página que estás buscando no existe."}
             <br />
-            Pot ser que s'hagi mogut o eliminat.
+            {language === "ca" ? "Pot ser que s'hagi mogut o eliminat." : "Puede que se haya movido o eliminado."}
           </p>
 
           <div
@@ -42,7 +44,7 @@ export default function NotFound() {
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
             >
               <Home className="w-4 h-4 mr-2" />
-              Tornar a l'inici
+              {language === "ca" ? "Tornar a l'inici" : "Volver al inicio"}
             </Button>
           </div>
         </CardContent>

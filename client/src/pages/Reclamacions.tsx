@@ -26,6 +26,7 @@ import {
   Gavel,
 } from "lucide-react";
 import { Link } from "wouter";
+import { VIES_ES } from "./reclamacions-data-es";
 
 // ─── Dades de les vies de reclamació ────────────────────────────────────────
 
@@ -396,7 +397,7 @@ export default function Reclamacions() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-background/90 backdrop-blur-sm sticky top-0 z-20">
+      <header className="border-b bg-background/90 backdrop-blur-sm sticky top-0 z-20 sticky-safe">
         <div className="container py-3">
             <div className="flex items-center justify-between gap-2 text-sm text-gray-500">
             <div className="flex items-center gap-2">
@@ -506,7 +507,7 @@ export default function Reclamacions() {
       {/* Vies de reclamació */}
       <section className="container pb-16">
         <div className="max-w-4xl mx-auto space-y-6">
-          {VIES.map((via) => {
+          {(language === "ca" ? VIES : VIES_ES).map((via) => {
             const Icon = via.icon;
             return (
               <Card key={via.id} className={`border-l-4 ${via.borderColor} shadow-sm`}>

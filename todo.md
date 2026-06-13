@@ -567,3 +567,13 @@
 - [x] Revisar bibliografia recent: 3 nous casos afegits (Ley 6/2024 donants òrgans, Ley 2/2025 IP no extinció contracte, altes progressives 2026)
 - [x] Proves d'usabilitat: navegació OK, mode fosc OK, Guia IT OK, FAQ OK, cerca semàntica OK, 29 casos visibles
 - [x] Escriure tests: 7 tests nous semanticSearch, actualitzats counts (29 casos, 166 diagnòstics). 411 tests totals, 29 fitxers, 0 errors
+
+## Sprint 23 - Revisió profunda, PWA iOS 26.5.1, traducció reclamacions (13/06/2026)
+- [x] Deep code review: identify bugs and inconsistencies across the codebase
+- [x] Fix iPhone 17 Pro Max display issues (viewport, safe areas, layout overflow, dynamic island)
+- [x] Update PWA installation instructions for iOS 26.5.1 (new PWA support changes)
+- [x] Improve translation: reclamacions section content not translated to ES (VIES_ES created)
+- [x] Improve translation: NotFound page translated, dark mode colors fixed across all pages
+- [x] Fix dark mode: bg-white hardcoded → bg-card, text-gray → text-muted-foreground (Chat, Admin, Home)
+- [x] Fix accessibility: viewport maximum-scale=1 → maximum-scale=5
+- [x] All 411 tests pass, 0 TypeScript errors
