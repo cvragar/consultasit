@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { X, Download, Share, Plus, Smartphone } from "lucide-react";
 import { useT } from "@/contexts/LanguageContext";
 
@@ -15,6 +15,12 @@ import { useT } from "@/contexts/LanguageContext";
  *
  * El banner es descarta permanentment un cop l'usuari el tanca o instal·la
  * l'app (es guarda a localStorage).
+ *
+ * Millores:
+ * - Animació subtil d'entrada (slide-up + fade-in)
+ * - Detecció automàtica si l'app ja està instal·lada (display-mode: standalone,
+ *   navigator.standalone, appinstalled event, getInstalledRelatedApps API)
+ * - S'oculta automàticament si es detecta que l'app ja està instal·lada
  */
 
 const DISMISSED_KEY = "consultesit-install-dismissed";
@@ -35,36 +41,100 @@ function isInStandaloneMode(): boolean {
   );
 }
 
+/**
+ * Comprova si l'app ja està instal·lada utilitzant l'API getInstalledRelatedApps
+ * (disponible a Chrome 80+ i Edge)
+ */
+async function checkInstalledRelatedApps(): Promise<boolean> {
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const nav = navigator as any;
+    if ("getInstalledRelatedApps" in nav) {
+      const apps = await nav.getInstalledRelatedApps();
+      return apps.length > 0;
+    }
+  } catch {
+    // API no disponible o error — ignorem
+  }
+  return false;
+}
+
 export function InstallBanner() {
   const { language } = useT();
   const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
   const [showAndroid, setShowAndroid] = useState(false);
   const [showIOS, setShowIOS] = useState(false);
+  const [visible, setVisible] = useState(false); // controla l'animació d'entrada
+  const [exiting, setExiting] = useState(false); // controla l'animació de sortida
+  const bannerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // No mostrem si ja s'ha descartat o si ja s'executa com a PWA
     if (localStorage.getItem(DISMISSED_KEY) || isInStandaloneMode()) return;
 
-    if (isIOS()) {
-      // iOS: mostrem instruccions manuals
-      setShowIOS(true);
-      return;
-    }
+    // Comprovar amb l'API getInstalledRelatedApps (async)
+    checkInstalledRelatedApps().then((installed) => {
+      if (installed) {
+        localStorage.setItem(DISMISSED_KEY, "1");
+        return;
+      }
 
-    // Android/Chrome: escoltem l'event beforeinstallprompt
-    const handler = (e: Event) => {
-      e.preventDefault();
-      setDeferredPrompt(e);
-      setShowAndroid(true);
-    };
-    window.addEventListener("beforeinstallprompt", handler);
-    return () => window.removeEventListener("beforeinstallprompt", handler);
+      if (isIOS()) {
+        setShowIOS(true);
+        // Retardem l'animació d'entrada per a una experiència més suau
+        setTimeout(() => setVisible(true), 300);
+        return;
+      }
+
+      // Android/Chrome: escoltem l'event beforeinstallprompt
+      const handler = (e: Event) => {
+        e.preventDefault();
+        setDeferredPrompt(e);
+        setShowAndroid(true);
+        setTimeout(() => setVisible(true), 100);
+      };
+      window.addEventListener("beforeinstallprompt", handler);
+
+      // Escoltem l'event appinstalled per ocultar el banner automàticament
+      const installedHandler = () => {
+        localStorage.setItem(DISMISSED_KEY, "1");
+        animateOut();
+      };
+      window.addEventListener("appinstalled", installedHandler);
+
+      return () => {
+        window.removeEventListener("beforeinstallprompt", handler);
+        window.removeEventListener("appinstalled", installedHandler);
+      };
+    });
   }, []);
+
+  // Monitoritzar canvis en display-mode (per si l'usuari instal·la des del menú del navegador)
+  useEffect(() => {
+    const mq = window.matchMedia("(display-mode: standalone)");
+    const handler = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        localStorage.setItem(DISMISSED_KEY, "1");
+        animateOut();
+      }
+    };
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  const animateOut = () => {
+    setExiting(true);
+    setTimeout(() => {
+      setShowAndroid(false);
+      setShowIOS(false);
+      setVisible(false);
+      setExiting(false);
+    }, 300);
+  };
 
   const dismiss = () => {
     localStorage.setItem(DISMISSED_KEY, "1");
-    setShowAndroid(false);
-    setShowIOS(false);
+    animateOut();
   };
 
   const installAndroid = async () => {
@@ -76,7 +146,7 @@ export function InstallBanner() {
     if (outcome === "accepted") {
       localStorage.setItem(DISMISSED_KEY, "1");
     }
-    setShowAndroid(false);
+    animateOut();
     setDeferredPrompt(null);
   };
 
@@ -85,13 +155,25 @@ export function InstallBanner() {
   if (!showAndroid && !showIOS) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4" style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}>
+    <div
+      ref={bannerRef}
+      className={`fixed bottom-0 left-0 right-0 z-50 p-4 transition-all duration-300 ease-out ${
+        visible && !exiting
+          ? "translate-y-0 opacity-100"
+          : "translate-y-8 opacity-0"
+      }`}
+      style={{ paddingBottom: "max(1rem, env(safe-area-inset-bottom))" }}
+    >
       <div className="max-w-md mx-auto bg-card border border-border rounded-2xl shadow-2xl p-4 flex flex-col gap-3">
         {/* Capçalera */}
         <div className="flex items-start justify-between gap-3">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center flex-shrink-0">
-              <img src="/favicon-32x32.png" alt="Consultes IT" className="w-7 h-7" />
+              <img
+                src="/favicon-32x32.png"
+                alt="Consultes IT"
+                className="w-7 h-7"
+              />
             </div>
             <div>
               <p className="font-semibold text-foreground text-sm leading-tight">
@@ -117,7 +199,7 @@ export function InstallBanner() {
         {showAndroid && (
           <button
             onClick={installAndroid}
-            className="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm py-2.5 px-4 rounded-xl transition-colors"
+            className="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm py-2.5 px-4 rounded-xl transition-colors active:scale-[0.98]"
           >
             <Download className="h-4 w-4" />
             {ca ? "Instal·la l'aplicació" : "Instalar la aplicación"}
@@ -128,18 +210,24 @@ export function InstallBanner() {
         {showIOS && (
           <div className="bg-muted/60 rounded-xl p-3 space-y-2">
             <p className="text-xs font-medium text-foreground">
-              {ca ? "Com instal·lar a iOS (26 o superior):" : "Cómo instalar en iOS (26 o superior):"}
+              {ca
+                ? "Com instal·lar a iOS (26 o superior):"
+                : "Cómo instalar en iOS (26 o superior):"}
             </p>
             <ol className="space-y-1.5">
               <li className="flex items-center gap-2 text-xs text-muted-foreground">
-                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-[10px]">1</span>
+                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-[10px]">
+                  1
+                </span>
                 <span className="flex items-center gap-1">
                   {ca ? "Obre aquesta pàgina a" : "Abre esta página en"}
                   <strong> Safari</strong>
                 </span>
               </li>
               <li className="flex items-center gap-2 text-xs text-muted-foreground">
-                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-[10px]">2</span>
+                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-[10px]">
+                  2
+                </span>
                 <span className="flex items-center gap-1">
                   {ca ? "Toca" : "Toca"}
                   <Share className="h-3.5 w-3.5 text-blue-500 inline" />
@@ -148,15 +236,23 @@ export function InstallBanner() {
                 </span>
               </li>
               <li className="flex items-center gap-2 text-xs text-muted-foreground">
-                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-[10px]">3</span>
+                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-[10px]">
+                  3
+                </span>
                 <span className="flex items-center gap-1">
                   {ca ? "Toca" : "Toca"}
                   <Plus className="h-3.5 w-3.5 text-blue-500 inline" />
-                  <strong>{ca ? ' "Afegir a la pantalla d\'inici"' : ' "Añadir a pantalla de inicio"'}</strong>
+                  <strong>
+                    {ca
+                      ? ' "Afegir a la pantalla d\'inici"'
+                      : ' "Añadir a pantalla de inicio"'}
+                  </strong>
                 </span>
               </li>
               <li className="flex items-center gap-2 text-xs text-muted-foreground">
-                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-[10px]">4</span>
+                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-[10px]">
+                  4
+                </span>
                 <span className="flex items-center gap-1">
                   {ca ? "Toca" : "Toca"}
                   <strong>{ca ? ' "Afegir"' : ' "Añadir"'}</strong>

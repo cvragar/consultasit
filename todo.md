@@ -577,3 +577,4 @@
 - [x] Fix dark mode: bg-white hardcoded → bg-card, text-gray → text-muted-foreground (Chat, Admin, Home)
 - [x] Fix accessibility: viewport maximum-scale=1 → maximum-scale=5
 - [x] All 411 tests pass, 0 TypeScript errors
+- [x] Improve InstallBanner: add subtle entrance animation and auto-hide when app is already installed
