@@ -578,3 +578,9 @@
 - [x] Fix accessibility: viewport maximum-scale=1 → maximum-scale=5
 - [x] All 411 tests pass, 0 TypeScript errors
 - [x] Improve InstallBanner: add subtle entrance animation and auto-hide when app is already installed
+
+## Sprint 24 - Exportació documental en Markdown
+- [x] Identificar tots els registres del catàleg documental (lleis, reials decrets, instruccions, guies i altres)
+- [x] Exportar cada document en un fitxer .md independent amb metadades, contingut i font
+- [x] Crear un índex general i validar que no falti cap registre
+- [x] Empaquetar i lliurar tots els fitxers Markdown

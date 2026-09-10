@@ -1,0 +1,215 @@
+---
+id: 16
+title_ca: "Duración máxima de IT y prórrogas"
+title_es: "Duración máxima de IT y prórrogas"
+type: "guia"
+source: "INSS - Institut Nacional de la Seguretat Social / LGSS"
+jurisdiction: "estatal"
+publication_year: 2024
+status: "vigent"
+url: "https://www.seg-social.es/wps/portal/wss/internet/InformacionUtil/44539/43384/44673"
+file_key: null
+tags: ["duracion","prorrogas","365_dias","545_dias","730_dias"]
+created_at: "2026-02-11T13:08:15.000Z"
+updated_at: "2026-03-28T13:27:58.000Z"
+---
+
+# Duración máxima de IT y prórrogas
+
+> Exportació del catàleg documental de Consultes IT. Cal contrastar sempre la vigència i el text consolidat amb la font oficial enllaçada.
+
+## Fitxa documental
+
+| Camp | Valor |
+|---|---|
+| Tipus | guia |
+| Font | INSS - Institut Nacional de la Seguretat Social / LGSS |
+| Àmbit | estatal |
+| Any de publicació | 2024 |
+| Estat | vigent |
+| Enllaç oficial | [Obrir font](https://www.seg-social.es/wps/portal/wss/internet/InformacionUtil/44539/43384/44673) |
+| Etiquetes | duracion, prorrogas, 365_dias, 545_dias, 730_dias |
+
+## Resum
+
+Guia completa sobre la duración máxima de la IT (365+180=545 días), las competencias del INSS a partir del día 365, las situaciones al cumplir los 545 días (alta, IP, prórroga hasta 730 días), y los recursos del trabajador. Incluye referencias exactas a los artículos 169, 170, 173, 174 y 175 LGSS.
+
+## Contingut original del catàleg
+
+# Duración Máxima de la Incapacidad Temporal y Prórrogas
+
+## Marco normativo
+
+La duración de la incapacidad temporal está regulada en el **Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (LGSS)**, concretamente en los artículos **169** (concepto y duración), **170** (competencias), **173** (nacimiento y duración del subsidio) y **174** (extinción del derecho al subsidio). El desarrollo reglamentario se contiene en el **Real Decreto 625/2014, de 18 de julio** (BOE-A-2014-7684).
+
+> **Art. 169.1.a) LGSS**: «Las debidas a enfermedad común o profesional y a accidente, sea o no de trabajo, mientras el trabajador reciba asistencia sanitaria de la Seguridad Social y esté impedido para el trabajo, con una duración máxima de trescientos sesenta y cinco días, prorrogables por otros ciento ochenta días cuando se presuma que durante ellos puede el trabajador ser dado de alta médica por curación.»
+
+## Duración estándar
+
+La duración máxima de una incapacidad temporal es de **365 días naturales** desde la fecha de la baja médica (art. 169.1.a LGSS).
+
+## Primera prórroga (automática o expresa)
+
+Al cumplirse los **365 días**, el INSS (Instituto Nacional de la Seguridad Social) o el ISM (Instituto Social de la Marina) pueden prorrogar la IT por otros **180 días más** cuando se presuma que durante este periodo el trabajador puede ser dado de alta médica por curación (art. 169.1.a LGSS, párrafo primero, inciso final).
+
+**Total acumulado**: 365 + 180 = **545 días naturales (18 meses)**
+
+### Competencia a partir del día 365 (art. 170.2 LGSS)
+
+Agotado el plazo de 365 días, la inspección médica del INSS es la **única competente** para:
+- Emitir el alta médica por curación o mejoría que permita la reincorporación al trabajo
+- Emitir el alta con propuesta de incapacidad permanente
+- Emitir el alta por incomparecencia injustificada
+- Emitir una nueva baja médica por la misma o similar patología en los 180 días naturales posteriores al alta
+
+## Situaciones al cumplir 545 días (18 meses)
+
+Al agotarse el plazo de 545 días, el INSS debe examinar necesariamente al trabajador en el plazo máximo de **90 días naturales** (art. 174.2 LGSS) y puede adoptar una de las siguientes decisiones:
+
+### Opción 1: Alta médica por curación
+
+El trabajador se considera curado y debe reincorporarse a su puesto de trabajo.
+
+**Consecuencias**:
+- Finaliza la prestación por IT
+- El trabajador debe reincorporarse inmediatamente
+- Si el trabajador no está de acuerdo, puede impugnar la decisión (ver sección de recursos)
+
+### Opción 2: Propuesta de incapacidad permanente
+
+El INSS inicia un expediente de incapacidad permanente y puede proponer (art. 194 LGSS):
+- **Incapacidad permanente parcial** (IPP): Disminución del 33% o más en el rendimiento normal para la profesión habitual
+- **Incapacidad permanente total** (IPT): Inhabilita al trabajador para su profesión habitual, pero puede dedicarse a otra
+- **Incapacidad permanente absoluta** (IPA): Inhabilita completamente para toda profesión u oficio
+- **Gran invalidez** (GI): Requiere asistencia de otra persona para los actos más esenciales de la vida
+
+**Durante la tramitación del expediente** (art. 174.5 LGSS):
+- El trabajador sigue cobrando la prestación en concepto de **prolongación de efectos económicos de la IT**
+- La duración del expediente puede variar (generalmente 3-6 meses)
+
+### Opción 3: Segunda prórroga excepcional (hasta 730 días)
+
+En casos excepcionales, el INSS puede demorar la calificación de incapacidad permanente hasta un máximo de **730 días naturales** (365 + 180 + 185) cuando la situación clínica del interesado hiciera aconsejable demorar la calificación por expectativa de recuperación (art. 174.2, párrafo segundo, LGSS).
+
+**Total acumulado máximo**: 365 + 180 + 185 = **730 días naturales (24 meses)**
+
+## Casos especiales
+
+### IT por cáncer u otras enfermedades graves
+
+En procesos oncológicos o enfermedades graves con tratamientos prolongados (quimioterapia, radioterapia, etc.), es frecuente que se agote el plazo de 545 días. En estos casos:
+- El INSS suele conceder prórrogas excepcionales hasta los 730 días
+- Si se inicia expediente de incapacidad permanente, el trabajador sigue cobrando IT durante la tramitación (prolongación de efectos)
+- Es posible que se conceda incapacidad permanente total o absoluta
+
+### IT por trastornos mentales
+
+Los trastornos de salud mental (depresión, ansiedad, trastorno bipolar, etc.) también pueden agotar los plazos de IT. En estos casos:
+- Es fundamental el seguimiento por psiquiatría
+- El INSS valora la capacidad funcional del trabajador
+- Puede concederse incapacidad permanente si la patología es crónica e incapacitante
+
+### IT por patologías musculoesqueléticas
+
+Las lesiones musculoesqueléticas (hernias discales, lesiones de rodilla, hombro, etc.) son una de las causas más frecuentes de IT prolongada. En estos casos:
+- El INSS valora la necesidad de cirugía o tratamientos adicionales
+- Si no hay mejoría tras tratamiento, puede proponerse incapacidad permanente
+- Es importante documentar bien las limitaciones funcionales
+
+## Recaída en IT
+
+Se considera **recaída** cuando un trabajador que ha sido dado de alta por curación vuelve a causar baja por la misma o similar patología en un plazo de **180 días naturales** desde el alta médica (art. 169.2 LGSS).
+
+**Consecuencias**:
+- Se computa como continuación del proceso anterior
+- Los días de la recaída se suman a los días ya consumidos
+- Si ya se habían agotado los 365 días, la competencia es del INSS desde el primer día de la recaída (art. 170.1 LGSS)
+
+## Incomparecencia a reconocimientos médicos
+
+Si el trabajador no comparece injustificadamente a los reconocimientos médicos convocados por el INSS o por la mutua, puede acordarse el **alta médica por incomparecencia**, con la consiguiente pérdida de la prestación (art. 174.1 y art. 175.3 LGSS).
+
+## Aspectos clave para médicos
+
+1. **A los 365 días**: Informar al paciente de que la competencia pasa al INSS y que será citado para valoración.
+2. **Documentación clínica**: Es fundamental que el paciente disponga de informes médicos actualizados y completos para la valoración del INSS.
+3. **Expectativas realistas**: Explicar al paciente las posibles decisiones del INSS (alta, prórroga, incapacidad permanente).
+4. **Seguimiento**: Aunque la competencia sea del INSS, el médico de atención primaria o especialista debe seguir atendiendo al paciente.
+5. **Recaídas**: Si un paciente que ha estado más de 365 días de baja recae en los 180 días siguientes al alta, debe comunicarse al INSS desde el primer día.
+
+## Recursos para el trabajador
+
+Si el trabajador no está de acuerdo con la decisión del INSS, puede:
+1. **Reclamación previa** (art. 71 Ley 36/2011): Presentar reclamación previa ante el INSS en el plazo de **20 días hábiles**
+2. **Demanda judicial**: Si la reclamación previa es desestimada o transcurren 45 días sin resolución, puede interponer demanda ante el Juzgado de lo Social en el plazo de 30 días hábiles
+
+## Referencias normativas
+
+| Artículo | Norma | Contenido |
+|---|---|---|
+| Art. 169 | LGSS (RDL 8/2015) | Concepto y duración máxima de la IT (365 + 180 días) |
+| Art. 170 | LGSS (RDL 8/2015) | Competencias sobre los procesos de IT (INSS a partir del día 365) |
+| Art. 173 | LGSS (RDL 8/2015) | Nacimiento y duración del subsidio |
+| Art. 174 | LGSS (RDL 8/2015) | Extinción del derecho al subsidio (545 días; prórroga hasta 730 días) |
+| Art. 175 | LGSS (RDL 8/2015) | Pérdida o suspensión del subsidio (incomparecencia) |
+| Art. 71 | Ley 36/2011 | Reclamación previa (20 días hábiles) |
+| Art. 140 | Ley 36/2011 | Procedimiento especial de impugnación de altas médicas del INSS |
+| Arts. 1-10 | RD 625/2014 | Gestión y control de IT en los primeros 365 días |
+
+---
+
+## Versión en español
+
+# Duración máxima de IT y prórrogas
+
+### Resumen
+
+Guía completa sobre la duración máxima de la IT (365+180=545 días), las competencias del INSS a partir del día 365, las situaciones al cumplir los 545 días (alta, IP, prórroga hasta 730 días), y los recursos del trabajador. Incluye referencias exactas a los artículos 169, 170, 173, 174 y 175 LGSS.
+
+### Contenido traducido disponible
+
+# Duración Máxima de la Incapacidad Temporal y Prórrogas
+
+## Marco normativo
+
+La duración de la incapacidad temporal está regulada en el **Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (LGSS)**, concretamente en los artículos **169** (concepto y duración), **170** (competencias), **173** (nacimiento y duración del subsidio) y **174** (extinción del derecho al subsidio). El desarrollo reglamentario se contiene en el **Real Decreto 625/2014, de 18 de julio** (BOE-A-2014-7684).
+
+> **Art. 169.1.a) LGSS**: «Las debidas a enfermedad común o profesional y a accidente, sea o no de trabajo, mientras el trabajador reciba asistencia sanitaria de la Seguridad Social y esté impedido para el trabajo, con una duración máxima de trescientos sesenta y cinco días, prorrogables por otros ciento ochenta días cuando se presuma que durante ellos puede el trabajador ser dado de alta médica por curación.»
+
+## Duración estándar
+
+La duración máxima de una incapacidad temporal es de **365 días naturales** desde la fecha de la baja médica (art. 169.1.a LGSS).
+
+## Primera prórroga (automática o expresa)
+
+Al cumplirse los **365 días**, el INSS (Instituto Nacional de la Seguridad Social) o el ISM (Instituto Social de la Marina) pueden prorrogar la IT por otros **180 días más** cuando se presuma que durante este periodo el trabajador puede ser dado de alta médica por curación (art. 169.1.a LGSS, párrafo primero, inciso final).
+
+**Total acumulado**: 365 + 180 = **545 días naturales (18 meses)**
+
+### Competencia a partir del día 365 (art. 170.2 LGSS)
+
+Agotado el plazo de 365 días, la inspección médica del INSS es la **única competente** para:
+- Emitir el alta médica por curación o mejoría que permita la reincorporación al trabajo
+- Emitir el alta con propuesta de incapacidad permanente
+- Emitir el alta por incomparecencia injustificada
+- Emitir una nueva baja médica por la misma o similar patología en los 180 días naturales posteriores al alta
+
+## Situaciones al cumplir 545 días (18 meses)
+
+Al agotarse el plazo de 545 días, el INSS debe examinar necesariamente al trabajador en el plazo máximo de **90 días naturales** (art. 174.2 LGSS) y puede adoptar una de las siguientes decisiones:
+
+### Opción 1: Alta médica por curación
+
+El trabajador se considera curado y debe reincorporarse a su puesto de trabajo.
+
+**Consecuencias**:
+- Finaliza la prestación por IT
+- El trabajador debe reincorporarse inmediatamente
+- Si el trabajador no está de acuerdo, puede impugnar la decisión (ver sección de recursos)
+
+### Opción 2: Propuesta de incapacidad permanente
+
+El INSS inicia un expediente de incapacidad permanente y puede proponer (art. 194 LGSS):
+- **Incapacidad permanente parcial** (IPP): Disminución del 33% o más en el rendimiento normal para la profesión habitual
+- **Incapacidad permanente total** (IPT): Inhabilita al trabajador para su profesión habitual, pero puede dedicarse a otra
+- **Incapacidad perman

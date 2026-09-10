@@ -1,0 +1,243 @@
+---
+id: 90001
+title_ca: "RD 295/2009 - Prestació per risc durant l'embaràs i la lactància natural"
+title_es: "RD 295/2009 - Prestación por riesgo durante el embarazo y la lactancia natural"
+type: "decreto"
+source: "BOE - Ministeri de Treball i Immigració"
+jurisdiction: "estatal"
+publication_year: 2009
+status: "vigent"
+url: "https://www.boe.es/buscar/act.php?id=BOE-A-2009-4724"
+file_key: null
+tags: ["risc embaràs","lactància natural","prestació","mútua","contingència professional","suspensió contracte","INSS","RD 295/2009"]
+created_at: "2026-03-22T10:55:01.000Z"
+updated_at: "2026-03-28T13:28:21.000Z"
+---
+
+# RD 295/2009 - Prestació per risc durant l'embaràs i la lactància natural
+
+> Exportació del catàleg documental de Consultes IT. Cal contrastar sempre la vigència i el text consolidat amb la font oficial enllaçada.
+
+## Fitxa documental
+
+| Camp | Valor |
+|---|---|
+| Tipus | decreto |
+| Font | BOE - Ministeri de Treball i Immigració |
+| Àmbit | estatal |
+| Any de publicació | 2009 |
+| Estat | vigent |
+| Enllaç oficial | [Obrir font](https://www.boe.es/buscar/act.php?id=BOE-A-2009-4724) |
+| Etiquetes | risc embaràs, lactància natural, prestació, mútua, contingència professional, suspensió contracte, INSS, RD 295/2009 |
+
+## Resum
+
+Resum del RD 295/2009 sobre les prestacions per risc durant l'embaràs i risc durant la lactància natural. Explica la situació protegida, la quantia (100% base reguladora de contingències professionals), la durada, les causes d'extinció i el procediment. Inclou el paper del metge de família (emetre l'informe d'embaràs, no la certificació del risc).
+
+## Contingut original del catàleg
+
+# Reial Decret 295/2009, de 6 de març
+## Prestació per risc durant l'embaràs i risc durant la lactància natural
+
+**BOE núm. 69, de 21/03/2009** | Referència: BOE-A-2009-4724 | En vigor des del 01/04/2009
+
+> Última actualització: 01/03/2023 (modificat per la LO 1/2023)
+
+---
+
+## Resum executiu per al metge de família
+
+Aquest reial decret regula les prestacions econòmiques per **risc durant l'embaràs** i **risc durant la lactància natural**. Ambdues situacions es consideren contingències **professionals** (no comunes), la qual cosa té implicacions importants en la quantia i la gestió.
+
+El metge de família **no emet la certificació de risc**: la certifica la inspecció mèdica de l'entitat gestora (INSS) o de la mútua. El paper del metge de família és emetre l'informe d'embaràs i data probable del part (art. 39.1 RD 295/2009).
+
+---
+
+## 1. Risc durant l'embaràs (arts. 31-39 RD 295/2009)
+
+### Situació protegida (art. 31)
+
+Situació en la qual es troba la treballadora embarassada durant el **període de suspensió del contracte de treball** quan:
+- Ha de canviar de lloc de treball per un altre compatible amb el seu estat (art. 26.2 Llei 31/1995, de Prevenció de Riscos Laborals)
+- Però el canvi **no és tècnicament o objectivament possible**, o no pot exigir-se raonablement
+
+> **Important**: No es considera situació protegida el risc derivat de patologies que puguin influir negativament en la salut de la treballadora o del fetus quan **no estigui relacionat amb agents, procediments o condicions de treball** del lloc que desenvolupa.
+
+### Beneficiàries (art. 32)
+
+- Treballadores per compte aliè afiliades i en alta en qualsevol règim de la Seguretat Social
+- Treballadores a temps parcial (amb particularitats en la base reguladora)
+- Es consideren en situació d'alta de ple dret, encara que l'empresa hagi incomplert les seves obligacions
+
+### Prestació econòmica (art. 33)
+
+**Quantia**: Subsidi equivalent al **100% de la base reguladora** corresponent a contingències professionals (o comunes si el règim no cobreix contingències professionals).
+
+> Nota: Fins a la LO 3/2007, la quantia era del 75% de la base reguladora de contingències comunes. L'increment al 100% i la qualificació com a contingència professional es va introduir per la LO 3/2007.
+
+### Durada (art. 35)
+
+- Neix el **mateix dia** en que s'inicia la suspensió del contracte
+- S'abona durant el **període necessari** per a la protecció de la seguretat o salut de la treballadora o del fetus
+- Finalitza el dia anterior a l'inici de la suspensió per **maternitat** o a la reincorporació al lloc de treball
+
+### Causes d'extinció (art. 35.4)
+
+- Suspensió del contracte per maternitat
+- Reincorporació al lloc de treball anterior o a un altre compatible
+- Extinció del contracte de treball
+- Interrupció de l'embaràs
+- Defunció de la beneficiària
+
+### Gestió (art. 36 i 38)
+
+Correspon a l'**entitat gestora o mútua** amb la qual l'empresa tingui concertada la cobertura de contingències professionals. El pagament es realitza per **períodes mensuals vençuts**.
+
+### Procediment (art. 39)
+
+1. La treballadora sol·licita un **informe al metge del Servei Públic de Salut** (acredita l'embaràs i la data probable del part)
+2. Amb l'informe + certificat de l'empresa sobre les condicions del lloc de treball, sol·licita la **certificació mèdica de risc** a l'entitat gestora o mútua
+3. Si es certifica el risc i no és possible el canvi de lloc, l'empresa declara la suspensió del contracte
+4. La treballadora presenta la sol·licitud de subsidi a la direcció provincial de l'INSS o a la mútua
+
+---
+
+## 2. Risc durant la lactància natural (arts. 49-51 RD 295/2009)
+
+### Situació protegida (art. 49)
+
+Situació en la qual es troba la treballadora per compte aliè durant el **període de suspensió del contracte** quan:
+- Ha de canviar de lloc de treball per un altre compatible amb la seva situació (art. 26.4 Llei 31/1995)
+- Però el canvi **no és tècnicament o objectivament possible**, o no pot exigir-se raonablement
+
+### Prestació econòmica (art. 50)
+
+Es concedeix en les **mateixes condicions** que la prestació per risc durant l'embaràs: **100% de la base reguladora** de contingències professionals.
+
+### Durada i extinció (art. 50.3)
+
+El dret al subsidi s'extingeix per:
+- **Complir el fill els 9 mesos d'edat**
+- Reincorporació al lloc de treball anterior o a un altre compatible
+- Extinció del contracte de treball
+- Interrupció de la lactància natural
+- Defunció de la beneficiària o del fill lactant
+
+---
+
+## 3. Compatibilitats i incompatibilitats
+
+### Incompatibilitat amb IT (arts. 37 i 45)
+
+- Si la treballadora es troba en IT i sol·licita la prestació de risc durant l'embaràs, **no es reconeix el risc fins que s'extingeixi la IT**
+- Si es troba en situació de risc durant l'embaràs i sol·licita IT, **no es reconeix la IT fins que finalitzi el risc**
+
+### Incompatibilitat amb maternitat (art. 50.2)
+
+No es pot reconèixer la prestació per risc durant la lactància natural mentre no s'hagi extingit el període de descans per maternitat.
+
+---
+
+## 4. Relació amb la feina del metge de família
+
+| Situació | Paper del metge de família |
+|---|---|
+| Treballadora embarassada amb possible risc laboral | Emetre informe d'embaràs i data probable del part (art. 39.1) |
+| Certificació del risc | **No correspon al metge de família**: la certifica l'INSS o la mútua |
+| Seguiment de la treballadora | Continua sent responsable de l'atenció mèdica durant la prestació |
+| Baixa per IT durant el risc | No procedeix: les dues situacions són incompatibles |
+
+---
+
+## 5. Taula resum
+
+| Concepte | Risc embaràs | Risc lactància |
+|---|---|---|
+| Naturalesa | Contingència professional | Contingència professional |
+| Quantia | 100% base reguladora CP | 100% base reguladora CP |
+| Cotització prèvia | No s'exigeix | No s'exigeix |
+| Gestió | INSS o mútua (contingències professionals) | INSS o mútua (contingències professionals) |
+| Durada màxima | Fins a l'inici de la maternitat | Fins als 9 mesos del fill |
+| Qui certifica el risc | INSS o mútua (no el metge de família) | INSS o mútua (no el metge de família) |
+
+---
+
+## 6. Referències normatives
+
+| Norma | Contingut |
+|---|---|
+| Art. 186-188 LGSS (RDL 8/2015) | Situació protegida, beneficiàries i prestació per risc durant l'embaràs |
+| Art. 189-191 LGSS (RDL 8/2015) | Risc durant la lactància natural |
+| Art. 26 Llei 31/1995 (LPRL) | Protecció de la maternitat: avaluació de riscos i canvi de lloc de treball |
+| RD 295/2009, arts. 31-51 | Regulació reglamentària completa de les prestacions |
+| LO 3/2007, de 22 de març | Va crear la prestació per risc durant la lactància i va incrementar la quantia al 100% |
+| LO 1/2023, de 28 de febrer | Última modificació del RD 295/2009 (en vigor des del 01/06/2023) |
+
+---
+
+## Versión en español
+
+# RD 295/2009 - Prestación por riesgo durante el embarazo y la lactancia natural
+
+### Resumen
+
+Resumen del RD 295/2009 sobre las prestaciones por riesgo durante el embarazo y riesgo durante la lactancia natural. Explica la situación protegida, la cuantía (100% base reguladora de contingencias profesionales), la duración, las causas de extinción y el procedimiento. Incluye el papel del médico de familia (emitir el informe de embarazo, no la certificación del riesgo).
+
+### Contenido traducido disponible
+
+# Real Decreto 295/2009, de 6 de marzo
+## Prestación por riesgo durante el embarazo y riesgo durante la lactancia natural
+
+**BOE núm. 69, de 21/03/2009** | Referencia: BOE-A-2009-4724 | En vigor desde el 01/04/2009
+
+> Última actualización: 01/03/2023 (modificado por la LO 1/2023)
+
+---
+
+## Resumen ejecutivo para el médico de familia
+
+Este real decreto regula las prestaciones económicas por **riesgo durante el embarazo** y **riesgo durante la lactancia natural**. Ambas situaciones se consideran contingencias **profesionales** (no comunes), lo cual tiene implicaciones importantes en la cuantía y la gestión.
+
+El médico de familia **no emite la certificación de riesgo**: la certifica la inspección médica de la entidad gestora (INSS) o de la mutua. El papel del médico de familia es emitir el informe de embarazo y fecha probable del parto (art. 39.1 RD 295/2009).
+
+---
+
+## 1. Riesgo durante el embarazo (arts. 31-39 RD 295/2009)
+
+### Situación protegida (art. 31)
+
+Situación en la que se encuentra la trabajadora embarazada durante el **periodo de suspensión del contrato de trabajo** cuando:
+- Ha de cambiar de puesto de trabajo por otro compatible con su estado (art. 26.2 Ley 31/1995, de Prevención de Riesgos Laborales)
+- Pero el cambio **no es técnica u objetivamente posible**, o no puede exigirse razonablemente
+
+> **Importante**: No se considera situación protegida el riesgo derivado de patologías que puedan influir negativamente en la salud de la trabajadora o del feto cuando **no esté relacionado con agentes, procedimientos o condiciones de trabajo** del puesto que desempeña.
+
+### Beneficiarias (art. 32)
+
+- Trabajadoras por cuenta ajena afiliadas y en alta en cualquier régimen de la Seguridad Social
+- Trabajadoras a tiempo parcial (con particularidades en la base reguladora)
+- Se consideran en situación de alta de pleno derecho, aunque la empresa haya incumplido sus obligaciones
+
+### Prestación económica (art. 33)
+
+**Cuantía**: Subsidio equivalente al **100% de la base reguladora** correspondiente a contingencias profesionales (o comunes si el régimen no cubre contingencias profesionales).
+
+> Nota: Hasta la LO 3/2007, la cuantía era del 75% de la base reguladora de contingencias comunes. El incremento al 100% y la calificación como contingencia profesional se introdujo por la LO 3/2007.
+
+### Duración (art. 35)
+
+- Nace el **mismo día** en que se inicia la suspensión del contrato
+- Se abona durante el **periodo necesario** para la protección de la seguridad o salud de la trabajadora o del feto
+- Finaliza el día anterior al inicio de la suspensión por **maternidad** o a la reincorporación al puesto de trabajo
+
+### Causas de extinción (art. 35.4)
+
+- Suspensión del contrato por maternidad
+- Reincorporación al puesto de trabajo anterior o a otro compatible
+- Extinción del contrato de trabajo
+- Interrupción del embarazo
+- Defunción de la beneficiaria
+
+### Gestión (art. 36 y 38)
+
+Corresponde a la **entidad gestora o mutua** con la que la empresa tenga concertada la cobertura de contingencias profesionales. El pago se real
