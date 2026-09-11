@@ -8,6 +8,8 @@
       "titleEs": "Menstruación incapacitante",
       "catalanScore": 0,
       "spanishScore": 66,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "Desde el 1 de junio de 2023, la **Ley Orgánica 1/2023, de 28 de febrero** (BOE núm. 51, 01/03/2023) introduce la **menstruación incapacitante secundaria** como situación especial de IT por contingencias comunes (LGSS art. 169.1.a, párrafo 2º). Se considera situación especial cuando la menstruación e"
     },
@@ -17,6 +19,8 @@
       "titleEs": "Interrupción voluntaria del embarazo (IVE)",
       "catalanScore": 0,
       "spanishScore": 66,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "Desde el 1 de junio de 2023, la **Ley Orgánica 1/2023, de 28 de febrero** (BOE-A-2023-5364) establece que la **interrupción del embarazo** (voluntaria o no) es una **situación especial de IT por contingencias comunes** (LGSS art. 169.1.a, párrafo 2º). Genera derecho a la prestación desde el **día 1 "
     },
@@ -26,6 +30,8 @@
       "titleEs": "Gestación a partir de la semana 39",
       "catalanScore": 0,
       "spanishScore": 69,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "Desde el 1 de junio de 2023, la **Ley Orgánica 1/2023, de 28 de febrero** (BOE-A-2023-5364) establece que la **gestación desde el primer día de la semana 39** es una **situación especial de IT por contingencias comunes** (LGSS art. 169.1.a, párrafo 3º). Permite a la trabajadora embarazada iniciar la"
     },
@@ -35,6 +41,8 @@
       "titleEs": "IT durante embarazo de riesgo vs. prestación por riesgo durante el embarazo",
       "catalanScore": 0,
       "spanishScore": 130,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "**Distinción fundamental que genera confusión frecuente al médico de familia**\n\nExisten dos situaciones completamente diferentes que afectan a trabajadoras embarazadas y que requieren tramitaciones, prestaciones y gestores distintos. Confundirlas es un error habitual que puede perjudicar a la trabaj"
     },
@@ -44,6 +52,8 @@
       "titleEs": "IT previa al parto y permiso por nacimiento y cuidado de menor (16 semanas)",
       "catalanScore": 0,
       "spanishScore": 71,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "**Situación frecuente que genera dudas sobre cuándo se inicia el permiso parental y cómo se calcula la prestación**\n\nDesde la reforma del RDL 6/2019 (en vigor desde el 1 de abril de 2019 para el segundo progenitor y desde 2021 para ambos), el permiso por **nacimiento y cuidado de menor** es de **16 "
     },
@@ -53,6 +63,8 @@
       "titleEs": "Prestación por riesgo durante la lactancia natural: diferencias con la IT",
       "catalanScore": 0,
       "spanishScore": 168,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "**Situación análoga al riesgo durante el embarazo pero con normativa específica y menor conocimiento práctico**\n\nLa **prestación por riesgo durante la lactancia natural** es una prestación de la Seguridad Social que protege a la trabajadora que amamanta a su hijo cuando las condiciones de su puesto "
     },
@@ -62,6 +74,8 @@
       "titleEs": "Donación de órganos",
       "catalanScore": 0,
       "spanishScore": 63,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "La **donación de órganos o tejidos en vida** para el trasplante es una **situación especial de IT por contingencias comunes** (LGSS art. 169.1.a, párrafo 4º, modificado por la LO 1/2023). Genera derecho a la prestación desde el **día 1 de la baja** (a cargo de la mutua o INSS), sin espera de 4 días "
     },
@@ -71,6 +85,8 @@
       "titleEs": "IT especial para donantes vivos de órganos o tejidos",
       "catalanScore": 0,
       "spanishScore": 26,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "## Situación especial de IT por donación en vivo\n\nLa **Ley 6/2024** crea una nueva situación especial de incapacidad temporal por contingencias comunes para personas donantes vivas de órganos o tejidos para su trasplante.\n\n### Características principales\n\n- **Subsidio del 100%** de la base regulador"
     },
@@ -79,7 +95,9 @@
       "title": "Baixes retroactives",
       "titleEs": "Bajas retroactivas",
       "catalanScore": 0,
-      "spanishScore": 80,
+      "spanishScore": 79,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "Las **bajas con efecto retroactivo** (partes de baja emitidos con fecha anterior a la visita médica) están **estrictamente limitadas** por la normativa. El **Real Decreto 625/2014, de 18 de julio** (BOE-A-2014-8191, art. 2.1) establece que el comunicado de baja debe emitirse el día de la visita médi"
     },
@@ -89,6 +107,8 @@
       "titleEs": "Pluriempleo",
       "catalanScore": 0,
       "spanishScore": 79,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "La **pluriocupación** (trabajador con dos o más contratos de trabajo simultáneos) genera una situación especial en la IT: el trabajador debe estar de baja en **todas las empresas** simultáneamente, y la base reguladora (BR) se calcula sumando las bases de cotización de todas las actividades.\n\n**Regl"
     },
@@ -98,6 +118,8 @@
       "titleEs": "Pluriactividad: trabajador simultáneamente autónomo (RETA) y asalariado (Régimen General)",
       "catalanScore": 0,
       "spanishScore": 123,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "La pluriactividad es la situación en la que un trabajador ejerce simultáneamente actividades que dan lugar a su alta obligatoria en dos o más regímenes distintos del sistema de la Seguridad Social. El caso más habitual es el del trabajador que, a la vez, es asalariado (Régimen General) y autónomo (R"
     },
@@ -107,6 +129,8 @@
       "titleEs": "IT y prisión",
       "catalanScore": 0,
       "spanishScore": 66,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "La **prisión preventiva o condena penal** afecta directamente a la prestación de IT. La normativa establece que la privación de libertad **suspende** el derecho al subsidio de IT mientras dura la detención o el ingreso penitenciario, pero **no extingue** el proceso de IT ni el derecho a reanudar la "
     },
@@ -116,6 +140,8 @@
       "titleEs": "IT en extranjeros",
       "catalanScore": 0,
       "spanishScore": 60,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "Los **trabajadores extranjeros** (nacionales de terceros países, no comunitarios) que trabajan en España y cotizan al sistema de Seguridad Social español tienen los **mismos derechos** a la prestación de IT que los trabajadores españoles, independientemente de su situación administrativa (autorizaci"
     },
@@ -125,6 +151,8 @@
       "titleEs": "Vacaciones durante la IT",
       "catalanScore": 0,
       "spanishScore": 86,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "Contexto: Caso especial de IT: Vacaciones durante la IT\n\nCuando un trabajador causa baja (IT) durante el período de vacaciones, las vacaciones **quedan interrumpidas** y el trabajador tiene derecho a disfrutarlas en un momento posterior, incluso fuera del período de disfrute habitual (incluido el añ"
     },
@@ -134,6 +162,8 @@
       "titleEs": "Recaída en IT",
       "catalanScore": 0,
       "spanishScore": 91,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "La **recaída** es la situación en que un trabajador, después de haber recibido el alta médica por un proceso de IT, vuelve a estar incapacitado por la **misma o similar patología** dentro de los **180 días naturales** posteriores al alta. La recaída tiene un régimen jurídico específico: el nuevo pro"
     },
@@ -142,27 +172,33 @@
       "title": "Recaiguda post-alta ICAM",
       "titleEs": "Recaída post-alta ICAM",
       "catalanScore": 0,
-      "spanishScore": 83,
+      "spanishScore": 84,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
-      "preview": "## ¿Qué es una recaída post-alta ICAM?\n\nSe considera **recaída** cuando un trabajador presenta una nueva baja médica por la **misma patología o una similar** dentro de los **180 días naturales** posteriores a un alta médica emitida por el ICAM (Institut Català d'Avaluacions Mèdiques).\n\nEsta situació"
+      "preview": "## ¿Qué es una recaída post-alta ICAM?\n\nSe considera **recaída** cuando un trabajador presenta una nueva baja médica por la **misma patología o una de similar** dentro de los **180 días naturales** posteriores a un alta médica emitida por el ICAM (Institut Català d'Avaluacions Mèdiques).\n\nEsta situa"
     },
     {
       "id": 30001,
       "title": "Accident de treball en treballador autònom (RETA)",
       "titleEs": "Accidente de trabajo en trabajador autónomo (RETA)",
-      "catalanScore": 164,
-      "spanishScore": 221,
+      "catalanScore": 0,
+      "spanishScore": 70,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
-      "preview": "## Procediment i qualificació de la contingència quan un treballador autònom pateix un accident durant la seva activitat professional\n\nQuan un treballador autònom pateix un accident durant la seva activitat professional, el procediment i la qualificació de la contingència presenten particularitats r"
+      "preview": "Procedimiento y calificación de la contingencia cuando un trabajador autónomo sufre un accidente durante su actividad profesional. Incluye las diferencias con el RGSS, la cobertura de contingencias profesionales y quién emite el comunicado de baja."
     },
     {
       "id": 30002,
       "title": "Accident de treball en treballador en situació de pluriocupació",
       "titleEs": "Accidente de trabajo en trabajador en situación de pluriempleo",
-      "catalanScore": 134,
-      "spanishScore": 194,
+      "catalanScore": 0,
+      "spanishScore": 64,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
-      "preview": "## Pluriocupació i accident de treball: Procediment i qualificació de la contingència\n\nQuan un treballador es troba en situació de pluriocupació, és a dir, presta serveis per a dues o més empreses simultàniament, i pateix un accident de treball (AT) en una d'elles, sorgeixen diverses qüestions impor"
+      "preview": "Procedimiento cuando un trabajador que presta servicios simultáneamente para dos o más empresas (pluriempleo) sufre un accidente de trabajo en una de ellas. Incluye la calificación de la contingencia en la otra empresa, el cálculo de la base reguladora y quién emite el comunicado de baja."
     },
     {
       "id": 30003,
@@ -170,6 +206,8 @@
       "titleEs": "TRADE (Trabajador Autónomo Económicamente Dependiente): IT y Accidente de Trabajo",
       "catalanScore": 0,
       "spanishScore": 50,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "El TRADE es el autónomo que percibe ≥75% de sus ingresos de un solo cliente. Tiene un régimen especial de AT que lo diferencia tanto del autónomo puro como del asalariado: cobertura obligatoria de CP, accidente in itinere cubierto, pero sin presunción de laboralidad."
     },
@@ -179,6 +217,8 @@
       "titleEs": "Accidente in itinere para autónomos con múltiples lugares de trabajo declarados",
       "catalanScore": 0,
       "spanishScore": 170,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "Situación compleja donde un trabajador autónomo tiene declarados en Hacienda dos o más locales, naves u oficinas como afectos a su actividad económica. La normativa (art. 316.2 LGSS) utiliza el singular (\"el establecimiento\"), generando conflicto sobre qué trayecto está cubierto como in itinere.\n\nNO"
     },
@@ -188,6 +228,8 @@
       "titleEs": "Accidente *in itinere* en trabajadores asalariados con contrato de teletrabajo parcial",
       "catalanScore": 0,
       "spanishScore": 53,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "La Ley 10/2021 de trabajo a distancia ha creado una nueva casuística compleja: el trabajador con teletrabajo parcial (p. ej., 2 días en casa y 3 días en la oficina) puede sufrir accidentes en situaciones muy diversas. La clave es determinar si el día del accidente era día presencial o día de teletra"
     },
@@ -197,6 +239,8 @@
       "titleEs": "Enfermedad profesional en personal sanitario: pinchazo accidental",
       "catalanScore": 0,
       "spanishScore": 114,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "## Descripción del caso\n\nEl **personal sanitario** (médicos, enfermeros, auxiliares, matronas, odontólogos, etc.) que sufre un **pinchazo accidental con aguja o instrumento cortante contaminado** puede desarrollar una enfermedad infecciosa de transmisión hematógena (Hepatitis B, Hepatitis C, VIH). C"
     },
@@ -206,6 +250,8 @@
       "titleEs": "IT en teletrabajo: accidente laboral vs. contingencia común",
       "catalanScore": 0,
       "spanishScore": 103,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "## Descripción del caso\n\nLa **Ley 10/2021, de 9 de julio, de trabajo a distancia** no regula de manera específica los accidentes de trabajo en teletrabajo. Por lo tanto, se aplica de manera supletoria el **art. 156 LGSS** (presunción *iuris tantum*): las lesiones sufridas por el trabajador **durante"
     },
@@ -215,6 +261,8 @@
       "titleEs": "Reducción de jornada por guarda legal e IT: cálculo de la base reguladora",
       "catalanScore": 0,
       "spanishScore": 82,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "**Situación frecuente que genera dudas sobre la cuantía de la prestación de IT**\n\nCuando un trabajador o trabajadora en situación de **reducción de jornada por guarda legal** (art. 37.6 ET) causa baja por IT, la base reguladora de la prestación se calcula sobre la **base de cotización de la jornada "
     },
@@ -224,6 +272,8 @@
       "titleEs": "IT durante un ERTE: quién paga y cómo se gestiona",
       "catalanScore": 0,
       "spanishScore": 108,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "**Situación muy frecuente que genera confusión sobre quién paga la prestación y cómo se emite el comunicado de baja**\n\nCuando un trabajador afectado por un ERTE (Expediente de Regulación Temporal de Empleo) causa baja por IT, la gestión de la prestación depende del momento en que se produce la baja "
     },
@@ -233,6 +283,8 @@
       "titleEs": "Recaída post-alta del ICAM: procedimiento IS3 en el eCap",
       "catalanScore": 0,
       "spanishScore": 110,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "Situación en la que un paciente que ha recibido el alta médica por resolución del ICAM (por inspección o por propuesta motivada de la mutua confirmada por el ICAM) vuelve a consultar en el CAP por la misma patología o una relacionada, dentro de los 180 días naturales posteriores al alta. En Cataluña"
     },
@@ -242,6 +294,8 @@
       "titleEs": "IT y permiso parental (16 semanas): compatibilidad y gestión desde el eCap",
       "catalanScore": 0,
       "spanishScore": 59,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "La IT por embarazo (patología obstétrica, enfermedad común, riesgo durante el embarazo) es INCOMPATIBLE con el permiso por nacimiento y cuidado de menor. Cuando la madre biológica se encuentra en IT en el momento del parto, la IT se extingue automáticamente por ley y se inicia el permiso por nacimie"
     },
@@ -251,6 +305,8 @@
       "titleEs": "IP y no extinción automática del contrato (Ley 2/2025)",
       "catalanScore": 0,
       "spanishScore": 40,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "## Incapacidad permanente y continuidad laboral\n\nLa **Ley 2/2025** elimina la extinción automática del contrato de trabajo por declaración de incapacidad permanente total o absoluta. La empresa debe valorar ajustes razonables antes de cesar al trabajador.\n\n### Puntos clave\n\n- La IP **ya no extingue "
     },
@@ -260,6 +316,8 @@
       "titleEs": "Altas laborales progresivas por enfermedades graves (propuesta 2026)",
       "catalanScore": 0,
       "spanishScore": 52,
+      "catalanMarkers": [],
+      "catalanContexts": [],
       "suspect": false,
       "preview": "## Altas laborales progresivas\n\nLa Seguridad Social está negociando un modelo de **altas laborales progresivas** para trabajadores con enfermedades graves (cáncer, trasplantes, infartos, ictus, fracturas graves). Permite la reincorporación gradual al trabajo.\n\n### Características de la propuesta\n\n- "
     }

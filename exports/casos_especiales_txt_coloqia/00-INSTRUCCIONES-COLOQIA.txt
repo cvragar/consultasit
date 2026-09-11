@@ -15,12 +15,7 @@ CRITERIOS PARA EL ASISTENTE
 
 3. Si falta un dato decisivo, formular una pregunta aclaratoria concreta. No completar datos por intuición.
 
-4. Separar claramente en la respuesta:
-   a) criterio aplicable;
-   b) base legal;
-   c) procedimiento práctico;
-   d) límites o incertidumbres;
-   e) fuente que debe verificarse.
+4. Separar claramente en la respuesta: criterio aplicable, base legal, procedimiento práctico, límites o incertidumbres y fuente que debe verificarse.
 
 5. No convertir ejemplos orientativos en reglas generales. Los ejemplos sirven para comprender el supuesto, pero no sustituyen el criterio ni la norma.
 

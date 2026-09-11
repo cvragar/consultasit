@@ -41,5 +41,8 @@ describe("exportación de casos especiales TXT para Coloq.IA", () => {
     expect(validation.warnings).toEqual([]);
     expect(languageAudit.total).toBe(29);
     expect(languageAudit.suspects).toBe(0);
+    expect(
+      languageAudit.results.every((result: { catalanScore: number }) => result.catalanScore === 0),
+    ).toBe(true);
   });
 });

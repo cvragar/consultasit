@@ -98,85 +98,7 @@ INSTRUCCIONS PER A L'ASSISTENT
 RESUMEN EN ESPAÑOL
 ==================
 
-Pluriocupació i accident de treball: Procediment i qualificació de la contingència
-
-Quan un treballador es troba en situació de pluriocupació, és a dir, presta serveis per a dues o més empreses simultàniament, i pateix un accident de treball (AT) en una d'elles, sorgeixen diverses qüestions importants respecte a la qualificació de la contingència en l'altra empresa, el càlcul de la base reguladora i l'emissió del comunicado de baja.
-
-1. Qualificació de la contingència en l'empresa on no s'ha produït l'accident
-
-La normativa de la Seguretat Social estableix que la situació d'incapacitat temporal (IT) derivada d'un accident de treball o malaltia professional (AT/EP) s'estén a totes les activitats que realitza el treballador, fins i tot si l'accident només s'ha produït en una d'elles.
-
-*   Article 169.1.a) del Text Refós de la Llei General de la Seguretat Social (TRLGSS): Qualifica com a IT les situacions de pluriocupació en què el treballador es troba impedit per al treball a causa d'una malaltia comuna, professional o accident, sigui o no de treball, mentre rebi assistència sanitària de la Seguretat Social i estigui impossibilitat per al treball.
-*   Criteri de l'INSS: L'Institut Nacional de la Seguretat Social (INSS) ha interpretat que, en casos de pluriocupació, si un treballador pateix un AT en una de les seves ocupacions, la contingència de la IT en l'altra empresa (o empreses) també es qualifica com a AT, sempre que la lesió l'impedeixi realitzar qualsevol de les seves activitats laborals. Això és degut al fet que la IT és única, independentment del nombre d'ocupacions.
-
-Per tant, si un treballador en pluriocupació pateix un accident de treball en l'Empresa A, la baixa mèdica que s'expedeixi serà per contingència professional. Aquesta mateixa baixa afectarà l'Empresa B, i la contingència per a aquesta empresa també serà considerada accident de treball, a efectes de prestació econòmica.
-
-2. Càlcul de la Base Reguladora (BR)
-
-La base reguladora per a la prestació d'incapacitat temporal en situació de pluriocupació es calcula de manera especial per a garantir que el treballador percebi una prestació equivalent al total de les seves bases de cotització.
-
-*   Article 13 del Reial Decret 625/2014, de 18 de juliol, pel qual es regulen determinats aspectes de la gestió i control dels processos d'incapacitat temporal en el primer any de durada: Estableix que la base reguladora de la prestació econòmica d'IT en els supòsits de pluriocupació es determinarà sumant les bases de cotització a la Seguretat Social de totes les empreses en què el treballador estigui d'alta, tenint en compte el límit màxim de cotització vigent en cada moment.
-*   Procediment:
-    1.  Es sumen les bases de cotització de totes les empreses en què el treballador estigués d'alta en el moment de l'accident.
-    2.  Aquesta suma no podrà excedir el límit màxim de cotització establert per a cada exercici.
-    3.  El percentatge corresponent a la prestació d'AT (75% de la BR des de l'endemà de la baixa) s'aplicarà sobre aquesta base reguladora única.
-
-És important destacar que cada empresa cotitza per la seva part, però la prestació es calcula sobre una base reguladora conjunta, que després es reparteix entre les Mútues Col·laboradores amb la Seguretat Social (MCSS) o l'INSS que gestionin les contingències de cada empresa, o bé la Mútua de l'empresa on es va produir l'AT abona la totalitat i després es compensa.
-
-3. Qui emet el part de baixa?
-
-L'emissió del comunicado de baja mèdica correspon al facultatiu del Servei Públic de Salut (eCap o centre de salut corresponent) o de la Mútua Col·laboradora amb la Seguretat Social, depenent de la contingència i de la gestió que tingui cada empresa.
-
-*   En cas d'accident de treball:
-    *   Si l'empresa té concertada la cobertura de contingències professionals amb una Mútua, el reconeixement i l'emissió del comunicado de baja inicial correspondrà al servei mèdic de la Mútua on el treballador sigui atès per l'accident.
-    *   Aquest part de baixa haurà de reflectir la contingència d'accident de treball.
-    *   El facultatiu que expedeixi el part de baixa haurà d'indicar la situació de pluriocupació perquè l'INSS o la Mútua puguin gestionar correctament la prestació.
-
-*   Gestió posterior:
-    *   Un cop emès el part de baixa per la Mútua de l'empresa on es va produir l'AT, aquest part haurà de ser comunicat a totes les empreses en què el treballador estigui d'alta.
-    *   L'INSS o la Mútua gestora seran els encarregats de tramitar la prestació econòmica única, considerant les bases de cotització de totes les ocupacions.
-
-En resum, la gestió de la IT en pluriocupació per AT busca protegir el treballador de forma integral, unificant la contingència i la base reguladora per a garantir una prestació econòmica adequada, independentment de la complexitat que suposi la coexistència de diverses relacions laborals.
-
-Pluriempleo y accidente de trabajo: Procedimiento y calificación de la contingencia
-
-Cuando un trabajador se encuentra en situación de pluriempleo, es decir, presta servicios para dos o más empresas simultáneamente, y sufre un accidente de trabajo (AT) en una de ellas, surgen diversas cuestiones importantes respecto a la calificación de la contingencia en la otra empresa, el cálculo de la base reguladora y la emisión del comunicado de baja.
-
-1. Calificación de la contingencia en la empresa donde no se ha producido el accidente
-
-La normativa de la Seguridad Social establece que la situación de incapacidad temporal (IT) derivada de un accidente de trabajo o enfermedad profesional (AT/EP) se extiende a todas las actividades que realiza el trabajador, incluso si el accidente solo se ha producido en una de ellas.
-
-*   Artículo 169.1.a) del Texto Refundido de la Ley General de la Seguridad Social (TRLGSS): Califica como IT las situaciones de pluriempleo en las que el trabajador se encuentra impedido para el trabajo a causa de una enfermedad común, profesional o accidente, sea o no de trabajo, mientras reciba asistencia sanitaria de la Seguridad Social y esté imposibilitado para el trabajo.
-*   Criterio del INSS: El Instituto Nacional de la Seguridad Social (INSS) ha interpretado que, en casos de pluriempleo, si un trabajador sufre un AT en una de sus ocupaciones, la contingencia de la IT en la otra empresa (o empresas) también se califica como AT, siempre que la lesión le impida realizar cualquiera de sus actividades laborales. Esto se debe a que la IT es única, independientemente del número de ocupaciones.
-
-Por lo tanto, si un trabajador en pluriempleo sufre un accidente de trabajo en la Empresa A, la baja médica que se expida será por contingencia profesional. Esta misma baja afectará a la Empresa B, y la contingencia para esta empresa también será considerada accidente de trabajo, a efectos de prestación económica.
-
-2. Cálculo de la Base Reguladora (BR)
-
-La base reguladora para la prestación de incapacidad temporal en situación de pluriempleo se calcula de manera especial para garantizar que el trabajador perciba una prestación equivalente al total de sus bases de cotización.
-
-*   Artículo 13 del Real Decreto 625/2014, de 18 de julio, por el que se regulan determinados aspectos de la gestión y control de los procesos de incapacidad temporal en el primer año de duración: Establece que la base reguladora de la prestación económica de IT en los supuestos de pluriempleo se determinará sumando las bases de cotización a la Seguridad Social de todas las empresas en las que el trabajador esté de alta, teniendo en cuenta el límite máximo de cotización vigente en cada momento.
-*   Procedimiento:
-    1.  Se suman las bases de cotización de todas las empresas en las que el trabajador estuviera de alta en el momento del accidente.
-    2.  Esta suma no podrá exceder el límite máximo de cotización establecido para cada ejercicio.
-    3.  El porcentaje correspondiente a la prestación de AT (75% de la BR desde el día siguiente al de la baja) se aplicará sobre esta base reguladora única.
-
-Es importante destacar que cada empresa cotiza por su parte, pero la prestación se calcula sobre una base reguladora conjunta, que luego se reparte entre las Mutuas Colaboradoras con la Seguridad Social (MCSS) o el INSS que gestionen las contingencias de cada empresa, o bien la Mutua de la empresa donde se produjo el AT abona la totalidad y luego se compensa.
-
-3. Quién emite el comunicado de baja?
-
-La emisión del comunicado de baja médica corresponde al facultativo del Servicio Público de Salud (eCap o centro de salud correspondiente) o de la Mutua Colaboradora con la Seguridad Social, dependiendo de la contingencia y de la gestión que tenga cada empresa.
-
-*   En caso de accidente de trabajo:
-    *   Si la empresa tiene concertada la cobertura de contingencias profesionales con una Mutua, el reconocimiento y la emisión del comunicado de baja inicial corresponderá al servicio médico de la Mutua donde el trabajador sea atendido por el accidente.
-    *   Este comunicado de baja deberá reflejar la contingencia de accidente de trabajo.
-    *   El facultativo que expida el comunicado de baja deberá indicar la situación de pluriempleo para que el INSS o la Mutua puedan gestionar correctamente la prestación.
-
-*   Gestión posterior:
-    *   Una vez emitido el comunicado de baja por la Mutua de la empresa donde se produjo el AT, este parte deberá ser comunicado a todas las empresas en las que el trabajador esté de alta.
-    *   El INSS o la Mutua gestora serán los encargados de tramitar la prestación económica única, considerando las bases de cotización de todas las ocupaciones.
-
-En resumen, la gestión de la IT en pluriempleo por AT busca proteger al trabajador de forma integral, unificando la contingencia y la base reguladora para garantizar una prestación económica adecuada, independientemente de la complejidad que suponga la coexistencia de varias relaciones laborales.
+Procedimiento cuando un trabajador que presta servicios simultáneamente para dos o más empresas (pluriempleo) sufre un accidente de trabajo en una de ellas. Incluye la calificación de la contingencia en la otra empresa, el cálculo de la base reguladora y quién emite el comunicado de baja.
 
 CONTENIDO EN ESPAÑOL
 ====================
@@ -185,93 +107,15 @@ CASO ESPECIAL
 Accidente de trabajo en trabajador en situación de pluriempleo
 
 CATEGORÍA
-accident_treball
+accidente_trabajo
 
 DESCRIPCIÓN Y CRITERIO
-Pluriocupació i accident de treball: Procediment i qualificació de la contingència
-
-Quan un treballador es troba en situació de pluriocupació, és a dir, presta serveis per a dues o més empreses simultàniament, i pateix un accident de treball (AT) en una d'elles, sorgeixen diverses qüestions importants respecte a la qualificació de la contingència en l'altra empresa, el càlcul de la base reguladora i l'emissió del comunicado de baja.
-
-1. Qualificació de la contingència en l'empresa on no s'ha produït l'accident
-
-La normativa de la Seguretat Social estableix que la situació d'incapacitat temporal (IT) derivada d'un accident de treball o malaltia professional (AT/EP) s'estén a totes les activitats que realitza el treballador, fins i tot si l'accident només s'ha produït en una d'elles.
-
-*   Article 169.1.a) del Text Refós de la Llei General de la Seguretat Social (TRLGSS): Qualifica com a IT les situacions de pluriocupació en què el treballador es troba impedit per al treball a causa d'una malaltia comuna, professional o accident, sigui o no de treball, mentre rebi assistència sanitària de la Seguretat Social i estigui impossibilitat per al treball.
-*   Criteri de l'INSS: L'Institut Nacional de la Seguretat Social (INSS) ha interpretat que, en casos de pluriocupació, si un treballador pateix un AT en una de les seves ocupacions, la contingència de la IT en l'altra empresa (o empreses) també es qualifica com a AT, sempre que la lesió l'impedeixi realitzar qualsevol de les seves activitats laborals. Això és degut al fet que la IT és única, independentment del nombre d'ocupacions.
-
-Per tant, si un treballador en pluriocupació pateix un accident de treball en l'Empresa A, la baixa mèdica que s'expedeixi serà per contingència professional. Aquesta mateixa baixa afectarà l'Empresa B, i la contingència per a aquesta empresa també serà considerada accident de treball, a efectes de prestació econòmica.
-
-2. Càlcul de la Base Reguladora (BR)
-
-La base reguladora per a la prestació d'incapacitat temporal en situació de pluriocupació es calcula de manera especial per a garantir que el treballador percebi una prestació equivalent al total de les seves bases de cotització.
-
-*   Article 13 del Reial Decret 625/2014, de 18 de juliol, pel qual es regulen determinats aspectes de la gestió i control dels processos d'incapacitat temporal en el primer any de durada: Estableix que la base reguladora de la prestació econòmica d'IT en els supòsits de pluriocupació es determinarà sumant les bases de cotització a la Seguretat Social de totes les empreses en què el treballador estigui d'alta, tenint en compte el límit màxim de cotització vigent en cada moment.
-*   Procediment:
-    1.  Es sumen les bases de cotització de totes les empreses en què el treballador estigués d'alta en el moment de l'accident.
-    2.  Aquesta suma no podrà excedir el límit màxim de cotització establert per a cada exercici.
-    3.  El percentatge corresponent a la prestació d'AT (75% de la BR des de l'endemà de la baixa) s'aplicarà sobre aquesta base reguladora única.
-
-És important destacar que cada empresa cotitza per la seva part, però la prestació es calcula sobre una base reguladora conjunta, que després es reparteix entre les Mútues Col·laboradores amb la Seguretat Social (MCSS) o l'INSS que gestionin les contingències de cada empresa, o bé la Mútua de l'empresa on es va produir l'AT abona la totalitat i després es compensa.
-
-3. Qui emet el part de baixa?
-
-L'emissió del comunicado de baja mèdica correspon al facultatiu del Servei Públic de Salut (eCap o centre de salut corresponent) o de la Mútua Col·laboradora amb la Seguretat Social, depenent de la contingència i de la gestió que tingui cada empresa.
-
-*   En cas d'accident de treball:
-    *   Si l'empresa té concertada la cobertura de contingències professionals amb una Mútua, el reconeixement i l'emissió del comunicado de baja inicial correspondrà al servei mèdic de la Mútua on el treballador sigui atès per l'accident.
-    *   Aquest part de baixa haurà de reflectir la contingència d'accident de treball.
-    *   El facultatiu que expedeixi el part de baixa haurà d'indicar la situació de pluriocupació perquè l'INSS o la Mútua puguin gestionar correctament la prestació.
-
-*   Gestió posterior:
-    *   Un cop emès el part de baixa per la Mútua de l'empresa on es va produir l'AT, aquest part haurà de ser comunicat a totes les empreses en què el treballador estigui d'alta.
-    *   L'INSS o la Mútua gestora seran els encarregats de tramitar la prestació econòmica única, considerant les bases de cotització de totes les ocupacions.
-
-En resum, la gestió de la IT en pluriocupació per AT busca protegir el treballador de forma integral, unificant la contingència i la base reguladora per a garantir una prestació econòmica adequada, independentment de la complexitat que suposi la coexistència de diverses relacions laborals.
-
-Pluriempleo y accidente de trabajo: Procedimiento y calificación de la contingencia
-
-Cuando un trabajador se encuentra en situación de pluriempleo, es decir, presta servicios para dos o más empresas simultáneamente, y sufre un accidente de trabajo (AT) en una de ellas, surgen diversas cuestiones importantes respecto a la calificación de la contingencia en la otra empresa, el cálculo de la base reguladora y la emisión del comunicado de baja.
-
-1. Calificación de la contingencia en la empresa donde no se ha producido el accidente
-
-La normativa de la Seguridad Social establece que la situación de incapacidad temporal (IT) derivada de un accidente de trabajo o enfermedad profesional (AT/EP) se extiende a todas las actividades que realiza el trabajador, incluso si el accidente solo se ha producido en una de ellas.
-
-*   Artículo 169.1.a) del Texto Refundido de la Ley General de la Seguridad Social (TRLGSS): Califica como IT las situaciones de pluriempleo en las que el trabajador se encuentra impedido para el trabajo a causa de una enfermedad común, profesional o accidente, sea o no de trabajo, mientras reciba asistencia sanitaria de la Seguridad Social y esté imposibilitado para el trabajo.
-*   Criterio del INSS: El Instituto Nacional de la Seguridad Social (INSS) ha interpretado que, en casos de pluriempleo, si un trabajador sufre un AT en una de sus ocupaciones, la contingencia de la IT en la otra empresa (o empresas) también se califica como AT, siempre que la lesión le impida realizar cualquiera de sus actividades laborales. Esto se debe a que la IT es única, independientemente del número de ocupaciones.
-
-Por lo tanto, si un trabajador en pluriempleo sufre un accidente de trabajo en la Empresa A, la baja médica que se expida será por contingencia profesional. Esta misma baja afectará a la Empresa B, y la contingencia para esta empresa también será considerada accidente de trabajo, a efectos de prestación económica.
-
-2. Cálculo de la Base Reguladora (BR)
-
-La base reguladora para la prestación de incapacidad temporal en situación de pluriempleo se calcula de manera especial para garantizar que el trabajador perciba una prestación equivalente al total de sus bases de cotización.
-
-*   Artículo 13 del Real Decreto 625/2014, de 18 de julio, por el que se regulan determinados aspectos de la gestión y control de los procesos de incapacidad temporal en el primer año de duración: Establece que la base reguladora de la prestación económica de IT en los supuestos de pluriempleo se determinará sumando las bases de cotización a la Seguridad Social de todas las empresas en las que el trabajador esté de alta, teniendo en cuenta el límite máximo de cotización vigente en cada momento.
-*   Procedimiento:
-    1.  Se suman las bases de cotización de todas las empresas en las que el trabajador estuviera de alta en el momento del accidente.
-    2.  Esta suma no podrá exceder el límite máximo de cotización establecido para cada ejercicio.
-    3.  El porcentaje correspondiente a la prestación de AT (75% de la BR desde el día siguiente al de la baja) se aplicará sobre esta base reguladora única.
-
-Es importante destacar que cada empresa cotiza por su parte, pero la prestación se calcula sobre una base reguladora conjunta, que luego se reparte entre las Mutuas Colaboradoras con la Seguridad Social (MCSS) o el INSS que gestionen las contingencias de cada empresa, o bien la Mutua de la empresa donde se produjo el AT abona la totalidad y luego se compensa.
-
-3. Quién emite el comunicado de baja?
-
-La emisión del comunicado de baja médica corresponde al facultativo del Servicio Público de Salud (eCap o centro de salud correspondiente) o de la Mutua Colaboradora con la Seguridad Social, dependiendo de la contingencia y de la gestión que tenga cada empresa.
-
-*   En caso de accidente de trabajo:
-    *   Si la empresa tiene concertada la cobertura de contingencias profesionales con una Mutua, el reconocimiento y la emisión del comunicado de baja inicial corresponderá al servicio médico de la Mutua donde el trabajador sea atendido por el accidente.
-    *   Este comunicado de baja deberá reflejar la contingencia de accidente de trabajo.
-    *   El facultativo que expida el comunicado de baja deberá indicar la situación de pluriempleo para que el INSS o la Mutua puedan gestionar correctamente la prestación.
-
-*   Gestión posterior:
-    *   Una vez emitido el comunicado de baja por la Mutua de la empresa donde se produjo el AT, este parte deberá ser comunicado a todas las empresas en las que el trabajador esté de alta.
-    *   El INSS o la Mutua gestora serán los encargados de tramitar la prestación económica única, considerando las bases de cotización de todas las ocupaciones.
-
-En resumen, la gestión de la IT en pluriempleo por AT busca proteger al trabajador de forma integral, unificando la contingencia y la base reguladora para garantizar una prestación económica adecuada, independientemente de la complejidad que suponga la coexistencia de varias relaciones laborales.
+Procedimiento cuando un trabajador que presta servicios simultáneamente para dos o más empresas (pluriempleo) sufre un accidente de trabajo en una de ellas. Incluye la calificación de la contingencia en la otra empresa, el cálculo de la base reguladora y quién emite el comunicado de baja.
 
 BASE LEGAL
 - LGSS (RDL 8/2015), art. 156: Definición de AT
 - LGSS (RDL 8/2015), art. 143: Pluriempleo y base reguladora
-- RD 625/2014, art. 1.2: Emisión de partes de baja
+- RD 625/2014, art. 1.2: Emisión de comunicados de baja
 - STS 22 julio 1998 (rcud 1878/1979): AT en pluriempleo
 - STS 5 julio 2023 (ROJ: STS 3098/2023): Calificación AT en pluriactividad
 - Criterio de gestión DGOSS 22/2022
@@ -285,12 +129,12 @@ ESCENARIO A: La otra actividad es por cuenta ajena (otra empresa asalariada)
 - Paga la mutua/INSS de la empresa donde ha ocurrido el AT
 
 ESCENARIO B: La otra actividad es por cuenta propia (autónomo)
-- El AT se califica como AT para la actividad de asalariado
+- El AT se califica como AT para la actividad asalariada
 - Para la actividad de autónomo: accidente NO laboral (si no tiene cobertura CP) o AT (si tiene cobertura CP y se cumplen los requisitos del RETA)
 
-QUIEN EMITE EL PARTE DE BAJA (desde el eCap):
-- Si la empresa donde se ha producido el AT tiene cobertura con MUTUA → LA MUTUA emite el parte (no el eCap)
-- Si la empresa donde se ha producido el AT tiene cobertura con el INSS → El eCap emite el parte como AT
+QUIÉN EMITE EL comunicado de baja (desde el eCap):
+- Si la empresa donde se ha producido el AT tiene cobertura con MUTUA → LA MUTUA emite el comunicado de baja (no el eCap)
+- Si la empresa donde se ha producido el AT tiene cobertura con el INSS → El eCap emite el comunicado de baja como AT
 - El comunicado de baja cubre TODAS las actividades laborales del trabajador
 
 CÁLCULO DE LA BASE REGULADORA:
@@ -312,7 +156,7 @@ Resolución: La mutua de la empresa emite el comunicado de baja por AT. Para la 
 Ejemplo 3: Trabajador asalariado y autónomo con CP: AT en la empresa
 Trabajador asalariado y autónomo (CON cobertura CP) sufre un AT en la empresa.
 
-Resolución: La mutua de la empresa emite el parte por AT (actividad asalariada). Para la actividad de autónomo: puede ser AT si se cumplen los requisitos del RETA. Dos mutuas pueden estar implicadas. La base reguladora de la prestación de la empresa incluye las cotizaciones de la empresa; la del autónomo se calcula por separado.
+Resolución: La mutua de la empresa emite el comunicado de baja por AT (actividad asalariada). Para la actividad de autónomo: puede ser AT si se cumplen los requisitos del RETA. Pueden estar implicadas dos mutuas. La base reguladora de la prestación de la empresa incluye las cotizaciones de la empresa; la del autónomo se calcula por separado.
 
 Ejemplo 4: Accidente in itinere en trabajador en pluriempleo
 Trabajador que va de la empresa A a la empresa B sufre un accidente de tráfico.
@@ -326,5 +170,5 @@ INSTRUCCIONES PARA EL ASISTENTE
 1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
 2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
 3. No conviertas un ejemplo orientativo en una regla general.
-4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
-5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.
+4. Cita la base legal incluida y reconoce la necesidad de verificar su vigencia en la fuente oficial.
+5. Si falta un dato decisivo o hay conflicto entre normas, indícalo en lugar de inventar una respuesta.

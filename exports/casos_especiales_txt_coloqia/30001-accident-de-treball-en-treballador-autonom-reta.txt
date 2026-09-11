@@ -92,113 +92,7 @@ INSTRUCCIONS PER A L'ASSISTENT
 RESUMEN EN ESPAÑOL
 ==================
 
-Procediment i qualificació de la contingència quan un treballador autònom pateix un accident durant la seva activitat professional
-
-Quan un treballador autònom pateix un accident durant la seva activitat professional, el procediment i la qualificació de la contingència presenten particularitats respecte al Règim General de la Seguretat Social (RGSS).
-
-Diferències amb el Règim General de la Seguretat Social (RGSS)
-
-La principal diferència rau en la presumpció de professionalitat i la gestió de les prestacions.
-
-*   RGSS: En el RGSS, les contingències professionals (accident de treball i malaltia professional) es presumeixen, en general, com a tals si ocorren durant la jornada laboral o en el lloc de treball. La gestió de la baixa i les prestacions econòmiques recau principalment en la Mútua Col·laboradora amb la Seguretat Social o l'INSS.
-   Régim Especial de Treballadors Autònoms (RETA): En el RETA, la cobertura de les contingències professionals és voluntària des de l'1 de gener de 2019, però es converteix en obligatòria* per a tots els autònoms. Abans d'aquesta data, era opcional. La qualificació de la contingència requereix una anàlisi més exhaustiva per determinar si l'accident té relació directa amb l'activitat professional.
-
-Cobertura de Contingències Professionals en el RETA
-
-Perquè un autònom pugui accedir a les prestacions derivades d'un accident de treball o malaltia professional, és imprescindible que tingui coberta aquesta contingència.
-
-*   Obligatorietat: Des de l'1 de gener de 2019, la cobertura de les contingències professionals (accident de treball i malaltia professional) és obligatòria per a tots els treballadors autònoms, d'acord amb la Llei 6/2017, de 24 d'octubre, de Reformes Urgents del Treball Autònom.
-*   Entitat gestora: La gestió i el pagament de les prestacions econòmiques per incapacitat temporal (IT) derivada de contingències professionals, així com les de lesions permanents no invalidants, incapacitat permanent i mort i supervivència, corresponen a la Mútua Col·laboradora amb la Seguretat Social amb la qual l'autònom tingui concertada la cobertura.
-
-Qualificació de l'accident de treball en el RETA
-
-L'article 313 del Reial Decret Legislatiu 8/2015, de 30 d'octubre, pel qual s'aprova el text refós de la Llei General de la Seguretat Social (LGSS), estableix la definició d'accident de treball per als autònoms:
-
-"S'entendrà per accident de treball del treballador autònom el succeït com a conseqüència directa i immediata del treball que realitza per la seva pròpia activitat professional i que determina la seva inclusió en el camp d'aplicació d'aquest règim especial."
-
-A més, la LGSS inclou una presumpció iuris tantum:
-
-"Es presumirà, excepte prova en contra, que l'accident no té relació amb el treball quan es produeixi en el trajecte d'anada o tornada del lloc de la prestació de l'activitat. Així mateix, s'entendrà que l'accident de treball és el que pateix el treballador autònom en el compliment de la seva jornada laboral o en el lloc de treball."
-
-Això implica que:
-   L'accident ha de ser directe i immediat* de l'activitat.
-   Hi ha una presumpció d'accident de treball si ocorre durant la jornada o en el lloc de treball*.
-   L'accident in itinere (en el trajecte d'anada o tornada) no es presumeix* com a professional, requerint prova addicional per demostrar la seva relació amb l'activitat professional.
-
-Qui emet el part de baixa (IT)?
-
-L'emissió del part de baixa per incapacitat temporal (IT) segueix el mateix procediment que en el RGSS, amb algunes particularitats en la gestió posterior:
-
-1.  Metge del Servei Públic de Salut (eCap): El metge de capçalera del Servei Públic de Salut (eCap en Catalunya) és qui, en primera instància, emet el part de baixa mèdica, independentment de la contingència (comuna o professional). Aquest part inicial no sol qualificar la contingència.
-2.  Comunicació a la Mútua/INSS:
-    *   Un cop emès el part de baixa, el treballador autònom (o la seva gestoria) ha de comunicar la baixa a la Mútua Col·laboradora amb la Seguretat Social amb la qual tingui concertada la cobertura de contingències professionals.
-    *   Si l'autònom no té cobertes les contingències professionals, la baixa serà gestionada com a contingència comuna per l'INSS.
-3.  Qualificació de la contingència:
-    *   La Mútua (o l'INSS, si no hi ha mútua o si la baixa és per contingència comuna) serà l'encarregada de qualificar la contingència (accident de treball, malaltia professional o contingència comuna) un cop revisada la documentació i, si escau, realitzades les proves mèdiques pertinents.
-    *   En cas de dubte sobre la qualificació, la Mútua pot sol·licitar a l'INSS un expedient de determinació de contingència.
-
-Prestacions econòmiques
-
-Les prestacions econòmiques per IT derivada d'accident de treball en el RETA es calculen sobre la base reguladora de la cotització de l'autònom.
-
-*   Percentatge: El 75% de la base reguladora des del dia següent al de la baixa mèdica (art. 173 LGSS i art. 2 RD 625/2014).
-*   Pagament: A càrrec de la Mútua o l'INSS, segons correspongui.
-
-En resum, la clau per al treballador autònom és tenir cobertes les contingències professionals i comunicar ràpidament l'accident a la seva Mútua per assegurar una correcta qualificació i gestió de les prestacions.
-
-Procedimiento y calificación de la contingencia cuando un trabajador autónomo sufre un accidente durante su actividad profesional
-
-Cuando un trabajador autónomo sufre un accidente durante su actividad profesional, el procedimiento y la calificación de la contingencia presentan particularidades respecto al Régimen General de la Seguridad Social (RGSS).
-
-Diferencias con el Régimen General de la Seguridad Social (RGSS)
-
-La principal diferencia radica en la presunción de profesionalidad y la gestión de las prestaciones.
-
-*   RGSS: En el RGSS, las contingencias profesionales (accidente de trabajo y enfermedad profesional) se presumen, en general, como tales si ocurren durante la jornada laboral o en el lugar de trabajo. La gestión de la baja y las prestaciones económicas recae principalmente en la Mutua Colaboradora con la Seguridad Social o el INSS.
-   Régimen Especial de Trabajadores Autónomos (RETA): En el RETA, la cobertura de las contingencias profesionales es voluntaria desde el 1 de enero de 2019, pero se convierte en obligatoria* para todos los autónomos. Antes de esta fecha, era opcional. La calificación de la contingencia requiere un análisis más exhaustivo para determinar si el accidente tiene relación directa con la actividad profesional.
-
-Cobertura de Contingencias Profesionales en el RETA
-
-Para que un autónomo pueda acceder a las prestaciones derivadas de un accidente de trabajo o enfermedad profesional, es imprescindible que tenga cubierta esta contingencia.
-
-*   Obligatoriedad: Desde el 1 de enero de 2019, la cobertura de las contingencias profesionales (accidente de trabajo y enfermedad profesional) es obligatoria para todos los trabajadores autónomos, de acuerdo con la Ley 6/2017, de 24 de octubre, de Reformas Urgentes del Trabajo Autónomo.
-*   Entidad gestora: La gestión y el pago de las prestaciones económicas por incapacidad temporal (IT) derivada de contingencias profesionales, así como las de lesiones permanentes no invalidantes, incapacidad permanente y muerte y supervivencia, corresponden a la Mutua Colaboradora con la Seguridad Social con la que el autónomo tenga concertada la cobertura.
-
-Calificación del accidente de trabajo en el RETA
-
-El artículo 313 del Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (LGSS), establece la definición de accidente de trabajo para los autónomos:
-
-"Se entenderá por accidente de trabajo del trabajador autónomo el sucedido como consecuencia directa e inmediata del trabajo que realiza por su propia actividad profesional y que determina su inclusión en el campo de aplicación de este régimen especial."
-
-Además, la LGSS incluye una presunción iuris tantum:
-
-"Se presumirá, salvo prueba en contrario, que el accidente no tiene relación con el trabajo cuando se produzca en el trayecto de ida o vuelta del lugar de la prestación de la actividad. Asimismo, se entenderá que el accidente de trabajo es el que sufre el trabajador autónomo en el cumplimiento de su jornada laboral o en el lugar de trabajo."
-
-Esto implica que:
-   El accidente debe ser directo e inmediato* de la actividad.
-   Existe una presunción de accidente de trabajo si ocurre durante la jornada o en el lugar de trabajo*.
-   El accidente in itinere (en el trayecto de ida o vuelta) no se presume* como profesional, requiriendo prueba adicional para demostrar su relación con la actividad profesional.
-
-¿Quién emite el comunicado de baja (IT)?
-
-La emisión del comunicado de baja por incapacidad temporal (IT) sigue el mismo procedimiento que en el RGSS, con algunas particularidades en la gestión posterior:
-
-1.  Médico del Servicio Público de Salud (eCap): El médico de cabecera del Servicio Público de Salud (eCap en Cataluña) es quien, en primera instancia, emite el comunicado de baja médica, independientemente de la contingencia (común o profesional). Este parte inicial no suele calificar la contingencia.
-2.  Comunicación a la Mutua/INSS:
-    *   Una vez emitido el comunicado de baja, el trabajador autónomo (o su gestoría) debe comunicar la baja a la Mutua Colaboradora con la Seguridad Social con la que tenga concertada la cobertura de contingencias profesionales.
-    *   Si el autónomo no tiene cubiertas las contingencias profesionales, la baja será gestionada como contingencia común por el INSS.
-3.  Calificación de la contingencia:
-    *   La Mutua (o el INSS, si no hay mutua o si la baja es por contingencia común) será la encargada de calificar la contingencia (accidente de trabajo, enfermedad profesional o contingencia común) una vez revisada la documentación y, si procede, realizadas las pruebas médicas pertinentes.
-    *   En caso de duda sobre la calificación, la Mutua puede solicitar al INSS un expediente de determinación de contingencia.
-
-Prestaciones económicas
-
-Las prestaciones económicas por IT derivada de accidente de trabajo en el RETA se calculan sobre la base reguladora de la cotización del autónomo.
-
-*   Porcentaje: El 75% de la base reguladora desde el día siguiente al de la baja médica (art. 173 LGSS y art. 2 RD 625/2014).
-*   Pago: A cargo de la Mutua o el INSS, según corresponda.
-
-En resumen, la clave para el trabajador autónomo es tener cubiertas las contingencias profesionales y comunicar rápidamente el accidente a su Mutua para asegurar una correcta calificación y gestión de las prestaciones.
+Procedimiento y calificación de la contingencia cuando un trabajador autónomo sufre un accidente durante su actividad profesional. Incluye las diferencias con el RGSS, la cobertura de contingencias profesionales y quién emite el comunicado de baja.
 
 CONTENIDO EN ESPAÑOL
 ====================
@@ -210,119 +104,13 @@ CATEGORÍA
 accident_treball
 
 DESCRIPCIÓN Y CRITERIO
-Procediment i qualificació de la contingència quan un treballador autònom pateix un accident durant la seva activitat professional
-
-Quan un treballador autònom pateix un accident durant la seva activitat professional, el procediment i la qualificació de la contingència presenten particularitats respecte al Règim General de la Seguretat Social (RGSS).
-
-Diferències amb el Règim General de la Seguretat Social (RGSS)
-
-La principal diferència rau en la presumpció de professionalitat i la gestió de les prestacions.
-
-*   RGSS: En el RGSS, les contingències professionals (accident de treball i malaltia professional) es presumeixen, en general, com a tals si ocorren durant la jornada laboral o en el lloc de treball. La gestió de la baixa i les prestacions econòmiques recau principalment en la Mútua Col·laboradora amb la Seguretat Social o l'INSS.
-   Régim Especial de Treballadors Autònoms (RETA): En el RETA, la cobertura de les contingències professionals és voluntària des de l'1 de gener de 2019, però es converteix en obligatòria* per a tots els autònoms. Abans d'aquesta data, era opcional. La qualificació de la contingència requereix una anàlisi més exhaustiva per determinar si l'accident té relació directa amb l'activitat professional.
-
-Cobertura de Contingències Professionals en el RETA
-
-Perquè un autònom pugui accedir a les prestacions derivades d'un accident de treball o malaltia professional, és imprescindible que tingui coberta aquesta contingència.
-
-*   Obligatorietat: Des de l'1 de gener de 2019, la cobertura de les contingències professionals (accident de treball i malaltia professional) és obligatòria per a tots els treballadors autònoms, d'acord amb la Llei 6/2017, de 24 d'octubre, de Reformes Urgents del Treball Autònom.
-*   Entitat gestora: La gestió i el pagament de les prestacions econòmiques per incapacitat temporal (IT) derivada de contingències professionals, així com les de lesions permanents no invalidants, incapacitat permanent i mort i supervivència, corresponen a la Mútua Col·laboradora amb la Seguretat Social amb la qual l'autònom tingui concertada la cobertura.
-
-Qualificació de l'accident de treball en el RETA
-
-L'article 313 del Reial Decret Legislatiu 8/2015, de 30 d'octubre, pel qual s'aprova el text refós de la Llei General de la Seguretat Social (LGSS), estableix la definició d'accident de treball per als autònoms:
-
-"S'entendrà per accident de treball del treballador autònom el succeït com a conseqüència directa i immediata del treball que realitza per la seva pròpia activitat professional i que determina la seva inclusió en el camp d'aplicació d'aquest règim especial."
-
-A més, la LGSS inclou una presumpció iuris tantum:
-
-"Es presumirà, excepte prova en contra, que l'accident no té relació amb el treball quan es produeixi en el trajecte d'anada o tornada del lloc de la prestació de l'activitat. Així mateix, s'entendrà que l'accident de treball és el que pateix el treballador autònom en el compliment de la seva jornada laboral o en el lloc de treball."
-
-Això implica que:
-   L'accident ha de ser directe i immediat* de l'activitat.
-   Hi ha una presumpció d'accident de treball si ocorre durant la jornada o en el lloc de treball*.
-   L'accident in itinere (en el trajecte d'anada o tornada) no es presumeix* com a professional, requerint prova addicional per demostrar la seva relació amb l'activitat professional.
-
-Qui emet el part de baixa (IT)?
-
-L'emissió del part de baixa per incapacitat temporal (IT) segueix el mateix procediment que en el RGSS, amb algunes particularitats en la gestió posterior:
-
-1.  Metge del Servei Públic de Salut (eCap): El metge de capçalera del Servei Públic de Salut (eCap en Catalunya) és qui, en primera instància, emet el part de baixa mèdica, independentment de la contingència (comuna o professional). Aquest part inicial no sol qualificar la contingència.
-2.  Comunicació a la Mútua/INSS:
-    *   Un cop emès el part de baixa, el treballador autònom (o la seva gestoria) ha de comunicar la baixa a la Mútua Col·laboradora amb la Seguretat Social amb la qual tingui concertada la cobertura de contingències professionals.
-    *   Si l'autònom no té cobertes les contingències professionals, la baixa serà gestionada com a contingència comuna per l'INSS.
-3.  Qualificació de la contingència:
-    *   La Mútua (o l'INSS, si no hi ha mútua o si la baixa és per contingència comuna) serà l'encarregada de qualificar la contingència (accident de treball, malaltia professional o contingència comuna) un cop revisada la documentació i, si escau, realitzades les proves mèdiques pertinents.
-    *   En cas de dubte sobre la qualificació, la Mútua pot sol·licitar a l'INSS un expedient de determinació de contingència.
-
-Prestacions econòmiques
-
-Les prestacions econòmiques per IT derivada d'accident de treball en el RETA es calculen sobre la base reguladora de la cotització de l'autònom.
-
-*   Percentatge: El 75% de la base reguladora des del dia següent al de la baixa mèdica (art. 173 LGSS i art. 2 RD 625/2014).
-*   Pagament: A càrrec de la Mútua o l'INSS, segons correspongui.
-
-En resum, la clau per al treballador autònom és tenir cobertes les contingències professionals i comunicar ràpidament l'accident a la seva Mútua per assegurar una correcta qualificació i gestió de les prestacions.
-
-Procedimiento y calificación de la contingencia cuando un trabajador autónomo sufre un accidente durante su actividad profesional
-
-Cuando un trabajador autónomo sufre un accidente durante su actividad profesional, el procedimiento y la calificación de la contingencia presentan particularidades respecto al Régimen General de la Seguridad Social (RGSS).
-
-Diferencias con el Régimen General de la Seguridad Social (RGSS)
-
-La principal diferencia radica en la presunción de profesionalidad y la gestión de las prestaciones.
-
-*   RGSS: En el RGSS, las contingencias profesionales (accidente de trabajo y enfermedad profesional) se presumen, en general, como tales si ocurren durante la jornada laboral o en el lugar de trabajo. La gestión de la baja y las prestaciones económicas recae principalmente en la Mutua Colaboradora con la Seguridad Social o el INSS.
-   Régimen Especial de Trabajadores Autónomos (RETA): En el RETA, la cobertura de las contingencias profesionales es voluntaria desde el 1 de enero de 2019, pero se convierte en obligatoria* para todos los autónomos. Antes de esta fecha, era opcional. La calificación de la contingencia requiere un análisis más exhaustivo para determinar si el accidente tiene relación directa con la actividad profesional.
-
-Cobertura de Contingencias Profesionales en el RETA
-
-Para que un autónomo pueda acceder a las prestaciones derivadas de un accidente de trabajo o enfermedad profesional, es imprescindible que tenga cubierta esta contingencia.
-
-*   Obligatoriedad: Desde el 1 de enero de 2019, la cobertura de las contingencias profesionales (accidente de trabajo y enfermedad profesional) es obligatoria para todos los trabajadores autónomos, de acuerdo con la Ley 6/2017, de 24 de octubre, de Reformas Urgentes del Trabajo Autónomo.
-*   Entidad gestora: La gestión y el pago de las prestaciones económicas por incapacidad temporal (IT) derivada de contingencias profesionales, así como las de lesiones permanentes no invalidantes, incapacidad permanente y muerte y supervivencia, corresponden a la Mutua Colaboradora con la Seguridad Social con la que el autónomo tenga concertada la cobertura.
-
-Calificación del accidente de trabajo en el RETA
-
-El artículo 313 del Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social (LGSS), establece la definición de accidente de trabajo para los autónomos:
-
-"Se entenderá por accidente de trabajo del trabajador autónomo el sucedido como consecuencia directa e inmediata del trabajo que realiza por su propia actividad profesional y que determina su inclusión en el campo de aplicación de este régimen especial."
-
-Además, la LGSS incluye una presunción iuris tantum:
-
-"Se presumirá, salvo prueba en contrario, que el accidente no tiene relación con el trabajo cuando se produzca en el trayecto de ida o vuelta del lugar de la prestación de la actividad. Asimismo, se entenderá que el accidente de trabajo es el que sufre el trabajador autónomo en el cumplimiento de su jornada laboral o en el lugar de trabajo."
-
-Esto implica que:
-   El accidente debe ser directo e inmediato* de la actividad.
-   Existe una presunción de accidente de trabajo si ocurre durante la jornada o en el lugar de trabajo*.
-   El accidente in itinere (en el trayecto de ida o vuelta) no se presume* como profesional, requiriendo prueba adicional para demostrar su relación con la actividad profesional.
-
-¿Quién emite el comunicado de baja (IT)?
-
-La emisión del comunicado de baja por incapacidad temporal (IT) sigue el mismo procedimiento que en el RGSS, con algunas particularidades en la gestión posterior:
-
-1.  Médico del Servicio Público de Salud (eCap): El médico de cabecera del Servicio Público de Salud (eCap en Cataluña) es quien, en primera instancia, emite el comunicado de baja médica, independientemente de la contingencia (común o profesional). Este parte inicial no suele calificar la contingencia.
-2.  Comunicación a la Mutua/INSS:
-    *   Una vez emitido el comunicado de baja, el trabajador autónomo (o su gestoría) debe comunicar la baja a la Mutua Colaboradora con la Seguridad Social con la que tenga concertada la cobertura de contingencias profesionales.
-    *   Si el autónomo no tiene cubiertas las contingencias profesionales, la baja será gestionada como contingencia común por el INSS.
-3.  Calificación de la contingencia:
-    *   La Mutua (o el INSS, si no hay mutua o si la baja es por contingencia común) será la encargada de calificar la contingencia (accidente de trabajo, enfermedad profesional o contingencia común) una vez revisada la documentación y, si procede, realizadas las pruebas médicas pertinentes.
-    *   En caso de duda sobre la calificación, la Mutua puede solicitar al INSS un expediente de determinación de contingencia.
-
-Prestaciones económicas
-
-Las prestaciones económicas por IT derivada de accidente de trabajo en el RETA se calculan sobre la base reguladora de la cotización del autónomo.
-
-*   Porcentaje: El 75% de la base reguladora desde el día siguiente al de la baja médica (art. 173 LGSS y art. 2 RD 625/2014).
-*   Pago: A cargo de la Mutua o el INSS, según corresponda.
-
-En resumen, la clave para el trabajador autónomo es tener cubiertas las contingencias profesionales y comunicar rápidamente el accidente a su Mutua para asegurar una correcta calificación y gestión de las prestaciones.
+Procedimiento y calificación de la contingencia cuando un trabajador autónomo sufre un accidente durante su actividad profesional. Incluye las diferencias con el RGSS, la cobertura de contingencias profesionales y quién emite el comunicado de baja.
 
 BASE LEGAL
 - Ley 20/2007, art. 26 (LETA): Definición de AT para autónomo
 - LGSS (RDL 8/2015), art. 316: AT en RETA
 - RD 1273/2003: Cobertura contingencias profesionales RETA
-- RD 625/2014, art. 1.2: Emisión de partes de baja
+- RD 625/2014, art. 1.2: Emisión de comunicados de baja
 - STS 5 julio 2023 (ROJ: STS 3098/2023)
 - Criterio de gestión DGOSS 22/2022
 
@@ -332,7 +120,7 @@ REQUISITO PREVIO: Verificar si el autónomo tiene cobertura de contingencias pro
 SI TIENE COBERTURA DE CP CON MUTUA:
 - La MUTUA emite el comunicado de baja por AT (no el eCap)
 - El médico del eCap debe derivar al paciente a la mutua colaboradora
-- Prestación: 75% de la base reguladora desde el día SIGUIENTE al accidente (sin período de carencia)
+- Prestación: 75% de la base reguladora desde el día SIGUIENTE al accidente (sin carencia)
 - Base reguladora: base de cotización del mes anterior / 30
 - El autónomo debe presentar Declaración de Situación de Actividad (DSA) a la mutua
 
@@ -340,7 +128,7 @@ SI NO TIENE COBERTURA DE CP:
 - El accidente se califica como ACCIDENTE NO LABORAL o ENFERMEDAD COMÚN
 - El médico del eCap emite el comunicado de baja por contingencia común
 - Prestación: 60% de la base reguladora hasta el día 20, 75% a partir del día 21
-- Hay período de carencia de 3 días (días 1, 2 y 3 sin prestación)
+- Hay carencia de 3 días (días 1, 2 y 3 sin prestación)
 
 EJEMPLOS PRÁCTICOS
 Ejemplo 1: Autónomo carpintero con cobertura CP: caída en el taller
@@ -356,12 +144,12 @@ Resolución: El accidente se califica como accidente NO laboral. El eCap emite e
 Ejemplo 3: Infarto en autónomo durante la jornada laboral
 Autónomo sufre un infarto mientras trabaja en su despacho. Tiene cobertura de CP.
 
-Resolución: ATENCIÓN: En el RETA NO se aplica la presunción de laboralidad (art. 156.3 LGSS). Hay que acreditar conexión causal directa entre la actividad y la lesión. Si no se acredita, la mutua puede calificarlo como enfermedad común. Diferencia clave con el RGSS donde la presunción sí se aplica (STS 5/7/2023).
+Resolución: ATENCIÓN: En el RETA NO se aplica la presunción de laboralidad (art. 156.3 LGSS). Hay que acreditar conexión causal directa entre la actividad y la lesión. Si no se acredita, la mutua puede cualificarlo como enfermedad común. Diferencia clave con el RGSS donde la presunción sí se aplica (STS 5/7/2023).
 
 Ejemplo 4: Accidente in itinere de autónomo
 Autónomo con cobertura CP sufre un accidente de tráfico yendo a su local de trabajo.
 
-Resolución: El accidente in itinere SÍ se cubre para autónomos si: el lugar de trabajo es diferente del domicilio Y coincide con el local/nave/oficina declarado a efectos fiscales. Si se cumplen estos requisitos: AT cubierto por la mutua.
+Resolución: El accidente in itinere SÍ se cubre para autónomos si: el lugar de trabajo es distinto del domicilio Y coincide con el local/nave/oficina declarado a efectos fiscales. Si se cumplen estos requisitos: AT cubierto por la mutua.
 
 DOCUMENTOS RELACIONADOS
 No hay documentos relacionados mediante identificador en el catálogo.
@@ -370,5 +158,5 @@ INSTRUCCIONES PARA EL ASISTENTE
 1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
 2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
 3. No conviertas un ejemplo orientativo en una regla general.
-4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
-5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.
+4. Cita la base legal incluida y reconoce la necesidad de verificar su vigencia en la fuente oficial.
+5. Si falta un dato decisivo o hay conflicto entre normas, indícalo en lugar de inventar una respuesta.

@@ -601,3 +601,5 @@
 - [x] Empaquetar i lliurar el corpus per carregar-lo a Coloq.IA
 - [x] Corregir la neteja TXT perquè comparadors com <180 i >365 no s'interpretin com HTML
 - [x] Validació final: 29 casos, 0 camps obligatoris absents, 0 sospites de traducció, 417 tests i 0 errors TypeScript
+- [x] Reparar en l'exportació les versions ES parcialment en català detectades als casos 300001, 30001 i 30002
+- [x] Reforçar l'auditoria lingüística i regenerar el corpus validat: 0 marcadors catalans als 29 blocs ES
