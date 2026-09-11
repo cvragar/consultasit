@@ -1,0 +1,178 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 60001
+Título: Accident in itinere en treballadors assalariats amb contracte de teletreball parcial
+Título en español: Accidente *in itinere* en trabajadores asalariados con contrato de teletrabajo parcial
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, accident_treball, Accident in itinere en treballadors assalariats amb contracte de teletreball parcial, Accidente *in itinere* en trabajadores asalariados con contrato de teletrabajo parcial
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+La Llei 10/2021 de treball a distància ha creat una nova casuística complexa: el treballador amb teletreball parcial (p. ex., 2 dies a casa i 3 dies a l'oficina) pot patir accidents en situacions molt diverses. La clau és determinar si el dia de l'accident era dia presencial o dia de teletreball, i si l'accident es va produir en el trajecte o dins del domicili.
+
+REGLA FONAMENTAL: Els dies de treball presencial, l'in itinere funciona de forma plena i ordinària. Els dies de teletreball, no hi ha trajecte protegit perquè el lloc de treball és el domicili, però sí que pot haver-hi AT si l'accident es produeix en temps i lloc de treball dins del domicili.
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Accident in itinere en treballadors assalariats amb contracte de teletreball parcial
+
+CATEGORIA
+accident_treball
+
+DESCRIPCIÓ I CRITERI
+La Llei 10/2021 de treball a distància ha creat una nova casuística complexa: el treballador amb teletreball parcial (p. ex., 2 dies a casa i 3 dies a l'oficina) pot patir accidents en situacions molt diverses. La clau és determinar si el dia de l'accident era dia presencial o dia de teletreball, i si l'accident es va produir en el trajecte o dins del domicili.
+
+REGLA FONAMENTAL: Els dies de treball presencial, l'in itinere funciona de forma plena i ordinària. Els dies de teletreball, no hi ha trajecte protegit perquè el lloc de treball és el domicili, però sí que pot haver-hi AT si l'accident es produeix en temps i lloc de treball dins del domicili.
+
+BASE LEGAL
+Art. 156.2.a TRLGSS (RDL 8/2015): "Tendrán la consideración de accidentes de trabajo los que sufra el trabajador al ir o al volver del lugar de trabajo."
+Art. 156.3 TRLGSS: Presumpció iuris tantum que tot accident en temps i lloc de treball és AT (aplicació difícil en domicili).
+Llei 10/2021, de 9 de juliol, de treball a distància: Art. 16 (PRL en teletreball), igualtat de protecció amb treballadors presencials.
+RD 625/2014: El comunicat de baixa l'emet el metge del SPS (eCap a Catalunya) tant per CC com per AT.
+STS 522/2025, de 2 de juny de 2025: Caiguda als escalons de sortida de vivenda unifamiliar NO és in itinere (element geogràfic prioritari).
+STSJ Galícia 7/7/2024: Teletrabajadora a les 22:45h - no és AT per falta d'acreditació de temps de treball.
+STSJ Madrid 485/2022, 11/7/2022: Dia de teletreball amb desplaçament puntual a l'empresa - SÍ és in itinere.
+STSJ País Basc 2224/2023, 6/2/2024: In itinere en trajecte empresa-hospital amb autorització del cap.
+
+PROCEDIMENT RECOMANAT
+PROCEDIMENT DES DE L'ECAP:
+
+1. PREGUNTAR SEMPRE: Si el treballador té contracte de teletreball i si el dia de l'accident era dia presencial o de teletreball.
+
+2. DIA PRESENCIAL - ACCIDENT EN TRAJECTE (in itinere clàssic):
+   - Contingència: AT in itinere
+   - Emetre el part indicant AT
+   - La mútua de l'empresa gestiona la prestació (75% BR des del dia següent)
+
+3. DIA DE TELETREBALL - ACCIDENT DINS DEL DOMICILI:
+   - Contingència: Pot ser AT (si es prova que estava en jornada laboral) o CC
+   - Recollir informació: hora, activitat, registre horari, correus, videoconferències
+   - Si no hi ha prou evidència: emetre com a CC i informar el treballador que pot reclamar contingència professional davant l'INSS
+
+4. DIA DE TELETREBALL - DESPLAÇAMENT PUNTUAL A L'EMPRESA:
+   - Contingència: AT in itinere (STSJ Madrid 485/2022)
+   - El desplaçament ha de ser per motiu laboral
+   - Emetre el part indicant AT
+
+5. NOTA STS 522/2025: Caiguda als escalons de sortida de la vivenda (dins de la finca privada) NO és in itinere.
+
+EXEMPLES PRÀCTICS
+Exemple 1: Infermera amb teletreball 2 dies - accident de trànsit en dia presencial
+
+Resolució: AT in itinere clar. El metge de l'eCap emet el part indicant AT. La mútua gestiona la prestació (75% BR des del dia següent).
+
+Exemple 2: Administratiu que cau a casa en dia de teletreball a les 10:30h
+
+Resolució: Pot ser AT si s'acredita que estava en jornada laboral. Si no hi ha prou evidència, emetre com a CC i informar que pot reclamar contingència professional davant l'INSS.
+
+Exemple 3: Tècnic en teletreball que va a l'empresa a recollir material urgent
+
+Resolució: AT in itinere (STSJ Madrid 485/2022). Desplaçament per motiu laboral. Emetre el part indicant AT.
+
+Exemple 4: Comercial amb jornada flexible en teletreball total - caiguda a les 22:45h
+
+Resolució: CC (STSJ Galícia 7/7/2024). Les 22:45h no es corresponen amb l'horari ordinari d'un comercial. No s'ha acreditat temps de treball.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+La Ley 10/2021 de trabajo a distancia ha creado una nueva casuística compleja: el trabajador con teletrabajo parcial (p. ej., 2 días en casa y 3 días en la oficina) puede sufrir accidentes en situaciones muy diversas. La clave es determinar si el día del accidente era día presencial o día de teletrabajo, y si el accidente se produjo en el trayecto o dentro del domicilio.
+
+REGLA FUNDAMENTAL: Los días de trabajo presencial, el in itinere funciona de forma plena y ordinaria. Los días de teletrabajo, no hay trayecto protegido porque el lugar de trabajo es el domicilio, pero sí puede haber AT si el accidente se produce en tiempo y lugar de trabajo dentro del domicilio.
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Accidente in itinere en trabajadores asalariados con contrato de teletrabajo parcial
+
+CATEGORÍA
+accident_treball
+
+DESCRIPCIÓN Y CRITERIO
+La Ley 10/2021 de trabajo a distancia ha creado una nueva casuística compleja: el trabajador con teletrabajo parcial (p. ej., 2 días en casa y 3 días en la oficina) puede sufrir accidentes en situaciones muy diversas. La clave es determinar si el día del accidente era día presencial o día de teletrabajo, y si el accidente se produjo en el trayecto o dentro del domicilio.
+
+REGLA FUNDAMENTAL: Los días de trabajo presencial, el in itinere funciona de forma plena y ordinaria. Los días de teletrabajo, no hay trayecto protegido porque el lugar de trabajo es el domicilio, pero sí puede haber AT si el accidente se produce en tiempo y lugar de trabajo dentro del domicilio.
+
+BASE LEGAL
+Art. 156.2.a TRLGSS (RDL 8/2015): "Tendrán la consideración de accidentes de trabajo los que sufra el trabajador al ir o al volver del lugar de trabajo."
+Art. 156.3 TRLGSS: Presunción iuris tantum de que todo accidente en tiempo y lugar de trabajo es AT (aplicación difícil en domicilio).
+Ley 10/2021, de 9 de julio, de trabajo a distancia: Art. 16 (PRL en teletrabajo), igualdad de protección con trabajadores presenciales.
+RD 625/2014: El comunicado de baja lo emite el médico del SPS (eCap en Cataluña) tanto por CC como por AT.
+STS 522/2025, de 2 de junio de 2025: Caída en los escalones de salida de vivienda unifamiliar NO es in itinere (elemento geográfico prioritario).
+STSJ Galicia 7/7/2024: Teletrabajadora a las 22:45h - no es AT por falta de acreditación de tiempo de trabajo.
+STSJ Madrid 485/2022, 11/7/2022: Día de teletrabajo con desplazamiento puntual a la empresa - SÍ es in itinere.
+STSJ País Vasco 2224/2023, 6/2/2024: In itinere en trayecto empresa-hospital con autorización del jefe.
+
+PROCEDIMIENTO RECOMENDADO
+PROCEDIMIENTO DESDE EL ECAP:
+
+1. PREGUNTAR SIEMPRE: Si el trabajador tiene contrato de teletrabajo y si el día del accidente era día presencial o de teletrabajo.
+
+2. DÍA PRESENCIAL - ACCIDENTE EN TRAYECTO (in itinere clásico):
+   - Contingencia: AT in itinere
+   - Emitir el parte indicando AT
+   - La mutua de la empresa gestiona la prestación (75% BR desde el día siguiente)
+
+3. DÍA DE TELETRABAJO - ACCIDENTE DENTRO DEL DOMICILIO:
+   - Contingencia: Puede ser AT (si se prueba que estaba en jornada laboral) o CC
+   - Recoger información: hora, actividad, registro horario, correos, videoconferencias
+   - Si no hay suficiente evidencia: emitir como CC e informar al trabajador que puede reclamar contingencia profesional ante el INSS
+
+4. DÍA DE TELETRABAJO - DESPLAZAMIENTO PUNTUAL A LA EMPRESA:
+   - Contingencia: AT in itinere (STSJ Madrid 485/2022)
+   - El desplazamiento debe ser por motivo laboral
+   - Emitir el parte indicando AT
+
+5. NOTA STS 522/2025: Caída en los escalones de salida de la vivienda (dentro de la finca privada) NO es in itinere.
+
+EJEMPLOS PRÁCTICOS
+Ejemplo 1: Enfermera con teletrabajo 2 días - accidente de tráfico en día presencial
+
+Resolución: AT in itinere claro. El médico del eCap emite el parte indicando AT. La mutua gestiona la prestación (75% BR desde el día siguiente).
+
+Ejemplo 2: Administrativo que cae en casa en día de teletrabajo a las 10:30h
+
+Resolución: Puede ser AT si se acredita que estaba en jornada laboral. Si no hay suficiente evidencia, emitir como CC e informar que puede reclamar contingencia profesional ante el INSS.
+
+Ejemplo 3: Técnico en teletrabajo que va a la empresa a recoger material urgente
+
+Resolución: AT in itinere (STSJ Madrid 485/2022). Desplazamiento por motivo laboral. Emitir el parte indicando AT.
+
+Ejemplo 4: Comercial con jornada flexible en teletrabajo total - caída a las 22:45h
+
+Resolución: CC (STSJ Galicia 7/7/2024). Las 22:45h no se corresponden con el horario ordinario de un comercial. No se ha acreditado tiempo de trabajo.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

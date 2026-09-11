@@ -1,0 +1,204 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 6
+Título: Pluriocupació
+Título en español: Pluriempleo
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, pluriempleo, Pluriocupació, Pluriempleo
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+La pluriocupació (treballador amb dos o més contractes de treball simultanis) genera una situació especial en la IT: el treballador ha d'estar de baixa en totes les empreses simultàniament, i la base reguladora (BR) es calcula sumant les bases de cotització de totes les activitats.
+
+Regla fonamental (LGSS art. 143): En cas de pluriocupació, la IT cobreix totes les activitats laborals. No es pot estar de baixa en una empresa i actiu en una altra.
+
+Característiques clau:
+- La baixa s'ha d'emetre per a totes les activitats simultàniament (un sol comunicat de baixa, però amb efectes en totes les empreses)
+- La BR es calcula sumant les bases de cotització de totes les empreses (art. 143.2 LGSS)
+- El percentatge aplicable (60-75%) s'aplica sobre la BR conjunta
+- Si el treballador té una activitat per compte propi (autònom) i una per compte aliè, la IT cobreix les dues
+- Excepció: si una de les activitats és compatible amb la patologia (per exemple, un metge que treballa en dos hospitals i la baixa és per una patologia que li impedeix fer guàrdies però no la consulta), cal valoració mèdica individualitzada
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Pluriocupació
+
+CATEGORIA
+pluriempleo
+
+DESCRIPCIÓ I CRITERI
+La pluriocupació (treballador amb dos o més contractes de treball simultanis) genera una situació especial en la IT: el treballador ha d'estar de baixa en totes les empreses simultàniament, i la base reguladora (BR) es calcula sumant les bases de cotització de totes les activitats.
+
+Regla fonamental (LGSS art. 143): En cas de pluriocupació, la IT cobreix totes les activitats laborals. No es pot estar de baixa en una empresa i actiu en una altra.
+
+Característiques clau:
+- La baixa s'ha d'emetre per a totes les activitats simultàniament (un sol comunicat de baixa, però amb efectes en totes les empreses)
+- La BR es calcula sumant les bases de cotització de totes les empreses (art. 143.2 LGSS)
+- El percentatge aplicable (60-75%) s'aplica sobre la BR conjunta
+- Si el treballador té una activitat per compte propi (autònom) i una per compte aliè, la IT cobreix les dues
+- Excepció: si una de les activitats és compatible amb la patologia (per exemple, un metge que treballa en dos hospitals i la baixa és per una patologia que li impedeix fer guàrdies però no la consulta), cal valoració mèdica individualitzada
+
+BASE LEGAL
+Normativa principal:
+- LGSS art. 143.1 (RDL 8/2015): en cas de pluriocupació, la IT cobreix totes les activitats laborals
+- LGSS art. 143.2: la BR es calcula sumant les bases de cotització de totes les activitats, amb el límit màxim de cotització
+- LGSS art. 169.1: concepte d'IT (malaltia comuna, accident laboral o no laboral, malaltia professional)
+- RD 625/2014, de 18 de juliol, art. 2 (BOE-A-2014-8191): procediment d'emissió dels parts mèdics
+- Ordre TAS/2865/2003, de 13 d'octubre (BOE-A-2003-19432): regulació de la prestació d'IT
+
+Jurisprudència:
+- STS (Sala Social) de 22/03/2005: confirma que la IT ha de coexistir en totes les activitats; no és possible estar de baixa en una empresa i actiu en una altra
+- La compatibilitat d'activitats durant la IT requereix resolució expressa de l'INSS o la mútua (art. 170.3 LGSS)
+
+PROCEDIMENT RECOMANAT
+Procediment des de l'eCap
+
+Pas 1: Identificació de la pluriocupació
+1. Preguntar al treballador si té més d'un contracte de treball actiu (o una activitat per compte propi simultàniament).
+2. Si hi ha pluriocupació, cal informar el treballador que la baixa afectarà totes les activitats.
+
+Pas 2: Emissió del comunicat de baixa
+1. Un sol comunicat de baixa: el metge de família emet un únic comunicat de baixa per a totes les activitats.
+2. El treballador ha de comunicar la baixa a totes les empreses on treballa.
+3. Cada empresa ha de gestionar la IT de manera independent (comunicació a la mútua o INSS corresponent).
+
+Pas 3: Càlcul de la BR (a càrrec de la mútua/INSS)
+- La mútua o INSS calcula la BR sumant les bases de cotització de totes les activitats.
+- Si el treballador cotitza per contingències comunes a dues empreses, la BR és la suma de les dues bases.
+- Si una activitat és per compte propi (RETA), la base de cotització del RETA s'afegeix a la del Règim General.
+
+Pas 4: Seguiment i alta
+- L'alta s'ha d'emetre per a totes les activitats simultàniament.
+- Si el treballador es reincorpora a una empresa però no a l'altra, cal valorar si la patologia és compatible amb una activitat però no amb l'altra (cas excepcional que requereix resolució de l'INSS).
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1: Dos contractes per compte aliè
+Situació: Treballadora que treballa de dilluns a divendres en una empresa (jornada completa) i els caps de setmana en una altra (jornada parcial). Pateix una fractura de canell.
+Resolució: El metge de família emet un sol comunicat de baixa. La treballadora comunica la baixa a les dues empreses. La BR es calcula sumant les dues bases de cotització. La prestació és del 60% de la BR conjunta des del dia 4 (o del dia 1 si és AT).
+
+Exemple 2: Compte aliè + autònom (RETA)
+Situació: Treballador que treballa per compte aliè en una empresa i, a més, té una activitat autònoma (dissenyador freelance). Pateix una depressió que li impedeix treballar.
+Resolució: La baixa cobreix les dues activitats. La BR inclou la base de cotització del RGSS i la base de cotització del RETA. Si el treballador autònom no té la cobertura de contingències comunes al RETA (opcional), la IT del RETA no genera prestació.
+
+Exemple 3: Activitat compatible amb la patologia
+Situació: Metge que treballa en dos hospitals. Pateix una lumbalgia que li impedeix fer guàrdies (postura dreta prolongada) però no la consulta (postura asseguda).
+Resolució: En principi, la IT ha de coexistir en les dues activitats. Si el metge considera que una activitat és compatible, ha de sol·licitar a l'INSS una resolució expressa de compatibilitat. Sense aquesta resolució, treballar en una empresa durant la IT és causa d'extinció de la prestació.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+La pluriocupación (trabajador con dos o más contratos de trabajo simultáneos) genera una situación especial en la IT: el trabajador debe estar de baja en todas las empresas simultáneamente, y la base reguladora (BR) se calcula sumando las bases de cotización de todas las actividades.
+
+Regla fundamental (LGSS art. 143): En caso de pluriocupación, la IT cubre todas las actividades laborales. No se puede estar de baja en una empresa y activo en otra.
+
+Características clave:
+- La baja debe emitirse para todas las actividades simultáneamente (un solo comunicado de baja, pero con efectos en todas las empresas)
+- La BR se calcula sumando las bases de cotización de todas las empresas (art. 143.2 LGSS)
+- El porcentaje aplicable (60-75%) se aplica sobre la BR conjunta
+- Si el trabajador tiene una actividad por cuenta propia (autónomo) y una por cuenta ajena, la IT cubre ambas
+- Excepción: si una de las actividades es compatible con la patología (por ejemplo, un médico que trabaja en dos hospitales y la baja es por una patología que le impide hacer guardias pero no la consulta), se requiere valoración médica individualizada
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Pluriempleo
+
+CATEGORÍA
+pluriempleo
+
+DESCRIPCIÓN Y CRITERIO
+La pluriocupación (trabajador con dos o más contratos de trabajo simultáneos) genera una situación especial en la IT: el trabajador debe estar de baja en todas las empresas simultáneamente, y la base reguladora (BR) se calcula sumando las bases de cotización de todas las actividades.
+
+Regla fundamental (LGSS art. 143): En caso de pluriocupación, la IT cubre todas las actividades laborales. No se puede estar de baja en una empresa y activo en otra.
+
+Características clave:
+- La baja debe emitirse para todas las actividades simultáneamente (un solo comunicado de baja, pero con efectos en todas las empresas)
+- La BR se calcula sumando las bases de cotización de todas las empresas (art. 143.2 LGSS)
+- El porcentaje aplicable (60-75%) se aplica sobre la BR conjunta
+- Si el trabajador tiene una actividad por cuenta propia (autónomo) y una por cuenta ajena, la IT cubre ambas
+- Excepción: si una de las actividades es compatible con la patología (por ejemplo, un médico que trabaja en dos hospitales y la baja es por una patología que le impide hacer guardias pero no la consulta), se requiere valoración médica individualizada
+
+BASE LEGAL
+Normativa principal:
+- LGSS art. 143.1 (RDL 8/2015): en caso de pluriempleo, la IT cubre todas las actividades laborales
+- LGSS art. 143.2: la BR se calcula sumando las bases de cotización de todas las actividades, con el límite máximo de cotización
+- LGSS art. 169.1: concepto de IT (enfermedad común, accidente laboral o no laboral, enfermedad profesional)
+- RD 625/2014, de 18 de julio, art. 2 (BOE-A-2014-8191): procedimiento de emisión de los partes médicos
+- Orden TAS/2865/2003, de 13 de octubre (BOE-A-2003-19432): regulación de la prestación de IT
+
+Jurisprudencia:
+- STS (Sala Social) de 22/03/2005: confirma que la IT debe coexistir en todas las actividades; no es posible estar de baja en una empresa y activo en otra
+- La compatibilidad de actividades durante la IT requiere resolución expresa del INSS o la mutua (art. 170.3 LGSS)
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento desde el eCap
+
+Paso 1: Identificación de la pluriocupación
+1. Preguntar al trabajador si tiene más de un contrato de trabajo activo (o una actividad por cuenta propia simultáneamente).
+2. Si existe pluriocupación, hay que informar al trabajador de que la baja afectará a todas las actividades.
+
+Paso 2: Emisión del comunicado de baja
+1. Un solo comunicado de baja: el médico de familia emite un único comunicado de baja para todas las actividades.
+2. El trabajador debe comunicar la baja a todas las empresas donde trabaja.
+3. Cada empresa debe gestionar la IT de forma independiente (comunicación a la mutua o INSS correspondiente).
+
+Paso 3: Cálculo de la BR (a cargo de la mutua/INSS)
+- La mutua o INSS calcula la BR sumando las bases de cotización de todas las actividades.
+- Si el trabajador cotiza por contingencias comunes en dos empresas, la BR es la suma de ambas bases.
+- Si una actividad es por cuenta propia (RETA), la base de cotización del RETA se añade a la del Régimen General.
+
+Paso 4: Seguimiento y alta
+- El alta debe emitirse para todas las actividades simultáneamente.
+- Si el trabajador se reincorpora a una empresa pero no a la otra, hay que valorar si la patología es compatible con una actividad pero no con la otra (caso excepcional que requiere resolución del INSS).
+
+EJEMPLOS PRÁCTICOS
+Ejemplos prácticos
+
+Ejemplo 1: Dos contratos por cuenta ajena
+Situación: Trabajadora que trabaja de lunes a viernes en una empresa (jornada completa) y los fines de semana en otra (jornada parcial). Sufre una fractura de muñeca.
+Resolución: El médico de familia emite un solo comunicado de baja. La trabajadora comunica la baja a ambas empresas. La BR se calcula sumando las dos bases de cotización. La prestación es del 60% de la BR conjunta desde el día 4 (o del día 1 si es AT).
+
+Ejemplo 2: Cuenta ajena + autónomo (RETA)
+Situación: Trabajador que trabaja por cuenta ajena en una empresa y, además, tiene una actividad autónoma (diseñador freelance). Sufre una depresión que le impide trabajar.
+Resolución: La baja cubre ambas actividades. La BR incluye la base de cotización del RGSS y la base de cotización del RETA. Si el trabajador autónomo no tiene la cobertura de contingencias comunes en el RETA (opcional), la IT del RETA no genera prestación.
+
+Ejemplo 3: Actividad compatible con la patología
+Situación: Médico que trabaja en dos hospitales. Sufre una lumbalgia que le impide hacer guardias (postura de pie prolongada) pero no la consulta (postura sentada).
+Resolución: En principio, la IT debe coexistir en ambas actividades. Si el médico considera que una actividad es compatible, debe solicitar al INSS una resolución expresa de compatibilidad. Sin esta resolución, trabajar en una empresa durante la IT es causa de extinción de la prestación.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

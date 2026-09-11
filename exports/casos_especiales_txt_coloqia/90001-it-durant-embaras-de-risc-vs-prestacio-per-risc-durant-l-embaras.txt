@@ -1,0 +1,224 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 90001
+Título: IT durant embaràs de risc vs. prestació per risc durant l'embaràs
+Título en español: IT durante embarazo de riesgo vs. prestación por riesgo durante el embarazo
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, embarazo, IT durant embaràs de risc vs. prestació per risc durant l'embaràs, IT durante embarazo de riesgo vs. prestación por riesgo durante el embarazo
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Distinció fonamental que genera confusió freqüent al metge de família
+
+Existeixen dues situacions completament diferents que afecten treballadores embarassades i que requereixen tramitacions, prestacions i gestors distints. Confondre-les és un error habitual que pot perjudicar la treballadora.
+
+Embaràs de risc (IT per contingència comuna)
+Es produeix quan la pròpia gestació presenta complicacions clíniques (hipertensió, diabetis gestacional, amenaça d'avortament, gestació múltiple, etc.) que impedeixen treballar. La causa és mèdica, no laboral. El metge de família emet el comunicat de baixa com a IT per contingència comuna. La treballadora percep el 60% de la base reguladora des del 4t dia (o el 75% a partir del dia 21).
+
+Risc durant l'embaràs (prestació específica)
+Es produeix quan les condicions del lloc de treball (agents químics, radiacions, esforç físic, postures, horaris nocturns, etc.) posen en risc la salut de la mare o el fetus. La causa és laboral-preventiva, no clínica. El metge de família NO emet la baixa: és la mútua o l'INSS qui certifica el risc i gestiona la prestació. La treballadora percep el 100% de la base reguladora des del primer dia.
+
+Regla pràctica per al metge de família:
+- Si la treballadora ve amb complicació clínica del seu embaràs → emet comunicat de baixa IT (eCap)
+- Si la treballadora ve perquè el seu treball és incompatible amb l'embaràs → deriva a la mútua o informa que ha de sol·licitar la prestació per risc durant l'embaràs (no emet comunicat de baixa)
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+IT durant embaràs de risc vs. prestació per risc durant l'embaràs
+
+CATEGORIA
+embarazo
+
+DESCRIPCIÓ I CRITERI
+Distinció fonamental que genera confusió freqüent al metge de família
+
+Existeixen dues situacions completament diferents que afecten treballadores embarassades i que requereixen tramitacions, prestacions i gestors distints. Confondre-les és un error habitual que pot perjudicar la treballadora.
+
+Embaràs de risc (IT per contingència comuna)
+Es produeix quan la pròpia gestació presenta complicacions clíniques (hipertensió, diabetis gestacional, amenaça d'avortament, gestació múltiple, etc.) que impedeixen treballar. La causa és mèdica, no laboral. El metge de família emet el comunicat de baixa com a IT per contingència comuna. La treballadora percep el 60% de la base reguladora des del 4t dia (o el 75% a partir del dia 21).
+
+Risc durant l'embaràs (prestació específica)
+Es produeix quan les condicions del lloc de treball (agents químics, radiacions, esforç físic, postures, horaris nocturns, etc.) posen en risc la salut de la mare o el fetus. La causa és laboral-preventiva, no clínica. El metge de família NO emet la baixa: és la mútua o l'INSS qui certifica el risc i gestiona la prestació. La treballadora percep el 100% de la base reguladora des del primer dia.
+
+Regla pràctica per al metge de família:
+- Si la treballadora ve amb complicació clínica del seu embaràs → emet comunicat de baixa IT (eCap)
+- Si la treballadora ve perquè el seu treball és incompatible amb l'embaràs → deriva a la mútua o informa que ha de sol·licitar la prestació per risc durant l'embaràs (no emet comunicat de baixa)
+
+BASE LEGAL
+IT per embaràs de risc (contingència comuna):
+- LGSS art. 169: Definició de la situació d'IT
+- LGSS art. 172: Durada de la IT (fins a 365 dies + pròrroga fins a 545 dies)
+- LGSS art. 173: Base reguladora de la IT (60% dies 4-20, 75% des del dia 21)
+- RD 625/2014: Gestió i control dels processos d'IT
+- LGSS art. 174: Situació especial d'IT per gestació setmana 39 (des de l'inici de la setmana 39 fins al part)
+
+Prestació per risc durant l'embaràs:
+- LGSS art. 186: Situació protegida (risc per condicions laborals, no per patologia)
+- LGSS art. 187: Prestació econòmica (100% base reguladora, contingència professional)
+- RD 295/2009, art. 26-38: Regulació detallada de la prestació per risc durant l'embaràs
+- Llei 31/1995 de Prevenció de Riscos Laborals, art. 26: Obligació empresarial de protecció
+- Directiva 92/85/CEE: Protecció de la maternitat en el treball
+
+PROCEDIMENT RECOMANAT
+Procediment per al metge de família (eCap) en cas d'embaràs de risc (IT):
+
+1. Visita mèdica: Avaluar la situació clínica de la gestant. Si hi ha patologia que impedeix treballar (hipertensió, diabetis gestacional, amenaça d'avortament, etc.), emetre comunicat de baixa.
+
+2. Emissió del comunicat de baixa a l'eCap:
+   - Contingència: Malaltia comuna (NO accident de treball)
+   - Diagnòstic: el codi CIE-10 corresponent a la complicació obstètrica
+   - Durada estimada: variable segons la complicació (pot ser fins al part)
+
+3. Seguiment: Parts de confirmació cada 7 dies (primers 30 dies) o cada 14 dies (fins al dia 365). La gestant pot continuar amb el seguiment obstètric habitual en paral·lel.
+
+4. Alta: Normalment coincideix amb l'inici del permís per naixement i cura de menor (16 setmanes). Si el part es produeix mentre la treballadora és de baixa per IT, l'alta per IT es produeix automàticament i s'inicia el permís de maternitat.
+
+Quan NO emetre comunicat de baixa (derivar a la mútua):
+
+Si la treballadora explica que el seu treball és incompatible amb l'embaràs (treballa amb productes químics, radiacions ionitzants, fa esforç físic, treballa en torn de nit, etc.) però no té cap patologia clínica, el metge de família NO ha d'emetre comunicat de baixa IT. Ha d'informar la treballadora que:
+1. Comuniqui la situació a l'empresa (per escrit)
+2. L'empresa ha d'adoptar mesures preventives o canviar-la de lloc
+3. Si l'empresa no pot, ha de sol·licitar la prestació per risc durant l'embaràs a la mútua o a l'INSS
+
+Situació especial: setmana 39 de gestació
+Des de la reforma de la LGSS (Llei 2/2023), a partir de l'inici de la setmana 39 de gestació, la treballadora té dret a una situació especial d'IT per contingència comuna, independentment de si té o no patologia. El metge de família pot emetre el comunicat de baixa des del primer dia de la setmana 39.
+
+EXEMPLES PRÀCTICS
+Exemple 1: Embaràs de risc → IT correcta
+Gestant de 28 setmanes amb diagnòstic de preeclàmpsia lleu (hipertensió + proteinúria). Treballa com a administrativa. El metge de família emet comunicat de baixa IT per contingència comuna (codi CIE-10: O14.0). Percep el 60% de la BR fins al dia 20 i el 75% des del dia 21. La mútua no intervé en la gestió.
+
+Exemple 2: Risc laboral → prestació per risc durant l'embaràs (NO IT)
+Gestant de 12 setmanes que treballa com a auxiliar d'infermeria en una UCI. Sense cap patologia clínica. Fa esforç físic, mobilitzacions de pacients i pot estar exposada a agents biològics. L'empresa no pot canviar-la de lloc. La treballadora sol·licita la prestació per risc durant l'embaràs a la mútua. Percep el 100% de la BR. El metge de família NO emet comunicat de baixa.
+
+Exemple 3: Situació mixta (IT + posterior risc durant l'embaràs)
+Gestant de 20 setmanes amb amenaça d'avortament (IT per contingència comuna). Es recupera i es reincorpora. Posteriorment, l'empresa no pot garantir condicions segures. Pot sol·licitar la prestació per risc durant l'embaràs. Si durant la IT sol·licita el canvi a prestació per risc durant l'embaràs, la IT s'extingeix i s'inicia la nova prestació (RD 295/2009, art. 26.2).
+
+Exemple 4: Setmana 39 (situació especial)
+Gestant de 38+6 setmanes sense patologia. Treballa com a professora. A partir del primer dia de la setmana 39 (39+0), el metge de família pot emetre comunicat de baixa IT per contingència comuna com a "situació especial de gestació". Percep el 100% de la BR (no el 60%/75% habitual) fins al part.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Distinción fundamental que genera confusión frecuente al médico de familia
+
+Existen dos situaciones completamente diferentes que afectan a trabajadoras embarazadas y que requieren tramitaciones, prestaciones y gestores distintos. Confundirlas es un error habitual que puede perjudicar a la trabajadora.
+
+Embarazo de riesgo (IT por contingencia común)
+Se produce cuando la propia gestación presenta complicaciones clínicas (hipertensión, diabetes gestacional, amenaza de aborto, gestación múltiple, etc.) que impiden trabajar. La causa es médica, no laboral. El médico de familia emite el comunicado de baja como IT por contingencia común. La trabajadora percibe el 60% de la base reguladora desde el 4º día (o el 75% a partir del día 21).
+
+Riesgo durante el embarazo (prestación específica)
+Se produce cuando las condiciones del puesto de trabajo (agentes químicos, radiaciones, esfuerzo físico, posturas, horarios nocturnos, etc.) ponen en riesgo la salud de la madre o el feto. La causa es laboral-preventiva, no clínica. El médico de familia NO emite la baja: es la mutua o el INSS quien certifica el riesgo y gestiona la prestación. La trabajadora percibe el 100% de la base reguladora desde el primer día.
+
+Regla práctica para el médico de familia:
+- Si la trabajadora viene con complicación clínica de su embarazo → emite comunicado de baja IT (eCap)
+- Si la trabajadora viene porque su trabajo es incompatible con el embarazo → deriva a la mutua o informa que debe solicitar la prestación por riesgo durante el embarazo (no emite comunicado de baja)
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+IT durante embarazo de riesgo vs. prestación por riesgo durante el embarazo
+
+CATEGORÍA
+embarazo
+
+DESCRIPCIÓN Y CRITERIO
+Distinción fundamental que genera confusión frecuente al médico de familia
+
+Existen dos situaciones completamente diferentes que afectan a trabajadoras embarazadas y que requieren tramitaciones, prestaciones y gestores distintos. Confundirlas es un error habitual que puede perjudicar a la trabajadora.
+
+Embarazo de riesgo (IT por contingencia común)
+Se produce cuando la propia gestación presenta complicaciones clínicas (hipertensión, diabetes gestacional, amenaza de aborto, gestación múltiple, etc.) que impiden trabajar. La causa es médica, no laboral. El médico de familia emite el comunicado de baja como IT por contingencia común. La trabajadora percibe el 60% de la base reguladora desde el 4º día (o el 75% a partir del día 21).
+
+Riesgo durante el embarazo (prestación específica)
+Se produce cuando las condiciones del puesto de trabajo (agentes químicos, radiaciones, esfuerzo físico, posturas, horarios nocturnos, etc.) ponen en riesgo la salud de la madre o el feto. La causa es laboral-preventiva, no clínica. El médico de familia NO emite la baja: es la mutua o el INSS quien certifica el riesgo y gestiona la prestación. La trabajadora percibe el 100% de la base reguladora desde el primer día.
+
+Regla práctica para el médico de familia:
+- Si la trabajadora viene con complicación clínica de su embarazo → emite comunicado de baja IT (eCap)
+- Si la trabajadora viene porque su trabajo es incompatible con el embarazo → deriva a la mutua o informa que debe solicitar la prestación por riesgo durante el embarazo (no emite comunicado de baja)
+
+BASE LEGAL
+IT por embarazo de riesgo (contingencia común):
+- LGSS art. 169: Definición de la situación de IT
+- LGSS art. 172: Duración de la IT (hasta 365 días + prórroga hasta 545 días)
+- LGSS art. 173: Base reguladora de la IT (60% días 4-20, 75% desde el día 21)
+- RD 625/2014: Gestión y control de los procesos de IT
+- LGSS art. 174: Situación especial de IT por gestación semana 39 (desde el inicio de la semana 39 hasta el parto)
+
+Prestación por riesgo durante el embarazo:
+- LGSS art. 186: Situación protegida (riesgo por condiciones laborales, no por patología)
+- LGSS art. 187: Prestación económica (100% base reguladora, contingencia profesional)
+- RD 295/2009, art. 26-38: Regulación detallada de la prestación por riesgo durante el embarazo
+- Ley 31/1995 de Prevención de Riesgos Laborales, art. 26: Obligación empresarial de protección
+- Directiva 92/85/CEE: Protección de la maternidad en el trabajo
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento para el médico de familia (eCap) en caso de embarazo de riesgo (IT):
+
+1. Visita médica: Evaluar la situación clínica de la gestante. Si existe patología que impida trabajar (hipertensión, diabetes gestacional, amenaza de aborto, etc.), emitir comunicado de baja.
+
+2. Emisión del comunicado de baja en el eCap:
+   - Contingencia: Enfermedad común (NO accidente de trabajo)
+   - Diagnóstico: el código CIE-10 correspondiente a la complicación obstétrica
+   - Duración estimada: variable según la complicación (puede ser hasta el parto)
+
+3. Seguimiento: Partes de confirmación cada 7 días (primeros 30 días) o cada 14 días (hasta el día 365). La gestante puede continuar con el seguimiento obstétrico habitual en paralelo.
+
+4. Alta: Normalmente coincide con el inicio del permiso por nacimiento y cuidado de menor (16 semanas). Si el parto se produce mientras la trabajadora está de baja por IT, el alta por IT se produce automáticamente y se inicia el permiso de maternidad.
+
+Cuando NO emitir comunicado de baja (derivar a la mutua):
+
+Si la trabajadora explica que su trabajo es incompatible con el embarazo (trabaja con productos químicos, radiaciones ionizantes, hace esfuerzo físico, trabaja en turno de noche, etc.) pero no tiene ninguna patología clínica, el médico de familia NO debe emitir comunicado de baja IT. Debe informar a la trabajadora que:
+1. Comunique la situación a la empresa (por escrito)
+2. La empresa debe adoptar medidas preventivas o cambiarla de puesto
+3. Si la empresa no puede, debe solicitar la prestación por riesgo durante el embarazo a la mutua o al INSS
+
+Situación especial: semana 39 de gestación
+Desde la reforma de la LGSS (Ley 2/2023), a partir del inicio de la semana 39 de gestación, la trabajadora tiene derecho a una situación especial de IT por contingencia común, independientemente de si tiene o no patología. El médico de familia puede emitir el comunicado de baja desde el primer día de la semana 39.
+
+EJEMPLOS PRÁCTICOS
+Ejemplo 1: Embarazo de riesgo → IT correcta
+Gestante de 28 semanas con diagnóstico de preeclampsia leve (hipertensión + proteinuria). Trabaja como administrativa. El médico de familia emite comunicado de baja IT por contingencia común (código CIE-10: O14.0). Percibe el 60% de la BR hasta el día 20 y el 75% desde el día 21. La mutua no interviene en la gestión.
+
+Ejemplo 2: Riesgo laboral → prestación por riesgo durante el embarazo (NO IT)
+Gestante de 12 semanas que trabaja como auxiliar de enfermería en una UCI. Sin patología clínica alguna. Realiza esfuerzo físico, movilizaciones de pacientes y puede estar expuesta a agentes biológicos. La empresa no puede cambiarla de puesto. La trabajadora solicita la prestación por riesgo durante el embarazo a la mutua. Percibe el 100% de la BR. El médico de familia NO emite comunicado de baja.
+
+Ejemplo 3: Situación mixta (IT + posterior riesgo durante el embarazo)
+Gestante de 20 semanas con amenaza de aborto (IT por contingencia común). Se recupera y se reincorpora. Posteriormente, la empresa no puede garantizar condiciones seguras. Puede solicitar la prestación por riesgo durante el embarazo. Si durante la IT solicita el cambio a prestación por riesgo durante el embarazo, la IT se extingue y se inicia la nueva prestación (RD 295/2009, art. 26.2).
+
+Ejemplo 4: Semana 39 (situación especial)
+Gestante de 38+6 semanas sin patología. Trabaja como profesora. A partir del primer día de la semana 39 (39+0), el médico de familia puede emitir comunicado de baja IT por contingencia común como "situación especial de gestación". Percibe el 100% de la BR (no el 60%/75% habitual) hasta el parto.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

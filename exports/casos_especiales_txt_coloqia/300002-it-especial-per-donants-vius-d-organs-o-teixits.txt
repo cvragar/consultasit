@@ -1,0 +1,192 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 300002
+Título: IT especial per donants vius d'òrgans o teixits
+Título en español: IT especial para donantes vivos de órganos o tejidos
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, donacion_organos, IT especial per donants vius d'òrgans o teixits, IT especial para donantes vivos de órganos o tejidos
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Situació especial d'IT per donació en viu
+
+La Ley 6/2024 crea una nova situació especial d'incapacitat temporal per contingències comunes per a persones donants vives d'òrgans o teixits per al seu trasplantament.
+
+Característiques principals
+
+- Subsidio del 100% de la base reguladora des del primer dia
+- Sense període mínim de cotització prèvia
+- Cobreix tant els dies discontinus (preparació mèdica) com els ininterromputs (ingrés hospitalari fins a l'alta)
+- Inclou permisos retribuïts per als actes previs a la donació
+
+Durada
+
+Des de l'inici de la preparació mèdica o l'ingrés hospitalari fins a l'alta per curació.
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+IT especial per donants vius d'òrgans o teixits
+
+CATEGORIA
+donacion_organos
+
+DESCRIPCIÓ I CRITERI
+Situació especial d'IT per donació en viu
+
+La Ley 6/2024 crea una nova situació especial d'incapacitat temporal per contingències comunes per a persones donants vives d'òrgans o teixits per al seu trasplantament.
+
+Característiques principals
+
+- Subsidio del 100% de la base reguladora des del primer dia
+- Sense període mínim de cotització prèvia
+- Cobreix tant els dies discontinus (preparació mèdica) com els ininterromputs (ingrés hospitalari fins a l'alta)
+- Inclou permisos retribuïts per als actes previs a la donació
+
+Durada
+
+Des de l'inici de la preparació mèdica o l'ingrés hospitalari fins a l'alta per curació.
+
+BASE LEGAL
+Base legal
+
+- Ley 6/2024, de 20 de desembre (BOE-A-2024-26693)
+- Modifica els articles 144, 169 i 172 de la LGSS (RDL 8/2015)
+- Art. 169.1.a) LGSS: definició de la situació especial
+- Art. 172 LGSS: subsidio del 100% sense carència
+
+PROCEDIMENT RECOMANAT
+Procediment
+
+1. El metge de família emet el comunicat de baixa indicant donació d'òrgans o teixits com a causa
+2. El subsidio es calcula al 100% de la base reguladora des del primer dia
+3. No cal acreditar cotització prèvia
+4. Els dies de preparació mèdica es comptabilitzen com a IT encara que siguin discontinus
+5. L'alta la dona el metge quan es completa la recuperació post-donació
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1: Donació de ronyó
+Un treballador dona un ronyó a un familiar. La IT cobreix:
+- 3 dies de proves preoperatòries (discontinus)
+- Ingrés hospitalari per a la nefrectomia
+- Recuperació postoperatòria (4-6 setmanes)
+- Subsidio: 100% de la BR des del primer dia
+
+Exemple 2: Donació de medul·la òssia
+Una treballadora dona medul·la òssia:
+- Proves de compatibilitat i preparació (dies discontinus)
+- Procediment d'extracció
+- Recuperació (1-2 setmanes)
+- Sense requisit de cotització prèvia
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Situación especial de IT por donación en vivo
+
+La Ley 6/2024 crea una nueva situación especial de incapacidad temporal por contingencias comunes para personas donantes vivas de órganos o tejidos para su trasplante.
+
+Características principales
+
+- Subsidio del 100% de la base reguladora desde el primer día
+- Sin periodo mínimo de cotización previa
+- Cubre tanto los días discontinuos (preparación médica) como los ininterrumpidos (ingreso hospitalario hasta el alta)
+- Incluye permisos retribuidos para los actos previos a la donación
+
+Duración
+
+Desde el inicio de la preparación médica o el ingreso hospitalario hasta el alta por curación.
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+IT especial para donantes vivos de órganos o tejidos
+
+CATEGORÍA
+donacion_organos
+
+DESCRIPCIÓN Y CRITERIO
+Situación especial de IT por donación en vivo
+
+La Ley 6/2024 crea una nueva situación especial de incapacidad temporal por contingencias comunes para personas donantes vivas de órganos o tejidos para su trasplante.
+
+Características principales
+
+- Subsidio del 100% de la base reguladora desde el primer día
+- Sin periodo mínimo de cotización previa
+- Cubre tanto los días discontinuos (preparación médica) como los ininterrumpidos (ingreso hospitalario hasta el alta)
+- Incluye permisos retribuidos para los actos previos a la donación
+
+Duración
+
+Desde el inicio de la preparación médica o el ingreso hospitalario hasta el alta por curación.
+
+BASE LEGAL
+Base legal
+
+- Ley 6/2024, de 20 de diciembre (BOE-A-2024-26693)
+- Modifica los artículos 144, 169 y 172 de la LGSS (RDL 8/2015)
+- Art. 169.1.a) LGSS: definición de la situación especial
+- Art. 172 LGSS: subsidio del 100% sin carencia
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento
+
+1. El médico de familia emite el parte de baja indicando donación de órganos o tejidos como causa
+2. El subsidio se calcula al 100% de la base reguladora desde el primer día
+3. No es necesario acreditar cotización previa
+4. Los días de preparación médica se contabilizan como IT aunque sean discontinuos
+5. El alta la emite el médico cuando se completa la recuperación post-donación
+
+EJEMPLOS PRÁCTICOS
+Ejemplos prácticos
+
+Ejemplo 1: Donación de riñón
+Un trabajador dona un riñón a un familiar. La IT cubre:
+- 3 días de pruebas preoperatorias (discontinuos)
+- Ingreso hospitalario para la nefrectomía
+- Recuperación postoperatoria (4-6 semanas)
+- Subsidio: 100% de la BR desde el primer día
+
+Ejemplo 2: Donación de médula ósea
+Una trabajadora dona médula ósea:
+- Pruebas de compatibilidad y preparación (días discontinuos)
+- Procedimiento de extracción
+- Recuperación (1-2 semanas)
+- Sin requisito de cotización previa
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

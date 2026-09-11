@@ -1,0 +1,292 @@
+[
+  {
+    "id": "1",
+    "title": "Menstruació incapacitant",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "001-menstruacio-incapacitant.txt"
+    }
+  },
+  {
+    "id": "2",
+    "title": "Interrupció voluntària de l'embaràs (IVE)",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "002-interrupcio-voluntaria-de-l-embaras-ive.txt"
+    }
+  },
+  {
+    "id": "3",
+    "title": "Gestació a partir de la setmana 39",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "003-gestacio-a-partir-de-la-setmana-39.txt"
+    }
+  },
+  {
+    "id": "90001",
+    "title": "IT durant embaràs de risc vs. prestació per risc durant l'embaràs",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "90001-it-durant-embaras-de-risc-vs-prestacio-per-risc-durant-l-embaras.txt"
+    }
+  },
+  {
+    "id": "90005",
+    "title": "IT prèvia al part i permís per naixement i cura de menor (16 setmanes)",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "90005-it-previa-al-part-i-permis-per-naixement-i-cura-de-menor-16-setmanes.txt"
+    }
+  },
+  {
+    "id": "90004",
+    "title": "Prestació per risc durant la lactància natural: diferències amb la IT",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "90004-prestacio-per-risc-durant-la-lactancia-natural-diferencies-amb-la-it.txt"
+    }
+  },
+  {
+    "id": "4",
+    "title": "Donació d'òrgans",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "004-donacio-d-organs.txt"
+    }
+  },
+  {
+    "id": "300002",
+    "title": "IT especial per donants vius d'òrgans o teixits",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "300002-it-especial-per-donants-vius-d-organs-o-teixits.txt"
+    }
+  },
+  {
+    "id": "5",
+    "title": "Baixes retroactives",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "005-baixes-retroactives.txt"
+    }
+  },
+  {
+    "id": "6",
+    "title": "Pluriocupació",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "006-pluriocupacio.txt"
+    }
+  },
+  {
+    "id": "70001",
+    "title": "Pluriactivitat: treballador simultàniament autònom (RETA) i assalariat (Règim General)",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "70001-pluriactivitat-treballador-simultaniament-autonom-reta-i-assalariat-regim-general.txt"
+    }
+  },
+  {
+    "id": "7",
+    "title": "IT i presó",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "007-it-i-preso.txt"
+    }
+  },
+  {
+    "id": "8",
+    "title": "IT en estrangers",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "008-it-en-estrangers.txt"
+    }
+  },
+  {
+    "id": "9",
+    "title": "Vacances durant la IT",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "009-vacances-durant-la-it.txt"
+    }
+  },
+  {
+    "id": "10",
+    "title": "Recaiguda en IT",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "010-recaiguda-en-it.txt"
+    }
+  },
+  {
+    "id": "300001",
+    "title": "Recaiguda post-alta ICAM",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "300001-recaiguda-post-alta-icam.txt"
+    }
+  },
+  {
+    "id": "30001",
+    "title": "Accident de treball en treballador autònom (RETA)",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "30001-accident-de-treball-en-treballador-autonom-reta.txt"
+    }
+  },
+  {
+    "id": "30002",
+    "title": "Accident de treball en treballador en situació de pluriocupació",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "30002-accident-de-treball-en-treballador-en-situacio-de-pluriocupacio.txt"
+    }
+  },
+  {
+    "id": "30003",
+    "title": "TRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "30003-trade-treballador-autonom-economicament-dependent-it-i-accident-de-treball.txt"
+    }
+  },
+  {
+    "id": "30004",
+    "title": "Accident in itinere per a autònoms amb múltiples llocs de treball declarats",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "30004-accident-in-itinere-per-a-autonoms-amb-multiples-llocs-de-treball-declarats.txt"
+    }
+  },
+  {
+    "id": "60001",
+    "title": "Accident in itinere en treballadors assalariats amb contracte de teletreball parcial",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "60001-accident-in-itinere-en-treballadors-assalariats-amb-contracte-de-teletreball-parcial.txt"
+    }
+  },
+  {
+    "id": "80001",
+    "title": "Malaltia professional en personal sanitari: punxada accidental",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "80001-malaltia-professional-en-personal-sanitari-punxada-accidental.txt"
+    }
+  },
+  {
+    "id": "90006",
+    "title": "IT en teletreball: accident laboral vs. contingència comuna",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "90006-it-en-teletreball-accident-laboral-vs-contingencia-comuna.txt"
+    }
+  },
+  {
+    "id": "90002",
+    "title": "Reducció de jornada per guarda legal i IT: càlcul de la base reguladora",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "90002-reduccio-de-jornada-per-guarda-legal-i-it-calcul-de-la-base-reguladora.txt"
+    }
+  },
+  {
+    "id": "90003",
+    "title": "IT durant un ERTE/ERTO: qui paga i com es gestiona",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "90003-it-durant-un-erte-erto-qui-paga-i-com-es-gestiona.txt"
+    }
+  },
+  {
+    "id": "90007",
+    "title": "Recaiguda post-alta de l'ICAM: procediment IS3 a l'eCap",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "90007-recaiguda-post-alta-de-l-icam-procediment-is3-a-l-ecap.txt"
+    }
+  },
+  {
+    "id": "90008",
+    "title": "IT i permís parental (16 setmanes): compatibilitat i gestió des de l'eCap",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "90008-it-i-permis-parental-16-setmanes-compatibilitat-i-gestio-des-de-l-ecap.txt"
+    }
+  },
+  {
+    "id": "300003",
+    "title": "IP i no extinció automàtica del contracte (Ley 2/2025)",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "300003-ip-i-no-extincio-automatica-del-contracte-ley-2-2025.txt"
+    }
+  },
+  {
+    "id": "300004",
+    "title": "Altes laborals progressives per malalties greus (proposta 2026)",
+    "type": "caso_especial",
+    "source": "Consultes IT; base legal detallada dentro del caso",
+    "url": "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    "files": {
+      "txt": "300004-altes-laborals-progressives-per-malalties-greus-proposta-2026.txt"
+    }
+  }
+]

@@ -1,0 +1,183 @@
+ÍNDICE DEL CATÁLOGO
+===================
+
+Total: 29
+
+caso_especial: 29
+
+DOCUMENTOS
+==========
+
+1. Menstruació incapacitant
+   Archivo: 001-menstruacio-incapacitant.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+2. Interrupció voluntària de l'embaràs (IVE)
+   Archivo: 002-interrupcio-voluntaria-de-l-embaras-ive.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+3. Gestació a partir de la setmana 39
+   Archivo: 003-gestacio-a-partir-de-la-setmana-39.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+4. IT durant embaràs de risc vs. prestació per risc durant l'embaràs
+   Archivo: 90001-it-durant-embaras-de-risc-vs-prestacio-per-risc-durant-l-embaras.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+5. IT prèvia al part i permís per naixement i cura de menor (16 setmanes)
+   Archivo: 90005-it-previa-al-part-i-permis-per-naixement-i-cura-de-menor-16-setmanes.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+6. Prestació per risc durant la lactància natural: diferències amb la IT
+   Archivo: 90004-prestacio-per-risc-durant-la-lactancia-natural-diferencies-amb-la-it.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+7. Donació d'òrgans
+   Archivo: 004-donacio-d-organs.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+8. IT especial per donants vius d'òrgans o teixits
+   Archivo: 300002-it-especial-per-donants-vius-d-organs-o-teixits.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+9. Baixes retroactives
+   Archivo: 005-baixes-retroactives.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+10. Pluriocupació
+   Archivo: 006-pluriocupacio.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+11. Pluriactivitat: treballador simultàniament autònom (RETA) i assalariat (Règim General)
+   Archivo: 70001-pluriactivitat-treballador-simultaniament-autonom-reta-i-assalariat-regim-general.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+12. IT i presó
+   Archivo: 007-it-i-preso.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+13. IT en estrangers
+   Archivo: 008-it-en-estrangers.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+14. Vacances durant la IT
+   Archivo: 009-vacances-durant-la-it.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+15. Recaiguda en IT
+   Archivo: 010-recaiguda-en-it.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+16. Recaiguda post-alta ICAM
+   Archivo: 300001-recaiguda-post-alta-icam.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+17. Accident de treball en treballador autònom (RETA)
+   Archivo: 30001-accident-de-treball-en-treballador-autonom-reta.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+18. Accident de treball en treballador en situació de pluriocupació
+   Archivo: 30002-accident-de-treball-en-treballador-en-situacio-de-pluriocupacio.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+19. TRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball
+   Archivo: 30003-trade-treballador-autonom-economicament-dependent-it-i-accident-de-treball.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+20. Accident in itinere per a autònoms amb múltiples llocs de treball declarats
+   Archivo: 30004-accident-in-itinere-per-a-autonoms-amb-multiples-llocs-de-treball-declarats.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+21. Accident in itinere en treballadors assalariats amb contracte de teletreball parcial
+   Archivo: 60001-accident-in-itinere-en-treballadors-assalariats-amb-contracte-de-teletreball-parcial.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+22. Malaltia professional en personal sanitari: punxada accidental
+   Archivo: 80001-malaltia-professional-en-personal-sanitari-punxada-accidental.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+23. IT en teletreball: accident laboral vs. contingència comuna
+   Archivo: 90006-it-en-teletreball-accident-laboral-vs-contingencia-comuna.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+24. Reducció de jornada per guarda legal i IT: càlcul de la base reguladora
+   Archivo: 90002-reduccio-de-jornada-per-guarda-legal-i-it-calcul-de-la-base-reguladora.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+25. IT durant un ERTE/ERTO: qui paga i com es gestiona
+   Archivo: 90003-it-durant-un-erte-erto-qui-paga-i-com-es-gestiona.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+26. Recaiguda post-alta de l'ICAM: procediment IS3 a l'eCap
+   Archivo: 90007-recaiguda-post-alta-de-l-icam-procediment-is3-a-l-ecap.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+27. IT i permís parental (16 setmanes): compatibilitat i gestió des de l'eCap
+   Archivo: 90008-it-i-permis-parental-16-setmanes-compatibilitat-i-gestio-des-de-l-ecap.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+28. IP i no extinció automàtica del contracte (Ley 2/2025)
+   Archivo: 300003-ip-i-no-extincio-automatica-del-contracte-ley-2-2025.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+
+29. Altes laborals progressives per malalties greus (proposta 2026)
+   Archivo: 300004-altes-laborals-progressives-per-malalties-greus-proposta-2026.txt
+   Tipo: caso_especial
+   Fuente: Consultes IT; base legal detallada dentro del caso
+   URL: https://consultasit-dirvlpm6.manus.space/casos-especials

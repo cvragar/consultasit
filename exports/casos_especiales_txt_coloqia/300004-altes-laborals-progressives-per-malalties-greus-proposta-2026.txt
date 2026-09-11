@@ -1,0 +1,180 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 300004
+Título: Altes laborals progressives per malalties greus (proposta 2026)
+Título en español: Altas laborales progresivas por enfermedades graves (propuesta 2026)
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, otro, Altes laborals progressives per malalties greus (proposta 2026), Altas laborales progresivas por enfermedades graves (propuesta 2026)
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Altes laborals progressives
+
+La Seguretat Social està negociant un model d'altes laborals progressives per a treballadors amb malalties greus (càncer, trasplantaments, infarts, ictus, fractures greus). Permet la reincorporació gradual al treball.
+
+Característiques de la proposta
+
+- Accés voluntari per al treballador
+- Requisit: més de 180 dies de baixa (6 mesos)
+- Reincorporació amb jornada parcial progressiva
+- Compatible amb el cobrament parcial del subsidio d'IT
+
+Estat actual
+
+En fase de negociació entre Seguretat Social, patronal i sindicats (febrer 2026). No està en vigor encara. Pendent de publicació al BOE.
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Altes laborals progressives per malalties greus (proposta 2026)
+
+CATEGORIA
+otro
+
+DESCRIPCIÓ I CRITERI
+Altes laborals progressives
+
+La Seguretat Social està negociant un model d'altes laborals progressives per a treballadors amb malalties greus (càncer, trasplantaments, infarts, ictus, fractures greus). Permet la reincorporació gradual al treball.
+
+Característiques de la proposta
+
+- Accés voluntari per al treballador
+- Requisit: més de 180 dies de baixa (6 mesos)
+- Reincorporació amb jornada parcial progressiva
+- Compatible amb el cobrament parcial del subsidio d'IT
+
+Estat actual
+
+En fase de negociació entre Seguretat Social, patronal i sindicats (febrer 2026). No està en vigor encara. Pendent de publicació al BOE.
+
+BASE LEGAL
+Base legal
+
+- Proposta en negociació (febrer 2026)
+- Reunions entre Seguretat Social, patronal i sindicats
+- Pendent de Reial Decret
+- Fonament: art. 169 i 174 LGSS (IT i pròrrogues)
+
+PROCEDIMENT RECOMANAT
+Procediment (previst)
+
+1. Treballador amb més de 180 dies de baixa per malaltia greu
+2. Sol·licitud voluntària d'alta progressiva
+3. Avaluació mèdica de la capacitat funcional parcial
+4. Reincorporació amb jornada reduïda (ex: 50% → 75% → 100%)
+5. Cobrament parcial del subsidio d'IT durant la transició
+
+Nota: Aquest procediment és provisional i pot canviar quan es publiqui la normativa definitiva.
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1: Pacient oncològic
+Un treballador amb càncer de còlon porta 8 mesos de baixa. Després de la quimioteràpia, sol·licita alta progressiva. Es reincorpora al 50% de jornada durant 2 mesos, després al 75%, i finalment al 100%. Durant la transició cobra subsidio parcial d'IT.
+
+Exemple 2: Infart de miocardi
+Una treballadora amb infart porta 7 mesos de baixa. Sol·licita reincorporació gradual. Comença amb 4 hores diàries i augmenta progressivament.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Altas laborales progresivas
+
+La Seguridad Social está negociando un modelo de altas laborales progresivas para trabajadores con enfermedades graves (cáncer, trasplantes, infartos, ictus, fracturas graves). Permite la reincorporación gradual al trabajo.
+
+Características de la propuesta
+
+- Acceso voluntario para el trabajador
+- Requisito: más de 180 días de baja (6 meses)
+- Reincorporación con jornada parcial progresiva
+- Compatible con el cobro parcial del subsidio de IT
+
+Estado actual
+
+En fase de negociación entre Seguridad Social, patronal y sindicatos (febrero 2026). No está en vigor todavía. Pendiente de publicación en el BOE.
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Altas laborales progresivas por enfermedades graves (propuesta 2026)
+
+CATEGORÍA
+otro
+
+DESCRIPCIÓN Y CRITERIO
+Altas laborales progresivas
+
+La Seguridad Social está negociando un modelo de altas laborales progresivas para trabajadores con enfermedades graves (cáncer, trasplantes, infartos, ictus, fracturas graves). Permite la reincorporación gradual al trabajo.
+
+Características de la propuesta
+
+- Acceso voluntario para el trabajador
+- Requisito: más de 180 días de baja (6 meses)
+- Reincorporación con jornada parcial progresiva
+- Compatible con el cobro parcial del subsidio de IT
+
+Estado actual
+
+En fase de negociación entre Seguridad Social, patronal y sindicatos (febrero 2026). No está en vigor todavía. Pendiente de publicación en el BOE.
+
+BASE LEGAL
+Base legal
+
+- Propuesta en negociación (febrero 2026)
+- Reuniones entre Seguridad Social, patronal y sindicatos
+- Pendiente de Real Decreto
+- Fundamento: art. 169 y 174 LGSS (IT y prórrogas)
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento (previsto)
+
+1. Trabajador con más de 180 días de baja por enfermedad grave
+2. Solicitud voluntaria de alta progresiva
+3. Evaluación médica de la capacidad funcional parcial
+4. Reincorporación con jornada reducida (ej: 50% → 75% → 100%)
+5. Cobro parcial del subsidio de IT durante la transición
+
+Nota: Este procedimiento es provisional y puede cambiar cuando se publique la normativa definitiva.
+
+EJEMPLOS PRÁCTICOS
+Ejemplos prácticos
+
+Ejemplo 1: Paciente oncológico
+Un trabajador con cáncer de colon lleva 8 meses de baja. Tras la quimioterapia, solicita alta progresiva. Se reincorpora al 50% de jornada durante 2 meses, luego al 75%, y finalmente al 100%. Durante la transición cobra subsidio parcial de IT.
+
+Ejemplo 2: Infarto de miocardio
+Una trabajadora con infarto lleva 7 meses de baja. Solicita reincorporación gradual. Comienza con 4 horas diarias y aumenta progresivamente.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

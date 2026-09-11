@@ -592,3 +592,12 @@
 - [x] Empaquetar i lliurar els fitxers TXT per importar-los a Coloq.IA
 - [x] Estabilitzar dos tests antics que depenen d'una finestra mòbil de 90 dies
 - [x] Validació final: 414 tests superats i 0 errors TypeScript
+
+## Sprint 26 - Casos especials TXT per a Coloq.IA
+- [x] Inventariar tots els casos especials actuals i els documents relacionats
+- [x] Exportar un TXT autocontingut per cas amb contingut CA/ES, base legal, procediment i exemples
+- [x] Crear índex, manifest i informe de validació del corpus
+- [x] Validar cobertura, codificació UTF-8 i absència de casos incomplets
+- [x] Empaquetar i lliurar el corpus per carregar-lo a Coloq.IA
+- [x] Corregir la neteja TXT perquè comparadors com <180 i >365 no s'interpretin com HTML
+- [x] Validació final: 29 casos, 0 camps obligatoris absents, 0 sospites de traducció, 417 tests i 0 errors TypeScript

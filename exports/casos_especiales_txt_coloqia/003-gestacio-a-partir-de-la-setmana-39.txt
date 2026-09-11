@@ -1,0 +1,186 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 3
+Título: Gestació a partir de la setmana 39
+Título en español: Gestación a partir de la semana 39
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, embarazo, Gestació a partir de la setmana 39, Gestación a partir de la semana 39
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Des de l'1 de juny de 2023, la Llei Orgànica 1/2023, de 28 de febrer (BOE-A-2023-5364) estableix que la gestació des del primer dia de la setmana 39 és una situació especial d'IT per contingències comunes (LGSS art. 169.1.a, paràgraf 3r). Permet a la treballadora embarassada iniciar la baixa a partir de la setmana 39 sense necessitat de justificar incapacitat clínica, fins al dia del part.
+
+Característiques clau:
+- Aplicable a totes les treballadores a partir de la setmana 39 de gestació (no cal patologia)
+- Contingència: malaltia comuna (situació especial)
+- Prestació: des del dia 1 (a càrrec de la mútua o INSS, no de l'empresa)
+- Exigeix el període mínim de cotització de l'art. 178.1 LGSS (100 dies en els 7 anys anteriors, o 180 dies al llarg de la vida laboral)
+- La prestació s'atura el dia del part (s'inicia el permís per naixement i cura de menor)
+- Si la treballadora ja estava en situació de risc durant l'embaràs, continua percebent la prestació d'aquella situació
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Gestació a partir de la setmana 39
+
+CATEGORIA
+embarazo
+
+DESCRIPCIÓ I CRITERI
+Des de l'1 de juny de 2023, la Llei Orgànica 1/2023, de 28 de febrer (BOE-A-2023-5364) estableix que la gestació des del primer dia de la setmana 39 és una situació especial d'IT per contingències comunes (LGSS art. 169.1.a, paràgraf 3r). Permet a la treballadora embarassada iniciar la baixa a partir de la setmana 39 sense necessitat de justificar incapacitat clínica, fins al dia del part.
+
+Característiques clau:
+- Aplicable a totes les treballadores a partir de la setmana 39 de gestació (no cal patologia)
+- Contingència: malaltia comuna (situació especial)
+- Prestació: des del dia 1 (a càrrec de la mútua o INSS, no de l'empresa)
+- Exigeix el període mínim de cotització de l'art. 178.1 LGSS (100 dies en els 7 anys anteriors, o 180 dies al llarg de la vida laboral)
+- La prestació s'atura el dia del part (s'inicia el permís per naixement i cura de menor)
+- Si la treballadora ja estava en situació de risc durant l'embaràs, continua percebent la prestació d'aquella situació
+
+BASE LEGAL
+Normativa principal:
+- LGSS art. 169.1.a, paràgraf 3r (redacció LO 1/2023): situació especial d'IT per gestació des de la setmana 39
+- LGSS art. 172.1.a (redacció LO 1/2023): exigeix el període mínim de cotització de l'art. 178.1 LGSS
+- LGSS art. 173.1, paràgraf 4t (redacció LO 1/2023): prestació des del dia 1 (a càrrec de l'entitat gestora), llevat del dia de la baixa (a càrrec de l'empresa)
+- LGSS art. 173.2 (redacció LO 1/2023): la prestació s'atura el dia del part; si hi havia risc durant l'embaràs, continua aquella prestació
+- LGSS art. 178.1: períodes mínims de cotització per a la prestació per naixement (100 dies en els 7 anys anteriors, o 180 dies al llarg de la vida laboral)
+- Llei Orgànica 1/2023, de 28 de febrer (BOE-A-2023-5364), Disposició Final Tercera, apartat 2
+
+PROCEDIMENT RECOMANAT
+Procediment des de l'eCap
+
+Pas 1: Verificació dels requisits
+1. Confirmar que la treballadora ha complert la setmana 39 de gestació.
+2. Verificar que compleix el període mínim de cotització de l'art. 178.1 LGSS: 100 dies cotitzats en els 7 anys anteriors, o 180 dies al llarg de la vida laboral. Si no compleix, no té dret a la prestació especial (però pot tenir dret a IT ordinària si hi ha patologia).
+3. Comprovar si la treballadora ja estava en situació de risc durant l'embaràs (prestació diferent, gestionada per la mútua): si és així, NO s'emet un nou comunicat de baixa.
+
+Pas 2: Emissió del comunicat de baixa
+1. Contingència: Malaltia comuna (situació especial LO 1/2023)
+2. Diagnòstic CIE-10: Z34.3 (supervisió d'embaràs de tercer trimestre) o Z34.39
+3. Durada estimada: fins al dia del part (generalment 1-3 setmanes)
+
+Pas 3: Seguiment i alta
+- Parts de confirmació: cada 7 dies (RD 625/2014 art. 2)
+- Alta automàtica: el dia del part, la IT s'extingeix i s'inicia el permís per naixement i cura de menor (16 setmanes)
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1: Treballadora amb cotització suficient
+Situació: Treballadora de 31 anys, administrativa, a la setmana 39+2 de gestació. Sense patologia. Porta 5 anys cotitzant al RGSS.
+Resolució: El metge de família emet comunicat de baixa per situació especial LO 1/2023 (setmana 39). Prestació des del dia 1 (75% de la BR, a càrrec de la mútua o INSS). La IT s'extingeix el dia del part i s'inicia el permís per naixement.
+
+Exemple 2: Treballadora sense cotització suficient
+Situació: Treballadora de 24 anys a la setmana 39 de gestació. Porta només 60 dies cotitzats en els últims 7 anys (no compleix els 100 dies mínims de l'art. 178.1 LGSS).
+Resolució: No té dret a la prestació especial de la setmana 39. Si no hi ha patologia, no es pot emetre baixa. Si hi ha alguna patologia (edemes, dolor lumbar incapacitant, etc.), es pot emetre IT ordinària per malaltia comuna (amb espera de 4 dies).
+
+Exemple 3: Treballadora ja en risc durant l'embaràs
+Situació: Treballadora de 35 anys que porta 6 setmanes en situació de risc durant l'embaràs. Arriba a la setmana 39.
+Resolució: Continua percebent la prestació per risc durant l'embaràs (100% de la BR) fins al dia del part. NO s'emet un nou comunicat de baixa per la situació especial de la setmana 39 (art. 173.2 LGSS).
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Desde el 1 de junio de 2023, la Ley Orgánica 1/2023, de 28 de febrero (BOE-A-2023-5364) establece que la gestación desde el primer día de la semana 39 es una situación especial de IT por contingencias comunes (LGSS art. 169.1.a, párrafo 3º). Permite a la trabajadora embarazada iniciar la baja a partir de la semana 39 sin necesidad de justificar incapacidad clínica, hasta el día del parto.
+
+Características clave:
+- Aplicable a todas las trabajadoras a partir de la semana 39 de gestación (no se necesita patología)
+- Contingencia: enfermedad común (situación especial)
+- Prestación: desde el día 1 (a cargo de la mutua o INSS, no de la empresa)
+- Exige el periodo mínimo de cotización del art. 178.1 LGSS (100 días en los 7 años anteriores, o 180 días a lo largo de la vida laboral)
+- La prestación se detiene el día del parto (se inicia el permiso por nacimiento y cuidado de menor)
+- Si la trabajadora ya estaba en situación de riesgo durante el embarazo, continúa percibiendo la prestación de aquella situación
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Gestación a partir de la semana 39
+
+CATEGORÍA
+embarazo
+
+DESCRIPCIÓN Y CRITERIO
+Desde el 1 de junio de 2023, la Ley Orgánica 1/2023, de 28 de febrero (BOE-A-2023-5364) establece que la gestación desde el primer día de la semana 39 es una situación especial de IT por contingencias comunes (LGSS art. 169.1.a, párrafo 3º). Permite a la trabajadora embarazada iniciar la baja a partir de la semana 39 sin necesidad de justificar incapacidad clínica, hasta el día del parto.
+
+Características clave:
+- Aplicable a todas las trabajadoras a partir de la semana 39 de gestación (no se necesita patología)
+- Contingencia: enfermedad común (situación especial)
+- Prestación: desde el día 1 (a cargo de la mutua o INSS, no de la empresa)
+- Exige el periodo mínimo de cotización del art. 178.1 LGSS (100 días en los 7 años anteriores, o 180 días a lo largo de la vida laboral)
+- La prestación se detiene el día del parto (se inicia el permiso por nacimiento y cuidado de menor)
+- Si la trabajadora ya estaba en situación de riesgo durante el embarazo, continúa percibiendo la prestación de aquella situación
+
+BASE LEGAL
+Normativa principal:
+- LGSS art. 169.1.a, párrafo 3º (redacción LO 1/2023): situación especial de IT por gestación desde la semana 39
+- LGSS art. 172.1.a (redacción LO 1/2023): exige el periodo mínimo de cotización del art. 178.1 LGSS
+- LGSS art. 173.1, párrafo 4º (redacción LO 1/2023): prestación desde el día 1 (a cargo de la entidad gestora), salvo el día de la baja (a cargo de la empresa)
+- LGSS art. 173.2 (redacción LO 1/2023): la prestación se detiene el día del parto; si había riesgo durante el embarazo, continúa aquella prestación
+- LGSS art. 178.1: periodos mínimos de cotización para la prestación por nacimiento (100 días en los 7 años anteriores, o 180 días a lo largo de la vida laboral)
+- Ley Orgánica 1/2023, de 28 de febrero (BOE-A-2023-5364), Disposición Final Tercera, apartado 2
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento desde el eCap
+
+Paso 1: Verificación de los requisitos
+1. Confirmar que la trabajadora ha cumplido la semana 39 de gestación.
+2. Verificar que cumple el periodo mínimo de cotización del art. 178.1 LGSS: 100 días cotizados en los 7 años anteriores, o 180 días a lo largo de la vida laboral. Si no cumple, no tiene derecho a la prestación especial (pero puede tener derecho a IT ordinaria si hay patología).
+3. Comprobar si la trabajadora ya estaba en situación de riesgo durante el embarazo (prestación diferente, gestionada por la mutua): si es así, NO se emite un nuevo comunicado de baja.
+
+Paso 2: Emisión del comunicado de baja
+1. Contingencia: Enfermedad común (situación especial LO 1/2023)
+2. Diagnóstico CIE-10: Z34.3 (supervisión de embarazo de tercer trimestre) o Z34.39
+3. Duración estimada: hasta el día del parto (generalmente 1-3 semanas)
+
+Paso 3: Seguimiento y alta
+- Partes de confirmación: cada 7 días (RD 625/2014 art. 2)
+- Alta automática: el día del parto, la IT se extingue y se inicia el permiso por nacimiento y cuidado de menor (16 semanas)
+
+EJEMPLOS PRÁCTICOS
+Ejemplos prácticos
+
+Ejemplo 1: Trabajadora con cotización suficiente
+Situación: Trabajadora de 31 años, administrativa, en la semana 39+2 de gestación. Sin patología. Lleva 5 años cotizando en el RGSS.
+Resolución: El médico de familia emite comunicado de baja por situación especial LO 1/2023 (semana 39). Prestación desde el día 1 (75% de la BR, a cargo de la mutua o INSS). La IT se extingue el día del parto y se inicia el permiso por nacimiento.
+
+Ejemplo 2: Trabajadora sin cotización suficiente
+Situación: Trabajadora de 24 años en la semana 39 de gestación. Lleva solo 60 días cotizados en los últimos 7 años (no cumple los 100 días mínimos del art. 178.1 LGSS).
+Resolución: No tiene derecho a la prestación especial de la semana 39. Si no hay patología, no se puede emitir baja. Si hay alguna patología (edemas, dolor lumbar incapacitante, etc.), se puede emitir IT ordinaria por enfermedad común (con espera de 4 días).
+
+Ejemplo 3: Trabajadora ya en riesgo durante el embarazo
+Situación: Trabajadora de 35 años que lleva 6 semanas en situación de riesgo durante el embarazo. Llega a la semana 39.
+Resolución: Continúa percibiendo la prestación por riesgo durante el embarazo (100% de la BR) hasta el día del parto. NO se emite un nuevo comunicado de baja por la situación especial de la semana 39 (art. 173.2 LGSS).
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

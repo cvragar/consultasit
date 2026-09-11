@@ -1,0 +1,272 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 70001
+Título: Pluriactivitat: treballador simultàniament autònom (RETA) i assalariat (Règim General)
+Título en español: Pluriactividad: trabajador simultáneamente autónomo (RETA) y asalariado (Régimen General)
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, pluriempleo, Pluriactivitat: treballador simultàniament autònom (RETA) i assalariat (Règim General), Pluriactividad: trabajador simultáneamente autónomo (RETA) y asalariado (Régimen General)
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+La pluriactivitat és la situació en la qual un treballador exerceix simultàniament activitats que donen lloc a la seva alta obligatòria en dos o més règims distintos del sistema de la Seguretat Social. El cas més habitual és el del treballador que, alhora, és assalariat (Règim General) i autònom (RETA). Aquesta situació té implicacions específiques en la gestió de la Incapacitat Temporal (IT): les prestacions es calculen i gestionen de forma independent per a cada règim, amb bases reguladores separades i entitats gestores diferents. El metge de família a l'eCap ha d'emetre parts de baixa per a cada règim en el qual el treballador estigui d'alta.
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Pluriactivitat: treballador simultàniament autònom (RETA) i assalariat (Règim General)
+
+CATEGORIA
+pluriempleo
+
+DESCRIPCIÓ I CRITERI
+La pluriactivitat és la situació en la qual un treballador exerceix simultàniament activitats que donen lloc a la seva alta obligatòria en dos o més règims distintos del sistema de la Seguretat Social. El cas més habitual és el del treballador que, alhora, és assalariat (Règim General) i autònom (RETA). Aquesta situació té implicacions específiques en la gestió de la Incapacitat Temporal (IT): les prestacions es calculen i gestionen de forma independent per a cada règim, amb bases reguladores separades i entitats gestores diferents. El metge de família a l'eCap ha d'emetre parts de baixa per a cada règim en el qual el treballador estigui d'alta.
+
+BASE LEGAL
+NORMATIVA APLICABLE:
+
+1. NORMATIVA ESTATAL BÀSICA:
+• Art. 7.4 del RD 84/1996, de 26 de gener (Reglament General sobre Inscripció d'Empreses i Afiliació): defineix la pluriactivitat com la situació del treballador per compte propi i/o aliè les activitats del qual donin lloc a la seva alta obligatòria en dos o més règims distintos del sistema de la Seguretat Social.
+• Art. 313 LGSS (RDL 8/2015, de 30 d'octubre): cotització en supòsits de pluriactivitat. Estableix la devolució del 50% de l'excés de cotització per contingències comunes quan la suma de quotes superi la base màxima.
+• Arts. 169-172 LGSS: regulació general de la Incapacitat Temporal.
+• Art. 175 LGSS: incompatibilitat de la IT amb el treball actiu (amb matisacions jurisprudencials per a la pluriactivitat).
+• RD 625/2014, de 18 de juliol: gestió i control dels processos d'IT. Estableix que el professional sanitari ha d'emetre parts de baixa per a totes les empreses i règims en els quals el treballador presti serveis.
+
+2. JURISPRUDÈNCIA CLAU:
+• STS de 19 de febrer de 2002 (RCUD 2127/2001): doctrina fonamental sobre compatibilitat de la IT en un règim amb l'alta activa en un altre règim. El TS estableix que un treballador en pluriactivitat pot estar de baixa mèdica en un règim i, simultàniament, actiu en l'altre, sempre que les activitats siguin diferents i la dolença incapaciti per a una però no per a l'altra.
+• STS de 7 d'abril de 2004 (RCUD 1508/2003): confirma i consolida la doctrina anterior sobre compatibilitat de la IT en pluriactivitat.
+• STSJ Castella i Lleó (Valladolid), Sala Social, de 18 d'octubre de 2022, Rec. 232/2022: reafirma la vigència actual de la doctrina del TS sobre compatibilitat de la baixa mèdica en un règim amb l'activitat en un altre règim diferent.
+
+3. NORMATIVA ESPECÍFICA RETA:
+• Art. 313 LGSS: els autònoms en pluriactivitat que cotitzin per contingències comunes en el RETA tindran dret a la prestació d'IT per ambdós règims.
+• Llei 6/2017, de 24 d'octubre, de Reformes Urgents del Treball Autònom: modifica l'art. 313 LGSS i estableix la devolució d'ofici de l'excés de cotització per la TGSS.
+• Si l'autònom no cotitza per contingències comunes al RETA (opció voluntària quan ja té cobertura al Règim General), no tindrà dret a la prestació d'IT per compte propi.
+
+PROCEDIMENT RECOMANAT
+PROCEDIMENT DES DE L'eCAP:
+
+PRINCIPI FONAMENTAL: El metge de família ha d'emetre PARTS DE BAIXA SEPARATS per a cada règim en el qual el treballador estigui d'alta. No n'hi ha prou amb un únic comunicat de baixa.
+
+ESCENARI 1: INCAPACITAT TOTAL (la malaltia afecta ambdues activitats)
+1. Emetre un comunicat de baixa per a l'activitat assalariada (Règim General).
+2. Emetre un comunicat de baixa separat per a l'activitat autònoma (RETA).
+3. Ambdós parts han d'indicar la mateixa contingència (malaltia comuna o accident no laboral si la causa és la mateixa).
+4. El treballador ha de comunicar la situació a l'empresa i a la seva mútua d'autònoms.
+5. La prestació d'IT del Règim General la gestiona la mútua de l'empresa o el INSS.
+6. La prestació d'IT del RETA la gestiona la mútua d'autònoms triada pel treballador.
+7. Ambdues prestacions es calculen de forma independent amb les seves respectives bases reguladores.
+
+ESCENARI 2: INCAPACITAT PARCIAL (la malaltia afecta NOMÉS una de les activitats)
+1. Emetre ÚNICAMENT el comunicat de baixa per al règim afectat.
+2. Documentar clarament en la història clínica per quina activitat s'emet la baixa i per quina no.
+3. El treballador pot continuar treballant en l'activitat no afectada.
+4. ATENCIÓ: el metge ha d'assegurar-se que la continuació de l'activitat no afectada no perjudica la recuperació.
+5. El INSS pot revisar la situació si considera que l'activitat continuada posa en dubte la incapacitat declarada.
+
+CÀLCUL DE LA PRESTACIÓ D'IT:
+• Règim General: Base Reguladora = promig de les bases de cotització dels últims 12 mesos / 365 dies. Percentatge: 60% del dia 4 al 20; 75% del dia 21 en endavant.
+• RETA: Base Reguladora = base de cotització del mes anterior a la baixa. Percentatge: 60% del dia 4 al 20; 75% del dia 21 en endavant (per malaltia comuna). Per AT/EP: 75% des del dia següent a la baixa.
+• Les dues prestacions s'acumulen i el treballador les cobra simultàniament.
+
+DEVOLUCIÓ DE L'EXCÉS DE COTITZACIÓ:
+• Si la suma de les cotitzacions per contingències comunes al Règim General i al RETA supera la base màxima de cotització, la TGSS ha de retornar d'ofici el 50% de l'excés.
+• La devolució es realitza durant el primer semestre de l'any següent.
+• El treballador no ha de sol·licitar-ho; la TGSS ho gestiona automàticament.
+
+ACCIDENT DE TREBALL EN PLURIACTIVITAT:
+• Si l'accident ocorre en l'activitat autònoma: és AT al RETA, però es considera Malaltia Comuna (o Accident No Laboral) al Règim General.
+• Si l'accident ocorre en l'activitat assalariada: és AT al Règim General, però es considera Malaltia Comuna al RETA.
+• En cas d'AT al RETA: la prestació comença des del dia següent a la baixa (no hi ha espera de 3 dies).
+• El metge de família ha d'emetre parts de baixa per a ambdós règims, indicant la contingència correcta per a cada un.
+
+EXEMPLES PRÀCTICS
+EXEMPLES PRÀCTICS:
+
+EXEMPLE 1: Metge de família que combina la sanitat pública (assalariat) i la clínica privada (autònom)
+• Situació: El Dr. Martí treballa com a metge de família al CAP (Règim General) i té consulta privada pròpia (RETA).
+• Patologia: Lumbalgia aguda que li impedeix treballar en ambdues activitats.
+• Gestió: El metge de família del CAP (o ell mateix si és el seu propi metge) emet dos parts de baixa: un per al Règim General i un per al RETA.
+• Prestació RG: Si la seva base de cotització al RG és de 3.000€/mes, la BR = 3.000/30 = 100€/dia. Cobra 60€/dia (dies 4-20) i 75€/dia (dia 21 en endavant).
+• Prestació RETA: Si la seva base de cotització al RETA és de 2.000€/mes, la BR = 2.000/30 = 66,67€/dia. Cobra 40€/dia (dies 4-20) i 50€/dia (dia 21 en endavant).
+• Total: Fins al dia 20: 100€/dia. A partir del dia 21: 125€/dia.
+
+EXEMPLE 2: Infermer/a que combina hospital públic i clínica privada
+• Situació: La Sra. Puig treballa a l'Hospital de la Vall d'Hebron (RG) i a una clínica privada com a autònoma (RETA).
+• Patologia: Ansietat i depressió derivada de l'estrès laboral a l'hospital públic.
+• Gestió: La dolença afecta principalment l'activitat a l'hospital (entorn estressant). Podria continuar treballant a la clínica privada si l'activitat és diferent i no perjudica la recuperació.
+• Part de baixa: S'emet únicament per al Règim General.
+• ATENCIÓ: El INSS pot revisar la situació. Cal documentar bé per quina activitat s'emet la baixa i justificar per quina no.
+• Risc: Si el INSS considera que treballar a la clínica privada demostra capacitat laboral, pot donar l'alta al RG.
+
+EXEMPLE 3: Fisioterapeuta autònom que treballa parcialment a una residència (assalariat)
+• Situació: El Sr. Valls treballa 20h/setmana a una residència de gent gran (RG) i té la seva pròpia clínica de fisioteràpia (RETA).
+• Patologia: Fractura de canell dret que li impedeix fer fisioteràpia però no tasques administratives.
+• Gestió: Emet comunicat de baixa per al RETA (no pot fer fisioteràpia). Pot continuar treballant a la residència si les tasques no requereixen l'ús del canell.
+• Prestació RETA: Cobra la IT del RETA per la incapacitat per a la seva activitat autònoma.
+• Activitat al RG: Continua treballant a la residència (tasques administratives o supervisió).
+• IMPORTANT: Cal documentar clarament la diferència entre les activitats i que la continuació no perjudica la recuperació.
+
+EXEMPLE 4: Accident de treball a l'activitat autònoma
+• Situació: La Sra. Gómez és assalariada en una empresa de màrqueting (RG) i autònoma com a dissenyadora gràfica freelance (RETA).
+• Accident: Cau per les escales de casa seva mentre anava a recollir material per a un client (AT in itinere al RETA).
+• Gestió: AT al RETA (cobert per la mútua d'autònoms). Malaltia Comuna al RG (no va ocórrer treballant per a l'empresa).
+• Parts de baixa: Dos parts: un per AT al RETA i un per MC al RG.
+• Prestació RETA per AT: 75% de la BR des del dia següent a la baixa (sense espera de 3 dies).
+• Prestació RG per MC: 60% de la BR des del dia 4 (3 dies de carència).
+
+PREGUNTES FREQÜENTS:
+• P: Si estic de baixa al RETA, he de seguir pagant la quota d'autònom?
+  R: Sí, fins que la baixa duri més de 60 dies. A partir del dia 61, la mútua d'autònoms assumeix el pagament de la quota.
+• P: Si esgoto la IT al RG, afecta la IT al RETA?
+  R: Si la baixa és per la mateixa patologia i afecta ambdós règims, els terminis (365/545 dies) es computen de forma conjunta. Si les baixes són per causes independents, es computen per separat.
+• P: Puc demanar la baixa només al RETA i continuar treballant com a assalariat?
+  R: Sí, si la dolença afecta únicament l'activitat autònoma i no la assalariada, i sempre que continuar treballant no perjudiqui la recuperació.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+La pluriactividad es la situación en la que un trabajador ejerce simultáneamente actividades que dan lugar a su alta obligatoria en dos o más regímenes distintos del sistema de la Seguridad Social. El caso más habitual es el del trabajador que, a la vez, es asalariado (Régimen General) y autónomo (RETA). Esta situación tiene implicaciones específicas en la gestión de la Incapacidad Temporal (IT): las prestaciones se calculan y gestionan de forma independiente para cada régimen, con bases reguladoras separadas y entidades gestoras diferentes. El médico de familia en el eCap debe emitir partes de baja para cada régimen en el que el trabajador esté de alta.
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Pluriactividad: trabajador simultáneamente autónomo (RETA) y asalariado (Régimen General)
+
+CATEGORÍA
+pluriempleo
+
+DESCRIPCIÓN Y CRITERIO
+La pluriactividad es la situación en la que un trabajador ejerce simultáneamente actividades que dan lugar a su alta obligatoria en dos o más regímenes distintos del sistema de la Seguridad Social. El caso más habitual es el del trabajador que, a la vez, es asalariado (Régimen General) y autónomo (RETA). Esta situación tiene implicaciones específicas en la gestión de la Incapacidad Temporal (IT): las prestaciones se calculan y gestionan de forma independiente para cada régimen, con bases reguladoras separadas y entidades gestoras diferentes. El médico de familia en el eCap debe emitir partes de baja para cada régimen en el que el trabajador esté de alta.
+
+BASE LEGAL
+NORMATIVA APLICABLE:
+
+1. NORMATIVA ESTATAL BÁSICA:
+* Art. 7.4 del RD 84/1996, de 26 de enero (Reglamento General sobre Inscripción de Empresas y Afiliación): define la pluriactividad como la situación del trabajador por cuenta propia y/o ajena cuyas actividades den lugar a su alta obligatoria en dos o más regímenes distintos del sistema de la Seguridad Social.
+* Art. 313 LGSS (RDL 8/2015, de 30 de octubre): cotización en supuestos de pluriactividad. Establece la devolución del 50% del exceso de cotización por contingencias comunes cuando la suma de cuotas supere la base máxima.
+* Arts. 169-172 LGSS: regulación general de la Incapacidad Temporal.
+* Art. 175 LGSS: incompatibilidad de la IT con el trabajo activo (con matizaciones jurisprudenciales para la pluriactividad).
+* RD 625/2014, de 18 de julio: gestión y control de los procesos de IT. Establece que el profesional sanitario debe emitir partes de baja para todas las empresas y regímenes en los que el trabajador preste servicios.
+
+2. JURISPRUDENCIA CLAVE:
+* STS de 19 de febrero de 2002 (RCUD 2127/2001): doctrina fundamental sobre compatibilidad de la IT en un régimen con el alta activa en otro régimen. El TS establece que un trabajador en pluriactividad puede estar de baja médica en un régimen y, simultáneamente, activo en el otro, siempre que las actividades sean diferentes y la dolencia incapacite para una pero no para la otra.
+* STS de 7 de abril de 2004 (RCUD 1508/2003): confirma y consolida la doctrina anterior sobre compatibilidad de la IT en pluriactividad.
+* STSJ Castilla y León (Valladolid), Sala Social, de 18 de octubre de 2022, Rec. 232/2022: reafirma la vigencia actual de la doctrina del TS sobre compatibilidad de la baja médica en un régimen con la actividad en otro régimen diferente.
+
+3. NORMATIVA ESPECÍFICA RETA:
+* Art. 313 LGSS: los autónomos en pluriactividad que coticen por contingencias comunes en el RETA tendrán derecho a la prestación de IT por ambos regímenes.
+* Ley 6/2017, de 24 de octubre, de Reformas Urgentes del Trabajo Autónomo: modifica el art. 313 LGSS y establece la devolución de oficio del exceso de cotización por la TGSS.
+* Si el autónomo no cotiza por contingencias comunes en el RETA (opción voluntaria cuando ya tiene cobertura en el Régimen General), no tendrá derecho a la prestación de IT por cuenta propia.
+
+PROCEDIMIENTO RECOMENDADO
+PROCEDIMIENTO DESDE EL eCAP:
+
+PRINCIPIO FUNDAMENTAL: El médico de familia debe emitir PARTES DE BAJA SEPARADOS para cada régimen en el que el trabajador esté de alta. No es suficiente con un único comunicado de baja.
+
+ESCENARIO 1: INCAPACIDAD TOTAL (la enfermedad afecta a ambas actividades)
+1. Emitir un comunicado de baja para la actividad asalariada (Régimen General).
+2. Emitir un comunicado de baja separado para la actividad autónoma (RETA).
+3. Ambos partes deben indicar la misma contingencia (enfermedad común o accidente no laboral si la causa es la misma).
+4. El trabajador debe comunicar la situación a la empresa y a su mutua de autónomos.
+5. La prestación de IT del Régimen General la gestiona la mutua de la empresa o el INSS.
+6. La prestación de IT del RETA la gestiona la mutua de autónomos elegida por el trabajador.
+7. Ambas prestaciones se calculan de forma independiente con sus respectivas bases reguladoras.
+
+ESCENARIO 2: INCAPACIDAD PARCIAL (la enfermedad afecta SÓLO a una de las actividades)
+1. Emitir ÚNICAMENTE el comunicado de baja para el régimen afectado.
+2. Documentar claramente en la historia clínica para qué actividad se emite la baja y para cuál no.
+3. El trabajador puede continuar trabajando en la actividad no afectada.
+4. ATENCIÓN: el médico debe asegurarse de que la continuación de la actividad no afectada no perjudica la recuperación.
+5. El INSS puede revisar la situación si considera que la actividad continuada pone en duda la incapacidad declarada.
+
+CÁLCULO DE LA PRESTACIÓN DE IT:
+• Régimen General: Base Reguladora = promedio de las bases de cotización de los últimos 12 meses / 365 días. Porcentaje: 60% del día 4 al 20; 75% del día 21 en adelante.
+• RETA: Base Reguladora = base de cotización del mes anterior a la baja. Porcentaje: 60% del día 4 al 20; 75% del día 21 en adelante (por enfermedad común). Por AT/EP: 75% desde el día siguiente a la baja.
+• Las dos prestaciones se acumulan y el trabajador las cobra simultáneamente.
+
+DEVOLUCIÓN DEL EXCESO DE COTIZACIÓN:
+• Si la suma de las cotizaciones por contingencias comunes en el Régimen General y en el RETA supera la base máxima de cotización, la TGSS debe devolver de oficio el 50% del exceso.
+• La devolución se realiza durante el primer semestre del año siguiente.
+• El trabajador no debe solicitarlo; la TGSS lo gestiona automáticamente.
+
+ACCIDENTE DE TRABAJO EN PLURIACTIVIDAD:
+• Si el accidente ocurre en la actividad autónoma: es AT en el RETA, pero se considera Enfermedad Común (o Accidente No Laboral) en el Régimen General.
+• Si el accidente ocurre en la actividad asalariada: es AT en el Régimen General, pero se considera Enfermedad Común en el RETA.
+• En caso de AT en el RETA: la prestación comienza desde el día siguiente a la baja (no hay espera de 3 días).
+• El médico de familia debe emitir partes de baja para ambos regímenes, indicando la contingencia correcta para cada uno.
+
+EJEMPLOS PRÁCTICOS
+EJEMPLOS PRÁCTICOS:
+
+EJEMPLO 1: Médico de familia que combina la sanidad pública (asalariado) y la clínica privada (autónomo)
+* Situación: El Dr. Martí trabaja como médico de familia en el eCAP (Régimen General) y tiene consulta privada propia (RETA).
+* Patología: Lumbalgia aguda que le impide trabajar en ambas actividades.
+* Gestión: El médico de familia del eCAP (o él mismo si es su propio médico) emite dos partes de baja: uno para el Régimen General y uno para el RETA.
+* Prestación RG: Si su base de cotización en el RG es de 3.000€/mes, la BR = 3.000/30 = 100€/día. Cobra 60€/día (días 4-20) y 75€/día (día 21 en adelante).
+* Prestación RETA: Si su base de cotización en el RETA es de 2.000€/mes, la BR = 2.000/30 = 66,67€/día. Cobra 40€/día (días 4-20) y 50€/día (día 21 en adelante).
+* Total: Hasta el día 20: 100€/día. A partir del día 21: 125€/día.
+
+EJEMPLO 2: Enfermero/a que combina hospital público y clínica privada
+* Situación: La Sra. Puig trabaja en el Hospital de la Vall d'Hebron (RG) y en una clínica privada como autónoma (RETA).
+* Patología: Ansiedad y depresión derivada del estrés laboral en el hospital público.
+* Gestión: La dolencia afecta principalmente la actividad en el hospital (entorno estresante). Podría continuar trabajando en la clínica privada si la actividad es diferente y no perjudica la recuperación.
+* Parte de baja: Se emite únicamente para el Régimen General.
+* ATENCIÓN: El INSS puede revisar la situación. Es necesario documentar bien por qué actividad se emite la baja y justificar por qué no.
+* Riesgo: Si el INSS considera que trabajar en la clínica privada demuestra capacidad laboral, puede dar el alta en el RG.
+
+EJEMPLO 3: Fisioterapeuta autónomo que trabaja parcialmente en una residencia (asalariado)
+* Situación: El Sr. Valls trabaja 20h/semana en una residencia de ancianos (RG) y tiene su propia clínica de fisioterapia (RETA).
+* Patología: Fractura de muñeca derecha que le impide hacer fisioterapia pero no tareas administrativas.
+* Gestión: Emite comunicado de baja para el RETA (no puede hacer fisioterapia). Puede continuar trabajando en la residencia si las tareas no requieren el uso de la muñeca.
+* Prestación RETA: Cobra la IT del RETA por la incapacidad para su actividad autónoma.
+* Actividad en el RG: Continúa trabajando en la residencia (tareas administrativas o supervisión).
+* IMPORTANTE: Es necesario documentar claramente la diferencia entre las actividades y que la continuación no perjudica la recuperación.
+
+EJEMPLO 4: Accidente de trabajo en la actividad autónoma
+* Situación: La Sra. Gómez es asalariada en una empresa de marketing (RG) y autónoma como diseñadora gráfica freelance (RETA).
+* Accidente: Cae por las escaleras de su casa mientras iba a recoger material para un cliente (AT in itinere en el RETA).
+* Gestión: AT en el RETA (cubierto por la mutua de autónomos). Enfermedad Común en el RG (no ocurrió trabajando para la empresa).
+* Partes de baja: Dos partes: uno por AT en el RETA y uno por MC en el RG.
+* Prestación RETA por AT: 75% de la BR desde el día siguiente a la baja (sin espera de 3 días).
+* Prestación RG por MC: 60% de la BR desde el día 4 (3 días de carencia).
+
+PREGUNTAS FRECUENTES:
+* P: Si estoy de baja en el RETA, ¿tengo que seguir pagando la cuota de autónomo?
+  R: Sí, hasta que la baja dure más de 60 días. A partir del día 61, la mutua de autónomos asume el pago de la cuota.
+* P: Si agoto la IT en el RG, ¿afecta la IT en el RETA?
+  R: Si la baja es por la misma patología y afecta a ambos regímenes, los plazos (365/545 días) se computan de forma conjunta. Si las bajas son por causas independientes, se computan por separado.
+* P: ¿Puedo pedir la baja solo en el RETA y continuar trabajando como asalariado?
+  R: Sí, si la dolencia afecta únicamente la actividad autónoma y no la asalariada, y siempre que continuar trabajando no perjudique la recuperación.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

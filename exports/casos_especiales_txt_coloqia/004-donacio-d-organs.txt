@@ -1,0 +1,192 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 4
+Título: Donació d'òrgans
+Título en español: Donación de órganos
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, donacion_organos, Donació d'òrgans, Donación de órganos
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+La donació d'òrgans o teixits en vida per al trasplantament és una situació especial d'IT per contingències comunes (LGSS art. 169.1.a, paràgraf 4t, modificat per la LO 1/2023). Genera dret a la prestació des del dia 1 de la baixa (a càrrec de la mútua o INSS), sense espera de 4 dies i sense període mínim de cotització.
+
+Característiques clau:
+- Cobreix els dies de preparació mèdica prèvia a la cirurgia (discontinus o ininterromputs) i els dies des de l'ingrés hospitalari fins a l'alta per curació
+- Contingència: malaltia comuna (situació especial), no accident no laboral
+- Prestació: des del dia 1 (a càrrec de la mútua o INSS)
+- Sense període mínim de cotització
+- Aplicable a donació de ronyó, fetge (lòbul), pulmó (lòbul), medul·la òssia, sang de cordó umbilical, etc.
+
+Nota: Abans de la LO 1/2023 (fins al 31/05/2023), la donació d'òrgans es qualificava com a "accident no laboral" (ANL), amb espera de 4 dies. Des del 01/06/2023, és situació especial amb prestació des del dia 1.
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Donació d'òrgans
+
+CATEGORIA
+donacion_organos
+
+DESCRIPCIÓ I CRITERI
+La donació d'òrgans o teixits en vida per al trasplantament és una situació especial d'IT per contingències comunes (LGSS art. 169.1.a, paràgraf 4t, modificat per la LO 1/2023). Genera dret a la prestació des del dia 1 de la baixa (a càrrec de la mútua o INSS), sense espera de 4 dies i sense període mínim de cotització.
+
+Característiques clau:
+- Cobreix els dies de preparació mèdica prèvia a la cirurgia (discontinus o ininterromputs) i els dies des de l'ingrés hospitalari fins a l'alta per curació
+- Contingència: malaltia comuna (situació especial), no accident no laboral
+- Prestació: des del dia 1 (a càrrec de la mútua o INSS)
+- Sense període mínim de cotització
+- Aplicable a donació de ronyó, fetge (lòbul), pulmó (lòbul), medul·la òssia, sang de cordó umbilical, etc.
+
+Nota: Abans de la LO 1/2023 (fins al 31/05/2023), la donació d'òrgans es qualificava com a "accident no laboral" (ANL), amb espera de 4 dies. Des del 01/06/2023, és situació especial amb prestació des del dia 1.
+
+BASE LEGAL
+Normativa principal:
+- LGSS art. 169.1.a, paràgraf 4t (redacció LO 1/2023): situació especial d'IT per donació d'òrgans o teixits per al trasplantament
+- LGSS art. 172.1.a (redacció LO 1/2023): sense període mínim de cotització per a situacions especials
+- LGSS art. 173.1, paràgraf 3r (redacció LO 1/2023): prestació des del dia 1, a càrrec de l'entitat gestora o col·laboradora
+- Llei Orgànica 1/2023, de 28 de febrer (BOE-A-2023-5364), Disposició Final Tercera, apartat 2
+- Llei 30/1979, de 27 d'octubre, sobre extracció i trasplantament d'òrgans (BOE-A-1979-26445)
+- Reial Decret 1301/2006, de 10 de novembre (BOE-A-2006-20070): qualitat i seguretat per a la donació i obtenció de cèl·lules i teixits humans
+
+PROCEDIMENT RECOMANAT
+Procediment des de l'eCap
+
+Pas 1: Coordinació amb l'hospital
+1. La donació d'òrgans en vida es gestiona a través del servei especialitzat de l'hospital de referència (Coordinació de Trasplantaments).
+2. El metge de família pot rebre l'informe de l'hospital indicant els dies de preparació prèvia i la data d'ingrés per a la cirurgia.
+
+Pas 2: Emissió del comunicat de baixa
+1. Contingència: Malaltia comuna (situació especial LO 1/2023)
+2. Diagnòstic CIE-10: Z52.4 (donant de ronyó), Z52.6 (donant de fetge), Z52.3 (donant de medul·la òssia), Z52.89 (donant d'altres òrgans o teixits especificats)
+3. Inici de la baixa: el primer dia de preparació mèdica prèvia (pot ser discontinu) o el dia de l'ingrés hospitalari
+4. Durada estimada: variable (donació de ronyó: 3-6 setmanes; donació de medul·la òssia: 1-2 setmanes)
+
+Pas 3: Seguiment i alta
+- Parts de confirmació: cada 7 dies els primers 30 dies
+- Alta per curació: quan el donant es troba en condicions de treballar
+- Si hi ha complicacions postquirúrgiques, la IT es pot prolongar com a malaltia comuna ordinària
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1: Donació de ronyó al cònjuge
+Situació: Treballador de 45 anys que dona un ronyó al seu cònjuge. Necessita 3 dies de proves preoperatòries i 4 setmanes de recuperació postquirúrgica.
+Resolució: Part de baixa per situació especial LO 1/2023 (CIE-10: Z52.4). La prestació comença el dia 1 de la baixa (no el dia 4). La mútua o INSS paga des del dia 2 (el dia 1 és a càrrec de l'empresa). Alta als 28-35 dies.
+
+Exemple 2: Donació de medul·la òssia (aferesi)
+Situació: Treballadora de 30 anys que dona medul·la òssia a un familiar. Necessita 5 dies de tractament amb G-CSF (ambulatòria, discontinu) i 1 dia d'aferesi.
+Resolució: Baixa per situació especial LO 1/2023 (CIE-10: Z52.3). Els dies de tractament previ (discontinus) també computen com a IT (art. 169.1.a LGSS). Prestació des del dia 1 de cada episodi.
+
+Exemple 3: Donació de lòbul hepàtic
+Situació: Treballador de 38 anys que dona un lòbul del fetge al seu fill. Requereix ingrés hospitalari de 7 dies i 6 setmanes de recuperació.
+Resolució: Baixa per situació especial LO 1/2023 (CIE-10: Z52.6). Prestació des del dia 1. La IT pot durar fins a 8-10 setmanes en total.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+La donación de órganos o tejidos en vida para el trasplante es una situación especial de IT por contingencias comunes (LGSS art. 169.1.a, párrafo 4º, modificado por la LO 1/2023). Genera derecho a la prestación desde el día 1 de la baja (a cargo de la mutua o INSS), sin espera de 4 días y sin periodo mínimo de cotización.
+
+Características clave:
+- Cubre los días de preparación médica previa a la cirugía (discontinuos o ininterrumpidos) y los días desde el ingreso hospitalario hasta el alta por curación
+- Contingencia: enfermedad común (situación especial), no accidente no laboral
+- Prestación: desde el día 1 (a cargo de la mutua o INSS)
+- Sin periodo mínimo de cotización
+- Aplicable a donación de riñón, hígado (lóbulo), pulmón (lóbulo), médula ósea, sangre de cordón umbilical, etc.
+
+Nota: Antes de la LO 1/2023 (hasta el 31/05/2023), la donación de órganos se calificaba como "accidente no laboral" (ANL), con espera de 4 días. Desde el 01/06/2023, es situación especial con prestación desde el día 1.
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Donación de órganos
+
+CATEGORÍA
+donacion_organos
+
+DESCRIPCIÓN Y CRITERIO
+La donación de órganos o tejidos en vida para el trasplante es una situación especial de IT por contingencias comunes (LGSS art. 169.1.a, párrafo 4º, modificado por la LO 1/2023). Genera derecho a la prestación desde el día 1 de la baja (a cargo de la mutua o INSS), sin espera de 4 días y sin periodo mínimo de cotización.
+
+Características clave:
+- Cubre los días de preparación médica previa a la cirugía (discontinuos o ininterrumpidos) y los días desde el ingreso hospitalario hasta el alta por curación
+- Contingencia: enfermedad común (situación especial), no accidente no laboral
+- Prestación: desde el día 1 (a cargo de la mutua o INSS)
+- Sin periodo mínimo de cotización
+- Aplicable a donación de riñón, hígado (lóbulo), pulmón (lóbulo), médula ósea, sangre de cordón umbilical, etc.
+
+Nota: Antes de la LO 1/2023 (hasta el 31/05/2023), la donación de órganos se calificaba como "accidente no laboral" (ANL), con espera de 4 días. Desde el 01/06/2023, es situación especial con prestación desde el día 1.
+
+BASE LEGAL
+Normativa principal:
+- LGSS art. 169.1.a, párrafo 4º (redacción LO 1/2023): situación especial de IT por donación de órganos o tejidos para el trasplante
+- LGSS art. 172.1.a (redacción LO 1/2023): sin período mínimo de cotización para situaciones especiales
+- LGSS art. 173.1, párrafo 3º (redacción LO 1/2023): prestación desde el día 1, a cargo de la entidad gestora o colaboradora
+- Ley Orgánica 1/2023, de 28 de febrero (BOE-A-2023-5364), Disposición Final Tercera, apartado 2
+- Ley 30/1979, de 27 de octubre, sobre extracción y trasplante de órganos (BOE-A-1979-26445)
+- Real Decreto 1301/2006, de 10 de noviembre (BOE-A-2006-20070): calidad y seguridad para la donación y obtención de células y tejidos humanos
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento desde el eCap
+
+Paso 1: Coordinación con el hospital
+1. La donación de órganos en vida se gestiona a través del servicio especializado del hospital de referencia (Coordinación de Trasplantes).
+2. El médico de familia puede recibir el informe del hospital indicando los días de preparación previa y la fecha de ingreso para la cirugía.
+
+Paso 2: Emisión del comunicado de baja
+1. Contingencia: Enfermedad común (situación especial LO 1/2023)
+2. Diagnóstico CIE-10: Z52.4 (donante de riñón), Z52.6 (donante de hígado), Z52.3 (donante de médula ósea), Z52.89 (donante de otros órganos o tejidos especificados)
+3. Inicio de la baja: el primer día de preparación médica previa (puede ser discontinuo) o el día del ingreso hospitalario
+4. Duración estimada: variable (donación de riñón: 3-6 semanas; donación de médula ósea: 1-2 semanas)
+
+Paso 3: Seguimiento y alta
+- Partes de confirmación: cada 7 días los primeros 30 días
+- Alta por curación: cuando el donante se encuentra en condiciones de trabajar
+- Si hay complicaciones postquirúrgicas, la IT se puede prolongar como enfermedad común ordinaria
+
+EJEMPLOS PRÁCTICOS
+Ejemplos prácticos
+
+Ejemplo 1: Donación de riñón al cónyuge
+Situación: Trabajador de 45 años que dona un riñón a su cónyuge. Necesita 3 días de pruebas preoperatorias y 4 semanas de recuperación postquirúrgica.
+Resolución: Parte de baja por situación especial LO 1/2023 (CIE-10: Z52.4). La prestación comienza el día 1 de la baja (no el día 4). La mutua o INSS paga desde el día 2 (el día 1 corre a cargo de la empresa). Alta a los 28-35 días.
+
+Ejemplo 2: Donación de médula ósea (aféresis)
+Situación: Trabajadora de 30 años que dona médula ósea a un familiar. Necesita 5 días de tratamiento con G-CSF (ambulatorio, discontinuo) y 1 día de aféresis.
+Resolución: Baja por situación especial LO 1/2023 (CIE-10: Z52.3). Los días de tratamiento previo (discontinuos) también computan como IT (art. 169.1.a LGSS). Prestación desde el día 1 de cada episodio.
+
+Ejemplo 3: Donación de lóbulo hepático
+Situación: Trabajador de 38 años que dona un lóbulo del hígado a su hijo. Requiere ingreso hospitalario de 7 días y 6 semanas de recuperación.
+Resolución: Baja por situación especial LO 1/2023 (CIE-10: Z52.6). Prestación desde el día 1. La IT puede durar hasta 8-10 semanas en total.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

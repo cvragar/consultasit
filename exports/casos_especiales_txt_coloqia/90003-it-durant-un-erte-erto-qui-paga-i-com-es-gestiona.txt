@@ -1,0 +1,212 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 90003
+Título: IT durant un ERTE/ERTO: qui paga i com es gestiona
+Título en español: IT durante un ERTE: quién paga y cómo se gestiona
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, otro, IT durant un ERTE/ERTO: qui paga i com es gestiona, IT durante un ERTE: quién paga y cómo se gestiona
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Situació molt freqüent que genera confusió sobre qui paga la prestació i com s'emet el comunicat de baixa
+
+Quan un treballador afectat per un ERTE (Expedient de Regulació Temporal d'Ocupació) causa baixa per IT, la gestió de la prestació depèn del moment en què es produeix la baixa respecte a l'inici de l'ERTE.
+
+Cas 1: IT prèvia a l'ERTE (baixa activa quan s'inicia l'ERTE)
+El treballador que ja estava de baixa per IT quan s'inicia l'ERTE continua percebent la prestació d'IT (no la prestació per desocupació de l'ERTE). La IT suspèn l'ERTE. Quan l'IT s'extingeix, el treballador passa a percebre la prestació per desocupació de l'ERTE (si encara dura).
+
+Cas 2: IT durant l'ERTE (baixa que s'inicia mentre dura l'ERTE)
+Si el treballador causa baixa per IT mentre ja és en ERTE, la IT suspèn la prestació per desocupació de l'ERTE. La prestació d'IT la paga la mútua (si és contingència professional) o la mútua/INSS (si és contingència comuna). La base reguladora de la IT es calcula sobre la base de cotització anterior a l'ERTE (no sobre la base reduïda de l'ERTE).
+
+Cas 3: ERTE de reducció de jornada + IT
+Si el treballador és en ERTE de reducció de jornada (no de suspensió total) i causa baixa per IT, la IT es calcula sobre la base de cotització de la jornada reduïda per l'ERTE. La prestació per desocupació de la part no treballada es manté.
+
+Per al metge de família: el comunicat de baixa s'emet de la mateixa manera que qualsevol altra IT. No cal indicar res especial sobre l'ERTE. La gestió de la compatibilitat entre IT i ERTE la gestionen l'empresa, la mútua i el SEPE.
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+IT durant un ERTE/ERTO: qui paga i com es gestiona
+
+CATEGORIA
+otro
+
+DESCRIPCIÓ I CRITERI
+Situació molt freqüent que genera confusió sobre qui paga la prestació i com s'emet el comunicat de baixa
+
+Quan un treballador afectat per un ERTE (Expedient de Regulació Temporal d'Ocupació) causa baixa per IT, la gestió de la prestació depèn del moment en què es produeix la baixa respecte a l'inici de l'ERTE.
+
+Cas 1: IT prèvia a l'ERTE (baixa activa quan s'inicia l'ERTE)
+El treballador que ja estava de baixa per IT quan s'inicia l'ERTE continua percebent la prestació d'IT (no la prestació per desocupació de l'ERTE). La IT suspèn l'ERTE. Quan l'IT s'extingeix, el treballador passa a percebre la prestació per desocupació de l'ERTE (si encara dura).
+
+Cas 2: IT durant l'ERTE (baixa que s'inicia mentre dura l'ERTE)
+Si el treballador causa baixa per IT mentre ja és en ERTE, la IT suspèn la prestació per desocupació de l'ERTE. La prestació d'IT la paga la mútua (si és contingència professional) o la mútua/INSS (si és contingència comuna). La base reguladora de la IT es calcula sobre la base de cotització anterior a l'ERTE (no sobre la base reduïda de l'ERTE).
+
+Cas 3: ERTE de reducció de jornada + IT
+Si el treballador és en ERTE de reducció de jornada (no de suspensió total) i causa baixa per IT, la IT es calcula sobre la base de cotització de la jornada reduïda per l'ERTE. La prestació per desocupació de la part no treballada es manté.
+
+Per al metge de família: el comunicat de baixa s'emet de la mateixa manera que qualsevol altra IT. No cal indicar res especial sobre l'ERTE. La gestió de la compatibilitat entre IT i ERTE la gestionen l'empresa, la mútua i el SEPE.
+
+BASE LEGAL
+Normativa aplicable:
+- LGSS art. 169-176: Incapacitat Temporal (IT)
+- LGSS art. 267-269: Prestació per desocupació (ERTE)
+- RD-Llei 8/2020, art. 22-25: Mesures extraordinàries en matèria d'ocupació (ERTE COVID)
+- LGSS art. 273.1: Suspensió de la prestació per desocupació durant la IT
+- Criteri SEPE: La IT suspèn la prestació per desocupació de l'ERTE (no s'extingeix)
+- LGSS art. 173: Base reguladora de la IT (base de cotització del mes anterior a la baixa, no la base reduïda de l'ERTE)
+
+Jurisprudència i criteris administratius:
+- Criteri INSS 2020: En ERTE de suspensió, la IT es calcula sobre la base de cotització anterior a l'ERTE
+- STSJ Madrid 14/07/2021: Confirma que la IT durant l'ERTE es calcula sobre la base anterior a la suspensió
+- Instrucció SEPE 4/2020: Gestió de la compatibilitat IT-ERTE durant la pandèmia COVID-19
+
+PROCEDIMENT RECOMANAT
+Procediment per al metge de família (eCap):
+
+El metge de família no té cap actuació especial en casos d'ERTE. El comunicat de baixa s'emet de la mateixa manera que qualsevol altra IT:
+
+1. Emissió del comunicat de baixa: Contingència comuna o professional, segons la causa. No cal indicar res sobre l'ERTE.
+2. Seguiment habitual: Parts de confirmació cada 7 dies (primers 30 dies) o cada 14 dies (fins al dia 365).
+
+Informació que pot proporcionar el metge de família al treballador:
+
+- La IT suspèn l'ERTE: Mentre el treballador és de baixa per IT, no percep la prestació per desocupació de l'ERTE, sinó la prestació d'IT.
+- Qui paga la IT: La mútua (si és contingència professional o si l'empresa té la cobertura de CC amb mútua) o l'INSS (si la CC és gestionada per l'INSS).
+- Base reguladora: La IT es calcula sobre la base de cotització del mes anterior a la baixa, que normalment és la base anterior a l'ERTE (no la base reduïda de l'ERTE).
+- Quan s'acaba la IT: El treballador torna a percebre la prestació per desocupació de l'ERTE (si encara dura). Si l'ERTE ha acabat mentre estava de baixa, pot tenir dret a la prestació per desocupació ordinària.
+
+Nota important: Si el treballador pregunta sobre la compatibilitat entre IT i ERTE, ha de consultar amb el seu departament de RRHH, la mútua o el SEPE. El metge de família no gestiona les prestacions econòmiques.
+
+EXEMPLES PRÀCTICS
+Exemple 1: IT prèvia a l'ERTE (baixa activa quan s'inicia l'ERTE)
+Treballador de baixa per IT per fractura de turmell (des del 1 de febrer). L'empresa presenta un ERTE el 15 de febrer. El treballador continua percebent la IT (no la prestació de l'ERTE). Quan rep l'alta mèdica (15 de març), si l'ERTE continua, passa a percebre la prestació per desocupació de l'ERTE. La IT no s'ha vist afectada per l'ERTE.
+
+Exemple 2: IT durant l'ERTE de suspensió total
+Treballador en ERTE de suspensió total (percep el 70% de la base reguladora per desocupació). El 10 de març causa baixa per gastroenteritis aguda. La prestació per desocupació de l'ERTE se suspèn. La mútua li paga la IT. Base reguladora de la IT: la del mes anterior a l'ERTE (salari complet), no la base reduïda de l'ERTE. Quan rep l'alta (15 de març), torna a percebre la prestació de l'ERTE.
+
+Exemple 3: ERTE de reducció de jornada + IT
+Treballadora en ERTE de reducció del 50% de la jornada (treballa 20h/setmana, percep desocupació per les altres 20h). Causa baixa per lumbàlgia. La IT es calcula sobre la base de cotització de les 20h treballades (base reduïda). La prestació per desocupació de la part no treballada se suspèn mentre dura la IT.
+
+Exemple 4: ERTE acabat durant la IT
+Treballador en ERTE que causa baixa per IT el 1 de març. L'ERTE acaba el 31 de març. El treballador continua de baixa fins al 15 d'abril. Quan rep l'alta, l'ERTE ja ha acabat. Pot tenir dret a la prestació per desocupació ordinària si compleix els requisits (cotitzacions suficients, inscripció com a demandant d'ocupació).
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Situación muy frecuente que genera confusión sobre quién paga la prestación y cómo se emite el comunicado de baja
+
+Cuando un trabajador afectado por un ERTE (Expediente de Regulación Temporal de Empleo) causa baja por IT, la gestión de la prestación depende del momento en que se produce la baja respecto al inicio del ERTE.
+
+Caso 1: IT previa al ERTE (baja activa cuando se inicia el ERTE)
+El trabajador que ya estaba de baja por IT cuando se inicia el ERTE continúa percibiendo la prestación de IT (no la prestación por desempleo del ERTE). La IT suspende el ERTE. Cuando la IT se extingue, el trabajador pasa a percibir la prestación por desempleo del ERTE (si aún dura).
+
+Caso 2: IT durante el ERTE (baja que se inicia mientras dura el ERTE)
+Si el trabajador causa baja por IT mientras ya está en ERTE, la IT suspende la prestación por desempleo del ERTE. La prestación de IT la paga la mutua (si es contingencia profesional) o la mutua/INSS (si es contingencia común). La base reguladora de la IT se calcula sobre la base de cotización anterior al ERTE (no sobre la base reducida del ERTE).
+
+Caso 3: ERTE de reducción de jornada + IT
+Si el trabajador está en ERTE de reducción de jornada (no de suspensión total) y causa baja por IT, la IT se calcula sobre la base de cotización de la jornada reducida por el ERTE. La prestación por desempleo de la parte no trabajada se mantiene.
+
+Para el médico de familia: el comunicado de baja se emite de la misma manera que cualquier otra IT. No es necesario indicar nada especial sobre el ERTE. La gestión de la compatibilidad entre IT y ERTE la gestionan la empresa, la mutua y el SEPE.
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+IT durante un ERTE: quién paga y cómo se gestiona
+
+CATEGORÍA
+otro
+
+DESCRIPCIÓN Y CRITERIO
+Situación muy frecuente que genera confusión sobre quién paga la prestación y cómo se emite el comunicado de baja
+
+Cuando un trabajador afectado por un ERTE (Expediente de Regulación Temporal de Empleo) causa baja por IT, la gestión de la prestación depende del momento en que se produce la baja respecto al inicio del ERTE.
+
+Caso 1: IT previa al ERTE (baja activa cuando se inicia el ERTE)
+El trabajador que ya estaba de baja por IT cuando se inicia el ERTE continúa percibiendo la prestación de IT (no la prestación por desempleo del ERTE). La IT suspende el ERTE. Cuando la IT se extingue, el trabajador pasa a percibir la prestación por desempleo del ERTE (si aún dura).
+
+Caso 2: IT durante el ERTE (baja que se inicia mientras dura el ERTE)
+Si el trabajador causa baja por IT mientras ya está en ERTE, la IT suspende la prestación por desempleo del ERTE. La prestación de IT la paga la mutua (si es contingencia profesional) o la mutua/INSS (si es contingencia común). La base reguladora de la IT se calcula sobre la base de cotización anterior al ERTE (no sobre la base reducida del ERTE).
+
+Caso 3: ERTE de reducción de jornada + IT
+Si el trabajador está en ERTE de reducción de jornada (no de suspensión total) y causa baja por IT, la IT se calcula sobre la base de cotización de la jornada reducida por el ERTE. La prestación por desempleo de la parte no trabajada se mantiene.
+
+Para el médico de familia: el comunicado de baja se emite de la misma manera que cualquier otra IT. No es necesario indicar nada especial sobre el ERTE. La gestión de la compatibilidad entre IT y ERTE la gestionan la empresa, la mutua y el SEPE.
+
+BASE LEGAL
+Normativa aplicable:
+- LGSS art. 169-176: Incapacidad Temporal (IT)
+- LGSS art. 267-269: Prestación por desempleo (ERTE)
+- RD-Ley 8/2020, art. 22-25: Medidas extraordinarias en materia de empleo (ERTE COVID)
+- LGSS art. 273.1: Suspensión de la prestación por desempleo durante la IT
+- Criterio SEPE: La IT suspende la prestación por desempleo del ERTE (no se extingue)
+- LGSS art. 173: Base reguladora de la IT (base de cotización del mes anterior a la baja, no la base reducida del ERTE)
+
+Jurisprudencia y criterios administrativos:
+- Criterio INSS 2020: En ERTE de suspensión, la IT se calcula sobre la base de cotización anterior al ERTE
+- STSJ Madrid 14/07/2021: Confirma que la IT durante el ERTE se calcula sobre la base anterior a la suspensión
+- Instrucción SEPE 4/2020: Gestión de la compatibilidad IT-ERTE durante la pandemia COVID-19
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento para el médico de familia (eCap):
+
+El médico de familia no tiene ninguna actuación especial en casos de ERTE. El comunicado de baja se emite de la misma manera que cualquier otra IT:
+
+1.  Emisión del comunicado de baja: Contingencia común o profesional, según la causa. No es necesario indicar nada sobre el ERTE.
+2.  Seguimiento habitual: Partes de confirmación cada 7 días (primeros 30 días) o cada 14 días (hasta el día 365).
+
+Información que puede proporcionar el médico de familia al trabajador:
+
+*   La IT suspende el ERTE: Mientras el trabajador está de baja por IT, no percibe la prestación por desempleo del ERTE, sino la prestación de IT.
+*   Quién paga la IT: La mutua (si es contingencia profesional o si la empresa tiene la cobertura de CC con mutua) o el INSS (si la CC es gestionada por el INSS).
+*   Base reguladora: La IT se calcula sobre la base de cotización del mes anterior a la baja, que normalmente es la base anterior al ERTE (no la base reducida del ERTE).
+*   Cuando finaliza la IT: El trabajador vuelve a percibir la prestación por desempleo del ERTE (si aún dura). Si el ERTE ha finalizado mientras estaba de baja, puede tener derecho a la prestación por desempleo ordinaria.
+
+Nota importante: Si el trabajador pregunta sobre la compatibilidad entre IT y ERTE, debe consultar con su departamento de RRHH, la mutua o el SEPE. El médico de familia no gestiona las prestaciones económicas.
+
+EJEMPLOS PRÁCTICOS
+Ejemplo 1: IT previa al ERTE (baja activa cuando se inicia el ERTE)
+Trabajador de baja por IT por fractura de tobillo (desde el 1 de febrero). La empresa presenta un ERTE el 15 de febrero. El trabajador continúa percibiendo la IT (no la prestación del ERTE). Cuando recibe el alta médica (15 de marzo), si el ERTE continúa, pasa a percibir la prestación por desempleo del ERTE. La IT no se ha visto afectada por el ERTE.
+
+Ejemplo 2: IT durante el ERTE de suspensión total
+Trabajador en ERTE de suspensión total (percibe el 70% de la base reguladora por desempleo). El 10 de marzo causa baja por gastroenteritis aguda. La prestación por desempleo del ERTE se suspende. La mutua le paga la IT. Base reguladora de la IT: la del mes anterior al ERTE (salario completo), no la base reducida del ERTE. Cuando recibe el alta (15 de marzo), vuelve a percibir la prestación del ERTE.
+
+Ejemplo 3: ERTE de reducción de jornada + IT
+Trabajadora en ERTE de reducción del 50% de la jornada (trabaja 20h/semana, percibe desempleo por las otras 20h). Causa baja por lumbalgia. La IT se calcula sobre la base de cotización de las 20h trabajadas (base reducida). La prestación por desempleo de la parte no trabajada se suspende mientras dura la IT.
+
+Ejemplo 4: ERTE finalizado durante la IT
+Trabajador en ERTE que causa baja por IT el 1 de marzo. El ERTE finaliza el 31 de marzo. El trabajador continúa de baja hasta el 15 de abril. Cuando recibe el alta, el ERTE ya ha finalizado. Puede tener derecho a la prestación por desempleo ordinaria si cumple los requisitos (cotizaciones suficientes, inscripción como demandante de empleo).
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

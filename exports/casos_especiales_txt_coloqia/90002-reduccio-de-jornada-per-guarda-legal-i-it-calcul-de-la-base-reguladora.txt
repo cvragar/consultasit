@@ -1,0 +1,208 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 90002
+Título: Reducció de jornada per guarda legal i IT: càlcul de la base reguladora
+Título en español: Reducción de jornada por guarda legal e IT: cálculo de la base reguladora
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, otro, Reducció de jornada per guarda legal i IT: càlcul de la base reguladora, Reducción de jornada por guarda legal e IT: cálculo de la base reguladora
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Situació freqüent que genera dubtes sobre la quantia de la prestació d'IT
+
+Quan un treballador o treballadora en situació de reducció de jornada per guarda legal (art. 37.6 ET) causa baixa per IT, la base reguladora de la prestació es calcula sobre la base de cotització de la jornada reduïda, no sobre la jornada completa. Això significa que la prestació d'IT és proporcionalment inferior al que hauria percebut si no hagués reduït la jornada.
+
+Per què és important per al metge de família?
+El metge de família no calcula la prestació, però és habitual que la treballadora pregunti per la quantia esperada. Cal explicar que la prestació d'IT es calcula sobre el salari real (reduït), no sobre el salari que hauria tingut sense la reducció.
+
+Excepció important (art. 237.3 LGSS):
+Durant els tres primers anys de reducció de jornada per guarda legal, les cotitzacions es computen incrementades fins al 100% a efectes de determinades prestacions (jubilació, incapacitat permanent, mort i supervivència, i naixement i cura de menor). Però la IT no està inclosa en aquesta excepció, de manera que la base reguladora de la IT sempre es calcula sobre la cotització real reduïda.
+
+Controvèrsia judicial:
+Alguns tribunals (STSJ Andalusia 6/6/2019) han declarat discriminatori calcular la IT sobre la base reduïda quan la causa de la baixa està relacionada amb l'embaràs, considerant-ho discriminació indirecta per raó de sexe. Tanmateix, el criteri general de l'INSS és calcular la IT sobre la base de cotització real.
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Reducció de jornada per guarda legal i IT: càlcul de la base reguladora
+
+CATEGORIA
+otro
+
+DESCRIPCIÓ I CRITERI
+Situació freqüent que genera dubtes sobre la quantia de la prestació d'IT
+
+Quan un treballador o treballadora en situació de reducció de jornada per guarda legal (art. 37.6 ET) causa baixa per IT, la base reguladora de la prestació es calcula sobre la base de cotització de la jornada reduïda, no sobre la jornada completa. Això significa que la prestació d'IT és proporcionalment inferior al que hauria percebut si no hagués reduït la jornada.
+
+Per què és important per al metge de família?
+El metge de família no calcula la prestació, però és habitual que la treballadora pregunti per la quantia esperada. Cal explicar que la prestació d'IT es calcula sobre el salari real (reduït), no sobre el salari que hauria tingut sense la reducció.
+
+Excepció important (art. 237.3 LGSS):
+Durant els tres primers anys de reducció de jornada per guarda legal, les cotitzacions es computen incrementades fins al 100% a efectes de determinades prestacions (jubilació, incapacitat permanent, mort i supervivència, i naixement i cura de menor). Però la IT no està inclosa en aquesta excepció, de manera que la base reguladora de la IT sempre es calcula sobre la cotització real reduïda.
+
+Controvèrsia judicial:
+Alguns tribunals (STSJ Andalusia 6/6/2019) han declarat discriminatori calcular la IT sobre la base reduïda quan la causa de la baixa està relacionada amb l'embaràs, considerant-ho discriminació indirecta per raó de sexe. Tanmateix, el criteri general de l'INSS és calcular la IT sobre la base de cotització real.
+
+BASE LEGAL
+Normativa aplicable:
+- ET art. 37.6: Dret a la reducció de jornada per guarda legal (menor de 12 anys o persona amb discapacitat)
+- LGSS art. 173: Base reguladora de la IT (base de cotització del mes anterior)
+- LGSS art. 237.1 i 237.3: Prestació familiar contributiva no econòmica (cotitzacions incrementades al 100% durant 3 anys per a jubilació, IP, mort i supervivència, i naixement i cura de menor, però NO per a IT)
+- RD 2064/1995, art. 65.1: Cotització en contractes a temps parcial (aplicable per analogia a la reducció de jornada)
+- RD-Llei 2/2023, art. únic.25: Ampliació de 2 a 3 anys del període de cotizació incrementada per guarda legal (en vigor des del 18/3/2023)
+
+Jurisprudència rellevant:
+- STSJ Andalusia (Sevilla) 6/6/2019 (EDJ 2019/647428): Declara discriminatori calcular la IT sobre la base reduïda quan la causa de la baixa és l'embaràs (discriminació indirecta per raó de sexe)
+- STSJ Madrid 5320/2014: Reconeix la prestació completa per IT a treballadora que es reincorpora a jornada completa el darrer dia del mes anterior a la baixa
+- STS 23/2026: Protecció del complement d'assistència en situació d'IT (jornada reduïda)
+
+PROCEDIMENT RECOMANAT
+Procediment per al metge de família (eCap):
+
+El metge de família no té cap actuació especial en aquests casos. El comunicat de baixa s'emet de la mateixa manera que qualsevol altra IT, sense que la reducció de jornada afecti el procediment mèdic.
+
+Informació que pot proporcionar el metge de família a la treballadora:
+
+1. Càlcul de la prestació: La IT es calcula sobre la base de cotització del mes anterior a la baixa. Si la treballadora porta mesos en reducció de jornada, la seva base de cotització és proporcional a les hores treballades.
+
+2. Exemple pràctic:
+   - Salari a jornada completa: 2.000 €/mes → Base reguladora IT: 66,67 €/dia
+   - Reducció del 50% (1.000 €/mes) → Base reguladora IT: 33,33 €/dia
+   - Prestació IT (75% des del dia 21): 25,00 €/dia en lloc de 50,00 €/dia
+
+3. Excepció: baixa el mateix mes que s'inicia la reducció: Si la treballadora causa baixa el mateix mes en què va iniciar la reducció de jornada, la base reguladora es calcula sobre la cotització del mes anterior (quan encara treballava a jornada completa), de manera que la prestació no es veu reduïda.
+
+4. Possible reclamació per discriminació: Si la causa de la baixa és l'embaràs o una patologia relacionada amb el gènere, la treballadora pot al·legar discriminació indirecta per raó de sexe (STSJ Andalusia 2019) per reclamar la prestació calculada sobre la jornada completa. Aquesta reclamació s'ha de fer davant l'INSS o, si és denegada, davant la jurisdicció social.
+
+Nota per a l'eCap: El sistema eCap no distingeix entre treballadors a jornada completa i reduïda. El comunicat de baixa s'emet de la mateixa manera. La reducció de jornada és una dada que gestiona l'empresa i la Seguretat Social, no el metge.
+
+EXEMPLES PRÀCTICS
+Exemple 1: Cas estàndard (reducció de jornada + IT)
+Treballadora amb reducció de jornada del 33% (treballa 2/3 de la jornada) per cuidar un fill de 3 anys. Salari reduït: 1.400 €/mes. Causa baixa per lumbàlgia aguda. Base reguladora IT: 1.400/30 = 46,67 €/dia. Prestació IT (75% des del dia 21): 35,00 €/dia. Si no hagués reduït la jornada (salari 2.100 €/mes), hauria percebut 52,50 €/dia.
+
+Exemple 2: Baixa el mateix mes que s'inicia la reducció
+Treballadora que inicia reducció de jornada el dia 1 de febrer. El dia 15 de febrer causa baixa per IT. La base reguladora es calcula sobre la cotització de gener (mes anterior), quan treballava a jornada completa (salari 2.000 €/mes → BR: 66,67 €/dia). La reducció de jornada no afecta la prestació d'IT en aquest cas.
+
+Exemple 3: Baixa per embaràs amb reducció de jornada (possible discriminació)
+Treballadora amb reducció de jornada del 25% per guarda legal. Causa baixa per amenaça d'avortament (setmana 12). La mútua calcula la IT sobre la base reduïda. La treballadora pot reclamar la prestació calculada sobre la jornada completa al·legant discriminació indirecta per raó de sexe (STSJ Andalusia 6/6/2019). Si l'INSS denega la reclamació, pot acudir a la jurisdicció social.
+
+Exemple 4: Reducció de jornada i IT de llarga durada
+Treballadora amb reducció de jornada del 50% des de fa 2 anys (fill de 2 anys). Causa baixa per depressió major. La IT es calcula sobre la base reduïda. Quan la IT supera els 365 dies i passa a pròrroga, la base reguladora continua sent la mateixa (la reduïda). Si en algun moment es reconeix incapacitat permanent, les cotitzacions dels 3 primers anys de reducció es computen al 100% (art. 237.3 LGSS), de manera que la IP es calcula sobre una base superior a la IT.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Situación frecuente que genera dudas sobre la cuantía de la prestación de IT
+
+Cuando un trabajador o trabajadora en situación de reducción de jornada por guarda legal (art. 37.6 ET) causa baja por IT, la base reguladora de la prestación se calcula sobre la base de cotización de la jornada reducida, no sobre la jornada completa. Esto significa que la prestación de IT es proporcionalmente inferior a lo que habría percibido si no hubiera reducido la jornada.
+
+¿Por qué es importante para el médico de familia?
+El médico de familia no calcula la prestación, pero es habitual que la trabajadora pregunte por la cuantía esperada. Es necesario explicar que la prestación de IT se calcula sobre el salario real (reducido), no sobre el salario que habría tenido sin la reducción.
+
+Excepción importante (art. 237.3 LGSS):
+Durante los tres primeros años de reducción de jornada por guarda legal, las cotizaciones se computan incrementadas hasta el 100% a efectos de determinadas prestaciones (jubilación, incapacidad permanente, muerte y supervivencia, y nacimiento y cuidado de menor). Pero la IT no está incluida en esta excepción, de modo que la base reguladora de la IT siempre se calcula sobre la cotización real reducida.
+
+Controversia judicial:
+Algunos tribunales (STSJ Andalucía 6/6/2019) han declarado discriminatorio calcular la IT sobre la base reducida cuando la causa de la baja está relacionada con el embarazo, considerándolo discriminación indirecta por razón de sexo. Sin embargo, el criterio general del INSS es calcular la IT sobre la base de cotización real.
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Reducción de jornada por guarda legal e IT: cálculo de la base reguladora
+
+CATEGORÍA
+otro
+
+DESCRIPCIÓN Y CRITERIO
+Situación frecuente que genera dudas sobre la cuantía de la prestación de IT
+
+Cuando un trabajador o trabajadora en situación de reducción de jornada por guarda legal (art. 37.6 ET) causa baja por IT, la base reguladora de la prestación se calcula sobre la base de cotización de la jornada reducida, no sobre la jornada completa. Esto significa que la prestación de IT es proporcionalmente inferior a lo que habría percibido si no hubiera reducido la jornada.
+
+¿Por qué es importante para el médico de familia?
+El médico de familia no calcula la prestación, pero es habitual que la trabajadora pregunte por la cuantía esperada. Es necesario explicar que la prestación de IT se calcula sobre el salario real (reducido), no sobre el salario que habría tenido sin la reducción.
+
+Excepción importante (art. 237.3 LGSS):
+Durante los tres primeros años de reducción de jornada por guarda legal, las cotizaciones se computan incrementadas hasta el 100% a efectos de determinadas prestaciones (jubilación, incapacidad permanente, muerte y supervivencia, y nacimiento y cuidado de menor). Pero la IT no está incluida en esta excepción, de modo que la base reguladora de la IT siempre se calcula sobre la cotización real reducida.
+
+Controversia judicial:
+Algunos tribunales (STSJ Andalucía 6/6/2019) han declarado discriminatorio calcular la IT sobre la base reducida cuando la causa de la baja está relacionada con el embarazo, considerándolo discriminación indirecta por razón de sexo. Sin embargo, el criterio general del INSS es calcular la IT sobre la base de cotización real.
+
+BASE LEGAL
+Normativa aplicable:
+- ET art. 37.6: Derecho a la reducción de jornada por guarda legal (menor de 12 años o persona con discapacidad)
+- LGSS art. 173: Base reguladora de la IT (base de cotización del mes anterior)
+- LGSS art. 237.1 y 237.3: Prestación familiar contributiva no económica (cotizaciones incrementadas al 100% durante 3 años para jubilación, IP, muerte y supervivencia, y nacimiento y cuidado de menor, pero NO para IT)
+- RD 2064/1995, art. 65.1: Cotización en contratos a tiempo parcial (aplicable por analogía a la reducción de jornada)
+- RD-Ley 2/2023, art. único.25: Ampliación de 2 a 3 años del período de cotización incrementada por guarda legal (en vigor desde el 18/3/2023)
+
+Jurisprudencia relevante:
+- STSJ Andalucía (Sevilla) 6/6/2019 (EDJ 2019/647428): Declara discriminatorio calcular la IT sobre la base reducida cuando la causa de la baja es el embarazo (discriminación indirecta por razón de sexo)
+- STSJ Madrid 5320/2014: Reconoce la prestación completa por IT a trabajadora que se reincorpora a jornada completa el último día del mes anterior a la baja
+- STS 23/2026: Protección del complemento de asistencia en situación de IT (jornada reducida)
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento para el médico de familia (eCap):
+
+El médico de familia no tiene ninguna actuación especial en estos casos. El comunicado de baja se emite de la misma manera que cualquier otra IT, sin que la reducción de jornada afecte al procedimiento médico.
+
+Información que puede proporcionar el médico de familia a la trabajadora:
+
+1. Cálculo de la prestación: La IT se calcula sobre la base de cotización del mes anterior a la baja. Si la trabajadora lleva meses en reducción de jornada, su base de cotización es proporcional a las horas trabajadas.
+
+2. Ejemplo práctico:
+   - Salario a jornada completa: 2.000 €/mes → Base reguladora IT: 66,67 €/día
+   - Reducción del 50% (1.000 €/mes) → Base reguladora IT: 33,33 €/día
+   - Prestación IT (75% desde el día 21): 25,00 €/día en lugar de 50,00 €/día
+
+3. Excepción: baja el mismo mes que se inicia la reducción: Si la trabajadora causa baja el mismo mes en que inició la reducción de jornada, la base reguladora se calcula sobre la cotización del mes anterior (cuando aún trabajaba a jornada completa), de modo que la prestación no se ve reducida.
+
+4. Posible reclamación por discriminación: Si la causa de la baja es el embarazo o una patología relacionada con el género, la trabajadora puede alegar discriminación indirecta por razón de sexo (STSJ Andalucía 2019) para reclamar la prestación calculada sobre la jornada completa. Esta reclamación se debe hacer ante el INSS o, si es denegada, ante la jurisdicción social.
+
+Nota para el eCap: El sistema eCap no distingue entre trabajadores a jornada completa y reducida. El comunicado de baja se emite de la misma manera. La reducción de jornada es un dato que gestiona la empresa y la Seguridad Social, no el médico.
+
+EJEMPLOS PRÁCTICOS
+Ejemplo 1: Caso estándar (reducción de jornada + IT)
+Trabajadora con reducción de jornada del 33% (trabaja 2/3 de la jornada) para cuidar un hijo de 3 años. Salario reducido: 1.400 €/mes. Causa baja por lumbalgia aguda. Base reguladora IT: 1.400/30 = 46,67 €/día. Prestación IT (75% desde el día 21): 35,00 €/día. Si no hubiera reducido la jornada (salario 2.100 €/mes), habría percibido 52,50 €/día.
+
+Ejemplo 2: Baja el mismo mes que se inicia la reducción
+Trabajadora que inicia reducción de jornada el día 1 de febrero. El día 15 de febrero causa baja por IT. La base reguladora se calcula sobre la cotización de enero (mes anterior), cuando trabajaba a jornada completa (salario 2.000 €/mes → BR: 66,67 €/día). La reducción de jornada no afecta la prestación de IT en este caso.
+
+Ejemplo 3: Baja por embarazo con reducción de jornada (posible discriminación)
+Trabajadora con reducción de jornada del 25% por guarda legal. Causa baja por amenaza de aborto (semana 12). La mutua calcula la IT sobre la base reducida. La trabajadora puede reclamar la prestación calculada sobre la jornada completa alegando discriminación indirecta por razón de sexo (STSJ Andalucía 6/6/2019). Si el INSS deniega la reclamación, puede acudir a la jurisdicción social.
+
+Ejemplo 4: Reducción de jornada e IT de larga duración
+Trabajadora con reducción de jornada del 50% desde hace 2 años (hijo de 2 años). Causa baja por depresión mayor. La IT se calcula sobre la base reducida. Cuando la IT supera los 365 días y pasa a prórroga, la base reguladora continúa siendo la misma (la reducida). Si en algún momento se reconoce incapacidad permanente, las cotizaciones de los 3 primeros años de reducción se computan al 100% (art. 237.3 LGSS), de manera que la IP se calcula sobre una base superior a la IT.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

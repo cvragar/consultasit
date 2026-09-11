@@ -1,0 +1,221 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 90004
+Título: Prestació per risc durant la lactància natural: diferències amb la IT
+Título en español: Prestación por riesgo durante la lactancia natural: diferencias con la IT
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, lactancia, Prestació per risc durant la lactància natural: diferències amb la IT, Prestación por riesgo durante la lactancia natural: diferencias con la IT
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Situació anàloga al risc durant l'embaràs però amb normativa específica i menor coneixement pràctic
+
+La prestació per risc durant la lactància natural és una prestació de la Seguretat Social que protegeix la treballadora que amamanta el seu fill quan les condicions del seu lloc de treball poden perjudicar la seva salut o la del lactant. Com en el cas del risc durant l'embaràs, la causa és laboral-preventiva (les condicions del treball), no mèdica.
+
+Diferència clau amb la IT:
+- IT per malaltia: La treballadora té una patologia que li impedeix treballar. El metge de família emet el comunicat de baixa. Percep el 60%/75% de la BR.
+- Risc durant la lactància: El lloc de treball és incompatible amb la lactància natural, però la treballadora no té cap malaltia. La mútua gestiona la prestació. Percep el 100% de la BR. El metge de família NO emet el comunicat de baixa.
+
+Durada de la prestació:
+La prestació per risc durant la lactància dura fins que el fill compleix 9 mesos (o fins que la treballadora abandona la lactància natural si és abans dels 9 mesos). No hi ha pròrroga automàtica.
+
+Rol del metge de família:
+El metge de família pot emetre un informe mèdic que acrediti que la treballadora amamanta el seu fill i que la lactància és compatible amb la seva salut. Aquest informe és necessari per sol·licitar la prestació a la mútua. No és un comunicat de baixa IT.
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Prestació per risc durant la lactància natural: diferències amb la IT
+
+CATEGORIA
+lactancia
+
+DESCRIPCIÓ I CRITERI
+Situació anàloga al risc durant l'embaràs però amb normativa específica i menor coneixement pràctic
+
+La prestació per risc durant la lactància natural és una prestació de la Seguretat Social que protegeix la treballadora que amamanta el seu fill quan les condicions del seu lloc de treball poden perjudicar la seva salut o la del lactant. Com en el cas del risc durant l'embaràs, la causa és laboral-preventiva (les condicions del treball), no mèdica.
+
+Diferència clau amb la IT:
+- IT per malaltia: La treballadora té una patologia que li impedeix treballar. El metge de família emet el comunicat de baixa. Percep el 60%/75% de la BR.
+- Risc durant la lactància: El lloc de treball és incompatible amb la lactància natural, però la treballadora no té cap malaltia. La mútua gestiona la prestació. Percep el 100% de la BR. El metge de família NO emet el comunicat de baixa.
+
+Durada de la prestació:
+La prestació per risc durant la lactància dura fins que el fill compleix 9 mesos (o fins que la treballadora abandona la lactància natural si és abans dels 9 mesos). No hi ha pròrroga automàtica.
+
+Rol del metge de família:
+El metge de família pot emetre un informe mèdic que acrediti que la treballadora amamanta el seu fill i que la lactància és compatible amb la seva salut. Aquest informe és necessari per sol·licitar la prestació a la mútua. No és un comunicat de baixa IT.
+
+BASE LEGAL
+Normativa aplicable:
+- LGSS art. 188: Situació protegida (risc durant la lactància natural)
+- LGSS art. 189: Prestació econòmica (100% base reguladora, contingència professional)
+- RD 295/2009, art. 39-48: Regulació detallada de la prestació per risc durant la lactància
+- Llei 31/1995 de Prevenció de Riscos Laborals, art. 26.4: Obligació empresarial de protecció durant la lactància
+- Directiva 92/85/CEE, art. 9: Protecció de la maternitat i la lactància en el treball
+- ET art. 37.4: Permís de lactància (1 hora diària fins als 9 mesos, diferent de la prestació per risc)
+
+Distinció entre permís de lactància i prestació per risc durant la lactància:
+- Permís de lactància (ET art. 37.4): Dret a 1 hora d'absència diària fins als 9 mesos. No és una prestació econòmica de la SS; és un dret laboral. Es pot acumular en dies complets (permís de 15 dies laborables).
+- Prestació per risc durant la lactància (LGSS art. 188-189): Prestació econòmica quan el lloc de treball és incompatible amb la lactància. Gestiona la mútua. 100% BR.
+
+PROCEDIMENT RECOMANAT
+Procediment per al metge de família (eCap):
+
+El metge de família té un rol específic però limitat en la prestació per risc durant la lactància:
+
+1. Informe mèdic de lactància: Si la treballadora sol·licita la prestació per risc durant la lactància, pot necessitar un informe del metge de família que acrediti que amamanta el seu fill. Aquest informe no és un comunicat de baixa IT; és un certificat mèdic ordinari.
+
+2. Quan NO emetre comunicat de baixa IT: Si la treballadora explica que el seu lloc de treball és incompatible amb la lactància (productes químics, radiacions, esforç físic, etc.) però no té cap patologia, el metge de família no ha d'emetre comunicat de baixa IT. Ha d'informar la treballadora que:
+   - Comuniqui la situació a l'empresa (per escrit)
+   - L'empresa ha d'adoptar mesures preventives o canviar-la de lloc
+   - Si l'empresa no pot, ha de sol·licitar la prestació per risc durant la lactància a la mútua
+
+3. Quan emetre comunicat de baixa IT: Si la treballadora té una patologia (mastitis, depressió postpart, etc.) que li impedeix treballar, el metge de família ha d'emetre el comunicat de baixa IT per contingència comuna, independent de si amamanta o no.
+
+Procediment de sol·licitud de la prestació per risc durant la lactància:
+1. La treballadora comunica la situació a l'empresa
+2. L'empresa intenta adaptar el lloc de treball o canviar-la de lloc
+3. Si no és possible, l'empresa sol·licita la prestació a la mútua
+4. La mútua avalua el risc i, si el confirma, reconeix la prestació
+5. La treballadora percep el 100% de la BR fins que el fill compleix 9 mesos
+
+EXEMPLES PRÀCTICS
+Exemple 1: Risc durant la lactància (NO IT)
+Treballadora que amamanta el seu fill de 3 mesos. Treballa com a tècnica de laboratori amb exposició a agents químics. Sense cap patologia clínica. L'empresa no pot canviar-la de lloc. Sol·licita la prestació per risc durant la lactància a la mútua. Percep el 100% de la BR fins que el fill compleix 9 mesos. El metge de família emet un informe de lactància (no un comunicat de baixa IT).
+
+Exemple 2: IT per mastitis (no risc durant la lactància)
+Treballadora que amamanta el seu fill de 2 mesos. Desenvolupa una mastitis aguda que li impedeix treballar. El metge de família emet un comunicat de baixa IT per contingència comuna (diagnòstic: mastitis). Percep el 60%/75% de la BR. No és una prestació per risc durant la lactància (la causa és mèdica, no laboral).
+
+Exemple 3: Permís de lactància vs. prestació per risc durant la lactància
+Treballadora que amamanta el seu fill de 6 mesos. Treballa en torn de nit en una fàbrica. Vol saber quins drets té:
+- Permís de lactància (ET art. 37.4): Pot demanar 1 hora diària d'absència o acumular-la en 15 dies laborables. No és una prestació econòmica de la SS.
+- Prestació per risc durant la lactància: Si el torn de nit és incompatible amb la lactància (per exemple, per l'exposició a agents nocturns), pot sol·licitar la prestació a la mútua (100% BR fins als 9 mesos del fill).
+
+Exemple 4: Situació mixta (risc durant la lactància + IT posterior)
+Treballadora percebent la prestació per risc durant la lactància (100% BR). Causa baixa per IT per una gastroenteritis aguda. La prestació per risc durant la lactància se suspèn i s'inicia la IT (60%/75% BR). Quan rep l'alta per IT, torna a percebre la prestació per risc durant la lactància (si el fill encara no ha complert 9 mesos).
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Situación análoga al riesgo durante el embarazo pero con normativa específica y menor conocimiento práctico
+
+La prestación por riesgo durante la lactancia natural es una prestación de la Seguridad Social que protege a la trabajadora que amamanta a su hijo cuando las condiciones de su puesto de trabajo pueden perjudicar su salud o la del lactante. Como en el caso del riesgo durante el embarazo, la causa es laboral-preventiva (las condiciones del trabajo), no médica.
+
+Diferencia clave con la IT:
+- IT por enfermedad: La trabajadora tiene una patología que le impide trabajar. El médico de familia emite el comunicado de baja. Percibe el 60%/75% de la BR.
+- Riesgo durante la lactancia: El puesto de trabajo es incompatible con la lactancia natural, pero la trabajadora no tiene ninguna enfermedad. La mutua gestiona la prestación. Percibe el 100% de la BR. El médico de familia NO emite el comunicado de baja.
+
+Duración de la prestación:
+La prestación por riesgo durante la lactancia dura hasta que el hijo cumple 9 meses (o hasta que la trabajadora abandona la lactancia natural si es antes de los 9 meses). No hay prórroga automática.
+
+Rol del médico de familia:
+El médico de familia puede emitir un informe médico que acredite que la trabajadora amamanta a su hijo y que la lactancia es compatible con su salud. Este informe es necesario para solicitar la prestación a la mutua. No es un comunicado de baja IT.
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Prestación por riesgo durante la lactancia natural: diferencias con la IT
+
+CATEGORÍA
+lactancia
+
+DESCRIPCIÓN Y CRITERIO
+Situación análoga al riesgo durante el embarazo pero con normativa específica y menor conocimiento práctico
+
+La prestación por riesgo durante la lactancia natural es una prestación de la Seguridad Social que protege a la trabajadora que amamanta a su hijo cuando las condiciones de su puesto de trabajo pueden perjudicar su salud o la del lactante. Como en el caso del riesgo durante el embarazo, la causa es laboral-preventiva (las condiciones del trabajo), no médica.
+
+Diferencia clave con la IT:
+- IT por enfermedad: La trabajadora tiene una patología que le impide trabajar. El médico de familia emite el comunicado de baja. Percibe el 60%/75% de la BR.
+- Riesgo durante la lactancia: El puesto de trabajo es incompatible con la lactancia natural, pero la trabajadora no tiene ninguna enfermedad. La mutua gestiona la prestación. Percibe el 100% de la BR. El médico de familia NO emite el comunicado de baja.
+
+Duración de la prestación:
+La prestación por riesgo durante la lactancia dura hasta que el hijo cumple 9 meses (o hasta que la trabajadora abandona la lactancia natural si es antes de los 9 meses). No hay prórroga automática.
+
+Rol del médico de familia:
+El médico de familia puede emitir un informe médico que acredite que la trabajadora amamanta a su hijo y que la lactancia es compatible con su salud. Este informe es necesario para solicitar la prestación a la mutua. No es un comunicado de baja IT.
+
+BASE LEGAL
+Contexto: Caso especial de IT: Prestación por riesgo durante la lactancia natural: diferencias con la IT
+
+Texto a traducir:
+Normativa aplicable:
+- LGSS art. 188: Situación protegida (riesgo durante la lactancia natural)
+- LGSS art. 189: Prestación económica (100% base reguladora, contingencia profesional)
+- RD 295/2009, art. 39-48: Regulación detallada de la prestación por riesgo durante la lactancia
+- Ley 31/1995 de Prevención de Riesgos Laborales, art. 26.4: Obligación empresarial de protección durante la lactancia
+- Directiva 92/85/CEE, art. 9: Protección de la maternidad y la lactancia en el trabajo
+- ET art. 37.4: Permiso de lactancia (1 hora diaria hasta los 9 meses, diferente de la prestación por riesgo)
+
+Distinción entre permiso de lactancia y prestación por riesgo durante la lactancia:
+- Permiso de lactancia (ET art. 37.4): Derecho a 1 hora de ausencia diaria hasta los 9 meses. No es una prestación económica de la SS; es un derecho laboral. Se puede acumular en días completos (permiso de 15 días laborables).
+- Prestación por riesgo durante la lactancia (LGSS art. 188-189): Prestación económica cuando el puesto de trabajo es incompatible con la lactancia. Gestiona la mutua. 100% BR.
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento para el médico de familia (eCap):
+
+El médico de familia tiene un rol específico pero limitado en la prestación por riesgo durante la lactancia:
+
+1. Informe médico de lactancia: Si la trabajadora solicita la prestación por riesgo durante la lactancia, puede necesitar un informe del médico de familia que acredite que amamanta a su hijo. Este informe no es un comunicado de baja IT; es un certificado médico ordinario.
+
+2. Cuando NO emitir comunicado de baja IT: Si la trabajadora explica que su puesto de trabajo es incompatible con la lactancia (productos químicos, radiaciones, esfuerzo físico, etc.) pero no tiene ninguna patología, el médico de familia no debe emitir comunicado de baja IT. Debe informar a la trabajadora que:
+   - Comunique la situación a la empresa (por escrito)
+   - La empresa debe adoptar medidas preventivas o cambiarla de puesto
+   - Si la empresa no puede, debe solicitar la prestación por riesgo durante la lactancia a la mutua
+
+3. Cuando emitir comunicado de baja IT: Si la trabajadora tiene una patología (mastitis, depresión posparto, etc.) que le impide trabajar, el médico de familia debe emitir el comunicado de baja IT por contingencia común, independiente de si amamanta o no.
+
+Procedimiento de solicitud de la prestación por riesgo durante la lactancia:
+1. La trabajadora comunica la situación a la empresa
+2. La empresa intenta adaptar el puesto de trabajo o cambiarla de puesto
+3. Si no es posible, la empresa solicita la prestación a la mutua
+4. La mutua evalúa el riesgo y, si lo confirma, reconoce la prestación
+5. La trabajadora percibe el 100% de la BR hasta que el hijo cumple 9 meses
+
+EJEMPLOS PRÁCTICOS
+Ejemplo 1: Riesgo durante la lactancia (NO IT)
+Trabajadora que amamanta a su hijo de 3 meses. Trabaja como técnica de laboratorio con exposición a agentes químicos. Sin ninguna patología clínica. La empresa no puede cambiarla de puesto. Solicita la prestación por riesgo durante la lactancia a la mutua. Percibe el 100% de la BR hasta que el hijo cumple 9 meses. El médico de familia emite un informe de lactancia (no un comunicado de baja IT).
+
+Ejemplo 2: IT por mastitis (no riesgo durante la lactancia)
+Trabajadora que amamanta a su hijo de 2 meses. Desarrolla una mastitis aguda que le impide trabajar. El médico de familia emite un comunicado de baja IT por contingencia común (diagnóstico: mastitis). Percibe el 60%/75% de la BR. No es una prestación por riesgo durante la lactancia (la causa es médica, no laboral).
+
+Ejemplo 3: Permiso de lactancia vs. prestación por riesgo durante la lactancia
+Trabajadora que amamanta a su hijo de 6 meses. Trabaja en turno de noche en una fábrica. Quiere saber qué derechos tiene:
+- Permiso de lactancia (ET art. 37.4): Puede solicitar 1 hora diaria de ausencia o acumularla en 15 días laborables. No es una prestación económica de la SS.
+- Prestación por riesgo durante la lactancia: Si el turno de noche es incompatible con la lactancia (por ejemplo, por la exposición a agentes nocturnos), puede solicitar la prestación a la mutua (100% BR hasta los 9 meses del hijo).
+
+Ejemplo 4: Situación mixta (riesgo durante la lactancia + IT posterior)
+Trabajadora percibiendo la prestación por riesgo durante la lactancia (100% BR). Causa baja por IT por una gastroenteritis aguda. La prestación por riesgo durante la lactancia se suspende y se inicia la IT (60%/75% BR). Cuando recibe el alta por IT, vuelve a percibir la prestación por riesgo durante la lactancia (si el hijo todavía no ha cumplido 9 meses).
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

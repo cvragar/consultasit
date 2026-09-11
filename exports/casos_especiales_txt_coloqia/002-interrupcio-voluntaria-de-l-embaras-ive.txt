@@ -1,0 +1,188 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 2
+Título: Interrupció voluntària de l'embaràs (IVE)
+Título en español: Interrupción voluntaria del embarazo (IVE)
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, embarazo, Interrupció voluntària de l'embaràs (IVE), Interrupción voluntaria del embarazo (IVE)
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Des de l'1 de juny de 2023, la Llei Orgànica 1/2023, de 28 de febrer (BOE-A-2023-5364) estableix que la interrupció de l'embaràs (voluntària o no) és una situació especial d'IT per contingències comunes (LGSS art. 169.1.a, paràgraf 2n). Genera dret a la prestació des del dia 1 de la baixa (a càrrec de la mútua o INSS), sense espera de 4 dies i sense període mínim de cotització.
+
+Característiques clau:
+- Cobreix tant la IVE (interrupció voluntària) com la IIE (interrupció involuntària: avortament espontani)
+- Contingència: malaltia comuna (situació especial), llevat que la interrupció sigui deguda a AT o EP
+- Prestació: des del dia 1 (a càrrec de la mútua o INSS, no de l'empresa)
+- Sense període mínim de cotització
+- Aplicable tant a les treballadores del Règim General com a les autònomes (RETA)
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Interrupció voluntària de l'embaràs (IVE)
+
+CATEGORIA
+embarazo
+
+DESCRIPCIÓ I CRITERI
+Des de l'1 de juny de 2023, la Llei Orgànica 1/2023, de 28 de febrer (BOE-A-2023-5364) estableix que la interrupció de l'embaràs (voluntària o no) és una situació especial d'IT per contingències comunes (LGSS art. 169.1.a, paràgraf 2n). Genera dret a la prestació des del dia 1 de la baixa (a càrrec de la mútua o INSS), sense espera de 4 dies i sense període mínim de cotització.
+
+Característiques clau:
+- Cobreix tant la IVE (interrupció voluntària) com la IIE (interrupció involuntària: avortament espontani)
+- Contingència: malaltia comuna (situació especial), llevat que la interrupció sigui deguda a AT o EP
+- Prestació: des del dia 1 (a càrrec de la mútua o INSS, no de l'empresa)
+- Sense període mínim de cotització
+- Aplicable tant a les treballadores del Règim General com a les autònomes (RETA)
+
+BASE LEGAL
+Normativa principal:
+- LGSS art. 169.1.a, paràgraf 2n (redacció LO 1/2023): situació especial d'IT per interrupció de l'embaràs (voluntària o no)
+- LGSS art. 172.1.a (redacció LO 1/2023): sense període mínim de cotització per a situacions especials
+- LGSS art. 173.1, paràgraf 4t (redacció LO 1/2023): prestació des del dia 1 (a càrrec de l'entitat gestora), llevat del dia de la baixa (a càrrec de l'empresa)
+- Llei Orgànica 1/2023, de 28 de febrer (BOE-A-2023-5364), Disposició Final Tercera, apartat 2
+- Llei Orgànica 2/2010, de 3 de març (BOE-A-2010-3514): marc general de la IVE
+
+Nota important: La LO 1/2023 no distingeix entre IVE i IIE (avortament espontani): totes dues estan cobertes com a situació especial d'IT.
+
+PROCEDIMENT RECOMANAT
+Procediment des de l'eCap
+
+Pas 1: Emissió del comunicat de baixa
+1. Quan emetre la baixa: el dia de la intervenció (IVE) o el dia en que la treballadora acudeix per l'avortament espontani i queda impedida per treballar.
+2. Contingència: Malaltia comuna (situació especial LO 1/2023)
+3. Diagnòstic CIE-10:
+   - IVE: O04 (avortament mèdic) o Z64.0 (problemes relacionats amb embaràs no desitjat)
+   - Avortament espontani: O02 (producte anormal de la concepció), O03 (avortament espontani)
+4. Durada estimada: variable (generalment 1-7 dies per IVE de primer trimestre; pot ser més llarga en IVE de segon trimestre o complicacions)
+
+Pas 2: Seguiment
+- Parts de confirmació: cada 7 dies els primers 30 dies (RD 625/2014 art. 2)
+- Si hi ha complicacions (infecció, hemorràgia, etc.), la IT es pot prolongar com a malaltia comuna ordinària
+- La treballadora no ha de justificar el motiu de la IVE davant l'empresa (dret a la intimitat)
+
+Confidencialitat
+- El metge de família no ha de comunicar a l'empresa el diagnòstic específic (IVE). El comunicat de baixa indica "malaltia comuna" sense especificar la causa.
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1: IVE de primer trimestre (mètode farmacològic)
+Situació: Treballadora de 28 anys que realitza una IVE de 7 setmanes amb mifepristona + misoprostol. Necessita 3 dies de repòs.
+Resolució: Part de baixa el dia de la intervenció (malaltia comuna, situació especial LO 1/2023). La prestació comença el dia 1 (no el dia 4). La mútua o INSS paga des del dia 2 (el dia 1 és a càrrec de l'empresa). Alta als 3 dies.
+
+Exemple 2: Avortament espontani amb legrat
+Situació: Treballadora de 35 anys amb avortament espontani a les 10 setmanes. Requereix legrat hospitalari i 5 dies de repòs.
+Resolució: Baixa per situació especial LO 1/2023 (CIE-10: O03). Prestació des del dia 1. Si hi ha complicació posterior (endometritis), la IT es pot prolongar com a malaltia comuna ordinària.
+
+Exemple 3: IVE de segon trimestre
+Situació: Treballadora de 30 anys que realitza una IVE de 18 setmanes per malformació fetal greu. Requereix ingrés hospitalari de 2 dies i 2 setmanes de repòs.
+Resolució: Baixa per situació especial LO 1/2023. Prestació des del dia 1. Si la treballadora presenta dol perinatal o depressió, la IT es pot prolongar com a malaltia comuna ordinària (trastorn adaptatiu, F43.2).
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Desde el 1 de junio de 2023, la Ley Orgánica 1/2023, de 28 de febrero (BOE-A-2023-5364) establece que la interrupción del embarazo (voluntaria o no) es una situación especial de IT por contingencias comunes (LGSS art. 169.1.a, párrafo 2º). Genera derecho a la prestación desde el día 1 de la baja (a cargo de la mutua o INSS), sin espera de 4 días y sin periodo mínimo de cotización.
+
+Características clave:
+- Cubre tanto la IVE (interrupción voluntaria) como la IIE (interrupción involuntaria: aborto espontáneo)
+- Contingencia: enfermedad común (situación especial), salvo que la interrupción sea debida a AT o EP
+- Prestación: desde el día 1 (a cargo de la mutua o INSS, no de la empresa)
+- Sin periodo mínimo de cotización
+- Aplicable tanto a las trabajadoras del Régimen General como a las autónomas (RETA)
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Interrupción voluntaria del embarazo (IVE)
+
+CATEGORÍA
+embarazo
+
+DESCRIPCIÓN Y CRITERIO
+Desde el 1 de junio de 2023, la Ley Orgánica 1/2023, de 28 de febrero (BOE-A-2023-5364) establece que la interrupción del embarazo (voluntaria o no) es una situación especial de IT por contingencias comunes (LGSS art. 169.1.a, párrafo 2º). Genera derecho a la prestación desde el día 1 de la baja (a cargo de la mutua o INSS), sin espera de 4 días y sin periodo mínimo de cotización.
+
+Características clave:
+- Cubre tanto la IVE (interrupción voluntaria) como la IIE (interrupción involuntaria: aborto espontáneo)
+- Contingencia: enfermedad común (situación especial), salvo que la interrupción sea debida a AT o EP
+- Prestación: desde el día 1 (a cargo de la mutua o INSS, no de la empresa)
+- Sin periodo mínimo de cotización
+- Aplicable tanto a las trabajadoras del Régimen General como a las autónomas (RETA)
+
+BASE LEGAL
+Normativa principal:
+- LGSS art. 169.1.a, párrafo 2º (redacción LO 1/2023): situación especial de IT por interrupción del embarazo (voluntaria o no)
+- LGSS art. 172.1.a (redacción LO 1/2023): sin periodo mínimo de cotización para situaciones especiales
+- LGSS art. 173.1, párrafo 4º (redacción LO 1/2023): prestación desde el día 1 (a cargo de la entidad gestora), salvo el día de la baja (a cargo de la empresa)
+- Ley Orgánica 1/2023, de 28 de febrero (BOE-A-2023-5364), Disposición Final Tercera, apartado 2
+- Ley Orgánica 2/2010, de 3 de marzo (BOE-A-2010-3514): marco general de la IVE
+
+Nota importante: La LO 1/2023 no distingue entre IVE e IIE (aborto espontáneo): ambas están cubiertas como situación especial de IT.
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento desde el eCap
+
+Paso 1: Emisión del comunicado de baja
+1. Cuándo emitir la baja: el día de la intervención (IVE) o el día en que la trabajadora acude por el aborto espontáneo y queda impedida para trabajar.
+2. Contingencia: Enfermedad común (situación especial LO 1/2023)
+3. Diagnóstico CIE-10:
+   - IVE: O04 (aborto médico) o Z64.0 (problemas relacionados con embarazo no deseado)
+   - Aborto espontáneo: O02 (producto anormal de la concepción), O03 (aborto espontáneo)
+4. Duración estimada: variable (generalmente 1-7 días para IVE de primer trimestre; puede ser más larga en IVE de segundo trimestre o complicaciones)
+
+Paso 2: Seguimiento
+- Partes de confirmación: cada 7 días los primeros 30 días (RD 625/2014 art. 2)
+- Si hay complicaciones (infección, hemorragia, etc.), la IT se puede prolongar como enfermedad común ordinaria
+- La trabajadora no tiene que justificar el motivo de la IVE ante la empresa (derecho a la intimidad)
+
+Confidencialidad
+- El médico de familia no tiene que comunicar a la empresa el diagnóstico específico (IVE). El comunicado de baja indica "enfermedad común" sin especificar la causa.
+
+EJEMPLOS PRÁCTICOS
+Ejemplos prácticos
+
+Ejemplo 1: IVE de primer trimestre (método farmacológico)
+Situación: Trabajadora de 28 años que realiza una IVE de 7 semanas con mifepristona + misoprostol. Necesita 3 días de reposo.
+Resolución: Parte de baja el día de la intervención (enfermedad común, situación especial LO 1/2023). La prestación comienza el día 1 (no el día 4). La mutua o INSS paga desde el día 2 (el día 1 es a cargo de la empresa). Alta a los 3 días.
+
+Ejemplo 2: Aborto espontáneo con legrado
+Situación: Trabajadora de 35 años con aborto espontáneo a las 10 semanas. Requiere legrado hospitalario y 5 días de reposo.
+Resolución: Baja por situación especial LO 1/2023 (CIE-10: O03). Prestación desde el día 1. Si hay complicación posterior (endometritis), la IT se puede prolongar como enfermedad común ordinaria.
+
+Ejemplo 3: IVE de segundo trimestre
+Situación: Trabajadora de 30 años que realiza una IVE de 18 semanas por malformación fetal grave. Requiere ingreso hospitalario de 2 días y 2 semanas de reposo.
+Resolución: Baja por situación especial LO 1/2023. Prestación desde el día 1. Si la trabajadora presenta duelo perinatal o depresión, la IT se puede prolongar como enfermedad común ordinaria (trastorno adaptativo, F43.2).
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

@@ -1,0 +1,302 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 90006
+Título: IT en teletreball: accident laboral vs. contingència comuna
+Título en español: IT en teletrabajo: accidente laboral vs. contingencia común
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, accident_treball, IT en teletreball: accident laboral vs. contingència comuna, IT en teletrabajo: accidente laboral vs. contingencia común
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Descripció del cas
+
+La Llei 10/2021, de 9 de juliol, de treball a distància no regula de manera específica els accidents de treball en teletreball. Per tant, s'aplica de manera supletòria l'art. 156 LGSS (presumpció iuris tantum): les lesions sofertes pel treballador durant el temps i en el lloc de treball es presumeixen accident de treball.
+
+La clau per distingir un accident de treball (AT) d'una contingència comuna (CC) en teletreball és acreditar:
+1. Que la lesió es va produir durant la jornada laboral (temps de treball).
+2. Que existeix un nexe causal entre la lesió i la prestació de serveis (o que no es pot descartar).
+
+Taula comparativa: AT vs. CC en teletreball
+Concepte ; Accident de Treball (AT) ; Contingència Comuna (CC)
+Definició ; Art. 156 LGSS: lesió corporal en temps i lloc de treball ; Malaltia o accident no relacionat amb el treball
+Prestació econòmica ; Des del dia 1: 75% BR (a càrrec de la mútua) ; Dies 1-3: sense prestació; dies 4-20: 60% BR (empresa); dies 21+: 75% BR (INSS/mútua)
+Part mèdic ; Part d'AT (metge de la mútua o urgències) ; Part de CC (metge de família/CAP)
+Gestió ; Mútua col·laboradora ; Mútua col·laboradora o INSS
+Càrrega de la prova ; Presumpció a favor del treballador (art. 156.3 LGSS) ; Empresa/mútua pot destruir la presumpció
+Criteris jurisprudencials per qualificar l'AT en teletreball
+
+Factors que AFAVOREIXEN la qualificació com a AT:
+- La lesió es produeix dins de l'horari laboral (element temporal)
+- El treballador estava activament treballant en el moment de l'accident
+- La lesió es produeix en el lloc habilitat per teletraballar (despatx, taula de treball)
+- La lesió es produeix en un desplaçament necessari dins del domicili durant la jornada (anar al bany, buscar material de treball)
+- Malalties cardiovasculars (ictus, infart) que es manifesten durant la jornada (presumpció de laboralitat)
+
+Factors que DIFICULTEN la qualificació com a AT:
+- La lesió es produeix fora de l'horari laboral
+- El treballador no pot acreditar que estava treballant en el moment de l'accident
+- La lesió es produeix en activitats clarament domèstiques o personals sense connexió amb el treball
+- La mútua pot provar la desconnexió absoluta entre la lesió i la prestació de serveis
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+IT en teletreball: accident laboral vs. contingència comuna
+
+CATEGORIA
+accident_treball
+
+DESCRIPCIÓ I CRITERI
+Descripció del cas
+
+La Llei 10/2021, de 9 de juliol, de treball a distància no regula de manera específica els accidents de treball en teletreball. Per tant, s'aplica de manera supletòria l'art. 156 LGSS (presumpció iuris tantum): les lesions sofertes pel treballador durant el temps i en el lloc de treball es presumeixen accident de treball.
+
+La clau per distingir un accident de treball (AT) d'una contingència comuna (CC) en teletreball és acreditar:
+1. Que la lesió es va produir durant la jornada laboral (temps de treball).
+2. Que existeix un nexe causal entre la lesió i la prestació de serveis (o que no es pot descartar).
+
+Taula comparativa: AT vs. CC en teletreball
+Concepte ; Accident de Treball (AT) ; Contingència Comuna (CC)
+Definició ; Art. 156 LGSS: lesió corporal en temps i lloc de treball ; Malaltia o accident no relacionat amb el treball
+Prestació econòmica ; Des del dia 1: 75% BR (a càrrec de la mútua) ; Dies 1-3: sense prestació; dies 4-20: 60% BR (empresa); dies 21+: 75% BR (INSS/mútua)
+Part mèdic ; Part d'AT (metge de la mútua o urgències) ; Part de CC (metge de família/CAP)
+Gestió ; Mútua col·laboradora ; Mútua col·laboradora o INSS
+Càrrega de la prova ; Presumpció a favor del treballador (art. 156.3 LGSS) ; Empresa/mútua pot destruir la presumpció
+Criteris jurisprudencials per qualificar l'AT en teletreball
+
+Factors que AFAVOREIXEN la qualificació com a AT:
+- La lesió es produeix dins de l'horari laboral (element temporal)
+- El treballador estava activament treballant en el moment de l'accident
+- La lesió es produeix en el lloc habilitat per teletraballar (despatx, taula de treball)
+- La lesió es produeix en un desplaçament necessari dins del domicili durant la jornada (anar al bany, buscar material de treball)
+- Malalties cardiovasculars (ictus, infart) que es manifesten durant la jornada (presumpció de laboralitat)
+
+Factors que DIFICULTEN la qualificació com a AT:
+- La lesió es produeix fora de l'horari laboral
+- El treballador no pot acreditar que estava treballant en el moment de l'accident
+- La lesió es produeix en activitats clarament domèstiques o personals sense connexió amb el treball
+- La mútua pot provar la desconnexió absoluta entre la lesió i la prestació de serveis
+
+BASE LEGAL
+Normativa aplicable
+
+Normativa principal:
+- Art. 156.1 LGSS (RDLeg 8/2015): definició d'accident de treball — "tota lesió corporal que el treballador sofreixi amb ocasió o per conseqüència del treball que executi per compte d'altri"
+- Art. 156.3 LGSS: presumpció iuris tantum — es presumeix AT la lesió sofrerta durant el temps i en el lloc de treball
+- Art. 156.2.a) LGSS: accidents in itinere (trayecte al/del treball)
+- Llei 10/2021, de 9 de juliol, art. 16: obligació de l'empresa d'avaluar els riscos laborals en el teletreball i planificar activitats preventives (factors psicosocials, ergonòmics, organitzatius i d'accessibilitat)
+- Art. 169 LGSS: situació d'IT per contingència comuna (malaltia comuna o accident no laboral)
+
+Jurisprudència clau:
+- STSJ Madrid 11/11/2022 (rec. 526/2022): accident durant la pausa dins de la jornada (ampolla d'aigua a la cuina) = AT. Aplica la presumpció de laboralitat del 156.3 LGSS.
+- JS Girona 12/11/2020: ictus isquèmic durant el teletreball = AT. La presumpció s'aplica igual que en treball presencial.
+- JS Cáceres 26/10/2022 (rec. 273/2022): caiguda al passadís en tornar del bany durant la jornada = AT. El "lloc de treball" inclou tot el domicili durant la jornada.
+- STSJ Aragó 18/01/2022 (rec. 875/2021): infart de miocardi durant reunió virtual = AT.
+- STSJ Galícia 25/02/2022: dolor d'espatlla en girar la pantalla, sense poder acreditar que estava treballant en aquell moment = CC. La presumpció no opera si no s'acredita el temps de treball.
+- STS 20/04/2021 (rec. 4466/2018): accidents durant la pausa de descans dins de la jornada = AT (doctrina aplicable al teletreball).
+
+PROCEDIMENT RECOMANAT
+Procediment per al metge de família
+
+Quan el treballador teletreballador consulta per una lesió:
+
+Pas 1 — Determinar si estava treballant en el moment de l'accident:
+- Preguntar l'hora de l'accident i si coincideix amb l'horari laboral
+- Demanar si hi ha evidències del treball (correus enviats, registre d'hores, videoconferències)
+- El treballador ha d'acreditar el temps de treball (registre horari obligatori per Llei 10/2021)
+
+Pas 2 — Qualificació provisional:
+- Si estava treballant i hi ha nexe causal: orientar com a AT → derivar a la mútua col·laboradora per emetre el part d'AT
+- Si no estava treballant o no hi ha nexe causal: emetre part de CC al CAP com habitualment
+
+Pas 3 — Gestió de la baixa:
+- AT: el metge de la mútua emet el part d'AT. Prestació des del dia 1 (75% BR). No cal esperar 4 dies.
+- CC: el metge de família emet el part de CC. Prestació des del dia 4 (60% BR dies 4-20, 75% BR des del dia 21).
+
+Nota important: En cas de dubte, el metge de família pot emetre un part de CC i la mútua o el treballador poden impugnar la qualificació davant l'INSS. La qualificació definitiva la fa l'INSS o, en cas de litigi, el jutjat social.
+
+Situació especial — Malalties cardiovasculars (ictus, infart):
+Si el treballador sofreix un ictus o infart durant la jornada laboral en teletreball, la jurisprudència aplica la presumpció de laboralitat (art. 156.3 LGSS). Orientar com a AT i derivar a la mútua, llevat que es pugui acreditar una desconnexió absoluta amb el treball.
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1 — Caiguda al passadís durant la jornada (AT)
+Treballadora que teletreballa des de casa. A les 10:30 h, dins de la seva jornada (9-18 h), va al bany i en tornar cau al passadís i es trenca el canell. La mútua intenta qualificar-ho com a CC argumentant que no va caure a la taula de treball. Resolució: AT. La jurisprudència (JS Cáceres 2022) considera que el "lloc de treball" durant la jornada inclou tot el domicili. La presumpció del 156.3 LGSS opera. Prestació des del dia 1 (75% BR).
+
+Exemple 2 — Ictus durant videoconferència (AT)
+Treballador que sofreix un ictus isquèmic a les 11:00 h mentre participa en una videoconferència de treball. Hi ha registre de connexió a la videoconferència. Resolució: AT. La presumpció de laboralitat opera per les malalties cardiovasculars manifestades durant la jornada (JS Girona 2020, STSJ Aragó 2022). La mútua ha de gestionar la baixa des del dia 1.
+
+Exemple 3 — Dolor d'espatlla sense acreditar temps de treball (CC)
+Treballadora que al·lega que li va aparèixer un dolor d'espatlla mentre girava la pantalla de l'ordinador, però no pot acreditar l'hora exacta ni que estava treballant en aquell moment (no hi ha registre horari, no hi ha correus enviats). Resolució: CC. La presumpció del 156.3 LGSS no opera si no s'acredita el temps de treball (STSJ Galícia 2022). El metge de família emet part de CC.
+
+Exemple 4 — Accident fora de l'horari laboral (CC)
+Treballador que teletreballa de 9 a 18 h. A les 20:30 h, fora de la jornada, cau per les escales de casa i es trenca el turmell. Resolució: CC. No hi ha presumpció de laboralitat perquè l'accident es produeix fora del temps de treball. El metge de família emet part de CC.
+
+Exemple 5 — Accident durant la pausa del migdia (AT, criteri jurisprudencial)
+Treballador que fa una pausa de 30 minuts per dinar (dins de la jornada laboral). Durant la pausa, baixa a buscar el correu i cau per les escales. Resolució: AT probable. La STSJ Madrid (2022) i la STS (2021) han considerat AT els accidents durant les pauses dins de la jornada laboral, aplicant la presumpció de laboralitat. La connexió entre la pausa i el temps de treball no es trenca.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Descripción del caso
+
+La Ley 10/2021, de 9 de julio, de trabajo a distancia no regula de manera específica los accidentes de trabajo en teletrabajo. Por lo tanto, se aplica de manera supletoria el art. 156 LGSS (presunción iuris tantum): las lesiones sufridas por el trabajador durante el tiempo y en el lugar de trabajo se presumen accidente de trabajo.
+
+La clave para distinguir un accidente de trabajo (AT) de una contingencia común (CC) en teletrabajo es acreditar:
+1. Que la lesión se produjo durante la jornada laboral (tiempo de trabajo).
+2. Que existe un nexo causal entre la lesión y la prestación de servicios (o que no se puede descartar).
+
+Tabla comparativa: AT vs. CC en teletrabajo
+Concepto ; Accidente de Trabajo (AT) ; Contingencia Común (CC)
+Definición ; Art. 156 LGSS: lesión corporal en tiempo y lugar de trabajo ; Enfermedad o accidente no relacionado con el trabajo
+Prestación económica ; Desde el día 1: 75% BR (a cargo de la mutua) ; Días 1-3: sin prestación; días 4-20: 60% BR (empresa); días 21+: 75% BR (INSS/mutua)
+Parte médico ; Parte de AT (médico de la mutua o urgencias) ; Parte de CC (médico de familia/CAP)
+Gestión ; Mutua colaboradora ; Mutua colaboradora o INSS
+Carga de la prueba ; Presunción a favor del trabajador (art. 156.3 LGSS) ; Empresa/mutua puede destruir la presunción
+Criterios jurisprudenciales para calificar el AT en teletrabajo
+
+Factores que FAVORECEN la calificación como AT:
+- La lesión se produce dentro del horario laboral (elemento temporal)
+- El trabajador estaba activamente trabajando en el momento del accidente
+- La lesión se produce en el lugar habilitado para teletrabajar (despacho, mesa de trabajo)
+- La lesión se produce en un desplazamiento necesario dentro del domicilio durante la jornada (ir al baño, buscar material de trabajo)
+- Enfermedades cardiovasculares (ictus, infarto) que se manifiestan durante la jornada (presunción de laboralidad)
+
+Factores que DIFICULTAN la calificación como AT:
+- La lesión se produce fuera del horario laboral
+- El trabajador no puede acreditar que estaba trabajando en el momento del accidente
+- La lesión se produce en actividades claramente domésticas o personales sin conexión con el trabajo
+- La mutua puede probar la desconexión absoluta entre la lesión y la prestación de servicios
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+IT en teletrabajo: accidente laboral vs. contingencia común
+
+CATEGORÍA
+accident_treball
+
+DESCRIPCIÓN Y CRITERIO
+Descripción del caso
+
+La Ley 10/2021, de 9 de julio, de trabajo a distancia no regula de manera específica los accidentes de trabajo en teletrabajo. Por lo tanto, se aplica de manera supletoria el art. 156 LGSS (presunción iuris tantum): las lesiones sufridas por el trabajador durante el tiempo y en el lugar de trabajo se presumen accidente de trabajo.
+
+La clave para distinguir un accidente de trabajo (AT) de una contingencia común (CC) en teletrabajo es acreditar:
+1. Que la lesión se produjo durante la jornada laboral (tiempo de trabajo).
+2. Que existe un nexo causal entre la lesión y la prestación de servicios (o que no se puede descartar).
+
+Tabla comparativa: AT vs. CC en teletrabajo
+Concepto ; Accidente de Trabajo (AT) ; Contingencia Común (CC)
+Definición ; Art. 156 LGSS: lesión corporal en tiempo y lugar de trabajo ; Enfermedad o accidente no relacionado con el trabajo
+Prestación económica ; Desde el día 1: 75% BR (a cargo de la mutua) ; Días 1-3: sin prestación; días 4-20: 60% BR (empresa); días 21+: 75% BR (INSS/mutua)
+Parte médico ; Parte de AT (médico de la mutua o urgencias) ; Parte de CC (médico de familia/CAP)
+Gestión ; Mutua colaboradora ; Mutua colaboradora o INSS
+Carga de la prueba ; Presunción a favor del trabajador (art. 156.3 LGSS) ; Empresa/mutua puede destruir la presunción
+Criterios jurisprudenciales para calificar el AT en teletrabajo
+
+Factores que FAVORECEN la calificación como AT:
+- La lesión se produce dentro del horario laboral (elemento temporal)
+- El trabajador estaba activamente trabajando en el momento del accidente
+- La lesión se produce en el lugar habilitado para teletrabajar (despacho, mesa de trabajo)
+- La lesión se produce en un desplazamiento necesario dentro del domicilio durante la jornada (ir al baño, buscar material de trabajo)
+- Enfermedades cardiovasculares (ictus, infarto) que se manifiestan durante la jornada (presunción de laboralidad)
+
+Factores que DIFICULTAN la calificación como AT:
+- La lesión se produce fuera del horario laboral
+- El trabajador no puede acreditar que estaba trabajando en el momento del accidente
+- La lesión se produce en actividades claramente domésticas o personales sin conexión con el trabajo
+- La mutua puede probar la desconexión absoluta entre la lesión y la prestación de servicios
+
+BASE LEGAL
+Normativa aplicable
+
+Normativa principal:
+- Art. 156.1 LGSS (RDLeg 8/2015): definición de accidente de trabajo — "toda lesión corporal que el trabajador sufra con ocasión o por consecuencia del trabajo que ejecute por cuenta ajena"
+- Art. 156.3 LGSS: presunción iuris tantum — se presume AT la lesión sufrida durante el tiempo y en el lugar de trabajo
+- Art. 156.2.a) LGSS: accidentes in itinere (trayecto al/del trabajo)
+- Ley 10/2021, de 9 de julio, art. 16: obligación de la empresa de evaluar los riesgos laborales en el teletrabajo y planificar actividades preventivas (factores psicosociales, ergonómicos, organizativos y de accesibilidad)
+- Art. 169 LGSS: situación de IT por contingencia común (enfermedad común o accidente no laboral)
+
+Jurisprudencia clave:
+- STSJ Madrid 11/11/2022 (rec. 526/2022): accidente durante la pausa dentro de la jornada (botella de agua en la cocina) = AT. Aplica la presunción de laboralidad del 156.3 LGSS.
+- JS Girona 12/11/2020: ictus isquémico durante el teletrabajo = AT. La presunción se aplica igual que en trabajo presencial.
+- JS Cáceres 26/10/2022 (rec. 273/2022): caída en el pasillo al volver del baño durante la jornada = AT. El "lugar de trabajo" incluye todo el domicilio durante la jornada.
+- STSJ Aragón 18/01/2022 (rec. 875/2021): infarto de miocardio durante reunión virtual = AT.
+- STSJ Galicia 25/02/2022: dolor de hombro al girar la pantalla, sin poder acreditar que estaba trabajando en ese momento = CC. La presunción no opera si no se acredita el tiempo de trabajo.
+- STS 20/04/2021 (rec. 4466/2018): accidentes durante la pausa de descanso dentro de la jornada = AT (doctrina aplicable al teletrabajo).
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento para el médico de familia
+
+Cuando el trabajador teletrabajador consulta por una lesión:
+
+Paso 1 — Determinar si estaba trabajando en el momento del accidente:
+- Preguntar la hora del accidente y si coincide con el horario laboral
+- Solicitar si hay evidencias del trabajo (correos enviados, registro de horas, videoconferencias)
+- El trabajador debe acreditar el tiempo de trabajo (registro horario obligatorio por Ley 10/2021)
+
+Paso 2 — Calificación provisional:
+- Si estaba trabajando y hay nexo causal: orientar como AT → derivar a la mutua colaboradora para emitir el parte de AT
+- Si no estaba trabajando o no hay nexo causal: emitir parte de CC en el eCap como habitualmente
+
+Paso 3 — Gestión de la baja:
+- AT: el médico de la mutua emite el parte de AT. Prestación desde el día 1 (75% BR). No es necesario esperar 4 días.
+- CC: el médico de familia emite el parte de CC. Prestación desde el día 4 (60% BR días 4-20, 75% BR desde el día 21).
+
+Nota importante: En caso de duda, el médico de familia puede emitir un parte de CC y la mutua o el trabajador pueden impugnar la calificación ante el INSS. La calificación definitiva la realiza el INSS o, en caso de litigio, el juzgado de lo social.
+
+Situación especial — Enfermedades cardiovasculares (ictus, infarto):
+Si el trabajador sufre un ictus o infarto durante la jornada laboral en teletrabajo, la jurisprudencia aplica la presunción de laboralidad (art. 156.3 LGSS). Orientar como AT y derivar a la mutua, a menos que se pueda acreditar una desconexión absoluta con el trabajo.
+
+EJEMPLOS PRÁCTICOS
+Ejemplos prácticos
+
+Ejemplo 1 — Caída en el pasillo durante la jornada (AT)
+Trabajadora que teletrabaja desde casa. A las 10:30 h, dentro de su jornada (9-18 h), va al baño y al regresar cae en el pasillo y se rompe la muñeca. La mutua intenta calificarlo como CC argumentando que no cayó en la mesa de trabajo. Resolución: AT. La jurisprudencia (JS Cáceres 2022) considera que el "lugar de trabajo" durante la jornada incluye todo el domicilio. La presunción del 156.3 LGSS opera. Prestación desde el día 1 (75% BR).
+
+Ejemplo 2 — Ictus durante videoconferencia (AT)
+Trabajador que sufre un ictus isquémico a las 11:00 h mientras participa en una videoconferencia de trabajo. Hay registro de conexión a la videoconferencia. Resolución: AT. La presunción de laboralidad opera para las enfermedades cardiovasculares manifestadas durante la jornada (JS Girona 2020, STSJ Aragón 2022). La mutua debe gestionar la baja desde el día 1.
+
+Ejemplo 3 — Dolor de hombro sin acreditar tiempo de trabajo (CC)
+Trabajadora que alega que le apareció un dolor de hombro mientras giraba la pantalla del ordenador, pero no puede acreditar la hora exacta ni que estaba trabajando en ese momento (no hay registro horario, no hay correos enviados). Resolución: CC. La presunción del 156.3 LGSS no opera si no se acredita el tiempo de trabajo (STSJ Galicia 2022). El médico de familia emite parte de CC.
+
+Ejemplo 4 — Accidente fuera del horario laboral (CC)
+Trabajador que teletrabaja de 9 a 18 h. A las 20:30 h, fuera de la jornada, cae por las escaleras de casa y se rompe el tobillo. Resolución: CC. No hay presunción de laboralidad porque el accidente se produce fuera del tiempo de trabajo. El médico de familia emite parte de CC.
+
+Ejemplo 5 — Accidente durante la pausa del mediodía (AT, criterio jurisprudencial)
+Trabajador que hace una pausa de 30 minutos para comer (dentro de la jornada laboral). Durante la pausa, baja a buscar el correo y cae por las escaleras. Resolución: AT probable. La STSJ Madrid (2022) y la STS (2021) han considerado AT los accidentes durante las pausas dentro de la jornada laboral, aplicando la presunción de laboralidad. La conexión entre la pausa y el tiempo de trabajo no se rompe.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

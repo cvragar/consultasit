@@ -1,0 +1,196 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 300003
+Título: IP i no extinció automàtica del contracte (Ley 2/2025)
+Título en español: IP y no extinción automática del contrato (Ley 2/2025)
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, otro, IP i no extinció automàtica del contracte (Ley 2/2025), IP y no extinción automática del contrato (Ley 2/2025)
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Incapacitat permanent i continuïtat laboral
+
+La Ley 2/2025 elimina l'extinció automàtica del contracte de treball per declaració d'incapacitat permanent total o absoluta. L'empresa ha de valorar ajustos raonables abans de cessar el treballador.
+
+Punts clau
+
+- La IP ja no extingeix automàticament el contracte
+- El treballador té 10 dies per comunicar la voluntat de continuar
+- L'empresa té 3 mesos per adaptar el lloc o oferir-ne un de compatible
+- Si no és possible l'adaptació: extinció justificada sense indemnització
+- La pensió d'IP queda suspesa mentre duri la relació laboral
+
+Rellevància per al metge d'atenció primària
+
+Aquesta llei afecta els pacients que reben una IP i volen continuar treballant. El metge pot informar sobre la possibilitat de sol·licitar adaptacions del lloc de treball.
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+IP i no extinció automàtica del contracte (Ley 2/2025)
+
+CATEGORIA
+otro
+
+DESCRIPCIÓ I CRITERI
+Incapacitat permanent i continuïtat laboral
+
+La Ley 2/2025 elimina l'extinció automàtica del contracte de treball per declaració d'incapacitat permanent total o absoluta. L'empresa ha de valorar ajustos raonables abans de cessar el treballador.
+
+Punts clau
+
+- La IP ja no extingeix automàticament el contracte
+- El treballador té 10 dies per comunicar la voluntat de continuar
+- L'empresa té 3 mesos per adaptar el lloc o oferir-ne un de compatible
+- Si no és possible l'adaptació: extinció justificada sense indemnització
+- La pensió d'IP queda suspesa mentre duri la relació laboral
+
+Rellevància per al metge d'atenció primària
+
+Aquesta llei afecta els pacients que reben una IP i volen continuar treballant. El metge pot informar sobre la possibilitat de sol·licitar adaptacions del lloc de treball.
+
+BASE LEGAL
+Base legal
+
+- Ley 2/2025, de 29 d'abril (BOE-A-2025-8567)
+- Modifica els articles 48 i 49 de l'Estatut dels Treballadors
+- Modifica l'article 120 de la LRJS
+- Modifica l'article 174.5 de la LGSS (suspensió de pensió)
+- Sentència TJUE de 18 de gener de 2024 (C-631/22)
+
+PROCEDIMENT RECOMANAT
+Procediment
+
+1. El treballador rep la resolució d'IP (total o absoluta)
+2. En 10 dies naturals, comunica a l'empresa la voluntat de continuar
+3. L'empresa disposa de 3 mesos per:
+   - Adaptar el lloc de treball actual, o
+   - Oferir un lloc vacant compatible
+4. Si el treballador rebutja la proposta o l'empresa justifica la impossibilitat: extinció sense indemnització
+5. La pensió d'IP queda suspesa durant la relació laboral
+
+Límits per a PIMES (<25 treballadors)
+L'adaptació es considera excessiva si supera:
+- La indemnització per acomiadament improcedent, o
+- 6 mensualitats del salari brut
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1: Treballador amb IP total per lumbàlgia
+Un treballador de magatzem rep IP total. Comunica en 10 dies que vol continuar. L'empresa l'adapta a un lloc administratiu compatible amb les seves limitacions. La pensió d'IP queda suspesa.
+
+Exemple 2: Treballadora amb IP absoluta per càncer
+Una treballadora rep IP absoluta. Comunica la voluntat de continuar. L'empresa no pot adaptar cap lloc. Justifica per escrit la impossibilitat i extingeix el contracte sense indemnització. La treballadora manté la pensió d'IP.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Incapacidad permanente y continuidad laboral
+
+La Ley 2/2025 elimina la extinción automática del contrato de trabajo por declaración de incapacidad permanente total o absoluta. La empresa debe valorar ajustes razonables antes de cesar al trabajador.
+
+Puntos clave
+
+- La IP ya no extingue automáticamente el contrato
+- El trabajador tiene 10 días para comunicar su voluntad de continuar
+- La empresa tiene 3 meses para adaptar el puesto u ofrecer uno compatible
+- Si no es posible la adaptación: extinción justificada sin indemnización
+- La pensión de IP queda suspendida mientras dure la relación laboral
+
+Relevancia para el médico de atención primaria
+
+Esta ley afecta a los pacientes que reciben una IP y quieren seguir trabajando. El médico puede informar sobre la posibilidad de solicitar adaptaciones del puesto de trabajo.
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+IP y no extinción automática del contrato (Ley 2/2025)
+
+CATEGORÍA
+otro
+
+DESCRIPCIÓN Y CRITERIO
+Incapacidad permanente y continuidad laboral
+
+La Ley 2/2025 elimina la extinción automática del contrato de trabajo por declaración de incapacidad permanente total o absoluta. La empresa debe valorar ajustes razonables antes de cesar al trabajador.
+
+Puntos clave
+
+- La IP ya no extingue automáticamente el contrato
+- El trabajador tiene 10 días para comunicar su voluntad de continuar
+- La empresa tiene 3 meses para adaptar el puesto u ofrecer uno compatible
+- Si no es posible la adaptación: extinción justificada sin indemnización
+- La pensión de IP queda suspendida mientras dure la relación laboral
+
+Relevancia para el médico de atención primaria
+
+Esta ley afecta a los pacientes que reciben una IP y quieren seguir trabajando. El médico puede informar sobre la posibilidad de solicitar adaptaciones del puesto de trabajo.
+
+BASE LEGAL
+Base legal
+
+- Ley 2/2025, de 29 de abril (BOE-A-2025-8567)
+- Modifica los artículos 48 y 49 del Estatuto de los Trabajadores
+- Modifica el artículo 120 de la LRJS
+- Modifica el artículo 174.5 de la LGSS (suspensión de pensión)
+- Sentencia TJUE de 18 de enero de 2024 (C-631/22)
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento
+
+1. El trabajador recibe la resolución de IP (total o absoluta)
+2. En 10 días naturales, comunica a la empresa su voluntad de continuar
+3. La empresa dispone de 3 meses para:
+   - Adaptar el puesto de trabajo actual, o
+   - Ofrecer un puesto vacante compatible
+4. Si el trabajador rechaza la propuesta o la empresa justifica la imposibilidad: extinción sin indemnización
+5. La pensión de IP queda suspendida durante la relación laboral
+
+Límites para PYMES (<25 trabajadores)
+La adaptación se considera excesiva si supera:
+- La indemnización por despido improcedente, o
+- 6 mensualidades del salario bruto
+
+EJEMPLOS PRÁCTICOS
+Ejemplos prácticos
+
+Ejemplo 1: Trabajador con IP total por lumbalgia
+Un trabajador de almacén recibe IP total. Comunica en 10 días que quiere continuar. La empresa lo adapta a un puesto administrativo compatible con sus limitaciones. La pensión de IP queda suspendida.
+
+Ejemplo 2: Trabajadora con IP absoluta por cáncer
+Una trabajadora recibe IP absoluta. Comunica su voluntad de continuar. La empresa no puede adaptar ningún puesto. Justifica por escrito la imposibilidad y extingue el contrato sin indemnización. La trabajadora mantiene la pensión de IP.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

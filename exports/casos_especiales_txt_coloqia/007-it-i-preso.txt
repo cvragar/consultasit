@@ -1,0 +1,202 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 7
+Título: IT i presó
+Título en español: IT y prisión
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, prision, IT i presó, IT y prisión
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+La presó preventiva o condemna penal afecta directament la prestació d'IT. La normativa estableix que la privació de llibertat suspèn el dret al subsidi d'IT mentre dura la detenció o l'ingrés penitenciari, però no extingeix el procés d'IT ni el dret a reprendre la prestació un cop alliberat el treballador.
+
+Regla fonamental (LGSS art. 169.1 i art. 175): La privació de llibertat no és causa d'extinció de la IT, però sí de suspensió del subsidi mentre dura la privació de llibertat.
+
+Característiques clau:
+- La suspensió del subsidi comença el dia de l'ingrés a presó (preventiva o condemna)
+- La represa del subsidi es produeix el dia de l'alliberament, si el treballador segueix incapacitat
+- El procés d'IT continua computant (els dies de presó computen per al límit de 365 dies)
+- Si el treballador és alliberat i segueix incapacitat, el metge de família ha d'emetre un part de confirmació
+- Si el treballador és alliberat i ja no està incapacitat, el metge de família emet l'alta
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+IT i presó
+
+CATEGORIA
+prision
+
+DESCRIPCIÓ I CRITERI
+La presó preventiva o condemna penal afecta directament la prestació d'IT. La normativa estableix que la privació de llibertat suspèn el dret al subsidi d'IT mentre dura la detenció o l'ingrés penitenciari, però no extingeix el procés d'IT ni el dret a reprendre la prestació un cop alliberat el treballador.
+
+Regla fonamental (LGSS art. 169.1 i art. 175): La privació de llibertat no és causa d'extinció de la IT, però sí de suspensió del subsidi mentre dura la privació de llibertat.
+
+Característiques clau:
+- La suspensió del subsidi comença el dia de l'ingrés a presó (preventiva o condemna)
+- La represa del subsidi es produeix el dia de l'alliberament, si el treballador segueix incapacitat
+- El procés d'IT continua computant (els dies de presó computen per al límit de 365 dies)
+- Si el treballador és alliberat i segueix incapacitat, el metge de família ha d'emetre un part de confirmació
+- Si el treballador és alliberat i ja no està incapacitat, el metge de família emet l'alta
+
+BASE LEGAL
+Normativa principal:
+- LGSS art. 169.1 (RDL 8/2015): concepte d'IT; la privació de llibertat no és causa d'extinció
+- LGSS art. 175.1.b: causes de suspensió del dret al subsidi d'IT (inclou la privació de llibertat)
+- LGSS art. 175.2: efectes de la suspensió (el procés continua computant; el subsidi es reprèn a l'alliberament)
+- RD 625/2014, de 18 de juliol (BOE-A-2014-8191): procediment d'emissió dels parts mèdics d'IT
+
+Distinció important:
+- Presó preventiva: suspèn el subsidi; si el treballador és absolt, pot reclamar el subsidi pels dies de presó preventiva (doctrina del TJUE i TS)
+- Condemna ferma: suspèn el subsidi durant el compliment de la condemna; no hi ha dret a reclamar el subsidi pels dies de compliment de condemna
+
+PROCEDIMENT RECOMANAT
+Procediment des de l'eCap
+
+Situació 1: Treballador en IT que ingressa a presó
+1. El treballador o un familiar comunica al metge de família que ha ingressat a presó (preventiva o condemna).
+2. El metge de família no ha d'emetre l'alta: el procés d'IT queda en suspens.
+3. La mútua o INSS suspèn el pagament del subsidi des del dia de l'ingrés a presó.
+4. El procés d'IT continua computant (els dies de presó computen per al límit de 365 dies).
+
+Situació 2: Treballador alliberat que segueix incapacitat
+1. El treballador comunica al metge de família que ha sortit de presó i segueix incapacitat.
+2. El metge de família emet un part de confirmació per reprendre la IT.
+3. La mútua o INSS reprèn el pagament del subsidi des del dia de l'alliberament.
+
+Situació 3: Treballador alliberat que ja no està incapacitat
+1. El treballador comunica al metge de família que ha sortit de presó i es troba en condicions de treballar.
+2. El metge de família emet l'alta mèdica.
+
+Nota sobre la presó preventiva i l'absolució
+- Si el treballador és absolt i havia estat en presó preventiva durant la IT, pot reclamar el subsidi pels dies de presó preventiva (doctrina del TS). Cal assessorament jurídic específic.
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1: Ingrés a presó preventiva durant la IT
+Situació: Treballador en IT per depressió (iniciat fa 3 mesos) que ingressa a presó preventiva per una acusació penal.
+Resolució: El metge de família no emet l'alta. El procés d'IT queda en suspens. La mútua suspèn el pagament. Els dies de presó computen per al límit de 365 dies. Si el treballador és alliberat (amb o sense condemna) i segueix incapacitat, el metge emet un part de confirmació i la mútua reprèn el pagament.
+
+Exemple 2: Alliberament i represa de la IT
+Situació: Treballadora que estava en IT per lumbalgia crònica. Va ingressar a presó preventiva fa 2 mesos. Avui ha estat alliberada per manca de proves i segueix amb dolor lumbar incapacitant.
+Resolució: El metge de família emet un part de confirmació. La mútua reprèn el pagament del subsidi des del dia de l'alliberament. La treballadora pot reclamar el subsidi pels dies de presó preventiva (si és absolta) amb assessorament jurídic.
+
+Exemple 3: Alliberament sense incapacitat
+Situació: Treballador que estava en IT per fractura de turmell. Va ingressar a presó preventiva fa 6 setmanes. Avui ha estat alliberat i el turmell ja ha consolidat.
+Resolució: El metge de família emet l'alta mèdica. El treballador es reincorpora a la feina.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+La prisión preventiva o condena penal afecta directamente a la prestación de IT. La normativa establece que la privación de libertad suspende el derecho al subsidio de IT mientras dura la detención o el ingreso penitenciario, pero no extingue el proceso de IT ni el derecho a reanudar la prestación una vez liberado el trabajador.
+
+Regla fundamental (LGSS art. 169.1 y art. 175): La privación de libertad no es causa de extinción de la IT, pero sí de suspensión del subsidio mientras dura la privación de libertad.
+
+Características clave:
+- La suspensión del subsidio comienza el día del ingreso en prisión (preventiva o condena)
+- La reanudación del subsidio se produce el día de la liberación, si el trabajador sigue incapacitado
+- El proceso de IT continúa computando (los días de prisión computan para el límite de 365 días)
+- Si el trabajador es liberado y sigue incapacitado, el médico de familia debe emitir un parte de confirmación
+- Si el trabajador es liberado y ya no está incapacitado, el médico de familia emite el alta
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+IT y prisión
+
+CATEGORÍA
+prision
+
+DESCRIPCIÓN Y CRITERIO
+La prisión preventiva o condena penal afecta directamente a la prestación de IT. La normativa establece que la privación de libertad suspende el derecho al subsidio de IT mientras dura la detención o el ingreso penitenciario, pero no extingue el proceso de IT ni el derecho a reanudar la prestación una vez liberado el trabajador.
+
+Regla fundamental (LGSS art. 169.1 y art. 175): La privación de libertad no es causa de extinción de la IT, pero sí de suspensión del subsidio mientras dura la privación de libertad.
+
+Características clave:
+- La suspensión del subsidio comienza el día del ingreso en prisión (preventiva o condena)
+- La reanudación del subsidio se produce el día de la liberación, si el trabajador sigue incapacitado
+- El proceso de IT continúa computando (los días de prisión computan para el límite de 365 días)
+- Si el trabajador es liberado y sigue incapacitado, el médico de familia debe emitir un parte de confirmación
+- Si el trabajador es liberado y ya no está incapacitado, el médico de familia emite el alta
+
+BASE LEGAL
+Normativa principal:
+- LGSS art. 169.1 (RDL 8/2015): concepto de IT; la privación de libertad no es causa de extinción
+- LGSS art. 175.1.b: causas de suspensión del derecho al subsidio de IT (incluye la privación de libertad)
+- LGSS art. 175.2: efectos de la suspensión (el proceso continúa computando; el subsidio se reanuda a la liberación)
+- RD 625/2014, de 18 de julio (BOE-A-2014-8191): procedimiento de emisión de los partes médicos de IT
+
+Distinción importante:
+- Prisión preventiva: suspende el subsidio; si el trabajador es absuelto, puede reclamar el subsidio por los días de prisión preventiva (doctrina del TJUE y TS)
+- Condena firme: suspende el subsidio durante el cumplimiento de la condena; no hay derecho a reclamar el subsidio por los días de cumplimiento de condena
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento desde el eCap
+
+Situación 1: Trabajador en IT que ingresa en prisión
+1. El trabajador o un familiar comunica al médico de familia que ha ingresado en prisión (preventiva o condena).
+2. El médico de familia no debe emitir el alta: el proceso de IT queda en suspenso.
+3. La mutua o INSS suspende el pago del subsidio desde el día del ingreso en prisión.
+4. El proceso de IT continúa computando (los días de prisión computan para el límite de 365 días).
+
+Situación 2: Trabajador liberado que sigue incapacitado
+1. El trabajador comunica al médico de familia que ha salido de prisión y sigue incapacitado.
+2. El médico de familia emite un parte de confirmación para reanudar la IT.
+3. La mutua o INSS reanuda el pago del subsidio desde el día de la liberación.
+
+Situación 3: Trabajador liberado que ya no está incapacitado
+1. El trabajador comunica al médico de familia que ha salido de prisión y se encuentra en condiciones de trabajar.
+2. El médico de familia emite el alta médica.
+
+Nota sobre la prisión preventiva y la absolución
+- Si el trabajador es absuelto y había estado en prisión preventiva durante la IT, puede reclamar el subsidio por los días de prisión preventiva (doctrina del TS). Se requiere asesoramiento jurídico específico.
+
+EJEMPLOS PRÁCTICOS
+Ejemplos prácticos
+
+Ejemplo 1: Ingreso en prisión preventiva durante la IT
+Situación: Trabajador en IT por depresión (iniciado hace 3 meses) que ingresa en prisión preventiva por una acusación penal.
+Resolución: El médico de familia no emite el alta. El proceso de IT queda en suspenso. La mutua suspende el pago. Los días de prisión computan para el límite de 365 días. Si el trabajador es liberado (con o sin condena) y sigue incapacitado, el médico emite un parte de confirmación y la mutua reanuda el pago.
+
+Ejemplo 2: Liberación y reanudación de la IT
+Situación: Trabajadora que estaba en IT por lumbalgia crónica. Ingresó en prisión preventiva hace 2 meses. Hoy ha sido liberada por falta de pruebas y sigue con dolor lumbar incapacitante.
+Resolución: El médico de familia emite un parte de confirmación. La mutua reanuda el pago del subsidio desde el día de la liberación. La trabajadora puede reclamar el subsidio por los días de prisión preventiva (si es absuelta) con asesoramiento jurídico.
+
+Ejemplo 3: Liberación sin incapacidad
+Situación: Trabajador que estaba en IT por fractura de tobillo. Ingresó en prisión preventiva hace 6 semanas. Hoy ha sido liberado y el tobillo ya ha consolidado.
+Resolución: El médico de familia emite el alta médica. El trabajador se reincorpora al trabajo.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

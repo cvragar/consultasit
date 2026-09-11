@@ -1,0 +1,198 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 1
+Título: Menstruació incapacitant
+Título en español: Menstruación incapacitante
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, menstruacion, Menstruació incapacitant, Menstruación incapacitante
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Des de l'1 de juny de 2023, la Llei Orgànica 1/2023, de 28 de febrer (BOE núm. 51, 01/03/2023) introdueix la menstruació incapacitant secundària com a situació especial d'IT per contingències comunes (LGSS art. 169.1.a, paràgraf 2n). Es considera situació especial quan la menstruació és deguda a una patologia prèviament diagnosticada (endometriosi, miomes, adenomiosi, etc.) i impedeix la treballadora de realitzar la seva activitat laboral.
+
+Característiques clau:
+- Contingència: malaltia comuna (no accident de treball)
+- Prestació: des del dia 1 de la baixa (a càrrec de la mútua o INSS, sense espera de 4 dies)
+- Sense període mínim de cotització (art. 172.1.a LGSS)
+- Cada procés és independent: no computa per al màxim de 365 dies (art. 169.2 LGSS, modificat per LO 1/2023)
+- El metge de família pot emetre la baixa; no cal derivació prèvia al ginecòleg
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Menstruació incapacitant
+
+CATEGORIA
+menstruacion
+
+DESCRIPCIÓ I CRITERI
+Des de l'1 de juny de 2023, la Llei Orgànica 1/2023, de 28 de febrer (BOE núm. 51, 01/03/2023) introdueix la menstruació incapacitant secundària com a situació especial d'IT per contingències comunes (LGSS art. 169.1.a, paràgraf 2n). Es considera situació especial quan la menstruació és deguda a una patologia prèviament diagnosticada (endometriosi, miomes, adenomiosi, etc.) i impedeix la treballadora de realitzar la seva activitat laboral.
+
+Característiques clau:
+- Contingència: malaltia comuna (no accident de treball)
+- Prestació: des del dia 1 de la baixa (a càrrec de la mútua o INSS, sense espera de 4 dies)
+- Sense període mínim de cotització (art. 172.1.a LGSS)
+- Cada procés és independent: no computa per al màxim de 365 dies (art. 169.2 LGSS, modificat per LO 1/2023)
+- El metge de família pot emetre la baixa; no cal derivació prèvia al ginecòleg
+
+BASE LEGAL
+Normativa principal:
+- LGSS art. 169.1.a, paràgraf 2n (redacció LO 1/2023): situació especial d'IT per menstruació incapacitant secundària
+- LGSS art. 172.1.a (redacció LO 1/2023): sense període mínim de cotització
+- LGSS art. 173.1, paràgraf 3r (redacció LO 1/2023): prestació des del dia 1, a càrrec de l'entitat gestora o col·laboradora
+- LGSS art. 169.2 (redacció LO 1/2023): cada procés de menstruació incapacitant és independent (no computa per al màxim de 365 dies)
+- Llei Orgànica 1/2023, de 28 de febrer (BOE-A-2023-5364), Disposició Final Tercera
+- Protocol ASSIR Catalunya (Departament de Salut, 2023): criteris diagnòstics i derivació
+
+Jurisprudència:
+- La LO 1/2023 és de recent aplicació; no hi ha jurisprudència consolidada del TS. Les primeres resolucions de jutjats socials (2023-2024) confirmen que el diagnòstic previ és condició necessària.
+
+PROCEDIMENT RECOMANAT
+Procediment des de l'eCap
+
+Pas 1: Verificació del diagnòstic previ
+1. Confirmar que la treballadora té un diagnòstic previ documentat de patologia que causa la menstruació incapacitant (endometriosi, miomes, adenomiosi, dismenorrea secundària, etc.).
+2. Si no hi ha diagnòstic previ, cal derivar a ginecologia (ASSIR o hospital) per establir-lo. Fins que no hi hagi diagnòstic, la baixa s'ha d'emetre com a malaltia comuna ordinària (amb espera dels 4 dies).
+3. Si hi ha diagnòstic previ (informe de ginecologia, ecografia, laparoscòpia, etc.), es pot emetre la baixa com a situació especial.
+
+Pas 2: Emissió del comunicat de baixa a l'eCap
+1. Contingència: Malaltia comuna (situació especial LO 1/2023)
+2. Diagnòstic CIE-10: N94.5 (dismenorrea secundària), N80 (endometriosi), D25 (mioma uterí), o el codi corresponent
+3. Durada estimada: generalment 1-3 dies per cicle (variable)
+4. Important: consignar en l'informe que és una baixa per menstruació incapacitant secundària per LO 1/2023
+
+Pas 3: Seguiment i confirmació
+- Parts de confirmació: cada 7 dies els primers 30 dies (RD 625/2014 art. 2)
+- En processos recurrents (cada cicle), es pot emetre un nou comunicat de baixa per a cada episodi sense que computin entre ells
+
+Pas 4: Alta
+- Alta per curació: quan cessa la incapacitat (final del cicle menstrual)
+- L'alta la pot emetre el metge de família
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1: Endometriosi diagnosticada
+Situació: Treballadora de 32 anys amb diagnòstic d'endometriosi estadi III (informe de ginecologia de 2022). Cada mes presenta 2-3 dies de dolor incapacitant.
+Resolució: El metge de família emet comunicat de baixa per malaltia comuna (situació especial LO 1/2023, CIE-10: N80). La prestació comença el dia 1 (no el dia 4). Cada episodi mensual és un procés independent que no computa per al màxim de 365 dies.
+
+Exemple 2: Sense diagnòstic previ
+Situació: Treballadora de 25 anys que consulta per primera vegada per dolor menstrual incapacitant. No té diagnòstic previ documentat.
+Resolució: No es pot emetre com a situació especial LO 1/2023. El metge de família emet baixa per malaltia comuna ordinària (CIE-10: N94.4) amb espera de 4 dies. Simultàniament, deriva a ginecologia (ASSIR) per establir el diagnòstic.
+
+Exemple 3: Miomes uterins
+Situació: Treballadora de 45 anys amb diagnòstic de miomes uterins (D25) que causa menorràgia i dismenorrea incapacitant.
+Resolució: Baixa per situació especial LO 1/2023 (CIE-10: D25). Prestació des del dia 1.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Desde el 1 de junio de 2023, la Ley Orgánica 1/2023, de 28 de febrero (BOE núm. 51, 01/03/2023) introduce la menstruación incapacitante secundaria como situación especial de IT por contingencias comunes (LGSS art. 169.1.a, párrafo 2º). Se considera situación especial cuando la menstruación es debida a una patología previamente diagnosticada (endometriosis, miomas, adenomiosis, etc.) e impide a la trabajadora realizar su actividad laboral.
+
+Características clave:
+- Contingencia: enfermedad común (no accidente de trabajo)
+- Prestación: desde el día 1 de la baja (a cargo de la mutua o INSS, sin espera de 4 días)
+- Sin periodo mínimo de cotización (art. 172.1.a LGSS)
+- Cada proceso es independiente: no computa para el máximo de 365 días (art. 169.2 LGSS, modificado por LO 1/2023)
+- El médico de familia puede emitir la baja; no es necesaria derivación previa al ginecólogo
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Menstruación incapacitante
+
+CATEGORÍA
+menstruacion
+
+DESCRIPCIÓN Y CRITERIO
+Desde el 1 de junio de 2023, la Ley Orgánica 1/2023, de 28 de febrero (BOE núm. 51, 01/03/2023) introduce la menstruación incapacitante secundaria como situación especial de IT por contingencias comunes (LGSS art. 169.1.a, párrafo 2º). Se considera situación especial cuando la menstruación es debida a una patología previamente diagnosticada (endometriosis, miomas, adenomiosis, etc.) e impide a la trabajadora realizar su actividad laboral.
+
+Características clave:
+- Contingencia: enfermedad común (no accidente de trabajo)
+- Prestación: desde el día 1 de la baja (a cargo de la mutua o INSS, sin espera de 4 días)
+- Sin periodo mínimo de cotización (art. 172.1.a LGSS)
+- Cada proceso es independiente: no computa para el máximo de 365 días (art. 169.2 LGSS, modificado por LO 1/2023)
+- El médico de familia puede emitir la baja; no es necesaria derivación previa al ginecólogo
+
+BASE LEGAL
+Normativa principal:
+- LGSS art. 169.1.a, párrafo 2º (redacción LO 1/2023): situación especial de IT por menstruación incapacitante secundaria
+- LGSS art. 172.1.a (redacción LO 1/2023): sin período mínimo de cotización
+- LGSS art. 173.1, párrafo 3º (redacción LO 1/2023): prestación desde el día 1, a cargo de la entidad gestora o colaboradora
+- LGSS art. 169.2 (redacción LO 1/2023): cada proceso de menstruación incapacitante es independiente (no computa para el máximo de 365 días)
+- Ley Orgánica 1/2023, de 28 de febrero (BOE-A-2023-5364), Disposición Final Tercera
+- Protocolo ASSIR Cataluña (Departamento de Salud, 2023): criterios diagnósticos y derivación
+
+Jurisprudencia:
+- La LO 1/2023 es de reciente aplicación; no existe jurisprudencia consolidada del TS. Las primeras resoluciones de juzgados de lo social (2023-2024) confirman que el diagnóstico previo es condición necesaria.
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento desde el eCap
+
+Paso 1: Verificación del diagnóstico previo
+1. Confirmar que la trabajadora tiene un diagnóstico previo documentado de patología que causa la menstruación incapacitante (endometriosis, miomas, adenomiosis, dismenorrea secundaria, etc.).
+2. Si no hay diagnóstico previo, es necesario derivar a ginecología (ASSIR u hospital) para establecerlo. Hasta que no haya diagnóstico, la baja debe emitirse como enfermedad común ordinaria (con espera de los 4 días).
+3. Si hay diagnóstico previo (informe de ginecología, ecografía, laparoscopia, etc.), se puede emitir la baja como situación especial.
+
+Paso 2: Emisión del comunicado de baja en el eCap
+1. Contingencia: Enfermedad común (situación especial LO 1/2023)
+2. Diagnóstico CIE-10: N94.5 (dismenorrea secundaria), N80 (endometriosis), D25 (mioma uterino), o el código correspondiente
+3. Duración estimada: generalmente 1-3 días por ciclo (variable)
+4. Importante: consignar en el informe que es una baja por menstruación incapacitante secundaria por LO 1/2023
+
+Paso 3: Seguimiento y confirmación
+- Partes de confirmación: cada 7 días los primeros 30 días (RD 625/2014 art. 2)
+- En procesos recurrentes (cada ciclo), se puede emitir un nuevo comunicado de baja para cada episodio sin que computen entre ellos
+
+Paso 4: Alta
+- Alta por curación: cuando cesa la incapacidad (final del ciclo menstrual)
+- El alta la puede emitir el médico de familia
+
+EJEMPLOS PRÁCTICOS
+Ejemplos prácticos
+
+Ejemplo 1: Endometriosis diagnosticada
+Situación: Trabajadora de 32 años con diagnóstico de endometriosis estadio III (informe de ginecología de 2022). Cada mes presenta 2-3 días de dolor incapacitante.
+Resolución: El médico de familia emite comunicado de baja por enfermedad común (situación especial LO 1/2023, CIE-10: N80). La prestación comienza el día 1 (no el día 4). Cada episodio mensual es un proceso independiente que no computa para el máximo de 365 días.
+
+Ejemplo 2: Sin diagnóstico previo
+Situación: Trabajadora de 25 años que consulta por primera vez por dolor menstrual incapacitante. No tiene diagnóstico previo documentado.
+Resolución: No se puede emitir como situación especial LO 1/2023. El médico de familia emite baja por enfermedad común ordinaria (CIE-10: N94.4) con espera de 4 días. Simultáneamente, deriva a ginecología (ASSIR) para establecer el diagnóstico.
+
+Ejemplo 3: Miomas uterinos
+Situación: Trabajadora de 45 años con diagnóstico de miomas uterinos (D25) que causa menorragia y dismenorrea incapacitante.
+Resolución: Baja por situación especial LO 1/2023 (CIE-10: D25). Prestación desde el día 1.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

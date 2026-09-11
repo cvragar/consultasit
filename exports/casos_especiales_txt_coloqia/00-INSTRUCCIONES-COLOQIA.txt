@@ -1,0 +1,47 @@
+INSTRUCCIONES DE USO DEL CORPUS DE CASOS ESPECIALES
+===================================================
+
+OBJETIVO
+========
+
+Este corpus contiene 29 casos especiales sobre incapacidad temporal. Cada archivo es autocontenido e incluye descripción, base legal, procedimiento, ejemplos y versiones en catalán y castellano.
+
+CRITERIOS PARA EL ASISTENTE
+===========================
+
+1. Identificar primero si la consulta coincide con uno de los casos especiales del índice.
+
+2. Antes de dar una respuesta cerrada, comprobar si faltan datos decisivos, especialmente fechas, duración acumulada, contingencia, régimen laboral, cobertura de mutua, organismo que emitió el alta, relación entre patologías y situación contractual.
+
+3. Si falta un dato decisivo, formular una pregunta aclaratoria concreta. No completar datos por intuición.
+
+4. Separar claramente en la respuesta:
+   a) criterio aplicable;
+   b) base legal;
+   c) procedimiento práctico;
+   d) límites o incertidumbres;
+   e) fuente que debe verificarse.
+
+5. No convertir ejemplos orientativos en reglas generales. Los ejemplos sirven para comprender el supuesto, pero no sustituyen el criterio ni la norma.
+
+6. No mezclar casos parecidos. Distinguir especialmente entre recaída y proceso nuevo, contingencia común y profesional, pluriempleo y pluriactividad, trabajo autónomo y régimen general, incapacidad temporal y riesgo durante el embarazo o la lactancia.
+
+7. Cuando un archivo indique que una medida es una propuesta, está en negociación o todavía no está en vigor, decirlo expresamente. No presentarla como normativa vigente.
+
+8. Citar la base legal incluida en el caso. Si el contenido pudiera haber cambiado, indicar que debe verificarse el texto consolidado y la fuente oficial.
+
+9. Si dos fuentes parecen contradictorias o el caso no encaja de forma inequívoca, reconocer la incertidumbre y recomendar revisión por el organismo competente. No inventar una resolución.
+
+10. Responder en el idioma de la consulta. Utilizar el bloque castellano para preguntas en español y el bloque catalán para preguntas en catalán.
+
+11. No solicitar ni reproducir datos personales identificativos o información clínica innecesaria.
+
+12. Presentar el contenido como apoyo profesional e informativo, no como sustituto de la valoración clínica, administrativa o jurídica individual.
+
+ORDEN RECOMENDADO DE CARGA
+==========================
+
+1. Cargar los 29 archivos individuales de casos especiales.
+2. Cargar 00-INDEX.txt para que el asistente conozca el catálogo completo.
+3. Cargar este archivo de instrucciones si Coloq.IA permite incorporar directrices al corpus.
+4. No es necesario cargar manifest.json ni validation-report.json; son archivos técnicos de control.

@@ -1,0 +1,338 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 80001
+Título: Malaltia professional en personal sanitari: punxada accidental
+Título en español: Enfermedad profesional en personal sanitario: pinchazo accidental
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, accident_treball, Malaltia professional en personal sanitari: punxada accidental, Enfermedad profesional en personal sanitario: pinchazo accidental
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Descripció del cas
+
+El personal sanitari (metges, infermers, auxiliars, llevadores, odontòlegs, etc.) que pateix una punxada accidental amb agulla o instrument tallant contaminat pot desenvolupar una malaltia infecciosa de transmissió hematògena (Hepatitis B, Hepatitis C, VIH). Quan la malaltia es manifesta com a conseqüència d'aquesta exposició laboral, es qualifica com a malaltia professional del Grup 3A del RD 1299/2006, i NO com a accident de treball.
+
+Diferència clau entre AT i malaltia professional en punxada accidental
+Concepte ; Accident de Treball (AT) ; Malaltia Professional (MP)
+Fet causant ; La punxada en si mateixa ; La malaltia infecciosa resultant
+Moment de qualificació ; Immediatament ; Quan es diagnostica la malaltia
+Normativa aplicable ; Art. 156 LGSS ; Art. 157 LGSS + RD 1299/2006
+Grup RD 1299/2006 ; No aplicable ; Grup 3A (agents biològics)
+Gestió ; Mútua des del primer dia ; Mútua des del primer dia
+Part de baixa ; Part d'AT ; Part de CC (fins a qualificació MP)
+Nota important: La punxada accidental en si mateixa pot generar un part d'AT per les lesions físiques directes (la ferida). Però si posteriorment es desenvolupa una hepatitis B o C, o una infecció per VIH, aquesta malaltia es qualifica com a MP del Grup 3A.
+
+Agents biològics del Grup 3A rellevants per al personal sanitari
+
+- Hepatitis B (VHB): risc de seroconversió ~30% si el pacient font és HBsAg+ i HBeAg+
+- Hepatitis C (VHC): risc de seroconversió ~1,8% per punxada
+- VIH: risc de seroconversió ~0,3% per punxada percutània
+- Brucella (personal de laboratori, veterinaris)
+- Mycobacterium tuberculosis (personal sanitari en contacte amb pacients TB)
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Malaltia professional en personal sanitari: punxada accidental
+
+CATEGORIA
+accident_treball
+
+DESCRIPCIÓ I CRITERI
+Descripció del cas
+
+El personal sanitari (metges, infermers, auxiliars, llevadores, odontòlegs, etc.) que pateix una punxada accidental amb agulla o instrument tallant contaminat pot desenvolupar una malaltia infecciosa de transmissió hematògena (Hepatitis B, Hepatitis C, VIH). Quan la malaltia es manifesta com a conseqüència d'aquesta exposició laboral, es qualifica com a malaltia professional del Grup 3A del RD 1299/2006, i NO com a accident de treball.
+
+Diferència clau entre AT i malaltia professional en punxada accidental
+Concepte ; Accident de Treball (AT) ; Malaltia Professional (MP)
+Fet causant ; La punxada en si mateixa ; La malaltia infecciosa resultant
+Moment de qualificació ; Immediatament ; Quan es diagnostica la malaltia
+Normativa aplicable ; Art. 156 LGSS ; Art. 157 LGSS + RD 1299/2006
+Grup RD 1299/2006 ; No aplicable ; Grup 3A (agents biològics)
+Gestió ; Mútua des del primer dia ; Mútua des del primer dia
+Part de baixa ; Part d'AT ; Part de CC (fins a qualificació MP)
+Nota important: La punxada accidental en si mateixa pot generar un part d'AT per les lesions físiques directes (la ferida). Però si posteriorment es desenvolupa una hepatitis B o C, o una infecció per VIH, aquesta malaltia es qualifica com a MP del Grup 3A.
+
+Agents biològics del Grup 3A rellevants per al personal sanitari
+
+- Hepatitis B (VHB): risc de seroconversió ~30% si el pacient font és HBsAg+ i HBeAg+
+- Hepatitis C (VHC): risc de seroconversió ~1,8% per punxada
+- VIH: risc de seroconversió ~0,3% per punxada percutània
+- Brucella (personal de laboratori, veterinaris)
+- Mycobacterium tuberculosis (personal sanitari en contacte amb pacients TB)
+
+BASE LEGAL
+Base legal
+
+Normativa principal
+- Art. 157 LGSS (RDLeg 8/2015): definició de malaltia professional. Malaltia contreta com a conseqüència del treball executat per compte aliè en les activitats especificades al quadre del RD 1299/2006.
+- RD 1299/2006, de 10 de novembre: Quadre de malalties professionals. Grup 3: Malalties professionals causades per agents biològics. Subgrup 3A: Malalties infeccioses causades per agents biològics en treballadors que treballen en activitats sanitàries.
+- Art. 156 LGSS: definició d'accident de treball (la punxada en si mateixa pot ser AT per la lesió física directa).
+- RD 625/2014, de 18 de juliol: gestió i control dels processos d'IT en els primers 365 dies.
+
+Jurisprudència rellevant
+- STS 18/03/2008 (RCUD 800/2007): confirma la qualificació de la hepatitis C com a malaltia professional del personal sanitari exposat per via laboral.
+- STSJ Catalunya 10/11/2015: reconeix la hepatitis B com a MP del Grup 3A en una infermera que va patir una punxada accidental.
+- STSJ Madrid 28/09/2020: diferencia entre l'AT per la punxada (lesió física) i la MP per la malaltia infecciosa posterior.
+
+Protocols de referència
+- Protocol de vigilància sanitària específica: Agents biològics (Ministeri de Sanitat, 2001, actualitzat 2014)
+- Protocol de profilaxi postexposició (PPE) de cada comunitat autònoma (a Catalunya: Circular 4/2019 del CatSalut)
+
+PROCEDIMENT RECOMANAT
+Procediment des de l'eCap
+
+Fase 1: Exposició accidental (punxada) — Actuació immediata
+
+1. Notificació immediata al servei de medicina preventiva o urgències de l'hospital/CAP (en les primeres 2 hores).
+2. Avaluació del risc: identificar el pacient font si és possible (serologies VHB, VHC, VIH).
+3. Profilaxi postexposició (PPE):
+   - VHB: immunoglobulina anti-hepatitis B + vacuna si el treballador no és immune.
+   - VIH: tractament antirretroviral d'emergència en les primeres 72 hores.
+4. Part d'AT per la lesió física de la punxada (si escau): emetre'l des de l'eCap o el servei de prevenció de riscos laborals de l'empresa.
+
+Fase 2: Diagnòstic de la malaltia infecciosa — Qualificació com a MP
+
+5. Seguiment serològic als 6 setmanes, 3 mesos i 6 mesos post-exposició.
+6. Si es confirma la seroconversió (diagnòstic de Hepatitis B, C o VIH):
+   - NO emetre part de CC com a diagnòstic definitiu.
+   - Comunicar a la mútua la sospita de malaltia professional (formulari específic).
+   - La mútua inicia l'expedient de qualificació com a MP.
+7. Part de baixa des de l'eCap: inicialment s'emet com a contingència comuna (CC) fins que la mútua confirmi la qualificació com a MP. Un cop qualificada, la mútua assumeix la gestió.
+
+Fase 3: Gestió de la IT per MP
+
+8. La mútua col·laboradora gestiona la IT per malaltia professional des del dia de la baixa (no hi ha període de carència).
+9. La base reguladora per a MP és la mateixa que per a AT: base de cotització del mes anterior dividida entre 30 (o els dies reals del mes).
+10. La prestació és del 75% de la base reguladora des del primer dia (igual que l'AT, sense el 60% dels primers 20 dies de la CC).
+
+Comunicació obligatòria
+- El metge de família ha de comunicar la sospita de MP a la mútua i al servei de prevenció de riscos laborals de l'empresa.
+- L'empresa té l'obligació de notificar la malaltia professional a la Seguretat Social (formulari CEPROSS).
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1: Infermera amb Hepatitis C post-punxada
+
+Situació: Infermera de planta hospitalària que pateix una punxada accidental amb agulla de sutura d'un pacient amb hepatitis C activa. Als 3 mesos, la serologia confirma seroconversió (VHC positiu).
+
+Resolució:
+- En el moment de la punxada: part d'AT per la lesió física (ferida per punxada).
+- Als 3 mesos, amb el diagnòstic de Hepatitis C: qualificació com a MP del Grup 3A.
+- La mútua assumeix la gestió de la IT per MP des del primer dia de baixa per la hepatitis.
+- Prestació: 75% de la base reguladora des del dia 1 (no 60% com a CC).
+- La infermera NO ha de pagar el cost del tractament (interferon + ribavirina o antivirals d'acció directa): és a càrrec de la mútua.
+
+Exemple 2: Metge de família amb Hepatitis B
+
+Situació: Metge de família no vacunat contra la Hepatitis B que es punxa accidentalment amb una agulla d'un pacient portador crònic (HBsAg+, HBeAg+). Desenvolupa una hepatitis B aguda.
+
+Resolució:
+- Profilaxi immediata: immunoglobulina anti-HB + vacuna (primera dosi).
+- Si malgrat la profilaxi es desenvolupa la malaltia: qualificació com a MP Grup 3A.
+- Prestació per IT: 75% de la base reguladora des del dia 1.
+- Si evoluciona a hepatitis crònica i genera incapacitat permanent: expedient d'IP per malaltia professional.
+
+Exemple 3: Auxiliar d'infermeria amb VIH
+
+Situació: Auxiliar que es punxa amb una agulla d'un pacient seropositiu. Inicia PPE en les primeres 2 hores. Als 6 mesos, la serologia confirma infecció per VIH.
+
+Resolució:
+- La infecció per VIH es qualifica com a MP del Grup 3A.
+- La mútua gestiona la IT i els tractaments antiretrovirals.
+- Si el VIH genera una síndrome d'immunodeficiència adquirida (SIDA) amb incapacitat per treballar: expedient d'IP per MP.
+- La qualificació com a MP és fonamental per garantir les prestacions màximes i evitar que el treballador hagi de demostrar la relació causal en un futur.
+
+Exemple 4: Tuberculosi en professional sanitari
+
+Situació: Metge de medicina interna que desenvolupa tuberculosi pulmonar activa després d'atendre pacients amb TB bacil·lífera sense la protecció adequada (mascareta FFP2).
+
+Resolució:
+- La TB es qualifica com a MP del Grup 3A si es pot demostrar l'exposició laboral.
+- La mútua gestiona la IT des del primer dia.
+- Prestació: 75% de la base reguladora.
+- El metge ha de ser apartat del treball fins a la negativització dels cultius (mesura de salut pública).
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Descripción del caso
+
+El personal sanitario (médicos, enfermeros, auxiliares, matronas, odontólogos, etc.) que sufre un pinchazo accidental con aguja o instrumento cortante contaminado puede desarrollar una enfermedad infecciosa de transmisión hematógena (Hepatitis B, Hepatitis C, VIH). Cuando la enfermedad se manifiesta como consecuencia de esta exposición laboral, se califica como enfermedad profesional del Grupo 3A del RD 1299/2006, y NO como accidente de trabajo.
+
+Diferencia clave entre AT y enfermedad profesional en pinchazo accidental
+Concepto ; Accidente de Trabajo (AT) ; Enfermedad Profesional (EP)
+Hecho causante ; El pinchazo en sí mismo ; La enfermedad infecciosa resultante
+Momento de calificación ; Inmediatamente ; Cuando se diagnostica la enfermedad
+Normativa aplicable ; Art. 156 LGSS ; Art. 157 LGSS + RD 1299/2006
+Grupo RD 1299/2006 ; No aplicable ; Grupo 3A (agentes biológicos)
+Gestión ; Mutua desde el primer día ; Mutua desde el primer día
+Parte de baja ; Parte de AT ; Parte de CC (hasta calificación EP)
+Nota importante: El pinchazo accidental en sí mismo puede generar un parte de AT por las lesiones físicas directas (la herida). Pero si posteriormente se desarrolla una hepatitis B o C, o una infección por VIH, esta enfermedad se califica como EP del Grupo 3A.
+
+Agentes biológicos del Grupo 3A relevantes para el personal sanitario
+
+- Hepatitis B (VHB): riesgo de seroconversión ~30% si el paciente fuente es HBsAg+ y HBeAg+
+- Hepatitis C (VHC): riesgo de seroconversión ~1,8% por pinchazo
+- VIH: riesgo de seroconversión ~0,3% por pinchazo percutáneo
+- Brucella (personal de laboratorio, veterinarios)
+- Mycobacterium tuberculosis (personal sanitario en contacto con pacientes TB)
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Enfermedad profesional en personal sanitario: pinchazo accidental
+
+CATEGORÍA
+accident_treball
+
+DESCRIPCIÓN Y CRITERIO
+Descripción del caso
+
+El personal sanitario (médicos, enfermeros, auxiliares, matronas, odontólogos, etc.) que sufre un pinchazo accidental con aguja o instrumento cortante contaminado puede desarrollar una enfermedad infecciosa de transmisión hematógena (Hepatitis B, Hepatitis C, VIH). Cuando la enfermedad se manifiesta como consecuencia de esta exposición laboral, se califica como enfermedad profesional del Grupo 3A del RD 1299/2006, y NO como accidente de trabajo.
+
+Diferencia clave entre AT y enfermedad profesional en pinchazo accidental
+Concepto ; Accidente de Trabajo (AT) ; Enfermedad Profesional (EP)
+Hecho causante ; El pinchazo en sí mismo ; La enfermedad infecciosa resultante
+Momento de calificación ; Inmediatamente ; Cuando se diagnostica la enfermedad
+Normativa aplicable ; Art. 156 LGSS ; Art. 157 LGSS + RD 1299/2006
+Grupo RD 1299/2006 ; No aplicable ; Grupo 3A (agentes biológicos)
+Gestión ; Mutua desde el primer día ; Mutua desde el primer día
+Parte de baja ; Parte de AT ; Parte de CC (hasta calificación EP)
+Nota importante: El pinchazo accidental en sí mismo puede generar un parte de AT por las lesiones físicas directas (la herida). Pero si posteriormente se desarrolla una hepatitis B o C, o una infección por VIH, esta enfermedad se califica como EP del Grupo 3A.
+
+Agentes biológicos del Grupo 3A relevantes para el personal sanitario
+
+- Hepatitis B (VHB): riesgo de seroconversión ~30% si el paciente fuente es HBsAg+ y HBeAg+
+- Hepatitis C (VHC): riesgo de seroconversión ~1,8% por pinchazo
+- VIH: riesgo de seroconversión ~0,3% por pinchazo percutáneo
+- Brucella (personal de laboratorio, veterinarios)
+- Mycobacterium tuberculosis (personal sanitario en contacto con pacientes TB)
+
+BASE LEGAL
+Base legal
+
+Normativa principal
+- Art. 157 LGSS (RDLeg 8/2015): definición de enfermedad profesional. Enfermedad contraída como consecuencia del trabajo ejecutado por cuenta ajena en las actividades especificadas en el cuadro del RD 1299/2006.
+- RD 1299/2006, de 10 de noviembre: Cuadro de enfermedades profesionales. Grupo 3: Enfermedades profesionales causadas por agentes biológicos. Subgrupo 3A: Enfermedades infecciosas causadas por agentes biológicos en trabajadores que trabajan en actividades sanitarias.
+- Art. 156 LGSS: definición de accidente de trabajo (el pinchazo en sí mismo puede ser AT por la lesión física directa).
+- RD 625/2014, de 18 de julio: gestión y control de los procesos de IT en los primeros 365 días.
+
+Jurisprudencia relevante
+- STS 18/03/2008 (RCUD 800/2007): confirma la calificación de la hepatitis C como enfermedad profesional del personal sanitario expuesto por vía laboral.
+- STSJ Cataluña 10/11/2015: reconoce la hepatitis B como EP del Grupo 3A en una enfermera que sufrió un pinchazo accidental.
+- STSJ Madrid 28/09/2020: diferencia entre el AT por el pinchazo (lesión física) y la EP por la enfermedad infecciosa posterior.
+
+Protocolos de referencia
+- Protocolo de vigilancia sanitaria específica: Agentes biológicos (Ministerio de Sanidad, 2001, actualizado 2014)
+- Protocolo de profilaxis postexposición (PPE) de cada comunidad autónoma (en Cataluña: Circular 4/2019 del CatSalut)
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento desde el eCap
+
+Fase 1: Exposición accidental (pinchazo) — Actuación inmediata
+
+1.  Notificación inmediata al servicio de medicina preventiva o urgencias del hospital/CAP (en las primeras 2 horas).
+2.  Evaluación del riesgo: identificar al paciente fuente si es posible (serologías VHB, VHC, VIH).
+3.  Profilaxis postexposición (PPE):
+    *   VHB: inmunoglobulina anti-hepatitis B + vacuna si el trabajador no es inmune.
+    *   VIH: tratamiento antirretroviral de emergencia en las primeras 72 horas.
+4.  Parte de AT por la lesión física del pinchazo (si procede): emitirlo desde el eCap o el servicio de prevención de riesgos laborales de la empresa.
+
+Fase 2: Diagnóstico de la enfermedad infecciosa — Calificación como EP
+
+5.  Seguimiento serológico a las 6 semanas, 3 meses y 6 meses post-exposición.
+6.  Si se confirma la seroconversión (diagnóstico de Hepatitis B, C o VIH):
+    *   NO emitir parte de CC como diagnóstico definitivo.
+    *   Comunicar a la mutua la sospecha de enfermedad profesional (formulario específico).
+    *   La mutua inicia el expediente de calificación como EP.
+7.  Parte de baja desde el eCap: inicialmente se emite como contingencia común (CC) hasta que la mutua confirme la calificación como EP. Una vez calificada, la mutua asume la gestión.
+
+Fase 3: Gestión de la IT por EP
+
+8.  La mutua colaboradora gestiona la IT por enfermedad profesional desde el día de la baja (no hay periodo de carencia).
+9.  La base reguladora para EP es la misma que para AT: base de cotización del mes anterior dividida entre 30 (o los días reales del mes).
+10. La prestación es del 75% de la base reguladora desde el primer día (igual que la AT, sin el 60% de los primeros 20 días de la CC).
+
+Comunicación obligatoria
+*   El médico de familia debe comunicar la sospecha de EP a la mutua y al servicio de prevención de riesgos laborales de la empresa.
+*   La empresa tiene la obligación de notificar la enfermedad profesional a la Seguridad Social (formulario CEPROSS).
+
+EJEMPLOS PRÁCTICOS
+Ejemplos prácticos
+
+Ejemplo 1: Enfermera con Hepatitis C post-pinchazo
+
+Situación: Enfermera de planta hospitalaria que sufre un pinchazo accidental con aguja de sutura de un paciente con hepatitis C activa. A los 3 meses, la serología confirma seroconversión (VHC positivo).
+
+Resolución:
+- En el momento del pinchazo: parte de AT por la lesión física (herida por pinchazo).
+- A los 3 meses, con el diagnóstico de Hepatitis C: calificación como EP del Grupo 3A.
+- La mutua asume la gestión de la IT por EP desde el primer día de baja por la hepatitis.
+- Prestación: 75% de la base reguladora desde el día 1 (no 60% como CC).
+- La enfermera NO tiene que pagar el coste del tratamiento (interferón + ribavirina o antivirales de acción directa): corre a cargo de la mutua.
+
+Ejemplo 2: Médico de familia con Hepatitis B
+
+Situación: Médico de familia no vacunado contra la Hepatitis B que se pincha accidentalmente con una aguja de un paciente portador crónico (HBsAg+, HBeAg+). Desarrolla una hepatitis B aguda.
+
+Resolución:
+- Profilaxis inmediata: inmunoglobulina anti-HB + vacuna (primera dosis).
+- Si a pesar de la profilaxis se desarrolla la enfermedad: calificación como EP Grupo 3A.
+- Prestación por IT: 75% de la base reguladora desde el día 1.
+- Si evoluciona a hepatitis crónica y genera incapacidad permanente: expediente de IP por enfermedad profesional.
+
+Ejemplo 3: Auxiliar de enfermería con VIH
+
+Situación: Auxiliar que se pincha con una aguja de un paciente seropositivo. Inicia PPE en las primeras 2 horas. A los 6 meses, la serología confirma infección por VIH.
+
+Resolución:
+- La infección por VIH se califica como EP del Grupo 3A.
+- La mutua gestiona la IT y los tratamientos antirretrovirales.
+- Si el VIH genera un síndrome de inmunodeficiencia adquirida (SIDA) con incapacidad para trabajar: expediente de IP por EP.
+- La calificación como EP es fundamental para garantizar las prestaciones máximas y evitar que el trabajador tenga que demostrar la relación causal en un futuro.
+
+Ejemplo 4: Tuberculosis en profesional sanitario
+
+Situación: Médico de medicina interna que desarrolla tuberculosis pulmonar activa después de atender a pacientes con TB bacilífera sin la protección adecuada (mascarilla FFP2).
+
+Resolución:
+- La TB se califica como EP del Grupo 3A si se puede demostrar la exposición laboral.
+- La mutua gestiona la IT desde el primer día.
+- Prestación: 75% de la base reguladora.
+- El médico debe ser apartado del trabajo hasta la negativización de los cultivos (medida de salud pública).
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

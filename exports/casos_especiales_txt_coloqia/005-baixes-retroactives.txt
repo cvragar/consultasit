@@ -1,0 +1,178 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 5
+Título: Baixes retroactives
+Título en español: Bajas retroactivas
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, baja_retroactiva, Baixes retroactives, Bajas retroactivas
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Les baixes amb efecte retroactiu (parts de baixa emesos amb data anterior a la visita mèdica) estan estrictament limitades per la normativa. El Reial Decret 625/2014, de 18 de juliol (BOE-A-2014-8191, art. 2.1) estableix que el comunicat de baixa s'ha d'emetre el dia de la visita mèdica. Excepcionalment, es pot emetre amb efecte retroactiu quan el treballador no ha pogut acudir al metge per la gravetat de la seva situació o per causes de força major degudament justificades.
+
+Regla general: el comunicat de baixa s'emet el dia de la visita mèdica, amb efectes des d'aquell dia.
+Excepció: retroactivitat possible si hi ha causa justificada (hospitalització, impossibilitat física d'acudir, etc.).
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Baixes retroactives
+
+CATEGORIA
+baja_retroactiva
+
+DESCRIPCIÓ I CRITERI
+Les baixes amb efecte retroactiu (parts de baixa emesos amb data anterior a la visita mèdica) estan estrictament limitades per la normativa. El Reial Decret 625/2014, de 18 de juliol (BOE-A-2014-8191, art. 2.1) estableix que el comunicat de baixa s'ha d'emetre el dia de la visita mèdica. Excepcionalment, es pot emetre amb efecte retroactiu quan el treballador no ha pogut acudir al metge per la gravetat de la seva situació o per causes de força major degudament justificades.
+
+Regla general: el comunicat de baixa s'emet el dia de la visita mèdica, amb efectes des d'aquell dia.
+Excepció: retroactivitat possible si hi ha causa justificada (hospitalització, impossibilitat física d'acudir, etc.).
+
+BASE LEGAL
+Normativa principal:
+- RD 625/2014, de 18 de juliol, art. 2.1 (BOE-A-2014-8191): el comunicat de baixa s'emet el dia de la visita mèdica
+- RD 625/2014, art. 2.3: el metge pot emetre el comunicat de baixa amb efecte retroactiu quan el treballador no ha pogut acudir per causes justificades (hospitalització, impossibilitat física, etc.)
+- RD 1060/2022, de 27 de desembre (BOE-A-2022-22932): modifica el RD 625/2014 (tramitació electrònica dels parts mèdics)
+- Ordre ESS/1187/2015, de 15 de juny (BOE-A-2015-7259): procediment per a l'emissió dels parts mèdics d'IT
+
+Criteris per a la retroactivitat (jurisprudència):
+1. Hospitalització: el treballador estava ingressat i no podia acudir al CAP
+2. Impossibilitat física: la gravetat de la malaltia impedia el desplaçament
+3. Causa de força major: circumstàncies excepcionals i imprevisibles
+4. No és vàlid: oblit del treballador, no voler perdre dies de feina, conveniència administrativa
+
+PROCEDIMENT RECOMANAT
+Procediment des de l'eCap
+
+Cas 1: Treballador hospitalitzat (cas més freqüent)
+1. El treballador és ingressat a l'hospital i no pot acudir al CAP.
+2. A l'alta hospitalària, el metge de família pot emetre el comunicat de baixa amb efecte retroactiu des del dia de l'ingrés.
+3. Documentació necessària: informe d'alta hospitalària amb les dates d'ingrés i alta.
+4. Procediment a l'eCap: emetre el comunicat de baixa indicant la data d'inici retroactiva i adjuntant l'informe hospitalari com a justificació.
+
+Cas 2: Treballador amb impossibilitat física d'acudir
+1. El treballador presenta una patologia greu que li impedeix físicament desplaçar-se al CAP (fractura de cama, ictus, etc.).
+2. El metge de família pot fer una visita domiciliària i emetre el comunicat de baixa amb efecte retroactiu des del dia en que va iniciar la incapacitat.
+3. Documentació: anotar a la història clínica la causa de la impossibilitat de desplaçament.
+
+Cas 3: Sol·licitud retroactiva sense causa justificada
+1. El treballador demana una baixa retroactiva sense causa objectiva (oblit, conveniència, etc.).
+2. El metge de família ha de denegar la retroactivitat. Pot emetre la baixa des del dia de la visita, però no amb efecte retroactiu.
+3. Conseqüència per al treballador: els dies anteriors a la visita no estaran coberts per IT; l'empresa pot sancionar per absències injustificades.
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1: Alta hospitalària (cas típic)
+Situació: Treballador ingressat d'urgències per apendicitis el dilluns. Operat el dimarts. Alta hospitalària el dijous. Acudeix al CAP el divendres.
+Resolució: El metge de família emet comunicat de baixa amb efecte retroactiu des del dilluns (dia de l'ingrés), adjuntant l'informe d'alta hospitalària. La retroactivitat és justificada per la hospitalització.
+
+Exemple 2: Fractura de turmell
+Situació: Treballadora que es trenca el turmell el divendres. No pot desplaçar-se al CAP fins al dilluns (3 dies després). Porta l'informe d'urgències de l'hospital.
+Resolució: El metge de família pot emetre la baixa amb efecte retroactiu des del divendres, ja que l'informe d'urgències justifica la impossibilitat de desplaçament.
+
+Exemple 3: Sol·licitud injustificada
+Situació: Treballador que va estar malalt una setmana però no va anar al metge. Ara demana una baixa retroactiva d'una setmana per justificar les absències.
+Resolució: El metge de família no pot emetre la baixa retroactiva sense justificació objectiva. Pot emetre la baixa des del dia de la visita. El treballador haurà de justificar les absències anteriors d'una altra manera.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Las bajas con efecto retroactivo (partes de baja emitidos con fecha anterior a la visita médica) están estrictamente limitadas por la normativa. El Real Decreto 625/2014, de 18 de julio (BOE-A-2014-8191, art. 2.1) establece que el comunicado de baja debe emitirse el día de la visita médica. Excepcionalmente, se puede emitir con efecto retroactivo cuando el trabajador no ha podido acudir al médico por la gravedad de su situación o por causas de fuerza mayor debidamente justificadas.
+
+Regla general: el comunicado de baja se emite el día de la visita médica, con efectos desde ese día.
+Excepción: retroactividad posible si existe causa justificada (hospitalización, imposibilidad física de acudir, etc.).
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Bajas retroactivas
+
+CATEGORÍA
+baja_retroactiva
+
+DESCRIPCIÓN Y CRITERIO
+Las bajas con efecto retroactivo (partes de baja emitidos con fecha anterior a la visita médica) están estrictamente limitadas por la normativa. El Real Decreto 625/2014, de 18 de julio (BOE-A-2014-8191, art. 2.1) establece que el comunicado de baja debe emitirse el día de la visita médica. Excepcionalmente, se puede emitir con efecto retroactivo cuando el trabajador no ha podido acudir al médico por la gravedad de su situación o por causas de fuerza mayor debidamente justificadas.
+
+Regla general: el comunicado de baja se emite el día de la visita médica, con efectos desde ese día.
+Excepción: retroactividad posible si existe causa justificada (hospitalización, imposibilidad física de acudir, etc.).
+
+BASE LEGAL
+Normativa principal:
+- RD 625/2014, de 18 de julio, art. 2.1 (BOE-A-2014-8191): el comunicado de baja se emite el día de la visita médica
+- RD 625/2014, art. 2.3: el médico puede emitir el comunicado de baja con efecto retroactivo cuando el trabajador no ha podido acudir por causas justificadas (hospitalización, imposibilidad física, etc.)
+- RD 1060/2022, de 27 de diciembre (BOE-A-2022-22932): modifica el RD 625/2014 (tramitación electrónica de los partes médicos)
+- Orden ESS/1187/2015, de 15 de junio (BOE-A-2015-7259): procedimiento para la emisión de los partes médicos de IT
+
+Criterios para la retroactividad (jurisprudencia):
+1. Hospitalización: el trabajador estaba ingresado y no podía acudir al CAP
+2. Imposibilidad física: la gravedad de la enfermedad impedía el desplazamiento
+3. Causa de fuerza mayor: circunstancias excepcionales e imprevisibles
+4. No es válido: olvido del trabajador, no querer perder días de trabajo, conveniencia administrativa
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento desde el eCap
+
+Caso 1: Trabajador hospitalizado (caso más frecuente)
+1. El trabajador es ingresado en el hospital y no puede acudir al CAP.
+2. Al alta hospitalaria, el médico de familia puede emitir el comunicado de baja con efecto retroactivo desde el día del ingreso.
+3. Documentación necesaria: informe de alta hospitalaria con las fechas de ingreso y alta.
+4. Procedimiento en el eCap: emitir el comunicado de baja indicando la fecha de inicio retroactiva y adjuntando el informe hospitalario como justificación.
+
+Caso 2: Trabajador con imposibilidad física de acudir
+1. El trabajador presenta una patología grave que le impide físicamente desplazarse al CAP (fractura de pierna, ictus, etc.).
+2. El médico de familia puede realizar una visita domiciliaria y emitir el comunicado de baja con efecto retroactivo desde el día en que se inició la incapacidad.
+3. Documentación: anotar en la historia clínica la causa de la imposibilidad de desplazamiento.
+
+Caso 3: Solicitud retroactiva sin causa justificada
+1. El trabajador solicita una baja retroactiva sin causa objetiva (olvido, conveniencia, etc.).
+2. El médico de familia debe denegar la retroactividad. Puede emitir la baja desde el día de la visita, pero no con efecto retroactivo.
+3. Consecuencia para el trabajador: los días anteriores a la visita no estarán cubiertos por IT; la empresa puede sancionar por ausencias injustificadas.
+
+EJEMPLOS PRÁCTICOS
+Ejemplos prácticos
+
+Ejemplo 1: Alta hospitalaria (caso típico)
+Situación: Trabajador ingresado de urgencias por apendicitis el lunes. Operado el martes. Alta hospitalaria el jueves. Acude al CAP el viernes.
+Resolución: El médico de familia emite comunicado de baja con efecto retroactivo desde el lunes (día del ingreso), adjuntando el informe de alta hospitalaria. La retroactividad está justificada por la hospitalización.
+
+Ejemplo 2: Fractura de tobillo
+Situación: Trabajadora que se rompe el tobillo el viernes. No puede desplazarse al CAP hasta el lunes (3 días después). Aporta el informe de urgencias del hospital.
+Resolución: El médico de familia puede emitir la baja con efecto retroactivo desde el viernes, ya que el informe de urgencias justifica la imposibilidad de desplazamiento.
+
+Ejemplo 3: Solicitud injustificada
+Situación: Trabajador que estuvo enfermo una semana pero no fue al médico. Ahora pide una baja retroactiva de una semana para justificar las ausencias.
+Resolución: El médico de familia no puede emitir la baja retroactiva sin justificación objetiva. Puede emitir la baja desde el día de la visita. El trabajador deberá justificar las ausencias anteriores de otra manera.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

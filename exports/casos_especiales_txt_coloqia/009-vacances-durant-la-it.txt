@@ -1,0 +1,208 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 9
+Título: Vacances durant la IT
+Título en español: Vacaciones durante la IT
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, vacaciones, Vacances durant la IT, Vacaciones durante la IT
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Quan un treballador cau de baixa (IT) durant el període de vacances, les vacances queden interrompudes i el treballador té dret a gaudir-les en un moment posterior, fins i tot fora del període de gaudi habitual (inclòs l'any natural). Aquesta és la doctrina consolidada del Tribunal de Justícia de la UE (TJUE) i del Tribunal Suprem (TS), recollida a l'Estatut dels Treballadors (ET) art. 38.3 (redacció vigent des de la reforma laboral de 2012).
+
+Regla fonamental (ET art. 38.3): Si el treballador cau de baixa durant les vacances, les vacances queden interrompudes. El treballador pot gaudir les vacances pendents en un moment posterior, fins i tot fora del període de gaudi establert al conveni o a l'empresa, i fins i tot en un any diferent si la IT dura fins al final de l'any natural.
+
+Característiques clau:
+- Aplicable tant a la IT per malaltia comuna com per AT/EP
+- El treballador ha de comunicar la baixa a l'empresa de manera immediata
+- Les vacances interrompudes es reprogramen per acord entre el treballador i l'empresa
+- Si no hi ha acord, el treballador pot reclamar judicialment el gaudi de les vacances pendents
+- Termini per gaudir les vacances pendents: fins a 18 mesos des del final de l'any en que s'havien de gaudir (doctrina TJUE, Sentència KHS AG, C-214/10)
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Vacances durant la IT
+
+CATEGORIA
+vacaciones
+
+DESCRIPCIÓ I CRITERI
+Quan un treballador cau de baixa (IT) durant el període de vacances, les vacances queden interrompudes i el treballador té dret a gaudir-les en un moment posterior, fins i tot fora del període de gaudi habitual (inclòs l'any natural). Aquesta és la doctrina consolidada del Tribunal de Justícia de la UE (TJUE) i del Tribunal Suprem (TS), recollida a l'Estatut dels Treballadors (ET) art. 38.3 (redacció vigent des de la reforma laboral de 2012).
+
+Regla fonamental (ET art. 38.3): Si el treballador cau de baixa durant les vacances, les vacances queden interrompudes. El treballador pot gaudir les vacances pendents en un moment posterior, fins i tot fora del període de gaudi establert al conveni o a l'empresa, i fins i tot en un any diferent si la IT dura fins al final de l'any natural.
+
+Característiques clau:
+- Aplicable tant a la IT per malaltia comuna com per AT/EP
+- El treballador ha de comunicar la baixa a l'empresa de manera immediata
+- Les vacances interrompudes es reprogramen per acord entre el treballador i l'empresa
+- Si no hi ha acord, el treballador pot reclamar judicialment el gaudi de les vacances pendents
+- Termini per gaudir les vacances pendents: fins a 18 mesos des del final de l'any en que s'havien de gaudir (doctrina TJUE, Sentència KHS AG, C-214/10)
+
+BASE LEGAL
+Normativa principal:
+- ET art. 38.3 (RDL 2/2015, de 23 d'octubre, BOE-A-2015-11430): si el treballador cau de baixa durant les vacances, les vacances queden interrompudes i el treballador pot gaudir-les en un moment posterior
+- Directiva 2003/88/CE, art. 7: dret a vacances anuals retribuïdes; la malaltia no pot privar el treballador d'aquest dret
+- TJUE, Sentència Schultz-Hoff (C-350/06 i C-520/06, 20/01/2009): la IT durant les vacances interromp el gaudi; el treballador pot gaudir les vacances en un moment posterior
+- TJUE, Sentència KHS AG (C-214/10, 22/11/2011): el dret a gaudir les vacances pendents per IT té un límit de 18 mesos des del final de l'any en que s'havien de gaudir
+- TS (Sala Social), STS 3/10/2007 i STS 10/11/2005: doctrina espanyola sobre la interrupció de les vacances per IT
+
+PROCEDIMENT RECOMANAT
+Procediment des de l'eCap
+
+Pas 1: Emissió del comunicat de baixa durant les vacances
+1. El treballador acudeix al CAP durant les vacances per una malaltia o accident incapacitant.
+2. El metge de família emet el comunicat de baixa de la mateixa manera que en qualsevol altra circumstància.
+3. No cal fer res especial al comunicat de baixa per indicar que el treballador estava de vacances.
+
+Pas 2: Comunicació a l'empresa (a càrrec del treballador)
+1. El treballador ha de comunicar la baixa a l'empresa de manera immediata (per telèfon, correu electrònic, etc.).
+2. Les vacances queden automàticament interrompudes des del dia de la baixa.
+3. El treballador i l'empresa han de pactar el gaudi de les vacances pendents en un moment posterior.
+
+Pas 3: Alta i represa de les vacances
+1. Quan el metge de família emet l'alta, el treballador pot:
+   a. Reprendre les vacances immediatament (si queden dies de vacances pendents i l'empresa ho accepta).
+   b. Pactar amb l'empresa el gaudi de les vacances pendents en un moment posterior.
+2. Si no hi ha acord, el treballador pot reclamar judicialment (procés de vacances, art. 125 Llei 36/2011).
+
+Nota important per al metge de família
+- El metge de família no ha de valorar si el treballador estava de vacances o no: la seva funció és emetre el comunicat de baixa si hi ha incapacitat.
+- La gestió de les vacances pendents és una qüestió laboral entre el treballador i l'empresa.
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1: IT durant les vacances d'estiu
+Situació: Treballador que comença les vacances el 15 d'agost (15 dies). El 18 d'agost pateix una apendicitis i és operat. Alta hospitalària el 22 d'agost. Alta mèdica el 5 de setembre.
+Resolució: Les vacances queden interrompudes des del 18 d'agost. El treballador té dret a gaudir els 12 dies de vacances pendents (del 19 al 31 d'agost) en un moment posterior, acordat amb l'empresa. La IT cobreix del 18 d'agost al 5 de setembre.
+
+Exemple 2: IT que dura fins al final de l'any
+Situació: Treballadora que cau de baixa el 15 de novembre per una depressió greu. Tenia 10 dies de vacances pendents de gaudir. La IT dura fins al 15 de febrer de l'any següent.
+Resolució: Les vacances pendents no es perden. La treballadora pot gaudir-les fins al 30 de juny de l'any següent (18 mesos des del final de l'any en que s'havien de gaudir, doctrina TJUE KHS AG). Si l'empresa no les concedeix, pot reclamar judicialment.
+
+Exemple 3: AT durant les vacances
+Situació: Treballador que pateix un accident de trànsit (AT) el primer dia de les vacances. Fractura de fèmur. IT de 3 mesos.
+Resolució: Les vacances queden interrompudes des del dia de l'accident. El treballador té dret a gaudir tots els dies de vacances en un moment posterior. La prestació per AT (75% de la BR des del dia 1) cobreix els 3 mesos de IT.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Contexto: Caso especial de IT: Vacaciones durante la IT
+
+Cuando un trabajador causa baja (IT) durante el período de vacaciones, las vacaciones quedan interrumpidas y el trabajador tiene derecho a disfrutarlas en un momento posterior, incluso fuera del período de disfrute habitual (incluido el año natural). Esta es la doctrina consolidada del Tribunal de Justicia de la UE (TJUE) y del Tribunal Supremo (TS), recogida en el Estatuto de los Trabajadores (ET) art. 38.3 (redacción vigente desde la reforma laboral de 2012).
+
+Regla fundamental (ET art. 38.3): Si el trabajador causa baja durante las vacaciones, las vacaciones quedan interrumpidas. El trabajador puede disfrutar las vacaciones pendientes en un momento posterior, incluso fuera del período de disfrute establecido en el convenio o en la empresa, e incluso en un año diferente si la IT dura hasta el final del año natural.
+
+Características clave:
+- Aplicable tanto a la IT por enfermedad común como por AT/EP
+- El trabajador debe comunicar la baja a la empresa de forma inmediata
+- Las vacaciones interrumpidas se reprograman por acuerdo entre el trabajador y la empresa
+- Si no hay acuerdo, el trabajador puede reclamar judicialmente el disfrute de las vacaciones pendientes
+- Plazo para disfrutar las vacaciones pendientes: hasta 18 meses desde el final del año en que se debían disfrutar (doctrina TJUE, Sentencia KHS AG, C-214/10)
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Vacaciones durante la IT
+
+CATEGORÍA
+vacaciones
+
+DESCRIPCIÓN Y CRITERIO
+Contexto: Caso especial de IT: Vacaciones durante la IT
+
+Cuando un trabajador causa baja (IT) durante el período de vacaciones, las vacaciones quedan interrumpidas y el trabajador tiene derecho a disfrutarlas en un momento posterior, incluso fuera del período de disfrute habitual (incluido el año natural). Esta es la doctrina consolidada del Tribunal de Justicia de la UE (TJUE) y del Tribunal Supremo (TS), recogida en el Estatuto de los Trabajadores (ET) art. 38.3 (redacción vigente desde la reforma laboral de 2012).
+
+Regla fundamental (ET art. 38.3): Si el trabajador causa baja durante las vacaciones, las vacaciones quedan interrumpidas. El trabajador puede disfrutar las vacaciones pendientes en un momento posterior, incluso fuera del período de disfrute establecido en el convenio o en la empresa, e incluso en un año diferente si la IT dura hasta el final del año natural.
+
+Características clave:
+- Aplicable tanto a la IT por enfermedad común como por AT/EP
+- El trabajador debe comunicar la baja a la empresa de forma inmediata
+- Las vacaciones interrumpidas se reprograman por acuerdo entre el trabajador y la empresa
+- Si no hay acuerdo, el trabajador puede reclamar judicialmente el disfrute de las vacaciones pendientes
+- Plazo para disfrutar las vacaciones pendientes: hasta 18 meses desde el final del año en que se debían disfrutar (doctrina TJUE, Sentencia KHS AG, C-214/10)
+
+BASE LEGAL
+Normativa principal:
+- ET art. 38.3 (RDL 2/2015, de 23 de octubre, BOE-A-2015-11430): si el trabajador cae de baja durante las vacaciones, las vacaciones quedan interrumpidas y el trabajador puede disfrutarlas en un momento posterior
+- Directiva 2003/88/CE, art. 7: derecho a vacaciones anuales retribuidas; la enfermedad no puede privar al trabajador de este derecho
+- TJUE, Sentencia Schultz-Hoff (C-350/06 y C-520/06, 20/01/2009): la IT durante las vacaciones interrumpe el disfrute; el trabajador puede disfrutar las vacaciones en un momento posterior
+- TJUE, Sentencia KHS AG (C-214/10, 22/11/2011): el derecho a disfrutar las vacaciones pendientes por IT tiene un límite de 18 meses desde el final del año en que se debían disfrutar
+- TS (Sala de lo Social), STS 3/10/2007 y STS 10/11/2005: doctrina española sobre la interrupción de las vacaciones por IT
+
+PROCEDIMIENTO RECOMENDADO
+Contexto: Caso especial de IT: Vacaciones durante la IT
+
+Procedimiento desde el eCap
+
+Paso 1: Emisión del comunicado de baja durante las vacaciones
+1. El trabajador acude al CAP durante las vacaciones por una enfermedad o accidente incapacitante.
+2. El médico de familia emite el comunicado de baja de la misma manera que en cualquier otra circunstancia.
+3. No es necesario hacer nada especial en el comunicado de baja para indicar que el trabajador estaba de vacaciones.
+
+Paso 2: Comunicación a la empresa (a cargo del trabajador)
+1. El trabajador debe comunicar la baja a la empresa de manera inmediata (por teléfono, correo electrónico, etc.).
+2. Las vacaciones quedan automáticamente interrumpidas desde el día de la baja.
+3. El trabajador y la empresa deben pactar el disfrute de las vacaciones pendientes en un momento posterior.
+
+Paso 3: Alta y reanudación de las vacaciones
+1. Cuando el médico de familia emite el alta, el trabajador puede:
+   a. Reanudar las vacaciones inmediatamente (si quedan días de vacaciones pendientes y la empresa lo acepta).
+   b. Pactar con la empresa el disfrute de las vacaciones pendientes en un momento posterior.
+2. Si no hay acuerdo, el trabajador puede reclamar judicialmente (proceso de vacaciones, art. 125 Ley 36/2011).
+
+Nota importante para el médico de familia
+- El médico de familia no debe valorar si el trabajador estaba de vacaciones o no: su función es emitir el comunicado de baja si hay incapacidad.
+- La gestión de las vacaciones pendientes es una cuestión laboral entre el trabajador y la empresa.
+
+EJEMPLOS PRÁCTICOS
+Contexto: Caso especial de IT: Vacaciones durante la IT
+
+Ejemplos prácticos
+
+Ejemplo 1: IT durante las vacaciones de verano
+Situación: Trabajador que empieza las vacaciones el 15 de agosto (15 días). El 18 de agosto sufre una apendicitis y es operado. Alta hospitalaria el 22 de agosto. Alta médica el 5 de septiembre.
+Resolución: Las vacaciones quedan interrumpidas desde el 18 de agosto. El trabajador tiene derecho a disfrutar los 12 días de vacaciones pendientes (del 19 al 31 de agosto) en un momento posterior, acordado con la empresa. La IT cubre del 18 de agosto al 5 de septiembre.
+
+Ejemplo 2: IT que dura hasta el final del año
+Situación: Trabajadora que cae de baja el 15 de noviembre por una depresión grave. Tenía 10 días de vacaciones pendientes de disfrutar. La IT dura hasta el 15 de febrero del año siguiente.
+Resolución: Las vacaciones pendientes no se pierden. La trabajadora puede disfrutarlas hasta el 30 de junio del año siguiente (18 meses desde el final del año en que se debían disfrutar, doctrina TJUE KHS AG). Si la empresa no las concede, puede reclamar judicialmente.
+
+Ejemplo 3: AT durante las vacaciones
+Situación: Trabajador que sufre un accidente de tráfico (AT) el primer día de las vacaciones. Fractura de fémur. IT de 3 meses.
+Resolución: Las vacaciones quedan interrumpidas desde el día del accidente. El trabajador tiene derecho a disfrutar todos los días de vacaciones en un momento posterior. La prestación por AT (75% de la BR desde el día 1) cubre los 3 meses de IT.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

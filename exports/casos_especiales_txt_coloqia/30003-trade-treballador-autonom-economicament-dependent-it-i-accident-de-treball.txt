@@ -1,0 +1,150 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 30003
+Título: TRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball
+Título en español: TRADE (Trabajador Autónomo Económicamente Dependiente): IT y Accidente de Trabajo
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, accident_treball, TRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball, TRADE (Trabajador Autónomo Económicamente Dependiente): IT y Accidente de Trabajo
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+El TRADE és l'autònom que percep ≥75% dels seus ingressos d'un sol client. Té un règim especial d'AT que el diferencia tant de l'autònom pur com de l'assalariat: cobertura obligatòria de CP, accident in itinere cobert, però sense presumpció de laboralitat.
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+TRADE (Treballador Autònom Econòmicament Dependent): IT i Accident de Treball
+
+CATEGORIA
+accident_treball
+
+DESCRIPCIÓ I CRITERI
+El TRADE és l'autònom que percep ≥75% dels seus ingressos d'un sol client. Té un règim especial d'AT que el diferencia tant de l'autònom pur com de l'assalariat: cobertura obligatòria de CP, accident in itinere cobert, però sense presumpció de laboralitat.
+
+BASE LEGAL
+Art. 317 TRLGSS (RDL 8/2015): Definició d'AT per al TRADE ; Art. 316 TRLGSS: Definició d'AT per a l'autònom pur (comparació) ; Art. 11 i 26 LETA (Llei 20/2007): Definició, requisits i cobertura de CP del TRADE ; RD 1273/2003: Cobertura de contingències professionals en el RETA ; RDL 28/2018: Obligatoriìat de CP per a tots els autònoms des de l'01/01/2019 ; RD 197/2009: Registre del contracte TRADE al SEPE
+
+PROCEDIMENT RECOMANAT
+PROCEDIMENT DES DE L'eCAP
+
+1. IDENTIFICACIÓ: Verificar si el pacient és TRADE (autònom que factura ≥75% a un sol client, amb contracte TRADE registrat al SEPE).
+
+2. COBERTURA: Des de l'01/01/2019 tots els autònoms (inclosos TRADE) tenen cobertura obligatòria de contingències professionals. Preguntar amb quina mútua té formalitzada la cobertura.
+
+3. QUALIFICACIÓ DE LA CONTINGÈNCIA:
+   - Si l'accident ocorre DURANT l'activitat professional o en desplaçament al lloc de prestació → AT (contingència professional)
+   - Si l'accident ocorre FORA de l'activitat professional → EC (contingència comuna), llevat de prova en contrari
+   - DIFERÈNCIA CLAU: L'in itinere SÍ és AT per al TRADE (a diferència de l'autònom pur)
+
+4. EMISSIÓ DEL PART A L'eCAP:
+   - Emetre el comunicat de baixa com a AT (contingència professional) si escau
+   - La gestió de la prestació la porta la MÚTUA del TRADE
+   - El TRADE ha de comunicar la baixa a la seva mútua
+
+5. PRESTACIÓ ECONÒMICA:
+   - AT: 75% de la base reguladora des del DIA SEGÜENT a la baixa
+   - EC: 60% (dies 4-20), 75% (des del 21è)
+
+6. OBLIGACIÓ DEL TRADE: Ha de presentar a la mútua una declaració sobre qui gestiona el seu negoci durant la IT.
+
+EXEMPLES PRÀCTICS
+Exemple 1: TRADE que pateix un accident a les oficines del client
+TRADE informàtic que cau per les escales de les oficines del seu client principal mentre treballa. Qualificació: AT. Procediment: comunicat de baixa com AT a l'eCap, gestió per la mútua del TRADE.
+
+Exemple 2: TRADE que pateix un accident in itinere
+TRADE que es desplaça des del seu domicili a les oficines del client i pateix un accident de trànsit. Qualificació: AT in itinere (a diferència de l'autònom pur, on NO seria AT). Procediment: comunicat de baixa com AT.
+
+Exemple 3: TRADE que pateix un infart mentre treballa a casa
+TRADE en teletreball que pateix un infart. Qualificació: INCERTA. No hi ha presumpció de laboralitat (a diferència de l'assalariat). Cal provar la connexió causal. Procediment: emetre inicialment com EC; el TRADE pot sol·licitar recalificació a AT davant l'INSS.
+
+Exemple 4: TRADE amb pluriactivitat (també assalariat)
+TRADE que a més té un contracte laboral parcial. Si l'AT ocorre en l'activitat com a TRADE → gestió per mútua del RETA. Si l'AT ocorre a l'empresa → gestió per mútua de l'empresa. Dret a prestació independent de cada règim.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+El TRADE es el autónomo que percibe ≥75% de sus ingresos de un solo cliente. Tiene un régimen especial de AT que lo diferencia tanto del autónomo puro como del asalariado: cobertura obligatoria de CP, accidente in itinere cubierto, pero sin presunción de laboralidad.
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+TRADE (Trabajador Autónomo Económicamente Dependiente): IT y Accidente de Trabajo
+
+CATEGORÍA
+accident_treball
+
+DESCRIPCIÓN Y CRITERIO
+El TRADE es el autónomo que percibe ≥75% de sus ingresos de un solo cliente. Tiene un régimen especial de AT que lo diferencia tanto del autónomo puro como del asalariado: cobertura obligatoria de CP, accidente in itinere cubierto, pero sin presunción de laboralidad.
+
+BASE LEGAL
+Art. 317 TRLGSS (RDL 8/2015): Definición de AT para el TRADE ; Art. 316 TRLGSS: Definición de AT para el autónomo puro (comparación) ; Art. 11 y 26 LETA (Ley 20/2007): Definición, requisitos y cobertura de CP del TRADE ; RD 1273/2003: Cobertura de contingencias profesionales en el RETA ; RDL 28/2018: Obligatoriedad de CP para todos los autónomos desde el 01/01/2019 ; RD 197/2009: Registro del contrato TRADE en el SEPE
+
+PROCEDIMIENTO RECOMENDADO
+PROCEDIMIENTO DESDE el eCAP
+
+1. IDENTIFICACIÓN: Verificar si el paciente es TRADE (autónomo que factura ≥75% a un solo cliente, con contrato TRADE registrado en el SEPE).
+
+2. COBERTURA: Desde el 01/01/2019 todos los autónomos (incluidos TRADE) tienen cobertura obligatoria de contingencias profesionales. Preguntar con qué mutua tiene formalizada la cobertura.
+
+3. CALIFICACIÓN DE LA CONTINGENCIA:
+   - Si el accidente ocurre DURANTE la actividad profesional o en desplazamiento al lugar de prestación → AT (contingencia profesional)
+   - Si el accidente ocurre FUERA de la actividad profesional → EC (contingencia común), salvo prueba en contrario
+   - DIFERENCIA CLAVE: El in itinere SÍ es AT para el TRADE (a diferencia del autónomo puro)
+
+4. EMISIÓN DEL PARTE EN el eCAP:
+   - Emitir el comunicado de baja como AT (contingencia profesional) si procede
+   - La gestión de la prestación la lleva la MUTUA del TRADE
+   - El TRADE debe comunicar la baja a su mutua
+
+5. PRESTACIÓN ECONÓMICA:
+   - AT: 75% de la base reguladora desde el DÍA SIGUIENTE a la baja
+   - EC: 60% (días 4-20), 75% (desde el 21º)
+
+6. OBLIGACIÓN DEL TRADE: Debe presentar a la mutua una declaración sobre quién gestiona su negocio durante la IT.
+
+EJEMPLOS PRÁCTICOS
+Ejemplo 1: TRADE que sufre un accidente en las oficinas del cliente
+TRADE informático que se cae por las escaleras de las oficinas de su cliente principal mientras trabaja. Calificación: AT. Procedimiento: comunicado de baja como AT en el eCap, gestión por la mutua del TRADE.
+
+Ejemplo 2: TRADE que sufre un accidente in itinere
+TRADE que se desplaza desde su domicilio a las oficinas del cliente y sufre un accidente de tráfico. Calificación: AT in itinere (a diferencia del autónomo puro, donde NO sería AT). Procedimiento: comunicado de baja como AT.
+
+Ejemplo 3: TRADE que sufre un infarto mientras trabaja en casa
+TRADE en teletrabajo que sufre un infarto. Calificación: INCIERTA. No existe presunción de laboralidad (a diferencia del asalariado). Es necesario probar la conexión causal. Procedimiento: emitir inicialmente como EC; el TRADE puede solicitar recalificación a AT ante el INSS.
+
+Ejemplo 4: TRADE con pluriactividad (también asalariado)
+TRADE que además tiene un contrato laboral parcial. Si el AT ocurre en la actividad como TRADE → gestión por mutua del RETA. Si el AT ocurre en la empresa → gestión por mutua de la empresa. Derecho a prestación independiente de cada régimen.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

@@ -1,0 +1,210 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 10
+Título: Recaiguda en IT
+Título en español: Recaída en IT
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, recaida, Recaiguda en IT, Recaída en IT
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+La recaiguda és la situació en que un treballador, després d'haver rebut l'alta mèdica per un procés d'IT, torna a estar incapacitat per la mateixa o similar patologia dins dels 180 dies naturals posteriors a l'alta. La recaiguda té un règim jurídic específic: el nou procés d'IT es considera continuació del procés anterior i no un nou procés independent.
+
+Regla fonamental (RD 625/2014, art. 7): Si el treballador rep una nova baixa per la mateixa o similar patologia dins dels 180 dies naturals posteriors a l'alta, el nou procés es considera recaiguda del procés anterior. Els dies del nou procés computen per al límit de 365 dies del procés original.
+
+Característiques clau:
+- Termini: 180 dies naturals des de l'alta del procés anterior (no 6 mesos, sinó 180 dies naturals exactes)
+- Mateixa o similar patologia: el metge de família ha de valorar si la nova incapacitat és per la mateixa causa o per una de similar (per exemple, lumbalgia aguda → lumbalgia crònica aguditzada = recaiguda; lumbalgia → fractura de turmell = nou procés)
+- Els dies de la recaiguda computen per al límit de 365 dies del procés original
+- La base reguladora (BR) de la recaiguda és la mateixa que la del procés original (no es recalcula)
+- Si han passat més de 180 dies, és un nou procés independent (nova BR, nou còmput de 365 dies)
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Recaiguda en IT
+
+CATEGORIA
+recaida
+
+DESCRIPCIÓ I CRITERI
+La recaiguda és la situació en que un treballador, després d'haver rebut l'alta mèdica per un procés d'IT, torna a estar incapacitat per la mateixa o similar patologia dins dels 180 dies naturals posteriors a l'alta. La recaiguda té un règim jurídic específic: el nou procés d'IT es considera continuació del procés anterior i no un nou procés independent.
+
+Regla fonamental (RD 625/2014, art. 7): Si el treballador rep una nova baixa per la mateixa o similar patologia dins dels 180 dies naturals posteriors a l'alta, el nou procés es considera recaiguda del procés anterior. Els dies del nou procés computen per al límit de 365 dies del procés original.
+
+Característiques clau:
+- Termini: 180 dies naturals des de l'alta del procés anterior (no 6 mesos, sinó 180 dies naturals exactes)
+- Mateixa o similar patologia: el metge de família ha de valorar si la nova incapacitat és per la mateixa causa o per una de similar (per exemple, lumbalgia aguda → lumbalgia crònica aguditzada = recaiguda; lumbalgia → fractura de turmell = nou procés)
+- Els dies de la recaiguda computen per al límit de 365 dies del procés original
+- La base reguladora (BR) de la recaiguda és la mateixa que la del procés original (no es recalcula)
+- Si han passat més de 180 dies, és un nou procés independent (nova BR, nou còmput de 365 dies)
+
+BASE LEGAL
+Normativa principal:
+- RD 625/2014, de 18 de juliol, art. 7 (BOE-A-2014-8191): definició de recaiguda i règim jurídic
+- LGSS art. 169.1 (RDL 8/2015): concepte d'IT
+- LGSS art. 170.1: durada màxima de la IT (365 dies + pròrroga de 180 dies)
+- Ordre TAS/2865/2003, de 13 d'octubre (BOE-A-2003-19432), art. 6: règim de la recaiguda
+
+Criteris per determinar si és recaiguda o nou procés (doctrina):
+1. Termini: nova baixa dins dels 180 dies naturals des de l'alta → recaiguda
+2. Patologia: mateixa o similar causa → recaiguda; causa diferent → nou procés
+3. Dubte: si hi ha dubte sobre si és recaiguda o nou procés, el metge de família pot consultar la mútua o l'INSS
+4. Impacte econòmic: la recaiguda manté la BR del procés original (pot ser inferior a la BR actual si el treballador ha tingut augment salarial)
+
+PROCEDIMENT RECOMANAT
+Procediment des de l'eCap
+
+Pas 1: Valoració de si és recaiguda o nou procés
+1. Comprovar la data de l'alta del procés anterior (accessible a la història clínica de l'eCap).
+2. Calcular si han passat menys de 180 dies naturals des de l'alta.
+3. Valorar si la nova incapacitat és per la mateixa o similar patologia.
+
+Pas 2a: Si és recaiguda (< 180 dies, mateixa patologia)
+1. Emetre el comunicat de baixa indicant que és una recaiguda del procés anterior.
+2. A l'eCap, vincular el nou procés al procés anterior (si el sistema ho permet).
+3. La BR del nou procés és la mateixa que la del procés original (la mútua o INSS la gestiona automàticament).
+4. Els dies del nou procés computen per al límit de 365 dies del procés original.
+
+Pas 2b: Si és un nou procés (> 180 dies, o patologia diferent)
+1. Emetre el comunicat de baixa com a nou procés independent.
+2. La BR es recalcula en base als últims 12 mesos cotitzats.
+3. El còmput de 365 dies comença de zero.
+
+Pas 3: Comunicació al treballador
+- Informar el treballador de si es tracta d'una recaiguda o d'un nou procés, ja que afecta el còmput de dies i la BR.
+- Si és recaiguda i el procés original estava a prop del límit de 365 dies, informar el treballador que pot arribar al límit ràpidament.
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1: Recaiguda clara (< 180 dies, mateixa patologia)
+Situació: Treballador que va estar de baixa per lumbalgia aguda durant 30 dies. Alta el 15 de gener. El 20 de febrer (36 dies després) torna a consultar per lumbalgia aguda amb irradiació ciàtica.
+Resolució: És una recaiguda (menys de 180 dies, mateixa patologia). El metge de família emet el comunicat de baixa com a recaiguda. La BR és la mateixa que la del procés original. Els 30 dies anteriors + els nous dies computen per al límit de 365 dies.
+
+Exemple 2: Nou procés (> 180 dies)
+Situació: Treballadora que va estar de baixa per depressió durant 6 mesos. Alta el 1 de març. El 15 de setembre (198 dies després) torna a consultar per depressió.
+Resolució: No és recaiguda (han passat més de 180 dies naturals). És un nou procés independent. La BR es recalcula. El còmput de 365 dies comença de zero.
+
+Exemple 3: Dubte sobre si és recaiguda
+Situació: Treballador que va estar de baixa per lumbalgia crònica. Alta el 1 de febrer. El 15 de març (43 dies després) torna a consultar per cervicàlgia amb irradiació braquial.
+Resolució: Dubte sobre si és la mateixa patologia (columna vertebral) o una de diferent (cervical vs. lumbar). El metge de família pot considerar-ho nou procés (patologia diferent) o recaiguda (mateixa estructura anatòmica). En cas de dubte, és recomanable consultar la mútua o l'INSS per evitar conflictes posteriors.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+La recaída es la situación en que un trabajador, después de haber recibido el alta médica por un proceso de IT, vuelve a estar incapacitado por la misma o similar patología dentro de los 180 días naturales posteriores al alta. La recaída tiene un régimen jurídico específico: el nuevo proceso de IT se considera continuación del proceso anterior y no un nuevo proceso independiente.
+
+Regla fundamental (RD 625/2014, art. 7): Si el trabajador recibe una nueva baja por la misma o similar patología dentro de los 180 días naturales posteriores al alta, el nuevo proceso se considera recaída del proceso anterior. Los días del nuevo proceso computan para el límite de 365 días del proceso original.
+
+Características clave:
+- Plazo: 180 días naturales desde el alta del proceso anterior (no 6 meses, sino 180 días naturales exactos)
+- Misma o similar patología: el médico de familia debe valorar si la nueva incapacidad es por la misma causa o por una similar (por ejemplo, lumbalgia aguda → lumbalgia crónica agudizada = recaída; lumbalgia → fractura de tobillo = nuevo proceso)
+- Los días de la recaída computan para el límite de 365 días del proceso original
+- La base reguladora (BR) de la recaída es la misma que la del proceso original (no se recalcula)
+- Si han pasado más de 180 días, es un nuevo proceso independiente (nueva BR, nuevo cómputo de 365 días)
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Recaída en IT
+
+CATEGORÍA
+recaida
+
+DESCRIPCIÓN Y CRITERIO
+La recaída es la situación en que un trabajador, después de haber recibido el alta médica por un proceso de IT, vuelve a estar incapacitado por la misma o similar patología dentro de los 180 días naturales posteriores al alta. La recaída tiene un régimen jurídico específico: el nuevo proceso de IT se considera continuación del proceso anterior y no un nuevo proceso independiente.
+
+Regla fundamental (RD 625/2014, art. 7): Si el trabajador recibe una nueva baja por la misma o similar patología dentro de los 180 días naturales posteriores al alta, el nuevo proceso se considera recaída del proceso anterior. Los días del nuevo proceso computan para el límite de 365 días del proceso original.
+
+Características clave:
+- Plazo: 180 días naturales desde el alta del proceso anterior (no 6 meses, sino 180 días naturales exactos)
+- Misma o similar patología: el médico de familia debe valorar si la nueva incapacidad es por la misma causa o por una similar (por ejemplo, lumbalgia aguda → lumbalgia crónica agudizada = recaída; lumbalgia → fractura de tobillo = nuevo proceso)
+- Los días de la recaída computan para el límite de 365 días del proceso original
+- La base reguladora (BR) de la recaída es la misma que la del proceso original (no se recalcula)
+- Si han pasado más de 180 días, es un nuevo proceso independiente (nueva BR, nuevo cómputo de 365 días)
+
+BASE LEGAL
+Normativa principal:
+- RD 625/2014, de 18 de julio, art. 7 (BOE-A-2014-8191): definición de recaída y régimen jurídico
+- LGSS art. 169.1 (RDL 8/2015): concepto de IT
+- LGSS art. 170.1: duración máxima de la IT (365 días + prórroga de 180 días)
+- Orden TAS/2865/2003, de 13 de octubre (BOE-A-2003-19432), art. 6: régimen de la recaída
+
+Criterios para determinar si es recaída o nuevo proceso (doctrina):
+1. Plazo: nueva baja dentro de los 180 días naturales desde el alta → recaída
+2. Patología: misma o similar causa → recaída; causa diferente → nuevo proceso
+3. Duda: si hay duda sobre si es recaída o nuevo proceso, el médico de familia puede consultar a la mutua o al INSS
+4. Impacto económico: la recaída mantiene la BR del proceso original (puede ser inferior a la BR actual si el trabajador ha tenido aumento salarial)
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento desde el eCap
+
+Paso 1: Valoración de si es recaída o nuevo proceso
+1. Comprobar la fecha del alta del proceso anterior (accesible en la historia clínica del eCap).
+2. Calcular si han transcurrido menos de 180 días naturales desde el alta.
+3. Valorar si la nueva incapacidad es por la misma o similar patología.
+
+Paso 2a: Si es recaída (< 180 días, misma patología)
+1. Emitir el comunicado de baja indicando que es una recaída del proceso anterior.
+2. En el eCap, vincular el nuevo proceso al proceso anterior (si el sistema lo permite).
+3. La Base Reguladora (BR) del nuevo proceso es la misma que la del proceso original (la mutua o INSS la gestiona automáticamente).
+4. Los días del nuevo proceso computan para el límite de 365 días del proceso original.
+
+Paso 2b: Si es un nuevo proceso (> 180 días, o patología diferente)
+1. Emitir el comunicado de baja como nuevo proceso independiente.
+2. La BR se recalcula en base a los últimos 12 meses cotizados.
+3. El cómputo de 365 días comienza de cero.
+
+Paso 3: Comunicación al trabajador
+- Informar al trabajador de si se trata de una recaída o de un nuevo proceso, ya que afecta al cómputo de días y a la BR.
+- Si es recaída y el proceso original estaba cerca del límite de 365 días, informar al trabajador que puede alcanzar el límite rápidamente.
+
+EJEMPLOS PRÁCTICOS
+Ejemplos prácticos
+
+Ejemplo 1: Recaída clara (< 180 días, misma patología)
+Situación: Trabajador que estuvo de baja por lumbalgia aguda durante 30 días. Alta el 15 de enero. El 20 de febrero (36 días después) vuelve a consultar por lumbalgia aguda con irradiación ciática.
+Resolución: Es una recaída (menos de 180 días, misma patología). El médico de familia emite el comunicado de baja como recaída. La BR es la misma que la del proceso original. Los 30 días anteriores + los nuevos días computan para el límite de 365 días.
+
+Ejemplo 2: Nuevo proceso (> 180 días)
+Situación: Trabajadora que estuvo de baja por depresión durante 6 meses. Alta el 1 de marzo. El 15 de septiembre (198 días después) vuelve a consultar por depresión.
+Resolución: No es recaída (han pasado más de 180 días naturales). Es un nuevo proceso independiente. La BR se recalcula. El cómputo de 365 días empieza de cero.
+
+Ejemplo 3: Duda sobre si es recaída
+Situación: Trabajador que estuvo de baja por lumbalgia crónica. Alta el 1 de febrero. El 15 de marzo (43 días después) vuelve a consultar por cervicalgia con irradiación braquial.
+Resolución: Duda sobre si es la misma patología (columna vertebral) o una diferente (cervical vs. lumbar). El médico de familia puede considerarlo nuevo proceso (patología diferente) o recaída (misma estructura anatómica). En caso de duda, es recomendable consultar a la mutua o al INSS para evitar conflictos posteriores.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

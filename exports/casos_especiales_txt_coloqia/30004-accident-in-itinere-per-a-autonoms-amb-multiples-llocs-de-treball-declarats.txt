@@ -1,0 +1,330 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 30004
+Título: Accident in itinere per a autònoms amb múltiples llocs de treball declarats
+Título en español: Accidente in itinere para autónomos con múltiples lugares de trabajo declarados
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, accident_treball, Accident in itinere per a autònoms amb múltiples llocs de treball declarats, Accidente in itinere para autónomos con múltiples lugares de trabajo declarados
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Situació complexa on un treballador autònom té declarats a Hisenda dos o més locals, naus o oficines com a afectes a la seva activitat econòmica. La normativa (art. 316.2 LGSS) utilitza el singular ("el establecimiento"), generant conflicte sobre quin trajecte és cobert com a in itinere.
+
+NORMATIVA APLICABLE:
+- Art. 316.2 LGSS (modificat per Llei 6/2017, art. 14, vigent des del 26/10/2017)
+- Art. 3.2 i 4 del RD 1273/2003
+- Art. 317.II LGSS (per a TRADE)
+
+DEFINICIÓ LEGAL: "Se entenderá como lugar de la prestación el establecimiento en donde el trabajador autónomo ejerza habitualmente su actividad siempre que no coincida con su domicilio y se corresponda con el local, nave u oficina declarado como afecto a la actividad económica a efectos fiscales."
+
+DIFERÈNCIA CLAU AMB L'ASSALARIAT:
+- Assalariat: presumpció de laboralitat (art. 156.2.a LGSS). N'hi ha prou amb provar el trajecte habitual.
+- Autònom: NO hi ha presumpció de laboralitat. Ha de provar la connexió directa i immediata amb l'activitat del RETA. La càrrega de la prova recau sobre el treballador.
+
+CRITERI JURISPRUDENCIAL PER A MÚLTIPLES LOCALS:
+Cal identificar quin és el lloc on s'exerceix HABITUALMENT l'activitat:
+- Si un local és el principal (on treballa la major part del temps) i l'altre és accessori, el trajecte domicili-local principal és in itinere cobert.
+- El trajecte entre locals es considera "accident en missió" (no in itinere), amb millor cobertura (connexió directa amb el treball).
+- Si el domicili coincideix amb un dels llocs de treball declarats, NO hi pot haver in itinere des d'aquell domicili.
+
+JURISPRUDÈNCIA RELLEVANT:
+- STSJ Madrid n.º 12/2023, de 13 de gener: Fotògraf autònom que es desplaça a clients. El TSJ va considerar que els desplaçaments formen part intrínseca de l'activitat i es cobreixen com a AT per connexió directa.
+- STS 522/2025, de 2 de juny (Rec. 813/2023): Element geogràfic de l'in itinere: el trajecte comença quan s'abandona la zona privada del domicili.
+- STS 15/04/2013 (R. 1847/2013): Si el trajecte s'interromp per motius personals, es perd la consideració d'in itinere (element teleològic).
+- STS 17/04/2018 (R. 1777/2016): Petita desviació per comprar menjar → NO perd la consideració d'in itinere si és mínima i raonablement vinculada al trajecte.
+- TSJ Galícia: Autònom amb taller que coincideix amb domicili → NO és in itinere perquè el lloc de treball i el domicili coincideixen.
+
+TAULA COMPARATIVA: IN ITINERE vs EN MISSIÓ per a autònoms:
+- In itinere: Trajecte domicili ↔ lloc de treball habitual. Sense presumpció (autònom ha de provar). Cobertura: contingències professionals.
+- En missió: Trajecte entre clients o entre llocs de treball. Connexió directa amb el treball. Cobertura: contingències professionals.
+
+PROCEDIMENT DES DE L'eCap:
+1. Autònom AMB cobertura de contingències professionals (mútua): La mútua emet el comunicat de baixa per AT. L'eCap NO emet el part. Si l'autònom acudeix a l'eCap per error, derivar a la mútua.
+2. Autònom SENSE cobertura de contingències professionals: Gestió com a contingència comuna. L'eCap SÍ emet el comunicat de baixa per malaltia comuna. Prestació del 60% (no del 75%).
+3. In itinere no reconegut inicialment: Emetre part per contingència comuna provisionalment. Informar que pot reclamar la qualificació d'AT davant la mútua i l'INSS.
+
+CASOS PRÀCTICS:
+Cas 1 - Fisioterapeuta amb dos locals declarats: Local A (principal, 4 dies/setmana) i Local B (secundari, 1 dia/setmana). Accident anant del domicili al Local B. Resolució: Probablement in itinere cobert perquè el Local B també està declarat a Hisenda, però la mútua pot qüestionar-ho. Cal aportar model 036/037 que acrediti els dos locals. Part de baixa: la mútua.
+
+Cas 2 - Autònom que treballa des de casa i té un local: Dissenyador gràfic amb domicili declarat com a lloc de treball i un local de coworking també declarat. Accident anant al coworking. Resolució: El trajecte domicili-coworking és in itinere si el coworking és el lloc principal. Part de baixa: la mútua.
+
+Cas 3 - Autònom entre clients: Electricista que pateix un accident entre dues obres (client A → client B). Resolució: NO és in itinere. És accident en missió. Cobertura: contingències professionals. Part de baixa: la mútua.
+
+Cas 4 - Autònom amb domicili = lloc de treball: Traductora amb domicili com a únic lloc de treball. Accident sortint de casa per anar a una reunió. Resolució: Accident en missió (no in itinere). Cobertura si té CP. Part de baixa: la mútua.
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Accident in itinere per a autònoms amb múltiples llocs de treball declarats
+
+CATEGORIA
+accident_treball
+
+DESCRIPCIÓ I CRITERI
+Situació complexa on un treballador autònom té declarats a Hisenda dos o més locals, naus o oficines com a afectes a la seva activitat econòmica. La normativa (art. 316.2 LGSS) utilitza el singular ("el establecimiento"), generant conflicte sobre quin trajecte és cobert com a in itinere.
+
+NORMATIVA APLICABLE:
+- Art. 316.2 LGSS (modificat per Llei 6/2017, art. 14, vigent des del 26/10/2017)
+- Art. 3.2 i 4 del RD 1273/2003
+- Art. 317.II LGSS (per a TRADE)
+
+DEFINICIÓ LEGAL: "Se entenderá como lugar de la prestación el establecimiento en donde el trabajador autónomo ejerza habitualmente su actividad siempre que no coincida con su domicilio y se corresponda con el local, nave u oficina declarado como afecto a la actividad económica a efectos fiscales."
+
+DIFERÈNCIA CLAU AMB L'ASSALARIAT:
+- Assalariat: presumpció de laboralitat (art. 156.2.a LGSS). N'hi ha prou amb provar el trajecte habitual.
+- Autònom: NO hi ha presumpció de laboralitat. Ha de provar la connexió directa i immediata amb l'activitat del RETA. La càrrega de la prova recau sobre el treballador.
+
+CRITERI JURISPRUDENCIAL PER A MÚLTIPLES LOCALS:
+Cal identificar quin és el lloc on s'exerceix HABITUALMENT l'activitat:
+- Si un local és el principal (on treballa la major part del temps) i l'altre és accessori, el trajecte domicili-local principal és in itinere cobert.
+- El trajecte entre locals es considera "accident en missió" (no in itinere), amb millor cobertura (connexió directa amb el treball).
+- Si el domicili coincideix amb un dels llocs de treball declarats, NO hi pot haver in itinere des d'aquell domicili.
+
+JURISPRUDÈNCIA RELLEVANT:
+- STSJ Madrid n.º 12/2023, de 13 de gener: Fotògraf autònom que es desplaça a clients. El TSJ va considerar que els desplaçaments formen part intrínseca de l'activitat i es cobreixen com a AT per connexió directa.
+- STS 522/2025, de 2 de juny (Rec. 813/2023): Element geogràfic de l'in itinere: el trajecte comença quan s'abandona la zona privada del domicili.
+- STS 15/04/2013 (R. 1847/2013): Si el trajecte s'interromp per motius personals, es perd la consideració d'in itinere (element teleològic).
+- STS 17/04/2018 (R. 1777/2016): Petita desviació per comprar menjar → NO perd la consideració d'in itinere si és mínima i raonablement vinculada al trajecte.
+- TSJ Galícia: Autònom amb taller que coincideix amb domicili → NO és in itinere perquè el lloc de treball i el domicili coincideixen.
+
+TAULA COMPARATIVA: IN ITINERE vs EN MISSIÓ per a autònoms:
+- In itinere: Trajecte domicili ↔ lloc de treball habitual. Sense presumpció (autònom ha de provar). Cobertura: contingències professionals.
+- En missió: Trajecte entre clients o entre llocs de treball. Connexió directa amb el treball. Cobertura: contingències professionals.
+
+PROCEDIMENT DES DE L'eCap:
+1. Autònom AMB cobertura de contingències professionals (mútua): La mútua emet el comunicat de baixa per AT. L'eCap NO emet el part. Si l'autònom acudeix a l'eCap per error, derivar a la mútua.
+2. Autònom SENSE cobertura de contingències professionals: Gestió com a contingència comuna. L'eCap SÍ emet el comunicat de baixa per malaltia comuna. Prestació del 60% (no del 75%).
+3. In itinere no reconegut inicialment: Emetre part per contingència comuna provisionalment. Informar que pot reclamar la qualificació d'AT davant la mútua i l'INSS.
+
+CASOS PRÀCTICS:
+Cas 1 - Fisioterapeuta amb dos locals declarats: Local A (principal, 4 dies/setmana) i Local B (secundari, 1 dia/setmana). Accident anant del domicili al Local B. Resolució: Probablement in itinere cobert perquè el Local B també està declarat a Hisenda, però la mútua pot qüestionar-ho. Cal aportar model 036/037 que acrediti els dos locals. Part de baixa: la mútua.
+
+Cas 2 - Autònom que treballa des de casa i té un local: Dissenyador gràfic amb domicili declarat com a lloc de treball i un local de coworking també declarat. Accident anant al coworking. Resolució: El trajecte domicili-coworking és in itinere si el coworking és el lloc principal. Part de baixa: la mútua.
+
+Cas 3 - Autònom entre clients: Electricista que pateix un accident entre dues obres (client A → client B). Resolució: NO és in itinere. És accident en missió. Cobertura: contingències professionals. Part de baixa: la mútua.
+
+Cas 4 - Autònom amb domicili = lloc de treball: Traductora amb domicili com a únic lloc de treball. Accident sortint de casa per anar a una reunió. Resolució: Accident en missió (no in itinere). Cobertura si té CP. Part de baixa: la mútua.
+
+BASE LEGAL
+Art. 316.2 LGSS (Llei 6/2017, art. 14); Art. 3.2 i 4 RD 1273/2003; Art. 317.II LGSS (TRADE); STSJ Madrid 12/2023; STS 522/2025 (Rec. 813/2023); STS 15/04/2013 (R. 1847/2013); STS 17/04/2018 (R. 1777/2016)
+
+PROCEDIMENT RECOMANAT
+PROTOCOL PER AL METGE DE L'eCap:
+
+PREGUNTA 1: L'autònom té cobertura de contingències professionals (mútua)?
+→ SÍ: Derivar a la mútua. La mútua emet el comunicat de baixa per AT.
+→ NO: Emetre comunicat de baixa per contingència COMUNA. Informar que no té cobertura d'AT.
+
+PREGUNTA 2 (si té mútua): El lloc de l'accident és in itinere o en missió?
+→ IN ITINERE (domicili → local declarat): La mútua gestiona.
+→ EN MISSIÓ (entre clients o locals): La mútua gestiona (millor cobertura).
+→ DUBTE: Emetre part CC provisionalment. Informar que pot reclamar AT davant la mútua.
+
+DOCUMENTACIÓ QUE POT NECESSITAR L'AUTÒNOM:
+- Model 036/037 (declaració censal amb els locals afectes a l'activitat)
+- Declaració de l'IRPF amb els locals declarats
+- Prova del trajecte habitual (GPS, testimonis, etc.)
+- Justificant de la cotització per contingències professionals
+
+IMPORTANT: Si l'autònom acudeix a urgències de l'eCap per un AT, s'atendrà l'emergència, però la gestió posterior (comunicat de baixa, seguiment) correspon a la mútua si té cobertura de CP.
+
+EXEMPLES PRÀCTICS
+Exemple 1: Fisioterapeuta amb dos locals declarats a Hisenda
+Fisioterapeuta autònom amb Local A (principal, 4 dies/setmana) i Local B (secundari, 1 dia/setmana), tots dos declarats al model 036. Accident de trànsit anant del domicili al Local B un divendres.
+
+Resolució: In itinere cobert perquè el Local B està declarat a Hisenda com a afecte a l'activitat. La mútua pot qüestionar-ho al·legant que el Local A és el 'lloc habitual', però la jurisprudència tendeix a cobrir tots els locals declarats. Cal aportar el model 036/037. Part de baixa: la mútua per AT.
+
+Exemple 2: Electricista autònom entre dues obres
+Electricista autònom que pateix un accident de trànsit mentre va d'una obra (client A) a una altra obra (client B) durant la mateixa jornada laboral.
+
+Resolució: NO és in itinere (no és el trajecte domicili-lloc de treball). És un accident EN MISSIÓ per connexió directa i immediata amb el treball. Cobertura: contingències professionals. La mútua gestiona i emet el comunicat de baixa per AT. Prestació: 75% base reguladora des del dia següent.
+
+Exemple 3: Autònom amb domicili declarat com a lloc de treball
+Dissenyadora gràfica autònoma amb el domicili declarat com a únic lloc de treball a Hisenda. Accident al sortir de casa per anar a una reunió presencial amb un client.
+
+Resolució: Com que el domicili és el lloc de treball, NO hi pot haver in itinere (la llei exigeix que el lloc de prestació 'no coincida con su domicilio'). El trajecte domicili-client és un accident EN MISSIÓ. Cobertura si té CP. Part de baixa: la mútua.
+
+Exemple 4: Autònom sense cobertura de contingències professionals
+Lampista autònom que no ha contractat la cobertura de contingències professionals amb cap mútua. Pateix un accident de trànsit anant del domicili al seu taller (declarat a Hisenda).
+
+Resolució: Sense cobertura de CP, l'accident no es pot qualificar d'AT ni d'in itinere. L'eCap emet el comunicat de baixa per CONTINGÈNCIA COMUNA (malaltia comuna). Prestació: 60% base reguladora (no 75%). Informar l'autònom que hauria de contractar la cobertura de CP per estar protegit en futurs accidents.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Situación compleja donde un trabajador autónomo tiene declarados en Hacienda dos o más locales, naves u oficinas como afectos a su actividad económica. La normativa (art. 316.2 LGSS) utiliza el singular ("el establecimiento"), generando conflicto sobre qué trayecto está cubierto como in itinere.
+
+NORMATIVA APLICABLE:
+- Art. 316.2 LGSS (modificado por Ley 6/2017, art. 14, vigente desde el 26/10/2017)
+- Art. 3.2 y 4 del RD 1273/2003
+- Art. 317.II LGSS (para TRADE)
+
+DEFINICIÓN LEGAL: "Se entenderá como lugar de la prestación el establecimiento en donde el trabajador autónomo ejerza habitualmente su actividad siempre que no coincida con su domicilio y se corresponda con el local, nave u oficina declarado como afecto a la actividad económica a efectos fiscales."
+
+DIFERENCIA CLAVE CON EL ASALARIADO:
+- Asalariado: presunción de laboralidad (art. 156.2.a LGSS). Basta con probar el trayecto habitual.
+- Autónomo: NO hay presunción de laboralidad. Debe probar la conexión directa e inmediata con la actividad del RETA. La carga de la prueba recae sobre el trabajador.
+
+CRITERIO JURISPRUDENCIAL PARA MÚLTIPLES LOCALES:
+Hay que identificar cuál es el lugar donde se ejerce HABITUALMENTE la actividad:
+- Si un local es el principal (donde trabaja la mayor parte del tiempo) y el otro es accesorio, el trayecto domicilio-local principal es in itinere cubierto.
+- El trayecto entre locales se considera "accidente en misión" (no in itinere), con mejor cobertura (conexión directa con el trabajo).
+- Si el domicilio coincide con uno de los lugares de trabajo declarados, NO puede haber in itinere desde ese domicilio.
+
+JURISPRUDENCIA RELEVANTE:
+- STSJ Madrid n.º 12/2023, de 13 de enero: Fotógrafo autónomo que se desplaza a clientes. El TSJ consideró que los desplazamientos forman parte intrínseca de la actividad y se cubren como AT por conexión directa.
+- STS 522/2025, de 2 de junio (Rec. 813/2023): Elemento geográfico del in itinere: el trayecto comienza cuando se abandona la zona privada del domicilio.
+- STS 15/04/2013 (R. 1847/2013): Si el trayecto se interrumpe por motivos personales, se pierde la consideración de in itinere (elemento teleológico).
+- STS 17/04/2018 (R. 1777/2016): Pequeña desviación para comprar comida → NO pierde la consideración de in itinere si es mínima y razonablemente vinculada al trayecto.
+- TSJ Galicia: Autónomo con taller que coincide con domicilio → NO es in itinere porque el lugar de trabajo y el domicilio coinciden.
+
+TABLA COMPARATIVA: IN ITINERE vs EN MISIÓN para autónomos:
+Concepto ; In itinere ; En misión
+Trayecto ; Domicilio ↔ lugar de trabajo habitual ; Entre clientes o entre lugares de trabajo
+Presunción ; Sin presunción (autónomo debe probar) ; Conexión directa con el trabajo
+Cobertura ; Contingencias profesionales ; Contingencias profesionales
+PROCEDIMIENTO DESDE EL eCap:
+1. Autónomo CON cobertura de contingencias profesionales (mutua): La mutua emite el comunicado de baja por AT. El eCap NO emite el parte. Si el autónomo acude al eCap por error, derivar a la mutua.
+2. Autónomo SIN cobertura de contingencias profesionales: Gestión como contingencia común. El eCap SÍ emite el comunicado de baja por enfermedad común. Prestación del 60% (no del 75%).
+3. In itinere no reconocido inicialmente: Emitir parte por contingencia común provisionalmente. Informar que puede reclamar la calificación de AT ante la mutua y el INSS.
+
+CASOS PRÁCTICOS:
+Caso 1 - Fisioterapeuta con dos locales declarados: Local A (principal, 4 días/semana) y Local B (secundario, 1 día/semana). Accidente yendo del domicilio al Local B. Resolución: Probablemente in itinere cubierto porque el Local B también está declarado en Hacienda, pero la mutua puede cuestionarlo. Hay que aportar modelo 036/037 que acredite los dos locales. Parte de baja: la mutua.
+
+Caso 2 - Autónomo que trabaja desde casa y tiene un local: Diseñador gráfico con domicilio declarado como lugar de trabajo y un local de coworking también declarado. Accidente yendo al coworking. Resolución: El trayecto domicilio-coworking es in itinere si el coworking es el lugar principal. Parte de baja: la mutua.
+
+Caso 3 - Autónomo entre clientes: Electricista que sufre un accidente entre dos obras (cliente A → cliente B). Resolución: NO es in itinere. Es accidente en misión. Cobertura: contingencias profesionales. Parte de baja: la mutua.
+
+Caso 4 - Autónomo con domicilio = lugar de trabajo: Traductora con domicilio como único lugar de trabajo. Accidente saliendo de casa para ir a una reunión. Resolución: Accidente en misión (no in itinere). Cobertura si tiene CP. Parte de baja: la mutua.
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Accidente in itinere para autónomos con múltiples lugares de trabajo declarados
+
+CATEGORÍA
+accident_treball
+
+DESCRIPCIÓN Y CRITERIO
+Situación compleja donde un trabajador autónomo tiene declarados en Hacienda dos o más locales, naves u oficinas como afectos a su actividad económica. La normativa (art. 316.2 LGSS) utiliza el singular ("el establecimiento"), generando conflicto sobre qué trayecto está cubierto como in itinere.
+
+NORMATIVA APLICABLE:
+- Art. 316.2 LGSS (modificado por Ley 6/2017, art. 14, vigente desde el 26/10/2017)
+- Art. 3.2 y 4 del RD 1273/2003
+- Art. 317.II LGSS (para TRADE)
+
+DEFINICIÓN LEGAL: "Se entenderá como lugar de la prestación el establecimiento en donde el trabajador autónomo ejerza habitualmente su actividad siempre que no coincida con su domicilio y se corresponda con el local, nave u oficina declarado como afecto a la actividad económica a efectos fiscales."
+
+DIFERENCIA CLAVE CON EL ASALARIADO:
+- Asalariado: presunción de laboralidad (art. 156.2.a LGSS). Basta con probar el trayecto habitual.
+- Autónomo: NO hay presunción de laboralidad. Debe probar la conexión directa e inmediata con la actividad del RETA. La carga de la prueba recae sobre el trabajador.
+
+CRITERIO JURISPRUDENCIAL PARA MÚLTIPLES LOCALES:
+Hay que identificar cuál es el lugar donde se ejerce HABITUALMENTE la actividad:
+- Si un local es el principal (donde trabaja la mayor parte del tiempo) y el otro es accesorio, el trayecto domicilio-local principal es in itinere cubierto.
+- El trayecto entre locales se considera "accidente en misión" (no in itinere), con mejor cobertura (conexión directa con el trabajo).
+- Si el domicilio coincide con uno de los lugares de trabajo declarados, NO puede haber in itinere desde ese domicilio.
+
+JURISPRUDENCIA RELEVANTE:
+- STSJ Madrid n.º 12/2023, de 13 de enero: Fotógrafo autónomo que se desplaza a clientes. El TSJ consideró que los desplazamientos forman parte intrínseca de la actividad y se cubren como AT por conexión directa.
+- STS 522/2025, de 2 de junio (Rec. 813/2023): Elemento geográfico del in itinere: el trayecto comienza cuando se abandona la zona privada del domicilio.
+- STS 15/04/2013 (R. 1847/2013): Si el trayecto se interrumpe por motivos personales, se pierde la consideración de in itinere (elemento teleológico).
+- STS 17/04/2018 (R. 1777/2016): Pequeña desviación para comprar comida → NO pierde la consideración de in itinere si es mínima y razonablemente vinculada al trayecto.
+- TSJ Galicia: Autónomo con taller que coincide con domicilio → NO es in itinere porque el lugar de trabajo y el domicilio coinciden.
+
+TABLA COMPARATIVA: IN ITINERE vs EN MISIÓN para autónomos:
+Concepto ; In itinere ; En misión
+Trayecto ; Domicilio ↔ lugar de trabajo habitual ; Entre clientes o entre lugares de trabajo
+Presunción ; Sin presunción (autónomo debe probar) ; Conexión directa con el trabajo
+Cobertura ; Contingencias profesionales ; Contingencias profesionales
+PROCEDIMIENTO DESDE EL eCap:
+1. Autónomo CON cobertura de contingencias profesionales (mutua): La mutua emite el comunicado de baja por AT. El eCap NO emite el parte. Si el autónomo acude al eCap por error, derivar a la mutua.
+2. Autónomo SIN cobertura de contingencias profesionales: Gestión como contingencia común. El eCap SÍ emite el comunicado de baja por enfermedad común. Prestación del 60% (no del 75%).
+3. In itinere no reconocido inicialmente: Emitir parte por contingencia común provisionalmente. Informar que puede reclamar la calificación de AT ante la mutua y el INSS.
+
+CASOS PRÁCTICOS:
+Caso 1 - Fisioterapeuta con dos locales declarados: Local A (principal, 4 días/semana) y Local B (secundario, 1 día/semana). Accidente yendo del domicilio al Local B. Resolución: Probablemente in itinere cubierto porque el Local B también está declarado en Hacienda, pero la mutua puede cuestionarlo. Hay que aportar modelo 036/037 que acredite los dos locales. Parte de baja: la mutua.
+
+Caso 2 - Autónomo que trabaja desde casa y tiene un local: Diseñador gráfico con domicilio declarado como lugar de trabajo y un local de coworking también declarado. Accidente yendo al coworking. Resolución: El trayecto domicilio-coworking es in itinere si el coworking es el lugar principal. Parte de baja: la mutua.
+
+Caso 3 - Autónomo entre clientes: Electricista que sufre un accidente entre dos obras (cliente A → cliente B). Resolución: NO es in itinere. Es accidente en misión. Cobertura: contingencias profesionales. Parte de baja: la mutua.
+
+Caso 4 - Autónomo con domicilio = lugar de trabajo: Traductora con domicilio como único lugar de trabajo. Accidente saliendo de casa para ir a una reunión. Resolución: Accidente en misión (no in itinere). Cobertura si tiene CP. Parte de baja: la mutua.
+
+BASE LEGAL
+Art. 316.2 LGSS (Ley 6/2017, art. 14); Art. 3.2 y 4 RD 1273/2003; Art. 317.II LGSS (TRADE); STSJ Madrid 12/2023; STS 522/2025 (Rec. 813/2023); STS 15/04/2013 (R. 1847/2013); STS 17/04/2018 (R. 1777/2016)
+
+PROCEDIMIENTO RECOMENDADO
+PROTOCOLO PARA EL MÉDICO DEL eCap:
+
+PREGUNTA 1: ¿El autónomo tiene cobertura de contingencias profesionales (mutua)?
+→ SÍ: Derivar a la mutua. La mutua emite el comunicado de baja por AT.
+→ NO: Emitir comunicado de baja por contingencia COMÚN. Informar que no tiene cobertura de AT.
+
+PREGUNTA 2 (si tiene mutua): ¿El lugar del accidente es in itinere o en misión?
+→ IN ITINERE (domicilio → local declarado): La mutua gestiona.
+→ EN MISIÓN (entre clientes o locales): La mutua gestiona (mejor cobertura).
+→ DUDA: Emitir parte CC provisionalmente. Informar que puede reclamar AT ante la mutua.
+
+DOCUMENTACIÓN QUE PUEDE NECESITAR EL AUTÓNOMO:
+- Modelo 036/037 (declaración censal con los locales afectos a la actividad)
+- Declaración del IRPF con los locales declarados
+- Prueba del trayecto habitual (GPS, testigos, etc.)
+- Justificante de la cotización por contingencias profesionales
+
+IMPORTANTE: Si el autónomo acude a urgencias del eCap por un AT, se atenderá la emergencia, pero la gestión posterior (comunicado de baja, seguimiento) corresponde a la mutua si tiene cobertura de CP.
+
+EJEMPLOS PRÁCTICOS
+Ejemplo 1: Fisioterapeuta con dos locales declarados en Hacienda
+Fisioterapeuta autónomo con Local A (principal, 4 días/semana) y Local B (secundario, 1 día/semana), ambos declarados en el modelo 036. Accidente de tráfico yendo del domicilio al Local B un viernes.
+
+Resolución: In itinere cubierto porque el Local B está declarado en Hacienda como afecto a la actividad. La mutua puede cuestionarlo alegando que el Local A es el 'lugar habitual', pero la jurisprudencia tiende a cubrir todos los locales declarados. Es necesario aportar el modelo 036/037. Parte de baja: la mutua por AT.
+
+Ejemplo 2: Electricista autónomo entre dos obras
+Electricista autónomo que sufre un accidente de tráfico mientras va de una obra (cliente A) a otra obra (cliente B) durante la misma jornada laboral.
+
+Resolución: NO es in itinere (no es el trayecto domicilio-lugar de trabajo). Es un accidente EN MISIÓN por conexión directa e inmediata con el trabajo. Cobertura: contingencias profesionales. La mutua gestiona y emite el comunicado de baja por AT. Prestación: 75% base reguladora desde el día siguiente.
+
+Ejemplo 3: Autónomo con domicilio declarado como lugar de trabajo
+Diseñadora gráfica autónoma con el domicilio declarado como único lugar de trabajo en Hacienda. Accidente al salir de casa para ir a una reunión presencial con un cliente.
+
+Resolución: Dado que el domicilio es el lugar de trabajo, NO puede haber in itinere (la ley exige que el lugar de prestación 'no coincida con su domicilio'). El trayecto domicilio-cliente es un accidente EN MISIÓN. Cobertura si tiene CP. Parte de baja: la mutua.
+
+Ejemplo 4: Autónomo sin cobertura de contingencias profesionales
+Fontanero autónomo que no ha contratado la cobertura de contingencias profesionales con ninguna mutua. Sufre un accidente de tráfico yendo del domicilio a su taller (declarado en Hacienda).
+
+Resolución: Sin cobertura de CP, el accidente no se puede calificar de AT ni de in itinere. El eCap emite el comunicado de baja por CONTINGENCIA COMÚN (enfermedad común). Prestación: 60% base reguladora (no 75%). Informar al autónomo que debería contratar la cobertura de CP para estar protegido en futuros accidentes.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

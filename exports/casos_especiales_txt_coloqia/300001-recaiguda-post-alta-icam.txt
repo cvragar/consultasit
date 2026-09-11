@@ -1,0 +1,218 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 300001
+Título: Recaiguda post-alta ICAM
+Título en español: Recaída post-alta ICAM
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, recaida, Recaiguda post-alta ICAM, Recaída post-alta ICAM
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Què és una recaiguda post-alta ICAM?
+
+Es considera recaiguda quan un treballador presenta una nova baixa mèdica per la mateixa patologia o una de similar dins dels 180 dies naturals posteriors a una alta mèdica emesa per l'ICAM (Institut Català d'Avaluacions Mèdiques).
+
+Aquesta situació és especialment complexa perquè:
+- L'alta no la va donar el metge de família, sinó l'ICAM
+- El metge de família pot emetre una nova baixa, però l'ICAM pot qüestionar-la
+- Els dies de la recaiguda computen dins del mateix procés d'IT (els dies anteriors sumen)
+- La base reguladora es manté la del procés original
+
+Diferència amb un procés nou
+Criteri ; Recaiguda ; Procés nou
+Temps des de l'alta ; ≤ 180 dies naturals ; > 180 dies naturals
+Patologia ; Mateixa o similar ; Qualsevol
+Còmput de dies ; Suma al procés anterior ; Comença de zero
+Base reguladora ; La del procés original ; Nova base reguladora
+Autorització INSS ; Pot ser necessària si >365 dies acumulats ; No necessària
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+Recaiguda post-alta ICAM
+
+CATEGORIA
+recaida
+
+DESCRIPCIÓ I CRITERI
+Què és una recaiguda post-alta ICAM?
+
+Es considera recaiguda quan un treballador presenta una nova baixa mèdica per la mateixa patologia o una de similar dins dels 180 dies naturals posteriors a una alta mèdica emesa per l'ICAM (Institut Català d'Avaluacions Mèdiques).
+
+Aquesta situació és especialment complexa perquè:
+- L'alta no la va donar el metge de família, sinó l'ICAM
+- El metge de família pot emetre una nova baixa, però l'ICAM pot qüestionar-la
+- Els dies de la recaiguda computen dins del mateix procés d'IT (els dies anteriors sumen)
+- La base reguladora es manté la del procés original
+
+Diferència amb un procés nou
+Criteri ; Recaiguda ; Procés nou
+Temps des de l'alta ; ≤ 180 dies naturals ; > 180 dies naturals
+Patologia ; Mateixa o similar ; Qualsevol
+Còmput de dies ; Suma al procés anterior ; Comença de zero
+Base reguladora ; La del procés original ; Nova base reguladora
+Autorització INSS ; Pot ser necessària si >365 dies acumulats ; No necessària
+BASE LEGAL
+Art. 169.2 LGSS (Llei General de la Seguretat Social): defineix el concepte de recaiguda com a nova baixa per la mateixa patologia o similar dins dels 180 dies naturals posteriors a l'alta mèdica.
+
+RD 625/2014, art. 2: estableix que es considerarà recaiguda en el mateix procés d'IT quan es produeixi una nova baixa mèdica per la mateixa o similar patologia dins dels 180 dies naturals següents a la data d'efectes de l'alta mèdica.
+
+RD 1060/2022: modificacions al procediment de gestió de la IT que afecten la comunicació entre serveis de salut i entitats gestores.
+
+Instruccions ICAM: l'ICAM pot emetre alta per proposta d'alta o per inspecció directa. En cas de recaiguda posterior, el metge de família ha de comunicar-ho via formulari IS3.
+
+PROCEDIMENT RECOMANAT
+Procediment a eCap
+
+1. Emissió del nou comunicat de baixa
+- El metge de família emet un nou comunicat de baixa a eCap
+- El sistema detecta automàticament si hi ha un procés previ <180 dies per la mateixa patologia
+- Si es detecta, eCap marca el procés com a recaiguda i demana confirmació
+
+2. Comunicació a l'ICAM (formulari IS3)
+- Com que l'alta original va ser emesa per l'ICAM, cal enviar el formulari IS3 a l'ICAM
+- El formulari IS3 és la sol·licitud de baixa mèdica dirigida a l'ICAM
+- S'ha d'adjuntar la justificació clínica de la recaiguda
+
+3. Resposta de l'ICAM
+- L'ICAM pot acceptar la recaiguda → el procés continua normalment
+- L'ICAM pot rebutjar la recaiguda → pot emetre alta directa
+- En cas de rebuig, el pacient pot reclamar (veure secció Reclamacions)
+
+4. Seguiment
+- Els comunicats de confirmació es fan amb la periodicitat habitual
+- Si els dies acumulats (procés anterior + recaiguda) superen 365 dies, cal autorització de l'INSS per prorrogar
+- La mútua o l'INSS poden sol·licitar revisió en qualsevol moment
+
+EXEMPLES PRÀCTICS
+Exemple 1: Recaiguda acceptada
+Un pacient va estar de baixa per lumbàlgia durant 45 dies. L'ICAM va emetre alta mèdica. Als 60 dies de l'alta, el pacient torna a consulta amb la mateixa simptomatologia. El metge de família emet nova baixa a eCap, el sistema la marca com a recaiguda (60 < 180 dies). S'envia formulari IS3 a l'ICAM, que accepta la recaiguda. El procés continua des del dia 46.
+
+Exemple 2: Recaiguda qüestionada per l'ICAM
+Una pacient va estar de baixa per trastorn depressiu durant 120 dies. L'ICAM va emetre alta. Als 90 dies, la pacient presenta nova baixa per ansietat generalitzada. L'ICAM considera que és una patologia diferent (no similar) i rebutja la recaiguda. El metge de família ha de decidir si manté la baixa com a procés nou o si el pacient reclama.
+
+Exemple 3: Recaiguda amb acumulació >365 dies
+Un pacient va estar de baixa per fractura de fèmur durant 300 dies. L'ICAM va emetre alta. Als 100 dies, recaiguda per la mateixa patologia. Com que 300 + nous dies poden superar 365, cal sol·licitar pròrroga a l'INSS quan s'arribi als 365 dies acumulats.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+¿Qué es una recaída post-alta ICAM?
+
+Se considera recaída cuando un trabajador presenta una nueva baja médica por la misma patología o una similar dentro de los 180 días naturales posteriores a un alta médica emitida por el ICAM (Institut Català d'Avaluacions Mèdiques).
+
+Esta situación es especialmente compleja porque:
+- El alta no la dio el médico de familia, sino el ICAM
+- El médico de familia puede emitir una nueva baja, pero el ICAM puede cuestionarla
+- Los días de la recaída computan dentro del mismo proceso de IT (los días anteriores suman)
+- La base reguladora se mantiene la del proceso original
+
+Diferencia con un proceso nuevo
+Criterio ; Recaída ; Proceso nuevo
+Tiempo desde el alta ; ≤ 180 días naturales ; > 180 días naturales
+Patología ; Misma o similar ; Cualquiera
+Cómputo de días ; Suma al proceso anterior ; Empieza de cero
+Base reguladora ; La del proceso original ; Nueva base reguladora
+Autorización INSS ; Puede ser necesaria si >365 días acumulados ; No necesaria
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+Recaída post-alta ICAM
+
+CATEGORÍA
+recaida
+
+DESCRIPCIÓN Y CRITERIO
+¿Qué es una recaída post-alta ICAM?
+
+Se considera recaída cuando un trabajador presenta una nueva baja médica por la misma patología o una similar dentro de los 180 días naturales posteriores a un alta médica emitida por el ICAM (Institut Català d'Avaluacions Mèdiques).
+
+Esta situación es especialmente compleja porque:
+- El alta no la dio el médico de familia, sino el ICAM
+- El médico de familia puede emitir una nueva baja, pero el ICAM puede cuestionarla
+- Los días de la recaída computan dentro del mismo proceso de IT (los días anteriores suman)
+- La base reguladora se mantiene la del proceso original
+
+Diferencia con un proceso nuevo
+Criterio ; Recaída ; Proceso nuevo
+Tiempo desde el alta ; ≤ 180 días naturales ; > 180 días naturales
+Patología ; Misma o similar ; Cualquiera
+Cómputo de días ; Suma al proceso anterior ; Empieza de cero
+Base reguladora ; La del proceso original ; Nueva base reguladora
+Autorización INSS ; Puede ser necesaria si >365 días acumulados ; No necesaria
+BASE LEGAL
+Art. 169.2 LGSS (Ley General de la Seguridad Social): define el concepto de recaída como nueva baja por la misma patología o similar dentro de los 180 días naturales posteriores al alta médica.
+
+RD 625/2014, art. 2: establece que se considerará recaída en el mismo proceso de IT cuando se produzca una nueva baja médica por la misma o similar patología dentro de los 180 días naturales siguientes a la fecha de efectos del alta médica.
+
+RD 1060/2022: modificaciones al procedimiento de gestión de la IT que afectan la comunicación entre servicios de salud y entidades gestoras.
+
+Instrucciones ICAM: el ICAM puede emitir alta por propuesta de alta o por inspección directa. En caso de recaída posterior, el médico de familia debe comunicarlo vía formulario IS3.
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento en eCap
+
+1. Emisión del nuevo comunicado de baja
+- El médico de familia emite un nuevo comunicado de baja en eCap
+- El sistema detecta automáticamente si hay un proceso previo <180 días por la misma patología
+- Si se detecta, eCap marca el proceso como recaída y pide confirmación
+
+2. Comunicación al ICAM (formulario IS3)
+- Como el alta original fue emitida por el ICAM, hay que enviar el formulario IS3 al ICAM
+- El formulario IS3 es la solicitud de baja médica dirigida al ICAM
+- Se debe adjuntar la justificación clínica de la recaída
+
+3. Respuesta del ICAM
+- El ICAM puede aceptar la recaída → el proceso continúa normalmente
+- El ICAM puede rechazar la recaída → puede emitir alta directa
+- En caso de rechazo, el paciente puede reclamar (ver sección Reclamaciones)
+
+4. Seguimiento
+- Los comunicados de confirmación se hacen con la periodicidad habitual
+- Si los días acumulados (proceso anterior + recaída) superan 365 días, se necesita autorización del INSS para prorrogar
+- La mutua o el INSS pueden solicitar revisión en cualquier momento
+
+EJEMPLOS PRÁCTICOS
+Ejemplo 1: Recaída aceptada
+Un paciente estuvo de baja por lumbalgia durante 45 días. El ICAM emitió alta médica. A los 60 días del alta, el paciente vuelve a consulta con la misma sintomatología. El médico de familia emite nueva baja en eCap, el sistema la marca como recaída (60 < 180 días). Se envía formulario IS3 al ICAM, que acepta la recaída. El proceso continúa desde el día 46.
+
+Ejemplo 2: Recaída cuestionada por el ICAM
+Una paciente estuvo de baja por trastorno depresivo durante 120 días. El ICAM emitió alta. A los 90 días, la paciente presenta nueva baja por ansiedad generalizada. El ICAM considera que es una patología diferente (no similar) y rechaza la recaída. El médico de familia debe decidir si mantiene la baja como proceso nuevo o si el paciente reclama.
+
+Ejemplo 3: Recaída con acumulación >365 días
+Un paciente estuvo de baja por fractura de fémur durante 300 días. El ICAM emitió alta. A los 100 días, recaída por la misma patología. Como 300 + nuevos días pueden superar 365, hay que solicitar prórroga al INSS cuando se llegue a los 365 días acumulados.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.

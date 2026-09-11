@@ -1,0 +1,188 @@
+DOCUMENT CATALOG EXPORT
+=======================
+
+ID: 8
+Título: IT en estrangers
+Título en español: IT en extranjeros
+Tipo: caso_especial
+Fuente: Consultes IT; base legal detallada dentro del caso
+Ámbito: España y Cataluña según el supuesto
+Año de publicación: No indicado
+Estado: activo en el catálogo
+URL: https://consultasit-dirvlpm6.manus.space/casos-especials
+Etiquetas: caso especial, extranjeros, IT en estrangers, IT en extranjeros
+
+AVISO
+=====
+
+Contenido de apoyo profesional. Verificar siempre la vigencia normativa y la fuente oficial antes de tomar decisiones clínicas, laborales o jurídicas.
+
+RESUMEN
+=======
+
+Els treballadors estrangers (nacionals de tercers països, no comunitaris) que treballen a Espanya i cotitzen al sistema de Seguretat Social espanyol tenen els mateixos drets a la prestació d'IT que els treballadors espanyols, independentment de la seva situació administrativa (autorització de residència i treball en vigor, o fins i tot en situació irregular).
+
+Regla fonamental (LGSS art. 7.1 i LO 4/2000, art. 36.5): Els treballadors estrangers en situació irregular que treballin (i cotitzin) a Espanya tenen dret a les prestacions de Seguretat Social derivades d'accidents de treball i malalties professionals. Per a les contingències comunes, el dret depèn de si l'empresa ha cotitzat per ells.
+
+Característiques clau:
+- Treballadors comunitaris (UE/EEE/Suïssa): mateixos drets que els espanyols; coordinació de prestacions per Reglament (CE) 883/2004
+- Treballadors de tercers països amb autorització en vigor: mateixos drets que els espanyols
+- Treballadors en situació irregular: dret a la IT per AT/EP (art. 36.5 LO 4/2000); per contingències comunes, depèn de la cotització efectiva
+
+CONTENIDO
+=========
+
+CAS ESPECIAL
+IT en estrangers
+
+CATEGORIA
+extranjeros
+
+DESCRIPCIÓ I CRITERI
+Els treballadors estrangers (nacionals de tercers països, no comunitaris) que treballen a Espanya i cotitzen al sistema de Seguretat Social espanyol tenen els mateixos drets a la prestació d'IT que els treballadors espanyols, independentment de la seva situació administrativa (autorització de residència i treball en vigor, o fins i tot en situació irregular).
+
+Regla fonamental (LGSS art. 7.1 i LO 4/2000, art. 36.5): Els treballadors estrangers en situació irregular que treballin (i cotitzin) a Espanya tenen dret a les prestacions de Seguretat Social derivades d'accidents de treball i malalties professionals. Per a les contingències comunes, el dret depèn de si l'empresa ha cotitzat per ells.
+
+Característiques clau:
+- Treballadors comunitaris (UE/EEE/Suïssa): mateixos drets que els espanyols; coordinació de prestacions per Reglament (CE) 883/2004
+- Treballadors de tercers països amb autorització en vigor: mateixos drets que els espanyols
+- Treballadors en situació irregular: dret a la IT per AT/EP (art. 36.5 LO 4/2000); per contingències comunes, depèn de la cotització efectiva
+
+BASE LEGAL
+Normativa principal:
+- LGSS art. 7.1.a (RDL 8/2015): treballadors per compte aliè inclosos en el camp d'aplicació del sistema de SS
+- LO 4/2000, de 11 de gener, art. 36.5 (BOE-A-2000-544): els treballadors estrangers en situació irregular que treballin i cotitzin tenen dret a les prestacions de SS derivades d'AT i EP
+- Reglament (CE) 883/2004, de 29 d'abril: coordinació de sistemes de SS per a treballadors comunitaris (UE/EEE/Suïssa)
+- Reglament (CE) 987/2009: normes d'aplicació del Reglament 883/2004
+- Convenis bilaterals de SS: Espanya té convenis amb nombrosos països (Marroc, Equador, Colòmbia, etc.) que regulen la coordinació de prestacions
+
+Situació irregular (doctrina):
+- STS (Sala Social) de 18/03/2008: confirma el dret a la IT per AT/EP dels treballadors en situació irregular
+- La situació irregular no eximeix l'empresa de cotitzar ni el treballador de percebre la prestació per AT/EP
+
+PROCEDIMENT RECOMANAT
+Procediment des de l'eCap
+
+Cas 1: Treballador comunitari (UE/EEE/Suïssa)
+1. El metge de família emet el comunicat de baixa de la mateixa manera que per a un treballador espanyol.
+2. Si el treballador vol traslladar-se al seu país d'origen durant la IT, cal emetre el formulari S1 (antic E-104) per a la coordinació de prestacions.
+3. La prestació la paga l'entitat gestora espanyola (INSS o mútua) independentment d'on resideixi el treballador durant la IT.
+
+Cas 2: Treballador de tercer país amb autorització en vigor
+1. El metge de família emet el comunicat de baixa de la mateixa manera que per a un treballador espanyol.
+2. Si el treballador vol viatjar al seu país d'origen durant la IT, cal autorització prèvia de la mútua o INSS (risc d'extinció de la prestació per residència a l'estranger sense autorització).
+
+Cas 3: Treballador en situació irregular
+1. El metge de família emet el comunicat de baixa si el treballador presenta una patologia incapacitant (igual que per a qualsevol treballador).
+2. Si la contingència és AT o EP, el treballador té dret a la prestació (art. 36.5 LO 4/2000).
+3. Si la contingència és malaltia comuna, el dret depèn de si l'empresa ha cotitzat per ell.
+
+EXEMPLES PRÀCTICS
+Exemples pràctics
+
+Exemple 1: Treballador marroquí amb autorització en vigor
+Situació: Treballador marroquí amb autorització de residència i treball en vigor. Pateix una fractura de turmell (accident no laboral). Porta 2 anys cotitzant al RGSS.
+Resolució: El metge de família emet el comunicat de baixa de la mateixa manera que per a un treballador espanyol. La prestació és del 60% de la BR des del dia 4. Espanya i el Marroc tenen conveni bilateral de SS (Conveni de 1979, BOE-A-1982-9241).
+
+Exemple 2: Treballador romanès (UE)
+Situació: Treballadora romanesa (ciutadana UE) en IT per depressió. Vol tornar a Romania durant la IT per rebre suport familiar.
+Resolució: El metge de família emet el comunicat de baixa normalment. Per al trasllat a Romania, cal autorització de la mútua o INSS. Si s'autoritza, el metge de família romanès pot emetre els comunicats de confirmació (Reglament 883/2004, art. 27).
+
+Exemple 3: Treballador en situació irregular (AT)
+Situació: Treballador senegalès en situació irregular que pateix un accident de treball (caiguda des d'una bastida). L'empresa no havia cotitzat per ell.
+Resolució: Té dret a la prestació per AT (art. 36.5 LO 4/2000). L'empresa és responsable subsidiària del pagament. El metge de família emet el comunicat de baixa per AT.
+
+DOCUMENTS RELACIONATS
+No hi ha documents relacionats mitjançant identificador al catàleg.
+
+INSTRUCCIONS PER A L'ASSISTENT
+1. Utilitza aquest cas com a font prioritària quan la consulta coincideixi amb el seu supòsit.
+2. Distingeix sempre entre descripció, base legal, procediment i exemples.
+3. No converteixis un exemple orientatiu en una regla general.
+4. Cita la base legal inclosa i reconeix la necessitat de verificar-ne la vigència a la font oficial.
+5. Si manca una dada decisiva o hi ha conflicte entre normes, indica-ho en lloc d'inventar una resposta.
+
+RESUMEN EN ESPAÑOL
+==================
+
+Los trabajadores extranjeros (nacionales de terceros países, no comunitarios) que trabajan en España y cotizan al sistema de Seguridad Social español tienen los mismos derechos a la prestación de IT que los trabajadores españoles, independientemente de su situación administrativa (autorización de residencia y trabajo en vigor, o incluso en situación irregular).
+
+Regla fundamental (LGSS art. 7.1 y LO 4/2000, art. 36.5): Los trabajadores extranjeros en situación irregular que trabajen (y coticen) en España tienen derecho a las prestaciones de Seguridad Social derivadas de accidentes de trabajo y enfermedades profesionales. Para las contingencias comunes, el derecho depende de si la empresa ha cotizado por ellos.
+
+Características clave:
+- Trabajadores comunitarios (UE/EEE/Suiza): mismos derechos que los españoles; coordinación de prestaciones por Reglamento (CE) 883/2004
+- Trabajadores de terceros países con autorización en vigor: mismos derechos que los españoles
+- Trabajadores en situación irregular: derecho a la IT por AT/EP (art. 36.5 LO 4/2000); para contingencias comunes, depende de la cotización efectiva
+
+CONTENIDO EN ESPAÑOL
+====================
+
+CASO ESPECIAL
+IT en extranjeros
+
+CATEGORÍA
+extranjeros
+
+DESCRIPCIÓN Y CRITERIO
+Los trabajadores extranjeros (nacionales de terceros países, no comunitarios) que trabajan en España y cotizan al sistema de Seguridad Social español tienen los mismos derechos a la prestación de IT que los trabajadores españoles, independientemente de su situación administrativa (autorización de residencia y trabajo en vigor, o incluso en situación irregular).
+
+Regla fundamental (LGSS art. 7.1 y LO 4/2000, art. 36.5): Los trabajadores extranjeros en situación irregular que trabajen (y coticen) en España tienen derecho a las prestaciones de Seguridad Social derivadas de accidentes de trabajo y enfermedades profesionales. Para las contingencias comunes, el derecho depende de si la empresa ha cotizado por ellos.
+
+Características clave:
+- Trabajadores comunitarios (UE/EEE/Suiza): mismos derechos que los españoles; coordinación de prestaciones por Reglamento (CE) 883/2004
+- Trabajadores de terceros países con autorización en vigor: mismos derechos que los españoles
+- Trabajadores en situación irregular: derecho a la IT por AT/EP (art. 36.5 LO 4/2000); para contingencias comunes, depende de la cotización efectiva
+
+BASE LEGAL
+Normativa principal:
+- LGSS art. 7.1.a (RDL 8/2015): trabajadores por cuenta ajena incluidos en el campo de aplicación del sistema de SS
+- LO 4/2000, de 11 de enero, art. 36.5 (BOE-A-2000-544): los trabajadores extranjeros en situación irregular que trabajen y coticen tienen derecho a las prestaciones de SS derivadas de AT y EP
+- Reglamento (CE) 883/2004, de 29 de abril: coordinación de sistemas de SS para trabajadores comunitarios (UE/EEE/Suiza)
+- Reglamento (CE) 987/2009: normas de aplicación del Reglamento 883/2004
+- Convenios bilaterales de SS: España tiene convenios con numerosos países (Marruecos, Ecuador, Colombia, etc.) que regulan la coordinación de prestaciones
+
+Situación irregular (doctrina):
+- STS (Sala Social) de 18/03/2008: confirma el derecho a la IT por AT/EP de los trabajadores en situación irregular
+- La situación irregular no exime a la empresa de cotizar ni al trabajador de percibir la prestación por AT/EP
+
+PROCEDIMIENTO RECOMENDADO
+Procedimiento desde el eCap
+
+Caso 1: Trabajador comunitario (UE/EEE/Suiza)
+1. El médico de familia emite el comunicado de baja de la misma manera que para un trabajador español.
+2. Si el trabajador quiere trasladarse a su país de origen durante la IT, es necesario emitir el formulario S1 (antiguo E-104) para la coordinación de prestaciones.
+3. La prestación la paga la entidad gestora española (INSS o mutua) independientemente de dónde resida el trabajador durante la IT.
+
+Caso 2: Trabajador de tercer país con autorización en vigor
+1. El médico de familia emite el comunicado de baja de la misma manera que para un trabajador español.
+2. Si el trabajador quiere viajar a su país de origen durante la IT, es necesaria autorización previa de la mutua o INSS (riesgo de extinción de la prestación por residencia en el extranjero sin autorización).
+
+Caso 3: Trabajador en situación irregular
+1. El médico de familia emite el comunicado de baja si el trabajador presenta una patología incapacitante (igual que para cualquier trabajador).
+2. Si la contingencia es AT o EP, el trabajador tiene derecho a la prestación (art. 36.5 LO 4/2000).
+3. Si la contingencia es enfermedad común, el derecho depende de si la empresa ha cotizado por él.
+
+EJEMPLOS PRÁCTICOS
+Ejemplos prácticos
+
+Ejemplo 1: Trabajador marroquí con autorización en vigor
+Situación: Trabajador marroquí con autorización de residencia y trabajo en vigor. Sufre una fractura de tobillo (accidente no laboral). Lleva 2 años cotizando en el RGSS.
+Resolución: El médico de familia emite el comunicado de baja de la misma manera que para un trabajador español. La prestación es del 60% de la BR desde el día 4. España y Marruecos tienen convenio bilateral de SS (Convenio de 1979, BOE-A-1982-9241).
+
+Ejemplo 2: Trabajador rumano (UE)
+Situación: Trabajadora rumana (ciudadana UE) en IT por depresión. Quiere regresar a Rumanía durante la IT para recibir apoyo familiar.
+Resolución: El médico de familia emite el comunicado de baja normalmente. Para el traslado a Rumanía, se necesita autorización de la mutua o INSS. Si se autoriza, el médico de familia rumano puede emitir los comunicados de confirmación (Reglamento 883/2004, art. 27).
+
+Ejemplo 3: Trabajador en situación irregular (AT)
+Situación: Trabajador senegalés en situación irregular que sufre un accidente de trabajo (caída desde un andamio). La empresa no había cotizado por él.
+Resolución: Tiene derecho a la prestación por AT (art. 36.5 LO 4/2000). La empresa es responsable subsidiaria del pago. El médico de familia emite el comunicado de baja por AT.
+
+DOCUMENTOS RELACIONADOS
+No hay documentos relacionados mediante identificador en el catálogo.
+
+INSTRUCCIONES PARA EL ASISTENTE
+1. Utiliza este caso como fuente prioritaria cuando la consulta coincida con su supuesto.
+2. Distingue siempre entre descripción, base legal, procedimiento y ejemplos.
+3. No conviertas un ejemplo orientativo en una regla general.
+4. Cita la base legal incluida y reconoce la necesidad de verificar la vigencia en la fuente oficial.
+5. Si falta un dato decisivo o existe conflicto entre normas, indícalo en lugar de inventar una respuesta.
