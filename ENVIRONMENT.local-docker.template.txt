@@ -1,0 +1,25 @@
+COPIA AQUEST FITXER A .env PER A DESENVOLUPAMENT LOCAL AMB DOCKER.
+NO L'UTILITZIS EN PRODUCCIÓ I NO AFEGEIXIS .env AL REPOSITORI.
+
+# El port 3307 evita col·lisions amb un MySQL local ja existent.
+DATABASE_URL=mysql://consultasit:consultasit_local_password@127.0.0.1:3307/consultasit
+
+# Secret exclusiu per a desenvolupament local. Canvia'l en qualsevol altre entorn.
+JWT_SECRET=local-development-only-change-before-production
+
+# L'aplicació pot iniciar per provar rutes públiques i la base de dades sense OAuth Manus.
+# Les funcions que requereixen iniciar sessió, S3 o LLM continuaran indisponibles localment.
+VITE_APP_ID=local-development
+OAUTH_SERVER_URL=http://127.0.0.1:9999
+VITE_OAUTH_PORTAL_URL=http://127.0.0.1:9999
+OWNER_OPEN_ID=local-admin
+
+# Integracions Manus: deixa-les buides per a proves locals sense serveis externs.
+BUILT_IN_FORGE_API_URL=
+BUILT_IN_FORGE_API_KEY=
+VITE_FRONTEND_FORGE_API_URL=
+VITE_FRONTEND_FORGE_API_KEY=
+GMAIL_APP_PASSWORD=
+
+PORT=3000
+NODE_ENV=development

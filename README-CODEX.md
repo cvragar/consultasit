@@ -19,17 +19,21 @@ pnpm check
 pnpm build
 ```
 
+## Base de dades local sense Manus
+
+Per iniciar una base de dades MySQL local amb Docker, aplicar les migracions i executar les comprovacions sense credencials de Manus, segueix la guia [docs/LOCAL-DOCKER.md](docs/LOCAL-DOCKER.md). La configuració `docker-compose.local.yml` només exposa MySQL a `127.0.0.1` i no inclou dades de producció.
+
 ## Estructura principal
 
-| Ruta | Contingut |
-|---|---|
-| `client/src/` | Interfície React i components visuals. |
-| `server/` | API tRPC, regles de negoci, accés a dades i exportacions. |
-| `drizzle/schema.ts` | Esquema de la base de dades. |
-| `drizzle/` | Migracions de la base de dades. |
-| `shared/` | Constants i tipus compartits. |
-| `scripts/` | Utilitats de manteniment i d'exportació. |
-| `exports/` | Artefactes de corpus TXT generats per al projecte. |
+| Ruta                | Contingut                                                 |
+| ------------------- | --------------------------------------------------------- |
+| `client/src/`       | Interfície React i components visuals.                    |
+| `server/`           | API tRPC, regles de negoci, accés a dades i exportacions. |
+| `drizzle/schema.ts` | Esquema de la base de dades.                              |
+| `drizzle/`          | Migracions de la base de dades.                           |
+| `shared/`           | Constants i tipus compartits.                             |
+| `scripts/`          | Utilitats de manteniment i d'exportació.                  |
+| `exports/`          | Artefactes de corpus TXT generats per al projecte.        |
 
 ## Variables d'entorn
 
@@ -48,12 +52,12 @@ Les funcionalitats vinculades al runtime de Manus, com l'OAuth integrat, l'emmag
 
 ## Comandes disponibles
 
-| Comanda | Finalitat |
-|---|---|
-| `pnpm dev` | Servidor de desenvolupament. |
-| `pnpm test` | Suite Vitest completa. |
-| `pnpm check` | Comprovació de tipus TypeScript. |
-| `pnpm build` | Compilació de producció. |
+| Comanda        | Finalitat                                         |
+| -------------- | ------------------------------------------------- |
+| `pnpm dev`     | Servidor de desenvolupament.                      |
+| `pnpm test`    | Suite Vitest completa.                            |
+| `pnpm check`   | Comprovació de tipus TypeScript.                  |
+| `pnpm build`   | Compilació de producció.                          |
 | `pnpm db:push` | Genera i aplica migracions Drizzle al teu entorn. |
 
 ## Notes de seguretat
