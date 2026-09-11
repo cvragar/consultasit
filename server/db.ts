@@ -660,6 +660,13 @@ export async function getAdminStats() {
   const db = await getDb();
   if (!db) throw new Error("Database not initialized");
 
+  // TiDB with ONLY_FULL_GROUP_BY requires the SELECT expression to be
+  // byte-for-byte equivalent to the GROUP BY expression. Drizzle omits the
+  // table name from a selected column expression unless it is explicit here.
+  const messageDay = sql<string>`DATE(${sql.identifier("messages")}.${sql.identifier("createdAt")})`;
+  const conversationDay = sql<string>`DATE(${sql.identifier("conversations")}.${sql.identifier("createdAt")})`;
+  const userDay = sql<string>`DATE(${sql.identifier("users")}.${sql.identifier("createdAt")})`;
+
   // Total counts
   const [docsCount] = await db.select({ count: sql<number>`COUNT(*)` }).from(documents);
   const [casesCount] = await db.select({ count: sql<number>`COUNT(*)` }).from(specialCases);
@@ -669,33 +676,33 @@ export async function getAdminStats() {
 
   // Messages per day (last 30 days)
   const messagesPerDay = await db.select({
-    date: sql<string>`DATE(${messages.createdAt})`.as("date"),
+    date: messageDay.as("date"),
     count: sql<number>`COUNT(*)`.as("count"),
   })
     .from(messages)
     .where(sql`${messages.createdAt} >= DATE_SUB(NOW(), INTERVAL 30 DAY)`)
-    .groupBy(sql`DATE(${messages.createdAt})`)
-    .orderBy(sql`DATE(${messages.createdAt})`);
+    .groupBy(messageDay)
+    .orderBy(messageDay);
 
   // Conversations per day (last 30 days)
   const conversationsPerDay = await db.select({
-    date: sql<string>`DATE(${conversations.createdAt})`.as("date"),
+    date: conversationDay.as("date"),
     count: sql<number>`COUNT(*)`.as("count"),
   })
     .from(conversations)
     .where(sql`${conversations.createdAt} >= DATE_SUB(NOW(), INTERVAL 30 DAY)`)
-    .groupBy(sql`DATE(${conversations.createdAt})`)
-    .orderBy(sql`DATE(${conversations.createdAt})`);
+    .groupBy(conversationDay)
+    .orderBy(conversationDay);
 
   // New users per day (last 30 days)
   const usersPerDay = await db.select({
-    date: sql<string>`DATE(${users.createdAt})`.as("date"),
+    date: userDay.as("date"),
     count: sql<number>`COUNT(*)`.as("count"),
   })
     .from(users)
     .where(sql`${users.createdAt} >= DATE_SUB(NOW(), INTERVAL 30 DAY)`)
-    .groupBy(sql`DATE(${users.createdAt})`)
-    .orderBy(sql`DATE(${users.createdAt})`);
+    .groupBy(userDay)
+    .orderBy(userDay);
 
   // Most active users (top 10 by messages)
   const topUsers = await db.select({
