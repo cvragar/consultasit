@@ -8,6 +8,7 @@ const catalogPath = path.resolve("exports/special_cases_catalog.json");
 const curatedTranslationsPath = path.resolve("exports/special_cases_catalog.before_translation.json");
 const languageAuditPath = path.resolve("exports/casos_especiales_language_audit.json");
 const zipPath = `${outputDir}.zip`;
+const corpusVersion = "2026.09.11.1";
 const sourceExporterPath = path.resolve("scripts/export-special-cases-catalog.mjs");
 const languageAuditScriptPath = path.resolve("scripts/audit-special-cases-language.mjs");
 const catalogExporterPath = process.env.DOCUMENT_CATALOG_EXPORTER
@@ -195,6 +196,27 @@ async function validateExport() {
   }
 }
 
+async function addCorpusMetadata() {
+  const [catalog, index] = await Promise.all([
+    fs.readFile(catalogPath, "utf8").then(JSON.parse),
+    fs.readFile(path.join(outputDir, "00-INDEX.txt"), "utf8"),
+  ]);
+  const metadata = [
+    "VERSIÓ I GENERACIÓ DEL CORPUS",
+    "==============================",
+    "",
+    `Data de generació (UTC): ${new Date().toISOString()}`,
+    `Versió del corpus: ${corpusVersion}`,
+    `Total de casos especials: ${catalog.length}`,
+    "",
+  ].join("\n");
+  await fs.writeFile(
+    path.join(outputDir, "00-INDEX.txt"),
+    `${metadata}${index.replace(/^\s+/, "")}`,
+    "utf8",
+  );
+}
+
 async function main() {
   run(process.execPath, [sourceExporterPath]);
   await applyCuratedSpanishTranslations();
@@ -209,6 +231,8 @@ async function main() {
     "--clean",
     "--strict",
   ]);
+
+  await addCorpusMetadata();
 
   await fs.writeFile(
     path.join(outputDir, "00-INSTRUCCIONES-COLOQIA.txt"),

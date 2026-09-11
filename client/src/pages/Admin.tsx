@@ -39,7 +39,7 @@ import {
 import {
   Shield, Home, Database, FileText, AlertCircle, Settings,
   Upload, Trash2, CheckCircle, XCircle, Loader2, RefreshCw,
-  FileUp, Eye
+  FileUp, Eye, Archive, Download
 } from "lucide-react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
@@ -48,6 +48,17 @@ const AdminStats = lazy(() => import("@/components/AdminStats"));
 import { toast } from "sonner";
 
 type UploadStatus = "idle" | "uploading" | "success" | "error";
+type CorpusKind = "documents" | "specialCases";
+
+type GeneratedCorpus = {
+  kind: CorpusKind;
+  filename: string;
+  url: string;
+  generatedAt: string;
+  version: string;
+  recordCount: number;
+  byteSize: number;
+};
 
 interface UploadedDoc {
   id: number;
@@ -109,6 +120,7 @@ export default function Admin() {
   const [deletingId, setDeletingId] = useState<number | null>(null);
   const [adminDocs, setAdminDocs] = useState<UploadedDoc[] | null>(null);
   const [loadingDocs, setLoadingDocs] = useState(false);
+  const [generatedCorpora, setGeneratedCorpora] = useState<Partial<Record<CorpusKind, GeneratedCorpus>>>({});
 
   // Admin always uses Catalan for content management (source language)
   const { data: documents, refetch: refetchDocuments } = trpc.documents.list.useQuery({ language: "ca" });
@@ -239,6 +251,29 @@ export default function Admin() {
     },
   });
 
+  const generateCorpus = trpc.admin.generateCorpus.useMutation();
+
+  const downloadCorpus = (corpus: GeneratedCorpus) => {
+    const link = document.createElement("a");
+    link.href = corpus.url;
+    link.download = corpus.filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleCorpusGeneration = async (kind: CorpusKind) => {
+    try {
+      const corpus = await generateCorpus.mutateAsync({ kind });
+      setGeneratedCorpora(previous => ({ ...previous, [kind]: corpus }));
+      downloadCorpus(corpus);
+      toast.success(`Corpus regenerat: ${corpus.recordCount} fitxers, versió ${corpus.version}`);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "No s'ha pogut regenerar el corpus.";
+      toast.error(message);
+    }
+  };
+
   // Eliminar document
   const handleDelete = async (docId: number, docTitle: string) => {
     setDeletingId(docId);
@@ -347,6 +382,65 @@ export default function Admin() {
                 </Button>
               </div>
             </CardHeader>
+          </Card>
+
+          {/* Exportació de corpus per a Coloq.ia */}
+          <Card className="border-emerald-200 bg-emerald-50/30">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-emerald-900">
+                <Archive className="h-5 w-5" />
+                Corpus TXT per a Coloq.ia
+              </CardTitle>
+              <CardDescription className="mt-1">
+                Regenera un ZIP a partir del catàleg actual i el descarrega automàticament. Cada índex incorpora la data UTC i la versió del corpus.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="grid gap-3 md:grid-cols-2">
+              {([
+                { kind: "documents" as const, title: "Documentació", total: documents?.length ?? 0 },
+                { kind: "specialCases" as const, title: "Casos especials", total: specialCases?.length ?? 0 },
+              ]).map(corpus => {
+                const generated = generatedCorpora[corpus.kind];
+                const isCurrent = generateCorpus.isPending && generateCorpus.variables?.kind === corpus.kind;
+                return (
+                  <div key={corpus.kind} className="rounded-xl border border-emerald-200 bg-background/80 p-4 shadow-sm">
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <p className="font-semibold text-foreground">{corpus.title}</p>
+                        <p className="mt-1 text-sm text-muted-foreground">
+                          {corpus.total} {corpus.kind === "documents" ? "documents" : "casos"} al catàleg actual
+                        </p>
+                      </div>
+                      <Badge variant="outline" className="border-emerald-300 text-emerald-800">TXT + ZIP</Badge>
+                    </div>
+                    <Button
+                      className="mt-4 w-full bg-emerald-700 text-white hover:bg-emerald-800"
+                      onClick={() => handleCorpusGeneration(corpus.kind)}
+                      disabled={generateCorpus.isPending || corpus.total === 0}
+                    >
+                      {isCurrent ? (
+                        <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Regenerant...</>
+                      ) : (
+                        <><Download className="mr-2 h-4 w-4" />Regenerar i descarregar ZIP</>
+                      )}
+                    </Button>
+                    {generated && (
+                      <div className="mt-3 rounded-lg bg-emerald-50 p-3 text-xs text-emerald-950">
+                        <p><strong>Versió:</strong> {generated.version}</p>
+                        <p><strong>Generat:</strong> {new Date(generated.generatedAt).toLocaleString("ca-ES")}</p>
+                        <button
+                          type="button"
+                          onClick={() => downloadCorpus(generated)}
+                          className="mt-2 inline-flex items-center font-medium text-emerald-800 underline underline-offset-2 hover:text-emerald-950"
+                        >
+                          <Download className="mr-1 h-3.5 w-3.5" />Tornar a descarregar
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </CardContent>
           </Card>
 
           {/* Upload PDF Section */}

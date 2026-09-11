@@ -82,4 +82,12 @@ describe("exportació documental TXT per a Coloq.ia", () => {
     expect(instructions).toContain("No completar dades per intuïció");
     expect(instructions).toContain("ORDRE RECOMANAT DE CÀRREGA");
   });
+
+  it("inclou data de generació i versió a l'índex", () => {
+    const index = fs.readFileSync(path.join(exportDir, "00-INDEX.txt"), "utf8");
+
+    expect(index).toContain("VERSIÓ I GENERACIÓ DEL CORPUS");
+    expect(index).toMatch(/Data de generació \(UTC\): \d{4}-\d{2}-\d{2}T/);
+    expect(index).toContain("Versió del corpus: 2026.09.11.1");
+  });
 });

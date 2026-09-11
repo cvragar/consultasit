@@ -7,6 +7,7 @@ import mysql from "mysql2/promise";
 const outputDir = path.resolve("exports/documentacio_txt_coloqia");
 const catalogPath = path.resolve("exports/documentation_catalog.json");
 const zipPath = `${outputDir}.zip`;
+const corpusVersion = "2026.09.11.1";
 const catalogExporterPath = process.env.DOCUMENT_CATALOG_EXPORTER
   ?? "/home/ubuntu/skills/document-catalog-exporter/scripts/export_catalog.py";
 
@@ -128,6 +129,21 @@ async function validateExport(expectedRecords) {
   }
 }
 
+async function addCorpusMetadata(recordCount) {
+  const indexPath = path.join(outputDir, "00-INDEX.txt");
+  const index = await fs.readFile(indexPath, "utf8");
+  const metadata = [
+    "VERSIÓ I GENERACIÓ DEL CORPUS",
+    "==============================",
+    "",
+    `Data de generació (UTC): ${new Date().toISOString()}`,
+    `Versió del corpus: ${corpusVersion}`,
+    `Total de documents: ${recordCount}`,
+    "",
+  ].join("\n");
+  await fs.writeFile(indexPath, `${metadata}${index.replace(/^\s+/, "")}`, "utf8");
+}
+
 async function main() {
   const recordCount = await createCatalogSource();
 
@@ -140,6 +156,8 @@ async function main() {
     "--clean",
     "--strict",
   ]);
+
+  await addCorpusMetadata(recordCount);
 
   await fs.writeFile(
     path.join(outputDir, "00-INSTRUCCIONES-COLOQIA.txt"),

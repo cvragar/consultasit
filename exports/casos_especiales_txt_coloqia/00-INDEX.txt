@@ -1,3 +1,9 @@
+VERSIÓ I GENERACIÓ DEL CORPUS
+==============================
+
+Data de generació (UTC): 2026-09-11T08:53:53.119Z
+Versió del corpus: 2026.09.11.1
+Total de casos especials: 29
 ÍNDICE DEL CATÁLOGO
 ===================
 

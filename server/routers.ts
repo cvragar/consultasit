@@ -38,6 +38,8 @@ import {
 import { translateFieldsToEs, translateCaToEs } from "./translation";
 import { invokeLLM } from "./_core/llm";
 import { semanticSearchDiagnosis } from "./semanticSearch";
+import { generateDocumentsCorpus, generateSpecialCasesCorpus } from "./corpusExport";
+import { storagePut } from "./storage";
 
 // ===== TRANSLATION HELPERS =====
 
@@ -594,6 +596,43 @@ IMPORTANT:
       }
       return await getAdminStats();
     }),
+
+    generateCorpus: protectedProcedure
+      .input(z.object({ kind: z.enum(["documents", "specialCases"]) }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") {
+          throw new Error("Accés restringit: cal ser administrador");
+        }
+
+        const corpus = input.kind === "documents"
+          ? (() => getAllDocuments().then(records => {
+              if (!records.length) throw new Error("No hi ha documentació disponible per generar el corpus.");
+              return generateDocumentsCorpus(records);
+            }))()
+          : (() => getAllSpecialCases().then(records => {
+              if (!records.length) throw new Error("No hi ha casos especials disponibles per generar el corpus.");
+              return generateSpecialCasesCorpus(records);
+            }))();
+        const generated = await corpus;
+        if (!generated.validation.valid) {
+          throw new Error("El corpus no ha superat la validació interna de text pla.");
+        }
+
+        const timestamp = generated.generatedAt.replace(/[:.]/g, "-");
+        const objectKey = `corpora/${input.kind}/${timestamp}-${generated.filename}`;
+        const upload = await storagePut(objectKey, generated.archive, "application/zip");
+
+        return {
+          kind: generated.kind,
+          filename: generated.filename,
+          url: upload.url,
+          generatedAt: generated.generatedAt,
+          version: generated.version,
+          recordCount: generated.validation.input_records,
+          byteSize: generated.archive.byteLength,
+          validation: generated.validation,
+        };
+      }),
 
     pretranslateAll: protectedProcedure.mutation(async ({ ctx }) => {
       if (ctx.user.role !== "admin") {
