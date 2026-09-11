@@ -107,7 +107,7 @@ CASO ESPECIAL
 Accidente de trabajo en trabajador en situación de pluriempleo
 
 CATEGORÍA
-accidente_trabajo
+accident_treball
 
 DESCRIPCIÓN Y CRITERIO
 Procedimiento cuando un trabajador que presta servicios simultáneamente para dos o más empresas (pluriempleo) sufre un accidente de trabajo en una de ellas. Incluye la calificación de la contingencia en la otra empresa, el cálculo de la base reguladora y quién emite el comunicado de baja.
@@ -132,9 +132,9 @@ ESCENARIO B: La otra actividad es por cuenta propia (autónomo)
 - El AT se califica como AT para la actividad asalariada
 - Para la actividad de autónomo: accidente NO laboral (si no tiene cobertura CP) o AT (si tiene cobertura CP y se cumplen los requisitos del RETA)
 
-QUIÉN EMITE EL comunicado de baja (desde el eCap):
-- Si la empresa donde se ha producido el AT tiene cobertura con MUTUA → LA MUTUA emite el comunicado de baja (no el eCap)
-- Si la empresa donde se ha producido el AT tiene cobertura con el INSS → El eCap emite el comunicado de baja como AT
+QUIÉN EMITE EL comunicado de baja (desde eCap):
+- Si la empresa donde se ha producido el AT tiene cobertura con MUTUA → LA MUTUA emite el parte (no eCap)
+- Si la empresa donde se ha producido el AT tiene cobertura con el INSS → eCap emite el parte como AT
 - El comunicado de baja cubre TODAS las actividades laborales del trabajador
 
 CÁLCULO DE LA BASE REGULADORA:
@@ -144,7 +144,7 @@ CÁLCULO DE LA BASE REGULADORA:
 
 EJEMPLOS PRÁCTICOS
 Ejemplo 1: Trabajador en dos empresas: AT en la empresa A
-Trabajador trabaja en la empresa A (8h, base cotización 1.500€/mes, mutua ASEPEYO) y en la empresa B (4h, base cotización 800€/mes, mutua FREMAP). Sufre un AT en la empresa A.
+Trabajador trabaja en la empresa A (8h, base de cotización 1.500€/mes, mutua ASEPEYO) y en la empresa B (4h, base de cotización 800€/mes, mutua FREMAP). Sufre un AT en la empresa A.
 
 Resolución: ASEPEYO (mutua empresa A) emite el comunicado de baja. Base reguladora = (1.500 + 800) / 30 = 76,67€/día. Prestación = 76,67€/día desde el día 2. La empresa B también debe notificar el accidente como AT. ASEPEYO paga la prestación total.
 
@@ -156,7 +156,7 @@ Resolución: La mutua de la empresa emite el comunicado de baja por AT. Para la 
 Ejemplo 3: Trabajador asalariado y autónomo con CP: AT en la empresa
 Trabajador asalariado y autónomo (CON cobertura CP) sufre un AT en la empresa.
 
-Resolución: La mutua de la empresa emite el comunicado de baja por AT (actividad asalariada). Para la actividad de autónomo: puede ser AT si se cumplen los requisitos del RETA. Pueden estar implicadas dos mutuas. La base reguladora de la prestación de la empresa incluye las cotizaciones de la empresa; la del autónomo se calcula por separado.
+Resolución: La mutua de la empresa emite el parte por AT (actividad asalariada). Para la actividad de autónomo: puede ser AT si se cumplen los requisitos del RETA. Pueden estar implicadas dos mutuas. La base reguladora de la prestación de la empresa incluye las cotizaciones de la empresa; la del autónomo se calcula por separado.
 
 Ejemplo 4: Accidente in itinere en trabajador en pluriempleo
 Trabajador que va de la empresa A a la empresa B sufre un accidente de tráfico.

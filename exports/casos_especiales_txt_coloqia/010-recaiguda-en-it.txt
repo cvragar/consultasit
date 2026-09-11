@@ -73,7 +73,7 @@ Pas 1: Valoració de si és recaiguda o nou procés
 2. Calcular si han passat menys de 180 dies naturals des de l'alta.
 3. Valorar si la nova incapacitat és per la mateixa o similar patologia.
 
-Pas 2a: Si és recaiguda (< 180 dies, mateixa patologia)
+Pas 2a: Si és recaiguda (menys de 180 dies, mateixa patologia)
 1. Emetre el comunicat de baixa indicant que és una recaiguda del procés anterior.
 2. A l'eCap, vincular el nou procés al procés anterior (si el sistema ho permet).
 3. La BR del nou procés és la mateixa que la del procés original (la mútua o INSS la gestiona automàticament).
@@ -91,7 +91,7 @@ Pas 3: Comunicació al treballador
 EXEMPLES PRÀCTICS
 Exemples pràctics
 
-Exemple 1: Recaiguda clara (< 180 dies, mateixa patologia)
+Exemple 1: Recaiguda clara (menys de 180 dies, mateixa patologia)
 Situació: Treballador que va estar de baixa per lumbalgia aguda durant 30 dies. Alta el 15 de gener. El 20 de febrer (36 dies després) torna a consultar per lumbalgia aguda amb irradiació ciàtica.
 Resolució: És una recaiguda (menys de 180 dies, mateixa patologia). El metge de família emet el comunicat de baixa com a recaiguda. La BR és la mateixa que la del procés original. Els 30 dies anteriors + els nous dies computen per al límit de 365 dies.
 
@@ -169,7 +169,7 @@ Paso 1: Valoración de si es recaída o nuevo proceso
 2. Calcular si han transcurrido menos de 180 días naturales desde el alta.
 3. Valorar si la nueva incapacidad es por la misma o similar patología.
 
-Paso 2a: Si es recaída (< 180 días, misma patología)
+Paso 2a: Si es recaída (menos de 180 días, misma patología)
 1. Emitir el comunicado de baja indicando que es una recaída del proceso anterior.
 2. En el eCap, vincular el nuevo proceso al proceso anterior (si el sistema lo permite).
 3. La Base Reguladora (BR) del nuevo proceso es la misma que la del proceso original (la mutua o INSS la gestiona automáticamente).
@@ -187,7 +187,7 @@ Paso 3: Comunicación al trabajador
 EJEMPLOS PRÁCTICOS
 Ejemplos prácticos
 
-Ejemplo 1: Recaída clara (< 180 días, misma patología)
+Ejemplo 1: Recaída clara (menos de 180 días, misma patología)
 Situación: Trabajador que estuvo de baja por lumbalgia aguda durante 30 días. Alta el 15 de enero. El 20 de febrero (36 días después) vuelve a consultar por lumbalgia aguda con irradiación ciática.
 Resolución: Es una recaída (menos de 180 días, misma patología). El médico de familia emite el comunicado de baja como recaída. La BR es la misma que la del proceso original. Los 30 días anteriores + los nuevos días computan para el límite de 365 días.
 

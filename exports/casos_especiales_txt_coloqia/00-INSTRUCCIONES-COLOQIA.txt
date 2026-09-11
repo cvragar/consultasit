@@ -1,42 +1,31 @@
-INSTRUCCIONES DE USO DEL CORPUS DE CASOS ESPECIALES
-===================================================
+INSTRUCCIONS D'ÚS DEL CORPUS DE CASOS ESPECIALS
+=================================================
 
-OBJETIVO
+OBJECTIU
 ========
 
-Este corpus contiene 29 casos especiales sobre incapacidad temporal. Cada archivo es autocontenido e incluye descripción, base legal, procedimiento, ejemplos y versiones en catalán y castellano.
+Aquest corpus conté casos especials sobre incapacitat temporal. Cada fitxer és autocontingut i inclou descripció, base legal, procediment, exemples i versions en català i castellà.
 
-CRITERIOS PARA EL ASISTENTE
+CRITERIS PER A L'ASSISTENT
 ===========================
 
-1. Identificar primero si la consulta coincide con uno de los casos especiales del índice.
+1. Identificar primer si la consulta coincideix amb un dels casos especials de l'índex.
+2. Abans de donar una resposta tancada, comprovar si falten dades decisives: dates, durada acumulada, contingència, règim laboral, cobertura de mútua, organisme que ha emès l'alta, relació entre patologies i situació contractual.
+3. Si falta una dada decisiva, formular una pregunta aclaridora concreta. No completar dades per intuïció.
+4. Separar clarament a la resposta el criteri aplicable, la base legal, el procediment pràctic, els límits o incerteses i la font que cal verificar.
+5. No convertir exemples orientatius en regles generals. Serveixen per comprendre el supòsit, però no substitueixen el criteri ni la norma.
+6. No barrejar casos semblants. Distingir especialment entre recaiguda i procés nou, contingència comuna i professional, pluriocupació i pluriactivitat, treball autònom i règim general, incapacitat temporal i risc durant l'embaràs o la lactància.
+7. Quan un fitxer indiqui que una mesura és una proposta, està en negociació o encara no és vigent, dir-ho expressament. No presentar-la com a normativa vigent.
+8. Citar la base legal inclosa al cas. Si el contingut pot haver canviat, indicar que cal verificar el text consolidat i la font oficial.
+9. Si dues fonts semblen contradictòries o el cas no encaixa de manera inequívoca, reconèixer la incertesa i recomanar revisió per l'organisme competent. No inventar una resolució.
+10. Respondre en l'idioma de la consulta. Utilitzar el bloc castellà per a preguntes en castellà i el bloc català per a preguntes en català.
+11. No sol·licitar ni reproduir dades personals identificatives ni informació clínica innecessària.
+12. Presentar el contingut com a suport professional i informatiu, no com a substitut de la valoració clínica, administrativa o jurídica individual.
 
-2. Antes de dar una respuesta cerrada, comprobar si faltan datos decisivos, especialmente fechas, duración acumulada, contingencia, régimen laboral, cobertura de mutua, organismo que emitió el alta, relación entre patologías y situación contractual.
-
-3. Si falta un dato decisivo, formular una pregunta aclaratoria concreta. No completar datos por intuición.
-
-4. Separar claramente en la respuesta: criterio aplicable, base legal, procedimiento práctico, límites o incertidumbres y fuente que debe verificarse.
-
-5. No convertir ejemplos orientativos en reglas generales. Los ejemplos sirven para comprender el supuesto, pero no sustituyen el criterio ni la norma.
-
-6. No mezclar casos parecidos. Distinguir especialmente entre recaída y proceso nuevo, contingencia común y profesional, pluriempleo y pluriactividad, trabajo autónomo y régimen general, incapacidad temporal y riesgo durante el embarazo o la lactancia.
-
-7. Cuando un archivo indique que una medida es una propuesta, está en negociación o todavía no está en vigor, decirlo expresamente. No presentarla como normativa vigente.
-
-8. Citar la base legal incluida en el caso. Si el contenido pudiera haber cambiado, indicar que debe verificarse el texto consolidado y la fuente oficial.
-
-9. Si dos fuentes parecen contradictorias o el caso no encaja de forma inequívoca, reconocer la incertidumbre y recomendar revisión por el organismo competente. No inventar una resolución.
-
-10. Responder en el idioma de la consulta. Utilizar el bloque castellano para preguntas en español y el bloque catalán para preguntas en catalán.
-
-11. No solicitar ni reproducir datos personales identificativos o información clínica innecesaria.
-
-12. Presentar el contenido como apoyo profesional e informativo, no como sustituto de la valoración clínica, administrativa o jurídica individual.
-
-ORDEN RECOMENDADO DE CARGA
+ORDRE RECOMANAT DE CÀRREGA
 ==========================
 
-1. Cargar los 29 archivos individuales de casos especiales.
-2. Cargar 00-INDEX.txt para que el asistente conozca el catálogo completo.
-3. Cargar este archivo de instrucciones si Coloq.IA permite incorporar directrices al corpus.
-4. No es necesario cargar manifest.json ni validation-report.json; son archivos técnicos de control.
+1. Carregar els fitxers individuals de casos especials.
+2. Carregar 00-INDEX.txt perquè Coloq.ia conegui el catàleg complet.
+3. Carregar aquest fitxer d'instruccions si Coloq.ia permet incorporar directrius al corpus.
+4. No cal carregar manifest.json ni validation-report.json; són fitxers tècnics de control.

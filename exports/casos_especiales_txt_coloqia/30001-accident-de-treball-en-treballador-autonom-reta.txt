@@ -144,7 +144,7 @@ Resolución: El accidente se califica como accidente NO laboral. El eCap emite e
 Ejemplo 3: Infarto en autónomo durante la jornada laboral
 Autónomo sufre un infarto mientras trabaja en su despacho. Tiene cobertura de CP.
 
-Resolución: ATENCIÓN: En el RETA NO se aplica la presunción de laboralidad (art. 156.3 LGSS). Hay que acreditar conexión causal directa entre la actividad y la lesión. Si no se acredita, la mutua puede cualificarlo como enfermedad común. Diferencia clave con el RGSS donde la presunción sí se aplica (STS 5/7/2023).
+Resolución: ATENCIÓN: En el RETA NO se aplica la presunción de laboralidad (art. 156.3 LGSS). Hay que acreditar conexión causal directa entre la actividad y la lesión. Si no se acredita, la mutua puede calificarlo como enfermedad común. Diferencia clave con el RGSS donde la presunción sí se aplica (STS 5/7/2023).
 
 Ejemplo 4: Accidente in itinere de autónomo
 Autónomo con cobertura CP sufre un accidente de tráfico yendo a su local de trabajo.

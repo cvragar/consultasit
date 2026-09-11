@@ -82,7 +82,7 @@ Procediment
 4. Si el treballador rebutja la proposta o l'empresa justifica la impossibilitat: extinció sense indemnització
 5. La pensió d'IP queda suspesa durant la relació laboral
 
-Límits per a PIMES (<25 treballadors)
+Límits per a PIMES (menys de 25 treballadors)
 L'adaptació es considera excessiva si supera:
 - La indemnització per acomiadament improcedent, o
 - 6 mensualitats del salari brut
@@ -171,7 +171,7 @@ Procedimiento
 4. Si el trabajador rechaza la propuesta o la empresa justifica la imposibilidad: extinción sin indemnización
 5. La pensión de IP queda suspendida durante la relación laboral
 
-Límites para PYMES (<25 trabajadores)
+Límites para PYMES (menos de 25 trabajadores)
 La adaptación se considera excesiva si supera:
 - La indemnización por despido improcedente, o
 - 6 mensualidades del salario bruto
