@@ -1,29 +1,29 @@
-CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
-===========================================
+DOCUMENT CATALOG EXPORT
+=======================
 
 ID: 30003
-Título principal: Reial Decret 1299/2006, de 10 de novembre (BOE-A-2006-22169) - Quadre de malalties professionals
+Título: Reial Decret 1299/2006, de 10 de novembre (BOE-A-2006-22169) - Quadre de malalties professionals
 Título en español: Real Decreto 1299/2006, de 10 de noviembre (BOE-A-2006-22169) - Cuadro de enfermedades profesionales
-Tipo documental: decreto
+Tipo: decreto
 Fuente: BOE - Ministeri de Treball i Assumptes Socials
 Ámbito: estatal
 Año de publicación: 2006
 Estado: vigent
-URL de la fuente: https://d2xsxph8kpxj0f.cloudfront.net/310519663242490001/DirVLPm6UeFJi3utFGbgZe/BOE-A-2006-22169_b54ceec9.pdf
+URL: https://d2xsxph8kpxj0f.cloudfront.net/310519663242490001/DirVLPm6UeFJi3utFGbgZe/BOE-A-2006-22169_b54ceec9.pdf
 Etiquetas: RD 1299/2006, malalties professionals, quadre de malalties professionals, agents biològics, agents físics, agents químics, síndrome del túnel carpià, hipoacúsia, asma professional, dermatitis professional, hepatitis B laboral, personal sanitari, contingència professional, mútua, CEPROSS, Ordre TAS/1/2007, BOE-A-2006-22169, IT malaltia professional
 
 AVISO
 =====
 
-Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+Exportació del catàleg documental de Consultes IT. Per a decisions professionals o jurídiques, cal verificar sempre la vigència i el text consolidat a la font oficial indicada.
 
-RESUMEN PRINCIPAL
-=================
+RESUMEN
+=======
 
 El Reial Decret 1299/2006 (BOE 19 de desembre de 2006, en vigor des de l'1 de gener de 2007) aprova el quadre de malalties professionals en el sistema de la Seguretat Social, organitzat en 6 grups: agents químics, agents físics (soroll, vibracions, postures forçades), agents biològics (especialment rellevant per al personal sanitari), inhalació de substàncies, malalties de la pell i agents carcinògens. Quan una malaltia professional causa IT, la prestació la gestiona la mútua des del primer dia al 75% de la base reguladora (sense els 20 dies inicials al 60% de la CC). El metge del SNS té l'obligació de comunicar les sospites de malaltia professional a l'organisme competent de la CA.
 
-CONTENIDO PRINCIPAL
-===================
+CONTENIDO
+=========
 
 Reial Decret 1299/2006, de 10 de novembre
 
@@ -174,8 +174,8 @@ RESUMEN EN ESPAÑOL
 
 El Real Decreto 1299/2006 (BOE 19 de diciembre de 2006, en vigor desde el 1 de enero de 2007) aprueba el cuadro de enfermedades profesionales en el sistema de la Seguridad Social, organizado en 6 grupos: agentes químicos, agentes físicos (ruido, vibraciones, posturas forzadas), agentes biológicos (especialmente relevante para el personal sanitario), inhalación de sustancias, enfermedades de la piel y agentes carcinógenos. Cuando una enfermedad profesional causa IT, la prestación la gestiona la mutua desde el primer día al 75% de la base reguladora (sin los 20 días iniciales al 60% de la CC). El médico del SNS tiene la obligación de comunicar las sospechas de enfermedad profesional al organismo competente de la CA.
 
-CONTENIDO EN ESPAÑOL DISPONIBLE
-===============================
+CONTENIDO EN ESPAÑOL
+====================
 
 Real Decreto 1299/2006, de 10 de noviembre
 

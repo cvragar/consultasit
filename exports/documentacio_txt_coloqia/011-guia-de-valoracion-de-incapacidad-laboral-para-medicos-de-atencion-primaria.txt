@@ -1,24 +1,24 @@
-CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
-===========================================
+DOCUMENT CATALOG EXPORT
+=======================
 
 ID: 11
-Título principal: Guía de valoración de incapacidad laboral para médicos de atención primaria
+Título: Guía de valoración de incapacidad laboral para médicos de atención primaria
 Título en español: Guía de valoración de incapacidad laboral para médicos de atención primaria
-Tipo documental: guia
+Tipo: guia
 Fuente: ENMT - Escola Nacional de Medicina del Treball (ISCIII)
 Ámbito: estatal
 Año de publicación: 2012
 Estado: vigent
-URL de la fuente: https://repisalud.isciii.es/entities/publication/b2912b28-0466-4be7-a70b-c9ef6decdcf2
+URL: https://repisalud.isciii.es/entities/publication/b2912b28-0466-4be7-a70b-c9ef6decdcf2
 Etiquetas: valoracion, atencion_primaria, guia_practica
 
 AVISO
 =====
 
-Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+Exportació del catàleg documental de Consultes IT. Per a decisions professionals o jurídiques, cal verificar sempre la vigència i el text consolidat a la font oficial indicada.
 
-CONTENIDO PRINCIPAL
-===================
+CONTENIDO
+=========
 
 Monografías
 Ministerio de Ciencia e Innovación
@@ -1402,8 +1402,8 @@ Seguridad Social u otros centros sanitarios.
 4.3 Resolución del Procedimiento
 Lo
 
-CONTENIDO EN ESPAÑOL DISPONIBLE
-===============================
+CONTENIDO EN ESPAÑOL
+====================
 
 Monografías
 Ministerio de Ciencia e Innovación

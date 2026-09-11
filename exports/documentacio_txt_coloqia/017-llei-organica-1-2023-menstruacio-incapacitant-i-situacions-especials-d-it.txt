@@ -1,29 +1,29 @@
-CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
-===========================================
+DOCUMENT CATALOG EXPORT
+=======================
 
 ID: 17
-Título principal: Llei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT
+Título: Llei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT
 Título en español: Ley Orgánica 1/2023 - Menstruación incapacitante y situaciones especiales de IT
-Tipo documental: ley
+Tipo: ley
 Fuente: BOE - Agència Estatal Butlletí Oficial de l'Estat
 Ámbito: estatal
 Año de publicación: 2023
 Estado: vigent
-URL de la fuente: https://www.boe.es/buscar/act.php?id=BOE-A-2023-5364
+URL: https://www.boe.es/buscar/act.php?id=BOE-A-2023-5364
 Etiquetas: Llei 1/2023, menstruació incapacitant, dismenorrea secundària, endometriosi, IT especial, contingència comuna, primer dia SS, sense cotització mínima, interrupció embaràs, setmana 39, protocol Catalunya, ASSIR, ginecòleg, metge família, LGSS art. 169, LGSS art. 172, LGSS art. 173
 
 AVISO
 =====
 
-Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+Exportació del catàleg documental de Consultes IT. Per a decisions professionals o jurídiques, cal verificar sempre la vigència i el text consolidat a la font oficial indicada.
 
-RESUMEN PRINCIPAL
-=================
+RESUMEN
+=======
 
 La LO 1/2023 (en vigor des de l'1 de juny de 2023) crea tres situacions especials d'IT per contingències comunes: (1) menstruació incapacitant secundària (dismenorrea per patologia diagnosticada, SS paga des del dia 1, sense cotització mínima, cada procés és nou); (2) interrupció de l'embaràs voluntària o no (SS paga des del dia 2); (3) gestació des de la setmana 39 (SS paga des del dia 2, amb cotització mínima per edat). Inclou text literal de la Disposició Final Tercera i protocol ASSIR de Catalunya.
 
-CONTENIDO PRINCIPAL
-===================
+CONTENIDO
+=========
 
 Resum executiu per al metge de família
 
@@ -178,8 +178,8 @@ RESUMEN EN ESPAÑOL
 
 La LO 1/2023 (en vigor desde el 1 de junio de 2023) crea tres situaciones especiales de IT por contingencias comunes: (1) menstruación incapacitante secundaria (dismenorrea por patología diagnosticada, SS paga desde el día 1, sin cotización mínima, cada proceso es nuevo); (2) interrupción del embarazo voluntaria o no (SS paga desde el día 2); (3) gestación desde la semana 39 (SS paga desde el día 2, con cotización mínima por edad). Incluye texto literal de la Disposición Final Tercera y protocolo ASSIR de Cataluña.
 
-CONTENIDO EN ESPAÑOL DISPONIBLE
-===============================
+CONTENIDO EN ESPAÑOL
+====================
 
 Resumen ejecutivo para el médico de familia
 

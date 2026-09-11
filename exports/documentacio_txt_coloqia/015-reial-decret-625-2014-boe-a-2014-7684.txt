@@ -1,29 +1,29 @@
-CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
-===========================================
+DOCUMENT CATALOG EXPORT
+=======================
 
 ID: 15
-Título principal: Reial Decret 625/2014 (BOE-A-2014-7684)
+Título: Reial Decret 625/2014 (BOE-A-2014-7684)
 Título en español: Real Decreto 625/2014 (BOE-A-2014-7684)
-Tipo documental: decreto
+Tipo: decreto
 Fuente: BOE - Ministeri d'Ocupació i Seguretat Social
 Ámbito: estatal
 Año de publicación: 2014
 Estado: vigent
-URL de la fuente: https://www.boe.es/buscar/act.php?id=BOE-A-2014-7684
+URL: https://www.boe.es/buscar/act.php?id=BOE-A-2014-7684
 Etiquetas: IT, parts mèdics, gestió IT, 365 dies, grups de processos, terminis confirmació, informe complementari, informe de control, mútues, INSS, tramitació electrònica, sistema RED, RD 625/2014
 
 AVISO
 =====
 
-Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+Exportació del catàleg documental de Consultes IT. Per a decisions professionals o jurídiques, cal verificar sempre la vigència i el text consolidat a la font oficial indicada.
 
-RESUMEN PRINCIPAL
-=================
+RESUMEN
+=======
 
 Reglament principal que regula la gestió i control dels processos d'IT durant els primers 365 dies. Estableix els quatre grups de processos amb terminis de confirmació (a: <5 dies, alta simultània; b: 5-30 dies, revisió ≤7 dies; c: 31-60 dies, revisió ≤7 dies; d: ≥61 dies, revisió ≤14 dies), els informes complementaris i de control trimestrals, les propostes d'alta de les mútues, la nova tramitació electrònica (des de l'01/04/2023 el treballador no lliura la còpia a l'empresa), i la competència exclusiva de l'INSS durant 180 dies quan ha emès l'alta. Modificat pel RD 231/2017 i el RD 1060/2022.
 
-CONTENIDO PRINCIPAL
-===================
+CONTENIDO
+=========
 
 Real Decreto 625/2014, de 18 de julio
 Gestión y control de los procesos de IT en los primeros 365 días
@@ -75,8 +75,8 @@ Contexto: Documento normativo: Real Decreto 625/2014 (BOE-A-2014-7684)
 
 Reglamento principal que regula la gestión y control de los procesos de IT durante los primeros 365 días. Establece los cuatro grupos de procesos con plazos de confirmación (a: <5 días, alta simultánea; b: 5-30 días, revisión ≤7 días; c: 31-60 días, revisión ≤7 días; d: ≥61 días, revisión ≤14 días), los informes complementarios y de control trimestrales, las propuestas de alta de las mutuas, la nueva tramitación electrónica (desde el 01/04/2023 el trabajador no entrega la copia a la empresa), y la competencia exclusiva del INSS durante 180 días cuando ha emitido el alta. Modificado por el RD 231/2017 y el RD 1060/2022.
 
-CONTENIDO EN ESPAÑOL DISPONIBLE
-===============================
+CONTENIDO EN ESPAÑOL
+====================
 
 Real Decreto 625/2014, de 18 de julio
 Gestión y control de los procesos de IT en los primeros 365 días

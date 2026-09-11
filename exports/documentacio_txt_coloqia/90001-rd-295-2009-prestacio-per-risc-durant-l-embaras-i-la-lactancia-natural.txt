@@ -1,29 +1,29 @@
-CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
-===========================================
+DOCUMENT CATALOG EXPORT
+=======================
 
 ID: 90001
-Título principal: RD 295/2009 - Prestació per risc durant l'embaràs i la lactància natural
+Título: RD 295/2009 - Prestació per risc durant l'embaràs i la lactància natural
 Título en español: RD 295/2009 - Prestación por riesgo durante el embarazo y la lactancia natural
-Tipo documental: decreto
+Tipo: decreto
 Fuente: BOE - Ministeri de Treball i Immigració
 Ámbito: estatal
 Año de publicación: 2009
 Estado: vigent
-URL de la fuente: https://www.boe.es/buscar/act.php?id=BOE-A-2009-4724
+URL: https://www.boe.es/buscar/act.php?id=BOE-A-2009-4724
 Etiquetas: risc embaràs, lactància natural, prestació, mútua, contingència professional, suspensió contracte, INSS, RD 295/2009
 
 AVISO
 =====
 
-Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+Exportació del catàleg documental de Consultes IT. Per a decisions professionals o jurídiques, cal verificar sempre la vigència i el text consolidat a la font oficial indicada.
 
-RESUMEN PRINCIPAL
-=================
+RESUMEN
+=======
 
 Resum del RD 295/2009 sobre les prestacions per risc durant l'embaràs i risc durant la lactància natural. Explica la situació protegida, la quantia (100% base reguladora de contingències professionals), la durada, les causes d'extinció i el procediment. Inclou el paper del metge de família (emetre l'informe d'embaràs, no la certificació del risc).
 
-CONTENIDO PRINCIPAL
-===================
+CONTENIDO
+=========
 
 Reial Decret 295/2009, de 6 de març
 Prestació per risc durant l'embaràs i risc durant la lactància natural
@@ -145,8 +145,8 @@ RESUMEN EN ESPAÑOL
 
 Resumen del RD 295/2009 sobre las prestaciones por riesgo durante el embarazo y riesgo durante la lactancia natural. Explica la situación protegida, la cuantía (100% base reguladora de contingencias profesionales), la duración, las causas de extinción y el procedimiento. Incluye el papel del médico de familia (emitir el informe de embarazo, no la certificación del riesgo).
 
-CONTENIDO EN ESPAÑOL DISPONIBLE
-===============================
+CONTENIDO EN ESPAÑOL
+====================
 
 Real Decreto 295/2009, de 6 de marzo
 Prestación por riesgo durante el embarazo y riesgo durante la lactancia natural

@@ -1,29 +1,29 @@
-CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
-===========================================
+DOCUMENT CATALOG EXPORT
+=======================
 
 ID: 60001
-Título principal: Reial Decret 1060/2022, de 27 de desembre (BOE-A-2023-160) - Gestió electrònica dels parts d'IT
+Título: Reial Decret 1060/2022, de 27 de desembre (BOE-A-2023-160) - Gestió electrònica dels parts d'IT
 Título en español: Real Decreto 1060/2022, de 27 de diciembre (BOE-A-2023-160) - Gestión electrónica de los partes de IT
-Tipo documental: decreto
+Tipo: decreto
 Fuente: BOE - Ministeri d'Inclusió, Seguretat Social i Migracions
 Ámbito: estatal
 Año de publicación: 2023
 Estado: vigent
-URL de la fuente: https://www.boe.es/buscar/act.php?id=BOE-A-2023-160
+URL: https://www.boe.es/buscar/act.php?id=BOE-A-2023-160
 Etiquetas: IT, parts mèdics, tramitació electrònica, RD 625/2014, gestió IT, sistema RED, INSS, RD 1060/2022
 
 AVISO
 =====
 
-Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+Exportació del catàleg documental de Consultes IT. Per a decisions professionals o jurídiques, cal verificar sempre la vigència i el text consolidat a la font oficial indicada.
 
-RESUMEN PRINCIPAL
-=================
+RESUMEN
+=======
 
 Modifica el RD 625/2014 eliminant l'obligació de la persona treballadora de lliurar la còpia en paper dels parts mèdics a l'empresa. Estableix la tramitació electrònica: l'INSS comunica directament a l'empresa l'expedició dels parts. Les empreses han de transmetre dades a l'INSS per sistema RED en 3 dies hàbils. Fixa quatre grups de processos amb terminis de confirmació: a) <5 dies (alta simultània), b) 5-30 dies (revisió ≤7 dies, confirmació ≤14 dies), c) 31-60 dies (revisió ≤7 dies, confirmació ≤28 dies), d) ≥61 dies (revisió ≤14 dies, confirmació ≤35 dies). Entrada en vigor: 1 d'abril de 2023.
 
-CONTENIDO PRINCIPAL
-===================
+CONTENIDO
+=========
 
 Reial Decret 1060/2022, de 27 de desembre
 
@@ -222,8 +222,8 @@ Contexto: Documento normativo: Real Decreto 1060/2022, de 27 de diciembre (BOE-A
 
 Modifica el RD 625/2014 eliminando la obligación de la persona trabajadora de entregar la copia en papel de los partes médicos a la empresa. Establece la tramitación electrónica: el INSS comunica directamente a la empresa la expedición de los partes. Las empresas deben transmitir datos al INSS por sistema RED en 3 días hábiles. Fija cuatro grupos de procesos con plazos de confirmación: a) <5 días (alta simultánea), b) 5-30 días (revisión ≤7 días, confirmación ≤14 días), c) 31-60 días (revisión ≤7 días, confirmación ≤28 días), d) ≥61 días (revisión ≤14 días, confirmación ≤35 días). Entrada en vigor: 1 de abril de 2023.
 
-CONTENIDO EN ESPAÑOL DISPONIBLE
-===============================
+CONTENIDO EN ESPAÑOL
+====================
 
 Real Decreto 1060/2022, de 27 de diciembre
 

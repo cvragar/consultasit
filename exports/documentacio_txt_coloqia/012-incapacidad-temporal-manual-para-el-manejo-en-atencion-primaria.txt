@@ -1,24 +1,24 @@
-CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
-===========================================
+DOCUMENT CATALOG EXPORT
+=======================
 
 ID: 12
-Título principal: Incapacidad Temporal: Manual para el manejo en atención primaria
+Título: Incapacidad Temporal: Manual para el manejo en atención primaria
 Título en español: Incapacidad Temporal: Manual para el manejo en atención primaria
-Tipo documental: manual
+Tipo: manual
 Fuente: AMAT - Associació de Mútues d'Accidents de Treball
 Ámbito: estatal
 Año de publicación: 2014
 Estado: vigent
-URL de la fuente: https://amat.es/wp-content/uploads/2021/03/incapacidad-temporal-manual-para-el-manejo-en-atencion-primaria.pdf
+URL: https://amat.es/wp-content/uploads/2021/03/incapacidad-temporal-manual-para-el-manejo-en-atencion-primaria.pdf
 Etiquetas: manual, atencion_primaria, gestion
 
 AVISO
 =====
 
-Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+Exportació del catàleg documental de Consultes IT. Per a decisions professionals o jurídiques, cal verificar sempre la vigència i el text consolidat a la font oficial indicada.
 
-CONTENIDO PRINCIPAL
-===================
+CONTENIDO
+=========
 
 INCAPACIDAD TEMPORAL
 MANUAL PARA EL MANEJO
@@ -1053,8 +1053,8 @@ zar actividades encaminadas al control de la misma, aunque para ello
 precisen de distintos permisos y consentimientos, dependiendo de si se trata
 del
 
-CONTENIDO EN ESPAÑOL DISPONIBLE
-===============================
+CONTENIDO EN ESPAÑOL
+====================
 
 INCAPACIDAD TEMPORAL
 MANUAL PARA EL MANEJO

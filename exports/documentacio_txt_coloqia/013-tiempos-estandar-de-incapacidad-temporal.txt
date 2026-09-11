@@ -1,24 +1,24 @@
-CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
-===========================================
+DOCUMENT CATALOG EXPORT
+=======================
 
 ID: 13
-Título principal: Tiempos estándar de Incapacidad Temporal
+Título: Tiempos estándar de Incapacidad Temporal
 Título en español: Tiempos estándar de Incapacidad Temporal
-Tipo documental: guia
+Tipo: guia
 Fuente: INSS - Institut Nacional de la Seguretat Social
 Ámbito: estatal
 Año de publicación: 2023
 Estado: vigent
-URL de la fuente: https://www.seg-social.es/wps/portal/wss/internet/Conocenos/Publicaciones/28156/47075/62e20eb4-bd64-47cb-a4ac-b55b39428d9f/manual-de-tiempos-optimos-de-incapacidad-temporal-%284--edicion%29
+URL: https://www.seg-social.es/wps/portal/wss/internet/Conocenos/Publicaciones/28156/47075/62e20eb4-bd64-47cb-a4ac-b55b39428d9f/manual-de-tiempos-optimos-de-incapacidad-temporal-%284--edicion%29
 Etiquetas: tiempos_estandar, duracion, inss
 
 AVISO
 =====
 
-Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+Exportació del catàleg documental de Consultes IT. Per a decisions professionals o jurídiques, cal verificar sempre la vigència i el text consolidat a la font oficial indicada.
 
-CONTENIDO PRINCIPAL
-===================
+CONTENIDO
+=========
 
 INSS
 GOBIERNO
@@ -2637,8 +2637,8 @@ Migraña común
 346.10
 Migraña com
 
-CONTENIDO EN ESPAÑOL DISPONIBLE
-===============================
+CONTENIDO EN ESPAÑOL
+====================
 
 INSS
 GOBIERNO

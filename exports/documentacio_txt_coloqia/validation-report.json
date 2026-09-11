@@ -1,0 +1,12 @@
+{
+  "input_records": 12,
+  "exported_records": 12,
+  "formats": [
+    "txt"
+  ],
+  "empty_files": [],
+  "invalid_utf8_files": [],
+  "txt_markdown_artifacts": [],
+  "warnings": [],
+  "valid": true
+}

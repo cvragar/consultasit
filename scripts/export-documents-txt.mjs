@@ -1,199 +1,158 @@
 import "dotenv/config";
+import { spawnSync } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import mysql from "mysql2/promise";
 
 const outputDir = path.resolve("exports/documentacio_txt_coloqia");
+const catalogPath = path.resolve("exports/documentation_catalog.json");
+const zipPath = `${outputDir}.zip`;
+const catalogExporterPath = process.env.DOCUMENT_CATALOG_EXPORTER
+  ?? "/home/ubuntu/skills/document-catalog-exporter/scripts/export_catalog.py";
 
-function slugify(value) {
-  return value
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 90);
-}
+const notice = [
+  "Exportació del catàleg documental de Consultes IT.",
+  "Per a decisions professionals o jurídiques, cal verificar sempre la vigència i el text consolidat a la font oficial indicada.",
+].join(" ");
 
-function normalizeText(value) {
-  return String(value ?? "")
-    .replace(/\r\n/g, "\n")
-    .replace(/\r/g, "\n")
-    .replace(/\u0000/g, "")
-    .trim();
-}
+const coloqiaInstructions = [
+  "INSTRUCCIONS D'ÚS DEL CORPUS DOCUMENTAL",
+  "=======================================",
+  "",
+  "OBJECTIU",
+  "========",
+  "",
+  "Aquest corpus conté 12 documents independents sobre incapacitat temporal. Cada fitxer està codificat en UTF-8, usa text pla i conserva el títol, la font, l'àmbit, l'estat, l'URL, les etiquetes i el contingut disponible en català i castellà.",
+  "",
+  "CRITERIS PER A L'ASSISTENT",
+  "===========================",
+  "",
+  "1. Identificar primer el document o documents rellevants mitjançant 00-INDEX.txt i la seva font, àmbit i estat.",
+  "2. Respondre en l'idioma de la consulta. Quan existeixi, utilitzar el bloc català per a preguntes en català i el bloc castellà per a preguntes en castellà.",
+  "3. Separar clarament el criteri aplicable, la base normativa, el procediment pràctic i la font que cal verificar.",
+  "4. No presentar un document derogat, en revisió o merament orientatiu com si fos normativa vigent.",
+  "5. Si falten dades decisives, com ara dates, durada acumulada, contingència, règim laboral o organisme emissor de l'alta, formular una pregunta aclaridora concreta.",
+  "6. No completar dades per intuïció ni convertir exemples orientatius en regles generals.",
+  "7. Quan el cas no encaixi de manera inequívoca o hi hagi conflicte entre fonts, reconèixer la incertesa i recomanar revisar la font oficial o l'organisme competent.",
+  "8. Citar la font i l'URL incloses al document. Si la resposta pot dependre d'una modificació normativa, indicar que cal consultar el text consolidat vigent.",
+  "9. No sol·licitar ni reproduir dades personals identificatives ni informació clínica innecessària.",
+  "10. Presentar el contingut com a suport professional i informatiu, no com a substitut de la valoració clínica, administrativa o jurídica individual.",
+  "",
+  "ORDRE RECOMANAT DE CÀRREGA",
+  "==========================",
+  "",
+  "1. Carregar els 12 fitxers documentals TXT individuals.",
+  "2. Carregar 00-INDEX.txt perquè Coloq.ia conegui el catàleg complet.",
+  "3. Carregar aquest fitxer d'instruccions si Coloq.ia permet incorporar directrius al corpus.",
+  "4. No cal carregar manifest.json ni validation-report.json; són fitxers tècnics de control.",
+  "",
+].join("\n");
 
-function markdownToPlainText(value) {
-  return normalizeText(value)
-    .replace(/```[^\n]*\n?/g, "")
-    .replace(/```/g, "")
-    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, "$1. Imagen: $2")
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1 ($2)")
-    .replace(/^#{1,6}\s+/gm, "")
-    .replace(/^>\s?/gm, "")
-    .replace(/^\s*[-*_]{3,}\s*$/gm, "")
-    .replace(/^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/gm, "")
-    .replace(/^\s*\|\s?/gm, "")
-    .replace(/\s?\|\s*$/gm, "")
-    .replace(/\s*\|\s*/g, " ; ")
-    .replace(/\*\*([^*]+)\*\*/g, "$1")
-    .replace(/__([^_]+)__/g, "$1")
-    .replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g, "$1")
-    .replace(/(?<!_)_([^_\n]+)_(?!_)/g, "$1")
-    .replace(/`([^`]+)`/g, "$1")
-    .replace(/<br\s*\/?>/gi, "\n")
-    .replace(/<[^>]+>/g, "")
-    .replace(/[ \t]+$/gm, "")
-    .replace(/\n{3,}/g, "\n\n")
-    .trim();
-}
-
-function parseTags(value) {
-  if (Array.isArray(value)) return value;
-  if (!value) return [];
-  try {
-    const parsed = JSON.parse(value);
-    return Array.isArray(parsed) ? parsed : [];
-  } catch {
-    return [];
-  }
-}
-
-function section(title, body) {
-  const cleanBody = markdownToPlainText(body);
-  if (!cleanBody) return "";
-  return `${title}\n${"=".repeat(title.length)}\n\n${cleanBody}\n`;
-}
-
-function renderDocument(document) {
-  const tags = parseTags(document.tags);
-  const titleEs = normalizeText(document.titleEs) || normalizeText(document.title);
-  const lines = [
-    "CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA",
-    "===========================================",
-    "",
-    `ID: ${document.id}`,
-    `Título principal: ${normalizeText(document.title)}`,
-    `Título en español: ${titleEs}`,
-    `Tipo documental: ${document.type ?? "No indicado"}`,
-    `Fuente: ${document.source ?? "No indicada"}`,
-    `Ámbito: ${document.jurisdiction ?? "No indicado"}`,
-    `Año de publicación: ${document.publicationYear ?? "No indicado"}`,
-    `Estado: ${document.status ?? "No indicado"}`,
-    `URL de la fuente: ${document.url ?? "No disponible"}`,
-    `Etiquetas: ${tags.length ? tags.join(", ") : "No indicadas"}`,
-    "",
-    "AVISO",
-    "=====",
-    "",
-    "Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.",
-    "",
-  ];
-
-  const summary = section("RESUMEN PRINCIPAL", document.summary);
-  if (summary) lines.push(summary);
-
-  lines.push(section("CONTENIDO PRINCIPAL", document.content) || "CONTENIDO PRINCIPAL\n===================\n\nSin contenido disponible.\n");
-
-  const summaryEs = section("RESUMEN EN ESPAÑOL", document.summaryEs);
-  if (summaryEs) lines.push(summaryEs);
-
-  const contentEs = section("CONTENIDO EN ESPAÑOL DISPONIBLE", document.contentEs);
-  if (contentEs) lines.push(contentEs);
-
-  return `${lines.join("\n").replace(/\n{3,}/g, "\n\n").trim()}\n`;
-}
-
-function renderIndex(documents) {
-  const counts = new Map();
-  for (const document of documents) {
-    counts.set(document.type, (counts.get(document.type) ?? 0) + 1);
-  }
-
-  const lines = [
-    "ÍNDICE DE DOCUMENTACIÓN — CONSULTES IT",
-    "=======================================",
-    "",
-    `Número total de documentos: ${documents.length}`,
-    "Codificación: UTF-8",
-    "Formato: texto plano TXT, sin sintaxis Markdown",
-    "",
-    "RESUMEN POR TIPO",
-    "================",
-    "",
-    ...[...counts.entries()].map(([type, count]) => `${type}: ${count}`),
-    "",
-    "CATÁLOGO COMPLETO",
-    "=================",
-    "",
-  ];
-
-  documents.forEach((document, index) => {
-    lines.push(
-      `${index + 1}. ${normalizeText(document.title)}`,
-      `   Archivo: ${document.fileName}`,
-      `   Tipo: ${document.type}`,
-      `   Fuente: ${document.source ?? "No indicada"}`,
-      `   Ámbito: ${document.jurisdiction ?? "No indicado"}`,
-      `   Estado: ${document.status ?? "No indicado"}`,
-      `   URL: ${document.url ?? "No disponible"}`,
-      "",
-    );
+function run(command, args, options = {}) {
+  const result = spawnSync(command, args, {
+    encoding: "utf8",
+    ...options,
   });
 
-  return `${lines.join("\n").trim()}\n`;
+  if (result.error) {
+    throw new Error(`No s'ha pogut executar ${command}: ${result.error.message}`);
+  }
+  if (result.status !== 0) {
+    throw new Error([
+      `L'ordre ${command} ha finalitzat amb el codi ${result.status}.`,
+      result.stdout?.trim(),
+      result.stderr?.trim(),
+    ].filter(Boolean).join("\n"));
+  }
+
+  return result.stdout;
 }
 
-async function main() {
+async function createCatalogSource() {
   if (!process.env.DATABASE_URL) {
-    throw new Error("DATABASE_URL no está disponible en el entorno.");
+    throw new Error("DATABASE_URL no està disponible a l'entorn.");
   }
 
   const connection = await mysql.createConnection(process.env.DATABASE_URL);
-  const [rows] = await connection.query(`
-    SELECT
-      id, title, titleEs, type, source, jurisdiction, content, summary,
-      url, tags, publicationYear, status, summaryEs, contentEs
-    FROM documents
-    ORDER BY type, publicationYear, id
-  `);
-  await connection.end();
+  try {
+    const [rows] = await connection.query(`
+      SELECT
+        id, title, titleEs, type, source, jurisdiction, content, summary,
+        url, tags, publicationYear, status, summaryEs, contentEs,
+        createdAt, updatedAt
+      FROM documents
+      ORDER BY type, publicationYear, id
+    `);
 
-  await fs.rm(outputDir, { recursive: true, force: true });
-  await fs.mkdir(outputDir, { recursive: true });
+    await fs.writeFile(catalogPath, `${JSON.stringify(rows, null, 2)}\n`, "utf8");
+    return rows.length;
+  } finally {
+    await connection.end();
+  }
+}
 
-  const documents = [];
-  for (const row of rows) {
-    const fileName = `${String(row.id).padStart(3, "0")}-${slugify(row.title) || `document-${row.id}`}.txt`;
-    const document = { ...row, fileName };
-    await fs.writeFile(path.join(outputDir, fileName), renderDocument(document), "utf8");
-    documents.push(document);
+async function validateExport(expectedRecords) {
+  const reportPath = path.join(outputDir, "validation-report.json");
+  const report = JSON.parse(await fs.readFile(reportPath, "utf8"));
+
+  if (
+    !report.valid
+    || report.input_records !== expectedRecords
+    || report.exported_records !== expectedRecords
+    || report.empty_files.length
+    || report.invalid_utf8_files.length
+    || report.txt_markdown_artifacts.length
+    || report.warnings.length
+  ) {
+    throw new Error(`La validació de l'exportació no s'ha superat:\n${JSON.stringify(report, null, 2)}`);
   }
 
-  await fs.writeFile(path.join(outputDir, "00-INDICE.txt"), renderIndex(documents), "utf8");
+  const textFiles = (await fs.readdir(outputDir)).filter(file => file.endsWith(".txt"));
+  for (const fileName of textFiles) {
+    const raw = await fs.readFile(path.join(outputDir, fileName));
+    let text;
+    try {
+      text = new TextDecoder("utf-8", { fatal: true }).decode(raw);
+    } catch {
+      throw new Error(`El fitxer ${fileName} no està codificat correctament en UTF-8.`);
+    }
+
+    const hasUnsupportedSyntax = /^#{1,6}\s/m.test(text)
+      || /\[[^\]]+\]\([^)]+\)/.test(text)
+      || text.includes("```")
+      || /[\u0000-\u0008\u000B\u000C\u000E-\u001F]/.test(text);
+
+    if (!text.trim() || !text.endsWith("\n") || hasUnsupportedSyntax) {
+      throw new Error(`El fitxer ${fileName} no compleix el format de text pla per a Coloq.ia.`);
+    }
+  }
+}
+
+async function main() {
+  const recordCount = await createCatalogSource();
+
+  run("python3", [
+    catalogExporterPath,
+    "--input", catalogPath,
+    "--output-dir", outputDir,
+    "--format", "txt",
+    "--notice", notice,
+    "--clean",
+    "--strict",
+  ]);
+
   await fs.writeFile(
-    path.join(outputDir, "00-LEEME.txt"),
-    [
-      "PAQUETE DOCUMENTAL DE CONSULTES IT PARA COLOQ.IA",
-      "================================================",
-      "",
-      `Este paquete contiene ${documents.length} documentos independientes y un índice general.`,
-      "Todos los archivos están codificados en UTF-8 y utilizan texto plano.",
-      "No contienen cabeceras YAML, tablas Markdown, enlaces Markdown ni marcas de formato.",
-      "",
-      "Recomendación de importación:",
-      "1. Descomprimir el archivo ZIP.",
-      "2. Cargar los 12 archivos documentales TXT en Coloq.IA.",
-      "3. Cargar también 00-INDICE.txt si se desea que el asistente conozca el catálogo completo.",
-      "4. 00-LEEME.txt es informativo y no es necesario indexarlo.",
-      "",
-      "Aviso: el contenido debe contrastarse con la fuente oficial antes de utilizarse para decisiones profesionales o jurídicas.",
-      "",
-    ].join("\n"),
+    path.join(outputDir, "00-INSTRUCCIONES-COLOQIA.txt"),
+    coloqiaInstructions,
     "utf8",
   );
 
-  console.log(`Exportados ${documents.length} documentos TXT a ${outputDir}`);
+  await validateExport(recordCount);
+  await fs.rm(zipPath, { force: true });
+  run("zip", ["-rq", zipPath, path.basename(outputDir)], { cwd: path.dirname(outputDir) });
+
+  console.log(`Exportats ${recordCount} documents TXT a ${outputDir}`);
+  console.log(`ZIP generat: ${zipPath}`);
 }
 
 main().catch(error => {

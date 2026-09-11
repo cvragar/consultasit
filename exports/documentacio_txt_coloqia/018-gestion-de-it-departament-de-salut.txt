@@ -1,24 +1,24 @@
-CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
-===========================================
+DOCUMENT CATALOG EXPORT
+=======================
 
 ID: 18
-Título principal: Gestión de IT - Departament de Salut
+Título: Gestión de IT - Departament de Salut
 Título en español: Gestión de IT - Departamento de Salud
-Tipo documental: guia
+Tipo: guia
 Fuente: Departament de Salut - Generalitat de Catalunya
 Ámbito: autonomica
 Año de publicación: 2023
 Estado: vigent
-URL de la fuente: https://canalsalut.gencat.cat/ca/salut-a-z/a/avaluacions-mediques/baixa-medica/
+URL: https://canalsalut.gencat.cat/ca/salut-a-z/a/avaluacions-mediques/baixa-medica/
 Etiquetas: catalunya, gestion, departament_salut
 
 AVISO
 =====
 
-Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+Exportació del catàleg documental de Consultes IT. Per a decisions professionals o jurídiques, cal verificar sempre la vigència i el text consolidat a la font oficial indicada.
 
-CONTENIDO PRINCIPAL
-===================
+CONTENIDO
+=========
 
 Gestió de la Incapacitat Temporal (IT) - Departament de Salut Catalunya
 
@@ -94,8 +94,8 @@ Resumen ejecutivo
 
 Este folleto documenta una iniciativa del Departament de Salut de Catalunya implementada desde el 1 de julio de 2024, que centraliza la gestión de bajas laborales por IT en el ámbito hospitalario para pacientes hospitalizados, pacientes de CMA y mujeres que ingresan por parto con baja activa. El objetivo es mejorar la experiencia del paciente evitando desplazamientos innecesarios y simplificando los trámites administrativos, con coordinación entre el hospital y la atención primaria para el seguimiento posterior.
 
-CONTENIDO EN ESPAÑOL DISPONIBLE
-===============================
+CONTENIDO EN ESPAÑOL
+====================
 
 Gestión de la Incapacidad Temporal (IT) - Departamento de Salud Cataluña
 

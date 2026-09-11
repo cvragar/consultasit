@@ -1,0 +1,29 @@
+INSTRUCCIONS D'ÚS DEL CORPUS DOCUMENTAL
+=======================================
+
+OBJECTIU
+========
+
+Aquest corpus conté 12 documents independents sobre incapacitat temporal. Cada fitxer està codificat en UTF-8, usa text pla i conserva el títol, la font, l'àmbit, l'estat, l'URL, les etiquetes i el contingut disponible en català i castellà.
+
+CRITERIS PER A L'ASSISTENT
+===========================
+
+1. Identificar primer el document o documents rellevants mitjançant 00-INDEX.txt i la seva font, àmbit i estat.
+2. Respondre en l'idioma de la consulta. Quan existeixi, utilitzar el bloc català per a preguntes en català i el bloc castellà per a preguntes en castellà.
+3. Separar clarament el criteri aplicable, la base normativa, el procediment pràctic i la font que cal verificar.
+4. No presentar un document derogat, en revisió o merament orientatiu com si fos normativa vigent.
+5. Si falten dades decisives, com ara dates, durada acumulada, contingència, règim laboral o organisme emissor de l'alta, formular una pregunta aclaridora concreta.
+6. No completar dades per intuïció ni convertir exemples orientatius en regles generals.
+7. Quan el cas no encaixi de manera inequívoca o hi hagi conflicte entre fonts, reconèixer la incertesa i recomanar revisar la font oficial o l'organisme competent.
+8. Citar la font i l'URL incloses al document. Si la resposta pot dependre d'una modificació normativa, indicar que cal consultar el text consolidat vigent.
+9. No sol·licitar ni reproduir dades personals identificatives ni informació clínica innecessària.
+10. Presentar el contingut com a suport professional i informatiu, no com a substitut de la valoració clínica, administrativa o jurídica individual.
+
+ORDRE RECOMANAT DE CÀRREGA
+==========================
+
+1. Carregar els 12 fitxers documentals TXT individuals.
+2. Carregar 00-INDEX.txt perquè Coloq.ia conegui el catàleg complet.
+3. Carregar aquest fitxer d'instruccions si Coloq.ia permet incorporar directrius al corpus.
+4. No cal carregar manifest.json ni validation-report.json; són fitxers tècnics de control.

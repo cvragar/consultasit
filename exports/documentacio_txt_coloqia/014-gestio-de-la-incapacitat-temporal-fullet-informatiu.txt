@@ -1,24 +1,24 @@
-CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
-===========================================
+DOCUMENT CATALOG EXPORT
+=======================
 
 ID: 14
-Título principal: Gestió de la incapacitat temporal - Fullet informatiu
+Título: Gestió de la incapacitat temporal - Fullet informatiu
 Título en español: Gestión de la incapacidad temporal - Folleto informativo
-Tipo documental: guia
+Tipo: guia
 Fuente: Departament de Salut - Generalitat de Catalunya
 Ámbito: autonomica
 Año de publicación: 2022
 Estado: vigent
-URL de la fuente: https://scientiasalut.gencat.cat/handle/11351/9547.3
+URL: https://scientiasalut.gencat.cat/handle/11351/9547.3
 Etiquetas: catalunya, gestion, informacion
 
 AVISO
 =====
 
-Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+Exportació del catàleg documental de Consultes IT. Per a decisions professionals o jurídiques, cal verificar sempre la vigència i el text consolidat a la font oficial indicada.
 
-CONTENIDO PRINCIPAL
-===================
+CONTENIDO
+=========
 
 Gestió de la incapacitat temporal (IT):
 · De les persones hospitalitzades.
@@ -78,8 +78,8 @@ hi consten siguin correctes.
 Millorem l’experiència ciutadana. Transformem el sistema!
 2024. © Generalitat de Catalunya. Departament de Salut (01.07.2024)
 
-CONTENIDO EN ESPAÑOL DISPONIBLE
-===============================
+CONTENIDO EN ESPAÑOL
+====================
 
 Gestión de la incapacidad temporal (IT):
 · De las personas hospitalizadas.

@@ -1,29 +1,29 @@
-CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
-===========================================
+DOCUMENT CATALOG EXPORT
+=======================
 
 ID: 19
-Título principal: Gestió de la IT en l'Àmbit Hospitalari - Catalunya (ICS / Canal Salut)
+Título: Gestió de la IT en l'Àmbit Hospitalari - Catalunya (ICS / Canal Salut)
 Título en español: Gestión de la IT en el Ámbito Hospitalario - Cataluña (ICS / Canal Salud)
-Tipo documental: guia
+Tipo: guia
 Fuente: Institut Català de la Salut (ICS) - Generalitat de Catalunya
 Ámbito: autonomica
 Año de publicación: 2024
 Estado: vigent
-URL de la fuente: https://canalsalut.gencat.cat/ca/salut-a-z/a/avaluacions-mediques/baixa-medica/gestio-ingres-hospitalari/
+URL: https://canalsalut.gencat.cat/ca/salut-a-z/a/avaluacions-mediques/baixa-medica/gestio-ingres-hospitalari/
 Etiquetas: IT hospitalari, ICS, Catalunya, ingrés hospitalari, CMA, cirurgia major ambulatòria, ZAS_GESTIO_IT, eCap, Canal Salut, hospitalització prolongada, part, baixa laboral hospital, RD 625/2014
 
 AVISO
 =====
 
-Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+Exportació del catàleg documental de Consultes IT. Per a decisions professionals o jurídiques, cal verificar sempre la vigència i el text consolidat a la font oficial indicada.
 
-RESUMEN PRINCIPAL
-=================
+RESUMEN
+=======
 
 Protocol de gestió de la IT en l'àmbit hospitalari a Catalunya (ICS). Des de 2023-2024, les IT per ingrés hospitalari, CMA i alta per part es gestionen des del mateix hospital via plataforma integrada (ZASGESTIOIT). Cobreix: ingressos ≥7 dies (comunicat automàtic 14 dies), CMA (<5 dies: baixa+alta simultànies; ≥5 dies: seguiment al CAP), ingrés per part (alta IT dia anterior al part), coordinació hospital-eCap, hospitalitzacions prolongades (grups RD 625/2014), errors de documentació, embaràs de risc, AT/MP, i resum executiu per al metge de família.
 
-CONTENIDO PRINCIPAL
-===================
+CONTENIDO
+=========
 
 Gestió de la Incapacitat Temporal (IT) en l'Àmbit Hospitalari - Catalunya (ICS)
 
@@ -134,8 +134,8 @@ RESUMEN EN ESPAÑOL
 
 Protocolo de gestión de la IT en el ámbito hospitalario en Cataluña (ICS). Desde 2023-2024, las IT por ingreso hospitalario, CMA y alta por parto se gestionan desde el propio hospital vía plataforma integrada (ZASGESTIOIT). Cubre: ingresos ≥7 días (comunicado automático 14 días), CMA (<5 días: baja+alta simultáneas; ≥5 días: seguimiento en el CAP), ingreso por parto (alta IT día anterior al parto), coordinación hospital-eCAP, hospitalizaciones prolongadas (grupos RD 625/2014), errores de documentación, embarazo de riesgo, AT/MP, y resumen ejecutivo para el médico de familia.
 
-CONTENIDO EN ESPAÑOL DISPONIBLE
-===============================
+CONTENIDO EN ESPAÑOL
+====================
 
 Gestión de la Incapacidad Temporal (IT) en el Ámbito Hospitalario - Cataluña (ICS)
 
