@@ -522,7 +522,7 @@ export default function Admin() {
                 Joc de proves per a Coloq.ia
               </CardTitle>
               <CardDescription className="mt-1">
-                Genera un ZIP pla amb preguntes de prova, resultats esperats, criteris de puntuació i penalitzacions. Serveix per avaluar el bot; no és coneixement normatiu per carregar al corpus.
+                Genera un Excel compatible amb Coloq.ia: una fila per prova, preguntes, resultats esperats, criteris de puntuació i penalitzacions. Serveix per avaluar el bot; no és coneixement normatiu.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -539,7 +539,7 @@ export default function Admin() {
                   {generateTestSuite.isPending ? (
                     <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Generant...</>
                   ) : (
-                    <><Download className="mr-2 h-4 w-4" />Descarregar joc de proves</>
+                    <><Download className="mr-2 h-4 w-4" />Descarregar Excel de proves</>
                   )}
                 </Button>
               </div>

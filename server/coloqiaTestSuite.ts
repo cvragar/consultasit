@@ -1,4 +1,4 @@
-import { strToU8, zipSync } from "fflate";
+import * as XLSX from "xlsx";
 
 export const COLOQIA_TEST_SUITE_VERSION = "2026.09.11.1";
 
@@ -401,96 +401,55 @@ const testCases: ColoqiaTestCase[] = [
   },
 ];
 
-function plainTestList(cases: ColoqiaTestCase[]) {
-  return [
-    "JOC DE PROVES PER A COLOQ.IA",
-    "============================",
-    "",
-    "Aquest fitxer conté les preguntes, els criteris esperats i les penalitzacions de cada prova.",
-    "No el carreguis com a font normativa: utilitza'l per avaluar les respostes del bot després d'haver carregat el corpus de coneixement.",
-    "",
-    ...cases.flatMap(testCase => [
-      `ID: ${testCase.id}`,
-      `CATEGORIA: ${testCase.category}`,
-      `IDIOMA DE LA RESPOSTA: ${testCase.language}`,
-      `PREGUNTA: ${testCase.prompt}`,
-      "PUNTS ESPERATS:",
-      ...testCase.expected_points.map(point => `- ${point}`),
-      "CRITERIS OBLIGATORIS:",
-      ...testCase.scoring.must_include.map(point => `- ${point}`),
-      "PENALITZACIONS:",
-      ...testCase.scoring.penalties.map(point => `- ${point}`),
-      `PUNTUACIÓ MÀXIMA: ${testCase.scoring.maximum}`,
-      `REFERÈNCIA DEL CORPUS: ${testCase.corpus_reference.join(" | ")}`,
-      "",
-    ]),
-  ].join("\n");
-}
-
-function instructions(testCount: number) {
-  return [
-    "COM UTILITZAR EL JOC DE PROVES",
-    "==============================",
-    "",
-    `Aquest paquet conté ${testCount} proves independents per comprovar la qualitat d'un bot configurat amb el corpus de Consultes IT a Coloq.ia.`,
-    "",
-    "PROCEDIMENT RECOMANAT",
-    "======================",
-    "",
-    "1. Carrega primer el corpus de coneixement a Coloq.ia. No carreguis aquest joc de proves com si fos coneixement normatiu.",
-    "2. Obre una conversa nova per a cada prova, així evites que una resposta contamini la següent.",
-    "3. Copia literalment el camp prompt de cada registre del JSON o la pregunta del TXT.",
-    "4. Compara la resposta amb expected_points i must_include.",
-    "5. Dona una puntuació de 0 a 5. Resta punts si apareix una penalització, si inventa normes, si no demana dades decisives o si respon en un idioma diferent.",
-    "6. Conserva la resposta original, la puntuació i un comentari breu per a cada ID.",
-    "",
-    "FITXERS DEL PAQUET",
-    "===================",
-    "",
-    "- juego-pruebas-coloqia.json: format estructurat per importar o processar si Coloq.ia accepta JSON.",
-    "- juego-pruebas-coloqia.txt: versió llegible per a revisió manual.",
-    "- 00-LEEME-JUEGO-DE-PRUEBAS.txt: aquestes instruccions.",
-    "",
-    "AVÍS",
-    "====",
-    "",
-    "Aquest joc avalua la qualitat de recuperació i de resposta del bot. No substitueix una validació clínica, administrativa o jurídica professional, ni acredita el compliment normatiu.",
-  ].join("\n");
-}
-
 export function generateColoqiaTestSuite(date = new Date()): ColoqiaTestSuite {
   const generatedAt = date.toISOString();
-  const payload = {
-    suite: "Joc de proves Consultes IT per a Coloq.ia",
-    generated_at: generatedAt,
-    version: COLOQIA_TEST_SUITE_VERSION,
-    language: "ca",
-    scoring_scale: "0 a 5 punts per prova",
-    tests: testCases,
-  };
-  const validation = {
-    generated_at: generatedAt,
-    version: COLOQIA_TEST_SUITE_VERSION,
-    tests: testCases.length,
-    unique_ids: new Set(testCases.map(testCase => testCase.id)).size,
-    valid: testCases.every(testCase => (
-      Boolean(testCase.prompt.trim())
-      && testCase.expected_points.length > 0
-      && testCase.scoring.maximum === 5
-    )),
-  };
-  const files: Record<string, Uint8Array> = {
-    "00-LEEME-JUEGO-DE-PRUEBAS.txt": strToU8(`${instructions(testCases.length).trim()}\n`),
-    "juego-pruebas-coloqia.json": strToU8(`${JSON.stringify(payload, null, 2)}\n`),
-    "juego-pruebas-coloqia.txt": strToU8(`${plainTestList(testCases).trim()}\n`),
-    "validation-report.json": strToU8(`${JSON.stringify(validation, null, 2)}\n`),
-  };
+  const workbook = XLSX.utils.book_new();
+  const rows = testCases.map(testCase => ({
+    "ID Prueba": testCase.id,
+    "Categoría": testCase.category,
+    "Idioma esperado": testCase.language,
+    "Pregunta": testCase.prompt,
+    "Puntos esperados": testCase.expected_points.map(point => `• ${point}`).join("\n"),
+    "Criterios obligatorios": testCase.scoring.must_include.map(point => `• ${point}`).join("\n"),
+    "Penalizaciones": testCase.scoring.penalties.map(point => `• ${point}`).join("\n"),
+    "Puntuación máxima": testCase.scoring.maximum,
+    "Referencia del corpus": testCase.corpus_reference.join(" | "),
+    "Puntuación obtenida": "",
+    "Respuesta del bot": "",
+    "Observaciones": "",
+  }));
+  const testsSheet = XLSX.utils.json_to_sheet(rows);
+  testsSheet["!cols"] = [
+    { wch: 12 }, { wch: 18 }, { wch: 16 }, { wch: 62 },
+    { wch: 70 }, { wch: 45 }, { wch: 48 }, { wch: 20 },
+    { wch: 42 }, { wch: 20 }, { wch: 65 }, { wch: 45 },
+  ];
+  XLSX.utils.book_append_sheet(workbook, testsSheet, "Pruebas");
+
+  const instructionsRows = [
+    ["JUEGO DE PRUEBAS PARA COLOQ.IA"],
+    ["Versión", COLOQIA_TEST_SUITE_VERSION],
+    ["Generado (UTC)", generatedAt],
+    ["Número de pruebas", testCases.length],
+    [],
+    ["CÓMO UTILIZARLO"],
+    ["1", "Carga primero el corpus de conocimiento en Coloq.ia. Este Excel sirve para evaluar el bot y no debe cargarse como conocimiento normativo."],
+    ["2", "Crea una conversación nueva para cada prueba y copia literalmente la columna Pregunta."],
+    ["3", "Evalúa la respuesta con Puntos esperados, Criterios obligatorios y Penalizaciones."],
+    ["4", "Registra la respuesta del bot, la puntuación obtenida de 0 a 5 y las observaciones en las últimas columnas de la hoja Pruebas."],
+    [],
+    ["FORMATO DE IMPORTACIÓN"],
+    ["Una fila equivale a un caso de prueba. No cambies los encabezados de la hoja Pruebas al importarla en Coloq.ia."],
+  ];
+  const instructionsSheet = XLSX.utils.aoa_to_sheet(instructionsRows);
+  instructionsSheet["!cols"] = [{ wch: 24 }, { wch: 120 }];
+  XLSX.utils.book_append_sheet(workbook, instructionsSheet, "Instrucciones");
 
   return {
-    filename: "juego-pruebas-consultes-it-coloqia.zip",
+    filename: "juego-pruebas-consultes-it-coloqia.xlsx",
     version: COLOQIA_TEST_SUITE_VERSION,
     generatedAt,
     testCount: testCases.length,
-    archive: Buffer.from(zipSync(files, { level: 6 })),
+    archive: Buffer.from(XLSX.write(workbook, { bookType: "xlsx", type: "buffer" })),
   };
 }

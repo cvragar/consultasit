@@ -648,7 +648,11 @@ IMPORTANT:
       const testSuite = generateColoqiaTestSuite();
       const timestamp = testSuite.generatedAt.replace(/[:.]/g, "-");
       const objectKey = `jocs-proves-coloqia/${timestamp}-${testSuite.filename}`;
-      const upload = await storagePut(objectKey, testSuite.archive, "application/zip");
+      const upload = await storagePut(
+        objectKey,
+        testSuite.archive,
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      );
 
       return {
         filename: testSuite.filename,
