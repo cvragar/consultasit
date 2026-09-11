@@ -48,7 +48,7 @@ const AdminStats = lazy(() => import("@/components/AdminStats"));
 import { toast } from "sonner";
 
 type UploadStatus = "idle" | "uploading" | "success" | "error";
-type CorpusKind = "documents" | "specialCases";
+type CorpusKind = "documents" | "specialCases" | "all";
 
 type GeneratedCorpus = {
   kind: CorpusKind;
@@ -395,43 +395,42 @@ export default function Admin() {
                 Regenera un ZIP a partir del catàleg actual i el descarrega automàticament. Cada índex incorpora la data UTC i la versió del corpus.
               </CardDescription>
             </CardHeader>
-            <CardContent className="grid gap-3 md:grid-cols-2">
-              {([
-                { kind: "documents" as const, title: "Documentació", total: documents?.length ?? 0 },
-                { kind: "specialCases" as const, title: "Casos especials", total: specialCases?.length ?? 0 },
-              ]).map(corpus => {
-                const generated = generatedCorpora[corpus.kind];
-                const isCurrent = generateCorpus.isPending && generateCorpus.variables?.kind === corpus.kind;
+            <CardContent className="space-y-3">
+              {(() => {
+                const generated = generatedCorpora.all;
+                const isCurrent = generateCorpus.isPending && generateCorpus.variables?.kind === "all";
+                const total = (documents?.length ?? 0) + (specialCases?.length ?? 0);
                 return (
-                  <div key={corpus.kind} className="rounded-xl border border-emerald-200 bg-background/80 p-4 shadow-sm">
-                    <div className="flex items-start justify-between gap-3">
+                  <div className="rounded-xl border border-emerald-400 bg-emerald-100/70 p-4 shadow-sm">
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                       <div>
-                        <p className="font-semibold text-foreground">{corpus.title}</p>
-                        <p className="mt-1 text-sm text-muted-foreground">
-                          {corpus.total} {corpus.kind === "documents" ? "documents" : "casos"} al catàleg actual
+                        <div className="flex items-center gap-2">
+                          <p className="font-semibold text-emerald-950">Corpus complet</p>
+                          <Badge className="bg-emerald-700 text-white">Recomanat</Badge>
+                        </div>
+                        <p className="mt-1 text-sm text-emerald-900">
+                          Un únic ZIP amb {documents?.length ?? 0} documents i {specialCases?.length ?? 0} casos especials, organitzats en dues carpetes.
                         </p>
                       </div>
-                      <Badge variant="outline" className="border-emerald-300 text-emerald-800">TXT + ZIP</Badge>
+                      <Button
+                        className="bg-emerald-800 text-white hover:bg-emerald-900"
+                        onClick={() => handleCorpusGeneration("all")}
+                        disabled={generateCorpus.isPending || total === 0}
+                      >
+                        {isCurrent ? (
+                          <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Regenerant...</>
+                        ) : (
+                          <><Download className="mr-2 h-4 w-4" />Descarregar corpus complet</>
+                        )}
+                      </Button>
                     </div>
-                    <Button
-                      className="mt-4 w-full bg-emerald-700 text-white hover:bg-emerald-800"
-                      onClick={() => handleCorpusGeneration(corpus.kind)}
-                      disabled={generateCorpus.isPending || corpus.total === 0}
-                    >
-                      {isCurrent ? (
-                        <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Regenerant...</>
-                      ) : (
-                        <><Download className="mr-2 h-4 w-4" />Regenerar i descarregar ZIP</>
-                      )}
-                    </Button>
                     {generated && (
-                      <div className="mt-3 rounded-lg bg-emerald-50 p-3 text-xs text-emerald-950">
-                        <p><strong>Versió:</strong> {generated.version}</p>
-                        <p><strong>Generat:</strong> {new Date(generated.generatedAt).toLocaleString("ca-ES")}</p>
+                      <div className="mt-3 border-t border-emerald-300 pt-3 text-xs text-emerald-950">
+                        <span><strong>Versió:</strong> {generated.version} · <strong>Generat:</strong> {new Date(generated.generatedAt).toLocaleString("ca-ES")}</span>
                         <button
                           type="button"
                           onClick={() => downloadCorpus(generated)}
-                          className="mt-2 inline-flex items-center font-medium text-emerald-800 underline underline-offset-2 hover:text-emerald-950"
+                          className="ml-3 inline-flex items-center font-medium text-emerald-800 underline underline-offset-2 hover:text-emerald-950"
                         >
                           <Download className="mr-1 h-3.5 w-3.5" />Tornar a descarregar
                         </button>
@@ -439,7 +438,54 @@ export default function Admin() {
                     )}
                   </div>
                 );
-              })}
+              })()}
+
+              <div className="grid gap-3 md:grid-cols-2">
+                {([
+                  { kind: "documents" as const, title: "Documentació", total: documents?.length ?? 0 },
+                  { kind: "specialCases" as const, title: "Casos especials", total: specialCases?.length ?? 0 },
+                ]).map(corpus => {
+                  const generated = generatedCorpora[corpus.kind];
+                  const isCurrent = generateCorpus.isPending && generateCorpus.variables?.kind === corpus.kind;
+                  return (
+                    <div key={corpus.kind} className="rounded-xl border border-emerald-200 bg-background/80 p-4 shadow-sm">
+                      <div className="flex items-start justify-between gap-3">
+                        <div>
+                          <p className="font-semibold text-foreground">{corpus.title}</p>
+                          <p className="mt-1 text-sm text-muted-foreground">
+                            {corpus.total} {corpus.kind === "documents" ? "documents" : "casos"} al catàleg actual
+                          </p>
+                        </div>
+                        <Badge variant="outline" className="border-emerald-300 text-emerald-800">TXT + ZIP</Badge>
+                      </div>
+                      <Button
+                        className="mt-4 w-full bg-emerald-700 text-white hover:bg-emerald-800"
+                        onClick={() => handleCorpusGeneration(corpus.kind)}
+                        disabled={generateCorpus.isPending || corpus.total === 0}
+                      >
+                        {isCurrent ? (
+                          <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Regenerant...</>
+                        ) : (
+                          <><Download className="mr-2 h-4 w-4" />Regenerar i descarregar ZIP</>
+                        )}
+                      </Button>
+                      {generated && (
+                        <div className="mt-3 rounded-lg bg-emerald-50 p-3 text-xs text-emerald-950">
+                          <p><strong>Versió:</strong> {generated.version}</p>
+                          <p><strong>Generat:</strong> {new Date(generated.generatedAt).toLocaleString("ca-ES")}</p>
+                          <button
+                            type="button"
+                            onClick={() => downloadCorpus(generated)}
+                            className="mt-2 inline-flex items-center font-medium text-emerald-800 underline underline-offset-2 hover:text-emerald-950"
+                          >
+                            <Download className="mr-1 h-3.5 w-3.5" />Tornar a descarregar
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </CardContent>
           </Card>
 

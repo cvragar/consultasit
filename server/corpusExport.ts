@@ -2,7 +2,7 @@ import { strToU8, zipSync } from "fflate";
 import type { Document, SpecialCase } from "../drizzle/schema";
 
 export const CORPUS_EXPORT_VERSION = "2026.09.11.1";
-export type CorpusKind = "documents" | "specialCases";
+export type CorpusKind = "documents" | "specialCases" | "all";
 
 type CorpusFile = {
   name: string;
@@ -424,5 +424,71 @@ export function generateSpecialCasesCorpus(records: SpecialCase[], date = new Da
     files,
     validation,
     archive: archiveCorpus(folder, files),
+  };
+}
+
+export function generateCombinedCorpus(
+  documents: Document[],
+  specialCases: SpecialCase[],
+  date = new Date(),
+): GeneratedCorpus {
+  const documentsCorpus = generateDocumentsCorpus(documents, date);
+  const specialCasesCorpus = generateSpecialCasesCorpus(specialCases, date);
+  const generatedAt = date.toISOString();
+  const index = makeFile("00-INDEX-CORPUS-COMPLET.txt", [
+    "ÍNDEX DEL CORPUS COMPLET PER A COLOQ.IA",
+    "=======================================",
+    "",
+    `Data de generació (UTC): ${generatedAt}`,
+    `Versió del corpus: ${CORPUS_EXPORT_VERSION}`,
+    `Total de documents: ${documents.length}`,
+    `Total de casos especials: ${specialCases.length}`,
+    `Total de fitxers de contingut: ${documents.length + specialCases.length}`,
+    "Codificació: UTF-8",
+    "Format: text pla TXT, sense sintaxi Markdown",
+    "",
+    "CONTINGUTS DEL ZIP",
+    "==================",
+    "",
+    "1. documentacio_txt_coloqia/",
+    "   Corpus documental complet. Consulteu documentacio_txt_coloqia/00-INDEX.txt.",
+    "2. casos_especiales_txt_coloqia/",
+    "   Corpus de casos especials complet. Consulteu casos_especiales_txt_coloqia/00-INDEX.txt.",
+    "",
+    "ORDRE RECOMANAT DE CÀRREGA",
+    "==========================",
+    "",
+    "1. Carregar primer aquest índex general.",
+    "2. Carregar els dos índexs de cada subcorpus.",
+    "3. Carregar els fitxers TXT individuals que siguin rellevants per a la consulta.",
+    "4. Carregar els fitxers d'instruccions de cada subcorpus si Coloq.ia permet incorporar directrius.",
+    "5. No cal carregar manifests ni informes de validació; són fitxers tècnics de control.",
+  ].join("\n"));
+
+  const files = [
+    index,
+    ...documentsCorpus.files.map(file => ({
+      name: `documentacio_txt_coloqia/${file.name}`,
+      content: file.content,
+    })),
+    ...specialCasesCorpus.files.map(file => ({
+      name: `casos_especiales_txt_coloqia/${file.name}`,
+      content: file.content,
+    })),
+  ];
+  const validation = validate(files, documents.length + specialCases.length, generatedAt);
+  files.push(makeFile("validation-report.json", JSON.stringify(validation, null, 2)));
+
+  const entries: Record<string, Uint8Array> = {};
+  for (const file of files) entries[file.name] = strToU8(file.content);
+
+  return {
+    kind: "all",
+    version: CORPUS_EXPORT_VERSION,
+    generatedAt,
+    filename: "consultes-it-corpus-complet.zip",
+    files,
+    validation,
+    archive: Buffer.from(zipSync(entries, { level: 6 })),
   };
 }

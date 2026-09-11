@@ -38,7 +38,7 @@ import {
 import { translateFieldsToEs, translateCaToEs } from "./translation";
 import { invokeLLM } from "./_core/llm";
 import { semanticSearchDiagnosis } from "./semanticSearch";
-import { generateDocumentsCorpus, generateSpecialCasesCorpus } from "./corpusExport";
+import { generateCombinedCorpus, generateDocumentsCorpus, generateSpecialCasesCorpus } from "./corpusExport";
 import { storagePut } from "./storage";
 
 // ===== TRANSLATION HELPERS =====
@@ -598,22 +598,31 @@ IMPORTANT:
     }),
 
     generateCorpus: protectedProcedure
-      .input(z.object({ kind: z.enum(["documents", "specialCases"]) }))
+      .input(z.object({ kind: z.enum(["documents", "specialCases", "all"]) }))
       .mutation(async ({ ctx, input }) => {
         if (ctx.user.role !== "admin") {
           throw new Error("Accés restringit: cal ser administrador");
         }
 
-        const corpus = input.kind === "documents"
-          ? (() => getAllDocuments().then(records => {
-              if (!records.length) throw new Error("No hi ha documentació disponible per generar el corpus.");
-              return generateDocumentsCorpus(records);
-            }))()
-          : (() => getAllSpecialCases().then(records => {
-              if (!records.length) throw new Error("No hi ha casos especials disponibles per generar el corpus.");
-              return generateSpecialCasesCorpus(records);
-            }))();
-        const generated = await corpus;
+        let generated;
+        if (input.kind === "documents") {
+          const records = await getAllDocuments();
+          if (!records.length) throw new Error("No hi ha documentació disponible per generar el corpus.");
+          generated = generateDocumentsCorpus(records);
+        } else if (input.kind === "specialCases") {
+          const records = await getAllSpecialCases();
+          if (!records.length) throw new Error("No hi ha casos especials disponibles per generar el corpus.");
+          generated = generateSpecialCasesCorpus(records);
+        } else {
+          const [documents, specialCases] = await Promise.all([
+            getAllDocuments(),
+            getAllSpecialCases(),
+          ]);
+          if (!documents.length || !specialCases.length) {
+            throw new Error("Cal disposar de documentació i casos especials per generar el corpus complet.");
+          }
+          generated = generateCombinedCorpus(documents, specialCases);
+        }
         if (!generated.validation.valid) {
           throw new Error("El corpus no ha superat la validació interna de text pla.");
         }

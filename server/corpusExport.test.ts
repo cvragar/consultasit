@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import type { Document, SpecialCase } from "../drizzle/schema";
 import {
   CORPUS_EXPORT_VERSION,
+  generateCombinedCorpus,
   generateDocumentsCorpus,
   generateSpecialCasesCorpus,
 } from "./corpusExport";
@@ -88,5 +89,22 @@ describe("generador de corpus TXT per a Coloq.ia", () => {
     expect(caseText).toContain("INSTRUCCIONES PARA EL ASISTENTE");
     expect(caseText).not.toMatch(/^#{1,6}\s/m);
     expect(strFromU8(archiveFiles["casos_especiales_txt_coloqia/00-INDEX.txt"])).toContain(CORPUS_EXPORT_VERSION);
+  });
+
+  it("uneix els dos corpus en un ZIP amb carpetes i índex general", () => {
+    const corpus = generateCombinedCorpus([document], [specialCase], generatedAt);
+    const archiveFiles = unzipSync(corpus.archive);
+    const generalIndex = strFromU8(archiveFiles["00-INDEX-CORPUS-COMPLET.txt"]);
+
+    expect(corpus.kind).toBe("all");
+    expect(corpus.filename).toBe("consultes-it-corpus-complet.zip");
+    expect(corpus.validation.input_records).toBe(2);
+    expect(corpus.validation.valid).toBe(true);
+    expect(generalIndex).toContain("Total de fitxers de contingut: 2");
+    expect(generalIndex).toContain("documentacio_txt_coloqia/");
+    expect(generalIndex).toContain("casos_especiales_txt_coloqia/");
+    expect(archiveFiles["documentacio_txt_coloqia/00-INDEX.txt"]).toBeDefined();
+    expect(archiveFiles["casos_especiales_txt_coloqia/00-INDEX.txt"]).toBeDefined();
+    expect(archiveFiles["validation-report.json"]).toBeDefined();
   });
 });
