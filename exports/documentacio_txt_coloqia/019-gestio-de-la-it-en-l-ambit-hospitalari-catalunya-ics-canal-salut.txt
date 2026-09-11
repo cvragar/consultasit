@@ -1,0 +1,193 @@
+CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
+===========================================
+
+ID: 19
+Título principal: Gestió de la IT en l'Àmbit Hospitalari - Catalunya (ICS / Canal Salut)
+Título en español: Gestión de la IT en el Ámbito Hospitalario - Cataluña (ICS / Canal Salud)
+Tipo documental: guia
+Fuente: Institut Català de la Salut (ICS) - Generalitat de Catalunya
+Ámbito: autonomica
+Año de publicación: 2024
+Estado: vigent
+URL de la fuente: https://canalsalut.gencat.cat/ca/salut-a-z/a/avaluacions-mediques/baixa-medica/gestio-ingres-hospitalari/
+Etiquetas: IT hospitalari, ICS, Catalunya, ingrés hospitalari, CMA, cirurgia major ambulatòria, ZAS_GESTIO_IT, eCap, Canal Salut, hospitalització prolongada, part, baixa laboral hospital, RD 625/2014
+
+AVISO
+=====
+
+Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+
+RESUMEN PRINCIPAL
+=================
+
+Protocol de gestió de la IT en l'àmbit hospitalari a Catalunya (ICS). Des de 2023-2024, les IT per ingrés hospitalari, CMA i alta per part es gestionen des del mateix hospital via plataforma integrada (ZASGESTIOIT). Cobreix: ingressos ≥7 dies (comunicat automàtic 14 dies), CMA (<5 dies: baixa+alta simultànies; ≥5 dies: seguiment al CAP), ingrés per part (alta IT dia anterior al part), coordinació hospital-eCap, hospitalitzacions prolongades (grups RD 625/2014), errors de documentació, embaràs de risc, AT/MP, i resum executiu per al metge de família.
+
+CONTENIDO PRINCIPAL
+===================
+
+Gestió de la Incapacitat Temporal (IT) en l'Àmbit Hospitalari - Catalunya (ICS)
+
+Font principal: Canal Salut - Generalitat de Catalunya (actualitzat 19/02/2025)
+Font complementària: Consorci Hospitalari de Vic (CHV), Hospital Universitari de Vic
+Àmbit: Catalunya (xarxa ICS i centres concertats CatSalut)
+Normativa de referència: RD 625/2014 (modificat per RD 1060/2022, en vigor des de 01/04/2023)
+
+1. Principi general: la IT hospitalària es gestiona des del mateix centre
+
+Des de 2023-2024, les incapacitats temporals generades per ingrés hospitalari o per una cirurgia major ambulatòria (CMA) i l'alta d'una IT per motiu de part, es gestionen des del mateix hospital, a través d'una plataforma integrada al sistema d'informació del centre (connectada a l'eCap i al sistema de la Seguretat Social).
+
+Objectius del canvi:
+- Agilitzar els processos administratius
+- Disminuir el nombre de contactes a l'atenció primària per gestions d'aquest tipus
+- Desburocratitzar el sistema
+- Millorar l'experiència del pacient i el seu entorn
+- Evitar desplaçaments innecessaris al CAP tant del pacient com dels seus familiars
+
+2. Tres escenaris principals
+
+2.1 Ingrés hospitalari (hospitalització convencional)
+
+Qui gestiona la baixa: L'administració del centre hospitalari recull la informació requerida per gestionar la IT, en cas que el pacient necessiti la baixa per trobar-se en situació laboral activa.
+
+Terminis i comunicats:
+Situació ; Comunicat emès ; Validesa
+Ingrés ≥ 7 dies ; Comunicat de confirmació automàtic ; Fins a 14 dies
+Ingrés  30 dies)
+
+Quan un pacient roman ingressat durant un període prolongat, la gestió dels comunicats de confirmació segueix el RD 625/2014 (modificat per RD 1060/2022):
+Durada del procés ; Grup RD 625/2014 ; Termini màxim entre confirmacions
+< 5 dies ; Grup a ; Alta simultània amb la baixa
+5 – 30 dies ; Grup b ; ≤ 14 dies entre confirmacions
+31 – 60 dies ; Grup c ; ≤ 28 dies entre confirmacions
+≥ 61 dies ; Grup d ; ≤ 35 dies entre confirmacions
+Punts clau per a hospitalitzacions prolongades:
+- Els comunicats de confirmació a partir del segon es gestionen des de l'atenció primària (metge de família), no des de l'hospital
+- El metge de família pot emetre el comunicat de confirmació sense que el pacient es desplaci al CAP si el pacient segueix ingressat (pot fer-ho per telèfon o a través del sistema)
+- A partir del dia 180 de baixa, la competència passa exclusivament a l'INSS (Institut Nacional de la Seguretat Social), que pot emetre l'alta mèdica
+
+5. Casos especials i situacions complexes
+
+5.1 Pacient que ingressa estant ja de baixa
+
+Si el pacient ja tenia una IT activa quan ingressa a l'hospital:
+- La IT continua activa; no cal emetre una nova baixa
+- L'hospital pot emetre els comunicats de confirmació corresponents
+- El metge de família continua sent el responsable del seguiment un cop donat d'alta de l'hospital
+
+5.2 Pacient que necessita la baixa però no la va sol·licitar a l'hospital
+
+Si el pacient va ser ingressat però no va tramitar la baixa durant l'ingrés:
+- Pot anar al CAP un cop donat d'alta de l'hospital
+- El metge de família pot emetre la baixa amb data retroactiva coincident amb la data d'ingrés (amb justificant d'ingrés hospitalari)
+- Important: La data d'inici de la IT ha de coincidir amb el primer dia que el treballador va faltar a la feina (no necessàriament el dia d'ingrés si l'ingrés va ser en cap de setmana o festiu)
+
+5.3 Errors en la documentació emesa
+
+Regla crítica: Si les dades de la baixa, els comunicats o l'alta són incorrectes o s'ha produït un error en el seu enregistrament, la documentació només es podrà modificar/anular en els primers dies immediatament posteriors a la seva emissió.
+
+Passos a seguir en cas d'error:
+1. Detectar l'error el més aviat possible (idealment el mateix dia o l'endemà)
+2. Contactar amb l'administració del centre hospitalari (si l'error és del comunicat hospitalari)
+3. Contactar amb el CAP/metge de família (si l'error és d'un comunicat d'atenció primària)
+4. Si l'error no es pot corregir a temps, cal contactar amb la mútua o l'INSS per a la rectificació administrativa
+
+5.4 Embaràs de risc i ingrés hospitalari
+
+Si una treballadora embarassada és ingressada per una complicació de l'embaràs (preeclàmpsia, amenaça de part prematur, etc.):
+- La IT es gestiona com a contingència comuna (embaràs de risc per causa clínica)
+- L'hospital emet la baixa des del primer dia d'ingrés
+- Si la causa és laboral (condicions del lloc de treball), cal derivar a la mútua per a la prestació per risc durant l'embaràs (100% BR), que és diferent de la IT
+
+5.5 Accident de treball i ingrés hospitalari
+
+Si l'ingrés és conseqüència d'un accident de treball:
+- La gestió NO es fa des de l'hospital per via CatSalut
+- Cal contactar amb la mútua col·laboradora de l'empresa
+- La mútua gestiona la baixa com a contingència professional (AT/MP)
+- Base reguladora: 75% de la base de cotització per contingències professionals des del primer dia
+
+6. Resum executiu per al metge de família
+Situació ; Qui emet la baixa ; Qui fa el seguiment ; Comunicats de confirmació
+Ingrés hospitalari ≥ 7 dies ; Hospital (automàtic) ; Metge família (CAP) ; CAP a partir del 2n
+Ingrés hospitalari < 7 dies ; Hospital (en alta) ; Metge família (CAP) ; CAP a partir del 2n
+CMA durada < 5 dies ; Hospital (baixa + alta simultànies) ; — ; No calen
+CMA durada ≥ 5 dies ; Hospital (baixa) ; Metge família (CAP) ; CAP a partir del 2n
+Part (IT activa prèvia) ; Hospital (alta IT dia anterior al part) ; — ; Permís per naixement
+Ingrés per AT/MP ; Mútua col·laboradora ; Mútua ; Mútua
+Ingrés via privada ; CAP (metge família) ; Metge família ; CAP
+Preguntes freqüents del metge de família:
+
+P: El pacient ha estat ingressat però no va demanar la baixa a l'hospital. Puc emetre-la ara?
+R: Sí. El metge de família pot emetre la baixa amb data retroactiva coincident amb la data d'ingrés, adjuntant el justificant d'ingrés hospitalari com a documentació justificativa.
+
+P: El pacient segueix ingressat i ha de renovar el comunicat de confirmació. Ha de venir al CAP?
+R: No. El metge de família pot emetre el comunicat de confirmació sense que el pacient es desplaci, verificant l'ingrés actiu al sistema.
+
+P: Quan passa la competència a l'INSS?
+R: A partir del dia 180 de baixa continuada, l'INSS és l'únic competent per emetre l'alta mèdica.
+
+P: La baixa per ingrés hospitalari compta com a contingència comuna o professional?
+R: Depèn de la causa: si és malaltia comuna o embaràs de risc per causa clínica → contingència comuna. Si és accident de treball o malaltia professional → contingència professional (gestió per mútua).
+
+RESUMEN EN ESPAÑOL
+==================
+
+Protocolo de gestión de la IT en el ámbito hospitalario en Cataluña (ICS). Desde 2023-2024, las IT por ingreso hospitalario, CMA y alta por parto se gestionan desde el propio hospital vía plataforma integrada (ZASGESTIOIT). Cubre: ingresos ≥7 días (comunicado automático 14 días), CMA (<5 días: baja+alta simultáneas; ≥5 días: seguimiento en el CAP), ingreso por parto (alta IT día anterior al parto), coordinación hospital-eCAP, hospitalizaciones prolongadas (grupos RD 625/2014), errores de documentación, embarazo de riesgo, AT/MP, y resumen ejecutivo para el médico de familia.
+
+CONTENIDO EN ESPAÑOL DISPONIBLE
+===============================
+
+Gestión de la Incapacidad Temporal (IT) en el Ámbito Hospitalario - Cataluña (ICS)
+
+Fuente principal: Canal Salut - Generalitat de Catalunya (actualizado 19/02/2025)
+Fuente complementaria: Consorci Hospitalari de Vic (CHV), Hospital Universitari de Vic
+Ámbito: Cataluña (red ICS y centros concertados CatSalut)
+Normativa de referencia: RD 625/2014 (modificado por RD 1060/2022, en vigor desde 01/04/2023)
+
+1. Principio general: la IT hospitalaria se gestiona desde el propio centro
+
+Desde 2023-2024, las incapacidades temporales generadas por ingreso hospitalario o por una cirugía mayor ambulatoria (CMA) y el alta de una IT por motivo de parto, se gestionan desde el propio hospital, a través de una plataforma integrada en el sistema de información del centro (conectada al eCap y al sistema de la Seguridad Social).
+
+Objetivos del cambio:
+- Agilizar los procesos administrativos
+- Disminuir el número de contactos en la atención primaria por gestiones de este tipo
+- Desburocratizar el sistema
+- Mejorar la experiencia del paciente y su entorno
+- Evitar desplazamientos innecesarios al CAP tanto del paciente como de sus familiares
+
+2. Tres escenarios principales
+
+2.1 Ingreso hospitalario (hospitalización convencional)
+
+Quién gestiona la baja: La administración del centro hospitalario recoge la información requerida para gestionar la IT, en caso de que el paciente necesite la baja por encontrarse en situación laboral activa.
+
+Plazos y comunicados:
+Situación ; Comunicado emitido ; Validez
+Ingreso ≥ 7 días ; Comunicado de confirmación automático ; Hasta 14 días
+Ingreso < 7 días ; Primer comunicado se emite al salir del hospital ; Hasta 14 días
+Seguimiento posterior ; Atención primaria (médico de familia) ; Según grupo de proceso (RD 625/2014)
+Requisitos del paciente para poder tramitar la baja en el hospital:
+- Disponer de tarjeta sanitaria con Código de Identificación Personal (CIP)
+- Encontrarse en edad laboral: entre 16 y 70 años
+- Estar trabajando (con contrato laboral o en régimen de autónomos) o cobrando subsidio de desempleo
+- Estar ingresado por vía CatSalut (no privada, no accidente laboral/deportivo/tráfico, no funcionarios con mutua)
+
+Casos que NO se pueden tramitar desde el hospital:
+- Pacientes ingresados por vía privada
+- Accidentes laborales, deportivos o de tráfico
+- Funcionarios con mutua propia
+
+Quién puede solicitar la baja en el hospital:
+- El propio paciente
+- Un familiar del paciente
+- A través de la administración de Admisiones o urgencias/planta
+
+Horario de tramitación (CHV como ejemplo): lunes a viernes, de 13:00 a 19:00 h en Admisiones.
+
+2.2 Cirugía Mayor Ambulatoria (CMA)
+
+La CMA es una intervención quirúrgica en la que el paciente no pernocta en el hospital (entra y sale el mismo día).
+
+Funcionamiento:
+1. La administración del centro recoge la información requerida para gestionar la IT
+2. Según el diagnóstico de la intervención, la edad y el CNO (Código Nacional de Ocupación)

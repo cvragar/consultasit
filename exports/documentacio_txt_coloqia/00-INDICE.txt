@@ -1,0 +1,113 @@
+ÍNDICE DE DOCUMENTACIÓN — CONSULTES IT
+=======================================
+
+Número total de documentos: 12
+Codificación: UTF-8
+Formato: texto plano TXT, sin sintaxis Markdown
+
+RESUMEN POR TIPO
+================
+
+ley: 1
+decreto: 4
+guia: 6
+manual: 1
+
+CATÁLOGO COMPLETO
+=================
+
+1. Llei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT
+   Archivo: 017-llei-organica-1-2023-menstruacio-incapacitant-i-situacions-especials-d-it.txt
+   Tipo: ley
+   Fuente: BOE - Agència Estatal Butlletí Oficial de l'Estat
+   Ámbito: estatal
+   Estado: vigent
+   URL: https://www.boe.es/buscar/act.php?id=BOE-A-2023-5364
+
+2. Reial Decret 1299/2006, de 10 de novembre (BOE-A-2006-22169) - Quadre de malalties professionals
+   Archivo: 30003-reial-decret-1299-2006-de-10-de-novembre-boe-a-2006-22169-quadre-de-malalties-professional.txt
+   Tipo: decreto
+   Fuente: BOE - Ministeri de Treball i Assumptes Socials
+   Ámbito: estatal
+   Estado: vigent
+   URL: https://d2xsxph8kpxj0f.cloudfront.net/310519663242490001/DirVLPm6UeFJi3utFGbgZe/BOE-A-2006-22169_b54ceec9.pdf
+
+3. RD 295/2009 - Prestació per risc durant l'embaràs i la lactància natural
+   Archivo: 90001-rd-295-2009-prestacio-per-risc-durant-l-embaras-i-la-lactancia-natural.txt
+   Tipo: decreto
+   Fuente: BOE - Ministeri de Treball i Immigració
+   Ámbito: estatal
+   Estado: vigent
+   URL: https://www.boe.es/buscar/act.php?id=BOE-A-2009-4724
+
+4. Reial Decret 625/2014 (BOE-A-2014-7684)
+   Archivo: 015-reial-decret-625-2014-boe-a-2014-7684.txt
+   Tipo: decreto
+   Fuente: BOE - Ministeri d'Ocupació i Seguretat Social
+   Ámbito: estatal
+   Estado: vigent
+   URL: https://www.boe.es/buscar/act.php?id=BOE-A-2014-7684
+
+5. Reial Decret 1060/2022, de 27 de desembre (BOE-A-2023-160) - Gestió electrònica dels parts d'IT
+   Archivo: 60001-reial-decret-1060-2022-de-27-de-desembre-boe-a-2023-160-gestio-electronica-dels-parts-d-it.txt
+   Tipo: decreto
+   Fuente: BOE - Ministeri d'Inclusió, Seguretat Social i Migracions
+   Ámbito: estatal
+   Estado: vigent
+   URL: https://www.boe.es/buscar/act.php?id=BOE-A-2023-160
+
+6. Guía de valoración de incapacidad laboral para médicos de atención primaria
+   Archivo: 011-guia-de-valoracion-de-incapacidad-laboral-para-medicos-de-atencion-primaria.txt
+   Tipo: guia
+   Fuente: ENMT - Escola Nacional de Medicina del Treball (ISCIII)
+   Ámbito: estatal
+   Estado: vigent
+   URL: https://repisalud.isciii.es/entities/publication/b2912b28-0466-4be7-a70b-c9ef6decdcf2
+
+7. Gestió de la incapacitat temporal - Fullet informatiu
+   Archivo: 014-gestio-de-la-incapacitat-temporal-fullet-informatiu.txt
+   Tipo: guia
+   Fuente: Departament de Salut - Generalitat de Catalunya
+   Ámbito: autonomica
+   Estado: vigent
+   URL: https://scientiasalut.gencat.cat/handle/11351/9547.3
+
+8. Tiempos estándar de Incapacidad Temporal
+   Archivo: 013-tiempos-estandar-de-incapacidad-temporal.txt
+   Tipo: guia
+   Fuente: INSS - Institut Nacional de la Seguretat Social
+   Ámbito: estatal
+   Estado: vigent
+   URL: https://www.seg-social.es/wps/portal/wss/internet/Conocenos/Publicaciones/28156/47075/62e20eb4-bd64-47cb-a4ac-b55b39428d9f/manual-de-tiempos-optimos-de-incapacidad-temporal-%284--edicion%29
+
+9. Gestión de IT - Departament de Salut
+   Archivo: 018-gestion-de-it-departament-de-salut.txt
+   Tipo: guia
+   Fuente: Departament de Salut - Generalitat de Catalunya
+   Ámbito: autonomica
+   Estado: vigent
+   URL: https://canalsalut.gencat.cat/ca/salut-a-z/a/avaluacions-mediques/baixa-medica/
+
+10. Duración máxima de IT y prórrogas
+   Archivo: 016-duracion-maxima-de-it-y-prorrogas.txt
+   Tipo: guia
+   Fuente: INSS - Institut Nacional de la Seguretat Social / LGSS
+   Ámbito: estatal
+   Estado: vigent
+   URL: https://www.seg-social.es/wps/portal/wss/internet/InformacionUtil/44539/43384/44673
+
+11. Gestió de la IT en l'Àmbit Hospitalari - Catalunya (ICS / Canal Salut)
+   Archivo: 019-gestio-de-la-it-en-l-ambit-hospitalari-catalunya-ics-canal-salut.txt
+   Tipo: guia
+   Fuente: Institut Català de la Salut (ICS) - Generalitat de Catalunya
+   Ámbito: autonomica
+   Estado: vigent
+   URL: https://canalsalut.gencat.cat/ca/salut-a-z/a/avaluacions-mediques/baixa-medica/gestio-ingres-hospitalari/
+
+12. Incapacidad Temporal: Manual para el manejo en atención primaria
+   Archivo: 012-incapacidad-temporal-manual-para-el-manejo-en-atencion-primaria.txt
+   Tipo: manual
+   Fuente: AMAT - Associació de Mútues d'Accidents de Treball
+   Ámbito: estatal
+   Estado: vigent
+   URL: https://amat.es/wp-content/uploads/2021/03/incapacidad-temporal-manual-para-el-manejo-en-atencion-primaria.pdf

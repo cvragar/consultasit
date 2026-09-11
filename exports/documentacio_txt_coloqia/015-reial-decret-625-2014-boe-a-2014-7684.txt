@@ -1,0 +1,110 @@
+CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
+===========================================
+
+ID: 15
+Título principal: Reial Decret 625/2014 (BOE-A-2014-7684)
+Título en español: Real Decreto 625/2014 (BOE-A-2014-7684)
+Tipo documental: decreto
+Fuente: BOE - Ministeri d'Ocupació i Seguretat Social
+Ámbito: estatal
+Año de publicación: 2014
+Estado: vigent
+URL de la fuente: https://www.boe.es/buscar/act.php?id=BOE-A-2014-7684
+Etiquetas: IT, parts mèdics, gestió IT, 365 dies, grups de processos, terminis confirmació, informe complementari, informe de control, mútues, INSS, tramitació electrònica, sistema RED, RD 625/2014
+
+AVISO
+=====
+
+Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+
+RESUMEN PRINCIPAL
+=================
+
+Reglament principal que regula la gestió i control dels processos d'IT durant els primers 365 dies. Estableix els quatre grups de processos amb terminis de confirmació (a: <5 dies, alta simultània; b: 5-30 dies, revisió ≤7 dies; c: 31-60 dies, revisió ≤7 dies; d: ≥61 dies, revisió ≤14 dies), els informes complementaris i de control trimestrals, les propostes d'alta de les mútues, la nova tramitació electrònica (des de l'01/04/2023 el treballador no lliura la còpia a l'empresa), i la competència exclusiva de l'INSS durant 180 dies quan ha emès l'alta. Modificat pel RD 231/2017 i el RD 1060/2022.
+
+CONTENIDO PRINCIPAL
+===================
+
+Real Decreto 625/2014, de 18 de julio
+Gestión y control de los procesos de IT en los primeros 365 días
+
+BOE-A-2014-7684 ; BOE núm. 176, de 21/07/2014 ; Entrada en vigor: 01/09/2014
+Última actualización: 05/01/2023 (modificado por RD 1060/2022, en vigor desde 01/04/2023)
+URL oficial consolidada: https://www.boe.es/buscar/act.php?id=BOE-A-2014-7684
+
+Artículo 1. Ámbito de aplicación
+
+1. Lo dispuesto en este real decreto se aplicará, durante los primeros trescientos sesenta y cinco días, a los procesos de incapacidad temporal, cualquiera que sea la contingencia determinante, en los que se encuentren quienes estén incluidos en cualquiera de los regímenes que integran el sistema de la Seguridad Social, por desarrollar un trabajo o actividad por cuenta ajena o propia.
+
+2. Quedan excluidos de lo dispuesto en este real decreto los regímenes especiales de las Fuerzas Armadas, de los Funcionarios Civiles de la Administración del Estado y del personal al servicio de la Administración de Justicia.
+
+Artículo 2. Declaraciones médicas de baja y de confirmación de la baja
+
+2.1 Emisión del parte de baja
+
+La emisión del parte médico de baja es el acto que origina la iniciación de las actuaciones conducentes al reconocimiento del derecho al subsidio por incapacidad temporal. La declaración de la baja médica se formulará en el correspondiente parte médico de baja expedido por el médico del servicio público de salud que haya efectuado el reconocimiento del trabajador afectado.
+
+En el caso de que la causa de la baja médica sea un accidente de trabajo o una enfermedad profesional y el trabajador preste servicios en una empresa asociada a una mutua colaboradora con la Seguridad Social, los correspondientes partes de baja, de confirmación de la baja o de alta serán expedidos por los servicios médicos de la propia mutua o por los servicios médicos de la empresa colaboradora.
+
+2.2 Reconocimiento médico previo
+
+Todo parte médico de baja irá precedido de un reconocimiento médico del trabajador que permita la determinación objetiva de la incapacidad temporal para el trabajo habitual. Con el fin de que las actuaciones médicas cuenten con el mayor respaldo técnico se pondrá a disposición de los médicos tablas de duración óptima tipificadas por los distintos procesos patológicos, así como tablas sobre el grado de incidencia de aquellos procesos en las distintas actividades laborales.
+
+2.3 Cuatro grupos de procesos y plazos de confirmación (modificado por RD 1060/2022, en vigor desde 01/04/2023)
+
+Los partes de baja y de confirmación de la baja se extenderán en función del periodo de duración que estime el médico que los emite. Se establecen cuatro grupos de procesos:
+Grupo ; Duración estimada ; Primera revisión ; Confirmaciones sucesivas
+a) ; 30 dies
+Informe de control ; Trimestral des de l'inici de la baixa
+Treballador lliura còpia a empresa? ; NO (des de l'1 d'abril de 2023 — RD 1060/2022)
+Empresa transmet dades a INSS ; Sí, via sistema RED, en 3 dies hàbils
+180 dies competència exclusiva INSS ; Quan l'INSS ha emès l'alta, durant 180 dies és l'únic que pot emetre nova baixa per la mateixa patologia
+Citació a reconeixement ; Mínim 4 dies hàbils d'antelació
+Incompareixença injustificada ; Suspensió cautelar; extinció als 10 dies hàbils sense justificació
+Base legal i modificacions
+
+- RD 625/2014 (BOE-A-2014-7684): text original, en vigor des de l'01/09/2014
+- RD 231/2017 (BOE-A-2017-3125): modifica arts. 2.3, 3, 5.3; efectes des de l'01/01/2017
+- RD 1060/2022 (BOE-A-2023-160): modifica arts. 2.3, 6.3, 7; en vigor des de l'01/04/2023
+- LGSS (RDLeg 8/2015): arts. 169-176 (IT), DA 52a (competències INSS fins 365 dies), DA 40a (intercanvi dades mèdiques)
+
+RESUMEN EN ESPAÑOL
+==================
+
+Contexto: Documento normativo: Real Decreto 625/2014 (BOE-A-2014-7684)
+
+Reglamento principal que regula la gestión y control de los procesos de IT durante los primeros 365 días. Establece los cuatro grupos de procesos con plazos de confirmación (a: <5 días, alta simultánea; b: 5-30 días, revisión ≤7 días; c: 31-60 días, revisión ≤7 días; d: ≥61 días, revisión ≤14 días), los informes complementarios y de control trimestrales, las propuestas de alta de las mutuas, la nueva tramitación electrónica (desde el 01/04/2023 el trabajador no entrega la copia a la empresa), y la competencia exclusiva del INSS durante 180 días cuando ha emitido el alta. Modificado por el RD 231/2017 y el RD 1060/2022.
+
+CONTENIDO EN ESPAÑOL DISPONIBLE
+===============================
+
+Real Decreto 625/2014, de 18 de julio
+Gestión y control de los procesos de IT en los primeros 365 días
+
+BOE-A-2014-7684 ; BOE núm. 176, de 21/07/2014 ; Entrada en vigor: 01/09/2014
+Última actualización: 05/01/2023 (modificado por RD 1060/2022, en vigor desde 01/04/2023)
+URL oficial consolidada: https://www.boe.es/buscar/act.php?id=BOE-A-2014-7684
+
+Artículo 1. Ámbito de aplicación
+
+1. Lo dispuesto en este real decreto se aplicará, durante los primeros trescientos sesenta y cinco días, a los procesos de incapacidad temporal, cualquiera que sea la contingencia determinante, en los que se encuentren quienes estén incluidos en cualquiera de los regímenes que integran el sistema de la Seguridad Social, por desarrollar un trabajo o actividad por cuenta ajena o propia.
+
+2. Quedan excluidos de lo dispuesto en este real decreto los regímenes especiales de las Fuerzas Armadas, de los Funcionarios Civiles de la Administración del Estado y del personal al servicio de la Administración de Justicia.
+
+Artículo 2. Declaraciones médicas de baja y de confirmación de la baja
+
+2.1 Emisión del parte de baja
+
+La emisión del parte médico de baja es el acto que origina la iniciación de las actuaciones conducentes al reconocimiento del derecho al subsidio por incapacidad temporal. La declaración de la baja médica se formulará en el correspondiente parte médico de baja expedido por el médico del servicio público de salud que haya efectuado el reconocimiento del trabajador afectado.
+
+En el caso de que la causa de la baja médica sea un accidente de trabajo o una enfermedad profesional y el trabajador preste servicios en una empresa asociada a una mutua colaboradora con la Seguridad Social, los correspondientes partes de baja, de confirmación de la baja o de alta serán expedidos por los servicios médicos de la propia mutua o por los servicios médicos de la empresa colaboradora.
+
+2.2 Reconocimiento médico previo
+
+Todo parte médico de baja irá precedido de un reconocimiento médico del trabajador que permita la determinación objetiva de la incapacidad temporal para el trabajo habitual. Con el fin de que las actuaciones médicas cuenten con el mayor respaldo técnico se pondrá a disposición de los médicos tablas de duración óptima tipificadas por los distintos procesos patológicos, así como tablas sobre el grado de incidencia de aquellos procesos en las distintas actividades laborales.
+
+2.3 Cuatro grupos de procesos y plazos de confirmación (modificado por RD 1060/2022, en vigor desde 01/04/2023)
+
+Los partes de baja y de confirmación de la baja se extenderán en función del periodo de duración que estime el médico que los emite. Se establecen cuatro grupos de procesos:
+Grupo ; Duración estimada ; Primera revisión ; Confirmaciones sucesivas
+a) ; < 5 días naturales ; Alta simultánea con la baja ; El facultativo fija fecha de alta (misma f

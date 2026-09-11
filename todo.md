@@ -584,3 +584,11 @@
 - [x] Exportar cada document en un fitxer .md independent amb metadades, contingut i font
 - [x] Crear un índex general i validar que no falti cap registre
 - [x] Empaquetar i lliurar tots els fitxers Markdown
+
+## Sprint 25 - Exportació TXT per a Coloq.IA
+- [x] Convertir els 12 documents a text pla .txt sense sintaxi Markdown
+- [x] Crear un índex general .txt amb el catàleg complet
+- [x] Validar codificació UTF-8, integritat i absència de marques Markdown
+- [x] Empaquetar i lliurar els fitxers TXT per importar-los a Coloq.IA
+- [x] Estabilitzar dos tests antics que depenen d'una finestra mòbil de 90 dies
+- [x] Validació final: 414 tests superats i 0 errors TypeScript

@@ -1,0 +1,227 @@
+CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
+===========================================
+
+ID: 17
+Título principal: Llei Orgànica 1/2023 - Menstruació incapacitant i situacions especials d'IT
+Título en español: Ley Orgánica 1/2023 - Menstruación incapacitante y situaciones especiales de IT
+Tipo documental: ley
+Fuente: BOE - Agència Estatal Butlletí Oficial de l'Estat
+Ámbito: estatal
+Año de publicación: 2023
+Estado: vigent
+URL de la fuente: https://www.boe.es/buscar/act.php?id=BOE-A-2023-5364
+Etiquetas: Llei 1/2023, menstruació incapacitant, dismenorrea secundària, endometriosi, IT especial, contingència comuna, primer dia SS, sense cotització mínima, interrupció embaràs, setmana 39, protocol Catalunya, ASSIR, ginecòleg, metge família, LGSS art. 169, LGSS art. 172, LGSS art. 173
+
+AVISO
+=====
+
+Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+
+RESUMEN PRINCIPAL
+=================
+
+La LO 1/2023 (en vigor des de l'1 de juny de 2023) crea tres situacions especials d'IT per contingències comunes: (1) menstruació incapacitant secundària (dismenorrea per patologia diagnosticada, SS paga des del dia 1, sense cotització mínima, cada procés és nou); (2) interrupció de l'embaràs voluntària o no (SS paga des del dia 2); (3) gestació des de la setmana 39 (SS paga des del dia 2, amb cotització mínima per edat). Inclou text literal de la Disposició Final Tercera i protocol ASSIR de Catalunya.
+
+CONTENIDO PRINCIPAL
+===================
+
+Resum executiu per al metge de família
+
+La Llei Orgànica 1/2023, de 28 de febrer (BOE núm. 51, 01/03/2023, en vigor des del 1 de juny de 2023) introdueix tres noves situacions especials d'IT per contingències comunes que modifiquen la LGSS (art. 144, 169, 172 i 173):
+
+1. Menstruació incapacitant secundària (dismenorrea secundària per patologia diagnosticada)
+2. Interrupció de l'embaràs (voluntària o no)
+3. Gestació des del primer dia de la setmana 39
+
+1. Menstruació incapacitant secundària
+
+Definició legal (art. 2.6 LO 1/2023)
+
+«Situació d'incapacitat derivada d'una dismenorrea generada per una patologia prèviament diagnosticada.»
+
+Clau: NO és la dismenorrea primària (dolor menstrual sense causa orgànica). Cal una patologia de base diagnosticada.
+
+Patologies reconegudes
+Patologia ; Freqüència
+Endometriosi ; Causa més freqüent (infradiagnosticada)
+Adenomiosi ; Freqüent
+Miomes uterins ; Freqüent
+Malaltia inflamatòria pèlvica (MIP) ; Moderada
+Quists ovàrics ; Moderada
+Pòlips endometrials ; Menys freqüent
+Ovaris poliquístics (SOP) ; Menys freqüent
+Estenosi cervical ; Menys freqüent
+Règim econòmic (art. 173 LGSS modificat)
+
+- Qui paga: La Seguretat Social des del primer dia de la baixa (sense franquícia empresarial)
+- Quantia: 60% de la base reguladora (dies 4-20) / 75% (des del dia 21)
+- Períodes mínims de cotització: NO s'exigeixen (art. 172 LGSS modificat)
+- Recaiguda: Cada procés es considera nou (no computa per al màxim de 365 dies)
+
+Text literal de la Disposició Final Tercera (articles modificats de la LGSS)
+
+Art. 144.4 LGSS (obligació de cotitzar):
+«La obligación de cotizar continuará en la situación de incapacidad temporal, cualquiera que sea su causa, incluidas las situaciones especiales de incapacidad temporal por menstruación incapacitante secundaria, interrupción del embarazo, sea voluntaria o no, y gestación desde el día primero de la semana trigésima novena...»
+
+Art. 169.1.a) LGSS (situacions determinants d'IT) — nous paràgrafs afegits:
+«Tendrán la consideración de situaciones especiales de incapacidad temporal por contingencias comunes aquellas en que pueda encontrarse la mujer en caso de menstruación incapacitante secundaria, así como la debida a la interrupción del embarazo, voluntaria o no, mientras reciba asistencia sanitaria por el Servicio Público de Salud y esté impedida para el trabajo, sin perjuicio de aquellos supuestos en que la interrupción del embarazo sea debida a accidente de trabajo o enfermedad profesional.»
+«Se considerará también situación especial de incapacidad temporal por contingencias comunes la de gestación de la mujer trabajadora desde el día primero de la semana trigésima novena.»
+
+Art. 169.2 LGSS (recaiguda) — modificació clau:
+«...salvo los procesos por bajas médicas por menstruación incapacitante secundaria en los que cada proceso se considerará nuevo sin computar a los efectos del período máximo de duración de la situación de incapacidad temporal, y de su posible prórroga.»
+
+Art. 172 LGSS (beneficiaris) — supressió del període mínim de cotització:
+«En las situaciones especiales previstas en el párrafo segundo, del artículo 169.1.a), no se exigirán períodos mínimos de cotización.»
+
+Art. 173.1 LGSS (pagament del subsidi) — pagament des del primer dia:
+«En la situación especial de incapacidad temporal por menstruación incapacitante secundaria prevista en el párrafo segundo del artículo 169.1.a) el subsidio se abonará a cargo de la Seguridad Social desde el día de la baja en el trabajo.»
+
+Protocol de gestió a Catalunya (circuit ASSIR)
+
+Qui pot emetre la baixa:
+- Metge/essa de capçalera (CAP) — via habitual i més freqüent
+- Ginecòleg/a de l'ASSIR (Atenció a la Salut Sexual i Reproductiva) — via alternativa disponible a Catalunya
+
+Requisits diagnòstics per emetre la baixa:
+1. Diagnòstic previ de dismenorrea secundària per patologia orgànica (endometriosi, miomes, adenomiosi, MIP, quists, pòlips, SOP, estenosi cervical...)
+2. Ecografia vaginal (preferent, és la més fiable) o valoració del grau de dolor incapacitant si no es pot fer l'ecografia
+3. Símptomes incapacitants: dolor que impedeix les activitats de la vida diària (no poder anar a treballar, necessitat de repòs al llit, vòmits, marejos, no remet amb AINE)
+
+Diferència clau amb altres CCAA:
+A Catalunya, els ginecòlegs de l'ASSIR poden emetre directament la baixa, a diferència d'altres CCAA on només ho pot fer el metge de família. Això agilitza el procés per a pacients que ja fan seguiment ginecològic a l'ASSIR.
+
+Dades d'aplicació a Catalunya (juny 2023 – gener 2025):
+- 316 baixes tramitades en 580 dies (aprox. 1 cada 2 dies)
+- Molt per sota de les estimacions inicials (60.000 anuals a tot l'Estat)
+- Causes del baix ús: estigma social (por a represàlies laborals), desconeixement de la llei, tractament hormonal previ que elimina la menstruació
+
+Graus del dolor menstrual (classificació clínica)
+Grau ; Característiques ; Tractament
+Lleu ; 1 dia, sense necessitat d'analgèsia ; Observació
+Moderat ; 2-3 dies, nàusees/vòmits, requereix AINE ; AINE preventiu
+Greu ; Molt intens, no remet amb AINE, afecta vida diària ; Ginecologia + possible baixa
+Casos pràctics
+
+Cas 1 — Endometriosi diagnosticada:
+Treballadora amb endometriosi diagnosticada per ecografia. Cada mes té 2 dies de dolor greu incapacitant. El metge de capçalera o el ginecòleg de l'ASSIR emet part de baixa per menstruació incapacitant secundària. La SS paga des del primer dia. Cada baixa és un procés nou (no acumula per als 365 dies).
+
+Cas 2 — Sense diagnòstic previ:
+Treballadora amb dolor menstrual intens però sense diagnòstic de patologia orgànica. No pot acollir-se a aquesta situació especial. Ha d'anar al ginecòleg per fer una ecografia i obtenir el diagnòstic. Fins que no tingui el diagnòstic, si causa baixa serà IT ordinària per contingència comuna (paga l'empresa dies 4-15).
+
+Cas 3 — Dismenorrea primària (NO cobert):
+Adolescent amb dolor menstrual intens sense causa orgànica identificada. Dismenorrea primària. No té dret a la situació especial. Tractament: AINE, anticonceptius hormonals.
+
+Cas 4 — Pacient amb DIU hormonal:
+Pacient amb endometriosi tractada amb DIU hormonal (Mirena) que pràcticament no menstrua. Si en algun cicle té sagnat i dolor incapacitant, pot sol·licitar la baixa igualment, ja que el diagnòstic de base (endometriosi) segueix vigent.
+
+2. Interrupció de l'embaràs (voluntària o no)
+
+Règim econòmic
+
+- Qui paga: La Seguretat Social des de l'endemà de la baixa (l'empresa paga el dia de la baixa)
+- Períodes mínims de cotització: NO s'exigeixen
+- Cobertura: Mentre rebi assistència sanitària del Servei Públic de Salut i estigui impedida per al treball
+- Excepció: Si la interrupció és per AT o EP → IT per contingències professionals
+
+Aspectes pràctics
+
+- Inclou tant l'avortament espontani com la IVE (interrupció voluntària de l'embaràs)
+- No cal comunicar el motiu a l'empresa (dret a la intimitat)
+- El metge de capçalera o el ginecòleg pot emetre la baixa
+- Durada: variable segons el procediment (quirúrgic vs. farmacològic) i la recuperació
+
+3. Gestació des de la setmana 39
+
+Règim econòmic
+
+- Qui paga: La Seguretat Social des de l'endemà de la baixa (l'empresa paga el dia de la baixa)
+- Períodes mínims de cotització: SÍ s'exigeixen (en funció de l'edat):
+  - Menors de 21 anys: cap període mínim
+  - De 21 a menys de 26 anys: 90 dies cotitzats en els 7 anys anteriors
+  - De 26 anys en endavant: 180 dies cotitzats en els 7 anys anteriors o 360 dies al llarg de la vida laboral
+- Durada: Des del primer dia de la setmana 39 fins al part
+
+Aspectes pràctics
+
+- Substitueix la baixa per risc durant l'embaràs en les últimes setmanes
+- Si la treballadora ja estava en risc durant l'embaràs, continua percebent aquella prestació fins al part
+- El ginecòleg o el metge de capçalera emet la baixa
+
+Taula resum comparativa
+Situació ; Pagament ; Des de ; Cotització mínima ; Recaiguda
+Menstruació incapacitant sec. ; SS ; Dia 1 de baixa ; No ; Cada procés és nou
+Interrupció embaràs ; SS ; Dia 2 de baixa* ; No ; Normal
+Gestació setmana 39 ; SS ; Dia 2 de baixa* ; Sí (per edat) ; Normal
+IT ordinària CC ; Empresa (dies 4-15) + SS ; Dia 4 ; 180 dies en 5 anys ; Acumula
+IT per AT/EP ; SS ; Dia 2 de baixa* ; No ; Acumula
+*L'empresa abona el salari íntegre el dia de la baixa.
+
+Preguntes freqüents
+
+P: La pacient té dolor menstrual intens però no té cap diagnòstic. Pot agafar la baixa especial?
+R: No. Cal un diagnòstic previ de patologia orgànica. El primer pas és derivar-la a ginecologia per a ecografia i estudi. Fins que no tingui el diagnòstic, si causa baixa serà IT ordinària.
+
+P: Quantes vegades pot agafar la baixa per menstruació incapacitant al mes?
+R: Tantes com cicles menstruals incapacitants tingui. Cada procés és independent i no computa per al màxim de 365 dies.
+
+P: El metge de capçalera ha d'emetre la baixa o pot ser el ginecòleg de l'ASSIR?
+R: A Catalunya, tant el metge de capçalera com el ginecòleg de l'ASSIR poden emetre la baixa. En altres CCAA, pot ser que només ho pugui fer el metge de família.
+
+P: L'empresa pot saber el motiu de la baixa?
+R: L'empresa rep el comunicat de baixa però no el diagnòstic. Sap que és una IT per contingència comuna, però no el motiu específic.
+
+P: La baixa per menstruació incapacitant afecta el còmput d'absentisme?
+R: No. Com a situació especial d'IT, no computa als efectes de l'acomiadament per absentisme (art. 52.d ET, si s'apliqués).
+
+RESUMEN EN ESPAÑOL
+==================
+
+La LO 1/2023 (en vigor desde el 1 de junio de 2023) crea tres situaciones especiales de IT por contingencias comunes: (1) menstruación incapacitante secundaria (dismenorrea por patología diagnosticada, SS paga desde el día 1, sin cotización mínima, cada proceso es nuevo); (2) interrupción del embarazo voluntaria o no (SS paga desde el día 2); (3) gestación desde la semana 39 (SS paga desde el día 2, con cotización mínima por edad). Incluye texto literal de la Disposición Final Tercera y protocolo ASSIR de Cataluña.
+
+CONTENIDO EN ESPAÑOL DISPONIBLE
+===============================
+
+Resumen ejecutivo para el médico de familia
+
+La Ley Orgánica 1/2023, de 28 de febrero (BOE núm. 51, 01/03/2023, en vigor desde el 1 de junio de 2023) introduce tres nuevas situaciones especiales de IT por contingencias comunes que modifican la LGSS (art. 144, 169, 172 y 173):
+
+1. Menstruación incapacitante secundaria (dismenorrea secundaria por patología diagnosticada)
+2. Interrupción del embarazo (voluntaria o no)
+3. Gestación desde el primer día de la semana 39
+
+1. Menstruación incapacitante secundaria
+
+Definición legal (art. 2.6 LO 1/2023)
+
+«Situación de incapacidad derivada de una dismenorrea generada por una patología previamente diagnosticada.»
+
+Clave: NO es la dismenorrea primaria (dolor menstrual sin causa orgánica). Se requiere una patología de base diagnosticada.
+
+Patologías reconocidas
+Patología ; Frecuencia
+Endometriosis ; Causa más frecuente (infradiagnosticada)
+Adenomiosis ; Frecuente
+Miomas uterinos ; Frecuente
+Enfermedad inflamatoria pélvica (EIP) ; Moderada
+Quistes ováricos ; Moderada
+Pólipos endometriales ; Menos frecuente
+Ovarios poliquísticos (SOP) ; Menos frecuente
+Estenosis cervical ; Menos frecuente
+Régimen económico (art. 173 LGSS modificado)
+
+- Quién paga: La Seguridad Social desde el primer día de la baja (sin franquicia empresarial)
+- Cuantía: 60% de la base reguladora (días 4-20) / 75% (desde el día 21)
+- Períodos mínimos de cotización: NO se exigen (art. 172 LGSS modificado)
+- Recaída: Cada proceso se considera nuevo (no computa para el máximo de 365 días)
+
+Texto literal de la Disposición Final Tercera (artículos modificados de la LGSS)
+
+Art. 144.4 LGSS (obligación de cotizar):
+«La obligación de cotizar continuará en la situación de incapacidad temporal, cualquiera que sea su causa, incluidas las situaciones especiales de incapacidad temporal por menstruación incapacitante secundaria, interrupción del embarazo, sea voluntaria o no, y gestación desde el día primero de la semana trigésima novena...»
+
+Art. 169.1.a) LGSS (situaciones determinantes de IT) — nuevos párrafos añadidos:
+«Tendrán la consideración de situaciones especiales de incapacidad temporal por contingencias comunes aquellas en que pueda encontrarse la mujer en caso de menstruación incapacitante secundaria, así como la debida a la interrupción del embarazo, voluntaria o no, mientras reciba asistencia sanitaria por el Servicio Público de Salud y esté impedida para el trabajo, sin perjuicio de aquellos supuestos en que la interrupción del embarazo sea debida a accidente de trabajo o enfermedad profesional.»
+«Se considerará también situación especial de incapacidad temporal por contingencias comunes la de gestación de la mujer trabajadora desde el día primero de la semana trigésima novena.»
+
+Art. 169.2 LGSS (recaída) — modificación clave:
+«...salvo los procesos por bajas médicas por menstruación incapacitante secundaria en los que cada proceso se considerará nuevo»

@@ -1,0 +1,2719 @@
+CONSULTES IT — DOCUMENTACIÓN PARA COLOQ.IA
+===========================================
+
+ID: 13
+Título principal: Tiempos estándar de Incapacidad Temporal
+Título en español: Tiempos estándar de Incapacidad Temporal
+Tipo documental: guia
+Fuente: INSS - Institut Nacional de la Seguretat Social
+Ámbito: estatal
+Año de publicación: 2023
+Estado: vigent
+URL de la fuente: https://www.seg-social.es/wps/portal/wss/internet/Conocenos/Publicaciones/28156/47075/62e20eb4-bd64-47cb-a4ac-b55b39428d9f/manual-de-tiempos-optimos-de-incapacidad-temporal-%284--edicion%29
+Etiquetas: tiempos_estandar, duracion, inss
+
+AVISO
+=====
+
+Exportación del catálogo documental de Consultes IT. Para decisiones profesionales o jurídicas debe verificarse siempre la vigencia y el texto consolidado en la fuente oficial indicada.
+
+CONTENIDO PRINCIPAL
+===================
+
+INSS
+GOBIERNO
+DE ESPAÑA
+MINISTERIO
+DE TRABAJO
+E INMIGRACIÓN
+SECRETARIA DE ESTADO
+DE LA SEGURIDAD SOCIAL
+INSTITUTO NACIONAL DE LA
+SEGURIDAD SOCIAL
+Tiempos estándar de
+INCAPACIDAD
+TEMPORAL
+INSS
+Tiempos estándar de
+INCAPACIDAD
+TEMPORAL
+2ª edición
+Edita: Instituto Nacional de la Seguridad Social
+NIPO: 791-09-079-3
+Catálogo general de publicaciones oficiales: http/www.060.es
+introducción
+01
+
+5
+INTRODUCCIÓN
+01
+TIEMPOS ESTÁNDAR DE INCAPACIDAD TEMPORAL
+
+.
+La Ley General de la Seguridad Social define la Incapacidad Temporal (IT)  como la
+situación en la que un trabajador, por causa de enfermedad o accidente, se
+encuentra imposibilitado para el desempeño de su trabajo y recibe asistencia
+sanitaria por parte de la Seguridad Social, con una duración máxima de 12 meses
+prorrogables por otros seis, cuando se presuma que durante ellos pueda ser dado
+de alta médica por curación o mejoría.
+
+Los elementos definitorios de la IT son por tanto:
+
+-
+La situación de enfermedad
+-
+La necesidad de tratamiento  por los Servicios Médicos Públicos
+-
+La incapacidad para el trabajo.
+
+Siendo  la incapacidad para el trabajo el elemento clave en relación con la
+percepción de las prestaciones económicas del sistema de Seguridad Social, la
+valoración de la capacidad laboral constituye  el principal elemento de control.
+
+El Real Decreto  575/1997 de 18 de abril, por el que se regulan determinados
+aspectos de la gestión y control de la prestación económica de la Seguridad Social
+por incapacidad temporal, establece en su artículo 3.2 que con el fin de que las
+actuaciones médicas de control de IT cuenten con el mayor respaldo técnico, se
+pondrá a disposición de los médicos a los que competan dichas actuaciones, tablas
+de duraciones medias, tipificadas para los distintos procesos patológicos
+susceptibles de generar incapacidades.
+
+Las actuaciones médicas  de control de las situaciones de IT deben asumir la
+necesaria existencia de unos tiempos de recuperación de la capacidad laboral de los
+trabajadores, necesarios para que los servicios asistenciales desarrollen todas las
+actuaciones diagnósticas y terapéuticas que conduzcan a la mejoría del estado de
+salud o curación del trabajador. Nos encontramos ante una situación temporal,
+durante la cual el trabajador tiene un alto grado de dependencia de los servicios de
+salud, y una alta probabilidad de estar incapacitado para desarrollar una vida laboral
+activa.
+
+El presente Manual de Tiempos Estándar de Incapacidad Temporal pretende ser
+una herramienta de trabajo para homogeneizar criterios en las actuaciones médicas
+de seguimiento y control de IT y  servir de guía y orientación al médico que prescribe
+la baja, en la toma de decisiones.
+
+DEFINICIÓN DE TIEMPO ESTÁNDAR
+
+El Tiempo Estándar de IT es “el tiempo medio óptimo que se requiere para la
+resolución de un proceso clínico que ha originado una incapacidad para el trabajo
+habitual, utilizando las técnicas de diagnóstico y tratamiento normalizadas y
+aceptadas por la comunidad médica y asumiendo el mínimo de demora en la
+asistencia sanitaria del trabajador”.
+
+6
+INTRODUCCIÓN
+01
+El Tiempo Estándar es un tiempo que asume la presunción de que el trabajador
+tiene una alta probabilidad de estar incapacitado  para la realización de las tareas y
+requerimientos profesionales. Es conceptualmente el tiempo de recuperación
+funcional suficiente para el desempeño de los requerimientos o tareas profesionales
+del trabajador en términos de homogeneidad. Pueden existir factores dependientes
+del propio paciente o del tipo de actividad laboral realizada que condicionen que el
+tiempo de recuperación funcional sea inferior al Tiempo Estándar definido.
+
+En todo caso, una vez alcanzado el Tiempo Estándar, la decisión del médico
+encargado del control del proceso de IT es valorar el alta laboral. Para ello, deberá
+realizar  el reconocimiento médico completo del trabajador y una evaluación de sus
+deficiencias y discapacidades. La continuidad en la situación de IT puede estar
+motivada por la existencia  de complicaciones clínicas derivadas del propio proceso
+o de procesos intercurrentes, por una insuficiente respuesta terapéutica o su
+ausencia, por la existencia de posibles complicaciones derivadas de las acciones
+terapéuticas aplicadas o por requerimientos específicos del  puesto de trabajo.
+Corresponderá al médico encargado del seguimiento del proceso de baja laboral
+objetivar la presencia de estos factores y valorar su influencia en la duración real del
+proceso de IT.
+
+METODOLOGÍA
+
+El Instituto Nacional de la Seguridad Social (INSS) procedió a la constitución en
+Mayo de 2002 de un grupo de trabajo de Codificación y Estándares de Duración en
+Incapacidad Temporal. Dicho grupo consideró que el sistema de codificación a
+utilizar sería la  Clasificación Internacional de Enfermedades de la Organización
+Mundial de la Salud, CIE-9.MC.  Tomando como base dicha clasificación, se
+procedió a seleccionar del total de diagnósticos que figuran en la misma, a aquellos
+que son posibles generadores de situaciones de IT y a asignarle un tiempo estándar
+a cada uno de ellos.
+
+El proceso de elaboración y definición  de los tiempos estándar se fundamentó en la
+experiencia de los médicos inspectores participantes, en la utilización de estudios
+estadísticos de procesos de IT realizados  en las Unidades Médicas del Instituto
+Nacional de la Seguridad Social, en los Servicios Públicos de Salud (SPS), en las
+Mutuas de Accidentes de Trabajo y Enfermedades Profesionales de la Seguridad
+Social,  y en las consultas con médicos especialistas del Instituto Nacional de la
+Seguridad Social, de los Servicios Públicos de Salud y de las Mutuas de Accidentes
+de Trabajo y Enfermedades Profesionales de la Seguridad Social.
+
+En septiembre de 2008, la Subdirección General de Coordinación de Unidades
+Médicas del Instituto Nacional de la Seguridad Social procedió a constituir un Grupo
+de Trabajo para la “Revisión y Actualización del Manual de Tiempos Estándar”.
+
+Dados los avances experimentados en los sistemas informáticos en los últimos
+años, que han permitido que el Instituto Nacional de la Seguridad Social incorpore a
+su base de datos de procesos de IT  la práctica totalidad de los partes de baja y alta
+emitidos por los Servicios Públicos de Salud, el análisis de los mismos permite
+
+7
+INTRODUCCIÓN
+01
+conocer la frecuencia de cada código de diagnóstico y las duraciones reales de los
+mismos, tanto a nivel provincial como a nivel nacional.
+
+Se procedió a realizar un análisis estadístico de todos los partes de baja y alta
+enviados al Instituto Nacional de la Seguridad Social por los Servicios Públicos de
+Salud desde enero a junio de 2008. El total de procesos de IT objeto del estudio fue
+de 1.168.564. Para cada código de diagnóstico se analizó el número total de
+procesos, la duración total en días y la duración media, constatándose la existencia
+de importantes variaciones entre las diferentes provincias y comunidades
+autónomas.
+
+Se han eliminado del listado aquellos códigos de diagnóstico cuya frecuencia ha sido
+inferior a 1/100.000 siempre que se trate de códigos de 4 o 5 dígitos. No se han
+eliminado los relativos a categorías diagnósticas (códigos de 3 dígitos) aunque su
+frecuencia haya sido inferior a la mencionada.
+
+Igualmente se han eliminado los códigos E (correspondientes a la clasificación
+suplementaria de causas externas de lesiones e intoxicaciones)  y los códigos V
+(correspondientes a la clasificación suplementaria de factores que influyen en el
+estado de salud y contacto con los servicios sanitarios) de la CIE-9.MC, por
+considerar que no deben ser utilizados como causa primaria o diagnóstico principal
+del proceso de IT, sino como código suplementario.
+
+Aunque el criterio general seguido para la asignación del Tiempo Estándar a cada
+proceso clínico ha sido el de “tiempo que se requiere para la resolución de un
+proceso clínico que ha originado una incapacidad para el trabajo habitual, utilizando
+las técnicas de diagnóstico y tratamiento normalizadas y aceptadas por la
+comunidad médica y asumiendo el mínimo de demora en la asistencia sanitaria del
+trabajador”, una vez establecido el mismo se ha procedido a ajustar el tiempo en
+función de la duración media a nivel nacional y de la duración media de la provincia
+con resultado más favorable, teniendo en cuenta siempre el volumen de procesos de
+IT existentes para el mismo código de diagnóstico.
+
+Dada la gran variabilidad de situaciones clínicas posibles generadoras de IT, es
+necesario realizar algunas precisiones en relación con la asignación de tiempo
+estándar a algunos de los códigos de diagnósticos:
+
+1. En procesos crónicos, que evolucionan con periodos de agravación y
+mejoría o estabilización, no es posible diferenciar en la codificación el
+diagnóstico inicial y las sucesivas recaídas. Aunque en algunos de estos
+procesos el Tiempo Estándar en el diagnóstico inicial puede ser mayor, el
+criterio general que se ha seguido es el  tiempo que se considera necesario
+para valorar la estabilización de las limitaciones y secuelas, alcanzar una
+mejoría suficiente que permita la reincorporación laboral, o conseguir una
+adecuada respuesta al tratamiento. Tal es el caso de la patología
+psiquiátrica, donde algunas de las entidades nosológicas como la
+esquizofrenia, o el trastorno de ansiedad generalizada precisan que la
+sintomatología se presente al menos durante 6 meses para confirmar el
+diagnóstico inicial; no obstante, establecido el diagnóstico, los sucesivos
+brotes pueden ser controlados en un tiempo menor.
+
+2. En procesos oncológicos, dado que no es posible diferenciar en la
+codificación los diferentes estadios tumorales, la asignación del Tiempo
+
+8
+INTRODUCCIÓN
+01
+Estándar se ha realizado en función de la localización del tumor, de los
+estadios en los que con mas frecuencia se encuentra el mismo en el
+momento del diagnóstico, de los requerimientos terapéuticos para estos
+estadios, y del estado físico que suele originar cada tipo de tumor.
+
+3. En procesos clínicos graves, con importante limitaciones orgánicas y/o
+funcionales y con tendencia a su agravación progresiva, el Tiempo Estándar
+asignado corresponde con el que se considera necesario para el estudio,
+confirmación diagnóstica y valoración de respuesta al tratamiento. La
+citación por Tiempo Estándar en estos procesos no tendría la finalidad de
+valorar un posible alta médica, sino la de que el médico pueda disponer de
+todos los datos necesarios para plantear una posible incapacidad
+permanente.
+
+4. En procesos banales, aún sabiendo que pueden ser compatibles con el
+desarrollo de la mayoría de las actividades laborales, se ha asignado un
+Tiempo Estándar de 4 días, dado que pueden figurar como causa de baja de
+corta duración en determinadas profesiones y no van a requerir, en general,
+la emisión del primer  parte de confirmación.
+
+ ESTRUCTURA
+
+El  listado de Tiempos Estándar de IT se presenta en forma de tablas con 3
+columnas en las que se indica:
+-
+Código CIE-9.MC
+-
+Descripción nominal del diagnóstico o procedimiento
+-
+Tiempo Estándar en días
+
+Existen un total de 16 capítulos  de diagnósticos que se corresponden con la
+distribución establecida en la lista tabular de la CIE-9.MC, excepto el capítulo 15,
+relativo a enfermedades con origen en el periodo perinatal, que no figura en el
+listado dado que, obviamente, no se ha encontrado ningún diagnóstico  de este
+capítulo como posible generador de una situación de IT.  Hay un capítulo adicional
+de procedimientos, que se corresponde igualmente con el  capítulo del mismo
+nombre de la CIE-9.MC.
+
+UTILIDADES
+
+El presente Manual de Tiempos Estándar  pretende servir de ayuda para:
+
+1. Gestión de citas: permite la señalización del momento idóneo para la cita,
+evitando convocatorias innecesarias durante el periodo mínimo asistencial
+preciso para cada proceso, y adecuando la cita al momento de previsible
+recuperación funcional. De esta manera se produce una citación más ajustada
+desde el punto de vista médico, incidiendo primordialmente en el punto de
+
+9
+INTRODUCCIÓN
+01
+inflexión a partir del cual se considera que puede existir una desviación respecto
+de la duración de IT óptima.
+
+2. Guía de ayuda a médicos de atención primaria y especializada: le permite al
+médico de atención primaria y al especialista, orientarse respecto de la duración
+de los procesos de IT que atiende y le ayuda a analizar aquellas causas que
+inciden en una prolongación de los mismos.
+
+3. Utilidad para los responsables de gestión: esta herramienta se puede
+incorporar a los aplicativos informáticos de los Servicios Públicos de Salud,
+contribuyendo a analizar la situación real de la IT en relación con los tiempos
+estándar de forma global, por capítulos diagnósticos, por códigos, etc.
+
+4. Comunicación y coordinación con los Servicios Públicos de Salud  y
+Mutuas: pretende ser una herramienta para abrir procedimientos de negociación
+estratégica en materia de gestión de IT, consensuar tiempos de duración y
+definir protocolos de seguimiento y actuación conjunta.
+
+5. Análisis de actividad de las Unidades Médicas: permite introducir criterios
+médicos en el análisis de actividad de las diferentes unidades en el seguimiento
+y control de la IT.
+
+6. Aplicaciones estadísticas: la utilización de los Tiempos Estándar de forma
+conjunta con programas de tratamiento informático de datos en IT permite
+obtener indicadores estadísticos de tiempos reales de duración por diagnósticos,
+grupos diagnósticos o procesos de mayor prevalencia (por edad, género,
+régimen, etc.), o indicadores de desviación respecto a la duración estándar
+(tiempo excedido).
+
+El análisis de los resultados puede ser utilizado en los proyectos presupuestarios
+y en el diseño de programas específicos de actuaciones preventivas y de
+rehabilitación.
+
+02
+listado por
+capítulos
+
+13
+LISTADO POR CAPÍTULOS
+02
+
+1. ENFERMEDADES INFECCIOSAS Y PARASITARIAS
+
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+002
+Fiebres tifoideas y paratifoideas
+30
+003
+Otras infecciones de salmonella
+10
+003.0
+Gastroenteritis por salmonella
+7
+003.9
+Infecciones por salmonella, sin especificar
+7
+004
+Shigelosis
+30
+005
+Otras intoxicaciones alimenticias (bacterianas)
+4
+005.9
+Intoxicación alimenticia, sin especificar
+4
+006
+Amebiasis
+7
+006.3
+Absceso amebiano hepático
+30
+006.4
+Absceso amebiano pulmonar
+30
+006.5
+Absceso amebiano cerebral
+60
+006.9
+Amebiasis, no especificada
+7
+007
+Otras enfermedades intestinales protozoarias
+14
+008
+Infecciones intestinales por otros organismos
+4
+008.0
+Infecciones intestinales por Escherichia Coli
+4
+008.4
+Infecciones intestinales por otras bacterias
+4
+008.5
+Enteritis bacteriana no especificada
+4
+008.6
+Enteritis por virus especificado
+4
+008.62
+Enteritis por adenovirus
+4
+008.67
+Enteritis por enterovirus NCOC
+4
+008.69
+Otras enteritis virales
+4
+008.8
+Enteritis por otro organismo no clasificado
+4
+009
+Infecciones intestinales mal definidas
+4
+009.0
+Colitis, enteritis, gastroenteritis infecciosas
+4
+009.1
+Colitis, enteritis, gastroenteritis de origen presumiblemente infeccioso
+4
+009.2
+Diarrea infecciosa
+4
+009.3
+Diarrea de origen presumiblemente infeccioso
+4
+010
+Infección tuberculosa primaria
+30
+011
+Tuberculosis pulmonar
+60
+011.0
+Tuberculosis pulmonar infiltrativa
+60
+011.2
+Tuberculosis pulmonar cavitada
+60
+011.3
+Tuberculosis pulmonar bronquial
+60
+011.6
+Neumonía tuberculosa (cualquier forma)
+60
+011.8
+Otras tuberculosis pulmonares especificadas
+60
+011.9
+Tuberculosis pulmonar, no especificada
+60
+012
+Otras tuberculosis respiratorias
+30
+013
+Tuberculosis de meninges y SNC
+90
+013.0
+Meningitis tuberculosa
+90
+014
+Tuberculosis de intestinos, peritoneo y glándulas mesentéricas
+90
+015
+Tuberculosis ósea y articular
+90
+016
+Tuberculosis del aparato genitourinario
+60
+
+14
+LISTADO POR CAPÍTULOS
+02
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+017
+Tuberculosis de otros órganos
+60
+017.6
+Tuberculosis glándulas suprarrenales
+60
+018
+Tuberculosis miliar
+90
+021
+Turalemia
+20
+023
+Brucelosis
+60
+026
+Fiebre por mordedura de rata
+30
+027
+Otras zoonosis bacterianas
+30
+030
+Lepra
+90
+031
+Otras enfermedades micobacterianas
+30
+033
+Tos ferina
+7
+034
+Angina estreptocócica y fiebre escarlatina
+7
+034.0
+Angina estreptocócica
+7
+034.1
+Fiebre escarlatina
+7
+035
+Erisipela
+14
+036
+infección meningocócica
+60
+036.0
+Meningitis meningocócica
+60
+038
+Septicemia
+30
+Total 039
+Actinomicosis
+20
+041
+Infección bacteriana en ECOC, sitio no especificado.
+10
+041.8
+Otras infecciones bacterianas especificadas
+10
+041.9
+Infección bacteriana sin especificar
+10
+042
+Enfermedad por virus de la inmunodeficiencia humana [VIH]
+45
+045
+Poliomielitis aguda
+180
+046
+Infección SNC por virus lento
+180
+047
+Meningitis enterovírica
+30
+047.9
+Meningitis vírica sin especificar
+30
+048
+Otras enfermedades enterovíricas del SNC
+45
+051
+Vacuna y paravaccinia
+30
+051.2
+Dermatitis pustular contagiosa
+30
+052
+Varicela
+10
+052.8
+Varicela con otras complicaciones sin especificar
+14
+052.9
+Varicela no complicada
+10
+053
+Herpes zoster
+20
+053.12
+Neuralgia del rigémino postherpética
+20
+053.2
+Herpes zoster ocular
+20
+053.20
+Dermatitis herpes zoster del párpado
+20
+053.21
+Gueratoconjuntivitis por herpes zoster
+30
+053.29
+Herpes zoster con otras complicaciones oculares
+20
+053.7
+Complicaciones herpes zoster específicas
+20
+053.8
+Complicación herpes zoster sin especificar
+20
+053.9
+Herpes zoster sin complicación
+20
+054
+Herpes simple
+4
+054.0
+Eczema herpético
+4
+054.1
+Herpes genital
+4
+054.10
+Herpes genital sin especificar
+4
+054.2
+Gingivoestomatitis herpética
+4
+054.4
+Herpes simple con complicaciones oftálmicas
+14
+
+15
+LISTADO POR CAPÍTULOS
+02
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+054.40
+Herpes simple con complicación ocular sin especificar
+14
+054.42
+Queratitis dendrítica
+20
+054.43
+Queratitis disciforme herpes simple
+20
+054.6
+Panadizo herpético
+10
+054.7
+Herpes simple con complicaciones especificas
+7
+054.8
+Herpes simple con complicaciones sin especificar
+7
+054.9
+Herpes simple sin mención de complicación
+4
+055
+Sarampión
+14
+055.0
+Encefalitis post-sarampión
+60
+055.1
+Neumonía post-sarampión
+30
+055.9
+Sarampión sin mención de complicación
+14
+056
+Rubéola
+10
+056.0
+Rubéola con complicaciones neurológicas
+30
+056.01
+Encéfalomielitis por rubéola
+60
+056.9
+Rubéola sin mención de complicación
+10
+057
+Otros exantemas virales
+7
+057.9
+Exantema viral sin especificar
+7
+060
+Fiebre amarilla
+90
+061
+Dengue
+7
+062
+Encefalitis viral portada por mosquito
+20
+070
+Hepatitis viral
+30
+070.1
+Hepatitis viral A sin coma hepático
+30
+070.2
+Hepatitis viral B con coma hepático
+90
+070.3
+Hepatitis viral C sin coma hepático
+45
+070.4
+Otras hepatitis virales especificadas con coma hepático
+90
+070.5
+Otras hepatitis virales especificadas sin coma hepático
+45
+070.51
+Hepatitis C aguda o inespecífica sin mención de coma hepático
+45
+070.54
+Hepatitis C crónica sin mención de coma hepático
+45
+070.9
+Hepatitis viral sin especificar sin coma hepático
+45
+071
+Rabia
+60
+072
+Paperas
+7
+072.0
+Orquitis por paperas
+10
+072.2
+Encefalitis de las paperas
+60
+072.9
+Paperas sin mención de complicación
+7
+073
+Ornitosis
+7
+074
+Enfermedades especificas del virus Coxsackie
+7
+074.0
+Herpangina
+7
+075
+Mononucleosis infecciosa
+20
+077
+Conjuntivitis debidas a virus y a clamídias
+7
+077.0
+Conjuntivitis de inclusión
+7
+077.1
+Queratoconjuntivitis epidémica
+7
+077.2
+Fiebre faringoconjuntival
+7
+077.3
+Otras conjuntivitis adenovirales
+7
+077.8
+Otras conjuntivitis virales
+7
+077.9
+Conjuntivitis sin especificar por virus y clamidia
+7
+077.99
+Enfermedad de la conjuntiva debido a virus
+7
+078
+Enfermedades debidas a virus y clamidia
+7
+
+16
+LISTADO POR CAPÍTULOS
+02
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+078.0
+Molluscum contagiosum
+7
+078.1
+Verrugas virales
+4
+078.10
+Verrugas virales inespecíficas
+4
+078.11
+Condiloma acuminado
+7
+078.19
+Otras verrugas virales especificadas
+7
+078.2
+Fiebre sudatoria
+7
+078.4
+Glosopeda
+4
+078.5
+Enfermedad por citomegalovirus
+10
+078.8
+Enfermedad especifica por virus y clamidia
+7
+078.81
+Vértigo epidémico
+14
+078.89
+Enfermedad debida a virus y a clamidia NCOC
+4
+079
+Infección viral en otras enfermedades - NEOM
+7
+079.0
+Infección viral en otras enfermedades, adenovirus
+7
+079.1
+Infección viral por virus Echo
+4
+079.2
+Infección viral por virus Coxsackie
+4
+079.3
+Infección viral por rinovirus
+4
+079.4
+Infección viral por virus del papiloma humano
+21
+079.6
+Infección viral por virus respiratorio sincitial (RSV)
+4
+079.8
+Infección viral o por clamidia NCOC
+4
+079.89
+Otras infecciones virales especificadas
+4
+079.9
+Infección viral o por clamidia neom
+4
+079.99
+Infección viral inespecífica
+4
+082
+Rickettsiosis portadas por garrapatas
+28
+082.1
+Fiebre botonosa
+28
+083
+Otras rickettsiosis
+28
+083.0
+Fiebre Q
+28
+084
+Malaria
+45
+087
+Fiebre intermitente
+20
+087.9
+Fiebre intermitente sin especificar
+20
+088
+Otras enfermedades portadas por artrópodos
+14
+088.0
+Bartonelosis
+14
+091
+Sífilis precoz sintomática
+14
+094
+Neurosífilis
+60
+094.0
+Tabes dorsal
+60
+095
+Otras formas de sífilis tardía con síntomas
+60
+098
+Infecciones gonocócicas
+7
+098.13
+Epidídimo-orquitis gonocócica (aguda)
+14
+099
+Otras enfermedades venéreas
+7
+099.4
+Otras uretritis no gonocócicas
+7
+099.5
+Otras enfermedades venéreas debidas a Clamidia Trachomatis
+7
+100
+Leptospirosis
+30
+101
+Angina de Vincent
+21
+102.1
+Pian: lesiones múltiples papilomatosas
+14
+110
+Dermatofitosis
+4
+110.1
+Dermatofitosis de uñas
+10
+110.3
+Dermatofitosis de ingle y zona perianal
+4
+110.4
+Dermatofitosis del pie
+4
+
+17
+LISTADO POR CAPÍTULOS
+02
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+110.5
+Dermatofitosis corporal
+4
+110.9
+Dermatofitosis de sitio sin especificar
+4
+111
+Otras dermatomicosis y dermatomicosis sin especificar
+4
+111.9
+Dermatomicosis sin especificar
+4
+112
+Candidiasis
+4
+112.0
+Candidiasis bucal
+4
+112.1
+Candidiasis vulvar y vaginal
+4
+112.2
+Candidiasis de otros sitios urogenitales
+4
+112.3
+Candidiasis de piel y uñas
+4
+117
+Otras micosis
+4
+117.9
+Otras micosis y micosis sin especificar
+4
+118
+Micosis oportunista
+14
+120.0
+Esquistosoma Haematobium
+20
+122.8
+Hidatidosis hepática sin especificar
+60
+123
+Infecciones intestinales por Tenia Solitaria
+20
+125
+Filariasis filárica y dracunculosis
+20
+127
+Otras helmintiasis intestinales
+7
+132.3
+Pediculosis. infecciones mixtas
+4
+133
+Acariasis
+4
+133.0
+Sarna
+7
+135
+Sarcoidosis
+30
+136.1
+Síndrome de Behcet
+30
+136.8
+Otra enfermedad infecciosa y parasitaria especificada
+4
+136.9
+Enfermedad infecciosa y parasitaria sin especificar
+4
+138
+Efecto tardío de poliomielitis aguda
+60
+
+18
+LISTADO POR CAPÍTULOS
+02
+2. NEOPLASIAS
+
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+140
+Neoplasia maligna de labio
+14
+141
+Neoplasia maligna de lengua
+120
+142.0
+Neoplasia maligna de glándula parótida
+60
+145
+Neoplasia maligna otras partes boca y partes sin especificar
+120
+145.9
+Neoplasia maligna de la boca sin especificar
+120
+147
+Neoplasia maligna nasofaringe
+120
+150
+Neoplasia maligna esófago
+180
+151
+Neoplasia maligna estómago
+180
+151.9
+Neoplasia maligna de estómago sin especificar
+180
+153
+Neoplasia maligna colon
+180
+153.3
+Neoplasia maligna colon sigmoidal
+180
+153.8
+Neoplasia maligna otros sitios especificados intestino grueso
+150
+153.9
+Neoplasia maligna de colon sin especificar
+180
+154
+Neoplasia maligna recto, unión rectosigmoidal y ano
+180
+154.0
+Neoplasia maligna de unión rectosigmoidal
+180
+154.1
+Neoplasia maligna de recto
+180
+154.3
+Neoplasia maligna de ano sin especificar
+90
+154.8
+Neoplasia maligna de otras partes de recto
+150
+155
+Neoplasia maligna hígado y canales biliares intrahepáticos
+120
+155.0
+Neoplasia maligna de hígado, primario
+120
+157
+Neoplasia maligna páncreas
+120
+157.9
+Neoplasia maligna de páncreas parte sin especificar
+120
+159
+Neoplasia maligna  digestivo/peritoneo
+120
+161
+Neoplasia maligna laringe
+120
+161.9
+Neoplasia maligna de laringe sin especificar
+120
+162
+Neoplasia maligna tráquea, bronquios y pulmón
+120
+162.2
+Neoplasia maligna de bronquio principal
+120
+162.3
+Neoplasia maligna lóbulo superior, bronquio o pulmón
+120
+162.4
+Neoplasia maligna lóbulo medio, bronquio o pulmón
+120
+162.5
+Neoplasia maligna lóbulo inferior, bronquio o pulmón
+120
+162.8
+Neoplasia maligna de otras partes del bronquio o pulmón
+120
+162.9
+Neoplasia maligna de bronquio y pulmón sin especificar
+120
+170
+Neoplasia maligna hueso y cartílago articular
+90
+170.1
+Neoplasia maligna de mandíbula
+90
+172
+Melanoma maligno piel
+60
+172.5
+Melanoma maligno de piel de tronco, excepto escroto
+150
+172.9
+Melanoma de piel sitio sin especificar
+60
+173
+Otras neoplasias malignas de la piel
+20
+173.4
+Otras neoplasias malignas de piel, cuero cabelludo y cuello
+20
+173.9
+Otras neoplasias malignas de piel sitio sin especificar
+20
+174
+Neoplasia maligna mama mujer
+240
+174.0
+Neoplasia maligna de pezón y areola
+180
+
+19
+LISTADO POR CAPÍTULOS
+02
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+T74.1
+Neoplasia maligna de porción central de la mama
+240
+174.2
+Neoplasia maligna de cuadrante superointerior de la mama
+240
+174.3
+Neoplasia maligna de cuadrante inferointerior de la mama
+240
+174.4
+Neoplasia maligna de cuadrante superoexterior de la mama
+240
+174.5
+Neoplasia maligna de cuadrante inferoexterior de la mama
+240
+174.8
+Neoplasia maligna de otros sitios especificados de la mama femenina
+150
+174.9
+Neoplasia maligna de mama femenina, sin especificar
+240
+175
+Neoplasia maligna mama hombre
+90
+176.5
+Sarcoma de Kaposi de nódulos linfáticos
+60
+179
+Neoplasia maligna útero parte sin especificar
+120
+180
+Neoplasia maligna cérvix uterino
+90
+180.0
+Neoplasia maligna de endocérvix uterino
+90
+180.9
+Neoplasia maligna de cérvix uterino sin especificar
+90
+182
+Neoplasia maligna cuerpo uterino
+120
+183
+Neoplasia maligna ovario y otros anexos uterinos
+180
+183.0
+Neoplasia maligna de ovario
+180
+184
+Neoplasia maligna otros órganos genitales femeninos
+180
+185
+Neoplasia maligna próstata
+90
+186
+Neoplasia maligna testículos
+120
+187
+Neoplasia maligna pene y otros órganos genitales masculinos
+90
+188
+Neoplasia maligna de la vejiga
+90
+188.9
+Neoplasia maligna de vejiga parte sin especificar
+90
+189
+Neoplasia maligna riñón y otros órganos urinarios
+120
+189.0
+Neoplasia maligna de riñón, excepto pelvis
+120
+189.1
+Neoplasia maligna de pelvis renal
+120
+189.4
+Neoplasia maligna de glándulas parauretrales
+120
+190
+Neoplasia maligna ojo
+120
+191
+Neoplasia maligna cerebro
+150
+191.6
+Neoplasia maligna de cerebelo NEOM
+150
+191.9
+Neoplasia maligna de cerebro sin especificar
+150
+193
+Neoplasia maligna tiroides
+90
+195
+Neoplasia maligna otros sitios y sitios mal definidos
+90
+197.7
+Neoplasia maligna de hígado especificado como secundario
+120
+200
+Linfosarcoma y reticulosarcoma
+120
+200.23
+Tumor Burkitt o linfoma abdômen
+180
+201
+Enfermedad de Hodgkin
+180
+201.45
+Hodgkin linfocítico; Histiocitico
+180
+201.9
+Enfermedad de Hodgkin no especificada
+180
+201.90
+Enfermedad Hodgkin sin especificar – NEOM
+180
+202
+Otras neoplasias malignas tejidos linfoides e histiociticos
+180
+202.0
+Linfoma nodular
+180
+202.1
+Micosis fungoide
+60
+202.8
+Otros linfomas
+180
+202.80
+Linfoma NEOM, extranodal y órganos sólidos excepto bazo
+180
+203.0
+Mieloma múltiple
+180
+ 204.0
+Leucemia linfoide aguda
+240
+204.1
+Leucemia linfoide crónica
+240
+
+20
+LISTADO POR CAPÍTULOS
+02
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+205
+Leucemia mieloide
+240
+205.0
+Leucemia mieloide aguda
+240
+205.1
+Leucemia mieloide crónica
+240
+207
+Otras leucemias especificadas
+240
+210
+Neoplasia benigna labio, cavidad oral y faringe
+30
+210.2
+Neoplasia benigna de glándulas salivares mayores
+40
+210.5
+Neoplasia benigna de amígdala
+20
+211
+Neoplasia benigna otras partes aparato digestivo
+40
+211.3
+Neoplasia benigna de colon
+45
+211.4
+Neoplasia benigna de recto y canal anal
+40
+212.1
+Neoplasia benigna de laringe
+40
+212.3
+Neoplasia benigna de bronquios y pulmón
+90
+213
+Neoplasia benigna ósea y cartílagos articulares
+60
+213.0
+Neoplasia benigna de huesos cráneo y cara
+20
+213.2
+Neoplasia benigna de columna vertebral excluido sacro y coccix
+40
+213.7
+Neoplasia benigna de huesos largos miembros inferiores
+90
+213.9
+Neoplasia benigna de huesos y cartílagos articulares
+60
+214
+Lipoma
+10
+214.0
+Lipoma de piel y tejidos subcutáneos de la cara
+10
+214.1
+Lipoma de piel y tejidos subcutáneos de otros sitios
+10
+214.8
+Lipoma de otros sitios especificados
+10
+214.9
+Lipoma, sitio no especificado
+10
+215
+Otras neoplasias benignas tejidos conectivos
+30
+215.9
+Neoplasia benigna de sitio no especificado
+10
+216
+Neoplasia benigna de la piel
+10
+216.7
+Neoplasia benigna de piel miembros inferiores incluso cadera
+10
+216.8
+Neoplasia benigna de otros sitios especificados de la piel
+10
+ 216.9
+Neoplasia benigna de piel sitio no especificado
+10
+217
+Neoplasia benigna mama
+30
+ 218
+Leiomioma uterino
+40
+218.0
+Leiomioma uterino submucoso
+40
+218.1
+Leiomioma uterino intramural
+40
+218.2
+Leiomioma uterino subseroso
+40
+218.9
+Leiomioma uterino no especificado
+40
+219
+Otras neoplasias benignas útero
+40
+219.0
+Neoplasia benigna de cérvix uterino
+20
+219.1
+Neoplasia benigna de cuerpo uterino
+40
+219.9
+Neoplasia benigna de útero partes sin especificar
+40
+220
+Neoplasia benigna ovario
+40
+ 221
+Neoplasia benigna otros órganos genitales femeninos
+40
+221.8
+Neoplasia benigna otros sitios especificados órgano genital femenino
+40
+221.9
+Neoplasia benigna de órgano genital femenino sitio no especificado
+40
+222
+Neoplasia benigna órganos genitales masculinos
+40
+222.0
+Neoplasia benigna de testículo
+40
+222.2
+Neoplasia benigna de próstata
+40
+223
+Neoplasia benigna riñón y otros órganos urinarios
+60
+223.0
+Neoplasia benigna de riñón salvo pelvis
+60
+
+21
+LISTADO POR CAPÍTULOS
+02
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+223.1
+Neoplasia benigna de pelvis renal
+60
+223.3
+Neoplasia benigna de vejiga
+40
+224
+Neoplasia benigna ojo
+20
+225
+Neoplasia benigna cerebro y otras partes sistema nervios
+120
+225.0
+Neoplasia benigna de cerebro
+120
+225.1
+Neoplasia benigna de nervios craneales
+120
+225.2
+Neoplasia benigna de meninges cerebrales
+120
+226
+Neoplasia benigna glándulas tiroideas
+60
+227
+Neoplasia benigna otras glándulas endocrinas
+90
+227.0
+Neoplasia benigna de glándula adrenal
+60
+227.3
+Neoplasia benigna de glándula pituitaria y conducto, craneofaríngeo
+60
+228
+Hemangioma y linfangioma, cualquier sitio
+30
+228.0
+Hemangioma, cualquier sitio
+30
+228.00
+Hemangioma sitio no especificado
+30
+228.09
+Hemangioma de otros sitios
+30
+228.1
+Linfangioma, cualquier sitio
+30
+229
+Neoplasia benigna de otros sitios y sitios no especificados
+20
+229.0
+Neoplasia benigna de nódulos linfáticos
+40
+229.9
+Neoplasia benigna de otro sitio no especificado
+20
+230
+Carcinoma in situ órganos digestivos
+90
+230.0
+Carcinoma de labios, cavidad oral y faringe
+120
+230.1
+Carcinoma de esófago
+120
+230.2
+Carcinoma de estómago
+180
+230.3
+Carcinoma de colon
+180
+230.4
+Carcinoma de recto
+180
+230.8
+Carcinoma de hígado y sistema biliar
+120
+231
+Carcinoma in situ aparato respiratorio
+120
+231.0
+Carcinoma de laringe
+120
+231.2
+Carcinoma de bronquios y pulmón
+120
+232
+Carcinoma in situ piel
+30
+232.3
+Carcinoma de piel otras partes y partes sin especificar
+30
+232.9
+Carcinoma de piel sitio no especificado
+30
+233
+Carcinoma in situ mama y aparato genitourinario
+90
+233.0
+Carcinoma de mama
+240
+233.1
+Carcinoma de cérvix uterino
+90
+233.3
+Carcinoma otros órganos genitales femeninos
+90
+233.4
+Carcinoma de próstata
+90
+233.6
+Carcinoma otros órganos genitales masculinos
+90
+233.7
+Carcinoma de vejiga
+90
+234
+Carcinoma in situ de otros sitios y sitios no especificados
+90
+234.8
+Carcinoma de otros sitios especificados
+90
+234.9
+Carcinoma de sitio no especificado
+90
+236
+Neoplasia comportamiento no determinado órganos genitourinarios
+90
+236.0
+Neoplasia comportamiento no determinado de útero
+90
+236.2
+Neoplasia comportamiento no determinado de ovario
+90
+236.3
+Neoplasia comportamiento no determinado otros órganos genitales femeninos
+90
+236.4
+Neoplasia comportamiento no determinado testículo
+60
+
+22
+LISTADO POR CAPÍTULOS
+02
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+236.5
+Neoplasia comportamiento no determinado de próstata
+90
+236.7
+Neoplasia comportamiento no determinado de vejiga
+90
+237.7
+Neurofibromatosis
+30
+238.3
+Neoplasia de comportamiento no determinado de mama
+120
+239
+Neoplasias de naturaleza no especificada
+120
+239.0
+Neoplasia naturaleza no especificada de aparato digestivo
+60
+239.1
+Neoplasia naturaleza no especificada de aparato respiratorio
+90
+239.2
+Neoplasia naturaleza no especificada huesos y tejidos blandos
+90
+239.3
+Neoplasia naturaleza no especificada de mama
+120
+239.4
+Neoplasia naturaleza no especificada de vejiga
+120
+239.5
+Neoplasia naturaleza no especificada otros órganos genitourinarios
+120
+239.6
+Neoplasia. naturaleza no especificada de cerebro
+120
+
+23
+LISTADO POR CAPÍTULOS
+02
+3. ENFERMEDADES ENDOCRINAS, DE LA NUTRICIÓN, METABÓLICAS Y
+TRASTORNOS DE LA INMUNIDAD
+
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+240
+Bocio en estudio con con clínica relevante.
+30
+240.0
+Bocio, especificado como simple
+30
+240.9
+Bocio, no especificado
+30
+241
+Bocio nodular no tóxico
+30
+241.0
+Bocio uninodular no tóxico
+30
+241.1
+Bocio multinodular no tóxico
+30
+241.9
+Bocio nodular no tóxico y no especificado
+30
+242
+Tirotoxicosis con o sin bocio
+30
+242.0
+Bocio tóxico difuso
+30
+242.1
+Bocio uninodular tóxico
+30
+242.2
+Bocio multinodular tóxico
+30
+242.9
+Tirotoxicosis sin mención de bocio o de otra causa
+30
+242.90
+Tirotoxicosis neom sin crisis
+30
+243
+Hipotiroidismo congénito
+30
+244
+Hipotiroidismo adquirido con clínica relevante
+30
+244.0
+Hipotiroidismo postquirúrgico
+30
+244.3
+Otros hipotiroidismos iatrogénicos
+30
+244.8
+Otros hipotiroidismos adquiridos especificados
+30
+244.9
+Hipotiroidismo no especificado
+30
+245
+Tiroiditis
+30
+245.0
+Tiroiditis aguda
+30
+245.1
+Tiroiditis subaguda
+30
+245.9
+Tiroiditis no especificada
+30
+245.2
+Tiroiditis de Hasimoto
+30
+246
+Otros trastornos de la glándula tiroides
+30
+246.1
+Bocio dishormonogénico
+30
+246.2
+Quiste de la glándula tiroides (intervenido)
+30
+246.8
+Otros trastornos especificados de la glándula tiroides
+30
+246.9
+Trastorno no especificado de la tiroides
+30
+250
+Diabetes mellitas
+14
+250.0
+Diabetes mellitus sin mención de complicación
+14
+250.00
+Diabetes mellitus sin mención de complicación tipo II o no esp. no descompen.
+14
+250.01
+Diabetes mellitas sin mencion de complicación tipo I no descompensada
+14
+250.02
+Diabetes mellitas sin mencion de complicación tipo II o no esp. descompensada
+30
+250.03
+Diabetes mellitus sin mencion de complicación tipo I descompensada
+30
+250.3
+Diabetes con otro tipo de coma
+30
+250.5
+Diabetes con manifestación oftálmica
+60
+250.50
+Diabetes con manifestación oftálmica tipo II o no esp. no descompensada
+60
+250.6
+Diabetes con manifestación neurológica
+60
+250.60
+Diabetes con manifestación neurológica tipo II, no descompensada
+60
+250.7
+Diabetes con trastornos circulatorios periféricos
+30
+
+24
+LISTADO POR CAPÍTULOS
+02
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+250.8
+Diabetes con otras manifestaciones especificadas
+30
+250.80
+Diabetes con otras manifestaciones tipo II o no esp. no descompensada
+30
+250.9
+Diabetes con complicación no especificada
+30
+250.90
+Diabetes complicada no especificada tipo II no descompensada
+30
+250.92
+Diabetes complicada no especificada tipo II descompensada
+30
+250.93
+Diabetes complicada no especificada tipo I descompensada
+30
+251
+Otros trastornos de secreciones internas pancreáticas
+30
+251.0
+Coma hipoglucémico
+30
+251.1
+Otras hipoglucemias especificadas
+10
+251.2
+Hipoglucemia no especificada
+10
+252
+Trastornos glándula paratiroidea
+30
+252.0
+Hiperparatiroidismo
+30
+252.1
+Hipoparatiroidismo
+30
+253.0
+Acromegalia y gigantismo
+60
+253.1
+Otras hiperfunciones y no especif. glándula pituitaria
+60
+253.9
+Trastorno glándula pituitaria no especificado
+60
+254.1
+Absceso del timo
+30
+255
+Trastorno glándulas adrenales
+30
+255.0
+Síndrome de Cushing
+90
+255.4
+Insuficiencia corticoadrenal
+90
+256
+Disfuncion ovárica
+30
+256.4
+Ovarios poliquísticos
+30
+259
+Otros trastornos endocrinos
+30
+259.2
+Síndrome carcinoide
+60
+272
+Trastornos metabolismo de lípidos
+14
+272.2
+Hiperlipidemias mixtas
+14
+272.6
+Lipodistrofia
+45
+272.8
+Otros trastornos del metabolismo lípidos
+14
+274
+Gota
+14
+274.0
+Artropatía gotosa
+14
+274.11
+Nefrolitiasis gotosa
+14
+274.8
+Gota con manifestaciones especificadas
+14
+274.89
+Gota con otras manifestaciones
+14
+274.9
+Gota no especificada
+14
+275
+Trastorno del metabolismo mineral
+14
+275.4
+Trastorno del metabolismo del calcio
+14
+276
+Trastorno del equilibrio osmótico/electrolítico
+14
+276.8
+Hipopotasemia
+14
+277.0
+Fibrosis quística
+14
+278
+Obesidad y otros tipos de hiperalimentación
+14
+278.0
+Obesidad
+14
+278.00
+Obesidad inespecífica
+14
+278.01
+Obesidad patológica
+60
+
+25
+LISTADO POR CAPÍTULOS
+02
+
+4. ENFERMEDADES DE LA SANGRE Y ÓRGANOS HEMATOPOYÉTICOS
+
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+280
+Anemias por carencia de hierro
+20
+280.0
+Anemia secundaria por pérdida de sangre (crónica)
+20
+280.8
+Otras anemias especificadas por carencia de hierro
+20
+280.9
+Anemia por carencia de hierro no especificada
+20
+281
+Otras anemias por carencia
+30
+281.0
+Anemia perniciosa
+30
+281.8
+Anemia asociada con otra carencia nutritiva especificada
+30
+281.9
+Anemia por carencia no especificada
+30
+282
+Anemias hemolíticas hereditarias
+30
+282.4
+Talasemias
+30
+282.6
+Anemia depranocítica
+30
+282.60
+Anemia depranocítica no especificada
+30
+284
+Anemia aplástica
+90
+285
+Otras anemias y anemias no especificadas
+60
+285.1
+Anemia posthemorrágica aguda
+30
+285.9
+Anemia no especificada
+20
+286
+Defectos de coagulación
+30
+286.7
+Carencia adquirida de factor de coagulación
+30
+287
+Púrpura y otras condiciones hemorrágicas
+50
+287.2
+Otras púrpuras no trombocitopénicas
+14
+287.3
+Trombocitopenia primaria
+50
+287.4
+Trombocitopenia secundaria
+50
+287.5
+Trombocitopenia no especificada
+50
+288
+Enfermedades de glóbulos blancos
+30
+288.0
+Agranulocitosis
+30
+288.8
+Otra enfermedad especificada de glóbulos blancos
+14
+289
+Otras enfermedades hemáticas y de los órganos hematopoyéticos
+30
+289.3
+Linfadenitis no especificada, salvo la mesentérica
+7
+289.6
+Policitemia familiar
+14
+289.9
+Enfermedades hemáticas y de órganos hematopoyeticos no especificadas
+30
+
+26
+LISTADO POR CAPÍTULOS
+02
+
+5. TRASTORNOS MENTALES
+
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+290
+Psicosis orgánicas senil y presenil
+180
+291
+Psicosis alcohólica
+60
+291.0
+Delirio por abstinencia de alcohol
+14
+291.2
+Otra demencia alcohólica
+60
+291.3
+Alucinosis por abstinencia de alcohol
+10
+291.4
+Intoxicación alcohólica idiosincrásica
+4
+292
+Psicosis por drogas
+45
+292.0
+Síndrome de abstinencia de drogas
+20
+292.2
+Intoxicación patológica por droga
+4
+292.9
+Trastorno mental inducido por drogas y no especificado
+60
+293
+Psicosis orgánicas transitorias
+60
+293.0
+Delirio agudo
+20
+293.83
+Síndrome afectivo orgánico
+60
+293.84
+Síndrome de ansiedad
+15
+294
+Otros estados psicóticos orgánicos (crónicos)
+60
+294.1
+Demencia en enfermedades clasif.bajo otros conceptos
+60
+294.8
+Otros síndromes cerebrales orgánicos especificados
+60
+294.9
+Síndrome cerebral orgánico no especificado (crónico)
+60
+295
+Trastornos esquizofrénicos
+90
+295.0
+Esquizofrenia simple
+90
+295.00
+Esquizofrenia simple no especificada
+90
+295.3
+Esquizofrenia paranoide
+90
+295.30
+Esquizofrenia paranoide no especificada
+90
+295.4
+Episodio esquizofrénico agudo
+90
+295.7
+Trastorno esquizoafectivo
+90
+295.8
+Otros tipos especificados de esquizofrenia
+90
+295.9
+Esquizofrenia no especificada
+90
+295.90
+Esquizofrenia no especificada neom
+90
+296
+Psicosis afectivas
+60
+296.0
+Trastorno maniaco episodio único
+60
+296.1
+Trastorno maniaco, episodio recurrente
+90
+296.2
+Trastorno depresivo mayor, episodio único
+60
+296.20
+Trastorno depresivo mayor, episodio único – NEOM
+60
+296.21
+Trastorno depresivo mayor, episodio único - leve
+45
+296.22
+Trastorno depresivo mayor, episodio único - moderado
+60
+296.23
+Trastorno depresivo mayor episodio único-grave, sin comportamiento psicótico
+90
+296.24
+Trastorno depresivo mayor episodio único-grave con comportamiento psicótico
+90
+296.3
+Trastorno depresivo grave, episodio recurrente
+90
+296.30
+Trastorno depresivo grave, episodio recurrente – NEOM
+90
+296.31
+Trastorno depresivo grave, episodio recurrente - leve
+30
+296.32
+Trastorno depresivo grave, episodio recurrente - moderado
+60
+
+27
+LISTADO POR CAPÍTULOS
+02
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+296.33
+Trastorno depresivo grave episodio recurrente grave sin comport. psicótico
+90
+296.34
+Trastorno depresivo grave, episodio recurrente grave con comport. psicótico
+90
+296.35
+Trastorno depresivo grave episodio recurrente - remisión parcial
+60
+296.4
+Trastorno afectivo bipolar, maniaco
+60
+296.40
+Trastorno afectivo bipolar, maniaco - NEOM
+60
+296.5
+Trastorno afectivo bipolar, deprimido
+90
+296.6
+Trastorno afectivo bipolar, mixto
+120
+296.64
+Trastorno afectivo bipolar mixto - grave con comportamiento psicótico
+120
+296.7
+Trastorno afectivo bipolar no especificado
+60
+296.8
+Psicosis maniacodepresiva, otra y no especificada
+90
+296.80
+Psicosis maniacodepresiva no especificada
+90
+296.82
+Trastorno depresivo atípico
+45
+296.9
+Otras psicosis psicógenas y psicosis afectivas no especificadas
+60
+296.90
+Psicosis afectiva no especificada
+60
+297
+Estados paranoides
+60
+297.0
+Estado paranoide, simple
+60
+297.1
+Paranoia
+60
+297.9
+Estado paranoide no especificado
+60
+298
+Otras psicosis no orgánicas
+60
+298.0
+Psicosis de tipo depresivo
+60
+298.1
+Psicosis de tipo agitado
+60
+298.8
+Otras psicosis reactivas y psicosis reactivas no especificadas
+60
+298.9
+Psicosis no especificada
+60
+300
+Trastornos neuróticos
+20
+300.0
+Estados de ansiedad
+20
+300.00
+Estado de ansiedad no especificado
+20
+300.01
+Trastorno de pánico
+30
+300.02
+Trastorno de ansiedad generalizado
+30
+300.09
+Otros estados de ansiedad
+20
+300.1
+Histeria
+20
+300.11
+Trastorno de conversión
+20
+300.2
+Trastornos fóbicos
+14
+300.20
+Fobia no especificada
+14
+300.21
+Agorafobia con ataques de pánico
+30
+300.22
+Agorafobia, sin mención de ataques de pánico
+30
+300.23
+Fobia social
+14
+300.3
+Trastornos obsesivos-compulsivos
+60
+300.4
+Depresión neurótica
+45
+300.5
+Neurastenia
+30
+300.7
+Hipocondría
+4
+300.8
+Otros trastornos neuróticos
+20
+300.81
+Trastorno de somatización
+60
+300.9
+Trastorno neurótico no especificado
+20
+301
+Trastornos de personalidad
+30
+301.0
+Trastorno paranoide de personalidad
+30
+301.1
+Trastorno afectivo de personalidad
+30
+301.10
+Trastorno afectivo de personalidad no especificado
+30
+
+28
+LISTADO POR CAPÍTULOS
+02
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+301.12
+Trastorno depresivo crónico de personalidad
+30
+301.13
+Trastorno ciclotímico
+30
+301.4
+Trastorno compulsivo de personalidad
+30
+301.8
+Otros trastornos de la personalidad
+30
+301.9
+Trastorno de la personalidad no especificado
+30
+total 303
+Síndrome de dependencia del alcohol
+4
+303.0
+Intoxicación alcohólica aguda
+4
+303.9
+Otras dependencias alcohólicas
+4
+303.90
+Otra dependencia alcohólica  NEOM
+4
+303.93
+Otra dependencia alcohólica y NEOM - en vías de remisión
+4
+304
+Dependencia de drogas
+4
+304.2
+Dependencia de cocaína
+4
+304.9
+Dependencia de drogas no especificadas
+4
+304.90
+Dependencia de drogas NEOM
+4
+304.93
+Dependencia de drogas NEOM en remisión
+4
+305
+Abuso de drogas sin dependencia
+4
+305.0
+Abuso de alcohol
+4
+305.00
+Abuso de alcohol NEOM
+4
+305.01
+Abuso de alcohol continuo
+4
+305.03
+Abuso de alcohol en vías de remisión
+4
+305.1
+Abuso de tabaco
+4
+305.3
+Abuso de alucinógenos
+4
+305.6
+Abuso de cocaína
+4
+306.4
+Disfunción gastrointestinal de origen mental
+4
+307
+Sintomas o síndromes especiales NCOC
+4
+307.1
+Anorexia nerviosa
+120
+307.2
+Tics
+4
+307.4
+Trastornos específicos del sueño de origen no orgánico
+4
+307.41
+Trastorno transitorio para iniciar o mantener el sueño
+4
+307.51
+Bulimia
+120
+307.54
+Vómitos psicógenos
+4
+307.8
+Psicalgia
+4
+307.81
+Dolor de cabeza por tensión
+4
+307.9
+Otros síntomas o síndromes especiales y neom, ncoc
+4
+308
+Reacción aguda al stress
+7
+308.0
+Perturbación predominante de las emociones
+7
+308.2
+Perturbación psicomotora predominante
+7
+308.3
+Otras reacciones agudas al stress
+7
+308.4
+Trastornos mixtos como reacción al stress
+30
+308.9
+Reacción aguda al stress no especificada
+7
+309
+Reacción de adaptación
+20
+309.0
+Reacción depresiva breve
+30
+309.1
+Reacción depresiva prolongada
+60
+309.2
+Reacción de adaptación con perturbación de otra emoción
+20
+309.21
+Trastorno de ansiedad por separación
+14
+309.24
+Reacción de adaptación con humor de ansiedad
+14
+309.28
+Reacción de adaptación con características emocionales mixtas
+30
+
+29
+LISTADO POR CAPÍTULOS
+02
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+309.29
+Otra reacción de adaptación con perturbación de otras emociones
+20
+309.3
+Reacción de adaptación con alteración predominante de conducta
+20
+309.4
+Reacción adaptación con alter. de emociones y conducta
+20
+309.8
+Otras reacciones de adaptación especificadas
+20
+309.81
+Trastorno por stress postraumático prolongado
+90
+309.89
+Otra reacción de adaptación especificada NCOC
+20
+309.9
+Reacción de adaptación no especificada
+20
+311
+Trastorno depresivo no clasificado bajo otros conceptos
+60
+312
+Perturbación del comportamiento no clasificadas bajo otros conceptos
+20
+313
+Perturbación emociones especificadas de infancia / adolescencia
+4
+313.0
+Trastorno de ansiedad excesiva
+14
+313.1
+Trastorno de tristeza e infelicidad
+4
+316
+Factores psíquicos asociados a ECOC
+4
+
+30
+LISTADO POR CAPÍTULOS
+02
+
+6. ENFERMEDADES DEL SNC Y ÓRGANOS DE LOS SENTIDOS
+
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+320.9
+Meningitis bacteriana
+45
+321
+Meningitis debida a otros organismos
+30
+322
+Meningitis de causa no especificada
+30
+322.9
+Meningitis no especificada
+30
+323.9
+Causa no especificada de encefalitis
+60
+331
+Otras degeneraciones cerebrales
+180
+331.0
+Enfermedad de Alzheimer
+180
+331.9
+Degeneración cerebral no especificada
+180
+332
+Enfermedad de Parkinson
+60
+332.0
+Parálisis agitante
+60
+333
+Otra enfermedad extrapiramidal y trastornos anormales movimiento
+30
+333.1
+Temblor esencial y otras formas especificadas de temblor
+60
+333.3
+Tics de origen orgánico
+60
+333.4
+Corea de Huntington
+120
+333.6
+Distonía por torsión idiopática
+60
+333.8
+Fragmentos de distonia por torsión
+30
+333.83
+Tortícolis espasmódica
+30
+333.9
+Otra enfermedad extrapiramidal, trastornos del movimiento sin especificar
+60
+334.3
+Otras ataxias cerebelosas
+90
+335.1
+Amiotrofia espinal
+45
+335.20
+Esclerosis lateral amiotrófica
+120
+336
+Otras enfermedades de médula espinal
+120
+336.0
+Siringomielia y siringobulbia
+120
+336.9
+Enfermedad de la médula espinal no especificada
+120
+337
+Trastornos del sistema nervioso autónomo
+60
+337.0
+Neuropatía autonómica periférica idiopática
+60
+337.1
+Neuropatía autonómica periférica en ECOC
+60
+337.9
+Alteración del sistema nervioso autónomo no especificada
+60
+340
+Esclerosis múltiple
+90
+341.9
+Enfermedad desmielinizante del SNC no especificada
+60
+342
+Hemiplejía y hemiparesia
+180
+342.90
+Hemiplejía no especificada afectación de lado
+180
+344
+Otros síndromes paralíticos
+120
+344.1
+Paraplejia
+180
+344.9
+Parálisis no especificada
+90
+345
+Epilepsia
+60
+345.0
+Epilepsia no convulsiva generalizada
+60
+345.1
+Epilepsia convulsiva generalizada
+60
+345.4
+Epilepsia parcial con deterioro del conocimiento
+60
+345.8
+Otras formas de epilepsia
+60
+345.9
+Epilepsia no especificada
+60
+
+31
+LISTADO POR CAPÍTULOS
+02
+CÓDIGO
+CIE-9. MC
+DESCRIPCIÓN
+TIEMPO
+ESTÁNDAR
+EN DÍAS
+345.90
+Epilepsia no especificada sin mención de epilepsia no tratable
+60
+346
+Migrañas
+4
+346.0
+Migraña clásica
+4
+346.1
+Migraña común
+4
+346.10
+Migraña com
+
+CONTENIDO EN ESPAÑOL DISPONIBLE
+===============================
+
+INSS
+GOBIERNO
+DE ESPAÑA
+MINISTERIO
+DE TRABAJO
+E INMIGRACIÓN
+SECRETARIA DE ESTADO
+DE LA SEGURIDAD SOCIAL
+INSTITUTO NACIONAL DE LA
+SEGURIDAD SOCIAL
+Tiempos estándar de
+INCAPACIDAD
+TEMPORAL
+INSS
+Tiempos estándar de
+INCAPACIDAD
+TEMPORAL
+2ª edición
+Edita: Instituto Nacional de la Seguridad Social
+NIPO: 791-09-079-3
+Catálogo general de publicaciones oficiales: http/www.060.es
+introducción
+01
+
+5
+INTRODUCCIÓN
+01
+TIEMPOS ESTÁNDAR DE INCAPACIDAD TEMPORAL
+
+.
+La Ley General de la Seguridad Social define la Incapacidad Temporal (IT) como la
+situación en la que un trabajador, por causa de enfermedad o accidente, se
+encuentra imposibilitado para el desempeño de su trabajo y recibe asistencia
+sanitaria por parte de la Seguridad Social, con una duración máxima de 12 meses
+prorrogables por otros seis, cuando se presuma que durante ellos pueda ser dado
+de alta médica por curación o mejoría.
+
+Los elementos definitorios de la IT son por tanto:
+
+-
+La situación de enfermedad
+-
+La necesidad de tratamiento por los Servicios Médicos Públicos
+-
+La incapacidad para el trabajo.
+
+Siendo la incapacidad para el trabajo el elemento clave en relación con la
+percepción de las prestaciones económicas del sistema de Seguridad Social, la
+valoración de la capacidad laboral constituye el principal elemento de control.
+
+El Real Decreto 575/1997 de 18 de abril, por el que se regulan determinados
+aspectos de la gestión y control de la prestación económica de la Seguridad Social
+por incapacidad temporal, establece en su artículo 3.2 que con el fin de que las
+actuaciones médicas de control de IT cuenten con el mayor respaldo técnico, se
+pondrá a disposición de los médicos a los que competan dichas actuaciones, tablas
+de duraciones medias, tipificadas para los distintos procesos patológicos
+susceptibles de generar incapacidades.
+
+Las actuaciones médicas de control de las situaciones de IT deben asumir la
+necesaria existencia de unos tiempos de recuperación de la capacidad laboral de los
+trabajadores, necesarios para que los servicios asistenciales desarrollen todas las
+actuaciones diagnósticas y terapéuticas que conduzcan a la mejoría del estado de
+salud o curación del trabajador. Nos encontramos ante una situación temporal,
+durante la cual el trabajador tiene un alto grado de dependencia de los servicios de
+salud, y una alta probabilidad de estar incapacitado para desarrollar una vida laboral
+activa.
+
+El presente Manual de Tiempos Estándar de Incapacidad Temporal pretende ser
+una herramienta de trabajo para homogeneizar criterios en las actuaciones médicas
+de seguimiento y control de IT y servir de guía y orientación al médico que prescribe
+la baja, en la toma de decisiones.
+
+DEFINICIÓN DE TIEMPO ESTÁNDAR
+
+El Tiempo Estándar de IT es “el tiempo medio óptimo que se requiere para la
+resolución de un proceso clínico que ha originado una incapacidad para el trabajo
+habitual, utilizando las técnicas de diagnóstico

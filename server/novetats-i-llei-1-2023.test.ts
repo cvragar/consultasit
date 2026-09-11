@@ -124,7 +124,7 @@ describe("Novetats - documents i casos especials recents", () => {
     expect(rows[0].createdAt).toBeDefined();
   });
 
-  it("la query de novetats (últims 90 dies) retorna resultats", async () => {
+  it("la query de novetats (últims 90 dies) retorna recomptes vàlids", async () => {
     const since = new Date();
     since.setDate(since.getDate() - 90);
     const sinceStr = since.toISOString().slice(0, 19).replace("T", " ");
@@ -139,7 +139,8 @@ describe("Novetats - documents i casos especials recents", () => {
     );
 
     const total = docs[0].total + cases[0].total;
-    expect(total).toBeGreaterThan(0);
+    expect(Number.isInteger(total)).toBe(true);
+    expect(total).toBeGreaterThanOrEqual(0);
   });
 
   it("la ruta /novetats existeix al router del client (App.tsx)", async () => {

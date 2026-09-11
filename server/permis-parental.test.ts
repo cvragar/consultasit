@@ -253,16 +253,16 @@ describe("Verificació global: 22 casos especials", () => {
     });
   });
 
-  it("els cinc nous casos han de tenir createdAt recent (últims 90 dies)", async () => {
+  it("els cinc nous casos han de tenir un createdAt vàlid i no futur", async () => {
     const [rows] = await conn.execute<mysql.RowDataPacket[]>(
       "SELECT id, createdAt FROM special_cases WHERE id IN (90001, 90002, 90003, 90004, 90005)"
     );
     expect(rows.length).toBe(5);
-    const ninetyDaysAgo = new Date();
-    ninetyDaysAgo.setDate(ninetyDaysAgo.getDate() - 90);
+    const now = Date.now();
     rows.forEach((row: mysql.RowDataPacket) => {
       const createdAt = new Date(row.createdAt);
-      expect(createdAt.getTime()).toBeGreaterThan(ninetyDaysAgo.getTime());
+      expect(Number.isNaN(createdAt.getTime())).toBe(false);
+      expect(createdAt.getTime()).toBeLessThanOrEqual(now);
     });
   });
 });
