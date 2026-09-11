@@ -91,20 +91,30 @@ describe("generador de corpus TXT per a Coloq.ia", () => {
     expect(strFromU8(archiveFiles["casos_especiales_txt_coloqia/00-INDEX.txt"])).toContain(CORPUS_EXPORT_VERSION);
   });
 
-  it("uneix els dos corpus en un ZIP amb carpetes i índex general", () => {
+  it("uneix els dos corpus en un ZIP pla amb índex i manifest comuns", () => {
     const corpus = generateCombinedCorpus([document], [specialCase], generatedAt);
     const archiveFiles = unzipSync(corpus.archive);
     const generalIndex = strFromU8(archiveFiles["00-INDEX-CORPUS-COMPLET.txt"]);
+    const manifest = JSON.parse(strFromU8(archiveFiles["manifest.json"])) as {
+      files: Array<{ corpus: string; filename: string }>;
+    };
 
     expect(corpus.kind).toBe("all");
     expect(corpus.filename).toBe("consultes-it-corpus-complet.zip");
     expect(corpus.validation.input_records).toBe(2);
     expect(corpus.validation.valid).toBe(true);
     expect(generalIndex).toContain("Total de fitxers de contingut: 2");
-    expect(generalIndex).toContain("documentacio_txt_coloqia/");
-    expect(generalIndex).toContain("casos_especiales_txt_coloqia/");
-    expect(archiveFiles["documentacio_txt_coloqia/00-INDEX.txt"]).toBeDefined();
-    expect(archiveFiles["casos_especiales_txt_coloqia/00-INDEX.txt"]).toBeDefined();
+    expect(generalIndex).toContain("ESTRUCTURA PLANA PER A COLOQ.IA");
+    expect(generalIndex).toContain("sense carpetes");
+    expect(archiveFiles["DOC-042-guia-de-prova.txt"]).toBeDefined();
+    expect(archiveFiles["CAS-099-cas-de-prova.txt"]).toBeDefined();
+    expect(archiveFiles["00-INSTRUCCIONS-COLOQIA.txt"]).toBeDefined();
     expect(archiveFiles["validation-report.json"]).toBeDefined();
+    expect(Object.keys(archiveFiles).some(name => name.includes("/"))).toBe(false);
+    expect(manifest.files).toHaveLength(2);
+    expect(manifest.files).toEqual(expect.arrayContaining([
+      expect.objectContaining({ corpus: "documentacio", filename: "DOC-042-guia-de-prova.txt" }),
+      expect.objectContaining({ corpus: "casos_especials", filename: "CAS-099-cas-de-prova.txt" }),
+    ]));
   });
 });

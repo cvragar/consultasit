@@ -409,7 +409,7 @@ export default function Admin() {
                           <Badge className="bg-emerald-700 text-white">Recomanat</Badge>
                         </div>
                         <p className="mt-1 text-sm text-emerald-900">
-                          Un únic ZIP amb {documents?.length ?? 0} documents i {specialCases?.length ?? 0} casos especials, organitzats en dues carpetes.
+                          Un únic ZIP pla amb {documents?.length ?? 0} documents i {specialCases?.length ?? 0} casos especials, preparat per pujar directament a Coloq.ia.
                         </p>
                       </div>
                       <Button

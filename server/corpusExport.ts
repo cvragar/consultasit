@@ -435,6 +435,38 @@ export function generateCombinedCorpus(
   const documentsCorpus = generateDocumentsCorpus(documents, date);
   const specialCasesCorpus = generateSpecialCasesCorpus(specialCases, date);
   const generatedAt = date.toISOString();
+  const documentFiles = documentsCorpus.files.filter(
+    file => file.name.endsWith(".txt") && !file.name.startsWith("00-"),
+  );
+  const specialCaseFiles = specialCasesCorpus.files.filter(
+    file => file.name.endsWith(".txt") && !file.name.startsWith("00-"),
+  );
+  const manifest = [
+    ...documents.map((record, index) => ({
+      corpus: "documentacio",
+      id: record.id,
+      title: record.title,
+      title_es: record.titleEs || record.title,
+      filename: `DOC-${documentFiles[index].name}`,
+      type: record.type,
+      source: record.source,
+      jurisdiction: record.jurisdiction,
+      status: record.status,
+      url: record.url,
+    })),
+    ...specialCases.map((record, index) => ({
+      corpus: "casos_especials",
+      id: record.id,
+      title: record.title,
+      title_es: record.titleEs || record.title,
+      filename: `CAS-${specialCaseFiles[index].name}`,
+      type: "caso_especial",
+      source: "Consultes IT; base legal detallada dins del cas",
+      jurisdiction: "España i Catalunya segons el supòsit",
+      status: "actiu al catàleg",
+      url: "https://consultasit-dirvlpm6.manus.space/casos-especials",
+    })),
+  ];
   const index = makeFile("00-INDEX-CORPUS-COMPLET.txt", [
     "ÍNDEX DEL CORPUS COMPLET PER A COLOQ.IA",
     "=======================================",
@@ -447,34 +479,51 @@ export function generateCombinedCorpus(
     "Codificació: UTF-8",
     "Format: text pla TXT, sense sintaxi Markdown",
     "",
-    "CONTINGUTS DEL ZIP",
-    "==================",
+    "ESTRUCTURA PLANA PER A COLOQ.IA",
+    "===============================",
     "",
-    "1. documentacio_txt_coloqia/",
-    "   Corpus documental complet. Consulteu documentacio_txt_coloqia/00-INDEX.txt.",
-    "2. casos_especiales_txt_coloqia/",
-    "   Corpus de casos especials complet. Consulteu casos_especiales_txt_coloqia/00-INDEX.txt.",
+    "Tots els fitxers estan a l'arrel del ZIP, sense carpetes, perquè es puguin pujar directament a Coloq.ia.",
+    "Els documents comencen per DOC- i els casos especials comencen per CAS-.",
+    "El fitxer manifest.json és el catàleg comú en format JSON i inclou la relació entre cada registre i el seu fitxer TXT.",
     "",
     "ORDRE RECOMANAT DE CÀRREGA",
     "==========================",
     "",
     "1. Carregar primer aquest índex general.",
-    "2. Carregar els dos índexs de cada subcorpus.",
+    "2. Carregar 00-INSTRUCCIONS-COLOQIA.txt si Coloq.ia permet incorporar directrius al corpus.",
     "3. Carregar els fitxers TXT individuals que siguin rellevants per a la consulta.",
-    "4. Carregar els fitxers d'instruccions de cada subcorpus si Coloq.ia permet incorporar directrius.",
-    "5. No cal carregar manifests ni informes de validació; són fitxers tècnics de control.",
+    "4. manifest.json i validation-report.json són fitxers tècnics de control; no cal carregar-los a Coloq.ia.",
+  ].join("\n"));
+  const instructions = makeFile("00-INSTRUCCIONS-COLOQIA.txt", [
+    "INSTRUCCIONS D'ÚS DEL CORPUS COMPLET",
+    "====================================",
+    "",
+    "1. Identifica si la consulta correspon a un document (DOC-) o a un cas especial (CAS-).",
+    "2. Respon en l'idioma de la consulta i utilitza el bloc català o castellà disponible al fitxer.",
+    "3. Separa el criteri aplicable, la base normativa, el procediment i la font que cal verificar.",
+    "4. Si falta una dada decisiva, formula una pregunta aclaridora concreta. No completis dades per intuïció.",
+    "5. No presentis contingut derogat, en revisió o propostes no vigents com a normativa aplicable.",
+    "6. Verifica sempre el text consolidat i la font oficial abans d'una decisió clínica, laboral o jurídica.",
   ].join("\n"));
 
   const files = [
     index,
-    ...documentsCorpus.files.map(file => ({
-      name: `documentacio_txt_coloqia/${file.name}`,
+    instructions,
+    ...documentFiles.map(file => ({
+      name: `DOC-${file.name}`,
       content: file.content,
     })),
-    ...specialCasesCorpus.files.map(file => ({
-      name: `casos_especiales_txt_coloqia/${file.name}`,
+    ...specialCaseFiles.map(file => ({
+      name: `CAS-${file.name}`,
       content: file.content,
     })),
+    makeFile("manifest.json", JSON.stringify({
+      generated_at: generatedAt,
+      corpus_version: CORPUS_EXPORT_VERSION,
+      documents: documents.length,
+      special_cases: specialCases.length,
+      files: manifest,
+    }, null, 2)),
   ];
   const validation = validate(files, documents.length + specialCases.length, generatedAt);
   files.push(makeFile("validation-report.json", JSON.stringify(validation, null, 2)));
