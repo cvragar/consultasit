@@ -405,45 +405,12 @@ export function generateColoqiaTestSuite(date = new Date()): ColoqiaTestSuite {
   const generatedAt = date.toISOString();
   const workbook = XLSX.utils.book_new();
   const rows = testCases.map(testCase => ({
-    "ID Prueba": testCase.id,
-    "Categoría": testCase.category,
-    "Idioma esperado": testCase.language,
-    "Pregunta": testCase.prompt,
-    "Puntos esperados": testCase.expected_points.map(point => `• ${point}`).join("\n"),
-    "Criterios obligatorios": testCase.scoring.must_include.map(point => `• ${point}`).join("\n"),
-    "Penalizaciones": testCase.scoring.penalties.map(point => `• ${point}`).join("\n"),
-    "Puntuación máxima": testCase.scoring.maximum,
-    "Referencia del corpus": testCase.corpus_reference.join(" | "),
-    "Puntuación obtenida": "",
-    "Respuesta del bot": "",
-    "Observaciones": "",
+    question: testCase.prompt,
+    "expected answer": testCase.expected_points.join(" "),
   }));
   const testsSheet = XLSX.utils.json_to_sheet(rows);
-  testsSheet["!cols"] = [
-    { wch: 12 }, { wch: 18 }, { wch: 16 }, { wch: 62 },
-    { wch: 70 }, { wch: 45 }, { wch: 48 }, { wch: 20 },
-    { wch: 42 }, { wch: 20 }, { wch: 65 }, { wch: 45 },
-  ];
-  XLSX.utils.book_append_sheet(workbook, testsSheet, "Pruebas");
-
-  const instructionsRows = [
-    ["JUEGO DE PRUEBAS PARA COLOQ.IA"],
-    ["Versión", COLOQIA_TEST_SUITE_VERSION],
-    ["Generado (UTC)", generatedAt],
-    ["Número de pruebas", testCases.length],
-    [],
-    ["CÓMO UTILIZARLO"],
-    ["1", "Carga primero el corpus de conocimiento en Coloq.ia. Este Excel sirve para evaluar el bot y no debe cargarse como conocimiento normativo."],
-    ["2", "Crea una conversación nueva para cada prueba y copia literalmente la columna Pregunta."],
-    ["3", "Evalúa la respuesta con Puntos esperados, Criterios obligatorios y Penalizaciones."],
-    ["4", "Registra la respuesta del bot, la puntuación obtenida de 0 a 5 y las observaciones en las últimas columnas de la hoja Pruebas."],
-    [],
-    ["FORMATO DE IMPORTACIÓN"],
-    ["Una fila equivale a un caso de prueba. No cambies los encabezados de la hoja Pruebas al importarla en Coloq.ia."],
-  ];
-  const instructionsSheet = XLSX.utils.aoa_to_sheet(instructionsRows);
-  instructionsSheet["!cols"] = [{ wch: 24 }, { wch: 120 }];
-  XLSX.utils.book_append_sheet(workbook, instructionsSheet, "Instrucciones");
+  testsSheet["!cols"] = [{ wch: 85 }, { wch: 120 }];
+  XLSX.utils.book_append_sheet(workbook, testsSheet, "Test cases");
 
   return {
     filename: "juego-pruebas-consultes-it-coloqia.xlsx",

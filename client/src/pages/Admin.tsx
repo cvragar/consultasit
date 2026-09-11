@@ -522,14 +522,14 @@ export default function Admin() {
                 Joc de proves per a Coloq.ia
               </CardTitle>
               <CardDescription className="mt-1">
-                Genera un Excel compatible amb Coloq.ia: una fila per prova, preguntes, resultats esperats, criteris de puntuació i penalitzacions. Serveix per avaluar el bot; no és coneixement normatiu.
+                Genera l'Excel simple compatible amb Coloq.ia: una fila per prova i només les columnes requerides <strong>question</strong> i <strong>expected answer</strong>.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="flex flex-col gap-3 rounded-xl border border-sky-200 bg-background/80 p-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <p className="font-semibold text-foreground">22 casos de qualitat en català i castellà</p>
-                  <p className="mt-1 text-sm text-muted-foreground">Inclou supòsits directes, ambigüitats, vigència normativa, seguretat de dades i idioma.</p>
+                  <p className="mt-1 text-sm text-muted-foreground">Full únic amb només dues columnes: question i expected answer.</p>
                 </div>
                 <Button
                   className="bg-sky-700 text-white hover:bg-sky-800"
