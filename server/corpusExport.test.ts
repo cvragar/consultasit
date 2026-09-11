@@ -117,4 +117,29 @@ describe("generador de corpus TXT per a Coloq.ia", () => {
       expect.objectContaining({ corpus: "casos_especials", filename: "CAS-099-cas-de-prova.txt" }),
     ]));
   });
+
+  it("filtra el ZIP pla només a documentació o només a casos", () => {
+    const documentsCorpus = generateCombinedCorpus([document], [specialCase], generatedAt, "documents");
+    const casesCorpus = generateCombinedCorpus([document], [specialCase], generatedAt, "specialCases");
+    const documentFiles = Object.keys(unzipSync(documentsCorpus.archive));
+    const caseFiles = Object.keys(unzipSync(casesCorpus.archive));
+    const documentManifest = JSON.parse(
+      strFromU8(unzipSync(documentsCorpus.archive)["manifest.json"]),
+    ) as { scope: string; documents: number; special_cases: number };
+    const caseManifest = JSON.parse(
+      strFromU8(unzipSync(casesCorpus.archive)["manifest.json"]),
+    ) as { scope: string; documents: number; special_cases: number };
+
+    expect(documentsCorpus.kind).toBe("documents");
+    expect(documentsCorpus.filename).toBe("consultes-it-documentacio-plana.zip");
+    expect(documentFiles).toContain("DOC-042-guia-de-prova.txt");
+    expect(documentFiles.some(name => name.startsWith("CAS-"))).toBe(false);
+    expect(documentManifest).toMatchObject({ scope: "documents", documents: 1, special_cases: 0 });
+
+    expect(casesCorpus.kind).toBe("specialCases");
+    expect(casesCorpus.filename).toBe("consultes-it-casos-especials-plans.zip");
+    expect(caseFiles).toContain("CAS-099-cas-de-prova.txt");
+    expect(caseFiles.some(name => name.startsWith("DOC-"))).toBe(false);
+    expect(caseManifest).toMatchObject({ scope: "specialCases", documents: 0, special_cases: 1 });
+  });
 });

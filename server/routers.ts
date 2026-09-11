@@ -38,7 +38,8 @@ import {
 import { translateFieldsToEs, translateCaToEs } from "./translation";
 import { invokeLLM } from "./_core/llm";
 import { semanticSearchDiagnosis } from "./semanticSearch";
-import { generateCombinedCorpus, generateDocumentsCorpus, generateSpecialCasesCorpus } from "./corpusExport";
+import { generateCombinedCorpus } from "./corpusExport";
+import { generateColoqiaTestSuite } from "./coloqiaTestSuite";
 import { storagePut } from "./storage";
 
 // ===== TRANSLATION HELPERS =====
@@ -604,25 +605,21 @@ IMPORTANT:
           throw new Error("Accés restringit: cal ser administrador");
         }
 
-        let generated;
-        if (input.kind === "documents") {
-          const records = await getAllDocuments();
-          if (!records.length) throw new Error("No hi ha documentació disponible per generar el corpus.");
-          generated = generateDocumentsCorpus(records);
-        } else if (input.kind === "specialCases") {
-          const records = await getAllSpecialCases();
-          if (!records.length) throw new Error("No hi ha casos especials disponibles per generar el corpus.");
-          generated = generateSpecialCasesCorpus(records);
-        } else {
-          const [documents, specialCases] = await Promise.all([
-            getAllDocuments(),
-            getAllSpecialCases(),
-          ]);
-          if (!documents.length || !specialCases.length) {
-            throw new Error("Cal disposar de documentació i casos especials per generar el corpus complet.");
-          }
-          generated = generateCombinedCorpus(documents, specialCases);
+        const [documents, specialCases] = await Promise.all([
+          getAllDocuments(),
+          getAllSpecialCases(),
+        ]);
+        if (input.kind === "documents" && !documents.length) {
+          throw new Error("No hi ha documentació disponible per generar el corpus.");
         }
+        if (input.kind === "specialCases" && !specialCases.length) {
+          throw new Error("No hi ha casos especials disponibles per generar el corpus.");
+        }
+        if (input.kind === "all" && (!documents.length || !specialCases.length)) {
+          throw new Error("Cal disposar de documentació i casos especials per generar el corpus complet.");
+        }
+
+        const generated = generateCombinedCorpus(documents, specialCases, new Date(), input.kind);
         if (!generated.validation.valid) {
           throw new Error("El corpus no ha superat la validació interna de text pla.");
         }
@@ -642,6 +639,26 @@ IMPORTANT:
           validation: generated.validation,
         };
       }),
+
+    generateColoqiaTestSuite: protectedProcedure.mutation(async ({ ctx }) => {
+      if (ctx.user.role !== "admin") {
+        throw new Error("Accés restringit: cal ser administrador");
+      }
+
+      const testSuite = generateColoqiaTestSuite();
+      const timestamp = testSuite.generatedAt.replace(/[:.]/g, "-");
+      const objectKey = `jocs-proves-coloqia/${timestamp}-${testSuite.filename}`;
+      const upload = await storagePut(objectKey, testSuite.archive, "application/zip");
+
+      return {
+        filename: testSuite.filename,
+        url: upload.url,
+        generatedAt: testSuite.generatedAt,
+        version: testSuite.version,
+        testCount: testSuite.testCount,
+        byteSize: testSuite.archive.byteLength,
+      };
+    }),
 
     pretranslateAll: protectedProcedure.mutation(async ({ ctx }) => {
       if (ctx.user.role !== "admin") {

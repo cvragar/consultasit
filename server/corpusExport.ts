@@ -431,9 +431,12 @@ export function generateCombinedCorpus(
   documents: Document[],
   specialCases: SpecialCase[],
   date = new Date(),
+  scope: CorpusKind = "all",
 ): GeneratedCorpus {
-  const documentsCorpus = generateDocumentsCorpus(documents, date);
-  const specialCasesCorpus = generateSpecialCasesCorpus(specialCases, date);
+  const selectedDocuments = scope === "specialCases" ? [] : documents;
+  const selectedSpecialCases = scope === "documents" ? [] : specialCases;
+  const documentsCorpus = generateDocumentsCorpus(selectedDocuments, date);
+  const specialCasesCorpus = generateSpecialCasesCorpus(selectedSpecialCases, date);
   const generatedAt = date.toISOString();
   const documentFiles = documentsCorpus.files.filter(
     file => file.name.endsWith(".txt") && !file.name.startsWith("00-"),
@@ -442,7 +445,7 @@ export function generateCombinedCorpus(
     file => file.name.endsWith(".txt") && !file.name.startsWith("00-"),
   );
   const manifest = [
-    ...documents.map((record, index) => ({
+    ...selectedDocuments.map((record, index) => ({
       corpus: "documentacio",
       id: record.id,
       title: record.title,
@@ -454,7 +457,7 @@ export function generateCombinedCorpus(
       status: record.status,
       url: record.url,
     })),
-    ...specialCases.map((record, index) => ({
+    ...selectedSpecialCases.map((record, index) => ({
       corpus: "casos_especials",
       id: record.id,
       title: record.title,
@@ -467,15 +470,25 @@ export function generateCombinedCorpus(
       url: "https://consultasit-dirvlpm6.manus.space/casos-especials",
     })),
   ];
+  const scopeTitle = scope === "documents"
+    ? "CORPUS DE DOCUMENTACIÓ"
+    : scope === "specialCases"
+      ? "CORPUS DE CASOS ESPECIALS"
+      : "CORPUS COMPLET";
+  const scopeFilename = scope === "documents"
+    ? "consultes-it-documentacio-plana.zip"
+    : scope === "specialCases"
+      ? "consultes-it-casos-especials-plans.zip"
+      : "consultes-it-corpus-complet.zip";
   const index = makeFile("00-INDEX-CORPUS-COMPLET.txt", [
-    "ÍNDEX DEL CORPUS COMPLET PER A COLOQ.IA",
-    "=======================================",
+    `ÍNDEX DEL ${scopeTitle} PER A COLOQ.IA`,
+    "===========================================",
     "",
     `Data de generació (UTC): ${generatedAt}`,
     `Versió del corpus: ${CORPUS_EXPORT_VERSION}`,
-    `Total de documents: ${documents.length}`,
-    `Total de casos especials: ${specialCases.length}`,
-    `Total de fitxers de contingut: ${documents.length + specialCases.length}`,
+    `Total de documents: ${selectedDocuments.length}`,
+    `Total de casos especials: ${selectedSpecialCases.length}`,
+    `Total de fitxers de contingut: ${selectedDocuments.length + selectedSpecialCases.length}`,
     "Codificació: UTF-8",
     "Format: text pla TXT, sense sintaxi Markdown",
     "",
@@ -483,7 +496,7 @@ export function generateCombinedCorpus(
     "===============================",
     "",
     "Tots els fitxers estan a l'arrel del ZIP, sense carpetes, perquè es puguin pujar directament a Coloq.ia.",
-    "Els documents comencen per DOC- i els casos especials comencen per CAS-.",
+    "Els documents comencen per DOC- i els casos especials comencen per CAS- quan estan inclosos al filtre seleccionat.",
     "El fitxer manifest.json és el catàleg comú en format JSON i inclou la relació entre cada registre i el seu fitxer TXT.",
     "",
     "ORDRE RECOMANAT DE CÀRREGA",
@@ -498,7 +511,7 @@ export function generateCombinedCorpus(
     "INSTRUCCIONS D'ÚS DEL CORPUS COMPLET",
     "====================================",
     "",
-    "1. Identifica si la consulta correspon a un document (DOC-) o a un cas especial (CAS-).",
+    "1. Identifica si la consulta correspon a un document (DOC-) o a un cas especial (CAS-) quan tots dos tipus estiguin inclosos.",
     "2. Respon en l'idioma de la consulta i utilitza el bloc català o castellà disponible al fitxer.",
     "3. Separa el criteri aplicable, la base normativa, el procediment i la font que cal verificar.",
     "4. Si falta una dada decisiva, formula una pregunta aclaridora concreta. No completis dades per intuïció.",
@@ -520,22 +533,23 @@ export function generateCombinedCorpus(
     makeFile("manifest.json", JSON.stringify({
       generated_at: generatedAt,
       corpus_version: CORPUS_EXPORT_VERSION,
-      documents: documents.length,
-      special_cases: specialCases.length,
+      scope,
+      documents: selectedDocuments.length,
+      special_cases: selectedSpecialCases.length,
       files: manifest,
     }, null, 2)),
   ];
-  const validation = validate(files, documents.length + specialCases.length, generatedAt);
+  const validation = validate(files, selectedDocuments.length + selectedSpecialCases.length, generatedAt);
   files.push(makeFile("validation-report.json", JSON.stringify(validation, null, 2)));
 
   const entries: Record<string, Uint8Array> = {};
   for (const file of files) entries[file.name] = strToU8(file.content);
 
   return {
-    kind: "all",
+    kind: scope,
     version: CORPUS_EXPORT_VERSION,
     generatedAt,
-    filename: "consultes-it-corpus-complet.zip",
+    filename: scopeFilename,
     files,
     validation,
     archive: Buffer.from(zipSync(entries, { level: 6 })),

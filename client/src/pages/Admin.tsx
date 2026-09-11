@@ -50,13 +50,23 @@ import { toast } from "sonner";
 type UploadStatus = "idle" | "uploading" | "success" | "error";
 type CorpusKind = "documents" | "specialCases" | "all";
 
-type GeneratedCorpus = {
-  kind: CorpusKind;
+type DownloadableFile = {
   filename: string;
   url: string;
+};
+
+type GeneratedCorpus = DownloadableFile & {
+  kind: CorpusKind;
   generatedAt: string;
   version: string;
   recordCount: number;
+  byteSize: number;
+};
+
+type GeneratedTestSuite = DownloadableFile & {
+  generatedAt: string;
+  version: string;
+  testCount: number;
   byteSize: number;
 };
 
@@ -121,6 +131,7 @@ export default function Admin() {
   const [adminDocs, setAdminDocs] = useState<UploadedDoc[] | null>(null);
   const [loadingDocs, setLoadingDocs] = useState(false);
   const [generatedCorpora, setGeneratedCorpora] = useState<Partial<Record<CorpusKind, GeneratedCorpus>>>({});
+  const [generatedTestSuite, setGeneratedTestSuite] = useState<GeneratedTestSuite | null>(null);
 
   // Admin always uses Catalan for content management (source language)
   const { data: documents, refetch: refetchDocuments } = trpc.documents.list.useQuery({ language: "ca" });
@@ -252,8 +263,9 @@ export default function Admin() {
   });
 
   const generateCorpus = trpc.admin.generateCorpus.useMutation();
+  const generateTestSuite = trpc.admin.generateColoqiaTestSuite.useMutation();
 
-  const downloadCorpus = (corpus: GeneratedCorpus) => {
+  const downloadCorpus = (corpus: DownloadableFile) => {
     const link = document.createElement("a");
     link.href = corpus.url;
     link.download = corpus.filename;
@@ -270,6 +282,18 @@ export default function Admin() {
       toast.success(`Corpus regenerat: ${corpus.recordCount} fitxers, versió ${corpus.version}`);
     } catch (error) {
       const message = error instanceof Error ? error.message : "No s'ha pogut regenerar el corpus.";
+      toast.error(message);
+    }
+  };
+
+  const handleTestSuiteGeneration = async () => {
+    try {
+      const testSuite = await generateTestSuite.mutateAsync();
+      setGeneratedTestSuite(testSuite);
+      downloadCorpus(testSuite);
+      toast.success(`Joc de proves generat: ${testSuite.testCount} proves, versió ${testSuite.version}`);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "No s'ha pogut generar el joc de proves.";
       toast.error(message);
     }
   };
@@ -392,7 +416,7 @@ export default function Admin() {
                 Corpus TXT per a Coloq.ia
               </CardTitle>
               <CardDescription className="mt-1">
-                Regenera un ZIP a partir del catàleg actual i el descarrega automàticament. Cada índex incorpora la data UTC i la versió del corpus.
+                Tria entre el corpus complet, només documentació o només casos especials. Totes les opcions creen un ZIP pla, amb índex i manifest JSON comuns.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
@@ -442,8 +466,8 @@ export default function Admin() {
 
               <div className="grid gap-3 md:grid-cols-2">
                 {([
-                  { kind: "documents" as const, title: "Documentació", total: documents?.length ?? 0 },
-                  { kind: "specialCases" as const, title: "Casos especials", total: specialCases?.length ?? 0 },
+                  { kind: "documents" as const, title: "Només documentació", total: documents?.length ?? 0, description: "Inclou únicament els fitxers DOC- del catàleg documental." },
+                  { kind: "specialCases" as const, title: "Només casos especials", total: specialCases?.length ?? 0, description: "Inclou únicament els fitxers CAS- del catàleg de casos." },
                 ]).map(corpus => {
                   const generated = generatedCorpora[corpus.kind];
                   const isCurrent = generateCorpus.isPending && generateCorpus.variables?.kind === corpus.kind;
@@ -455,6 +479,7 @@ export default function Admin() {
                           <p className="mt-1 text-sm text-muted-foreground">
                             {corpus.total} {corpus.kind === "documents" ? "documents" : "casos"} al catàleg actual
                           </p>
+                          <p className="mt-1 text-xs text-muted-foreground">{corpus.description}</p>
                         </div>
                         <Badge variant="outline" className="border-emerald-300 text-emerald-800">TXT + ZIP</Badge>
                       </div>
@@ -466,7 +491,7 @@ export default function Admin() {
                         {isCurrent ? (
                           <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Regenerant...</>
                         ) : (
-                          <><Download className="mr-2 h-4 w-4" />Regenerar i descarregar ZIP</>
+                          <><Download className="mr-2 h-4 w-4" />Descarregar ZIP filtrat</>
                         )}
                       </Button>
                       {generated && (
@@ -486,6 +511,50 @@ export default function Admin() {
                   );
                 })}
               </div>
+            </CardContent>
+          </Card>
+
+          {/* Joc de proves de qualitat per a Coloq.ia */}
+          <Card className="border-sky-200 bg-sky-50/40">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-sky-950">
+                <FileText className="h-5 w-5" />
+                Joc de proves per a Coloq.ia
+              </CardTitle>
+              <CardDescription className="mt-1">
+                Genera un ZIP pla amb preguntes de prova, resultats esperats, criteris de puntuació i penalitzacions. Serveix per avaluar el bot; no és coneixement normatiu per carregar al corpus.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-col gap-3 rounded-xl border border-sky-200 bg-background/80 p-4 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p className="font-semibold text-foreground">22 casos de qualitat en català i castellà</p>
+                  <p className="mt-1 text-sm text-muted-foreground">Inclou supòsits directes, ambigüitats, vigència normativa, seguretat de dades i idioma.</p>
+                </div>
+                <Button
+                  className="bg-sky-700 text-white hover:bg-sky-800"
+                  onClick={handleTestSuiteGeneration}
+                  disabled={generateTestSuite.isPending}
+                >
+                  {generateTestSuite.isPending ? (
+                    <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Generant...</>
+                  ) : (
+                    <><Download className="mr-2 h-4 w-4" />Descarregar joc de proves</>
+                  )}
+                </Button>
+              </div>
+              {generatedTestSuite && (
+                <div className="mt-3 rounded-lg bg-sky-100/70 p-3 text-xs text-sky-950">
+                  <span><strong>Versió:</strong> {generatedTestSuite.version} · <strong>Generat:</strong> {new Date(generatedTestSuite.generatedAt).toLocaleString("ca-ES")} · <strong>Proves:</strong> {generatedTestSuite.testCount}</span>
+                  <button
+                    type="button"
+                    onClick={() => downloadCorpus(generatedTestSuite)}
+                    className="ml-3 inline-flex items-center font-medium text-sky-800 underline underline-offset-2 hover:text-sky-950"
+                  >
+                    <Download className="mr-1 h-3.5 w-3.5" />Tornar a descarregar
+                  </button>
+                </div>
+              )}
             </CardContent>
           </Card>
 
