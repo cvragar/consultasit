@@ -165,8 +165,10 @@ export const appRouter = router({
 
   // ===== USER PREFERENCES =====
   user: router({
-    getLanguage: protectedProcedure.query(async ({ ctx }) => {
-      return { language: ctx.user.preferredLanguage ?? "ca" };
+    getLanguage: publicProcedure.query(async ({ ctx }) => {
+      // The landing page is public. Return the local default for visitors
+      // instead of turning an optional preference lookup into an auth error.
+      return { language: ctx.user?.preferredLanguage ?? "ca" };
     }),
     setLanguage: protectedProcedure
       .input(z.object({ language: z.enum(["ca", "es"]) }))
@@ -174,8 +176,10 @@ export const appRouter = router({
         await updateUserLanguage(ctx.user.openId, input.language);
         return { success: true };
       }),
-    getTheme: protectedProcedure.query(async ({ ctx }) => {
-      return { theme: (ctx.user as any).preferredTheme ?? "light" };
+    getTheme: publicProcedure.query(async ({ ctx }) => {
+      // Preserve the public light default until an authenticated preference
+      // is available, so opening the site never requires Manus OAuth.
+      return { theme: (ctx.user as any)?.preferredTheme ?? "light" };
     }),
     setTheme: protectedProcedure
       .input(z.object({ theme: z.enum(["light", "dark"]) }))
