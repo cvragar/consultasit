@@ -7,7 +7,9 @@
  *  - Network-first amb fallback offline per a rutes de navegació (HTML shell)
  */
 
-const CACHE_NAME = "consultesit-v2";
+// Bump this value whenever a client-side release must replace a previously
+// cached application shell or JavaScript bundle.
+const CACHE_NAME = "consultesit-v3";
 const DATA_CACHE_NAME = "consultesit-data-v1";
 const OFFLINE_URL = "/";
 
